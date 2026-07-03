@@ -1,0 +1,1802 @@
+{
+    "artificer": {
+        "name": "Artificer",
+        "desc": [
+            "Masters of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in objects. They see magic as a complex system waiting to be decoded and then harnessed in their spells and inventions. You can find everything you need to play one of these inventors in the next few sections.",
+            "Artificers use a variety of tools to channel their arcane power. To cast a spell, an artificer might use alchemist's supplies to create a potent elixir, calligrapher's supplies to inscribe a sigil of power, or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and their talents, and few other characters can produce the right tool for a job as well as an artificer."
+        ],
+        "mc-scores": ["INT"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["light armor", "medium armor", "shields"],
+            "weapons": ["simple weapons"],
+            "tools": ["thieves' tools", "tinker's tools", "one type of artisan's tools of your choice"],
+            "saves": ["CON", "INT"],
+            "skills": [2, ["Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight of Hand"]]
+        },
+        "equipment": [
+            ["any two simple weapons"],
+            ["a light crossbow and 20 bolts"],
+            ["studded leather armor", "scale mail"],
+            ["thieves' tools and a dungeoneer's pack"]
+        ],
+        "magic": {
+            "caster": "half",
+            "mod": "INT",
+            "type": "prep",
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [2, "", "", "", "", "", "", "", ""],
+                "3": [3, "", "", "", "", "", "", "", ""],
+                "4": [3, "", "", "", "", "", "", "", ""],
+                "5": [4, 2, "", "", "", "", "", "", ""],
+                "6": [4, 2, "", "", "", "", "", "", ""],
+                "7": [4, 3, "", "", "", "", "", "", ""],
+                "8": [4, 3, "", "", "", "", "", "", ""],
+                "9": [4, 3, 2, "", "", "", "", "", ""],
+                "10": [4, 3, 2, "", "", "", "", "", ""],
+                "11": [4, 3, 3, "", "", "", "", "", ""],
+                "12": [4, 3, 3, "", "", "", "", "", ""],
+                "13": [4, 3, 3, 1, "", "", "", "", ""],
+                "14": [4, 3, 3, 1, "", "", "", "", ""],
+                "15": [4, 3, 3, 2, "", "", "", "", ""],
+                "16": [4, 3, 3, 2, "", "", "", "", ""],
+                "17": [4, 3, 3, 3, 1, "", "", "", ""],
+                "18": [4, 3, 3, 3, 1, "", "", "", ""],
+                "19": [4, 3, 3, 3, 2, "", "", "", ""],
+                "20": [4, 3, 3, 3, 2, "", "", "", ""]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "You've studied the workings of magic and how to cast spells, channeling the magic through objects. To observers, you don't appear to be casting spells in the conventional way: you appear to produce wonders from mundane items and outlandish inventions.",
+                    "content": [
+                        {
+                            "name": "Tools Required",
+                            "desc": "You produce spell effects through your tools. You must have a spellcasting focus, specifically thieves' tools or some kind of artisan's tool, in hand when you cast any spell with this feature. You must be proficient with the tools in hand. This effectively gives all spells material cost (M) for you."
+                        },
+                        {
+                            "name": "Cantrips",
+                            "desc": "You know 2 cantrips of your choice from the artificer spell list."
+                        },
+                        {
+                            "name": "Preparing and Casting Spells",
+                            "desc": "You may prepare a number of artificer spells equal to your INT + half your artificer level, rounded down, minimum of 1 spell. The spells must be a of a level for which you have spell slots. You may change any number of spells in your spell list during a long rest, requiring 1 minute of meditation per spell level for each spell you change."
+                        },
+                        {
+                            "name": "Ritual Casting",
+                            "desc": "You may cast any artificer spell you have prepared as a ritual if that spell has the ritual tag."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is INT.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + INT"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + INT"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Magical Tinkering",
+                    "type": "list",
+                    "desc": "You've learned how to invest a spark of magic into mundane objects. To use this ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny nonmagical object as an action, and give it one of the following magical properties, listed below. The chosen property lasts indefinitely. As an action, you may touch the object and end the property early. You may bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property at a time. You may have a number of magical objects like this at a time equal to your INT.",
+                    "content": [
+                        {
+                            "desc": "The object sheds bright light in a 5ft. radius and dim light for another 5ft."
+                        },
+                        {
+                            "desc": "Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10ft. away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long."
+                        },
+                        {
+                            "desc": "The object continuously emits your choice of an odor or a nonverbal sound, like wind, waves, chirping or the like. The chosen phenomenon is perceivable up to 10ft. away."
+                        },
+                        {
+                            "desc": "A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like."
+                        }
+                    ]
+                }
+            ],
+            "2": [
+                {
+                    "name": "Infuse Item",
+                    "type": "list",
+                    "desc": "You gain the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.",
+                    "content": [
+                        {
+                            "name": "Infusions Known",
+                            "desc": "When you gain this feature, you may choose 4 artificer infusions."
+                        },
+                        {
+                            "name": "Infusing an Item",
+                            "desc": "Whenever you finish a long rest, you may touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement. Your infusion remains in an item indefinitely, unless you die, after which the infusion will remain on an item for an amount of days equal to your INT. The infusion will also vanish if you replace your knowledge of the infusion. You can have up to 2 infused items from this trait. An item cannot bear more than one infusions at a time. If you try to exceed your maximum number of infusions, the oldest ends instantly. If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space."
+                        }
+                    ]
+                }
+            ],
+            "3": [
+                {
+                    "name": "Artificer Specialism",
+                    "desc": "Choose a subclass. (WIP)"
+                },
+                {
+                    "name": "The Right Tool For The Job",
+                    "desc": "You've learned how to produce exactly the tool you need. With thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5ft. of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature to create a different set of tools."
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Artificer Specialism Feature",
+                    "desc": "You gain a feature depending on your artificer specialism."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Tool Expertise",
+                    "desc": "You may add double your proficiency bonus to any ability check you make that uses your proficiency with a tool."
+                },
+                {
+                    "name": "Infuse Item",
+                    "desc": "You learn an additional 2 artificer infusions, for a total of 6. Additionally, you may have up to 3 infused items from this trait."
+                }
+            ],
+            "7": [
+                {
+                    "name": "Flash of Genius",
+                    "desc": "When you or another creature you can see within 30ft. of you makes an ability check or saving throw, you may use your reaction to add your INT to the roll. You may use this feature a number of times equal to your INT every long rest."
+                }
+            ],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Artificer Specialism Feature",
+                    "desc": "You gain a feature depending on your artificer specialism."
+                }
+            ],
+            "10": [
+                {
+                    "name": "Magic Item Adept",
+                    "desc": "You may attune to up to 4 magic items at once. Additionally, if you craft a magic item with a rarity of common or uncommon, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 3."
+                },
+                {
+                    "name": "Infuse Item",
+                    "desc": "You learn an additional 2 artificer infusions, for a total of 8. Additionally, you may have up to 4 infused items from this trait."
+                }
+            ],
+            "11": [
+                {
+                    "name": "Spell-Storing Item",
+                    "desc": "You can now store a spell in an object. Whenever you finish a long rest, you may touch one simple or martial weapon, or one item that you can use as a spellcasting focus, and you store a spell in it, choosing any 1st or 2nd level spell from the artificer spell list that requires 1 action to cast. While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting modifier. If the spell requires concentration, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to 2 times your INT, minimum of 2 times, or until you use this feature again."
+                }
+            ],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [],
+            "14": [
+                {
+                    "name": "Magic Item Savant",
+                    "desc": "You may attune to up to 5 magic items at once. Additionally, you may ignore all class, race, spell and level requirements on attuning to or using a magic item."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 4."
+                },
+                {
+                    "name": "Infuse Item",
+                    "desc": "You learn an additional 2 artificer infusions, for a total of 10. Additionally, you may have up to 5 infused items from this trait."
+                }
+            ],
+            "15": [
+                {
+                    "name": "Artificer Specialism Feature",
+                    "desc": "You gain a feature depending on your artificer specialism."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [],
+            "18": [
+                {
+                    "name": "Magic Item Master",
+                    "desc": "You may attune to up to 6 items at once."
+                },
+                {
+                    "name": "Infuse Item",
+                    "desc": "You learn an additional 2 artificer infusions, for a total of 12. Additionally, you may have up to 6 infused items from this trait."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Soul of Artifice",
+                    "desc": "You gain +1 to all saving throws per magic item you are currently attuned to. Additionally, if you're reduced to 0 hitpoints but not killed out-right, you may use your reaction to end one of your artificer infusions, causing you to drop to 1 hitpoint instead."
+                }
+            ]
+        }
+    },
+    "bard": {
+        "name": "Bard",
+        "desc": ["Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the magic they contain."],
+        "mc-scores": ["CHA"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["light armor"],
+            "weapons": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+            "tools": ["three musical instruments of your choice"],
+            "saves": ["DEX", "CHA"],
+            "skills": [3, ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"]]
+        },
+        "equipment": [
+            ["a rapier, a longsword", "any simple weapon"],
+            ["a diplomat's pack", "an entertainer's pack"],
+            ["a lute", "any other musical instrument"],
+            ["leather armor and a dagger"]
+        ],
+        "magic": {
+            "caster": "full",
+            "mod": "CHA",
+            "type": "known",
+            "amount": [4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 15, 16, 18, 19, 19, 20, 22, 22, 22],
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [3, "", "", "", "", "", "", "", ""],
+                "3": [4, 2, "", "", "", "", "", "", ""],
+                "4": [4, 3, "", "", "", "", "", "", ""],
+                "5": [4, 3, 2, "", "", "", "", "", ""],
+                "6": [4, 3, 3, "", "", "", "", "", ""],
+                "7": [4, 3, 3, 1, "", "", "", "", ""],
+                "8": [4, 3, 3, 2, "", "", "", "", ""],
+                "9": [4, 3, 3, 3, 1, "", "", "", ""],
+                "10": [4, 3, 3, 3, 2, "", "", "", ""],
+                "11": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "12": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "13": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "14": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "15": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "16": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "17": [4, 3, 3, 3, 2, 1, 1, 1, 1],
+                "18": [4, 3, 3, 3, 3, 1, 1, 1, 1],
+                "19": [4, 3, 3, 3, 3, 2, 1, 1, 1],
+                "20": [4, 3, 3, 3, 3, 2, 2, 1, 1]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations.",
+                    "content": [
+                        {
+                            "name": "Cantrips",
+                            "desc": "You know 2 cantrips of your choice from the bard spell list."
+                        },
+                        {
+                            "name": "Known Spells",
+                            "desc": "The Spells Known column of the bard spell slot table shows how many bard spells you know at any given level. Whenever you gain a level in this class, you may choose one of the spells you know, and replace it with any other bard spell. Each spell you learn can only be of a spell slot level you have."
+                        },
+                        {
+                            "name": "Ritual Casting",
+                            "desc": "You may cast any bard spell you have prepared as a ritual if that spell has the ritual tag."
+                        }
+                        ,
+                        {
+                            "name": "Spellcasting Focus",
+                            "desc": "You may use a musical instrument as a spellcasting focus for your bard spells."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is CHA.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + CHA"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + CHA"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Bardic Inspiration",
+                    "desc": "You may use a bonus action on your turn to choose one creature, other than yourself, within 60ft. of you who can hear you. That creature gains one bardic inspiration die. Your bardic inspiration die is a d6. Within the next 10 minutes after using this trait, the creature may roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature may wait until after it rolls the d20 of a check before deciding to use the die, but must decide before the DM says whether the roll succeeds or fails. Once the bardic inspiration die is rolled, it is lost. A creature may only have one bardic inspiration die at a time. You may use this trait a number of time equal to your CHA modifier, minimum of 1, every long rest."
+                }
+            ],
+            "2": [
+                {
+                    "name": "Jack Of All Trades",
+                    "desc": "You may add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus."
+                },
+                {
+                    "name": "Song of Rest",
+                    "desc": "If you or any creature of your choice who can hear you regain hitpoints at the end of a short rest by spending one or more hit dice, you may use your music to revitalize them. They recover an extra 1d6 hitpoints."
+                },
+                {
+                    "name": "Magical Inspiration (Optional)",
+                    "desc": "If a creature has one of your bardic inspiration dice, and casts a spell that restores hitpoints or deals damage, the creature may choose to roll the bardic inspiration die and choose one target affected by the spell. They may add the number rolled as a bonus to the hitpoints regained, or the damage dealt. This consumes the inspiration as normal."
+                }
+                
+            ],
+            "3": [
+                {
+                    "name": "Bard College",
+                    "desc": "Choose a subclass. (WIP)"
+                },
+                {
+                    "name": "Expertise",
+                    "desc": "You may choose 2 of your chosen skill proficiencies. These 2 proficiencies will have doubled proficiency bonus."
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 3."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Font of Inspiration",
+                    "desc": "You may use your bardic inspiration trait a number of times equal to your CHA modifier, minimum of 1, every short rest."
+                },
+                {
+                    "name": "Bardic Inspiration",
+                    "desc": "Your bardic inspiration die becomes a d8."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Bard College Feature",
+                    "desc": "You gain a feature depending on your bard college."
+                },
+                {
+                    "name": "Countercharm",
+                    "desc": "As an action, you may start a performance that lasts until the end of your next turn. During that time, you and any creature of your choice within 30ft. of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced, or if you voluntarily end it, which requires no action."
+                }
+            ],
+            "7": [],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Song of Rest",
+                    "desc": "The extra hitpoints regained from this trait increases to 1d8."
+                }
+            ],
+            "10": [
+                {
+                    "name": "Magical Secrets",
+                    "desc": "Choose two spells from any class, including this one. A spell you choose must be of a level you can cast, or a cantrip. The chosen spells count as bard spells for you, and are included in the spells known column of the spell slot table, or known cantrips."
+                },
+                {
+                    "name": "Bardic Inspiration",
+                    "desc": "Your bardic inspiration die becomes a d10."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 4."
+                },
+                {
+                    "name": "Expertise",
+                    "desc": "You may choose an additional 2 skills and gain expertise in them."
+                }
+            ],
+            "11": [],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Song of Rest",
+                    "desc": "The extra hitpoints regained from this trait increases to 1d10."
+                }
+            ],
+            "14": [
+                {
+                    "name": "Bard College Feature",
+                    "desc": "You gain a feature depending on your bard college."
+                },
+                {
+                    "name": "Magical Secrets",
+                    "desc": "You learn two additional spells from this trait, to a total of 4."
+                }
+            ],
+            "15": [
+                {
+                    "name": "Bardic Inspiration",
+                    "desc": "Your bardic inspiration die becomes a d12."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Song of Rest",
+                    "desc": "The extra hitpoints regained from this trait increases to 1d12."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Magical Secrets",
+                    "desc": "You learn two additional spells from this trait, to a total of 6."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Superior Inspiration",
+                    "desc": "When you roll initiative and have no uses of your bardic inspiration trait left, you regain one use."
+                }
+            ]
+        }
+    },
+    "druid": {
+        "name": "Druid",
+        "desc": ["Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature's resilience, cunning, and fury. They claim no mastery over nature, but see themselves as extensions of nature's indomitable will."],
+        "mc-scores": ["WIS"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["light armor", "medium armor", "shields (druids cannot wear armor or use shields made of metal)"],
+            "weapons": ["clubs", "daggers", "darts", "javelins", "maces", "quarterstaffs", "scimitars", "sickles", "slings", "spears"],
+            "tools": ["herbalism kit"],
+            "saves": ["INT", "WIS"],
+            "skills": [2, ["Animal Handling", "Arcana", "Insight", "Medicine", "Nature", "Perception", "Survival"]]
+        },
+        "equipment": [
+            ["a wooden shield", "any simple weapon"],
+            ["a scimitar", "any simple melee weapon"],
+            ["leather armor, an explorer's pack, and a druidic focus"]
+        ],
+        "magic": {
+            "caster": "full",
+            "mod": "WIS",
+            "type": "prep",
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [3, "", "", "", "", "", "", "", ""],
+                "3": [4, 2, "", "", "", "", "", "", ""],
+                "4": [4, 3, "", "", "", "", "", "", ""],
+                "5": [4, 3, 2, "", "", "", "", "", ""],
+                "6": [4, 3, 3, "", "", "", "", "", ""],
+                "7": [4, 3, 3, 1, "", "", "", "", ""],
+                "8": [4, 3, 3, 2, "", "", "", "", ""],
+                "9": [4, 3, 3, 3, 1, "", "", "", ""],
+                "10": [4, 3, 3, 3, 2, "", "", "", ""],
+                "11": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "12": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "13": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "14": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "15": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "16": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "17": [4, 3, 3, 3, 2, 1, 1, 1, 1],
+                "18": [4, 3, 3, 3, 3, 1, 1, 1, 1],
+                "19": [4, 3, 3, 3, 3, 2, 1, 1, 1],
+                "20": [4, 3, 3, 3, 3, 2, 2, 1, 1]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "Drawing on the divine essence of nature itself, you can cast spells to shape the essence to your will.",
+                    "content": [
+                        {
+                            "name": "Cantrips",
+                            "desc": "You know 2 cantrips of your choice from the druid spell list."
+                        },
+                        {
+                            "name": "Preparing and Casting Spells",
+                            "desc": "You may prepare a number of druid spells equal to your WIS + your druid level, minimum of 1 spell. The spells must be of a level for which you have spell slots. You may change any number of spells in your spell list during a long rest, requiring 1 minute of meditation per spell level for each spell you change."
+                        },
+                        {
+                            "name": "Ritual Casting",
+                            "desc": "You may cast any druid spell you have prepared as a ritual if that spell has the ritual tag."
+                        },
+                        {
+                            "name": "Spellcasting Focus",
+                            "desc": "You may use a druidic focus as a spellcasting focus for your druid spells."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is WIS.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + WIS"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + WIS"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Druidic",
+                    "desc": "You can speak Druidic, the secret language of druids. You can speak the language, and use it to leave hidden messages. You and others who know this language automatically spot such a message. Other spot the message's presence with a successful DC 15 Perception (WIS) check, but can't decipher it without using magic."
+                }
+            ],
+            "2": [
+                {
+                    "name": "Druid Circle",
+                    "desc": "Choose a subclass. (WIP)"
+                },
+                {
+                    "name": "Wild Shape",
+                    "type": "list",
+                    "desc": "You may use your action to magically assume the shape of a beast that you have seen before. You may use this feature 2 times per short rest. Your druid level determines the beasts you can transform into. At 2nd level, you may transform into a beast with a CR up to 1/4, provided it has no flying or swimming speed. While you are transformed, the following rules apply:",
+                    "content": [
+                        {
+                            "desc": "You may stay in the chosen beast shape for a number of hours equal to half your druid level, rounded down. After that period, you revert to your normal form, unless you expend another use of this feature. You may revert to your normal form earlier by using your bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hitpoints, or die."
+                        },
+                        {
+                            "desc": "Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality and INT, WIS and CHA scores. You also retain all your skill and saving throw proficiencies, in addition to gaining those of the chosen creature. If the creature has the same proficiency as you, and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you cannot use them."
+                        },
+                        {
+                            "desc": "When you transform, you assume the chosen beast's hitpoints and hit dice. When you revert to your normal form, you return to the number of hitpoints you had before you transformed. However, if you revert as a result of dropping to 0 hitpoints, any excess damage carries over to your normal form. As long as the excess damage doesn't reduce your normal form to 0 hitpoints, you are not knocked unconscious."
+                        },
+                        {
+                            "desc": "You cannot cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of the chosen beast. Transforming doesn't break your concentration on a spell you've already cast, or prevent you from taking actions that are part of a spell you've already cast."
+                        },
+                        {
+                            "desc": "You retain the benefit of any traits from your class, race or other source and can use them if the new form is physically capable of doing so. However, you cannot use any of your special senses, such as darkvision, unless your new form also has that sense."
+                        },
+                        {
+                            "desc": "You may choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the DM decides whether it's practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form cannot wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form."
+                        }
+                    ]
+                },
+                {
+                    "name": "Wild Companion (Optional)",
+                    "desc": "You gain the ability to summon a spirit that assumes an animal form. As an action, you may expend a use of your wild shape trait to cast the <i>find familiar</i> spell, without material components. Instead of the spell's usual effects, the familiar is a fey, and disappears after a number of hours equal to half your druid level, rounded down."
+                }
+            ],
+            "3": [],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 3."
+                },
+                {
+                    "name": "Wild Shape",
+                    "desc": "When you use your wild shape trait, you may now transform into a beast with a CR up to 1/2, provided it has no flying speed. It may have a swimming speed."
+                }
+            ],
+            "5": [],
+            "6": [
+                {
+                    "name": "Druid Circle Feature",
+                    "desc": "You gain a feature depending on your druid circle."
+                }
+            ],
+            "7": [],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Wild Shape",
+                    "desc": "When you use your wild shape trait, may now transform into a beast with a CR up to 1. It may have a flying, and a swimming speed."
+                }
+            ],
+            "9": [],
+            "10": [
+                {
+                    "name": "Druid Circle Feature",
+                    "desc": "You gain a feature depending on your druid circle."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 4."
+                }
+            ],
+            "11": [],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [],
+            "14": [
+                {
+                    "name": "Druid Circle Feature",
+                    "desc": "You gain a feature depending on your druid circle."
+                }
+            ],
+            "15": [],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [],
+            "18": [
+                {
+                    "name": "Timeless Body",
+                    "desc": "For every 10 years that pass, your body ages 1 year instead."
+                },
+                {
+                    "name": "Beast Spells",
+                    "desc": "You may cast many of your druid spells in any shape you assume during the transformation of your wild shape trait. You can perform the somatic and verbal components of a druid spell while in beast form, but you aren't able to provide material components."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Archdruid",
+                    "desc": "You may now use your wild shape trait an unlimited number of times. Additionally, you may ignore verbal and somatic components of all your druid spells, as well as any material components that lack a cost and aren't consumed by the spell. You gain this benefit in both your normal shape and your beast shape from your wild shape trait."
+                }
+            ]
+        }
+    },
+    "fighter": {
+        "name": "Fighter",
+        "desc": ["Fighters share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. They are well acquainted with death, both meting it out and staring it defiantly in the face."],
+        "mc-scores": ["STR", "DEX"],
+        "hitdie": 10,
+        "proficiencies": {
+            "armor": ["all armor", "shields"],
+            "weapons": ["simple weapons", "martial weapons"],
+            "tools": ["none"],
+            "saves": ["STR", "CON"],
+            "skills": [2, ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"]]
+        },
+        "equipment": [
+            ["chain mail", "leather armor, a longbow and 20 arrows"],
+            ["a martial weapon and a shield", "two martial weapons"],
+            ["a light crossbow and 20 bolts", "two hand axes"],
+            ["a dungeoneer's pack", "an explorer's pack"]
+        ],
+        "magic": {
+            "caster": "none"
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Fighting Style",
+                    "type": "list",
+                    "desc": "Choose one of the following. You cannot take a style option more than once, even if you get to choose again. You may replace your fighting style with a different one if you gain a level in this class.",
+                    "content": [
+                        {
+                            "name": "Archery",
+                            "desc": "You gain +2 to attack rolls you make with ranged weapons."
+                        },
+                        {
+                            "name": "Blind fighting",
+                            "desc": "You have blindsight with a range of 10ft."
+                        },
+                        {
+                            "name": "Defense",
+                            "desc": "While you are wearing armor, you gain +1 to AC."
+                        },
+                        {
+                            "name": "Dueling",
+                            "desc": "When you are wielding a melee weapon in one hand and no other weapons, you gain +2 to damage rolls with that weapon."
+                        },
+                        {
+                            "name": "Great Weapon Fighting",
+                            "desc": "Whenever you roll a 1 or 2 on a damage die for an attack you make with a melee weapon you are wielding with two hands, you may reroll the die and must use the new roll. The weapon must have the two-handed or versatile property."
+                        },
+                        {
+                            "name": "Interception",
+                            "desc": "Whenever a creature you can see hits a target, other than you, within 5ft. of you with an attack, you may use your reaction to reduce the damage the target takes by 1d10 + your proficiency bonus, to a minimum of 0 damage. You must be wielding either a shield, or a simple or martial weapon to use this trait."
+                        },
+                        {
+                            "name": "Protection",
+                            "desc": "Whenever a creature you can see attacks a target other than you that is within 5ft. of you, you may use your reaction to impose disadvantage on the attack roll. You must be wielding a shield to use this trait."
+                        },
+                        {
+                            "name": "Superior Technique",
+                            "desc": "You learn one maneuver of your choice from among those available to the Battle Master archetype. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your STR or DEX, your choice. You gain one superiority die, which is 1d6 (which is added to any superiority dice you have from different sources). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended dice during a short rest."
+                        },
+                        {
+                            "name": "Thrown Weapon Fighting",
+                            "desc": "You may draw a weapon that has the drawn property as part of the attack you make with that weapon. Additionally, you gain +2 to damage if you hit a ranged thrown weapon attack."
+                        },
+                        {
+                            "name": "Two-Weapon Fighting",
+                            "desc": "When you engage in two-weapon fighting, you may add your ability modifier to the damage of the second attack."
+                        },
+                        {
+                            "name": "Unarmed Fighting",
+                            "desc": "Your unarmed strikes deal @bludgeoning damage equal to 1d6 + STR on a hit. If you aren't wielding any weapons or shields when you make this attack roll, the damage becomes 1d8 + STR instead. Additionally, at the start of each of your turns, you may deal 1d4 @bludgeoning damage to one creature you are grappling."
+                        }
+                    ]
+                },
+                {
+                    "name": "Second Wind",
+                    "desc": "You may use your bonus action on your turn to regain hitpoints equal to 1d10 + your fighter level. You may use this trait once every short rest."
+                }
+            ],
+            "2": [
+                {
+                    "name": "Action Surge",
+                    "desc": "On your turn, you may take one additional action. You may use this trait once every short rest."
+                }
+            ],
+            "3": [
+                {
+                    "name": "Martial Archetype",
+                    "desc": "Choose a subclass. (WIP)"
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Extra Attack",
+                    "desc": "You may attack twice instead of once whenever you take the attack action on your turn."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "7": [
+                {
+                    "name": "Martial Archetype Feature",
+                    "desc": "You gain a feature depending on your martial archetype."
+                }
+            ],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Indomitable",
+                    "desc": "You may reroll a saving throw that you failed. If you do, you must use the new roll. You may use this trait once every long rest."
+                }
+            ],
+            "10": [
+                {
+                    "name": "Martial Archetype Feature",
+                    "desc": "You gain a feature depending on your martial archetype."
+                }
+            ],
+            "11": [
+                {
+                    "name": "Extra Attack",
+                    "desc": "You may attack three times instead of twice whenever you take the attack action on your turn."
+                }
+            ],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Indomitable",
+                    "desc": "You may reroll a failed saving throw, twice every long rest."
+                }
+            ],
+            "14": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "15": [
+                {
+                    "name": "Martial Archetype Feature",
+                    "desc": "You gain a feature depending on your martial archetype."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Action Surge",
+                    "desc": "On your turn, you may take two additional actions, for a total of three, given all actions are made within the same turn. You may use this trait once every short rest."
+                },
+                {
+                    "name": "Indomitable",
+                    "desc": "You may reroll a failed saving throw, twice every long rest."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Martial Archetype Feature",
+                    "desc": "You gain a feature depending on your martial archetype."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Extra Attack",
+                    "desc": "You may attack four times instead of three whenever you take the attack action on your turn."
+                }
+            ]
+        }
+    },
+    "oracle": {
+        "name": "Oracle",
+        "desc": ["Oracles are beings exposed to the incomprehensible reality of the Plane of Finality, the End of Infinity. In this realm, the very concepts of reality reside and shape the Planes as they are. Carrying unknowable power in one hand, and the burden of a fragmented self in the other, oracles are wildcards. For them, sanity and strength are two sides of the same coin."],
+        "mc-scores": ["CHA"],
+        "hitdie": 6,
+        "proficiencies": {
+            "armor": ["light armor"],
+            "weapons": ["clubs", "daggers", "sickles", "quarterstaffs", "light crossbows"],
+            "tools": ["jeweler's tools"],
+            "saves": ["INT", "CHA"],
+            "skills": [2, ["Arcana", "Deception", "History", "Insight", "Investigation", "Nature", "Perception", "Persuasion", "Stealth"]]
+        },
+        "equipment": [
+            ["a club", "a sickle"],
+            ["a component pouch", "an arcane focus"],
+            ["a scholar's pack, a priest's pack and jeweler's tools"]
+        ],
+        "magic": {
+            "caster": "full",
+            "mod": "CHA",
+            "type": "prep",
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [3, "", "", "", "", "", "", "", ""],
+                "3": [4, 2, "", "", "", "", "", "", ""],
+                "4": [4, 3, "", "", "", "", "", "", ""],
+                "5": [4, 3, 2, "", "", "", "", "", ""],
+                "6": [4, 3, 3, "", "", "", "", "", ""],
+                "7": [4, 3, 3, 1, "", "", "", "", ""],
+                "8": [4, 3, 3, 2, "", "", "", "", ""],
+                "9": [4, 3, 3, 3, 1, "", "", "", ""],
+                "10": [4, 3, 3, 3, 2, "", "", "", ""],
+                "11": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "12": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "13": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "14": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "15": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "16": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "17": [4, 3, 3, 3, 2, 1, 1, 1, 1],
+                "18": [4, 3, 3, 3, 3, 1, 1, 1, 1],
+                "19": [4, 3, 3, 3, 3, 2, 1, 1, 1],
+                "20": [4, 3, 3, 3, 3, 2, 2, 1, 1]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "Your nervous system is entwined with the magical weave itself, granting you magic power only limited by the constraints of your flesh.",
+                    "content": [
+                        {
+                            "name": "Cantrips",
+                            "desc": "You know ? cantrips of your choice from the oracle spell list."
+                        },
+                        {
+                            "name": "Preparing and Casting Spells",
+                            "desc": "You may prepare a number of oracle spells equal to your WIS + your oracle level, minimum of 1 spell. The spells must be of a level for which you have spell slots. You may change any number of spells in your spell list during a long rest, requiring 1 minute of meditation per spell level for each spell you change."
+                        },
+                        {
+                            "name": "Spellcasting Focus",
+                            "desc": "You may use an arcane focus as a spellcasting focus for your oracle spells."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is CHA.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + CHA"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + CHA"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Shattered Psyche",
+                    "desc": "Parts of your mind, soul and body have been completely torn apart by the forbidden knowledge of the Finality. Your power originates from this fractured part of your being. Some of the effects of this class are powered by your shatterdie. Your shatterdie is 1d4."
+                },
+                {
+                    "name": "Egregious Foresight",
+                    "desc": "You are able to draw great power from the Finality, power that seems unnatural or seemingly ignoring the fundamental laws of reality. Fleeting shards of future events whiff past your senses. Powerful as it may be, this carries a great risk, since this raw, unfiltered flow of information may end up being harmful to your psyche. Your oracle spells gain the following additional effects:",
+                    "type": "list",
+                    "content": [
+                        {
+                            "desc": "When dealing spell damage, you gain resistance to the damage type you dealt until the start of your next turn. This effect happens before the damage is done."
+                        },
+                        {
+                            "desc": "Targeted spells curve with strange, seemingly sentient trajectories, seeking out creatures before they've even moved to dodge. Because of this, it's impossible to miss your spells, though the target you foresaw in your shattered mind's eye might not always be the one you had intended:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "desc": "When making a spell attack, roll your shatterdie and subtract the result from your attack roll."
+                                },
+                                {
+                                    "desc": "You cannot gain advantage on spell attack rolls."
+                                },
+                                {
+                                    "desc": "Spell attacks that don't hit the target start curving towards other creatures. It will instead seek out the creature closest to the target within the spell's range, and attempt to hit it; if it can hit this creature using the same attack roll, it will hit this creature instead, dealing half the normal damage, rounded up. If it cannot, the spell will continue to seek for targets until it hits or runs out. If no valid targets exist, it will rebound back to the original target and hit it, dealing 1/4 times the normal damage, rounded up."
+                                },
+                                {
+                                    "desc":"If you roll a 1 on your attack roll, the spell is guaranteed to hit you, dealing half the normal damage, rounded up."
+                                }
+                            ]
+                        },
+                        {
+                            "desc": "Using your unnatural senses, you're able to predict the escape options of your enemies. Spells that require a saving throw to dodge become especially effective because of this. However, your fractured body may sometimes force you to gain this knowledge through experience, putting you through the same misery as you're trying to do with your enemies:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "desc": "When casting a spell that requires a saving throw to avoid, you must succeed on the saving throw yourself, provided you are not in the spell's area of effect. You take half damage on a failed save, also suffering the spell's other effects. You take no damage on a successful save. Damage taken in this way does not trigger concentration saves, and you are able to maintain concentration on your spell even if you're affected by it."
+                                },
+                                {
+                                    "desc": "For creatures within the area of effect (which includes you, if you're inside the area), the spell save DC increases by a number equal to a roll of your shatterdie."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "2": [
+                {
+                    "name": "Knowledge Base",
+                    "desc": "Choose a subclass. (WIP)"
+                }
+            ],
+            "3": [],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "5": [],
+            "6": [
+                {
+                    "name": "Chaotic Siphoning",
+                    "desc": "You teeter on the edge of insanity to siphon magic from it:",
+                    "type": "list",
+                    "content": [
+                        {
+                            "desc": "Over the course of 1 minute, you may regain a single spell slot, given it's a spell slot of a level you have access to. "
+                        },
+                        {
+                            "desc": "Roll your shatterdie a number of times equal to the level of the spell slot; you take @psychic damage equal to the number rolled. You may decide to halt siphoning after rolling the damage, preventing the damage, and failing the siphoning. If the damage would lower you to 0 hitpoints, the siphoning is forcefully halted."
+                        },
+                        {
+                            "desc": "Regardless of whether you successfully siphoned, you enter a chaos state, affecting future uses of this feature."
+                        },
+                        {
+                            "desc": "Chaos state gives the following effects, which last for the duration:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "desc": "Chaos state lasts for an amount of days equal to the level of the siphoned spell slot + 1."
+                                },
+                                {
+                                    "desc": "If you attempt to siphon again while in chaos state, you must first succeed on a CHA saving throw with a DC of 12 + the level of the spell slot."
+                                },
+                                {
+                                    "desc": "On a failure, your CHA score is reduced by 4, and you may not use this feature again."
+                                },
+                                {
+                                    "desc": "On a success, you may attempt siphoning again. Every siphoning attempt during the current chaos state increases the saving throw DC by an additional 3, and extends the duration of chaos state by a number of days equal to the level of the spell slot."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "7": [
+                {
+                    "name": "Shattered Psyche",
+                    "desc": "Your shatterdie becomes 1d6."
+                }
+            ],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [],
+            "10": [
+                {
+                    "name": "Universal Lawbreaker",
+                    "desc": "Your understanding of the erratic space outside the boundaries of reality rapidly grows and solidifies, allowing your spells to inflict unclassifiable harm. As a bonus action, you may empower your next spell on that turn, removing the spell's damage type. Typeless damage ignores any and all effects that normally reduce damage, such as resistances and immunities. You still gain resistance to the original damage type of the spell from your egregious foresight trait."
+                }
+            ],
+            "11": [],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [],
+            "14": [],
+            "15": [
+                {
+                    "name": "Shattered Psyche",
+                    "desc": "Your shatterdie becomes 1d8."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [],
+            "18": [],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Transcendence",
+                    "desc": "You are a being from the Finality. With your power and knowledge formatted and realized, as an action, you may redirect the flow of cosmic information to empower yourself or a creature within 30ft. of you. This has different effects per class. You may use this trait once per long rest.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "desc": "A creature becomes empowered for 1 minute. It may use its action to expend this power into a strike powerful enough to shatter the foundations of reality. After it uses this action, it must succeed on a CHA saving throw. The DC of this saving throw equals 30 minus your proficiency, CHA modifier and a roll of your shatterdie. On a failed save, the creature is overwhelmed by the Finality's power, dropping to 0 hitpoints and dropping unconscious instantly, regardless of prior hitpoints. On a success, the creature drops to 1 hitpoint instead, retaining consciousness."
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "paladin": {
+        "name": "Paladin",
+        "desc": ["Whether sworn before a god's altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladin's oath is a powerful bond."],
+        "mc-scores": ["STR", "CHA"],
+        "hitdie": 10,
+        "proficiencies": {
+            "armor": ["light armor", "medium armor", "heavy armor", "shields"],
+            "weapons": ["simple weapons", "martial weapons"],
+            "tools": ["none"],
+            "saves": ["WIS", "CHA"],
+            "skills": [2, ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"]]
+        },
+        "equipment": [
+            ["a martial weapon and a shield", "two martial weapons"],
+            ["five javelins", "a simple melee weapon"],
+            ["a priest's pack", "an explorer's pack"],
+            ["chain mail and a holy symbol"]
+        ],
+        "magic": {
+            "caster": "half",
+            "mod": "CHA",
+            "type": "prep",
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [2, "", "", "", "", "", "", "", ""],
+                "3": [3, "", "", "", "", "", "", "", ""],
+                "4": [3, "", "", "", "", "", "", "", ""],
+                "5": [4, 2, "", "", "", "", "", "", ""],
+                "6": [4, 2, "", "", "", "", "", "", ""],
+                "7": [4, 3, "", "", "", "", "", "", ""],
+                "8": [4, 3, "", "", "", "", "", "", ""],
+                "9": [4, 3, 2, "", "", "", "", "", ""],
+                "10": [4, 3, 2, "", "", "", "", "", ""],
+                "11": [4, 3, 3, "", "", "", "", "", ""],
+                "12": [4, 3, 3, "", "", "", "", "", ""],
+                "13": [4, 3, 3, 1, "", "", "", "", ""],
+                "14": [4, 3, 3, 1, "", "", "", "", ""],
+                "15": [4, 3, 3, 2, "", "", "", "", ""],
+                "16": [4, 3, 3, 2, "", "", "", "", ""],
+                "17": [4, 3, 3, 3, 1, "", "", "", ""],
+                "18": [4, 3, 3, 3, 1, "", "", "", ""],
+                "19": [4, 3, 3, 3, 2, "", "", "", ""],
+                "20": [4, 3, 3, 3, 2, "", "", "", ""]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Divine Sense",
+                    "desc": "As an action, you may open your awareness to detect good and evil. Until the end of your next turn, you know the location of any celestial, fiend or undead within 60ft. of you that is not behind total cover. You know the type of any being whose presence you sense, but not its identity. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated. You may use this trait a number of times equal to 1 + CHA every long rest."
+                },
+                {
+                    "name": "Lay On Hands",
+                    "desc": "As an action, you may touch a creature and draw power from your pool of healing, restoring a number of hitpoints of your choice. Across every use of this trait, you can restore a total number of hitpoints equal to 5 times your paladin level per long rest. Alternatively, you may expend 5 hitpoints from your pool of healing to cure the target of one disease, or neutralize one poison affecting it. You may cure multiple of such diseases or poisons with a single use of this trait, expending hitpoints separately for each one. This feature has no effect on undead or constructs."
+                }
+            ],
+            "2": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "You have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.",
+                    "content": [
+                        {
+                            "name": "Preparing and Casting Spells",
+                            "desc": "You may prepare a number of paladin spells equal to your WIS + half your paladin level, minimum of 1 spell. The spells must be of a level for which you have spell slots. You may change any number of spells in your spell list during a long rest, requiring 1 minute of meditation per spell level for each spell you change."
+                        },
+                        {
+                            "name": "Spellcasting Focus",
+                            "desc": "You may use a holy symbol as a spellcasting focus for your paladin spells."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is CHA.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + CHA"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + CHA"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fighting Style",
+                    "type": "list",
+                    "desc": "Choose one of the following. You cannot take a style option more than once, even if you get to choose again. You may replace your fighting style with a different one if you gain a level in this class.",
+                    "content": [
+                        {
+                            "name": "Blessed Warrior",
+                            "desc": "You learn 2 cantrips of your choice from the cleric spell list. They count as paladin spells for you, and CHA is your spellcasting ability for them. Whenever you gain a level in this class, you may replace one of these cantrips with another."
+                        },
+                        {
+                            "name": "Blind fighting",
+                            "desc": "You have blindsight with a range of 10ft."
+                        },
+                        {
+                            "name": "Defense",
+                            "desc": "While you are wearing armor, you gain +1 to AC."
+                        },
+                        {
+                            "name": "Dueling",
+                            "desc": "When you are wielding a melee weapon in one hand and no other weapons, you gain +2 to damage rolls with that weapon."
+                        },
+                        {
+                            "name": "Great Weapon Fighting",
+                            "desc": "Whenever you roll a 1 or 2 on a damage die for an attack you make with a melee weapon you are wielding with two hands, you may reroll the die and must use the new roll. The weapon must have the two-handed or versatile property."
+                        },
+                        {
+                            "name": "Interception",
+                            "desc": "Whenever a creature you can see hits a target, other than you, within 5ft. of you with an attack, you may use your reaction to reduce the damage the target takes by 1d10 + your proficiency bonus, to a minimum of 0 damage. You must be wielding either a shield, or a simple or martial weapon to use this trait."
+                        },
+                        {
+                            "name": "Protection",
+                            "desc": "Whenever a creature you can see attacks a target other than you that is within 5ft. of you, you may use your reaction to impose disadvantage on the attack roll. You must be wielding a shield to use this trait."
+                        }
+                    ]
+                },
+                {
+                    "name": "Divine Smite",
+                    "desc": "Whenever you hit a creature with a melee weapon attack, you may expend one spell slot to deal an additional 2d8 @radiant damage to the target. The damage increases by 1d8 for every spell slot level higher than 1st you use, for a maximum of 5d8.  The damage increases by an additional 1d8 if the target is an undead or a fiend."
+                }
+            ],
+            "3": [
+                {
+                    "name": "Sacred Oath",
+                    "desc": "Choose a subclass. (WIP)",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Oath Spells",
+                            "desc": "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don't count against the number of spells you can prepare."
+                        },
+                        {
+                            "name": "Channel Divinity",
+                            "desc": "Your oath allows you to channel divine energy to fuel magical effects. Each channel divinity option provided by your oath explains how to use it. You may use this trait once every short rest. If a channel divinity effect requires a saving throw, the DC of that saving throw equals your paladin spell save DC."
+                        }
+                    ]
+                },
+                {
+                    "name": "Divine Health",
+                    "desc": "You are immune to disease."
+                },
+                {
+                    "name": "Harness Divine Power (Optional)",
+                    "desc": "You may expend a use of your channel divinity trait to fuel your spells. As a bonus action, you may regain one expended spell slot, the level of which may be no higher than half your proficiency bonus rounded up. You may use this trait once every long rest."
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Extra Attack",
+                    "desc": "You may attack twice instead of once whenever you take the attack action on your turn."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Aura of Protection",
+                    "desc": "Whenever you or any creature of your choice within 10ft. of you must make a saving throw, the creature gains a bonus to the saving throw equal to your CHA, minimum of +1. You must be conscious for this trait to be active."
+                },
+                {
+                    "name": "Countercharm",
+                    "desc": "As an action, you may start a performance that lasts until the end of your next turn. During that time, you and any creature of your choice within 30ft. of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced, or if you voluntarily end it, which requires no action."
+                }
+            ],
+            "7": [
+                {
+                    "name": "Sacred Oath Feature",
+                    "desc": "You gain a feature depending on your sacred oath."
+                }
+            ],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [],
+            "10": [
+                {
+                    "name": "Aura of Courage",
+                    "desc": "You and all creatures of your choice within 10ft. of you cannot be frightened. You must be conscious for this trait to be active."
+                }
+            ],
+            "11": [
+                {
+                    "name": "Improved Divine Smite",
+                    "desc": "Whenever you hit a creature with a melee weapon, the creature takes an additional 1d8 @radiant damage."
+                }
+            ],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [],
+            "14": [
+                {
+                    "name": "Cleansing Touch",
+                    "desc": "You may use your action to end the effects of one spell on yourself or one willing creature you touch. You may use this trait a number of times equal to your CHA every long rest."
+                }
+            ],
+            "15": [
+                {
+                    "name": "Sacred Oath Feature",
+                    "desc": "You gain a feature depending on your sacred oath."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [],
+            "18": [
+                {
+                    "name": "Aura of Courage",
+                    "desc": "The aura granted by the aura of courage trait has its range increased to 30ft."
+                },
+                {
+                    "name": "Aura of Protection",
+                    "desc": "The aura granted by the aura of protection trait has its range increased to 30ft."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Sacred Oath Feature",
+                    "desc": "You gain a feature depending on your sacred oath."
+                }
+            ]
+        }
+    },
+    "rogue": {
+        "name": "Rogue",
+        "desc": ["Rogues rely on skill, stealth, and their foes' vulnerabilities to get the upper hand in any situation. They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness and versatility that is the cornerstone of any successful adventuring party."],
+        "mc-scores": ["DEX"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["light armor"],
+            "weapons": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+            "tools": ["thieves' tools"],
+            "saves": ["DEX", "INT"],
+            "skills": [4, ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"]]
+        },
+        "equipment": [
+            ["a rapier", "a shortsword"],
+            ["a shortbow + quiver with 20 arrows", "a shortsword"],
+            ["a burglar's pack, a dungeoneer's pack", "an explorer's pack"],
+            ["leather armor, 2 daggers, and thieves' tools"]
+        ],
+        "magic": {
+            "caster": "none"
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Sneak Attack",
+                    "desc": "You may deal damage to 1 creature if you attack that creature with advantage. This must be with a finesse or ranged weapon. You don't need advantage if another creature is within 5ft. of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll. Sneak attack deals damage equal to 1d6 * half your rogue level (rounded up)."
+                },
+                {
+                    "name": "Expertise",
+                    "desc": "You may choose 2 of your chosen skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. These 2 proficiencies will have doubled proficiency bonus."
+                },
+                {
+                    "name": "Thieves' Cant",
+                    "desc": "You learn Thieves' Cant, a mixture of jargon and code woven through spoken language. This allows you to speak this language to others who have learned this secret language, conveying secret messages. Conveying a message in this way takes 4x as long."
+                }
+            ],
+            "2": [
+                {
+                    "name": "Cunning Action",
+                    "desc": "You may use a bonus action on each of your combat turns. This bonus action may only be used on the @dash, @disengage or @hide action."
+                }
+            ],
+            "3": [
+                {
+                    "name": "Roguish Archetype",
+                    "desc": "Choose a subclass. (WIP)"
+                },
+                {
+                    "name": "Steady Aim",
+                    "desc": "You may give yourself advantage on your next attack roll on the current turn as a bonus action. You may only do this if you haven't moved this turn, and your speed will be reduced to 0ft. until the start of your next turn once you do."
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Uncanny Dodge",
+                    "desc": "When an attacker that you can see hits you with an attack, you may use your reaction to halve the attack's damage."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Expertise",
+                    "desc": "You may choose an additional 2 skills and gain expertise in them."
+                }
+            ],
+            "7": [
+                {
+                    "name": "Evasion",
+                    "desc": "When you are forced to make a DEX saving throw to take only half damage from an area attack, you instead take no damage if you succeed the saving throw, and half damage if you fail."
+                }
+            ],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Roguish Archetype Feature",
+                    "desc": "You gain a feature depending on your roguish archetype."
+                }
+            ],
+            "10": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "11": [
+                {
+                    "name": "Reliable Talent",
+                    "desc": "Whenever you make an ability check that lets you add your proficiency bonus, you may treat a d20 roll of 9 or lower as a 10."
+                }
+            ],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Roguish Archetype Feature",
+                    "desc": "You gain a feature depending on your roguish archetype."
+                }
+            ],
+            "14": [
+                {
+                    "name": "Blindsense",
+                    "desc": "You gain 10ft. of blindsense."
+                }
+            ],
+            "15": [
+                {
+                    "name": "Slippery Mind",
+                    "desc": "You gain proficiency in WIS saving throws."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Roguish Archetype Feature",
+                    "desc": "You gain a feature depending on your roguish archetype."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Elusive",
+                    "desc": "As long as you are not incapacitated, no attack roll has advantage against you."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Stroke of Luck",
+                    "desc": "If your attack misses a target within range, you may turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20. You may use this trait once every long rest."
+                }
+            ]
+        }
+    },
+    "warlock": {
+        "name": "Warlock",
+        "desc": ["Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular."],
+        "mc-scores": ["CHA"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["light armor"],
+            "weapons": ["simple weapons"],
+            "tools": ["none"],
+            "saves": ["WIS", "CHA"],
+            "skills": [2, ["Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion"]]
+        },
+        "equipment": [
+            ["a light crossbow and 20 bolts", "any simple weapon"],
+            ["a component pouch", "an arcane focus"],
+            ["a scholar's pack", "a dungeoneer's pack"],
+            ["leather armor, any simple weapon, and 2 daggers"]
+        ],
+        "magic": {
+            "caster": "full",
+            "mod": "CHA",
+            "type": "known",
+            "amount": [4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 15, 16, 18, 19, 19, 20, 22, 22, 22],
+            "slots": {
+                "1": [1, "", "", "", "", "", "", "", ""],
+                "2": [2, "", "", "", "", "", "", "", ""],
+                "3": ["", 2, "", "", "", "", "", "", ""],
+                "4": ["", 2, "", "", "", "", "", "", ""],
+                "5": ["", "", 2, "", "", "", "", "", ""],
+                "6": ["", "", 2, "", "", "", "", "", ""],
+                "7": ["", "", "", 2, "", "", "", "", ""],
+                "8": ["", "", "", 2, "", "", "", "", ""],
+                "9": ["", "", "", "", 2, "", "", "", ""],
+                "10": ["", "", "", "", 2, "", "", "", ""],
+                "11": ["", "", "", "", 3, "", "", "", ""],
+                "12": ["", "", "", "", 3, "", "", "", ""],
+                "13": ["", "", "", "", 3, "", "", "", ""],
+                "14": ["", "", "", "", 3, "", "", "", ""],
+                "15": ["", "", "", "", 3, "", "", "", ""],
+                "16": ["", "", "", "", 3, "", "", "", ""],
+                "17": ["", "", "", "", 4, "", "", "", ""],
+                "18": ["", "", "", "", 4, "", "", "", ""],
+                "19": ["", "", "", "", 4, "", "", "", ""],
+                "20": ["", "", "", "", 4, "", "", "", ""]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Otherworldly Patron",
+                    "desc": "Choose a subclass. (WIP)"
+                },
+                {
+                    "name": "Pact Magic",
+                    "type": "list",
+                    "desc": "Your arcane research and the magic bestowed upon you by your patron have given you facility with spells.",
+                    "content": [
+                        {
+                            "name": "Cantrips",
+                            "desc": "You know 2 cantrips of your choice from the warlcok spell list."
+                        },
+                        {
+                            "name": "Spell Slots",
+                            "desc": "The warlock spell slot table shows how many spell slots you have to cast your warlock spells of 1st to 5th level. All your spell slots are the same level. You regain all expended spell slots after a short rest."
+                        },
+                        {
+                            "name": "Known Spells",
+                            "desc": "The Spells Known column of the warlock spell slot table shows how many warlock spells you know at any given level. Whenever you gain a level in this class, you may choose one of the spells you know, and replace it with any other warlock spell. Each spell you learn can only be of a spell slot level you have."
+                        },
+                        {
+                            "name": "Spellcasting Focus",
+                            "desc": "You may use an arcane focus as a spellcasting focus for your warlock spells."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is CHA.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + CHA"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + CHA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "2": [
+                {
+                    "name": "Eldritch Invocations",
+                    "desc": "You gain 2 eldritch invocations of your choice. You may replace any one existing invocation you know with a different one whenever you gain a level in this class.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Agonizing Blast",
+                            "desc": "Prerequisite: @eldritch blast. When you cast @eldritch blast, you may add your CHA modifier to the damage roll."
+                        },
+                        {
+                            "name": "Armor of Shadows",
+                            "desc": "You may cast @mage armor on yourself, without expending a spell slot or needing material components."
+                        },
+                        {
+                            "name": "Aspect of the Moon",
+                            "desc": "Prerequisite: pact of the tome. You no longer need sleep, and cannot be forced to sleep by any means. To gain the benefits of a long rest, you may spend all 8 hours doing light activity, such as reading or keeping watch."
+                        },
+                        {
+                            "name": "Beast Speech",
+                            "desc": "You may cast @speak with animals at will, without expending a spell slot."
+                        },
+                        {
+                            "name": "Beguiling Influence",
+                            "desc": "You gain proficiency in Deception (CHA) and Persuasion (CHA)."
+                        },
+                        {
+                            "name": "Bond of the Talisman",
+                            "desc": "Prerequisite: pact of the talisman. "
+                        }
+                            
+                    ]
+                }
+            ],
+            "3": [
+                {
+                    "name": "Expertise",
+                    "desc": "You may choose 2 of your chosen skill proficiencies. These 2 proficiencies will have doubled proficiency bonus."
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 3."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Font of Inspiration",
+                    "desc": "You may use your bardic inspiration trait a number of times equal to your CHA modifier, minimum of 1, every short rest."
+                },
+                {
+                    "name": "Bardic Inspiration",
+                    "desc": "Your bardic inspiration die becomes a d8."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Bard College Feature",
+                    "desc": "You gain a feature depending on your bard college."
+                },
+                {
+                    "name": "Countercharm",
+                    "desc": "As an action, you may start a performance that lasts until the end of your next turn. During that time, you and any creature of your choice within 30ft. of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced, or if you voluntarily end it, which requires no action."
+                }
+            ],
+            "7": [],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Song of Rest",
+                    "desc": "The extra hitpoints regained from this trait increases to 1d8."
+                }
+            ],
+            "10": [
+                {
+                    "name": "Magical Secrets",
+                    "desc": "Choose two spells from any class, including this one. A spell you choose must be of a level you can cast, or a cantrip. The chosen spells count as bard spells for you, and are included in the spells known column of the spell slot table, or known cantrips."
+                },
+                {
+                    "name": "Bardic Inspiration",
+                    "desc": "Your bardic inspiration die becomes a d10."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 4."
+                },
+                {
+                    "name": "Expertise",
+                    "desc": "You may choose an additional 2 skills and gain expertise in them."
+                }
+            ],
+            "11": [],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Song of Rest",
+                    "desc": "The extra hitpoints regained from this trait increases to 1d10."
+                }
+            ],
+            "14": [
+                {
+                    "name": "Bard College Feature",
+                    "desc": "You gain a feature depending on your bard college."
+                },
+                {
+                    "name": "Magical Secrets",
+                    "desc": "You learn two additional spells from this trait, to a total of 4."
+                }
+            ],
+            "15": [
+                {
+                    "name": "Bardic Inspiration",
+                    "desc": "Your bardic inspiration die becomes a d12."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Song of Rest",
+                    "desc": "The extra hitpoints regained from this trait increases to 1d12."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Magical Secrets",
+                    "desc": "You learn two additional spells from this trait, to a total of 6."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Superior Inspiration",
+                    "desc": "When you roll initiative and have no uses of your bardic inspiration trait left, you regain one use."
+                }
+            ]
+        }
+    }
+}
