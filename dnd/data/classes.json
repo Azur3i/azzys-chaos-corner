@@ -1644,30 +1644,271 @@
                     "type": "list",
                     "content": [
                         {
-                            "name": "Agonizing Blast",
-                            "desc": "Prerequisite: @eldritch blast. When you cast @eldritch blast, you may add your CHA modifier to the damage roll."
+                            "desc": "Available from level 2:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Agonizing Blast",
+                                    "desc": "Prerequisite: @eldritch blast. When you cast @eldritch blast, you may add your CHA modifier to the damage roll."
+                                },
+                                {
+                                    "name": "Armor of Shadows",
+                                    "desc": "You may cast the @mage armor spell on yourself at will without expending a spell slot or needing material components."
+                                },
+                                {
+                                    "name": "Aspect of the Moon",
+                                    "desc": "Prerequisite: pact of the tome. You no longer need sleep, and cannot be forced to sleep by any means. To gain the benefits of a long rest, you may spend all 8 hours doing light activity, such as reading or keeping watch."
+                                },
+                                {
+                                    "name": "Beast Speech",
+                                    "desc": "You may cast the @speak with animals spell at will without expending a spell slot."
+                                },
+                                {
+                                    "name": "Beguiling Influence",
+                                    "desc": "You gain proficiency in Deception (CHA) and Persuasion (CHA)."
+                                },
+                                {
+                                    "name": "Book of Ancient Secrets",
+                                    "desc": "Prerequisite: pact of the tome. You can now inscribe magical rituals into your book of shadows. You may choose 2 1st-level spells of any class that have the ritual tag. These spell appear in your book, and do not count agains the number of spells you own. With your book in hand, you may cast the chosen spells as rituals. You cannot cast these spells unless as rituals, unless you've learned them by other means. You may also cast other warlock spells you know as rituals if they have the ritual tag. You may add other ritual spells into your book, provided the spell's level is equal to or less than half your warlock level (rounded up). Transcribing costs 2 hours and 50gp for each level of the spell."
+                                },
+                                {
+                                    "name": "Devil's Sight",
+                                    "desc": "You can see normally in darkness, both magical and nonmagical, up to 120ft."
+                                },
+                                {
+                                    "name": "Eldritch Mind",
+                                    "desc": "You gain advantage to CON saving throws you make to maintain concentration on a spell."
+                                },
+                                {
+                                    "name": "Eldritch Sight",
+                                    "desc": "You may cast the @detect magic spell at will, without expending a spell slot or needing material components."
+                                },
+                                {
+                                    "name": "Eldritch Spear",
+                                    "desc": "Prerequisite: @eldritch blast. The range of your @eldritch blast is 300ft."
+                                },
+                                {
+                                    "name": "Eyes of the Rune Keeper",
+                                    "desc": "You can read all writing."
+                                },
+                                {
+                                    "name": "Fiendish Vigor",
+                                    "desc": "You may cast the @false life spell on yourself at will, as a 1st-level spell, without expending a spell slot or needing material components."
+                                },
+                                {
+                                    "name": "Gift of the Ever-Living Ones",
+                                    "desc": "Prerequisite: pact of the chain. Spells and effects that restore your hitpoints restore the maximum amount, as long as your familiar is within 100ft. of you."
+                                },
+                                {
+                                    "name": "Grasp of Hadar",
+                                    "desc": "Prerequisite: @eldritch blast. Once on each of your turns when you hit a creature with your @eldritch blast, you may move that creature 10ft. in a straight line closer to yourself"
+                                },
+                                {
+                                    "name": "Improved Pact Weapon",
+                                    "desc": "Prerequisite: pact of the blade. You may use any weapon you summon with your pact of the blade feature as a spellcasting focus for your warlock spells. Additionally, the weapon gains +1 to attack and damage rulles, unless it already gains these bonuses from being magical. The weapon may also be a shortbow, longbow, light crossbow or heavy crossbow."
+                                },
+                                {
+                                    "name": "Investment of the Chain Master",
+                                    "desc": "Prerequisite: pact of the chain. When you cast @find familiar, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits:",
+                                    "type": "list",
+                                    "content": [
+                                        {
+                                            "desc": "The familiar gains either a flying or swimming speed of 40ft. (your choice)."
+                                        },
+                                        {
+                                            "desc": "As a bonus action, you may command the familiar to take the @attack action."
+                                        },
+                                        {
+                                            "desc": "The familiar's weapon attacks are considered magical."
+                                        },
+                                        {
+                                            "desc": "If the familiar forces a creature to make a saving throw, it uses your spell save DC."
+                                        },
+                                        {
+                                            "desc": "Whenever the familiar takes damage, you may use your reaction to halve the damage."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Lance of Lethargy",
+                                    "desc": "Prerequisite: @eldritch blast. Once on each of your turns when you hit a creature with your @eldritch blast, you may reduce the target's speed by 10ft. until the end of your next turn."
+                                },
+                                {
+                                    "name": "Mask of Many Faces",
+                                    "desc": "You may cast the @disguise self spell at will, without expending a spell slot."
+                                },
+                                {
+                                    "name": "Misty Visions",
+                                    "desc": "You may cast the @silent image spell at will without expending a spell slot, or needing material components."
+                                },
+                                {
+                                    "name": "Rebuke of the Talisman",
+                                    "desc": "Prerequisite: pact of the talisman. Whenever the wearer of your talisman is hit by an attacker you can see within 30ft. of you, you may use your reaction to deal @psychic damage to the attacker equal to your proficiency bonus, and push it up to 10ft. away from the wearer."
+                                },
+                                {
+                                    "name": "Repelling Blast",
+                                    "desc": "Prerequisite: @eldritch blast. Whenever you hit a creature with @eldritch blast, you may push the creature up to 10ft. in a straight line away from you."
+                                },
+                                {
+                                    "name": "Thief of Five Fates",
+                                    "desc": "You may cast the @bane spell using a warlock spell slot, once every long rest."
+                                },
+                                {
+                                    "name": "Voice of the Chain Master",
+                                    "desc": "Prerequisite: pact of the chain. You may communicate telepathically with your familiar and perceive through your familiar's senses as long as you are on the same plane of existence. While perceiving through your familiar's senses, you may speak through your familiar in your own voice, even if your familiar is normally incapable of speech."
+                                }
+                            ]
                         },
                         {
-                            "name": "Armor of Shadows",
-                            "desc": "You may cast @mage armor on yourself, without expending a spell slot or needing material components."
+                            "desc": "Available from level 5:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Cloak of Flies",
+                                    "desc": "As a bonus action, you may surround yourself with a magical aura resembling buzzing flies. The aura extends 5ft. from you in every direction, but not through total cover, lasting until you're incapacitated or until you dismiss it as a bonus action. While the aura persists, you gain advantage on Intimidation (CHA) checks, but disadvantage on all other CHA checks. Any creature that starts its turn in the aura takes @poison damage equal to your CHA (minimum of 0). You may use this invocation once every short rest."
+                                },
+                                {
+                                    "name": "Eldritch Smite",
+                                    "desc": "Prerequisite: pact of the blade. Once per turn, when you hit a creature with your pact weapon, you may expend a warlock spell slot to deal an extra 1d8 + 1d8 per spell slot level @force damage to the target. If the target is Huge or smaller, you may knock it prone."
+                                },
+                                {
+                                    "name": "Far Scribe",
+                                    "desc": "Prerequisite: pact of the tome. A new page appears in your book of shadows. With your permission, a creature may use its action to write its name on that page, up to a number of names equal to your proficiency bonus. You may cast the @sending spell at will without expending a spell slot, or requiring material components, targeting a creature whose name is on the page. The target hears the message in their mind, and if the target replies, their message appears on the page, rather than in your mind, disappearing again after 1 minute. You may erase a name on the page as an action, by touching it."
+                                },
+                                {
+                                    "name": "Gift of the Depths",
+                                    "desc": "You may breathe underwater, and you gain a swimming speed equal to your walking speed. You may cast the @water breathing spell without expending a spell slot, once per long rest."
+                                },
+                                {
+                                    "name": "Maddening Hex",
+                                    "desc": "Prerequisite: the @hex spell, or a warlock feature that curses. As a bonus action, you cause a psychic disturbance around the target cursed by your spell or effect. When you do so, you deal @psychic damage equal to your CHA (minimum of 1) to the cursed target and all creatures of your choice within 5ft. of it. You may use this invocation only if it's a target you can see within 30ft. of you."
+                                },
+                                {
+                                    "name": "Mire the Mind",
+                                    "desc": "You may cast the @slow spell using a warlock spell slot, once every long rest."
+                                },
+                                {
+                                    "name": "One With Shadows",
+                                    "desc": "When you are in an area of dim light or darkness, you may use your action to become invisible until you move or take an action or reaction."
+                                },
+                                {
+                                    "name": "Sign of Ill Omen",
+                                    "desc": "You may cast the @bestow curse spell using a warlock spell slot, once per long rest."
+                                },
+                                {
+                                    "name": "Thirsting Blade",
+                                    "desc": "Prerequisite: pact of the blade. You may attack with your pact weapon twice instead of once, whenever you take the @attack action on your turn."
+                                },
+                                {
+                                    "name": "Tomb of Levistus",
+                                    "desc": "As a reaction when you take damage, you may entomb yourself in ice, which melts away at the end of your next turn. You gain 10 temporary hitpoints per warlock level, which take as much of the triggering damage as possible. Immediately after you take the damage, you gain vulnerability to fire damage, your speed reduces to 0ft., and you are incapacitated. These effects end when the ice melts, along with the temporary hitpoints. You may use this invocation once every short rest."
+                                },
+                                {
+                                    "name": "Undying Servitude",
+                                    "desc": "You may cast the @animate dead spell without expending a spell slot, once every long rest."
+                                }
+                            ]
                         },
                         {
-                            "name": "Aspect of the Moon",
-                            "desc": "Prerequisite: pact of the tome. You no longer need sleep, and cannot be forced to sleep by any means. To gain the benefits of a long rest, you may spend all 8 hours doing light activity, such as reading or keeping watch."
+                            "desc": "Available from level 7:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Bewitching Whispers",
+                                    "desc": "You may cast the @compulsion spell using a warlock spell slot, once every long rest."
+                                },
+                                {
+                                    "name": "Dreadful Word",
+                                    "desc": "You may cast the @confusion spell using a warlock spell slot, once every long rest."
+                                },
+                                {
+                                    "name": "Ghostly Gaze",
+                                    "desc": "As an action, you may touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the target is on the same plane of existence as you, you may use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn every time. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are blinded and deafened to your own surroundings."
+                                },
+                                {
+                                    "name": "Protection of the Talisman",
+                                    "desc": "Prerequisite: pact of the talisman. Whenever the wearer of your talisman fails a saving throw, they may add 1d4 to the roll, potentially turning the save into a success. This benefit may be used a number of times equal to your proficiency bonus every long rest."
+                                },
+                                {
+                                    "name": "Relentless Hex",
+                                    "desc": "Prerequisite: the @hex spell, or a warlock feature that curses. Your curse creates a temporary bond between you and the target. As a bonus action, you may magically teleport up to 30ft. to an unoccupied space you can see within 5ft. of the cursed target, provided you can see the target."
+                                },
+                                {
+                                    "name": "Sculptor of Flesh",
+                                    "desc": "You may cast the @polymorph spell using a warlock spell slot, once every long rest."
+                                },
+                                {
+                                    "name": "Trickster's Escape",
+                                    "desc": "You may cast the @freedom of movement spell on yourself without expending a spell slot, once every long rest."
+                                }
+                            ]
                         },
                         {
-                            "name": "Beast Speech",
-                            "desc": "You may cast @speak with animals at will, without expending a spell slot."
+                            "desc": "Available from level 9:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Ascendant Step",
+                                    "desc": "You may cast the @levitate spell on yourself at will without expending a spell slot, or needing material components."
+                                },
+                                {
+                                    "name": "Gift of the Protectors",
+                                    "desc": "Prerequisite: pact of the tome. A new page appears in your book of shadows. With your permission, a creature may use its action to write its name on that page, up to a number of names equal to your proficiency bonus. Whenever a creature whose name is on the page is reduced to 0 hitpoints, but not killed outright, the creature drops to 1 hitpoint instead. Once this is triggered, no creature may benefit from it until you finish a long rest. You may erase a name on the page as an action, by touching it."
+                                },
+                                {
+                                    "name": "Minions of Chaos",
+                                    "desc": "You may cast the @conjure elemental spell using a warlock spell slot, once every long rest."
+                                },
+                                {
+                                    "name": "Otherworldy Leap",
+                                    "desc": "You may cast the @jump spell at will without expending a spell slot."
+                                },
+                                {
+                                    "name": "Whispers of the Grave",
+                                    "desc": "You may cast the @speak with dead spell at will without expending a spell slot."
+                                }
+                            ]
                         },
                         {
-                            "name": "Beguiling Influence",
-                            "desc": "You gain proficiency in Deception (CHA) and Persuasion (CHA)."
+                            "desc": "Available from level 9:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Bond of the Talisman",
+                                    "desc": "Prerequisite: pact of the talisman. While someone else is wearing your talisman, you may use your action to teleport to the unoccupied space closest to them, provided the two of you are on the same plane of existence. The wearer of your talisman can do the same thing to teleport to you. Teleportation in this way can be done a number of times equal to your proficiency bonus every long rest."
+                                },
+                                {
+                                    "name": "Lifedrinker",
+                                    "desc": "Prerequisite: pact of the blade. Whenever you hit a creature with your pact weapon, the target takes bonus necrotic damage equal to your CHA (minimum of 1)."
+                                }
+                            ]
                         },
                         {
-                            "name": "Bond of the Talisman",
-                            "desc": "Prerequisite: pact of the talisman. "
+                            "desc": "Available from level 9:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Chains of Carceri",
+                                    "desc": "Prerequisite: pact of the chain. You may cast the @hold monster spell at will, targeting a celestial, fiend, or elemental, without expending a spell slot or needing material components. You may affect every creature with this invocation once every long rest."
+                                },
+                                {
+                                    "name": "Master of Myriad Forms",
+                                    "desc": "You may cast the @alter self spell at will without expending a spell slot."
+                                },
+                                {
+                                    "name": "Shroud of Shadow",
+                                    "desc": "You may cast the @invisibilty spell at will without expending a spell slot."
+                                },
+                                {
+                                    "name": "Visions of Distant Realms",
+                                    "desc": "You may cast the @arcane eye spell at will without expending a spell slot."
+                                },
+                                {
+                                    "name": "Witch Sight",
+                                    "desc": "You are able to see the true form of any shapechanger or creature concealed by illusion or transmutation magic, while the creature is within 30ft. of you and within line of sight."
+                                }
+                            ]
                         }
-                            
                     ]
                 }
             ],
