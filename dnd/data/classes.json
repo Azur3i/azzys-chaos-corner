@@ -805,7 +805,7 @@
             "5": [
                 {
                     "name": "Extra Attack",
-                    "desc": "You may attack twice instead of once whenever you take the attack action on your turn."
+                    "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
                 }
             ],
             "6": [
@@ -841,7 +841,7 @@
             "11": [
                 {
                     "name": "Extra Attack",
-                    "desc": "You may attack three times instead of twice whenever you take the attack action on your turn."
+                    "desc": "You may attack three times instead of twice whenever you take the @attack action on your turn."
                 }
             ],
             "12": [
@@ -899,7 +899,254 @@
             "20": [
                 {
                     "name": "Extra Attack",
-                    "desc": "You may attack four times instead of three whenever you take the attack action on your turn."
+                    "desc": "You may attack four times instead of three whenever you take the @attack action on your turn."
+                }
+            ]
+        }
+    },
+    "monk": {
+        "name": "Monk",
+        "desc": ["Monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a striking display of combat prowess or a subtler focus of defensive ability and speed, this energy infuses all that a monk does."],
+        "mc-scores": ["DEX", "WIS"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["none"],
+            "weapons": ["simple weapons", "shortswords"],
+            "tools": ["choose one type of artisan's tools, or one musical instrument"],
+            "saves": ["STR", "DEX"],
+            "skills": [2, ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"]]
+        },
+        "equipment": [
+            ["a shortsword", "any simple weapon"],
+            ["a dungeoneer's pack", "an explorer's pack"],
+            ["10 darts"]
+        ],
+        "magic": {
+            "caster": "none"
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Martial Arts",
+                    "type": "list",
+                    "desc": "You have mastery of certain types of martial arts. You gain the following traits when unarmed, or wielding only monk weapons. Monk weapons are shortswords and any simple melee weapons that aren't two-handed or heavy.",
+                    "content": [
+                        {
+                            "desc": "You may use DEX instead of STR for the attack and damage rolls of your unarmed strikes and monk weapons."
+                        },
+                        {
+                            "desc": "You may roll 1d4 instead of the normal damage for your unarmed strike or monk weapon. This is your martial die."
+                        },
+                        {
+                            "desc": "When using the @attack action with an unarmed strike or monk weapon on your turn, you may use your bonus action to make an additional unarmed strike."
+                        }
+                    ]
+                },
+                {
+                    "name": "Unarmored Defense",
+                    "desc": "While you are not wearing armor or wielding a shield, your AC equals 10 + DEX + WIS."
+                }
+            ],
+            "2": [
+                {
+                    "name": "Ki",
+                    "desc": "Your training allows you to harness the energy of ki. You have a maximum amount of ki points equal to your monk level. You may spend these points to fuel various ki features. You regain all ki points at the end of a short rest, during which you need to spend 30 minutes meditating. You gain the following abilities:",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Flurry of Blows",
+                            "desc": "After you take the @attack action, as a bonus action, you may spend 1 ki point to make two unarmed strikes."
+                        },
+                        {
+                            "name": "Patient Defense",
+                            "desc": "As a bonus action, you may spend 1 ki point to take the @dodge action."
+                        },
+                        {
+                            "name": "Step of the Wind",
+                            "desc": "As a bonus action, you may spend 1 ki point to take the @disengage or @dash action, and your jump distance is doubled for this turn."
+                        },
+                        {
+                            "name": "Ki Save DC",
+                            "desc": "8 + proficiency + WIS."
+                        }
+                    ]
+                },
+                {
+                    "name": "Unarmored Movement",
+                    "desc": "Your speed increases by 10ft. while you are not wearing armor or wielding a shield."
+                },
+                {
+                    "name": "Dedicated Weapon (Optional)",
+                    "desc": "At the end of a short rest, you may touch one weapon and count that weapon as a monk weapon until you use this feature again. The weapon must be a simple or martial weapon, you must be proficient in it and it may not have the heavy or special properties."
+                }
+            ],
+            "3": [
+                {
+                    "name": "Monastic Tradition",
+                    "desc": "Choose a subclass. (WIP)"
+                },
+                {
+                    "name": "Deflect Missiles",
+                    "desc": "You may use your reaction to deflect or catch a missile when you are hit by a ranged weapon attack. When you do so, the damage is reduced by 1d10 + DEX + your monk level. If you reduce the damage to 0 this way, you may catch the missile if you have at least one hand free. You may spend 1 ki point to make a ranged attack with a range of 20ft./60ft. using the weapon or ammunition you caught, as part of the same reaction. You make this attack with proficiency, and the missile counts as a monk weapon for the attack."
+                },
+                {
+                    "name": "Ki-Fueled Attack (Optional)",
+                    "desc": "Whenever you spend 1 ki point as part of your action on your turn, you may make one attack with an unarmed strike or monk weapon as a bonus action before the end of that turn."
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Slow Fall",
+                    "desc": "You may use your reaction to reduce any fall damage you take by an amount equal to five times your monk level."
+                },
+                {
+                    "name": "Quickened Healing (Optional)",
+                    "desc": "You may spend 2 ki points to roll your martial die. You regain a number of hitpoints equal to the number rolled plus your proficiency bonus."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Martial Arts",
+                    "desc": "Your martial die becomes 1d6."
+                },
+                {
+                    "name": "Extra Attack",
+                    "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
+                },
+                {
+                    "name": "Stunning Strike",
+                    "desc": "Whenever you hit another creature with a melee weapon attack, you may spend 1 ki point to attempt to stun it. The target must succeed on a CON saving throw or be stunned until the end of your next turn."
+                },
+                {
+                    "name": "Focused Aim (Optional)",
+                    "desc": "When you miss an attack roll, you may spend up to 3 ki points to increase your attack roll by 2 per ki point, potentially turning the miss into a hit."
+                }
+
+            ],
+            "6": [
+                {
+                    "name": "Monastic Tradition Feature",
+                    "desc": "You gain a feature depending on your monastic tradition."
+                },
+                {
+                    "name": "Ki-Empowered Strikes",
+                    "desc": "Your unarmed strikes count as magical."
+                },
+                {
+                    "name": "Unarmored Movement",
+                    "desc": "Your speed increases by an additional 5ft., for a total of 15ft., while you are not wearing armor or wielding a shield."
+                }
+            ],
+            "7": [
+                {
+                    "name": "Evasion",
+                    "desc": "When you are forced to make a DEX saving throw to take only half damage from an area attack, you instead take no damage if you succeed the saving throw, and half damage if you fail."
+                },
+                {
+                    "name": "Stillness of Mind",
+                    "desc": "You may use your action to end one effect on yourself that is causing you to be charmed or frightened."
+                }
+            ],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Unarmored Movement",
+                    "desc": "You gain the ability to move along vertical surfaces or over liquids on your turn without falling during the move."
+                }
+            ],
+            "10": [
+                {
+                    "name": "Purity of Body",
+                    "desc": "You are immune to disease and being poisoned."
+                },
+                {
+                    "name": "Unarmored Movement",
+                    "desc": "Your speed increases by an additional 5ft., for a total of 20ft., while you are not wearing armor or wielding a shield."
+                }
+            ],
+            "11": [
+                {
+                    "name": "Monastic Tradition Feature",
+                    "desc": "You gain a feature depending on your monastic tradition."
+                },
+                {
+                    "name": "Martial Arts",
+                    "desc": "Your martial die becomes 1d8."
+                }
+            ],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Tongue of the Sun and Moon",
+                    "desc": "You understand all spoken language. Any creature that can understand a language can understand what you say."
+                }
+            ],
+            "14": [
+                {
+                    "name": "Diamond Soul",
+                    "desc": "You gain proficiency in all saving throws. Additionally, you may spend 1 ki point to reroll a failed saving throw to reroll and take the second result."
+                },
+                {
+                    "name": "Unarmored Movement",
+                    "desc": "Your speed increases by an additional 5ft., for a total of 25ft., while you are not wearing armor or wielding a shield."
+                }
+            ],
+            "15": [
+                {
+                    "name": "Timeless Body",
+                    "desc": "You don't suffer the frailty of old age, and you cannot be aged magically. You can still die of old age. Additionally, you no longer need food or water."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Monastic Tradition Feature",
+                    "desc": "You gain a feature depending on your monastic tradition."
+                },
+                {
+                    "name": "Martial Arts",
+                    "desc": "Your martial die becomes 1d10."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Empty Body",
+                    "desc": "You may use your action to spend 4 ki points and become invisible for 1 minute. During this time, you have resistance to all damage, except force damage. Additionally, you may spend 8 ki points to cast the astral projection spell, without needing material components. When you do so, you cannot take any other creatures with you."
+                },
+                {
+                    "name": "Unarmored Movement",
+                    "desc": "Your speed increases by an additional 5ft., for a total of 30ft., while you are not wearing armor or wielding a shield."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Perfect Self",
+                    "desc": "When you roll for initiative and have 0 ki points remaining, you regain 4 ki points."
                 }
             ]
         }
@@ -1302,7 +1549,7 @@
             "5": [
                 {
                     "name": "Extra Attack",
-                    "desc": "You may attack twice instead of once whenever you take the attack action on your turn."
+                    "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
                 }
             ],
             "6": [
