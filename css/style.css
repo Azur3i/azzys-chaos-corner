@@ -80,6 +80,9 @@
 /* site defaults */
 
 body {
+    background: linear-gradient(to bottom, #533447, #222428 40rem);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
     background-color: #222428;
     font-family: "nyala";
 }
