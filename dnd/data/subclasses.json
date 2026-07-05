@@ -1,0 +1,41 @@
+{
+    "rogue": {
+        "assassin": {
+            "name": "Assassin",
+            "desc": ["You focus your training on the grim art of death. Those who adhere to this archetype are diverse: hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiencies",
+                        "desc": "You gain proficiency with the disguise kit and the poisoner's kit."
+                    },
+                    {
+                        "name": "Assassinate",
+                        "desc": "You are at your deadliest when you get the drop on your enemies. You gain advantage on attack rolls against any creature that hasn't taken a turn in this combat yet. Additionally, any hit you score against a creature that is surprised is guaranteed a critical hit."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Infiltration Expertise",
+                        "desc": "You may unfailingly create false identities for yourself. You must spend 7 days and 25gp to establish the history, profession, and affiliations for an identity. You cannot establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official-looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants. Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to."
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Impostor",
+                        "desc": "You gain the ability to unerringly mimic another person's speech, writing and behavior. You must spend at least 3 hours studying these three components of the person's behavior, listening to speech, examining handwriting and observing mannerisms. Your ruse is indiscernable to the casual observer. If a wary creature suspects something is amiss, you gain advantage on any Deception (CHA) check you make to avoid detection."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Death Strike",
+                        "desc": "You become a master of instant death. When you attack and hit a creature that is surprised, it must succeed on a CON saving throw (DC 8 + your DEX + your proficiency bonus). On a failed save, the damage your attack deals against the creature is doubled."
+                    }
+                ]
+            }
+        }
+    }
+}
