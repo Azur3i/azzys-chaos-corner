@@ -2328,5 +2328,196 @@
                 }
             ]
         }
+    },
+    "wizard": {
+        "name": "Wizard",
+        "desc": ["Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, brute-force mind control, and much more."],
+        "mc-scores": ["INT"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["none"],
+            "weapons": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
+            "tools": ["none"],
+            "saves": ["INT", "WIS"],
+            "skills": [2, ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"]]
+        },
+        "equipment": [
+            ["a quarterstaff", "a dagger"],
+            ["a component pouch", "an arcane focus"],
+            ["a scholar's pack", "an explorer's pack"],
+            ["a spellbook"]
+        ],
+        "magic": {
+            "caster": "full",
+            "mod": "INT",
+            "type": "prep",
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [3, "", "", "", "", "", "", "", ""],
+                "3": [4, 2, "", "", "", "", "", "", ""],
+                "4": [4, 3, "", "", "", "", "", "", ""],
+                "5": [4, 3, 2, "", "", "", "", "", ""],
+                "6": [4, 3, 3, "", "", "", "", "", ""],
+                "7": [4, 3, 3, 1, "", "", "", "", ""],
+                "8": [4, 3, 3, 2, "", "", "", "", ""],
+                "9": [4, 3, 3, 3, 1, "", "", "", ""],
+                "10": [4, 3, 3, 3, 2, "", "", "", ""],
+                "11": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "12": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "13": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "14": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "15": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "16": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "17": [4, 3, 3, 3, 2, 1, 1, 1, 1],
+                "18": [4, 3, 3, 3, 3, 1, 1, 1, 1],
+                "19": [4, 3, 3, 3, 3, 2, 1, 1, 1],
+                "20": [4, 3, 3, 3, 3, 2, 2, 1, 1]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power.",
+                    "content": [
+                        {
+                            "name": "Cantrips",
+                            "desc": "You know 3 cantrips of your choice from the wizard spell list."
+                        },
+                        {
+                            "name": "Preparing and Casting Spells",
+                            "desc": "You may prepare a number of wizard spells equal to your INT + your wizard level, minimum of 1 spell. The spells must be of a level for which you have spell slots. You may change any number of spells in your spell list during a long rest, requiring 1 minute of meditation per spell level for each spell you change. The spells you prepare must be in your spellbook."
+                        },
+                        {
+                            "name": "Spellbook",
+                            "desc": "You have a spellbook that contains 4 + 2 * your wizard level wizard spells of your choice. These spells can only be of spell levels you can prepare. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind. The spells you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs that you have had about the nature of the multiverse. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard's chest, for example, or in a dusty tome in an ancient library.",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Copying a Spell Into the Book",
+                                    "desc": "When you find a wizard spell of 1st level or higher, you may add it to your spellbook if it is of a spell level you can prepare, and if you can spare the time to decipher and copy it. Copying a spell into your spellbook involves reproducing the basic form of the spell, the deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation. For each level of the spell, the process takes 2 hours, and costs 50gp. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells."
+                                },
+                                {
+                                    "name": "Replacing the Book",
+                                    "desc": "You may copy a spell from your own spellbook into another book. For example, if you want to make a backup copy of your spellbook. This works the same way as copying a new spell into your spellbook, but you need spend only 1 hour and 10gp per spell level."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Ritual Casting",
+                            "desc": "You may cast any wizard spell you have prepared as a ritual if that spell has the ritual tag."
+                        }
+                        ,
+                        {
+                            "name": "Spellcasting Focus",
+                            "desc": "You may use an arcane focus as a spellcasting focus for your wizard spells."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is INT.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + INT"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + INT"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Arcane Recovery",
+                    "desc": "You have learned to regain some of your magical energy by studying your spellbook. Once per day, after finishing a short rest, you may choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the spell slots can be 6th level or higher."
+                }
+            ],
+            "2": [
+                {
+                    "name": "Arcane Tradition",
+                    "desc": "Choose a subclass. (WIP)"
+                }
+                
+            ],
+            "3": [],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 4."
+                }
+            ],
+            "5": [],
+            "6": [
+                {
+                    "name": "Arcane Tradition Feature",
+                    "desc": "You gain a feature depending on your arcane tradition."
+                }
+            ],
+            "7": [],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [],
+            "10": [
+                {
+                    "name": "Arcane Tradition Feature",
+                    "desc": "You gain a feature depending on your arcane tradition."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 5."
+                }
+            ],
+            "11": [],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [],
+            "14": [
+                {
+                    "name": "Arcane Tradition Feature",
+                    "desc": "You gain a feature depending on your arcane tradition."
+                }
+            ],
+            "15": [],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [],
+            "18": [
+                {
+                    "name": "Spell Mastery",
+                    "desc": "You have achieved such mastery over certain spells that you can cast them at will. Choose a 1st level and 2nd level wizard spell that are in your spellbook. You may cast these two spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as usual. You may exchange one or both spells chosen by spending 8 hours in study."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Signature Spells",
+                    "desc": "You gain mastery over 2 powerful spells, and can cast them with little effort. Choose 2 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared (they don't count against the number of spells you have prepared) and you can cast each of them once at 3rd level without expending a spell slot. You may cast both spells once per long rest. If you want to cast either spell at a higher level, you must expend a spell slot as usual."
+                }
+            ]
+        }
     }
 }
