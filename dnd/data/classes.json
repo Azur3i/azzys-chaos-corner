@@ -1153,7 +1153,7 @@
     },
     "oracle": {
         "name": "Oracle",
-        "desc": ["Oracles are beings exposed to the incomprehensible reality of the Plane of Finality, the End of Infinity. In this realm, the very concepts of reality reside and shape the Planes as they are. Carrying unknowable power in one hand, and the burden of a fragmented self in the other, oracles are wildcards. For them, sanity and strength are two sides of the same coin."],
+        "desc": ["Oracles are beings exposed to the incomprehensible reality of the Plane of Finality, the End of Infinity. In this realm, the very concepts of reality reside and shape the Planes as they are. Carrying unknowable power in one hand, and the burden of a fragmented self in the other, oracles are wildcards. For them, sanity and strength are two sides of the same coin.", "NOTE: this class is not finished, and largely still a work in progress."],
         "mc-scores": ["CHA"],
         "hitdie": 6,
         "proficiencies": {
