@@ -3,7 +3,7 @@ $abilities = $class["levels"][$level];
 require_once ROOT . "/scripts/functions.php";
 ?>
 
-<h2 class="title">Level <?= $level ?></h2>
+<h2 class="title lg">Level <?= $level ?></h2>
 <div class="accordion" id="level-<?= $level ?>">
     <?php foreach ($abilities as $ability):
         $id = "level-$level-" . strtolower(preg_replace("/[^a-z0-9]/i", "", $ability["name"])); ?>

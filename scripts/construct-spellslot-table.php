@@ -7,26 +7,26 @@
         
         <thead>
             <tr>
-                <th>Levels</th>
+                <th class="md">Levels</th>
                 <?php foreach (["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"] as $num): ?>
-                    <th><?= $num ?></th>
+                    <th class="md"><?= $num ?></th>
                 <?php endforeach; ?>
-                <th>Spells Known</th>
+                <th class="md">Spells Known</th>
             </tr>
         </thead>
 
         <tbody>
             <?php foreach (range(1, 20) as $i): ?>
                 <tr>
-                    <td><?= $i ?></td>
-                    <td><?= implode("</td><td>", $class["magic"]["slots"][$i]) ?></td>
+                    <td class="md"><?= $i ?></td>
+                    <td class="md"><?= implode("</td><td>", $class["magic"]["slots"][$i]) ?></td>
                     <?php if ($class["magic"]["type"] == "prep" && $i === 1): ?>
-                        <td rowspan="20">
+                        <td rowspan="20" class="md">
                             <?= $class["magic"]["mod"] ?> + <?= $class["magic"]["caster"] === "half" ? "1/2 * " : "" ?><?= strtolower($class["name"]) ?> level
                         </td>
 
                     <?php elseif ($class["magic"]["type"] == "known"): ?>
-                        <td><?= $class["magic"]["amount"][$i - 1] ?></td>
+                        <td class="md"><?= $class["magic"]["amount"][$i - 1] ?></td>
 
                     <?php endif; ?>
                 </tr>

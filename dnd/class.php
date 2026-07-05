@@ -6,7 +6,7 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="main-content col-9 mx-auto">
+        <div class="main-content col-md-12 col-lg-9 mx-auto">
             <?php include ROOT . "/scripts/construct-class.php"; ?>
         </div>
     </div>
