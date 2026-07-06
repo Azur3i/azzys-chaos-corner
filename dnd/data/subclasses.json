@@ -126,6 +126,48 @@
             ]
         }
     },
+    "circle-of-the-moon": {
+        "name": "Circle of the Moon",
+        "mainClass": "druid",
+        "desc": ["Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid. Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood."],
+        "magic": {
+            "caster": "none"
+        },
+        "levels": {
+            "2": [
+                {
+                    "name": "Combat Wild Shape",
+                    "desc": "You gain the ability to use your Wild Shape feature as a bonus action, rather than as an action. While in beast form, you may use a bonus action to expend 1 spell slot to regain 1d8 hitpoints per level of the spell slot consumed."
+                },
+                {
+                    "name": "Circle Forms",
+                    "desc": "The rites of your circle grant you the ability to transform into more dangerous animal forms. You may use your Wild Shape feature to transform into a beast with a CR as high as 1. You ignore the max CR your druid class would normally allow, but must abide by the other limitations there."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Primal Strike",
+                    "desc": "Your attacks in beast form count as magical."
+                },
+                {
+                    "name": "Circle Forms",
+                    "desc": "The max CR of beast you are allowed to transform into with your Wild Shape feature is equal to your druid level divided by 3 (rounded down)."
+                }
+            ],
+            "10": [
+                {
+                    "name": "Elemental Wild Shape",
+                    "desc": "You may expend two uses of your Wild Shape feature at the same time to transform into an air, earth, fire or water elemental."
+                }
+            ],
+            "14": [
+                {
+                    "name": "Thousand Forms",
+                    "desc": "You have learned to use magic to alter your physical form in more subtle ways. You may cast the @alter self spell at will."
+                }
+            ]
+        }
+    },
     "thief": {
         "name": "Thief",
         "mainClass": "rogue",
