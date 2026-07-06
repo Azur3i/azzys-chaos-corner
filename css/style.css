@@ -58,24 +58,22 @@
     --lavender: 221 170 255;
     --blue: 189 214 255;
     --black: 32 32 32;
-    --white: 223 223 223;
+    --white: 239 239 239;
 
     --fontsize: 1vw;
 
     --bg-opac: 0.4;
 }
 
-.pink {
-    --color: var(--pink)
-}
+.pink {--color: var(--pink)}
+.lavender {--color: var(--lavender)}
+.blue {--color: var(--blue)}
+.white {--color: var(--white)}
+.black {--color: var(--black)}
 
-.lavender {
-    --color: var(--lavender)
-}
-
-.blue {
-    --color: var(--blue)
-}
+.low-opac {--bg-opac: 0.25}
+.mid-opac {--bg-opac: 0.4}
+.high-opac {--bg-opac: 0.5}
 
 /* site defaults */
 
@@ -200,7 +198,7 @@ a.button:hover {
 }
 
 div.accordion {
-    margin: 0.8vw auto 2vw auto;
+    margin: 0.8rem auto 2rem auto;
     width: 97%;
 }
 
@@ -256,10 +254,6 @@ button.accordion-button:hover {
 .accordion-item:first-of-type:last-of-type .accordion-button,
 .accordion-item:first-of-type:last-of-type {
     border-radius: 0.8rem !important;
-}
-
-.low-opac {
-    --bg-opac: 0.25;
 }
 
 .content-list {

@@ -82,7 +82,7 @@ function renderAbility($ability, $z, $cls=null) {
             case "subclass":
                 $sbclss = fetchSubclasses($cls); 
                 $i = 0; ?>
-                <div class='accordion'>
+                <div class='accordion' id="subclass-list">
                     <?php foreach ($sbclss as $sbcls):
                         $id = "sbcls-$i"; ?>
                         <div class="accordion-item blue low-opac">
@@ -96,14 +96,15 @@ function renderAbility($ability, $z, $cls=null) {
                             </h2>
 
                             <div id="<?= $id ?>"
-                                    class="accordion-collapse collapse">
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#subclass-list">
                                 <div class="accordion-body">
                                     <div class="row">
                                         <p class="md"><?= implode('</p><br ><p class="md">', $sbcls["desc"]); ?></p>
                                     </div>
                                     <hr >
                                     <div class="row">
-                                        <a class="ms-auto sm button mid-opac" href="/dnd/subclass/<?= strtolower($sbcls["name"]) ?>">Go to subclass page -></a>
+                                        <a class="ms-auto sm button" href="/dnd/subclass/<?= strtolower($sbcls["name"]) ?>">Go to subclass page -></a>
                                     </div>
                                 </div>
                             </div>
