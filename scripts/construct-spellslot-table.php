@@ -3,7 +3,7 @@
     
     <h2 class="title"><?= $target["name"] ?>'s spell slot table:</h2>
 
-    <table class="col spells <?= $target["magic"]["caster"] == "half" ? "half" : "" ?>">
+    <table class="col spells <?= $target["magic"]["caster"] == "full" ? "" : $target["magic"]["caster"] ?>">
         
         <thead>
             <tr>
