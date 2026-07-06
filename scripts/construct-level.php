@@ -1,5 +1,5 @@
 <?php 
-$abilities = $class["levels"][$level]; 
+$abilities = $target["levels"][$level]; 
 require_once ROOT . "/scripts/functions.php";
 ?>
 

@@ -1,6 +1,6 @@
 <?php
 $classes = json_decode(file_get_contents(ROOT . "/dnd/data/classes.json"), true);
-$class = $classes[$target];
+$target = $classes[$target];
 $levels = [
     [1, 2], [3, 4],
     [5, 6], [7, 8],
@@ -12,10 +12,10 @@ $levels = [
 ?>
 
 <div class="content-list">
-    <h1 class="title"><?= $class["name"] ?></h1>
+    <h1 class="title"><?= $target["name"] ?></h1>
     <hr >
-    <p class="md title"><?= implode('</p><br ><p class="md title">', $class["desc"]) ?></p>
-    <p class="sm title" style="opacity: 0.5;"><i>You must have a <?= implode(" and ", $class["mc-scores"]) ?> score of 13 or higher in order to multiclass in or out of this class.</i></p>
+    <p class="md title"><?= implode('</p><br ><p class="md title">', $target["desc"]) ?></p>
+    <p class="sm title" style="opacity: 0.5;"><i>You must have a <?= implode(" and ", $target["mc-scores"]) ?> score of 13 or higher in order to multiclass in or out of this class.</i></p>
     
     <hr >
     
@@ -23,27 +23,27 @@ $levels = [
         <div class="col col-md-12 col-lg-4">
             <h2 class="title lg">Hitpoints (HP):</h2>
             <ul>
-                <li class="md"><b>Hit Dice: </b>1d<?= $class["hitdie"] ?> per <?= $class["name"] ?> level</li>
-                <li class="md"><b>HP at lv1: </b><?= $class["hitdie"] ?> + CON</li>
-                <li class="md"><b>HP increase: </b>1d<?= $class["hitdie"] ?> (<?= $class["hitdie"] / 2 + 1 ?>) + CON per level</li>
+                <li class="md"><b>Hit Dice: </b>1d<?= $target["hitdie"] ?> per <?= $target["name"] ?> level</li>
+                <li class="md"><b>HP at lv1: </b><?= $target["hitdie"] ?> + CON</li>
+                <li class="md"><b>HP increase: </b>1d<?= $target["hitdie"] ?> (<?= $target["hitdie"] / 2 + 1 ?>) + CON per level</li>
             </ul>
         </div>
 
         <div class="col col-md-12 col-lg-4">
             <h2 class="title lg">Proficiencies:</h2>
             <ul>
-                <li class="md"><b>Armor: </b><?= ucfirst(implode(", ", $class["proficiencies"]["armor"])) ?></li>
-                <li class="md"><b>Weapons: </b><?= ucfirst(implode(", ", $class["proficiencies"]["weapons"])) ?></li>
-                <li class="md"><b>Tools: </b><?= ucfirst(implode(", ", $class["proficiencies"]["tools"])) ?></li>
-                <li class="md"><b>Saving throws: </b><?= ucfirst(implode(", ", $class["proficiencies"]["saves"])) ?></li>
-                <li class="md"><b>Skills: </b>Choose <?= $class["proficiencies"]["skills"][0] ?> from <?= ucfirst(implode(", ", $class["proficiencies"]["skills"][1])) ?></li>
+                <li class="md"><b>Armor: </b><?= ucfirst(implode(", ", $target["proficiencies"]["armor"])) ?></li>
+                <li class="md"><b>Weapons: </b><?= ucfirst(implode(", ", $target["proficiencies"]["weapons"])) ?></li>
+                <li class="md"><b>Tools: </b><?= ucfirst(implode(", ", $target["proficiencies"]["tools"])) ?></li>
+                <li class="md"><b>Saving throws: </b><?= ucfirst(implode(", ", $target["proficiencies"]["saves"])) ?></li>
+                <li class="md"><b>Skills: </b>Choose <?= $target["proficiencies"]["skills"][0] ?> from <?= ucfirst(implode(", ", $target["proficiencies"]["skills"][1])) ?></li>
             </ul>
         </div>
 
         <div class="col col-md-12 col-lg-4">
             <h2 class="title lg">Equipment:</h2>
             <ul>
-                <?php foreach ($class["equipment"] as $equipment): ?>
+                <?php foreach ($target["equipment"] as $equipment): ?>
                     <li class="md"><?= ucfirst(implode(", or ", $equipment)) ?></li>
                 <?php endforeach; ?>
             </ul>
@@ -51,7 +51,6 @@ $levels = [
     </div>
     
     <div class="row">
-        <?php $tableTarget = $class; ?>
         <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
     </div>
 
@@ -63,7 +62,7 @@ $levels = [
             <?php endif; ?>
             <?php foreach ($row as $level): ?>
                 <div class="col col-md-12 col-lg-6">
-                    <?php include ROOT . "/scripts/construct-class-level.php"; ?>
+                    <?php include ROOT . "/scripts/construct-level.php"; ?>
                 </div>
             <?php endforeach; ?>
         </div>
