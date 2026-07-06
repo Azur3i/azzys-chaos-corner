@@ -36,5 +36,55 @@
                 }
             ]
         }
+    },
+    "thief": {
+        "name": "Thief",
+        "mainClass": "rogue",
+        "desc": ["You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ."],
+        "magic": {
+            "caster": "none"
+        },
+        "levels": {
+            "3": [
+                {
+                    "name": "Fast Hands",
+                    "desc": "You may use the bonus action granted by your cunning action trait for the following actions. You may:",
+                    "type": "list",
+                    "content": [
+                        {
+                            "desc": "Make a Sleight of Hand (DEX) check."
+                        },
+                        {
+                            "desc": "Use your thieves' tools to disarm a trap or open a lock."
+                        },
+                        {
+                            "desc": "Take the @use an object action."
+                        }
+                    ]
+                },
+                {
+                    "name": "Second-Story Work",
+                    "desc": "Climbing no longer costs you extra movement. Additionally, when you make a running jump, the distance you can cover increases by a number of ft. equal to your DEX."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Supreme Sneak",
+                    "desc": "You have advantage on Stealth (DEX) checks if you move no more than half your speed that turn."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Use Magic Device",
+                    "desc": "You may ignore all class, race and level requirements on the use of magic items."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Thief's Reflexes",
+                    "desc": "On the first round of any combat, you may make two turns. You take your first turn at your normal initiative, and your second turn at your initiative - 10. You cannot use this feature if you are surprised."
+                }
+            ]
+        }
     }
 }
