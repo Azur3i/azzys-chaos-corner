@@ -2,7 +2,20 @@
 $subclasses = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
 $target = $subclasses[$target];
 $subclassTypes = [
-    "rogue" => "Roguish Archetype"
+    "artificer" => "Artificer Specialism",
+    "barbarian" => "Primal Path",
+    "bard" => "Bard College",
+    "cleric" => "Divine Domain",
+    "druid" => "Druid Circle",
+    "fighter" => "Martial Archetype",
+    "monk" => "Monastic Tradition",
+    "oracle" => "Knowledge Base",
+    "paladin" => "Sacred Oath",
+    "ranger" => "Ranger Conclave",
+    "rogue" => "Roguish Archetype",
+    "sorcerer" => "Sorcerous Origin",
+    "warlock" => "Otherworldy Patron",
+    "wizard" => "Arcane Tradition"
 ]
 
 ?>
