@@ -127,7 +127,8 @@
             "3": [
                 {
                     "name": "Artificer Specialism",
-                    "desc": "Choose a subclass:"
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
                 },
                 {
                     "name": "The Right Tool For The Job",
@@ -362,7 +363,8 @@
             "3": [
                 {
                     "name": "Bard College",
-                    "desc": "Choose a subclass:"
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
                 },
                 {
                     "name": "Expertise",
@@ -583,7 +585,8 @@
             "2": [
                 {
                     "name": "Druid Circle",
-                    "desc": "Choose a subclass:"
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
                 },
                 {
                     "name": "Wild Shape",
@@ -793,7 +796,8 @@
             "3": [
                 {
                     "name": "Martial Archetype",
-                    "desc": "Choose a subclass:"
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
                 }
             ],
             "4": [
@@ -983,7 +987,8 @@
             "3": [
                 {
                     "name": "Monastic Tradition",
-                    "desc": "Choose a subclass:"
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
                 },
                 {
                     "name": "Deflect Missiles",
@@ -1279,7 +1284,8 @@
             "2": [
                 {
                     "name": "Knowledge Base",
-                    "desc": "Choose a subclass:"
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
                 }
             ],
             "3": [],
@@ -1519,7 +1525,7 @@
                 {
                     "name": "Sacred Oath",
                     "desc": "Choose a subclass:",
-                    "type": "list",
+                    "type": "list subclass",
                     "content": [
                         {
                             "name": "Oath Spells",
@@ -1844,7 +1850,8 @@
             "1": [
                 {
                     "name": "Otherworldly Patron",
-                    "desc": "Choose a subclass:"
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
                 },
                 {
                     "name": "Pact Magic",
@@ -2439,7 +2446,8 @@
             "2": [
                 {
                     "name": "Arcane Tradition",
-                    "desc": "Choose a subclass:"
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
                 }
                 
             ],

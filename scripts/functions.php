@@ -46,75 +46,65 @@ function renderAbility($ability, $z, $cls=null) {
     } else {
         echo '<p class="md">' . renderText($ability["desc"]) . '</p>';
     }
-    if (!empty($ability["type"])) {
-        switch ($ability["type"]):
-            case "list":
-                echo "<ul>";
-                    foreach ($ability["content"] as $newAbility) {
-                        echo '<li class="md">';
-                        renderAbility($newAbility, $z + 1);
-                        echo '</li>';
-                    }
-                echo "</ul>";
-                break;
+    if (!empty($ability["type"])):
+        if (str_contains($ability["type"], "list")): ?>
+            <ul>
+                <?php foreach ($ability["content"] as $newAbility): ?>
+                    <li class="md"><?= renderAbility($newAbility, $z + 1) ?></li>
+                <?php endforeach; ?>
+            </ul>"
+        <?php endif;
             
-            case "table":
-                $x = $ability["content"]["header"] ? " header" : "";
-                echo "<table class='ability$x'>";
-                    foreach ($ability["content"]["content"] as $i => $row) {
-                        if ($i === 0) {
-                            echo "<thead>";
-                                echo "<tr><th>";
-                                    echo implode("</th><th>", $row);
-                                echo "</th></tr>";
-                            echo "</thead>";
-                            echo "<tbody>";
-                        } else {
-                            echo "<tr><td>";
-                                echo implode("</td><td>", $row);
-                            echo "</td></tr>";
-                        }
-                    }
-                    echo "</tbody>";
-                echo "</table>";
-                break;
-            
-            case "subclass":
-                $sbclss = fetchSubclasses($cls); 
-                $i = 0; ?>
-                <div class='accordion' id="subclass-list">
-                    <?php foreach ($sbclss as $sbcls):
-                        $id = "sbcls-$i"; ?>
-                        <div class="accordion-item blue low-opac">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#<?= $id ?>">
-                                    <?= $sbcls["name"]; ?>
-                                </button>
-                            </h2>
+        if (str_contains($ability["type"], "table")):
+            $x = $ability["content"]["header"] ? " header" : ""; ?>
+            <table class='ability$x'>
+                <?php foreach ($ability["content"]["content"] as $i => $row):
+                    if ($i === 0): ?>
+                        <thead>
+                            <tr><th><?= implode("</th><th>", $row) ?></th></tr>
+                        </thead>
+                        <tbody>
+                    <?php else: ?>
+                            <tr><td><?= implode("</td><td>", $row) ?></td></tr>
+                    <?php endif;
+                endforeach; ?>
+                        </tbody>
+            </table>
+        <?php endif;
 
-                            <div id="<?= $id ?>"
-                                class="accordion-collapse collapse"
-                                data-bs-parent="#subclass-list">
-                                <div class="accordion-body">
-                                    <div class="row">
-                                        <p class="md"><?= implode('</p><br ><p class="md">', $sbcls["desc"]); ?></p>
-                                    </div>
-                                    <hr >
-                                    <div class="row">
-                                        <a class="ms-auto sm button" href="/dnd/subclass/<?= strtolower(str_replace(" ", "-", $sbcls["name"])) ?>">Go to subclass page -></a>
-                                    </div>
+        if (str_contains($ability["type"], "subclass")):
+            $sbclss = fetchSubclasses($cls); 
+            $i = 0; ?>
+            <div class='accordion' id="subclass-list">
+                <?php foreach ($sbclss as $sbcls):
+                    $id = "sbcls-$i"; ?>
+                    <div class="accordion-item blue low-opac">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#<?= $id ?>">
+                                <?= $sbcls["name"]; ?>
+                            </button>
+                        </h2>
+
+                        <div id="<?= $id ?>"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#subclass-list">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <p class="md"><?= implode('</p><br ><p class="md">', $sbcls["desc"]); ?></p>
+                                </div>
+                                <hr >
+                                <div class="row">
+                                    <a class="ms-auto sm button" href="/dnd/subclass/<?= strtolower(str_replace(" ", "-", $sbcls["name"])) ?>">Go to subclass page -></a>
                                 </div>
                             </div>
                         </div>
-                        <?php $i++; ?>
-                    <?php endforeach; ?>
-                </div>
-                <?php break;
-        endswitch;
-    }
-}
-
-?>
+                    </div>
+                    <?php $i++;
+                endforeach; ?>
+            </div>
+        <?php endif;
+    endif;
+} ?>
