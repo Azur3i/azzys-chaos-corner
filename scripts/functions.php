@@ -52,7 +52,7 @@ function renderAbility($ability, $z, $cls=null) {
                 <?php foreach ($ability["content"] as $newAbility): ?>
                     <li class="md"><?= renderAbility($newAbility, $z + 1) ?></li>
                 <?php endforeach; ?>
-            </ul>"
+            </ul>
         <?php endif;
             
         if (str_contains($ability["type"], "table")):
