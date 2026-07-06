@@ -1682,7 +1682,8 @@
             "3": [
                 {
                     "name": "Roguish Archetype",
-                    "desc": "Choose a subclass. (WIP)"
+                    "desc": "Choose a subclass. (WIP)",
+                    "type": "subclass"
                 },
                 {
                     "name": "Steady Aim",

@@ -29,42 +29,83 @@ function renderActions($str) {
     return $str;
 }
 
-function renderAbility($ability, $z) {
+function fetchSubclasses($class) {
+    $subclasses = json_decode(file_get_contents("../dnd/data/subclasses.json"), true);
+    $result = [];
+    foreach ($subclasses as $subclass) {
+        if ($subclass["mainClass"] === $class) {
+            $result[] = $subclass;
+        }
+    }
+    return $result;
+}
+
+function renderAbility($ability, $z, $cls=null) {
     if (!empty($ability["name"]) && $z !== 0) {
         echo '<p class="md"><b>' . $ability["name"] . '. </b>' . renderText($ability["desc"]) . '</p>';
     } else {
         echo '<p class="md">' . renderText($ability["desc"]) . '</p>';
     }
+    if (!empty($ability["type"])) {
+        switch ($ability["type"]):
+            case "list":
+                echo "<ul>";
+                    foreach ($ability["content"] as $newAbility) {
+                        echo '<li class="md">';
+                        renderAbility($newAbility, $z + 1);
+                        echo '</li>';
+                    }
+                echo "</ul>";
+                break;
+            
+            case "table":
+                $x = $ability["content"]["header"] ? " header" : "";
+                echo "<table class='ability$x'>";
+                    foreach ($ability["content"]["content"] as $i => $row) {
+                        if ($i === 0) {
+                            echo "<thead>";
+                                echo "<tr><th>";
+                                    echo implode("</th><th>", $row);
+                                echo "</th></tr>";
+                            echo "</thead>";
+                            echo "<tbody>";
+                        } else {
+                            echo "<tr><td>";
+                                echo implode("</td><td>", $row);
+                            echo "</td></tr>";
+                        }
+                    }
+                    echo "</tbody>";
+                echo "</table>";
+                break;
+            
+            case "subclass":
+                $sbclss = fetchSubclasses($cls); 
+                $i = 0; ?>
+                <div class='accordion'>
+                    <?php foreach ($sbclss as $sbcls):
+                        $id = "sbcls-$i"; ?>
+                        <div class="accordion-item blue low-opac">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#<?= $id ?>">
+                                    <?= $sbcls["name"]; ?>
+                                </button>
+                            </h2>
 
-    if (($ability["type"] ?? null) === "list") {
-        echo "<ul>";
-            foreach ($ability["content"] as $newAbility) {
-                echo '<li class="md">';
-                renderAbility($newAbility, $z + 1);
-                echo '</li>';
-            }
-        echo "</ul>";
-    } 
-    
-    elseif (($ability["type"] ?? null) === "table") {
-        $x = $ability["content"]["header"] ? " header" : "";
-        echo "<table class='ability$x'>";
-            foreach ($ability["content"]["content"] as $i => $row) {
-                if ($i === 0) {
-                    echo "<thead>";
-                        echo "<tr><th>";
-                            echo implode("</th><th>", $row);
-                        echo "</th></tr>";
-                    echo "</thead>";
-                    echo "<tbody>";
-                } else {
-                    echo "<tr><td>";
-                        echo implode("</td><td>", $row);
-                    echo "</td></tr>";
-                }
-            }
-            echo "</tbody>";
-        echo "</table>";
+                            <div id="<?= $id ?>"
+                                    class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="md"><?= implode('</p><br ><p class="md">', $sbcls["desc"]); ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php break;
+        endswitch;
     }
 }
 
