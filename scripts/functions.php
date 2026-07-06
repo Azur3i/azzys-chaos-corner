@@ -108,7 +108,7 @@ function renderAbility($ability, $z, $cls=null) {
                                 </div>
                             </div>
                         </div>
-                        $i++;
+                        <?php $i++; ?>
                     <?php endforeach; ?>
                 </div>
                 <?php break;
