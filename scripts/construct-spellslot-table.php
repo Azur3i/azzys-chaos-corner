@@ -1,9 +1,9 @@
-<?php if ($class["magic"]["caster"] != "none"): ?>
+<?php if ($tableTarget["magic"]["caster"] != "none"): ?>
     <hr >
     
-    <h2 class="title"><?= $class["name"] ?>'s spell slot table:</h2>
+    <h2 class="title"><?= $tableTarget["name"] ?>'s spell slot table:</h2>
 
-    <table class="col spells <?= $class["magic"]["caster"] == "half" ? "half" : "" ?>">
+    <table class="col spells <?= $tableTarget["magic"]["caster"] == "half" ? "half" : "" ?>">
         
         <thead>
             <tr>
@@ -19,14 +19,14 @@
             <?php foreach (range(1, 20) as $i): ?>
                 <tr>
                     <td class="md"><?= $i ?></td>
-                    <td class="md"><?= implode("</td><td>", $class["magic"]["slots"][$i]) ?></td>
-                    <?php if ($class["magic"]["type"] == "prep" && $i === 1): ?>
+                    <td class="md"><?= implode("</td><td>", $tableTarget["magic"]["slots"][$i]) ?></td>
+                    <?php if ($tableTarget["magic"]["type"] == "prep" && $i === 1): ?>
                         <td rowspan="20" class="md">
-                            <?= $class["magic"]["mod"] ?> + <?= $class["magic"]["caster"] === "half" ? "1/2 * " : "" ?><?= strtolower($class["name"]) ?> level
+                            <?= $tableTarget["magic"]["mod"] ?> + <?= $tableTarget["magic"]["caster"] === "half" ? "1/2 * " : "" ?><?= strtolower($tableTarget["name"]) ?> level
                         </td>
 
-                    <?php elseif ($class["magic"]["type"] == "known"): ?>
-                        <td class="md"><?= $class["magic"]["amount"][$i - 1] ?></td>
+                    <?php elseif ($tableTarget["magic"]["type"] == "known"): ?>
+                        <td class="md"><?= $tableTarget["magic"]["amount"][$i - 1] ?></td>
 
                     <?php endif; ?>
                 </tr>

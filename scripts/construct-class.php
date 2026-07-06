@@ -51,6 +51,7 @@ $levels = [
     </div>
     
     <div class="row">
+        <?php $tableTarget = $class; ?>
         <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
     </div>
 
