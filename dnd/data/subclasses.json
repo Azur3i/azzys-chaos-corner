@@ -1,221 +1,222 @@
 {
-    "arcane-trickster": {
-        "name": "Arcane Trickster",
-        "mainClass": "rogue",
-        "desc": ["Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers."],
-        "magic": {
-            "caster": "third",
-            "mod": "INT",
-            "type": "known",
-            "amount": ["", "", "2 ill/enc + 1 any (3)", "3 + 1 (4)", "3 + 1 (4)", "3 + 1 (4)", "4 + 1 (5)", "4 + 2 (6)", "4 + 2 (6)", "5 + 2 (7)", "6 + 2 (8)", "6 + 2 (8)", "7 + 2 (9)", "7 + 3 (10)", "7 + 3 (10)", "8 + 3 (11)", "8 + 3 (11)", "8 + 3 (11)", "9 + 3 (12)", "9 + 4 (13)"],
-            "slots": {
-                "1": ["", "", "", "", "", "", "", "", ""],
-                "2": ["", "", "", "", "", "", "", "", ""],
-                "3": [2, "", "", "", "", "", "", "", ""],
-                "4": [3, "", "", "", "", "", "", "", ""],
-                "5": [3, "", "", "", "", "", "", "", ""],
-                "6": [3, "", "", "", "", "", "", "", ""],
-                "7": [4, 2, "", "", "", "", "", "", ""],
-                "8": [4, 2, "", "", "", "", "", "", ""],
-                "9": [4, 2, "", "", "", "", "", "", ""],
-                "10": [4, 3, "", "", "", "", "", "", ""],
-                "11": [4, 3, "", "", "", "", "", "", ""],
-                "12": [4, 3, "", "", "", "", "", "", ""],
-                "13": [4, 3, 2, "", "", "", "", "", ""],
-                "14": [4, 3, 2, "", "", "", "", "", ""],
-                "15": [4, 3, 2, "", "", "", "", "", ""],
-                "16": [4, 3, 3, "", "", "", "", "", ""],
-                "17": [4, 3, 3, "", "", "", "", "", ""],
-                "18": [4, 3, 3, "", "", "", "", "", ""],
-                "19": [4, 3, 3, 1, "", "", "", "", ""],
-                "20": [4, 3, 3, 1, "", "", "", "", ""]
+    
+    "druid": {
+        "circle-of-the-moon": {
+            "name": "Circle of the Moon",
+            "desc": ["Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid. Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Combat Wild Shape",
+                        "desc": "You gain the ability to use your Wild Shape feature as a bonus action, rather than as an action. While in beast form, you may use a bonus action to expend 1 spell slot to regain 1d8 hitpoints per level of the spell slot consumed."
+                    },
+                    {
+                        "name": "Circle Forms",
+                        "desc": "The rites of your circle grant you the ability to transform into more dangerous animal forms. You may use your Wild Shape feature to transform into a beast with a CR as high as 1. You ignore the max CR your druid class would normally allow, but must abide by the other limitations there."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Primal Strike",
+                        "desc": "Your attacks in beast form count as magical."
+                    },
+                    {
+                        "name": "Circle Forms",
+                        "desc": "The max CR of beast you are allowed to transform into with your Wild Shape feature is equal to your druid level divided by 3 (rounded down)."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Elemental Wild Shape",
+                        "desc": "You may expend two uses of your Wild Shape feature at the same time to transform into an air, earth, fire or water elemental."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Thousand Forms",
+                        "desc": "You have learned to use magic to alter your physical form in more subtle ways. You may cast the @alter self spell at will."
+                    }
+                ]
+            }
+        }
+    },
+    "rogue": {
+        "arcane-trickster": {
+            "name": "Arcane Trickster",
+            "desc": ["Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers."],
+            "magic": {
+                "caster": "third",
+                "mod": "INT",
+                "type": "known",
+                "amount": ["", "", "2 ill/enc + 1 any (3)", "3 + 1 (4)", "3 + 1 (4)", "3 + 1 (4)", "4 + 1 (5)", "4 + 2 (6)", "4 + 2 (6)", "5 + 2 (7)", "6 + 2 (8)", "6 + 2 (8)", "7 + 2 (9)", "7 + 3 (10)", "7 + 3 (10)", "8 + 3 (11)", "8 + 3 (11)", "8 + 3 (11)", "9 + 3 (12)", "9 + 4 (13)"],
+                "slots": {
+                    "1": ["", "", "", "", "", "", "", "", ""],
+                    "2": ["", "", "", "", "", "", "", "", ""],
+                    "3": [2, "", "", "", "", "", "", "", ""],
+                    "4": [3, "", "", "", "", "", "", "", ""],
+                    "5": [3, "", "", "", "", "", "", "", ""],
+                    "6": [3, "", "", "", "", "", "", "", ""],
+                    "7": [4, 2, "", "", "", "", "", "", ""],
+                    "8": [4, 2, "", "", "", "", "", "", ""],
+                    "9": [4, 2, "", "", "", "", "", "", ""],
+                    "10": [4, 3, "", "", "", "", "", "", ""],
+                    "11": [4, 3, "", "", "", "", "", "", ""],
+                    "12": [4, 3, "", "", "", "", "", "", ""],
+                    "13": [4, 3, 2, "", "", "", "", "", ""],
+                    "14": [4, 3, 2, "", "", "", "", "", ""],
+                    "15": [4, 3, 2, "", "", "", "", "", ""],
+                    "16": [4, 3, 3, "", "", "", "", "", ""],
+                    "17": [4, 3, 3, "", "", "", "", "", ""],
+                    "18": [4, 3, 3, "", "", "", "", "", ""],
+                    "19": [4, 3, 3, 1, "", "", "", "", ""],
+                    "20": [4, 3, 3, 1, "", "", "", "", ""]
+                }
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Spellcasting",
+                        "type": "list",
+                        "desc": "You augment your martial prowess with the ability to cast spells.",
+                        "content": [
+                            {
+                                "name": "Cantrips",
+                                "desc": "You learn 3 cantrips: @mage hand, and 2 other cantrips of your choice from the wizard spell list. You learn 1 additional cantrip at 10th level."
+                            },
+                            {
+                                "name": "Known Spells",
+                                "desc": "You know 3 1st-level spells of your choice, 2 of which you must choose from the enchantment and illusion school on the wizard spell list. Any new spells you learn must also come from these 2 schools, unless otherwise specified. The Spells Known column of the arcane trickster spell slot table shows how many spells you know at any given level. Whenever you gain a level in this class, you may choose one of the spells you know, and replace it with any other spell. Each spell you learn can only be of a spell slot level you have."
+                            },
+                            {
+                                "name": "Spellcasting Ability",
+                                "type": "list",
+                                "desc": "Your spellcasting ability is INT.",
+                                "content": [
+                                    {
+                                        "name": "Spell Save DC",
+                                        "desc": "8 + proficiency + INT"
+                                    },
+                                    {
+                                        "name": "Spell attack modifier",
+                                        "desc": "proficiency + INT"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Mage Hand Legerdemain",
+                        "desc": "Whenever you cast the mage hand cantrip, you may make the spectral hand invisible, and you may perform additional tasks with it, such as stowing or retrieving an object in a container worn or carried by another creature, or pick locks or disarm traps at range. You may perform one of these tasks without being noticed by a creature if you succeed on a Sleight of Hand (DEX) check, contested by the creature's Perception (WIS) check. You may use a bonus action to control the hand."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Magical Ambush",
+                        "desc": "If you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Versatile Trickster",
+                        "desc": "You gain the ability to distract targets with your @mage hand. As a bonus action, you may designate a creature within 5ft. of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of your turn."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Spell Thief",
+                        "desc": "You gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster. Immediately after a creature casts a spell that targets you, or includes you in its area of effect, you may use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failure, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level, and of a level you can cast. It does not have to be a wizard spell. For the next 8 hours, you know this spell, and may cast it using your spell slots. The creature you stole the spell from cannot cast this spell until these 8 hours have passed. You may use this feature once per long rest."
+                    }
+                ]
             }
         },
-        "levels": {
-            "3": [
-                {
-                    "name": "Spellcasting",
-                    "type": "list",
-                    "desc": "You augment your martial prowess with the ability to cast spells.",
-                    "content": [
-                        {
-                            "name": "Cantrips",
-                            "desc": "You learn 3 cantrips: @mage hand, and 2 other cantrips of your choice from the wizard spell list. You learn 1 additional cantrip at 10th level."
-                        },
-                        {
-                            "name": "Known Spells",
-                            "desc": "You know 3 1st-level spells of your choice, 2 of which you must choose from the enchantment and illusion school on the wizard spell list. Any new spells you learn must also come from these 2 schools, unless otherwise specified. The Spells Known column of the arcane trickster spell slot table shows how many spells you know at any given level. Whenever you gain a level in this class, you may choose one of the spells you know, and replace it with any other spell. Each spell you learn can only be of a spell slot level you have."
-                        },
-                        {
-                            "name": "Spellcasting Ability",
-                            "type": "list",
-                            "desc": "Your spellcasting ability is INT.",
-                            "content": [
-                                {
-                                    "name": "Spell Save DC",
-                                    "desc": "8 + proficiency + INT"
-                                },
-                                {
-                                    "name": "Spell attack modifier",
-                                    "desc": "proficiency + INT"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Mage Hand Legerdemain",
-                    "desc": "Whenever you cast the mage hand cantrip, you may make the spectral hand invisible, and you may perform additional tasks with it, such as stowing or retrieving an object in a container worn or carried by another creature, or pick locks or disarm traps at range. You may perform one of these tasks without being noticed by a creature if you succeed on a Sleight of Hand (DEX) check, contested by the creature's Perception (WIS) check. You may use a bonus action to control the hand."
-                }
-            ],
-            "9": [
-                {
-                    "name": "Magical Ambush",
-                    "desc": "If you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
-                }
-            ],
-            "13": [
-                {
-                    "name": "Versatile Trickster",
-                    "desc": "You gain the ability to distract targets with your @mage hand. As a bonus action, you may designate a creature within 5ft. of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of your turn."
-                }
-            ],
-            "17": [
-                {
-                    "name": "Spell Thief",
-                    "desc": "You gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster. Immediately after a creature casts a spell that targets you, or includes you in its area of effect, you may use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failure, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level, and of a level you can cast. It does not have to be a wizard spell. For the next 8 hours, you know this spell, and may cast it using your spell slots. The creature you stole the spell from cannot cast this spell until these 8 hours have passed. You may use this feature once per long rest."
-                }
-            ]
-        }
-    },
-    "assassin": {
-        "name": "Assassin",
-        "mainClass": "rogue",
-        "desc": ["You focus your training on the grim art of death. Those who adhere to this archetype are diverse: hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency."],
-        "magic": {
-            "caster": "none"
+        "assassin": {
+            "name": "Assassin",
+            "desc": ["You focus your training on the grim art of death. Those who adhere to this archetype are diverse: hired killers, spies, bounty hunters, and even specially anointed priests trained to exterminate the enemies of their deity. Stealth, poison, and disguise help you eliminate your foes with deadly efficiency."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiencies",
+                        "desc": "You gain proficiency with the disguise kit and the poisoner's kit."
+                    },
+                    {
+                        "name": "Assassinate",
+                        "desc": "You are at your deadliest when you get the drop on your enemies. You gain advantage on attack rolls against any creature that hasn't taken a turn in this combat yet. Additionally, any hit you score against a creature that is surprised is guaranteed a critical hit."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Infiltration Expertise",
+                        "desc": "You may unfailingly create false identities for yourself. You must spend 7 days and 25gp to establish the history, profession, and affiliations for an identity. You cannot establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official-looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants. Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to."
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Impostor",
+                        "desc": "You gain the ability to unerringly mimic another person's speech, writing and behavior. You must spend at least 3 hours studying these three components of the person's behavior, listening to speech, examining handwriting and observing mannerisms. Your ruse is indiscernable to the casual observer. If a wary creature suspects something is amiss, you gain advantage on any Deception (CHA) check you make to avoid detection."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Death Strike",
+                        "desc": "You become a master of instant death. When you attack and hit a creature that is surprised, it must succeed on a CON saving throw (DC 8 + your DEX + your proficiency bonus). On a failed save, the damage your attack deals against the creature is doubled."
+                    }
+                ]
+            }
         },
-        "levels": {
-            "3": [
-                {
-                    "name": "Bonus Proficiencies",
-                    "desc": "You gain proficiency with the disguise kit and the poisoner's kit."
-                },
-                {
-                    "name": "Assassinate",
-                    "desc": "You are at your deadliest when you get the drop on your enemies. You gain advantage on attack rolls against any creature that hasn't taken a turn in this combat yet. Additionally, any hit you score against a creature that is surprised is guaranteed a critical hit."
-                }
-            ],
-            "9": [
-                {
-                    "name": "Infiltration Expertise",
-                    "desc": "You may unfailingly create false identities for yourself. You must spend 7 days and 25gp to establish the history, profession, and affiliations for an identity. You cannot establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and official-looking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants. Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to."
-                }
-            ],
-            "13": [
-                {
-                    "name": "Impostor",
-                    "desc": "You gain the ability to unerringly mimic another person's speech, writing and behavior. You must spend at least 3 hours studying these three components of the person's behavior, listening to speech, examining handwriting and observing mannerisms. Your ruse is indiscernable to the casual observer. If a wary creature suspects something is amiss, you gain advantage on any Deception (CHA) check you make to avoid detection."
-                }
-            ],
-            "17": [
-                {
-                    "name": "Death Strike",
-                    "desc": "You become a master of instant death. When you attack and hit a creature that is surprised, it must succeed on a CON saving throw (DC 8 + your DEX + your proficiency bonus). On a failed save, the damage your attack deals against the creature is doubled."
-                }
-            ]
-        }
-    },
-    "circle-of-the-moon": {
-        "name": "Circle of the Moon",
-        "mainClass": "druid",
-        "desc": ["Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid. Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood."],
-        "magic": {
-            "caster": "none"
-        },
-        "levels": {
-            "2": [
-                {
-                    "name": "Combat Wild Shape",
-                    "desc": "You gain the ability to use your Wild Shape feature as a bonus action, rather than as an action. While in beast form, you may use a bonus action to expend 1 spell slot to regain 1d8 hitpoints per level of the spell slot consumed."
-                },
-                {
-                    "name": "Circle Forms",
-                    "desc": "The rites of your circle grant you the ability to transform into more dangerous animal forms. You may use your Wild Shape feature to transform into a beast with a CR as high as 1. You ignore the max CR your druid class would normally allow, but must abide by the other limitations there."
-                }
-            ],
-            "6": [
-                {
-                    "name": "Primal Strike",
-                    "desc": "Your attacks in beast form count as magical."
-                },
-                {
-                    "name": "Circle Forms",
-                    "desc": "The max CR of beast you are allowed to transform into with your Wild Shape feature is equal to your druid level divided by 3 (rounded down)."
-                }
-            ],
-            "10": [
-                {
-                    "name": "Elemental Wild Shape",
-                    "desc": "You may expend two uses of your Wild Shape feature at the same time to transform into an air, earth, fire or water elemental."
-                }
-            ],
-            "14": [
-                {
-                    "name": "Thousand Forms",
-                    "desc": "You have learned to use magic to alter your physical form in more subtle ways. You may cast the @alter self spell at will."
-                }
-            ]
-        }
-    },
-    "thief": {
-        "name": "Thief",
-        "mainClass": "rogue",
-        "desc": ["You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ."],
-        "magic": {
-            "caster": "none"
-        },
-        "levels": {
-            "3": [
-                {
-                    "name": "Fast Hands",
-                    "desc": "You may use the bonus action granted by your cunning action trait for the following actions. You may:",
-                    "type": "list",
-                    "content": [
-                        {
-                            "desc": "Make a Sleight of Hand (DEX) check."
-                        },
-                        {
-                            "desc": "Use your thieves' tools to disarm a trap or open a lock."
-                        },
-                        {
-                            "desc": "Take the @use an object action."
-                        }
-                    ]
-                },
-                {
-                    "name": "Second-Story Work",
-                    "desc": "Climbing no longer costs you extra movement. Additionally, when you make a running jump, the distance you can cover increases by a number of ft. equal to your DEX."
-                }
-            ],
-            "9": [
-                {
-                    "name": "Supreme Sneak",
-                    "desc": "You have advantage on Stealth (DEX) checks if you move no more than half your speed that turn."
-                }
-            ],
-            "13": [
-                {
-                    "name": "Use Magic Device",
-                    "desc": "You may ignore all class, race and level requirements on the use of magic items."
-                }
-            ],
-            "17": [
-                {
-                    "name": "Thief's Reflexes",
-                    "desc": "On the first round of any combat, you may make two turns. You take your first turn at your normal initiative, and your second turn at your initiative - 10. You cannot use this feature if you are surprised."
-                }
-            ]
+        "thief": {
+            "name": "Thief",
+            "desc": ["You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Fast Hands",
+                        "desc": "You may use the bonus action granted by your cunning action trait for the following actions. You may:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Make a Sleight of Hand (DEX) check."
+                            },
+                            {
+                                "desc": "Use your thieves' tools to disarm a trap or open a lock."
+                            },
+                            {
+                                "desc": "Take the @use an object action."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Second-Story Work",
+                        "desc": "Climbing no longer costs you extra movement. Additionally, when you make a running jump, the distance you can cover increases by a number of ft. equal to your DEX."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Supreme Sneak",
+                        "desc": "You have advantage on Stealth (DEX) checks if you move no more than half your speed that turn."
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Use Magic Device",
+                        "desc": "You may ignore all class, race and level requirements on the use of magic items."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Thief's Reflexes",
+                        "desc": "On the first round of any combat, you may make two turns. You take your first turn at your normal initiative, and your second turn at your initiative - 10. You cannot use this feature if you are surprised."
+                    }
+                ]
+            }
         }
     }
 }

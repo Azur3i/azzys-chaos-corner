@@ -4,6 +4,6 @@ RewriteEngine On
 RewriteRule ^dnd/class/([a-z-]+)/?$ dnd/class.php?class=$1 [L]
 
 # subclass.php rewrite
-RewriteRule ^dnd/subclass/([a-z-]+)/?$ dnd/subclass.php?subclass=$1 [L]
+RewriteRule ^dnd/subclass/([a-z-]+):([a-z-]+)/?$ dnd/subclass.php?class=$1&subclass=$2 [L]
 
 ErrorDocument 404 /404.php

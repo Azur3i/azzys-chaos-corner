@@ -248,7 +248,7 @@ button.accordion-button:hover {
 }
 
 .accordion-item:not(:first-of-type):not(:last-of-type) .accordion-button {
-    border-radius: 0;
+    border-radius: 0 !important;
 }
 
 .accordion-item:first-of-type:last-of-type .accordion-button,

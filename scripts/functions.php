@@ -73,10 +73,10 @@ function renderAbility($ability, $z, $cls=null) {
         <?php endif;
 
         if (str_contains($ability["type"], "subclass")):
-            $sbclss = fetchSubclasses($cls); 
+            $sbclss = json_decode(file_get_contents("../dnd/data/subclasses.json"), true);
             $i = 0; ?>
             <div class='accordion' id="subclass-list">
-                <?php foreach ($sbclss as $sbcls):
+                <?php foreach ($sbclss[$cls] as $sbcls):
                     $id = "sbcls-$i"; ?>
                     <div class="accordion-item blue low-opac">
                         <h2 class="accordion-header">
@@ -97,7 +97,7 @@ function renderAbility($ability, $z, $cls=null) {
                                 </div>
                                 <hr >
                                 <div class="row">
-                                    <a class="ms-auto sm button" href="/dnd/subclass/<?= strtolower(str_replace(" ", "-", $sbcls["name"])) ?>">Go to subclass page -></a>
+                                    <a class="ms-auto sm button" href="/dnd/subclass/<?= $cls ?>:<?= strtolower(str_replace(" ", "-", $sbcls["name"])) ?>">Go to subclass page -></a>
                                 </div>
                             </div>
                         </div>

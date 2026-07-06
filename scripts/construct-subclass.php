@@ -1,6 +1,6 @@
 <?php
 $subclasses = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
-$target = $subclasses[$target];
+$target = $subclasses[$mainClass][$target];
 $subclassTypes = [
     "artificer" => "Artificer Specialism",
     "barbarian" => "Primal Path",
@@ -22,7 +22,7 @@ $subclassTypes = [
 
 <div class="content-list">
     <h1 class="title"><?= $target["name"] ?></h1>
-    <p class="sm title" style="opacity: 0.5;"><?= ucwords($target["mainClass"]) ?> Subclass - <?= $subclassTypes[$target["mainClass"]] ?></p>
+    <p class="sm title" style="opacity: 0.5;"><?= ucwords($mainClass) ?> Subclass - <?= $subclassTypes[$mainClass] ?></p>
     <hr >
     <p class="md title"><?= implode('</p><br ><p class="md title">', $target["desc"]) ?></p>
     
