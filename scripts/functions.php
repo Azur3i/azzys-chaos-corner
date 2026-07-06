@@ -98,7 +98,13 @@ function renderAbility($ability, $z, $cls=null) {
                             <div id="<?= $id ?>"
                                     class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <p class="md"><?= implode('</p><br ><p class="md">', $sbcls["desc"]); ?></p>
+                                    <div class="row">
+                                        <p class="md"><?= implode('</p><br ><p class="md">', $sbcls["desc"]); ?></p>
+                                    </div>
+                                    <hr >
+                                    <div class="row">
+                                        <a class="ms-auto sm button mid-opac" href="/dnd/subclass/<?= strtolower($sbcls["name"]) ?>">Go to subclass page -></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
