@@ -1,4 +1,93 @@
 {
+    "arcane-trickster": {
+        "name": "Arcane Trickster",
+        "mainClass": "rogue",
+        "desc": ["Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers."],
+        "magic": {
+            "caster": "third",
+            "mod": "INT",
+            "type": "known",
+            "amount": ["", "", "2 ill/enc + 1 any (3)", "3 + 1 (4)", "3 + 1 (4)", "3 + 1 (4)", "4 + 1 (5)", "4 + 2 (6)", "4 + 2 (6)", "5 + 2 (7)", "6 + 2 (8)", "6 + 2 (8)", "7 + 2 (9)", "7 + 3 (10)", "7 + 3 (10)", "8 + 3 (11)", "8 + 3 (11)", "8 + 3 (11)", "9 + 3 (12)", "9 + 4 (13)"],
+            "slots": {
+                "1": ["", "", "", "", "", "", "", "", ""],
+                "2": ["", "", "", "", "", "", "", "", ""],
+                "3": [2, "", "", "", "", "", "", "", ""],
+                "4": [3, "", "", "", "", "", "", "", ""],
+                "5": [3, "", "", "", "", "", "", "", ""],
+                "6": [3, "", "", "", "", "", "", "", ""],
+                "7": [4, 2, "", "", "", "", "", "", ""],
+                "8": [4, 2, "", "", "", "", "", "", ""],
+                "9": [4, 2, "", "", "", "", "", "", ""],
+                "10": [4, 3, "", "", "", "", "", "", ""],
+                "11": [4, 3, "", "", "", "", "", "", ""],
+                "12": [4, 3, "", "", "", "", "", "", ""],
+                "13": [4, 3, 2, "", "", "", "", "", ""],
+                "14": [4, 3, 2, "", "", "", "", "", ""],
+                "15": [4, 3, 2, "", "", "", "", "", ""],
+                "16": [4, 3, 3, "", "", "", "", "", ""],
+                "17": [4, 3, 3, "", "", "", "", "", ""],
+                "18": [4, 3, 3, "", "", "", "", "", ""],
+                "19": [4, 3, 3, 1, "", "", "", "", ""],
+                "20": [4, 3, 3, 1, "", "", "", "", ""]
+            }
+        },
+        "levels": {
+            "3": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "You augment your martial prowess with the ability to cast spells.",
+                    "content": [
+                        {
+                            "name": "Cantrips",
+                            "desc": "You learn 3 cantrips: @mage hand, and 2 other cantrips of your choice from the wizard spell list. You learn 1 additional cantrip at 10th level."
+                        },
+                        {
+                            "name": "Known Spells",
+                            "desc": "You know 3 1st-level spells of your choice, 2 of which you must choose from the enchantment and illusion school on the wizard spell list. Any new spells you learn must also come from these 2 schools, unless otherwise specified. The Spells Known column of the arcane trickster spell slot table shows how many spells you know at any given level. Whenever you gain a level in this class, you may choose one of the spells you know, and replace it with any other spell. Each spell you learn can only be of a spell slot level you have."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is INT.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + INT"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + INT"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Mage Hand Legerdemain",
+                    "desc": "Whenever you cast the mage hand cantrip, you may make the spectral hand invisible, and you may perform additional tasks with it, such as stowing or retrieving an object in a container worn or carried by another creature, or pick locks or disarm traps at range. You may perform one of these tasks without being noticed by a creature if you succeed on a Sleight of Hand (DEX) check, contested by the creature's Perception (WIS) check. You may use a bonus action to control the hand."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Magical Ambush",
+                    "desc": "If you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Versatile Trickster",
+                    "desc": "You gain the ability to distract targets with your @mage hand. As a bonus action, you may designate a creature within 5ft. of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of your turn."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Spell Thief",
+                    "desc": "You gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster. Immediately after a creature casts a spell that targets you, or includes you in its area of effect, you may use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failure, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level, and of a level you can cast. It does not have to be a wizard spell. For the next 8 hours, you know this spell, and may cast it using your spell slots. The creature you stole the spell from cannot cast this spell until these 8 hours have passed. You may use this feature once per long rest."
+                }
+            ]
+        }
+    },
     "assassin": {
         "name": "Assassin",
         "mainClass": "rogue",
