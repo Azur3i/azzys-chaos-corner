@@ -104,7 +104,7 @@ function renderAbility($ability, $z, $cls=null) {
                                     </div>
                                     <hr >
                                     <div class="row">
-                                        <a class="ms-auto sm button" href="/dnd/subclass/<?= strtolower($sbcls["name"]) ?>">Go to subclass page -></a>
+                                        <a class="ms-auto sm button" href="/dnd/subclass/<?= strtolower(str_replace(" ", "-", $sbcls["name"])) ?>">Go to subclass page -></a>
                                     </div>
                                 </div>
                             </div>
