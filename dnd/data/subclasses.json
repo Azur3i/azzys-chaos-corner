@@ -1,5 +1,4 @@
 {
-    
     "druid": {
         "circle-of-the-moon": {
             "name": "Circle of the Moon",
@@ -214,6 +213,57 @@
                     {
                         "name": "Thief's Reflexes",
                         "desc": "On the first round of any combat, you may make two turns. You take your first turn at your normal initiative, and your second turn at your initiative - 10. You cannot use this feature if you are surprised."
+                    }
+                ]
+            }
+        }
+    },
+    "warlock": {
+        "the-fiend": {
+            "name": "The Fiend",
+            "desc": ["You have made a pact with a fiend from the lower plains of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption of all things, ultimately including you. Fiends powerful enough to form a pact include demon lords such as Demogorgon, Oruc, Fraz’Urb-luu and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles and Belial; pit fiends and balors that are especially mighty and ultroloths and other lords of the yugoloths."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Expanded Spell List",
+                        "desc": "The following spells are added to the warlock spell list for you:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Spell level", "Spells"],
+                                ["1st", "@burning hands, @command"],
+                                ["2nd", "@blindness/deafness, @scorching ray"],
+                                ["3rd", "@fireball, @stinking cloud"],
+                                ["4th", "@fire shield, @wall of fire"],
+                                ["5th", "@flame strike, @hallow"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Dark One's Blessing",
+                        "desc": "When you reduce any creature of your choice to 0 hitpoints, you may gain temporary hitpoints equal to your CHA + your warlock level (minimum of 1)"
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Dark One's Own Luck",
+                        "desc": "Whenever you make an ability check or a saving throw, you may use this trait to add 1d10 to your roll. You may do so after seeing the initial roll, but before any of the roll’s effects occur. You may use this trait once every short rest."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Fiendish Resilience",
+                        "desc": "After finishing a short rest, you may choose one damage type. You gain resistance to that damage type until you choose a different one with this trait. Magical weapons and silver weapons ignore this resistance."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Hurl Through Hell",
+                        "desc": "Whenever you hit a creature with an attack, you may use this feature to instantly transport the target through the 9 hells. The creature disappears and hurtles through a nightmarish landscape. At the end of your next turn, the target returns to the nearest unoccupied space to where it previously was. If the target is not a fiend, the target takes 10d10 @psychic damage. You may use this trait once every long rest."
                     }
                 ]
             }
