@@ -78,11 +78,32 @@
 /* site defaults */
 
 body {
-    background: linear-gradient(to bottom, #533447, #222428 40rem);
-    background-repeat: no-repeat;
-    background-size: 100% 100vh;
-    background-color: #222428;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background: #222428;
     font-family: "nyala";
+}
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40rem;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    top: 0;
+    background: linear-gradient(to bottom, #533447, transparent);
+}
+
+body::after {
+    bottom: 0;
+    background: linear-gradient(to top, #3C4451, transparent);
 }
 
 h2 {
@@ -91,6 +112,11 @@ h2 {
 
 ul {
     list-style-type: "–  ";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .xlg, h1 {
@@ -116,6 +142,10 @@ ul {
 .main-content {
     padding-top: 1vw;
     color: #D0D0D0;
+}
+
+.hide {
+    display: none;
 }
 
 /* navbars for top and bottom of screen */
@@ -149,7 +179,7 @@ ul {
         width: 60%;
     }
 
-    a.button {
+    .button {
         padding: 0;
     }
 }
@@ -166,7 +196,7 @@ ul {
 
 /* general button */
 
-a.button {
+.button {
     margin: 0.1vw 0.6vw;
     padding: 0.3vw 0.6vw;
     cursor: pointer;
@@ -181,10 +211,15 @@ a.button {
     text-align: center;
 }
 
-a.button:hover {
+.button:hover,
+.button.checked {
     --bg-opac: 1;
     color: rgb(var(--black));
     transition: 0.2s ease-in-out;
+}
+
+.button-check {
+    display: none;
 }
 
 .link {

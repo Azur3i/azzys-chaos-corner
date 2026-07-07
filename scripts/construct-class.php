@@ -12,10 +12,18 @@ $levels = [
 ?>
 
 <div class="content-list">
+    <a  class="button white md position-absolute m-2"
+        href="javascript:history.back()"
+        title="Back to the previous page."
+        >
+        <img src="/assets/img/back.png" style="width: 2rem;">
+    </a>
     <h1 class="title"><?= $target["name"] ?></h1>
+        <p class="sm title" style="opacity: 0.5;"><i>You must have a <?= implode(" and ", $target["mc-scores"]) ?> score of 13 or higher in order to multiclass in or out of this class.</i></p>
+
     <hr >
+
     <p class="md title"><?= implode('</p><br ><p class="md title">', $target["desc"]) ?></p>
-    <p class="sm title" style="opacity: 0.5;"><i>You must have a <?= implode(" and ", $target["mc-scores"]) ?> score of 13 or higher in order to multiclass in or out of this class.</i></p>
     
     <hr >
     
@@ -50,9 +58,7 @@ $levels = [
         </div>
     </div>
     
-    <div class="row">
-        <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
-    </div>
+    <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
 
     <?php foreach ($levels as $i => $row): ?>
         <hr >

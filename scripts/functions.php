@@ -57,15 +57,15 @@ function renderAbility($ability, $z, $cls=null) {
             
         if (str_contains($ability["type"], "table")):
             $x = $ability["content"]["header"] ? " header" : ""; ?>
-            <table class='ability$x'>
+            <table class='ability<?= $x ?>'>
                 <?php foreach ($ability["content"]["content"] as $i => $row):
                     if ($i === 0): ?>
                         <thead>
-                            <tr><th><?= implode("</th><th>", $row) ?></th></tr>
+                            <tr><th class="md"><?= implode('</th><th class="md">', $row) ?></th></tr>
                         </thead>
                         <tbody>
                     <?php else: ?>
-                            <tr><td><?= implode("</td><td>", $row) ?></td></tr>
+                            <tr><td class="md"><?= implode('</td><td class="md">', $row) ?></td></tr>
                     <?php endif;
                 endforeach; ?>
                         </tbody>
@@ -76,8 +76,7 @@ function renderAbility($ability, $z, $cls=null) {
             $sbclss = json_decode(file_get_contents("../dnd/data/subclasses.json"), true);
             $i = 0; ?>
             <div class='accordion' id="subclass-list">
-                <?php foreach ($sbclss[$cls] as $sbcls):
-                    $id = "sbcls-$i"; ?>
+                <?php foreach ($sbclss[$cls] as $id => $sbcls): ?>
                     <div class="accordion-item blue low-opac">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed"
@@ -97,13 +96,20 @@ function renderAbility($ability, $z, $cls=null) {
                                 </div>
                                 <hr >
                                 <div class="row">
-                                    <a class="ms-auto sm button" href="/dnd/subclass/<?= $cls ?>:<?= strtolower(str_replace(" ", "-", $sbcls["name"])) ?>">Go to subclass page -></a>
+                                    <button type="button" class="col sm button subclass-check" data="<?= $cls ?>~<?= $id ?>">Select</button>
+                                    <a class="col-9 sm button" href="/dnd/<?= $cls ?>/<?= $id ?>">Go to subclass page →</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <?php $i++;
                 endforeach; ?>
+            </div>
+        <?php endif;
+
+        if (str_contains($ability["type"], "sbcls")): ?>
+            <div class='accordion subclass-select hide'>
+
             </div>
         <?php endif;
     endif;

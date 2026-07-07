@@ -10,13 +10,13 @@
         <header>
             <nav class="navbar navbar-expand-lg" id="navbar-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand xlg" href="/index.php">Azzy's Chaos Corner</a>
+                    <a class="navbar-brand xlg" href="/">Azzy's Chaos Corner</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbar-main">
                         <ul class="navbar-nav ms-auto pink low-opac">
-                            <li class="nav-item"><a class="col nav-link button md" href="/index-dnd.php">D&D</a></li>
+                            <li class="nav-item"><a class="col nav-link button md" href="/dnd">D&D</a></li>
                             <li class="nav-item"><a class="col nav-link button md" href="#">#</a></li>
                             <li class="nav-item"><a class="col nav-link button md" href="#">#</a></li>
                             <li class="nav-item"><a class="col nav-link button md" href="#">#</a></li>

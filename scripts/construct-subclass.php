@@ -21,14 +21,21 @@ $subclassTypes = [
 ?>
 
 <div class="content-list">
-    <h1 class="title"><?= $target["name"] ?></h1>
-    <p class="sm title" style="opacity: 0.5;"><?= ucwords($mainClass) ?> Subclass - <?= $subclassTypes[$mainClass] ?></p>
+    <a  class="button white md position-absolute m-3"
+        href="javascript:history.back()"
+        title="Back to the previous page."
+        >
+        <img src="/assets/img/back.png" style="width: 2rem;">
+    </a>
+
+    <h1 class="xlg title"><a href="/dnd/<?= $mainClass ?>"><?= ucwords($mainClass) . "</a>: " . $target["name"] ?></h1>
+    <p class="sm title" style="opacity: 0.5;"><?= $subclassTypes[$mainClass] ?></p>
+
     <hr >
+
     <p class="md title"><?= implode('</p><br ><p class="md title">', $target["desc"]) ?></p>
     
-    <div class="row">
-        <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
-    </div>
+    <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
 
     <?php foreach ($target["levels"] as $level => $ability): ?>
         <hr >

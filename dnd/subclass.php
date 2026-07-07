@@ -1,9 +1,12 @@
 <?php define("ROOT",  __DIR__ . "/.."); ?>
 
-<?php include ROOT . "/tpl/header.php"; 
-include ROOT . "/tpl/header-dnd.php";
+<?php 
 $target = $_GET["subclass"]; 
-$mainClass = $_GET["class"]?>
+$mainClass = $_GET["class"];
+
+include ROOT . "/tpl/header.php"; 
+include ROOT . "/tpl/header-dnd.php";
+?>
 
 <div class="container-fluid">
     <div class="row justify-content-center">

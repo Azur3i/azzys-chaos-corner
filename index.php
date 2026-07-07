@@ -9,7 +9,7 @@
             <h1 class="xlg">Welcome to Azzurey's Chaotic Corner!</h1>
             <hr >
             <div class="row">
-                <a class="col button blue md" href="/index-dnd.php">Dungeons & Dragons</a>
+                <a class="col button blue md" href="/dnd">Dungeons & Dragons</a>
             </div>
         </div>
     </div>

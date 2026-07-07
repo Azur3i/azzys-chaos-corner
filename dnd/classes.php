@@ -22,7 +22,7 @@ $types = [
                     <div class="row mx-auto">
                         <?php foreach ($classes as $name => $attr): ?>
                             <?php if ($attr["magic"]["caster"] == $type): ?>
-                                <a class="col button md" href="class/<?= $name ?>"><?= $attr["name"] ?></a>
+                                <a class="col button md" href="<?= $name ?>"><?= $attr["name"] ?></a>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>

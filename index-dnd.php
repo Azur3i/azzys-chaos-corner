@@ -13,8 +13,8 @@
             </p>
             <hr >
             <div class="row mx-auto blue">
-                <a class="col button md" href="/dnd/classes.php">Classes</a>
-                <a class="col button md">Subclasses</a>
+                <a class="col button md" href="/dnd/classes">Classes</a>
+                <a class="col button md" href="/dnd/subclasses">Subclasses</a>
                 <a class="col button md">Races</a>
                 <a class="col button md">Spells</a>
                 <a class="col button md">Creatures</a>

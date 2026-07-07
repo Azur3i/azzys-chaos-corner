@@ -1689,7 +1689,7 @@
                 {
                     "name": "Roguish Archetype",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 },
                 {
                     "name": "Steady Aim",
@@ -1729,7 +1729,8 @@
             "9": [
                 {
                     "name": "Roguish Archetype Feature",
-                    "desc": "You gain a feature depending on your roguish archetype."
+                    "desc": "You gain a feature depending on your roguish archetype.",
+                    "type": "sbcls"
                 }
             ],
             "10": [
@@ -1753,7 +1754,8 @@
             "13": [
                 {
                     "name": "Roguish Archetype Feature",
-                    "desc": "You gain a feature depending on your roguish archetype."
+                    "desc": "You gain a feature depending on your roguish archetype.",
+                    "type": "sbcls"
                 }
             ],
             "14": [
@@ -1777,7 +1779,8 @@
             "17": [
                 {
                     "name": "Roguish Archetype Feature",
-                    "desc": "You gain a feature depending on your roguish archetype."
+                    "desc": "You gain a feature depending on your roguish archetype.",
+                    "type": "sbcls"
                 }
             ],
             "18": [
@@ -1851,7 +1854,7 @@
                 {
                     "name": "Sorcerous Origin",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 },
                 {
                     "name": "Spellcasting",
@@ -1984,7 +1987,8 @@
             "6": [
                 {
                     "name": "Sorcerous Origin Feature",
-                    "desc": "You gain a feature depending on your sorcerous origin."
+                    "desc": "You gain a feature depending on your sorcerous origin.",
+                    "type": "sbcls"
                 }
             ],
             "7": [],
@@ -2016,7 +2020,8 @@
             "14": [
                 {
                     "name": "Sorcerous Origin Feature",
-                    "desc": "You gain a feature depending on your sorcerous origin."
+                    "desc": "You gain a feature depending on your sorcerous origin.",
+                    "type": "sbcls"
                 }
             ],
             "15": [],
@@ -2035,7 +2040,8 @@
             "18": [
                 {
                     "name": "Sorcerous Origin Feature",
-                    "desc": "You gain a feature depending on your sorcerous origin."
+                    "desc": "You gain a feature depending on your sorcerous origin.",
+                    "type": "sbcls"
                 }
             ],
             "19": [
@@ -2047,7 +2053,7 @@
             "20": [
                 {
                     "name": "Sorcerous Restoration",
-                    "desc": "You regain 4 expended sorcery points after a short rest."
+                    "desc": "When you roll initiative and have no uses of your bardic inspiration trait left, you regain one use."
                 }
             ]
         }
