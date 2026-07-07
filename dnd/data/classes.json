@@ -1800,6 +1800,258 @@
             ]
         }
     },
+    "sorcerer": {
+        "name": "Sorcerer",
+        "desc": ["Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer."],
+        "mc-scores": ["CHA"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["none"],
+            "weapons": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
+            "tools": ["none"],
+            "saves": ["CON", "CHA"],
+            "skills": [2, ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"]]
+        },
+        "equipment": [
+            ["a light crossbow and 20 bolts", "any simple weapon"],
+            ["a component pouch", "an arcane focus"],
+            ["a dungeoneer's pack", "an explorer's pack"],
+            ["2 daggers"]
+        ],
+        "magic": {
+            "caster": "full",
+            "mod": "CHA",
+            "type": "known",
+            "amount": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15],
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [3, "", "", "", "", "", "", "", ""],
+                "3": [4, 2, "", "", "", "", "", "", ""],
+                "4": [4, 3, "", "", "", "", "", "", ""],
+                "5": [4, 3, 2, "", "", "", "", "", ""],
+                "6": [4, 3, 3, "", "", "", "", "", ""],
+                "7": [4, 3, 3, 1, "", "", "", "", ""],
+                "8": [4, 3, 3, 2, "", "", "", "", ""],
+                "9": [4, 3, 3, 3, 1, "", "", "", ""],
+                "10": [4, 3, 3, 3, 2, "", "", "", ""],
+                "11": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "12": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "13": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "14": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "15": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "16": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "17": [4, 3, 3, 3, 2, 1, 1, 1, 1],
+                "18": [4, 3, 3, 3, 3, 1, 1, 1, 1],
+                "19": [4, 3, 3, 3, 3, 2, 1, 1, 1],
+                "20": [4, 3, 3, 3, 3, 2, 2, 1, 1]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Sorcerous Origin",
+                    "desc": "Choose a subclass:",
+                    "type": "subclass"
+                },
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origins, fuels your spells.",
+                    "content": [
+                        {
+                            "name": "Cantrips",
+                            "desc": "You know 4 cantrips of your choice from the sorcerer spell list."
+                        },
+                        {
+                            "name": "Known Spells",
+                            "desc": "The Spells Known column of the sorcerer spell slot table shows how many sorcerer spells you know at any given level. Whenever you gain a level in this class, you may choose one of the spells you know, and replace it with any other sorcerer spell. Each spell you learn can only be of a spell slot level you have."
+                        },
+                        {
+                            "name": "Spellcasting Focus",
+                            "desc": "You may use an arcane focus as a spellcasting focus for your sorcerer spells."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is CHA.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + CHA"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + CHA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "2": [
+                {
+                    "name": "Font of Magic",
+                    "desc": "You tap into a deep wellspring of magic within yourself. This wellspring is represented by sorcery points, which allow you to create a variety of magical effects.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Sorcery Points",
+                            "desc": "You have an amount of sorcery points equal to your sorcerer level. You may never have more sorcery points than your sorcerer level at any one time. You regain all spent sorcery points after a long rest."
+                        },
+                        {
+                            "name": "Flexible Casting",
+                            "desc": "You may use your sorcery points to gain additional spell slots, or sacrifice spell slots to gain additional sorcery points.",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Creating Spell Slots",
+                                    "desc" : "You may transform unexpended sorcery points into a spell slot level as a bonus action on your turn. The cost increases with the spell slot level: 2 sorcery points for a 1st level spell slot, 3 points for 2nd level, 5 points for 3rd level, 6 points for 4th level and 7 points for 5th level. You cannot create spell slots of 6th level or higher. Any spell slot you create with this feature vanishes after a long rest."
+                                },
+                                {
+                                    "name": "Converting a Spell Slot to Sorcery Points",
+                                    "desc": "As a bonus action on your turn, you may expend one spell slot, and gain a number of sorcery points equal to the spell slot's level."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "3": [
+                {
+                    "name": "Metamagic",
+                    "desc": "You gain the ability to twist your spells to suit your needs. You gain 2 of the following Metamagic options of your choice. You may only use one Metamagic option on a spell when you cast it, unless otherwise noted.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Careful Spell",
+                            "desc": "Whenever you cast a spell that forces other creatures to make a saving throw, you may protect some of those creature's from the spell's full force. You may spend 1 sorcery point and choose a number of creatures up to your CHA (minimum of 1). A chosen creature automatically succeeds on its saving throw against the spell."
+                        },
+                        {
+                            "name": "Distant Spell",
+                            "desc": "Whenever you cast a spell that has a range of 5ft. or greater, you may spend 1 sorcery point to double the range of the spell. Alternatively, if the spell has a range of touch, you may spend 1 sorcery point to make the range of the spell 30ft."
+                        },
+                        {
+                            "name": "Empowered Spell",
+                            "desc": "Whenever you roll for damage for a spell, you may spend 1 sorcery point to reroll a number of the damage dice up to your CHA (minimum of 1). You must use the new rolls. You may use this Metamagic option even if you already used a different one during the casting of the spell."
+                        },
+                        {
+                            "name": "Extended Spell",
+                            "desc": "Whenever you cast a spell that has a duration of 1 minute or longer, you may spend 1 sorcery point to double its duration, to a maximum duration of 24 hours."
+                        },
+                        {
+                            "name": "Heightened Spell",
+                            "desc": "Whenever you cast a spell that forces a creature to make a saving throw to resist its effects, you may spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw made against the spell."
+                        },
+                        {
+                            "name": "Quickened Spell",
+                            "desc": "Whenever you cast a spell that has a casting time of 1 action, you may spend 2 sorcery points to change the casting time to 1 bonus action for this casting."
+                        },
+                        {
+                            "name": "Seeking Spell",
+                            "desc": "If you make an attack roll for a spell and miss, you may spend 2 sorcerer points to reroll the d20, and you must use the new roll. You may use this Metamagic option even if you already used a different one during the casting of the spell."
+                        },
+                        {
+                            "name": "Subtle Spell",
+                            "desc": "Whenever you cast a spell, you may spend 1 sorcery point to cast it without any somatic or verbal components."
+                        },
+                        {
+                            "name": "Transmuted Spell",
+                            "desc": "Whenever you cast a spell that deals acid, cold, fire, lightning, poison or thunder damage, you may spend 1 sorcery point to change that damage type to any of the listed types."
+                        },
+                        {
+                            "name": "Twinned Spell",
+                            "desc": "Whenever you cast a spell that targets only 1 creature and does not have a range of self, you may spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell. You spend 1 sorcery points if the spell is a cantrip. To be eligible, a spell must be incapable of targeting more that one creature at the spell's current level."
+                        }
+                    ]
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 5."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Magical Guidance",
+                    "desc": "When you make an ability check that fails, you may spend 1 sorcery point to reroll the d20, and you must use the new roll, potentially turning the failure into a success."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Sorcerous Origin Feature",
+                    "desc": "You gain a feature depending on your sorcerous origin."
+                }
+            ],
+            "7": [],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [],
+            "10": [
+                {
+                    "name": "Metamagic",
+                    "desc": "You gain an additional Metamagic option of your choice, for a total of 3."
+                },
+                {
+                    "name": "Cantrips",
+                    "desc": "You learn an additional cantrip, for a total of 6."
+                }
+            ],
+            "11": [],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [],
+            "14": [
+                {
+                    "name": "Sorcerous Origin Feature",
+                    "desc": "You gain a feature depending on your sorcerous origin."
+                }
+            ],
+            "15": [],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Metamagic",
+                    "desc": "You gain an additional Metamagic option of your choice, for a total of 4."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Sorcerous Origin Feature",
+                    "desc": "You gain a feature depending on your sorcerous origin."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Sorcerous Restoration",
+                    "desc": "You regain 4 expended sorcery points after a short rest."
+                }
+            ]
+        }
+    },
     "warlock": {
         "name": "Warlock",
         "desc": ["Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular."],
