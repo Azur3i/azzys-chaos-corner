@@ -1,4 +1,8 @@
 {
+    "artificer": {},
+    "barbarian": {},
+    "bard": {},
+    "cleric": {},
     "druid": {
         "circle-of-the-moon": {
             "name": "Circle of the Moon",
@@ -42,6 +46,99 @@
             }
         }
     },
+    "paladin": {
+        "oath-of-devotion": {
+            "name": "Oath of Devotion",
+            "desc": ["The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue and order. Sometimes called cavaliers, white knights or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good, and use their gods' tenents as the measure of their devotion. They hold angels – the perfect servants of good – as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Paladin level", "Spells"],
+                                ["3rd", "@protection from evil and good, @sanctuary"],
+                                ["5th", "@lesser restoration, @zone of truth"],
+                                ["9th", "@beacon of hope, @dispel magic"],
+                                ["13th", "@freedom of movement, @guardian of faith"],
+                                ["17th", "@commune, @flame strike"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tenets of Devotion",
+                        "desc": "Though the exact words and strictures of the Oath of Devotion vary, paladins of this oath share these tenets:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Honesty",
+                                "desc": "Don't lie or cheat. Let your word be your promise."
+                            },
+                            {
+                                "name": "Courage",
+                                "desc": "Never fear to act, though caution is wise."
+                            },
+                            {
+                                "name": "Compassion",
+                                "desc": "Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom."
+                            },
+                            {
+                                "name": "Honor",
+                                "desc": "Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm."
+                            },
+                            {
+                                "name": "Duty",
+                                "desc": "Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Channel Divinity",
+                        "desc": "You gain the following 2 Channel Divinity options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Sacred Weapon",
+                                "desc": "As an action, you may imbue one weapon that you are holding with positive energy. For 1 minute, you may add your CHA modifier to attack rolls made with that weapon (minimum of +1). The weapon also emits bright light in a 20ft. radius, and dim light in another 20ft. If the weapon is not already magical, it becomes magical for the duration. The effect ends if you dismiss it as a free action, you stop holding the weapon or are knocked unconscious."
+                            },
+                            {
+                                "name": "Turn the Unholy",
+                                "desc": "As an action, you present your holy symbol and speak a prayer, censuring fiends and undead. Each fiend or undead that can see or hear you within 30ft. of you must make a WIS saving throw. On a failure, the creature is turned for 1 minute, or until it takes damage. A turned creature must spend its turns trying to move as far away from you as it can, and it cannot willingly move to a space within 30ft. of you. It also cannot take reactions. For its action, it can use only the @dash action, or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature may instead use the @dodge action."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Aura of Devotion",
+                        "desc": "You and friendly creatures within 10ft. of you cannot be charmed while you are conscious. "
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Purity of Spirit",
+                        "desc": "You are permanently under the effects of a protection from evil and good spell. "
+                    }
+                ],
+                "20": [
+                    {
+                        "name": "Holy Nimbus",
+                        "desc": "As an action, you may emenate an aura of sunlight. For 1 minute, bright light shines from you in a 30ft. radius, and dim light in another 30ft. Whenever an enemy creature starts its turn in the bright light, the creature takes 10 @radiant damage. Additionally, for the duration, you gain advantage on saving throws against spells cast by fiends or undead. You may use this feature once per long rest."
+                    }
+                ]
+            }
+        }
+    },
+    "fighter": {},
+    "monk": {},
+    "oracle": {},
+    "ranger": {},
     "rogue": {
         "arcane-trickster": {
             "name": "Arcane Trickster",
@@ -218,10 +315,93 @@
             }
         }
     },
+    "sorcerer": {
+        "shadow-magic": {
+            "name": "Shadow Magic",
+            "desc": ["You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace your lineage to an entity from that place, or perhaps you were exposed to its fell energy and transformed by it. The power of shadow magic casts a strange pall over your physical presence. The spark of life that sustains you is muffled, as if it struggles to remain viable against the dark energy that imbues your soul."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Quirk (Optional)",
+                        "desc": "You may pick from - or roll on - the following table to create a quirk for your character:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d6", "Spells"],
+                                ["1", "You are always icy cold to the touch."],
+                                ["2", "When you are asleep, you don't appear to breathe (though you mst still breathe to survive)."],
+                                ["3", "You barely bleed, even when badly injured."],
+                                ["4", "Your heart beats once per minute. This event sometimes surprises you."],
+                                ["5", "You have trouble remembering that living creatures and corpses should be treated differently."],
+                                ["6", "You blinked. Once. Last week."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Eyes of the Dark",
+                        "desc": "You gain 120ft. darkvision. At 3rd level, you learn the @darkness spell, which doesn't count against your number of sorcerer spells known. You may cast this spell by spending 2 sorcery points, or by casting a spell slot as normal. If you cast it with sorcery points, you are able to see through the darkness created by the spell."
+                    },
+                    {
+                        "name": "Strength of the Grave",
+                        "desc": "When damage reduces you to 0 hitpoints, you may make a CHA saving throw (DC 5 + the damage taken). On a success, you instead drop to 1 hitpoint. You cannot use this feature if you are reduced to 0 hitpoints by either @radiant damage or a critical hit. After this saving throw succeeds, you cannot use this feature again until after a long rest."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Hound of Ill Omen",
+                        "desc": "You gain the ability to call forth a howling creature of darkness to harass your foes. As a bonus action, you may spend 3 sorcery points to summon a hound of ill omen to target one creature you can see within 120ft. of you. The hound uses the #dire wolf's stat block, with the following properties:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "The hound is size Medium instead of Large, and counts as a Monstrosity instead of a Beast."
+                            },
+                            {
+                                "desc": "It appears with a number of temporary hitpoints equal to half your sorcerer level."
+                            },
+                            {
+                                "desc": "It may move through other creatures and objects as if they were difficult terrain. The hound takes 5 @force damage if it ends its turn inside an object."
+                            },
+                            {
+                                "desc": "At the start of its turn, the hound automatically knows its target's location. If the target was hidden, it is no longer hidden from the hound."
+                            },
+                            {
+                                "desc": "The hound appears in an unoccupied space of your choice within 30ft. of the target."
+                            },
+                            {
+                                "desc": "The hound has its own initiative. On its turn, it can move only toward its target by the most direct route, and it can use its action only to attack the target. The hound is able to make opportunity attacks, but only against its target."
+                            },
+                            {
+                                "desc": "While the hound is within 5ft. of the target, the target has disadvantage on saving throws against any spell you cast."
+                            },
+                            {
+                                "desc": "The hound disappears if it is reduced to 0 hitpoints, if its target is reduced to 0 hitpoints, or after 5 minutes."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Shadow Walk",
+                        "desc": "When you are in dim light or darkness, as a bonus action, you are able to teleport up to 120ft. to an unoccupied space you can see that is also in dim light or darkness."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Umbral Form",
+                        "desc": "As a bonus action, you may spend 6 sorcery points to transform yourself into a shadowy form. In this form, you gain resistance to all damage except @force and @radiant damage, and you may move through other creatures and objects as if they were difficult terrain. You take 5 @force damage if you end your turn inside an object. This form lasts for 1 minute, until you are incapacitated or die, or if you dismiss it as a bonus action."
+                    }
+                ]
+            }
+        }
+    },
     "warlock": {
         "the-fiend": {
             "name": "The Fiend",
-            "desc": ["You have made a pact with a fiend from the lower plains of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption of all things, ultimately including you. Fiends powerful enough to form a pact include demon lords such as Demogorgon, Oruc, Fraz’Urb-luu and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles and Belial; pit fiends and balors that are especially mighty and ultroloths and other lords of the yugoloths."],
+            "desc": ["You have made a pact with a fiend from the lower plains of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption of all things, ultimately including you. Fiends powerful enough to form a pact include demon lords such as Demogorgon, Oruc, Fraz'Urb-luu and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles and Belial; pit fiends and balors that are especially mighty and ultroloths and other lords of the yugoloths."],
             "magic": {
                 "caster": "none"
             },
@@ -251,7 +431,7 @@
                 "6": [
                     {
                         "name": "Dark One's Own Luck",
-                        "desc": "Whenever you make an ability check or a saving throw, you may use this trait to add 1d10 to your roll. You may do so after seeing the initial roll, but before any of the roll’s effects occur. You may use this trait once every short rest."
+                        "desc": "Whenever you make an ability check or a saving throw, you may use this trait to add 1d10 to your roll. You may do so after seeing the initial roll, but before any of the roll's effects occur. You may use this trait once every short rest."
                     }
                 ],
                 "10": [
@@ -268,5 +448,6 @@
                 ]
             }
         }
-    }
+    },
+    "wizard": {}
 }
