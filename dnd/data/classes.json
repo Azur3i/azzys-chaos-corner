@@ -778,7 +778,7 @@
                         },
                         {
                             "name": "Thrown Weapon Fighting",
-                            "desc": "You may draw a weapon that has the drawn property as part of the attack you make with that weapon. Additionally, you gain +2 to damage if you hit a ranged thrown weapon attack."
+                            "desc": "You may draw a weapon that has the thrown property as part of the attack you make with that weapon. Additionally, you gain +2 to damage if you hit a ranged thrown weapon attack."
                         },
                         {
                             "name": "Two-Weapon Fighting",
@@ -1657,6 +1657,343 @@
                     "name": "Sacred Oath Feature",
                     "desc": "You gain a feature depending on your sacred oath.",
                     "type": "sbcls"
+                }
+            ]
+        }
+    },
+    "ranger": {
+        "name": "Ranger",
+        "desc": ["Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch."],
+        "mc-scores": ["DEX", "WIS"],
+        "hitdie": 10,
+        "proficiencies": {
+            "armor": ["light armor", "medium armor", "shields"],
+            "weapons": ["simple weapons", "martial weapons"],
+            "tools": ["none"],
+            "saves": ["STR", "DEX"],
+            "skills": [3, ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"]]
+        },
+        "equipment": [
+            ["scale mail", "leather armor"],
+            ["2 shortswords", "2 simple melee weapons"],
+            ["a dungeoneer's pack", "an explorer's pack"],
+            ["a longbow and a quiver with 20 arrows"]
+        ],
+        "magic": {
+            "caster": "half",
+            "mod": "CHA",
+            "type": "known",
+            "amount": ["", 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11],
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [2, "", "", "", "", "", "", "", ""],
+                "3": [3, "", "", "", "", "", "", "", ""],
+                "4": [3, "", "", "", "", "", "", "", ""],
+                "5": [4, 2, "", "", "", "", "", "", ""],
+                "6": [4, 2, "", "", "", "", "", "", ""],
+                "7": [4, 3, "", "", "", "", "", "", ""],
+                "8": [4, 3, "", "", "", "", "", "", ""],
+                "9": [4, 3, 2, "", "", "", "", "", ""],
+                "10": [4, 3, 2, "", "", "", "", "", ""],
+                "11": [4, 3, 3, "", "", "", "", "", ""],
+                "12": [4, 3, 3, "", "", "", "", "", ""],
+                "13": [4, 3, 3, 1, "", "", "", "", ""],
+                "14": [4, 3, 3, 1, "", "", "", "", ""],
+                "15": [4, 3, 3, 2, "", "", "", "", ""],
+                "16": [4, 3, 3, 2, "", "", "", "", ""],
+                "17": [4, 3, 3, 3, 1, "", "", "", ""],
+                "18": [4, 3, 3, 3, 1, "", "", "", ""],
+                "19": [4, 3, 3, 3, 2, "", "", "", ""],
+                "20": [4, 3, 3, 3, 2, "", "", "", ""]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Favored Enemy",
+                    "desc": "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, undead. Alternatively, you may choose up to two races of humanoids as your favored enemy. You have advantage on Survival (WIS) checks to track your favored enemy, as well as INT checks to recall information about them. You may learn one language that is spoken by your favored enemy, if they speak one.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Favored Foe (Optional)",
+                            "desc": "This replaces the Favored Enemy trait if chosen. When you hit a creature with an attack, you may mark that target as your favored enemy for 1 minute. The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you  may add 1d4 to the damage roll. You may use this trait to mark an enemy an amount equal to your proficiency bonus, and regain all expended uses during a long rest."
+                        }
+                    ]
+                },
+                {
+                    "name": "Natural Explorer",
+                    "desc": "Choose a type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp or the Underdark. When you make an INT or WIS check related to your favored terrain, your proficiency bonus is doubled if you're using a proficient skill. Additionally, when traveling for an hour or more in your favored terrain, you gain the following benefits:",
+                    "type": "list",
+                    "content": [
+                        {
+                            "desc": "Difficult terrain doesn't slow your group's travel."
+                        },
+                        {
+                            "desc": "Your group cannot become lost except by magical means."
+                        },
+                        {
+                            "desc": "Even when you are engaged in another activity while traveling, you remain alert to danger."
+                        },
+                        {
+                            "desc": "If you are traveling alone, you can move stealthily at a normal pace."
+                        },
+                        {
+                            "desc": "When you forage, you find twice as much food as you would normally."
+                        },
+                        {
+                            "desc": "While tracking other creatures, you also learn their exact number, sizes and how long ago they passed through the area."
+                        },
+                        {
+                            "name": "Deft Explorer (Optional)",
+                            "desc": "This replaces the Natural Explorer trait if chosen. You gain the following trait:",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Canny",
+                                    "desc": "Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make using the chosen skill. Additionally, you learn to speak, read and write 2 languages of your choice."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "2": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "You have learned to use the magical essence of nature to cast spells, much as a druid does.",
+                    "content": [
+                        {
+                            "name": "Known Spells",
+                            "desc": "The Spells Known column of the ranger spell slot table shows how many ranger spells you know at any given level. Whenever you gain a level in this class, you may choose one of the spells you know, and replace it with any other ranger spell. Each spell you learn can only be of a spell slot level you have."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is WIS.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + WIS"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + WIS"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fighting Style",
+                    "type": "list",
+                    "desc": "Choose one of the following. You cannot take a style option more than once, even if you get to choose again. You may replace your fighting style with a different one if you gain a level in this class.",
+                    "content": [
+                        {
+                            "name": "Archery",
+                            "desc": "You gain +2 to attack rolls you make with ranged weapons."
+                        },
+                        {
+                            "name": "Blind fighting",
+                            "desc": "You have blindsight with a range of 10ft."
+                        },
+                        {
+                            "name": "Defense",
+                            "desc": "While you are wearing armor, you gain +1 to AC."
+                        },
+                        {
+                            "name": "Druidic Warrior",
+                            "desc": "You learn 2 cantrips of your choice from the druid spell list. They count as ranger spells for you. WIS is your spellcasting ability for them. Whenever you gain a level in this class, you may replace one of these cantrips with another from the druid spell list."
+                        },
+                        {
+                            "name": "Dueling",
+                            "desc": "When you are wielding a melee weapon in one hand and no other weapons, you gain +2 to damage rolls with that weapon."
+                        },
+                        {
+                            "name": "Thrown Weapon Fighting",
+                            "desc": "You may draw a weapon that has the thrown property as part of the attack you make with that weapon. Additionally, you gain +2 to damage if you hit a ranged thrown weapon attack."
+                        },
+                        {
+                            "name": "Two-Weapon Fighting",
+                            "desc": "When you engage in two-weapon fighting, you may add your ability modifier to the damage of the second attack."
+                        }
+                    ]
+                }
+            ],
+            "3": [
+                {
+                    "name": "Ranger Conclave",
+                    "desc": "Choose a subclass:",
+                    "type": "subclass sbcls"
+                },
+                {
+                    "name": "Primeval Awareness",
+                    "desc": "You may use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (increased to 6 miles in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends and undead. This feature doesn't reveal the location or number of creatures.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Primal Awareness (Optional)",
+                            "desc": "This replaces the Primeval Awareness trait when chosen. You learn additional spells when you reach certain levels in this class, if you don't already know them. At 3rd level, you learn the speak with animals spell. This spell doesn't count towards the number of ranger spells you can know."
+                        }
+                    ]
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Extra Attack",
+                    "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
+                },
+                {
+                    "name": "Primal Awareness (Optional)",
+                    "desc": "You only have this trait if you took the Primal Awareness trait at 3rd level. You learn the @beast sense spell. This spell doesn't count towards the number of ranger spells you can know."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Favored Enemy",
+                    "desc": "You may choose an additional type of favored enemy, for a total of 2.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Favored Foe (Optional)",
+                            "desc": "You only have this trait if you took the Favored Foe trait at 1st level. The favored foe mark damage increases to 1d6."
+                        }
+                    ]
+                },
+                {
+                    "name": "Natural Explorer",
+                    "desc": "You may choose an additional type of favored terrain, for a total of 2.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Deft Explorer (Optional)",
+                            "desc": "You only have this trait if you took the Deft Explorer trait at 1st level. You gain the following trait.",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Roving",
+                                    "desc": "Your walking speed increases by 5ft., and you gain a climbing and swimming speed equal to your walking speed."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "7": [
+                {
+                    "name": "Ranger Conclave Feature",
+                    "desc": "You gain a feature depending on your ranger conclave.",
+                    "type": "sbcls"
+                }
+            ],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Land's Stride",
+                    "desc": "Moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed or damaged by them. You have advantage on saving throws against plants that are magically created and/or manipulated to impede movement."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Primal Awareness (Optional)",
+                    "desc": "You only have this trait if you took the Primal Awareness trait at 3rd level. You learn the @speak with plants spell. This spell doesn't count towards the number of ranger spells you can know."
+                }
+            ],
+            "10": [
+                {
+                    "name": "Natural Explorer",
+                    "desc": "You may choose an additional type of favored terrain, for a total of 3.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Deft Explorer (Optional)",
+                            "desc": "You only have this trait if you took the Deft Explorer trait at 1st level. You gain the following trait.",
+                            "type": "list",
+                            "content": [
+                                {
+                                    "name": "Tireless",
+                                    "desc": "As an action, you may give yourself a number of temporary hitpoints equal to 1d8 + your WIS, minimum of 1 hitpoint. You may do this an amount of times equal to your proficiency bonus. Additionally, a short rest decreases your exhaustion level by 1."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "11": [
+                {
+                    "name": "Ranger Conclave Feature",
+                    "desc": "You gain a feature depending on your ranger conclave."
+                }
+            ],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Primal Awareness (Optional)",
+                    "desc": "You only have this trait if you took the Primal Awareness trait at 3rd level. You learn the @locate creature spell. This spell doesn't count towards the number of ranger spells you can know."
+                }
+            ],
+            "14": [
+                {
+                    "name": "Favored Enemy",
+                    "desc": "You may choose an additional type of favored enemy, for a total of 3.",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Favored Foe (Optional)",
+                            "desc": "You only have this trait if you took the Favored Foe trait at 1st level. The favored foe mark damage increases to 1d8."
+                        }
+                    ]
+                }
+            ],
+            "15": [
+                {
+                    "name": "Ranger Conclave Feature",
+                    "desc": "You gain a feature depending on your ranger conclave.",
+                    "type": "sbcls"
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Primal Awareness (Optional)",
+                    "desc": "You only have this trait if you took the Primal Awareness trait at 3rd level. You learn the @commune with nature spell. This spell doesn't count towards the number of ranger spells you can know."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Feral Senses",
+                    "desc": "When you attack a creature you cannot see, your inability to see it doesn't impose disadvantage on your attack rolls. Additionally, you gain 30ft. of blindsense."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Foe Slayer",
+                    "desc": "Once on each of your turns, you can add your WIS modifier to the attack roll or damage roll of an attack you make against one of your favored enemies (or marked as favored if you have the Favored Foe trait). You may choose to use this feature before or after the roll, but before any effects of the roll are applied."
                 }
             ]
         }
