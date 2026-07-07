@@ -256,6 +256,213 @@
             ]
         }
     },
+    "barbarian": {
+        "name": "Barbarian",
+        "desc": ["For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength."],
+        "mc-scores": ["STR"],
+        "hitdie": 12,
+        "proficiencies": {
+            "armor": ["light armor", "medium armor", "shields"],
+            "weapons": ["simple weapons", "martial weapons"],
+            "tools": ["none"],
+            "saves": ["STR", "CON"],
+            "skills": [2, ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"]]
+        },
+        "equipment": [
+            ["a greataxe", "any melee martial weapon"],
+            ["two handaxes", "any simple weapon"],
+            ["an explorer's pack and 4 javelins"]
+        ],
+        "magic": {
+            "caster": "none"
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Rage",
+                    "type": "list",
+                    "desc": "In battle, you fight with primal ferocity. On your turn, you may enter a rage as a bonus action. Your rage lasts for 1 minute; it ends early if you are knocked unconscious, or if your turn ends and you haven’t attacked a hostile creature since your last turn, or taken damage, since then. You may also end your rage on your turn as a bonus action. You may rage 2 times per long rest. While raging, you get the following effects while not wearing heavy armor.",
+                    "content": [
+                        {
+                            "desc": "You gain advantage on STR checks and saving throws."
+                        },
+                        {
+                            "desc": "Whenever you make a melee weapon attack using STR, you gain a +2 bonus to damage."
+                        },
+                        {
+                            "desc": "You gain resistance to @bludgeoning, @piercing and @slashing damage."
+                        },
+                        {
+                            "desc": "If you’re able to cast spells, you cannot cast them or concentrate on them."
+                        }
+                    ]
+                },
+                {
+                    "name": "Unarmored Defense",
+                    "desc": "While you are not wearing armor, your AC equals 10 + DEX + CON. You may still use a shield and gain this benefit."
+                }
+            ],
+            "2": [
+                {
+                    "name": "Danger Sense",
+                    "desc": "You gain advantage on DEX saving throws against effects that you can see, such as traps and spell. To gain this benefit, you cannot be blinded, deafened or incapacitated."
+                },
+                {
+                    "name": "Reckless Attack",
+                    "desc": "When you make your first attack on your turn, you can decide to attack recklessly. If so, you gain advantage on melee attack rolls using STR during this turn, but attack rolls against you gain advantage until your next turn."
+                }
+            ],
+            "3": [
+                {
+                    "name": "Primal Path",
+                    "desc": "Choose a subclass:",
+                    "type": "subclass sbcls"
+                },
+                {
+                    "name": "Primal Knowledge",
+                    "desc": "You gain proficiency of 1 skill of your choice from the list of skills available to 1st level barbarians."
+                },
+                {
+                    "name": "Rage",
+                    "desc": "You may rage an additional time, for a total of 3 times every long rest."
+                }
+            ],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Extra Attack",
+                    "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
+                },
+                {
+                    "name": "Fast Movement",
+                    "desc": "Your speed increases by 10ft. while you are not wearing heavy armor."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Primal Path Feature",
+                    "desc": "You gain a feature depending on your primal path",
+                    "type": "sbcls"
+                }
+            ],
+            "7": [
+                {
+                    "name": "Feral Instinct",
+                    "desc": "You gain advantage on initiative rolls. Additionally, if you are surprised at the start of combat, and aren’t incapacitated, you may act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
+                },
+                {
+                    "name": "Instinctive Pounce",
+                    "desc": "As part of the bonus action you take to enter your rage, you may additionally move up to half your speed."
+                }
+            ],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "9": [
+                {
+                    "name": "Brutal Critical",
+                    "desc": "You may roll 1 additional weapon damage die when determining the extra damage for a critical hit with a melee attack."
+                },
+                {
+                    "name": "Rage",
+                    "desc": "The damage bonus from making weapon attacks with STR increases to +3."
+                }
+
+            ],
+            "10": [
+                {
+                    "name": "Primal Path Feature",
+                    "desc": "You gain a feature depending on your primal path",
+                    "type": "sbcls"
+                }
+            ],
+            "11": [
+                {
+                    "name": "Relentless Rage",
+                    "desc": "If you drop to 0 hitpoints while you’re raging, but don’t die outright, you may make a DC 10 CON saving throw. On a success, you drop to 1 hitpoint instead. Each time you use this feature after the first, the DC increases by 5. The DC resets after a short rest."
+                }
+            ],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Rage",
+                    "desc": "You may rage an additional time, for a total of 5 times every long rest."
+                }
+            ],
+            "13": [
+                {
+                    "name": "Brutal Critical",
+                    "desc": "The additional weapon dice for critical hits increases to 2."
+                }
+            ],
+            "14": [
+                {
+                    "name": "Primal Path Feature",
+                    "desc": "You gain a feature depending on your primal path",
+                    "type": "sbcls"
+                }
+            ],
+            "15": [
+                {
+                    "name": "Persistent Rage",
+                    "desc": "Your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."
+                }
+            ],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Rage",
+                    "desc": "The damage bonus from making weapon attacks with STR increases to +4."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Brutal Critical",
+                    "desc": "The additional weapon dice for critical hits increases to 3."
+                },
+                {
+                    "name": "Rage",
+                    "desc": "You may rage an additional time, for a total of 6 times every long rest."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Indomitable Might",
+                    "desc": "If your total for a STR check is less than your STR score, you may use your STR in place of the total."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Primal Champion",
+                    "desc": "Your STR and CON scores increase by 4, up to a maximum of 24."
+                },
+                {
+                    "name": "Rage",
+                    "desc": "You may rage an unlimited amount of times every long rest."
+                }
+            ]
+        }
+    },
     "bard": {
         "name": "Bard",
         "desc": ["Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the magic they contain."],
