@@ -128,7 +128,7 @@
                 {
                     "name": "Artificer Specialism",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 },
                 {
                     "name": "The Right Tool For The Job",
@@ -144,7 +144,8 @@
             "5": [
                 {
                     "name": "Artificer Specialism Feature",
-                    "desc": "You gain a feature depending on your artificer specialism."
+                    "desc": "You gain a feature depending on your artificer specialism.",
+                    "type": "sbcls"
                 }
             ],
             "6": [
@@ -172,7 +173,8 @@
             "9": [
                 {
                     "name": "Artificer Specialism Feature",
-                    "desc": "You gain a feature depending on your artificer specialism."
+                    "desc": "You gain a feature depending on your artificer specialism.",
+                    "type": "sbcls"
                 }
             ],
             "10": [
@@ -219,7 +221,8 @@
             "15": [
                 {
                     "name": "Artificer Specialism Feature",
-                    "desc": "You gain a feature depending on your artificer specialism."
+                    "desc": "You gain a feature depending on your artificer specialism.",
+                    "type": "sbcls"
                 }
             ],
             "16": [
@@ -364,7 +367,7 @@
                 {
                     "name": "Bard College",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 },
                 {
                     "name": "Expertise",
@@ -394,7 +397,8 @@
             "6": [
                 {
                     "name": "Bard College Feature",
-                    "desc": "You gain a feature depending on your bard college."
+                    "desc": "You gain a feature depending on your bard college.",
+                    "type": "sbcls"
                 },
                 {
                     "name": "Countercharm",
@@ -448,7 +452,8 @@
             "14": [
                 {
                     "name": "Bard College Feature",
-                    "desc": "You gain a feature depending on your bard college."
+                    "desc": "You gain a feature depending on your bard college.",
+                    "type": "sbcls"
                 },
                 {
                     "name": "Magical Secrets",
@@ -586,7 +591,7 @@
                 {
                     "name": "Druid Circle",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 },
                 {
                     "name": "Wild Shape",
@@ -637,7 +642,8 @@
             "6": [
                 {
                     "name": "Druid Circle Feature",
-                    "desc": "You gain a feature depending on your druid circle."
+                    "desc": "You gain a feature depending on your druid circle.",
+                    "type": "sbcls"
                 }
             ],
             "7": [],
@@ -655,7 +661,8 @@
             "10": [
                 {
                     "name": "Druid Circle Feature",
-                    "desc": "You gain a feature depending on your druid circle."
+                    "desc": "You gain a feature depending on your druid circle.",
+                    "type": "sbcls"
                 },
                 {
                     "name": "Cantrips",
@@ -673,7 +680,8 @@
             "14": [
                 {
                     "name": "Druid Circle Feature",
-                    "desc": "You gain a feature depending on your druid circle."
+                    "desc": "You gain a feature depending on your druid circle.",
+                    "type": "sbcls"
                 }
             ],
             "15": [],
@@ -797,7 +805,7 @@
                 {
                     "name": "Martial Archetype",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 }
             ],
             "4": [
@@ -821,7 +829,8 @@
             "7": [
                 {
                     "name": "Martial Archetype Feature",
-                    "desc": "You gain a feature depending on your martial archetype."
+                    "desc": "You gain a feature depending on your martial archetype.",
+                    "type": "sbcls"
                 }
             ],
             "8": [
@@ -839,7 +848,8 @@
             "10": [
                 {
                     "name": "Martial Archetype Feature",
-                    "desc": "You gain a feature depending on your martial archetype."
+                    "desc": "You gain a feature depending on your martial archetype.",
+                    "type": "sbcls"
                 }
             ],
             "11": [
@@ -869,7 +879,8 @@
             "15": [
                 {
                     "name": "Martial Archetype Feature",
-                    "desc": "You gain a feature depending on your martial archetype."
+                    "desc": "You gain a feature depending on your martial archetype.",
+                    "type": "sbcls"
                 }
             ],
             "16": [
@@ -891,7 +902,8 @@
             "18": [
                 {
                     "name": "Martial Archetype Feature",
-                    "desc": "You gain a feature depending on your martial archetype."
+                    "desc": "You gain a feature depending on your martial archetype.",
+                    "type": "sbcls"
                 }
             ],
             "19": [
@@ -988,7 +1000,7 @@
                 {
                     "name": "Monastic Tradition",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 },
                 {
                     "name": "Deflect Missiles",
@@ -1035,7 +1047,8 @@
             "6": [
                 {
                     "name": "Monastic Tradition Feature",
-                    "desc": "You gain a feature depending on your monastic tradition."
+                    "desc": "You gain a feature depending on your monastic tradition.",
+                    "type": "sbcls"
                 },
                 {
                     "name": "Ki-Empowered Strikes",
@@ -1081,7 +1094,8 @@
             "11": [
                 {
                     "name": "Monastic Tradition Feature",
-                    "desc": "You gain a feature depending on your monastic tradition."
+                    "desc": "You gain a feature depending on your monastic tradition.",
+                    "type": "sbcls"
                 },
                 {
                     "name": "Martial Arts",
@@ -1125,7 +1139,8 @@
             "17": [
                 {
                     "name": "Monastic Tradition Feature",
-                    "desc": "You gain a feature depending on your monastic tradition."
+                    "desc": "You gain a feature depending on your monastic tradition.",
+                    "type": "sbcls"
                 },
                 {
                     "name": "Martial Arts",
@@ -1285,7 +1300,7 @@
                 {
                     "name": "Knowledge Base",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 }
             ],
             "3": [],
@@ -1571,7 +1586,8 @@
             "7": [
                 {
                     "name": "Sacred Oath Feature",
-                    "desc": "You gain a feature depending on your sacred oath."
+                    "desc": "You gain a feature depending on your sacred oath.",
+                    "type": "sbcls"
                 }
             ],
             "8": [
@@ -1609,7 +1625,8 @@
             "15": [
                 {
                     "name": "Sacred Oath Feature",
-                    "desc": "You gain a feature depending on your sacred oath."
+                    "desc": "You gain a feature depending on your sacred oath.",
+                    "type": "sbcls"
                 }
             ],
             "16": [
@@ -1638,7 +1655,8 @@
             "20": [
                 {
                     "name": "Sacred Oath Feature",
-                    "desc": "You gain a feature depending on your sacred oath."
+                    "desc": "You gain a feature depending on your sacred oath.",
+                    "type": "sbcls"
                 }
             ]
         }
@@ -2109,7 +2127,7 @@
                 {
                     "name": "Otherworldly Patron",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 },
                 {
                     "name": "Pact Magic",
@@ -2406,7 +2424,8 @@
             "6": [
                 {
                     "name": "Otherworldly Patron Feature",
-                    "desc": "You gain a feature depending on your patron."
+                    "desc": "You gain a feature depending on your patron.",
+                    "type": "sbcls"
                 }
             ],
             "7": [
@@ -2484,7 +2503,8 @@
             "10": [
                 {
                     "name": "Otherworldly Patron Feature",
-                    "desc": "You gain a feature depending on your patron."
+                    "desc": "You gain a feature depending on your patron.",
+                    "type": "sbcls"
                 },
                 {
                     "name": "Cantrips",
@@ -2527,7 +2547,8 @@
             "14": [
                 {
                     "name": "Otherworldly Patron Feature",
-                    "desc": "You gain a feature depending on your patron."
+                    "desc": "You gain a feature depending on your patron.",
+                    "type": "sbcls"
                 }
             ],
             "15": [
@@ -2705,7 +2726,7 @@
                 {
                     "name": "Arcane Tradition",
                     "desc": "Choose a subclass:",
-                    "type": "subclass"
+                    "type": "subclass sbcls"
                 }
                 
             ],
@@ -2724,7 +2745,8 @@
             "6": [
                 {
                     "name": "Arcane Tradition Feature",
-                    "desc": "You gain a feature depending on your arcane tradition."
+                    "desc": "You gain a feature depending on your arcane tradition.",
+                    "type": "sbcls"
                 }
             ],
             "7": [],
@@ -2738,7 +2760,8 @@
             "10": [
                 {
                     "name": "Arcane Tradition Feature",
-                    "desc": "You gain a feature depending on your arcane tradition."
+                    "desc": "You gain a feature depending on your arcane tradition.",
+                    "type": "sbcls"
                 },
                 {
                     "name": "Cantrips",
@@ -2756,7 +2779,8 @@
             "14": [
                 {
                     "name": "Arcane Tradition Feature",
-                    "desc": "You gain a feature depending on your arcane tradition."
+                    "desc": "You gain a feature depending on your arcane tradition.",
+                    "type": "sbcls"
                 }
             ],
             "15": [],
