@@ -620,6 +620,71 @@
         }
     },
     "warlock": {
+        "the-hexblade": {
+            "name": "The Hexblade",
+            "desc": ["You have made your pact with a mysterious entity from the Shadowfell - a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.", "Because the Raven Queen is known to have forged the first of these weapons, many sages speculate that she and the force are one and that the weapons, along with hexblade warlocks, are tools she uses to manipulate events on the Material Plane to her inscrutable ends."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Expanded Spell List",
+                        "desc": "The following spells are added to the warlock spell list for you:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Spell level", "Spells"],
+                                ["1st", "@shield, @wrathful smite"],
+                                ["2nd", "@blur, @branding smite"],
+                                ["3rd", "@blink, @elemental weapon"],
+                                ["4th", "@phantasmal killer, @staggering smite"],
+                                ["5th", "@banishing smite, @cone of cold"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Hex Warrior",
+                        "desc": "You acquire the training necessary to effectively arm yourself in battle, gaining proficiency with medium armor, shields, and martial weapons. The influence of your patron also allows you to mystically channel your will through a particular weapon. Whenever you finish a long rest, you may touch one weapon that you are proficient with and that lacks the two-handed property. When you attack with that weapon, you may use your CHA instead of STR or DEX for the attack and damage rolls. This benefit lasts until you finish a long rest. If you get the pact of the blade, this feature works on every weapon you conjure with that feature, regardless of weapon type."
+                    },
+                    {
+                        "name": "Hexblade's Curse",
+                        "desc": "As a bonus action, you may place a baleful curse on someone. Choose one creature you can see within 30ft. of you. The target is cursed for 1 minute, but ends early if the target dies, or you are incapacitated. You may use this feature once per short rest. For the duration, you gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You gain a bonus to damage rolls equal to your proficiency bonus against the cursed target."
+                            },
+                            {
+                                "desc": "Any attack roll of 19 or 20 on the d20 against the cursed target is a critical hit."
+                            },
+                            {
+                                "desc": "When the cursed target dies, you regain hitpoints equal to your warlock level + CHA (minimum of 1)."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Accursed Specter",
+                        "desc": "When you kill a humanoid, you may curse its soul and cause its spirit to rise from its corpse as a specter, the statistics of which are in the Monster Manual. When the specter appears, it gains temporary hitpoints equal to half your warlock level. Roll initiative for the specter, which gains its own turns. It obeys your verbal commands, and gains a bonus to its attack rolls equal to your CHA modifier. The specter remains in your service until the end of your next long rest, at which point it vanishes to the afterlife. You may use this feature once per long rest."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Armor of Hexes",
+                        "desc": "Your hex grows more powerful. If the target cursed by your hexblade's curse feature hits you with an attack roll, you may use your reaction to roll 1d2. On a 2, the attack instead misses you, regardless of its roll."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Master of Hexes",
+                        "desc": "You may spread your hexblade's curse from creature to creature. Whenever the creature cursed by your hexblade's curse feature dies, you may apply the curse to a different creature you can see within 30ft. of you, provided you aren't incapacitated. When you apply the curse in this way, you do not regain hitpoints from the death of the previously cursed creature."
+                    }
+                ]
+            }
+        },
         "the-fiend": {
             "name": "The Fiend",
             "desc": ["You have made a pact with a fiend from the lower plains of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption of all things, ultimately including you. Fiends powerful enough to form a pact include demon lords such as Demogorgon, Oruc, Fraz'Urb-luu and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles and Belial; pit fiends and balors that are especially mighty and ultroloths and other lords of the yugoloths."],
