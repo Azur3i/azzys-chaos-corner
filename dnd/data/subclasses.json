@@ -670,5 +670,43 @@
             }
         }
     },
-    "wizard": {}
+    "wizard": {
+        "school-of-abjuration": {
+            "name": "School of Abjuration",
+            "desc": ["The School of Abjuration emphasizes magic that blocks, banishes, or protects. Detractors of this school say that its tradition is about denial, negation rather than positive assertion. You understand, however, that ending harmful effects, protecting the weak, and banishing evil influences is anything but a philosophical void. It is a proud and respected vocation. Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Abjuration Savant",
+                        "desc": "The gold and time you must spend to copy a abjuration spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Arcane Ward",
+                        "desc": "You may weave magic around yourself for protection. Whenever you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell’s magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hitpoints equal to 2 times your wizard level + INT. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hitpoints, you take any remaining damage. While the ward has 0 hitpoints, it cannot absorb damage, but its magic remains; whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hitpoints equal to 2 times the spell’s level. You can create a ward once every long rest."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Projected Ward",
+                        "desc": "Whenever a creature that you can see within 30ft. takes damage, you may use your reaction to cause your ward to absorb that damage. If this damage reduces the ward to 0 hitpoints, the warded creature takes the remaining damage."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Improved Abjuration",
+                        "desc": "Whenever you cast an abjuration spell that requires you to make an ability check as a part of casting that spell, you may add your proficiency bonus to that ability check."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Spell Resistance",
+                        "desc": "You gain advantage on saving throws against spells, and gain resistance to the damage of spells."
+                    }
+                ]
+            }
+        }
+    }
 }
