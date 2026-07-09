@@ -316,7 +316,7 @@
                 "3": [
                     {
                         "name": "Bonus Proficiencies",
-                        "desc": "You gain proficiency in the Performance (CHA) skill if you don’t already have it. You also gain proficiency with brewer’s supplies if you don’t already have it.",
+                        "desc": "You gain proficiency in the Performance (CHA) skill if you don't already have it. You also gain proficiency with brewer's supplies if you don't already have it.",
                         "type": "list"
                     },
                     {
@@ -332,7 +332,7 @@
                         "content": [
                             {
                                 "name": "Leap to Your Feet",
-                                "desc": "When you’re prone, you may stand up by spending 5ft. of movement, rather than the usual amount."
+                                "desc": "When you're prone, you may stand up by spending 5ft. of movement, rather than the usual amount."
                             },
                             {
                                 "name": "Redirect Attack",
@@ -685,7 +685,7 @@
                     },
                     {
                         "name": "Bladesong",
-                        "desc": "You may invoke an elven magic called the Bladesong, provided you aren’t wearing medium or heavy armor, or using a shield. It graces you with supernatural speed, agility and focus. You may use a bonus action to start the song, which lasts for 1 minute. It ends early if you are incapacitated, if you don medium or heavy armor or a shield, or if you use two hands to make an attack with a weapon. You may also dismiss the song at any time as a free action. You may use this feature a number of times equal to your proficiency bonus every long rest. While the song is active, you gain the following benefits.",
+                        "desc": "You may invoke an elven magic called the Bladesong, provided you aren't wearing medium or heavy armor, or using a shield. It graces you with supernatural speed, agility and focus. You may use a bonus action to start the song, which lasts for 1 minute. It ends early if you are incapacitated, if you don medium or heavy armor or a shield, or if you use two hands to make an attack with a weapon. You may also dismiss the song at any time as a free action. You may use this feature a number of times equal to your proficiency bonus every long rest. While the song is active, you gain the following benefits.",
                         "type": "list",
                         "content": [
                             {
@@ -712,7 +712,7 @@
                 "10": [
                     {
                         "name": "Song of Defense",
-                        "desc": "You may direct your magic to absorb damage while your Bladesong is active. Whenever you take damage, you may use your reaction to expend 1 spell slot and reduce that damage to you by an amount equal to 5 times the spell slot’s level."
+                        "desc": "You may direct your magic to absorb damage while your Bladesong is active. Whenever you take damage, you may use your reaction to expend 1 spell slot and reduce that damage to you by an amount equal to 5 times the spell slot's level."
                     }
                 ],
                 "14": [
@@ -745,7 +745,7 @@
                 "10": [
                     {
                         "name": "Arcane Abeyance",
-                        "desc": "Whenever you cast a spell using a spell slot of 4th level or lower, you may condense the spell’s magic into a mote. The spell is frozen in time at the moment of casting, and held within a grey bead for 1 hour. This bead is a Tiny object, with AC 15 and 1 hitpoint, and is immune to @poison and @psychic damage. When the duration ends, or the bead is destroyed, it vanishes in a flash of light, and the spell is lost. A creature holding the bead can use its action to release the spell within, whereupon the bead disappears. The spell uses your spell attack bonus or save DC, and the spell treats the creature who released it as the caster for all other purposes. You may create a bead once per short rest."
+                        "desc": "Whenever you cast a spell using a spell slot of 4th level or lower, you may condense the spell's magic into a mote. The spell is frozen in time at the moment of casting, and held within a grey bead for 1 hour. This bead is a Tiny object, with AC 15 and 1 hitpoint, and is immune to @poison and @psychic damage. When the duration ends, or the bead is destroyed, it vanishes in a flash of light, and the spell is lost. A creature holding the bead can use its action to release the spell within, whereupon the bead disappears. The spell uses your spell attack bonus or save DC, and the spell treats the creature who released it as the caster for all other purposes. You may create a bead once per short rest."
                     }
                 ],
                 "14": [
@@ -770,7 +770,7 @@
                     },
                     {
                         "name": "Arcane Ward",
-                        "desc": "You may weave magic around yourself for protection. Whenever you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell’s magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hitpoints equal to 2 times your wizard level + INT. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hitpoints, you take any remaining damage. While the ward has 0 hitpoints, it cannot absorb damage, but its magic remains; whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hitpoints equal to 2 times the spell’s level. You can create a ward once every long rest."
+                        "desc": "You may weave magic around yourself for protection. Whenever you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell's magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hitpoints equal to 2 times your wizard level + INT. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hitpoints, you take any remaining damage. While the ward has 0 hitpoints, it cannot absorb damage, but its magic remains; whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hitpoints equal to 2 times the spell's level. You can create a ward once every long rest."
                     }
                 ],
                 "6": [
@@ -793,6 +793,43 @@
                 ]
             }
         },
+        "school-of-conjuration": {
+            "name": "School of Conjuration",
+            "desc": ["As a conjurer, you favor spells that produce objects and creatures out of thin air. You can conjure billowing clouds of killing fog or summon creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Conjuration Savant",
+                        "desc": "The gold and time you must spend to copy a conjuration spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Minor Conjuration",
+                        "desc": "You may use your action to conjure up an inanimate object in your hand, or on the ground in an unoccupied space that you can see, within 10ft. of you. This object can be no larger than 3ft. on a side, and weigh no more than 10lbs., and its form must be that of a nonmagical object that you have seen. The object is visibly magical, radiating dim light out to 5ft. The object disappears after 1 hour, when you use this feature again, or if it takes or deals any damage."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Benign Transportation",
+                        "desc": "You may use your action to teleport up to 30ft. to an unoccupied space that you can see. Alternatively, you can choose a space within range that is occupied by a Small or Medium creature. If that creature is willing, you both teleport, swapping places. You may use this feature once per long rest. You regain the use of this feature after casting a conjuration spell of 1st level or higher."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Focused Conjuration",
+                        "desc": "Your concentration cannot be broken as a result of taking damage while concentrating on a conjuration spell."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Durable Summons",
+                        "desc": "Any creature that you summon or create with a conjuration spell has 30 temporary hitpoints."
+                    }
+                ]
+            }
+        },
         "school-of-necromancy": {
             "name": "School of Necromancy",
             "desc": ["The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate. Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies."],
@@ -807,13 +844,13 @@
                     },
                     {
                         "name": "Grim Harvest",
-                        "desc": "Once per turn, when you kill one or more creatures with a spell of 1st level or higher, you regain hitpoints equal to 2 times the spell’s level, or 3 times if it was a necromancy spell. You don’t gain this benefit for killing constructs or undead."
+                        "desc": "Once per turn, when you kill one or more creatures with a spell of 1st level or higher, you regain hitpoints equal to 2 times the spell's level, or 3 times if it was a necromancy spell. You don't gain this benefit for killing constructs or undead."
                     }
                 ],
                 "6": [
                     {
                         "name": "Undead Thralls",
-                        "desc": "You may add the @animate dead spell to your spellbook if it is not there already. Whenever you cast @animate dead, you may target one additional corpse or pile of bones, creating another zombie or skeleton as appropriate. Additonally, whenever you create an undead using a necromancy spell, the creature’s hitpoint maximum is increased by an amount equal to your wizard level, and the creature may add your proficiency bonus to its weapon damage rolls."
+                        "desc": "You may add the @animate dead spell to your spellbook if it is not there already. Whenever you cast @animate dead, you may target one additional corpse or pile of bones, creating another zombie or skeleton as appropriate. Additonally, whenever you create an undead using a necromancy spell, the creature's hitpoint maximum is increased by an amount equal to your wizard level, and the creature may add your proficiency bonus to its weapon damage rolls."
                     }
                 ],
                 "10": [
