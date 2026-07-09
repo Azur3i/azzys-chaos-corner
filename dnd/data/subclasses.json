@@ -671,43 +671,6 @@
         }
     },
     "wizard": {
-        "school-of-abjuration": {
-            "name": "School of Abjuration",
-            "desc": ["The School of Abjuration emphasizes magic that blocks, banishes, or protects. Detractors of this school say that its tradition is about denial, negation rather than positive assertion. You understand, however, that ending harmful effects, protecting the weak, and banishing evil influences is anything but a philosophical void. It is a proud and respected vocation. Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed."],
-            "magic": {
-                "caster": "none"
-            },
-            "levels": {
-                "2": [
-                    {
-                        "name": "Abjuration Savant",
-                        "desc": "The gold and time you must spend to copy a abjuration spell into your spellbook is halved."
-                    },
-                    {
-                        "name": "Arcane Ward",
-                        "desc": "You may weave magic around yourself for protection. Whenever you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell’s magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hitpoints equal to 2 times your wizard level + INT. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hitpoints, you take any remaining damage. While the ward has 0 hitpoints, it cannot absorb damage, but its magic remains; whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hitpoints equal to 2 times the spell’s level. You can create a ward once every long rest."
-                    }
-                ],
-                "6": [
-                    {
-                        "name": "Projected Ward",
-                        "desc": "Whenever a creature that you can see within 30ft. takes damage, you may use your reaction to cause your ward to absorb that damage. If this damage reduces the ward to 0 hitpoints, the warded creature takes the remaining damage."
-                    }
-                ],
-                "10": [
-                    {
-                        "name": "Improved Abjuration",
-                        "desc": "Whenever you cast an abjuration spell that requires you to make an ability check as a part of casting that spell, you may add your proficiency bonus to that ability check."
-                    }
-                ],
-                "14": [
-                    {
-                        "name": "Spell Resistance",
-                        "desc": "You gain advantage on saving throws against spells, and gain resistance to the damage of spells."
-                    }
-                ]
-            }
-        },
         "bladesinging": {
             "name": "Bladesinging",
             "desc": ["Bladesingers master a tradition of wizardry that incorporates swordplay and dance. Originally created by elves, this tradition has been adopted by non-elf practicioners, who honor and expand on the elven ways. In combat, a bladesinger uses a series of intricate, elegant maneuvers that fend off harm and allow the bladesinger to channel magic into devastating attacks and a cunning defense. Many who have observed a bladesinger at work remember the display as one of the more beautiful experiences in their life, a glorious dance accompanied by a single blade."],
@@ -756,6 +719,80 @@
                     {
                         "name": "Song of Victory",
                         "desc": "You may add your INT (minimum of +1) to the damage of your melee weapon attacks while your Bladesong is active."
+                    }
+                ]
+            }
+        },
+        "school-of-abjuration": {
+            "name": "School of Abjuration",
+            "desc": ["The School of Abjuration emphasizes magic that blocks, banishes, or protects. Detractors of this school say that its tradition is about denial, negation rather than positive assertion. You understand, however, that ending harmful effects, protecting the weak, and banishing evil influences is anything but a philosophical void. It is a proud and respected vocation. Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Abjuration Savant",
+                        "desc": "The gold and time you must spend to copy a abjuration spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Arcane Ward",
+                        "desc": "You may weave magic around yourself for protection. Whenever you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell’s magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hitpoints equal to 2 times your wizard level + INT. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hitpoints, you take any remaining damage. While the ward has 0 hitpoints, it cannot absorb damage, but its magic remains; whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hitpoints equal to 2 times the spell’s level. You can create a ward once every long rest."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Projected Ward",
+                        "desc": "Whenever a creature that you can see within 30ft. takes damage, you may use your reaction to cause your ward to absorb that damage. If this damage reduces the ward to 0 hitpoints, the warded creature takes the remaining damage."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Improved Abjuration",
+                        "desc": "Whenever you cast an abjuration spell that requires you to make an ability check as a part of casting that spell, you may add your proficiency bonus to that ability check."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Spell Resistance",
+                        "desc": "You gain advantage on saving throws against spells, and gain resistance to the damage of spells."
+                    }
+                ]
+            }
+        },
+        "school-of-necromancy": {
+            "name": "School of Necromancy",
+            "desc": ["The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate. Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Necromancy Savant",
+                        "desc": "The gold and time you must spend to copy a necromancy spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Grim Harvest",
+                        "desc": "Once per turn, when you kill one or more creatures with a spell of 1st level or higher, you regain hitpoints equal to 2 times the spell’s level, or 3 times if it was a necromancy spell. You don’t gain this benefit for killing constructs or undead."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Undead Thralls",
+                        "desc": "You may add the @animate dead spell to your spellbook if it is not there already. Whenever you cast @animate dead, you may target one additional corpse or pile of bones, creating another zombie or skeleton as appropriate. Additonally, whenever you create an undead using a necromancy spell, the creature’s hitpoint maximum is increased by an amount equal to your wizard level, and the creature may add your proficiency bonus to its weapon damage rolls."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Inured to Undeath",
+                        "desc": "You gain resistance to necrotic damage, and your hitpoint maximum cannot be reduced."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Command Undead",
+                        "desc": "As an action, you may choose 1 undead that you can see within 60ft. of you. That creature must succeed on a CHA saving throw against your wizard spell save DC. On a failure, it becomes friendly to you, and obeys your commands until you use this feature again. On a success, you cannot use this feature on that creature again. Intelligent undead are harder to control in this way. If the target has an INT score of 8 or higher, it gains advantage on the saving throw. If the target has an INT score of 12 or higher, it may repeat the saving throw at the end of every hour, ending the effect on itself on a success."
                     }
                 ]
             }
