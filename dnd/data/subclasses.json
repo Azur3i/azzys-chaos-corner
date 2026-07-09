@@ -305,6 +305,57 @@
                     }
                 ]
             }
+        },
+        "way-of-the-drunken-master": {
+            "name": "Way of the Drunken Master",
+            "desc": ["The Way of the Drunken Master teaches its students to move with the jerky, unpredictable movements of a drunkard. A drunken master sways, tottering on unsteady feet, to present what seems like an incompetent combatent who proves frustrating to engage. The drunken master's erratic stumbles conceal a carefully executed dance of blocks, parries, advances, attacks and retreats.", "A drunken master often enjoys playing the fool to bring gladness to the despondent or to demonstrate humility to the arrogant, but when battle is joined, the drunken master can be a maddening, masterful foe."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiencies",
+                        "desc": "You gain proficiency in the Performance (CHA) skill if you don’t already have it. You also gain proficiency with brewer’s supplies if you don’t already have it.",
+                        "type": "list"
+                    },
+                    {
+                        "name": "Drunken Technique",
+                        "desc": "Whenever you use your flurry of blows trait, you gain the benefit of the @disengage action, and your walking speed increases by 10ft. until the end of that turn."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Tipsy Sway",
+                        "desc": "You gain the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Leap to Your Feet",
+                                "desc": "When you’re prone, you may stand up by spending 5ft. of movement, rather than the usual amount."
+                            },
+                            {
+                                "name": "Redirect Attack",
+                                "desc": "Whenever a creature misses you with a melee attack roll, you may spend 1 ki point as a reaction to cause that attack to hit one creature of your choice, other than the attacker, that you can see within 5ft. of you."
+                            }
+                        ]
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Drunkard's Luck",
+                        "desc": "Whenever you make an ability check, an attack roll, or a saving throw and have disadvantage, you may spend 2 ki points to remove the disadvantage for that roll.",
+                        "type": "list"
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Intoxicated Frenzy",
+                        "desc": "When you use your flurry of blows, you may make up to 3 additional attacks with it, for a total of 5, but only if each attack targets different creatures this turn.",
+                        "type": "list"
+                    }
+                ]
+            }
         }
     },
     "oracle": {},
