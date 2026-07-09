@@ -21,7 +21,7 @@ require_once ROOT . "/scripts/functions.php";
             <div id="<?= $id ?>"
                     class="accordion-collapse collapse">
                 <div class="accordion-body">
-                    <?= renderAbility($ability, 0, strtolower($target["name"])); ?>
+                    <?= renderAbility($ability, 0, strtolower(str_replace(" ", "-", $target["name"]))); ?>
                 </div>
             </div>
         </div>
