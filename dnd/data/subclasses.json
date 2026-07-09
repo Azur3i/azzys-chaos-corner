@@ -42,7 +42,7 @@
                                 "desc": "You gain a climbing speed equal to your walking speed, and you can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
                             },
                             {
-                                "desc": "Whenever you jump, you may make an Athletics (STR) check and extend your jump by a number of ft. equal to the check’s total. You may make this check only once per turn."
+                                "desc": "Whenever you jump, you may make an Athletics (STR) check and extend your jump by a number of ft. equal to the check's total. You may make this check only once per turn."
                             }
                         ]
                     }
@@ -226,7 +226,87 @@
         }
     },
     "fighter": {},
-    "monk": {},
+    "monk": {
+        "way-of-the-astral-self": {
+            "name": "Way of the Astral Self",
+            "desc": ["A monk who follows the Way of the Astral Self believes their body is an illusion. They see their ki as a representation of their true form, an astral self. This astral self has the capacity to be a force of order or disorder, with some monasteries training students to use their power to protect the weapon, and others instructing aspirants in how to manifest their true selves in service of the mighty."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Arms of the Astral Self",
+                        "desc": "As a bonus action, you may spend 1 ki point to summon the arms of your astral self. When you do so, each creature of your choice that you can see within 10ft. of you must succeed on a DEX saving throw or take force damage equal to two rolls of your martial arts die. For the next 10 minutes, these spectral arms hover near either your shoulders or surrounding your arms. You may determine the appearance of these arms, and they will vanish early if you are incapacitated or if you die. The arms grant you the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You may use your WIS modifier instead of your STR modifier when making STR checks and saving throws."
+                            },
+                            {
+                                "desc": "You may use the spectral arms to make unarmed strikes. You may use your WIS modifier instead of your STR modifier for the attack and damage rolls of these strikes, and their damage type is force damage. Additionally, your reach for these unarmed strikes increases by 5ft."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Visage of the Astral Self",
+                        "desc": "You gain the ability to summon the visage of your astral self. As a bonus action or as part of the bonus action you take to activate the arms of the astral self trait, you may spend 1 ki point to summon this visage for 10 minutes. It will vanish early if you are incapacitated or if you die. The visage covers your face like a helmet or mask. You may determine its appearance. The visage grants you the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Astral Sight",
+                                "desc": "You can see normally in darkness, both magical and nonmagical, to a distance of 120ft."
+                            },
+                            {
+                                "name": "Wisdom of the Spirit",
+                                "desc": "You gain advantage on Insight (WIS) and Intimidation (CHA) checks."
+                            },
+                            {
+                                "name": "Astral Sight",
+                                "desc": "When you speak, you may direct your words to a creature of your choice within 60ft. of you, so that only they may hear you. Alternatively, you may amplify your voice so that all creatures within up to 600ft. can hear you."
+                            }
+                        ]
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Body of the Astral Self",
+                        "desc": "When you have both your astral arms and visage summoned, you may cause the body of your astral self to appear. This requires no action. This spectral body covers your physical form like a suit of armor, connecting to the arms and visage. You may determine its appearance. The body grants you the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Deflect Energy",
+                                "desc": "Whenever you take @acid, @cold, @fire, @force, @lightning or @thunder damage, you may use your reaction to deflect it. When you do so, the damage you take is reduced by 1d10 + WIS. The damage is reduced by a minimum of 1."
+                            },
+                            {
+                                "name": "Empowered Arms",
+                                "desc": "Once on each of your turns, whenever you hit you a target with an unarmed strike from the astral arms, you may deal extra damage equal to your martial arts die."
+                            }
+                        ]
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Awakened Astral Self",
+                        "desc": "Your connection to your astral self is complete. As a bonus action, you may spend 5 ki points to summon your full astral body (arms, visage and body), and awaken it for 10 minutes. The awakening ends if you are incapacitated or if you die. The awakened astral self gives you the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Armor of the Spirit",
+                                "desc": "You gain +2 AC."
+                            },
+                            {
+                                "name": "Astral Barrage",
+                                "desc": "Whenever you use the monk's extra attack feature to attack twice, you may instead attack three times if all the attacks are unarmed strikes with your astral arms."
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
     "oracle": {},
     "ranger": {},
     "rogue": {
