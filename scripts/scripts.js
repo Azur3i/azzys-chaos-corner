@@ -16,7 +16,8 @@ $(".subclass-check").click(function () {
     let data = $(this).attr("data").split("~");
     let cls = data[0];
     let sbcls = data[1];
-    $(this).addClass("hover");
+    $(".subclass-check").removeClass("checked");
+    $(this).addClass("checked");
     $.post(
         "/scripts/get-subclass.php", {
             cls: cls,
