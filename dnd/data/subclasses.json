@@ -1,6 +1,67 @@
 {
     "artificer": {},
-    "barbarian": {},
+    "barbarian": {
+        "path-of-the-beast": {
+            "name": "Path of the Beast",
+            "desc": ["Barbarians who walk the Path of the Beast draw their rage from a bestial spark burning within their souls. Such a barbarian might be inhabited by a primal spirit or be descended from shape-shifters. That beast bursts forth in the throes of rage, physically transforming the barbarian."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Form of the Beast",
+                        "desc": "Whenever you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you may add your STR modifier to the attack and damage rolls when you attack with it, as normal. You choose the weapon's form each time you rage:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bite",
+                                "desc": "Your mouth transforms into a bestial muzzle or great mandibles. It deals 1d8 piercing damage on a hit. Once per turn, when you damage a creature with this bite, you regain a number of hitpoints equal to your proficiency bonus, provided you have less than half your hitpoints when you hit."
+                            },
+                            {
+                                "name": "Claws",
+                                "desc": "Each of your hands transforms into a claw, which you may use as a weapon if it's empty. It deals 1d6 slashing damage on a hit. Once per turn, when you attack with a claw using the attack action, you may make one additional claw attack as part of the same action."
+                            },
+                            {
+                                "name": "Tail",
+                                "desc": "You grow a lashing, spiny tail, which deals 1d8 piercing damage on a hit, and has the reach property. If a creature you can see within 10ft. of you hits you with an attack, you may use your reaction to swipe your tail and roll 1d8, adding the number rolled to your AC, potentially causing the attack to miss you."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Bestial Soul",
+                        "desc": "The feral power within you increases, causing the natural weapons of your Form of the Beast feature to count as magical. You may also alter your form to help you adapt to your surroundings. Whenever you finish a short rest, choose one of the following benefits, which lasts until the next short rest.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You gain a swimming speed equal to your walking speed, and you can breathe underwater."
+                            },
+                            {
+                                "desc": "You gain a climbing speed equal to your walking speed, and you can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+                            },
+                            {
+                                "desc": "Whenever you jump, you may make an Athletics (STR) check and extend your jump by a number of ft. equal to the check’s total. You may make this check only once per turn."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Infectious Fury",
+                        "desc": "Whenever you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a WIS saving throw (DC equal to 8 + CON + proficiency). On a failure, you may choose to force the target to use its reaction to make a melee attack against another creature of your choice that you can see, or to have the target take 2d12 @psychic damage. You may use this feature a number of times equal to your proficiency bonus every long rest."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Call the Hunt",
+                        "desc": "Whenever you enter you rage, you may choose a number of willing creatures you can see within 30ft. of you equal to your CON (minimum of 1). You gain 5 temporary hitpoints for each creature that accepts this feature. Until the rage ends, the chosen creatures gain 1d6 bonus damage on attack rolls once per turn."
+                    }
+                ]
+            }
+        }
+    },
     "bard": {},
     "blood-hunter": {},
     "cleric": {},
