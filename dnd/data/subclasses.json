@@ -89,6 +89,37 @@
                     }
                 ]
             }
+        },
+        "college-of-valor": {
+            "name": "College of Valor",
+            "desc": ["Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past, and thereby inspire a new generation of heroes. These bards gather in mead halls or around great bonfires to sing the deeds of the mighty, both past and present. They travel the land to witness great events firsthand and to ensure that the memory of those events doesn't pass from the world. With their songs, they inspire others to reach the same heights of accomplishment as the heroes of old."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiencies",
+                        "desc": "You gain proficiency with medium armor, shields, and martial weapons."
+                    },
+                    {
+                        "name": "Combat Inspiration",
+                        "desc": "You've learned to inspire others in battle. A creature that has a bardic inspiration die from you may roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it may use its reaction to roll the die and add the number to its AC against that attack. It may do this after seeing the roll, but before knowing whether it hits or misses."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Extra Attack",
+                        "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Battle Magic",
+                        "desc": "You have mastered the art of weaving spellcasting and weapon use into a single, harmonious act. When you use your action to cast a bard spell, as a bonus action, you may make a weapon attack."
+                    }
+                ]
+            }
         }
     },
     "blood-hunter": {},
