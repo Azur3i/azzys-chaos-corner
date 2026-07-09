@@ -707,6 +707,58 @@
                     }
                 ]
             }
+        },
+        "bladesinging": {
+            "name": "Bladesinging",
+            "desc": ["Bladesingers master a tradition of wizardry that incorporates swordplay and dance. Originally created by elves, this tradition has been adopted by non-elf practicioners, who honor and expand on the elven ways. In combat, a bladesinger uses a series of intricate, elegant maneuvers that fend off harm and allow the bladesinger to channel magic into devastating attacks and a cunning defense. Many who have observed a bladesinger at work remember the display as one of the more beautiful experiences in their life, a glorious dance accompanied by a single blade."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Training in War and Song",
+                        "desc": "You gain proficiency with light armor, and one type of melee weapon that does not have the two-handed property."
+                    },
+                    {
+                        "name": "Bladesong",
+                        "desc": "You may invoke an elven magic called the Bladesong, provided you aren’t wearing medium or heavy armor, or using a shield. It graces you with supernatural speed, agility and focus. You may use a bonus action to start the song, which lasts for 1 minute. It ends early if you are incapacitated, if you don medium or heavy armor or a shield, or if you use two hands to make an attack with a weapon. You may also dismiss the song at any time as a free action. You may use this feature a number of times equal to your proficiency bonus every long rest. While the song is active, you gain the following benefits.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You gain a bonus to your AC equal to your INT (minimum of 1)."
+                            },
+                            {
+                                "desc": "Your walking speed increases by 10ft."
+                            },
+                            {
+                                "desc": "You gain advantage on Acrobatics (DEX) checks."
+                            },
+                            {
+                                "desc": "You gain a bonus to any CON saving throws you make to maintain your concentration on a spell equal to your INT (minimum of +1)."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Extra Attack",
+                        "desc": "You may attack twice instead of once whenever you take the @attack action on your turn. Optionally, you may cast one of your cantrips in place of one of those attacks."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Song of Defense",
+                        "desc": "You may direct your magic to absorb damage while your Bladesong is active. Whenever you take damage, you may use your reaction to expend 1 spell slot and reduce that damage to you by an amount equal to 5 times the spell slot’s level."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Song of Victory",
+                        "desc": "You may add your INT (minimum of +1) to the damage of your melee weapon attacks while your Bladesong is active."
+                    }
+                ]
+            }
         }
     }
 }
