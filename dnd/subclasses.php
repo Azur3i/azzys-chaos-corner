@@ -20,7 +20,7 @@ $types = [
                 <?php $i = 0; ?>
                 <?php foreach ($classes as $clsName => $subclasses): ?>
 
-                    <h2 class="lg title"><?= ucfirst($clsName) ?></h2>
+                    <h2 class="lg title"><?= ucwords(str_replace("-", " ", $clsName)) ?></h2>
                     <div class="row mx-auto col-10">
                         <div class='accordion' id="sbcls-list-<?= $clsName ?>">
                             <?php foreach ($subclasses as $sbclsName => $subclass): ?>
