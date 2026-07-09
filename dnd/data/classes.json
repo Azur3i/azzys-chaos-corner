@@ -1131,6 +1131,228 @@
             ]
         }
     },
+    "cleric": {
+        "name": "Cleric",
+        "desc": ["Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the magic they contain."],
+        "mc-scores": ["WIS"],
+        "hitdie": 8,
+        "proficiencies": {
+            "armor": ["light armor", "medium armor", "shields"],
+            "weapons": ["simple weapons"],
+            "tools": ["none"],
+            "saves": ["WIS", "CHA"],
+            "skills": [2, ["History", "Insight", "Medicine", "Persuasion", "Religion"]]
+        },
+        "equipment": [
+            ["a mace", "a warhammer (if proficient)"],
+            ["scale mail", "leather armor", "chain mail (if proficient)"],
+            ["a light crossbow and 20 bolts", "any simple weapon"],
+            ["a priest's pack", "an explorer's pack"],
+            ["a shield and a holy symbol"]
+        ],
+        "magic": {
+            "caster": "full",
+            "mod": "WIS",
+            "type": "prep",
+            "slots": {
+                "1": [2, "", "", "", "", "", "", "", ""],
+                "2": [3, "", "", "", "", "", "", "", ""],
+                "3": [4, 2, "", "", "", "", "", "", ""],
+                "4": [4, 3, "", "", "", "", "", "", ""],
+                "5": [4, 3, 2, "", "", "", "", "", ""],
+                "6": [4, 3, 3, "", "", "", "", "", ""],
+                "7": [4, 3, 3, 1, "", "", "", "", ""],
+                "8": [4, 3, 3, 2, "", "", "", "", ""],
+                "9": [4, 3, 3, 3, 1, "", "", "", ""],
+                "10": [4, 3, 3, 3, 2, "", "", "", ""],
+                "11": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "12": [4, 3, 3, 3, 2, 1, "", "", ""],
+                "13": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "14": [4, 3, 3, 3, 2, 1, 1, "", ""],
+                "15": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "16": [4, 3, 3, 3, 2, 1, 1, 1, ""],
+                "17": [4, 3, 3, 3, 2, 1, 1, 1, 1],
+                "18": [4, 3, 3, 3, 3, 1, 1, 1, 1],
+                "19": [4, 3, 3, 3, 3, 2, 1, 1, 1],
+                "20": [4, 3, 3, 3, 3, 2, 2, 1, 1]
+            }
+        },
+        "levels": {
+            "1": [
+                {
+                    "name": "Spellcasting",
+                    "type": "list",
+                    "desc": "As a conduit for divine power, you can cast cleric spells.",
+                    "content": [
+                        {
+                            "name": "Cantrips",
+                            "desc": "You know 3 cantrips of your choice from the cleric spell list."
+                        },
+                        {
+                            "name": "Preparing and Casting Spells",
+                            "desc": "You may prepare a number of cleric spells equal to your WIS + your cleric level, minimum of 1 spell. The spells must be of a level for which you have spell slots. You may change any number of spells in your spell list during a long rest, requiring 1 minute of meditation per spell level for each spell you change."
+                        },
+                        {
+                            "name": "Ritual Casting",
+                            "desc": "You may cast any cleric spell you have prepared as a ritual if that spell has the ritual tag."
+                        },
+                        {
+                            "name": "Spellcasting Focus",
+                            "desc": "You may use a holy symbol as a spellcasting focus for your cleric spells."
+                        },
+                        {
+                            "name": "Spellcasting Ability",
+                            "type": "list",
+                            "desc": "Your spellcasting ability is WIS.",
+                            "content": [
+                                {
+                                    "name": "Spell Save DC",
+                                    "desc": "8 + proficiency + WIS"
+                                },
+                                {
+                                    "name": "Spell attack modifier",
+                                    "desc": "proficiency + WIS"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Divine Domain",
+                    "desc": "Choose a subclass:",
+                    "type": "list subclass sbcls",
+                    "content": [
+                        {
+                            "desc": "Each domain has a list of associated spells. You gain access to these spells at the levels specified in the domain description. Once you gain access to a domain spell, you always have it prepared. Domain spells don't count against the number of spells you can prepare."
+                        }
+                    ]
+                }
+            ],
+            "2": [
+                {
+                    "name": "Channel Divinity",
+                    "desc": "You gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. The save DC of your Channel Divinity effects equals your cleric spell save DC. You start with 2 Channel Divinity options; one determined by your domain, and the following:",
+                    "type": "list",
+                    "content": [
+                        {
+                            "name": "Turn Undead",
+                            "desc": "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30ft. of you must succeed on a WIS saving throw, or be turned for 1 minute or until it takes any damage. A turned creature must spend its turns trying to move as far away from you as it can, and it cannot willingly move to a space within 30ft. of you. It may only use the @dash action, or to try to escape an effect that prevents it from moving. It may also not take reactions. If there's nowhere to move, the creature may use the @dodge action."
+                        }
+                    ]
+                },
+                {
+                    "name": "Harness Divine Power (Optional)",
+                    "desc": "You may expend a use of your channel divinity trait to fuel your spells. As a bonus action, you may regain one expended spell slot, the level of which may be no higher than half your proficiency bonus rounded up. You may use this trait once every long rest."
+                }
+            ],
+            "3": [],
+            "4": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "5": [
+                {
+                    "name": "Destroy Undead",
+                    "desc": "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its CR is equal to 1/2 or below."
+                }
+            ],
+            "6": [
+                {
+                    "name": "Divine Domain Feature",
+                    "desc": "You gain a feature depending on your divine domain.",
+                    "type": "sbcls"
+                },
+                {
+                    "name": "Channel Divinity",
+                    "desc": "You may use this feature twice per short rest instead of once."
+                }
+            ],
+            "7": [],
+            "8": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                },
+                {
+                    "name": "Divine Domain Feature",
+                    "desc": "You gain a feature depending on your divine domain.",
+                    "type": "sbcls"
+                },
+                {
+                    "name": "Destroy Undead",
+                    "desc": "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its CR is equal to 1 or below."
+                },
+                {
+                    "name": "Blessed Strikes (Optional)",
+                    "desc": "You are blessed with divine might in battle. Whenever a creature takes damage from one of your cantrips or weapon attacks, you may deal 1d8 @radiant damage to that creature. After dealing this damage, you may not do so again until the start of your next turn."
+                }
+            ],
+            "9": [],
+            "10": [
+                {
+                    "name": "Divine Intervention",
+                    "desc": "You may call on your deity to intervene on your behalf when your need is great. As an action, you may implore your deity's aid. Describe the assistance you seek, and roll 1d100. If you roll a number equal to or lower than your cleric level, you deity intervenes. The DM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate. If you deity intervenes, you cannot using this feature again for 7 days. Otherwise, you may use this feature once per long rest."
+                }
+            ],
+            "11": [
+                {
+                    "name": "Destroy Undead",
+                    "desc": "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its CR is equal to 2 or below."
+                }
+            ],
+            "12": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "13": [],
+            "14": [
+                {
+                    "name": "Destroy Undead",
+                    "desc": "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its CR is equal to 3 or below."
+                }
+            ],
+            "15": [],
+            "16": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "17": [
+                {
+                    "name": "Divine Domain Feature",
+                    "desc": "You gain a feature depending on your divine domain.",
+                    "type": "sbcls"
+                },
+                {
+                    "name": "Destroy Undead",
+                    "desc": "When an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its CR is equal to 4 or below."
+                }
+            ],
+            "18": [
+                {
+                    "name": "Channel Divinity",
+                    "desc": "You may use this feature three times per short rest instead of two."
+                }
+            ],
+            "19": [
+                {
+                    "name": "Ability Score Improvement",
+                    "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
+                }
+            ],
+            "20": [
+                {
+                    "name": "Divine Intervention",
+                    "desc": "Whenever you call for divine intervention, your call for aid always succeeds."
+                }
+            ]
+        }
+    },
     "druid": {
         "name": "Druid",
         "desc": ["Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature's resilience, cunning, and fury. They claim no mastery over nature, but see themselves as extensions of nature's indomitable will."],
