@@ -194,6 +194,26 @@
         "lists": ["warlock"],
         "source": "Player's Handbook"
     },
+    "lesser-restoration": {
+        "name": "Lesser Restoration",
+        "level": 2,
+        "school": "abjuration",
+
+        "castTime": ["a"],
+        "range": "t",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You touch a creature and may end either one disease or one condition afflicting it. The condition may be blinded, deafened, paralyzed, or poisoned."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
+        "source": "Player's Handbook"
+    },
     "shield-of-faith": {
         "name": "Shield of Faith",
         "level": 1,
