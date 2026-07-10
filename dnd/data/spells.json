@@ -215,6 +215,26 @@
         "lists": ["sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
+    "fire-bolt": {
+        "name": "Fire Bolt",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d10 @fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "fire-shield": {
         "name": "Fire Shield",
         "level": 4,
