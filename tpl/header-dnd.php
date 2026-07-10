@@ -10,7 +10,7 @@
                     <li class="nav-item"><a class="nav-link button md" href="/dnd/classes">Classes</a></li>
                     <li class="nav-item"><a class="nav-link button md" href="/dnd/subclasses">Subclasses</a></li>
                     <li class="nav-item"><a class="nav-link button md" href="#">Races</a></li>
-                    <li class="nav-item"><a class="nav-link button md" href="#">Spells</a></li>
+                    <li class="nav-item"><a class="nav-link button md" href="/dnd/spells">Spells</a></li>
                     <li class="nav-item"><a class="nav-link button md" href="#">Creatures</a></li>
                 </ul>
             </div>
