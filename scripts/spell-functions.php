@@ -36,7 +36,7 @@ function get_time($time) {
         } elseif ($time[2] === true) {
             return "Concentration, up to " . $result;
         } else {
-            return $result . ", which you take when " . $time[1];
+            return $result . ", which you take when " . $time[2];
         }
     }
 }
