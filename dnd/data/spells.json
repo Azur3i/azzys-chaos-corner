@@ -815,6 +815,29 @@
         "lists": ["bard", "cleric", "oracle"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
+    "undo": {
+        "name": "Undo",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": ["b"],
+        "range": "s",
+        "comp": [false, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You magically rewind yourself to a previous position. You blink to the space you were in 6 seconds. In combat, you blink to the space you were in at the start of your previous turn."
+            },
+            {
+                "desc": "{*}"
+            }
+        ],
+        "levels": ["", "", "You may also cast this cantrip as a reaction, which you take when you are subjected to a DEX saving throw to avoid an effect, taking half the damage on a failed save, and no damage on a successful one.", "You may also cast this cantrip as a reaction, which you take when you are subjected to a DEX saving throw to avoid an effect, taking half the damage on a failed save, and no damage on a successful one."],
+        
+        "lists": ["oracle", "wizard"],
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
     "wall-of-fire": {
         "name": "Wall of Fire",
         "level": 4,
