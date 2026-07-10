@@ -261,6 +261,26 @@
         "lists": ["druid", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
+    "fog-cloud": {
+        "name": "Fog Cloud",
+        "level": 1,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, false],
+        "duration": ["h", null, true],
+        
+        "desc": [
+            {
+                "desc": "You create a {*}ft. radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 mi/h) disperses it."
+            }
+        ],
+        "levels": [20, 40, 60, 80, 100, 120, 140, 160, 180],
+        
+        "lists": ["druid", "ranger", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "guidance": {
         "name": "Guidance",
         "level": 0,
