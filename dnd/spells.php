@@ -7,6 +7,13 @@ require_once ROOT . "/scripts/spell-functions.php";
 
 $spells = json_decode(file_get_contents(ROOT . "/dnd/data/spells.json"), true);
 
+uasort($spells, function ($a, $b) {
+    return strcmp($a["name"], $b["name"]);
+});
+uasort($spells, function ($a, $b) {
+    return strcmp($a["level"], $b["level"]);
+});
+
 $spellName = array_key_first($spells);
 $targetSpell = $spells[$spellName];
 
@@ -26,8 +33,8 @@ $targetSpell = $spells[$spellName];
                                     style="outline: none; box-shadow: none; grid-template-columns: 1fr auto;"
                                     id="<?= $x ?>"
                                     href="#<?= $x ?>">
-                                    <span class="md"><?= $y["name"] ?></span>
-                                    <span class="sm" style="opacity: 0.7;"><?= get_level($y["level"], $y["school"]) ?></span>
+                                    <span data="name" class="md"><?= $y["name"] ?></span>
+                                    <span data="school" class="sm" style="opacity: 0.7;"><?= get_level($y["level"], $y["school"]) ?></span>
                                 </a>
                                 <?php $i++;
                             endforeach; ?>
