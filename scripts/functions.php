@@ -54,6 +54,8 @@ function fetchSubclasses($class) {
 function renderAbility($ability, $z=0, $cls=null) {
     if (!empty($ability["name"]) && $z !== 0) {
         echo '<p class="md"><b>' . $ability["name"] . '. </b>' . renderText($ability["desc"]) . '</p>';
+    } elseif (!empty($ability["quote"])) {
+        echo '<p class="md"><i>' . $ability["quote"] . '</i><p>';
     } else {
         echo '<p class="md">' . renderText($ability["desc"]) . '</p>';
     }
