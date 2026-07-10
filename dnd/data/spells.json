@@ -241,41 +241,6 @@
         "lists": ["druid", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
-    "shape-water": {
-        "name": "Shape Water",
-        "level": 0,
-        "school": "transmutation",
-
-        "castTime": ["a"],
-        "range": "30ft.",
-        "comp": [false, true, false],
-        "duration": ["s"],
-        
-        "desc": [
-            {
-                "desc": "You choose an area of water that you can see within range and that fits within a 5ft. cube. You manipulate it in one of the following ways:",
-                "type": "list",
-                "content": [
-                    {
-                        "desc": "You instantaneously move or otherwise change the flow of the water as you direct, up to 5ft. in any direction. This movement doesn't have enough force to cause damage."
-                    },
-                    {
-                        "desc": "You cause the water to form into simple shapes and animate at your instruction. This change lasts for 1 hour."
-                    },
-                    {
-                        "desc": "You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour."
-                    },
-                    {
-                        "desc": "You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour."
-                    }
-                ]
-            }
-        ],
-        "levels": null,
-        
-        "lists": ["druid", "sorcerer", "wizard"],
-        "source": "Player's Handbook"
-    },
     "guidance": {
         "name": "Guidance",
         "level": 0,
@@ -486,6 +451,41 @@
         "lists": ["artificer", "cleric"],
         "source": "Player's Handbook"
     },
+    "shape-water": {
+        "name": "Shape Water",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [false, true, false],
+        "duration": ["s"],
+        
+        "desc": [
+            {
+                "desc": "You choose an area of water that you can see within range and that fits within a 5ft. cube. You manipulate it in one of the following ways:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "You instantaneously move or otherwise change the flow of the water as you direct, up to 5ft. in any direction. This movement doesn't have enough force to cause damage."
+                    },
+                    {
+                        "desc": "You cause the water to form into simple shapes and animate at your instruction. This change lasts for 1 hour."
+                    },
+                    {
+                        "desc": "You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour."
+                    },
+                    {
+                        "desc": "You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "shield-of-faith": {
         "name": "Shield of Faith",
         "level": 1,
@@ -528,6 +528,29 @@
             }
         ],
         "levels": null,
+        
+        "lists": ["bard", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "sleep": {
+        "name": "Sleep",
+        "level": 1,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": "90ft.",
+        "comp": [false, true, "a pinch of fine sand, rose petals, or a cricket"],
+        "duration": ["m"],
+        
+        "desc": [
+            {
+                "desc": "This spell sends creatures into a magical slumber. Roll {*}d8. The total is how many hitpoints of creatures this spell can affect. Creatures within 20ft. of a point you choose within range are affected in ascending order of their current hitpoints, ignoring unconscious creatures. Subtract each creature's hitpoints from the total before moving on to the creature with the next lowest hitpoints. A creature's hitpoints must be equal to or less than the remaining total for that creature to be affected. Undead and creatures immune to being charmed aren't affected by this spell."
+            },
+            {
+                "desc": "Starting with the creature that has the lowest current hitpoints, each creature affected by the spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to wake the sleeper. "
+            }
+        ],
+        "levels": [5, 7, 9, 11, 13, 15, 17, 19, 21],
         
         "lists": ["bard", "sorcerer", "wizard"],
         "source": "Player's Handbook"
