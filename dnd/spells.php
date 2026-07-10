@@ -3,11 +3,12 @@
 include ROOT . "/tpl/header.php"; 
 include ROOT . "/tpl/header-dnd.php";
 
+require_once ROOT . "/scripts/spell-functions.php";
+
 $spells = json_decode(file_get_contents(ROOT . "/dnd/data/spells.json"), true);
 
 $spellName = array_key_first($spells);
 $targetSpell = $spells[$spellName];
-
 
 ?>
 
@@ -21,11 +22,12 @@ $targetSpell = $spells[$spellName];
                             <?php $i = 0;
                             foreach ($spells as $x => $y): ?>
                                 <a 
-                                    class="list-group-item blue low-opac button-list md"
-                                    style="outline: none; box-shadow: none;"
+                                    class="list-group-item blue low-opac button-list d-grid w-100 align-items-center"
+                                    style="outline: none; box-shadow: none; grid-template-columns: 1fr auto;"
                                     id="<?= $x ?>"
                                     href="#<?= $x ?>">
-                                    <?= $y["name"] ?>
+                                    <span class="md"><?= $y["name"] ?></span>
+                                    <span class="sm" style="opacity: 0.7;"><?= get_level($y["level"], $y["school"]) ?></span>
                                 </a>
                                 <?php $i++;
                             endforeach; ?>
