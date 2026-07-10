@@ -1,4 +1,24 @@
 {
+    "bless": {
+        "name": "Bless",
+        "level": 1,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, "a sprinkling of holy water"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You bless up to {*} creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target may roll 1d4 and add the number rolled to the attack roll or saving throw."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
+        
+        "lists": ["cleric", "paladin"],
+        "source": "Player's Handbook"
+    },
     "command": {
         "name": "Command",
         "level": 1,
