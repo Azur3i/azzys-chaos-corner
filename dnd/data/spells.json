@@ -393,6 +393,70 @@
         "lists": ["artificer", "bard", "sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "minor-illusion": {
+        "name": "Minor Illusion",
+        "level": 0,
+        "school": "illusion",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, "a bit of fleece"],
+        "duration": ["m"],
+        
+        "desc": [
+            {
+                "desc": "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action, or cast this spell again."
+            },
+            {
+                "desc": "If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated through the duration, or you can make discrete sounds at different times before the spell ends."
+            },
+            {
+                "desc": "If you create an image of an object, such as a chair, muddy footprints, or a small chest, it must be no larger than a 5ft. cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it."
+            },
+            {
+                "desc": "If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Investigation (INT) check, against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "mold-earth": {
+        "name": "Mold Earth",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [false, true, false],
+        "duration": ["s"],
+        
+        "desc": [
+            {
+                "desc": "You choose a portion of dirt or stone that you can see within range and that fits within a 5ft. cube. You manipulate it in one of the following ways:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "If you target an area of loose earth, you may instantaneously excavate it, move it along the ground, and deposit it up to 5ft. away. This movement doesn't have enough force to cause damage."
+                    },
+                    {
+                        "desc": "You cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour."
+                    },
+                    {
+                        "desc": "If the dirt or stone you target is on the ground, you cause it to become difficult terrain. Alternatively, you may cause the ground to become normal terrain if it is already difficult terrain. This change lasts for 1 hour."
+                    }
+                ]
+            },
+            {
+                "desc": "If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you may dismiss such an effect as an action."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
     "power-fist": {
         "name": "Power Fist",
         "level": 1,
