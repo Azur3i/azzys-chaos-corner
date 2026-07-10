@@ -27,8 +27,10 @@ function get_time($time) {
     ];
 
     // time[0] = type, time[1] = amount, time[2] = condition
-    if ($time[0] == "i") {
+    if ($time[0] === "i") {
         return "Instantaneous";
+    } elseif ($time[0] === "s") {
+        return "Special";
     } else {
         $result = ($time[1] ?? 1) . " " . $times[$time[0]] . (!empty($time[1]) ? "s" : "");
         if (empty($time[2])) {
