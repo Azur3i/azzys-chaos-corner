@@ -8,6 +8,8 @@ function get_level($level, $school) {
             return ("1st-level " . $school);
         case 2:
             return ("2nd-level " . $school);
+        case 3:
+            return ("3rd-level " . $school);
         default:
             return ($level . "th-level " . $school);
     }
