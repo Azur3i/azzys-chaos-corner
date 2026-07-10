@@ -221,6 +221,26 @@
         "lists": ["cleric"],
         "source": "Player's Handbook"
     },
+    "toll-the-dead": {
+        "name": "Toll the Dead",
+        "level": 0,
+        "school": "necromancy",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a WIS saving throw, or take {*}d8 @necrotic damage. If the target is missing any of its hitpoints, it takes {*}d12 @necrotic damage instead."
+            }
+        ],
+        "levels": [1,2,3,4],
+        
+        "lists": ["cleric", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
     "wall-of-fire": {
         "name": "Wall of Fire",
         "level": 4,
