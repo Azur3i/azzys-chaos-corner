@@ -47,11 +47,11 @@ require_once ROOT . "/scripts/functions.php"; ?>
                 <p class="lg">Components</p>
                 <p class="md">
                     <?php 
-                    echo $targetSpell["comp"][0] ? "<b>V</b>erbal" : "";
+                    echo $targetSpell["comp"][0] ? "<b style='color: rgb(var(--pink));'>V</b>erbal" : "";
                     echo $targetSpell["comp"][0] && $targetSpell["comp"][1] ? ", " : "";
-                    echo $targetSpell["comp"][1] ? "<b>S</b>omatic" : "";
+                    echo $targetSpell["comp"][1] ? "<b style='color: rgb(var(--pink));'>S</b>omatic" : "";
                     echo ($targetSpell["comp"][0] || $targetSpell["comp"][1]) && $targetSpell["comp"][2] ? "<br >" : "";
-                    echo $targetSpell["comp"][2] ? "<b>M</b>aterial: " . $targetSpell["comp"][2] : "";
+                    echo $targetSpell["comp"][2] ? "<b style='color: rgb(var(--pink));'>M</b>aterial: " . $targetSpell["comp"][2] : "";
                     ?> 
                 </p>
             </div>
