@@ -29,7 +29,7 @@ $targetSpell = $spells[$spellName];
                             <?php $i = 0;
                             foreach ($spells as $x => $y): ?>
                                 <a 
-                                    class="list-group-item blue low-opac button-list d-grid w-100 align-items-center text-start"
+                                    class="list-group-item blue low-opac button-list d-grid w-100 align-items-center"
                                     style="outline: none; box-shadow: none; grid-template-columns: 1fr auto;"
                                     id="<?= $x ?>"
                                     href="#<?= $x ?>">
