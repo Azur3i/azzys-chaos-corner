@@ -324,6 +324,32 @@
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
     },
+    "mage-hand": {
+        "name": "Mage Hand",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, false],
+        "duration": ["m"],
+        
+        "desc": [
+            {
+                "desc": "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration, or until you dismiss it as an action. The hand vanishes if it is ever more than 30ft. away from you, or if you cast this spell again."
+            },
+            {
+                "desc": "You may use your action to control this hand. You may use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You may move the hand up to 30ft. each time you use it."
+            },
+            {
+                "desc": "The hand cannot attack, activate magical items, or carry more than 10 lbs."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
     "protection-from-evil-and-good": {
         "name": "Protection from Evil and Good",
         "level": 1,
