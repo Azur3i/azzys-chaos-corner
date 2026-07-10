@@ -177,6 +177,50 @@
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
+    "thaumaturgy": {
+        "name": "Thaumaturgy",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, false, false],
+        "duration": ["m"],
+        
+        "desc": [
+            {
+                "desc": "You manifest a minor wonder - a sign of supernatural power - within range. Create one of the following effects:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "Your voice booms up to three times as loud as normal."
+                    },
+                    {
+                        "desc": "You cause flames to flicker, brighten, dim, or change color."
+                    },
+                    {
+                        "desc": "You cause harmless tremors in the ground."
+                    },
+                    {
+                        "desc": "You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers."
+                    },
+                    {
+                        "desc": "You instantaneously cause an unlocked door or window to fly open or shut."
+                    },
+                    {
+                        "desc": "You alter the apearance of your eyes."
+                    }
+                ]
+            },
+            {
+                "desc": "If you cast this spell multiple times, you may have up to 3 of its non-instantaneous effects active at a time, and you may dismiss such an effect as an action."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric"],
+        "source": "Player's Handbook"
+    },
     "wall-of-fire": {
         "name": "Wall of Fire",
         "level": 4,
