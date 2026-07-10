@@ -23,8 +23,12 @@ $(function () {
     }
 })
 
-$(".button-list").click(function () {
+$(".button-list").click(function (e) {
+    e.preventDefault();
+
     let spell = $(this).attr("id");
+    history.pushState(null, "", "#" + spell);
+
     loadSpell(spell);
 });
 
