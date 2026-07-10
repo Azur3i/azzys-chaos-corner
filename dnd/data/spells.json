@@ -413,6 +413,26 @@
         "lists": ["artificer", "bard", "sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "magic-missile": {
+        "name": "Magic Missile",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You create {*} glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 @force damage to its target. The darts all strike simultaneously and you can direct them to hit one creature or several."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "minor-illusion": {
         "name": "Minor Illusion",
         "level": 0,
