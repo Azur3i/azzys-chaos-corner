@@ -134,6 +134,26 @@
         "lists": ["druid", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
+    "guidance": {
+        "name": "Guidance",
+        "level": 0,
+        "school": "divination",
+
+        "castTime": ["a"],
+        "range": "t",
+        "comp": [true, true, false],
+        "duration": ["m", 1, true],
+        
+        "desc": [
+            {
+                "desc": "You touch 1 willing creature. Once before the spell ends, the target may roll 1d4, and add the number rolled to one ability check of its choice. It may roll this die before or after making the ability check. The spell then ends."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "cleric", "druid"],
+        "source": "Player's Handbook"
+    },
     "spaciodisplacement": {
         "name": "Spaciodisplacement",
         "level": 0,
