@@ -385,6 +385,29 @@
         "lists": ["artificer", "bard", "sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "power-fist": {
+        "name": "Power Fist",
+        "level": 1,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "s",
+        "comp": [true, true, "a severed finger"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "quote": "\"Please cease existing.\" - Crank"
+            },
+            {
+                "desc": "You concentrate artificial power into your melee weapon. Make a melee weapon attack. On a hit, your attack will critically strike and knock the target prone."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "druid", "ranger", "warlock", "wizard"],
+        "source": "Azzurey's League of Legends Spells"
+    },
     "protection-from-evil-and-good": {
         "name": "Protection from Evil and Good",
         "level": 1,
