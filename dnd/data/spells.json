@@ -232,7 +232,7 @@
         
         "desc": [
             {
-                "desc": "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a DEX saving throw, taking {*}d10 fire damage on a failed save, or half as much on a successful one."
+                "desc": "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a DEX saving throw, taking {*}d10 @fire damage on a failed save, or half as much on a successful one."
             }
         ],
         "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -378,7 +378,7 @@
         ],
         "levels": [1, 3, 5, 7],
         
-        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
+        "lists": ["oracle"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "thaumaturgy": {
@@ -444,6 +444,35 @@
         
         "lists": ["cleric", "warlock", "wizard"],
         "source": "Player's Handbook"
+    },
+    "true-silence": {
+        "name": "True Silence",
+        "level": 9,
+        "school": "necromancy",
+
+        "castTime": ["a"],
+        "range": "240ft.",
+        "comp": [false, true, "a hollow crystal orb containing a vacuum"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "With a gentle shush, silence falls at your whim."
+            },
+            {
+                "desc": "For the duration, a 40ft. radius sphere centered on a point within range falls completely silent; not only sound waves cannot exist within this space, the air goes completely still, as the air’s very atoms fall silent and stop in their tracks. Creatures and objects completely inside the sphere are immune to @thunder damage, and creatures completely inside the sphere are deafened."
+            },
+            {
+                "desc": "A creature starting its turn inside the sphere, or entering the sphere for the first time must succeed on a DEX saving throw, or fall into stasis, becoming paralyzed and falling unconscious for the duration. On a success, the creature retains consciousness, but its speed is reduced to 5ft. A creature in stasis by this spell takes 4d12 @cold damage when it fails the saving throw, and at the start of each of its turns afterwards; a creature succeeding the save takes half the damage."
+            },
+            {
+                "desc": "Melee attacks inside or into the sphere are impossible, and casting a spell that includes a verbal component is impossible while inside the sphere. Ranged weapon or spell attacks, as well as any other spell effect that passes through the sphere are halted and suspended in the absolute zero. These attacks and effects have their effects delayed until the spell ends."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "oracle"],
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "wall-of-fire": {
         "name": "Wall of Fire",
