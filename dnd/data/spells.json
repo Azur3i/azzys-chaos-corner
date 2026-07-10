@@ -241,6 +241,41 @@
         "lists": ["druid", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
+    "shape-water": {
+        "name": "Shape Water",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [false, true, false],
+        "duration": ["s"],
+        
+        "desc": [
+            {
+                "desc": "You choose an area of water that you can see within range and that fits within a 5ft. cube. You manipulate it in one of the following ways:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "You instantaneously move or otherwise change the flow of the water as you direct, up to 5ft. in any direction. This movement doesn't have enough force to cause damage."
+                    },
+                    {
+                        "desc": "You cause the water to form into simple shapes and animate at your instruction. This change lasts for 1 hour."
+                    },
+                    {
+                        "desc": "You change the water's color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour."
+                    },
+                    {
+                        "desc": "You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "guidance": {
         "name": "Guidance",
         "level": 0,
@@ -547,7 +582,7 @@
                 "desc": "With a gentle shush, silence falls at your whim."
             },
             {
-                "desc": "For the duration, a 40ft. radius sphere centered on a point within range falls completely silent; not only sound waves cannot exist within this space, the air goes completely still, as the air’s very atoms fall silent and stop in their tracks. Creatures and objects completely inside the sphere are immune to @thunder damage, and creatures completely inside the sphere are deafened."
+                "desc": "For the duration, a 40ft. radius sphere centered on a point within range falls completely silent; not only sound waves cannot exist within this space, the air goes completely still, as the air's very atoms fall silent and stop in their tracks. Creatures and objects completely inside the sphere are immune to @thunder damage, and creatures completely inside the sphere are deafened."
             },
             {
                 "desc": "A creature starting its turn inside the sphere, or entering the sphere for the first time must succeed on a DEX saving throw, or fall into stasis, becoming paralyzed and falling unconscious for the duration. On a success, the creature retains consciousness, but its speed is reduced to 5ft. A creature in stasis by this spell takes 4d12 @cold damage when it fails the saving throw, and at the start of each of its turns afterwards; a creature succeeding the save takes half the damage."
