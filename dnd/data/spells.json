@@ -257,6 +257,38 @@
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
     },
+    "protection-from-evil-and-good": {
+        "name": "Protection from Evil and Good",
+        "level": 1,
+        "school": "abjuration",
+
+        "castTime": ["a"],
+        "range": "t",
+        "comp": [true, true, "holy water, or powdered silver and iron, which the spell consumes"],
+        "duration": ["m", 10, true],
+        
+        "desc": [
+            {
+                "desc": "For the duration, one willing creature you touch is protected against the following types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants the following benefits:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "The listed creatures gain disadvantage on attack rolls against the protected creature."
+                    },
+                    {
+                        "desc": "The protected creature cannot be charmed, frightened, or possessed by the listed creatures."
+                    },
+                    {
+                        "desc": "If the protected creature is already charmed, frightened, or possessed by one of the listed creatures, the protected creature gainst advantage on any future saving throw against the relevant effect."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid", "paladin", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
     "shield-of-faith": {
         "name": "Shield of Faith",
         "level": 1,
