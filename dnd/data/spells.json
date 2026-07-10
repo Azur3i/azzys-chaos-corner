@@ -289,6 +289,29 @@
         "lists": ["cleric", "druid", "paladin", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "sanctuary": {
+        "name": "Sanctuary",
+        "level": 1,
+        "school": "abjuration",
+
+        "castTime": ["b"],
+        "range": "30ft.",
+        "comp": [true, true, "a small silver mirror"],
+        "duration": ["m"],
+        
+        "desc": [
+            {
+                "desc": "You ward a creature within range against attack. For the duration, any creature who targets the warded creature with an attack or harmful spell must succeed on a WIS saving throw, or choose a new target or lose the attack or spell. This spell does not protect the warded creature from area effects, such as the explosion of a fireball."
+            },
+            {
+                "desc": "If the warded creature makes an attack, casts a spell that affects an enemy, or deals damage to another creature, the spell ends."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "cleric"],
+        "source": "Player's Handbook"
+    },
     "shield-of-faith": {
         "name": "Shield of Faith",
         "level": 1,
