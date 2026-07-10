@@ -174,6 +174,26 @@
         "lists": ["artificer", "cleric", "druid"],
         "source": "Player's Handbook"
     },
+    "hellish-rebuke": {
+        "name": "Hellish Rebuke",
+        "level": 1,
+        "school": "divination",
+
+        "castTime": ["re", null, "you are damaged by a creature within 60ft. of you that you can see"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a DEX saving throw, taking {*}d10 fire damage on a failed save, or half as much on a successful one."
+            }
+        ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["warlock"],
+        "source": "Player's Handbook"
+    },
     "shield-of-faith": {
         "name": "Shield of Faith",
         "level": 1,
