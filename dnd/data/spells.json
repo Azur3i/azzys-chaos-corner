@@ -1,4 +1,45 @@
 {
+    "armaments-of-annihilation": {
+        "name": "Armaments of Annihilation",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, "a set of bullet casings"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You summon the armaments of annihilation, cosmic weapons existing of a cannon and a battery. The cannon is mounted on your shoulder (but has no weight), and the battery takes up a 5ft. by 5ft. space up to 10ft. away from you. The battery can be picked up and thrown or otherwise moved."
+            },
+            {
+                "desc": "The battery can be damaged by all creatures, storing all of the damage done to it, as long as it's on the battlefield, as energy. The battery has infinite hitpoints and cannot be destroyed. Additionally, the battery only takes half damage from falling damage. As an action, you may make the cannon fire a projectile at a creature. Make an attack roll. The cannon deals damage equal to {*}d6 plus the stored energy @force damage. Once you do, the armaments disappear and the spell ends."
+            },
+            {
+                "desc": "If you lose concentration by failing your CON save, or if the battery is taken more than 120ft. away from you, the armaments lose connection and the battery explodes. All creatures in a 10ft. radius around the battery must succeed on a DEX saving throw, taking {*}d6 plus the stored energy @force damage on a failed save, or half as much on a successful one. After that, the cannon will vanish and the spell ends."
+            },
+            {
+                "desc": "What you do with the battery is flexible and up to your creativity, to the DM's discretion. For example:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "Use an action to mount the battery on a shield. Damage from blocked attacks is absorbed by the battery."
+                    },
+                    {
+                        "desc": "Attach the battery to a weapon handle or to an existing weapon and use it as a weapon. The battery absorbs as much damage as it deals."
+                    },
+                    {
+                        "desc": "Use the battery as half cover."
+                    }
+                ]
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7],
+        
+        "lists": ["artificer", "wizard", "oracle"],
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
     "bless": {
         "name": "Bless",
         "level": 1,
