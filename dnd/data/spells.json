@@ -470,5 +470,28 @@
         
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
+    },
+    "zone of truth": {
+        "name": "Zone of Truth",
+        "level": 2,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["m", 10],
+        
+        "desc": [
+            {
+                "desc": "You create a magical zone that guards against deception in a 15ft. radius sphere centered on a point of your choice within range. For the duration, a creature that enters the spell's area for the first time on a turn, or starts its turn there, must succeed on a CHA saving throw, or cannot speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw."
+            },
+            {
+                "desc": "An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such creatures can be evasive in its answers as long as it remains within the boundaries of the truth."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "paladin"],
+        "source": "Player's Handbook"
     }
 }
