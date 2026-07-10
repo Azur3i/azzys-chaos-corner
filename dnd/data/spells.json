@@ -471,7 +471,7 @@
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
     },
-    "zone of truth": {
+    "zone-of-truth": {
         "name": "Zone of Truth",
         "level": 2,
         "school": "enchantment",
