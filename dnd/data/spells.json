@@ -448,6 +448,26 @@
         "lists": ["oracle"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
+    "ray-of-frost": {
+        "name": "Ray of Frost",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A frigid beam of blue-white light streaks towards a creature within range. Make a ranged spell attack against the target. On a hit, it takes {*}d8 @cold damage, and its speed is reduced by 10ft. until the start of your next turn."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "thaumaturgy": {
         "name": "Thaumaturgy",
         "level": 0,
