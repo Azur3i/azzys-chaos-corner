@@ -152,6 +152,29 @@
         "lists": ["sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "dive-of-desolation": {
+        "name": "Dive of Desolation",
+        "level": 1,
+        "school": "conjuration",
+
+        "castTime": ["re", null, "falling 30ft. or more"],
+        "range": "s",
+        "comp": [true, true, "a cicada"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You channel your soul, briefly hover mid-air and wrap yourself in a blinding light. Losing all forward momentum, you drop straight down and accelerate your fall to dangerous speeds, landing within seconds."
+            },
+            {
+                "desc": "Upon landing, you negate the fall damage you would've taken; the white light roars outward, sending out a shockwave, audible within 300ft. Any creature within 10ft. of your landing point needs to succeed on a DEX saving throw, taking {*}d8 @force damage on a failed save, or half as much on a successful one. "
+            }
+        ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
     "divine-favor": {
         "name": "Divine Favor",
         "level": 1,
