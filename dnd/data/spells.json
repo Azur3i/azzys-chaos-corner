@@ -85,6 +85,26 @@
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
     },
+    "divine-favor": {
+        "name": "Divine Favor",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "t",
+        "comp": [true, true, false],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "Your prayer empowers you with divine radiance. For the duration, your weapon attacks deal an extra 1d4 radiant damage on hit."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["paladin"],
+        "source": "Player's Handbook"
+    },
     "eldritch-blast": {
         "name": "Eldritch Blast",
         "level": 0,
