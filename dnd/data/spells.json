@@ -1,0 +1,186 @@
+{
+    "command": {
+        "name": "Command",
+        "level": 1,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, false, false],
+        "duration": ["ro"],
+        
+        "desc": [
+            {
+                "desc": "You speak a one word command to a creature you can see within range. The target must succeed on a WIS saving throw, or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it. If the target cannot follow your command, the spell ends. Some typical commands and their effects:",
+                "type": "list",
+                "content": [
+                    {
+                        "name": "Approach",
+                        "desc": "The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5ft. of you."
+                    },
+                    {
+                        "name": "Drop",
+                        "desc": "The target drops whatever it is holding and then ends its turn."
+                    },
+                    {
+                        "name": "Flee",
+                        "desc": "The target spends its turn moving away from you by the fastest available means."
+                    },
+                    {
+                        "name": "Grovel",
+                        "desc": "The target falls prone and then ends its turn."
+                    },
+                    {
+                        "name": "Halt",
+                        "desc": "The target doesn't move and takes no actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air."
+                    }
+                ]
+            },
+            {
+                "desc": "You may affect {*} creature(s) with this spell. If you affect multiple, they need to be within 30ft. of each other."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "cleric", "paladin"],
+        "source": "Player's Handbook"
+    },
+    "cure-wounds": {
+        "name": "Cure Wounds",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "t",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A creature you touch regains a number of hitpoints equal to {*}d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "eldritch-blast": {
+        "name": "Eldritch Blast",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A beam of crackling energy streaks towards a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 @force damage."
+            },
+            {
+                "desc": "This spell creates {*} beam(s) of energy. Should there be multiple, make a seperate attack roll for each one."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["warlock"],
+        "source": "Player's Handbook"
+    },
+    "fireball": {
+        "name": "Fireball",
+        "level": 3,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "150ft.",
+        "comp": [true, true, "a tiny ball of bat guano and sulfur"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A bright streak flashes from your pointing finger to a point you choose within range, then blossoms with a low roar into an explosion of flame. Each creature in a 20ft. radius must make a DEX saving throw, taking {*}d6 @fire damage on a failed save, or half as much on a successful one. The fire spreads around corners, and ignites flammable objects in the area that aren't being worn or carried."
+            }
+        ],
+        "levels": [8, 9, 10, 11, 12, 13, 14],
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "fire-shield": {
+        "name": "Fire Shield",
+        "level": 4,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "s",
+        "comp": [true, true, "a bit of phosphorus, or a firefly"],
+        "duration": ["m", 10],
+        
+        "desc": [
+            {
+                "desc": "Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10ft. radius, and dim light in another 10ft. You can end the spell early by using an action to dismiss it."
+            },
+            {
+                "desc": "The flames provide you with a warm shield or a chill shield, as you choose. The warm shield gives you resistance to @cold damage, and the chill shield grants your resistance to @fire damage."
+            },
+            {
+                "desc": "Additionally, whenever a creature within 5ft. of you hits you with a melee attack, the shield erupts with flame. The attacker takes 2d8 @fire damage from a warm shield, or 2d8 @cold damage from a chill shield."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "spaciodisplacement": {
+        "name": "Spaciodisplacement",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You shift all of existence, except one creature, slightly into a direction of choice, causing the target to appear to blink 5ft. This creature takes {*}d4 @psychic damage."
+            },
+            {
+                "desc": "The shift can be into any direction, but the target cannot be shifted into a solid object. If the target is shifted into the space of another creature, both the target and that creature take an additional {*}d4 @force damage. The target is then shunted out to the nearest unoccupied space again."
+            }
+        ],
+        "levels": [1, 3, 5, 7],
+        
+        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
+    "wall-of-fire": {
+        "name": "Wall of Fire",
+        "level": 4,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, "a small piece of phosphorus"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You create a wall of fire on a solid surface within range. You can make the wall up to 60ft. long, 20ft. high and 1ft. thick, or a ringed wall up to 20ft. in diameter, 20ft. high and 1ft. thick. The wall is opaque and lasts for the duration."
+            },
+            {
+                "desc": "When the wall appears, each creature in its area must make a DEX saving throw, taking {*}d8 @fire damage on a failed save, or half as much on a successful one."
+            },
+            {
+                "desc": "One side of the wall, selected by you when you cast, deals {*}d8 @fire damage to each creature that ends its turn within 10ft. of that side of the wall, or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn, or ends its turn there. The other side of the wall deals no damage."
+            }
+            ],
+        "levels": [5, 6, 7, 8, 9, 10],
+        
+        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
+        "source": "Player's Handbook"
+    }
+}
