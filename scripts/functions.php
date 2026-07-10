@@ -1,6 +1,7 @@
 <?php
 
 function renderText($str) {
+    $str = renderSpells($str);
     $str = renderActions($str);
     $str = renderDamageColors($str);
     return $str;
@@ -29,6 +30,16 @@ function renderActions($str) {
     return $str;
 }
 
+function renderSpells($str) {
+    $spells = json_decode(file_get_contents("../dnd/data/spells.json"), true);
+
+    foreach ($spells as $id => $spell) {
+        $target = strtolower($spell["name"]);
+        $str = str_replace("@$target", "<i><a href='/dnd/spells#$id'>$target</a></i>", $str);
+    }
+    return $str;
+}
+
 function fetchSubclasses($class) {
     $subclasses = json_decode(file_get_contents("../dnd/data/subclasses.json"), true);
     $result = [];
@@ -40,7 +51,7 @@ function fetchSubclasses($class) {
     return $result;
 }
 
-function renderAbility($ability, $z, $cls=null) {
+function renderAbility($ability, $z=0, $cls=null) {
     if (!empty($ability["name"]) && $z !== 0) {
         echo '<p class="md"><b>' . $ability["name"] . '. </b>' . renderText($ability["desc"]) . '</p>';
     } else {
@@ -61,11 +72,11 @@ function renderAbility($ability, $z, $cls=null) {
                 <?php foreach ($ability["content"]["content"] as $i => $row):
                     if ($i === 0): ?>
                         <thead>
-                            <tr><th class="md"><?= implode('</th><th class="md">', $row) ?></th></tr>
+                            <tr><th class="md"><?= implode('</th><th class="md">', array_map("renderText", $row)) ?></th></tr>
                         </thead>
                         <tbody>
                     <?php else: ?>
-                            <tr><td class="md"><?= implode('</td><td class="md">', $row) ?></td></tr>
+                            <tr><td class="md"><?= implode('</td><td class="md">', array_map("renderText", $row)) ?></td></tr>
                     <?php endif;
                 endforeach; ?>
                         </tbody>
