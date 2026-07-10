@@ -50,7 +50,7 @@ function get_dist($dist) {
 }
 
 function get_first_level($desc, $levels) {
-    return str_replace("{*}", "<span class='level-replace'>$levels[0]</span>", $desc);
+    return str_replace("{*}", "<b><span style='color: rgb(var(--pink));' class='level-replace'>$levels[0]</span></b>", $desc);
 }
 
 ?>
