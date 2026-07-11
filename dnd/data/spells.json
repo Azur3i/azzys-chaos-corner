@@ -390,6 +390,26 @@
         "lists": ["bard", "wizard"],
         "source": "Player's Handbook"
     },
+    "infestation": {
+        "name": "Infestation",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, "a living flea"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You cause a cloud of mites, fleas, and other parasites to appear momentarily on one creature you can see within range. The target must succeed on a CON saving throw, or it takes {*}d6 @poison damage and moves 5ft. in a random direction if it is able to move and its speed is at least 5ft.. Roll a d4 for the direction: 1, north; 2, south; 3, east; or 4, west. This movement doesn’t provoke opportunity attacks, and if the direction rolled is blocked, the target doesn't move."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["druid", "sorcerer", "warlock", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
     "lesser-restoration": {
         "name": "Lesser Restoration",
         "level": 2,
