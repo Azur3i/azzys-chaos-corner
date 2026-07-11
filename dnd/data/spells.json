@@ -456,6 +456,29 @@
         "lists": ["sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
+    "mending": {
+        "name": "Mending",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": ["1m"],
+        "range": "t",
+        "comp": [true, true, "two lodestones"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "This spell repairs a single break or tear that is no longer than 1ft. in any dimension in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. "
+            },
+            {
+                "desc": "This spell can physically repair a magic item or construct, but cannot restore magic to such an object."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "druid", "sorcerer", "wizard", "artificer"],
+        "source": "Player's Handbook"
+    },
     "minor-illusion": {
         "name": "Minor Illusion",
         "level": 0,
