@@ -218,6 +218,27 @@
         "lists": ["warlock"],
         "source": "Player's Handbook"
     },
+    "earth-tremor": {
+        "name": "Earth Tremor",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "s",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You cause a tremor in the ground in a 10ft radius. Each creature other than you in that area must make a DEX saving throw. On a failed save, a creature takes {*}d6 @bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "druid", "sorcerer", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
+
     "fireball": {
         "name": "Fireball",
         "level": 3,
