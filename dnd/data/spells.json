@@ -430,6 +430,26 @@
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
     },
+    "lightning-lure": {
+        "name": "Lightning Lure",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "15ft.",
+        "comp": [true, false, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15ft. of you. The target must succeed on a STR saving throw or be pulled up to 10ft. in a straight line toward you and then take {*}d8 @lightning damage if it is within 5ft. of you."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "sorcerer", "warlock", "wizard"],
+        "source": "Tasha's Cauldron of Everything"
+    },
     "mage-hand": {
         "name": "Mage Hand",
         "level": 0,
