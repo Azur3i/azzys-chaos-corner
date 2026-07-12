@@ -67,3 +67,19 @@ $("#spell-searchbar").on("input", searchSpell);
 $(function () {$("#spell-searchbar").trigger("input");});
 
 $(function() {console.log(window.innerWidth);});
+
+$(".button-toggle").click(function () {
+    $(this).toggleClass("active");
+});
+
+$(".button-toggle").hover(
+    function () {
+        $(this).addClass("hover");
+    },
+    function () {
+        $(this).removeClass("hover");
+    });
+
+$("#filter-button").click(function () {
+    $("#filter-menu").toggleClass("d-none");
+});

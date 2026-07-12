@@ -247,6 +247,34 @@ a {
     text-align: center;
 }
 
+.button-toggle {
+    padding: 0.3vw 0.6vw;
+    cursor: pointer;
+
+    background-color: rgb(var(--color) / var(--bg-opac));
+    border: 1px solid rgb(var(--color));
+    border-radius: 0.8rem;
+    transition: 0.1s ease-in-out;
+
+    color: rgb(var(--color));
+    text-decoration: none;
+    text-align: center;
+}
+
+.button-toggle.active,
+.button-toggle.click {
+    background-color: rgb(var(--color)) !important;
+    color: rgb(var(--black));
+}
+
+.button-toggle.hover {
+    background-color: rgb(var(--color) / 0.7);
+    color: rgb(var(--black));
+}
+
+
+
+
 .button:hover,
 .button.checked {
     --bg-opac: 1;
@@ -544,7 +572,7 @@ table.ability {
         color: rgb(var(--black));
         transition: 0.05s ease-in-out;
     }
-    .button-lvl:focus,
+    .button-lvl.click,
     .button-lvl.active {
         background-color: rgb(var(--blue) / 1);
         color: rgb(var(--black));
