@@ -60,6 +60,29 @@
         "lists": ["cleric", "paladin"],
         "source": "Player's Handbook"
     },
+    "charm-person": {
+        "name": "Command",
+        "level": 1,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, false],
+        "duration": ["m"],
+        
+        "desc": [
+            {
+                "desc": "You attempt to charm a humanoid you can see within range. It must make a WIS saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends, or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you."
+            },
+            {
+                "desc": "You may affect {*} creature(s) with this spell. If you affect multiple, they need to be within 30ft. of each other."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "druid", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
     "command": {
         "name": "Command",
         "level": 1,
@@ -230,7 +253,7 @@
         
         "desc": [
             {
-                "desc": "You cause a tremor in the ground in a 10ft radius. Each creature other than you in that area must make a DEX saving throw. On a failed save, a creature takes {*}d6 @bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared."
+                "desc": "You cause a tremor in the ground in a 10ft radius. Each creature other than you in that area must succeed on a DEX saving throw, or take {*}d6 @bludgeoning damage and be knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared."
             }
         ],
         "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
