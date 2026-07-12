@@ -926,6 +926,62 @@
                 ]
             }
         },
+        "school-of-divination": {
+            "name": "School of Divination",
+            "desc": ["The counsel of a diviner is sought by royalty and commoners alike, for all seek a clearer understanding of the past, present, and future. As a diviner, you strive to part the veils of space, time, and consciousness so that you can see clearly. You work to master spells of discernment, remote viewing, supernatural knowledge, and foresight."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Divination Savant",
+                        "desc": "The gold and time you must spend to copy a divnation spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Portent",
+                        "desc": "Glimpses of the future begin to press in on your awareness. Whenever you finish a long rest, roll 2d20 and record the numbers rolled. You may replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you may replace a roll in this way only once per turn. Each roll may be used only once, and you lose any unused fortelling rolls upon gaining new ones."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Expert Divination",
+                        "desc": "Casting divination spells becomes so easily to you that it expends only a fraction of your spellcasting efforts. Whenever you cast a divination spell of 2nd level or higher using a spell slot, you regain one expended spell slot. This slot must be of a lower level than the spell, and cannot be higher than 5th level."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "The Third Eye",
+                        "desc": "As an action, you may increase your powers of perception. Whenever you do so, choose one of the following benefits, which lasts until you are incapacited or until a short rest. You may use this feature once per short rest.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Darkvision",
+                                "desc": "You gain 60ft. darkvision."
+                            },
+                            {
+                                "name": "Ethereal Sight",
+                                "desc": "You are able to see into the Ethereal Plane up to 60ft."
+                            },
+                            {
+                                "name": "Greater Comprehension",
+                                "desc": "You are able to read any language."
+                            },
+                            {
+                                "name": "See Invisibility",
+                                "desc": "You are able to see invisible creatures and objects within 10ft. of you that are within line of sight."
+                            }
+                        ]
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Greater Portent",
+                        "desc": "The visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You may roll 3d20 for your portent feature."
+                    }
+                ]
+            }
+        },
         "school-of-necromancy": {
             "name": "School of Necromancy",
             "desc": ["The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate. Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies."],
