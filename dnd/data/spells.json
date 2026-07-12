@@ -187,7 +187,7 @@
         
         "desc": [
             {
-                "desc": "Your prayer empowers you with divine radiance. For the duration, your weapon attacks deal an extra 1d4 radiant damage on hit."
+                "desc": "Your prayer empowers you with divine radiance. For the duration, your weapon attacks deal an extra 1d4 @radiant damage on hit."
             }
         ],
         "levels": null,
