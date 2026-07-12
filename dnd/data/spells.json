@@ -356,7 +356,7 @@
         
         "desc": [
             {
-                "desc": "A creature of your choice that you can see within range regains hit points equal to {*}d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+                "desc": "A creature of your choice that you can see within range regains hitpoints equal to {*}d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
             }
         ],
         "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -364,7 +364,6 @@
         "lists": ["bard", "cleric", "druid"],
         "source": "Player's Handbook"
     },
-
     "hellish-rebuke": {
         "name": "Hellish Rebuke",
         "level": 1,
@@ -443,7 +442,18 @@
         
         "desc": [
             {
-                "desc": "You cause a cloud of mites, fleas, and other parasites to appear momentarily on one creature you can see within range. The target must succeed on a CON saving throw, or it takes {*}d6 @poison damage and moves 5ft. in a random direction if it is able to move and its speed is at least 5ft.. Roll a d4 for the direction: 1, north; 2, south; 3, east; or 4, west. This movement doesn’t provoke opportunity attacks, and if the direction rolled is blocked, the target doesn't move."
+                "desc": "You cause a cloud of mites, fleas, and other parasites to appear momentarily on one creature you can see within range. The target must succeed on a CON saving throw or take {*}d6 @poison damage and move 5ft. in a random direction if it is able to move and its speed is at least 5ft. This movement doesn't provoke opportunity attacks, and if the direction rolled is blocked, the target doesn't move. Roll 1d4 for the direction:",
+                "type": "table",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["1d4", "Direction"],
+                        [1, "North"],
+                        [2, "South"],
+                        [3, "East"],
+                        [4, "West"]
+                    ]
+                }
             }
         ],
         "levels": [1, 2, 3, 4],
@@ -542,7 +552,7 @@
         "level": 0,
         "school": "transmutation",
 
-        "castTime": ["1m"],
+        "castTime": ["m"],
         "range": "t",
         "comp": [true, true, "two lodestones"],
         "duration": ["i"],
@@ -977,7 +987,7 @@
         
         "desc": [
             {
-                "desc": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a WIS saving throw or take {*}d4 @psychic damage and gain disadvantage on the next attack roll it makes before the end of its next turn."
+                "desc": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target is able to hear you (though it need not understand you), it must succeed on a WIS saving throw or take {*}d4 @psychic damage, and gain disadvantage on the next attack roll it makes before the end of its next turn."
             }
         ],
         "levels": [1, 2, 3, 4],
