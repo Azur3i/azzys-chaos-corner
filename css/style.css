@@ -50,6 +50,42 @@
     }
 }
 
+/* FHD */
+@media (max-width: 1920px) {
+    #spell-view {
+        height: 66vh;
+    }
+    
+    #spell-scrolllist {
+        max-height: 66vh;
+        height: 92%;
+    }
+
+    #spell-display {
+        max-height: 66vh;
+    }
+
+    #spell-search {
+        height: 8%;
+    }
+}
+
+/* QHD */
+@media (min-width: 1921px) {
+    #spell-view {
+        height: 75vh;
+    }
+
+    #spell-scrolllist {
+        max-height: 75vh;
+        height: 93%;
+    }
+
+    #spell-search {
+        height: 7%;
+    }
+}
+
 /* variables */
 :root {
     --color: 255 0 0;
@@ -190,7 +226,7 @@ a {
 
 #navbar-bottom { /* general footer bar */
     background-color: #FFAADD30;
-    padding: 1vw 1vw;
+    padding: 1vh 1rem;
     border-top: 1px solid #FFAADDFF;
 }
 
@@ -230,10 +266,7 @@ a {
 
 .scroll {
     height: 100%;
-    max-height: 66vh;
     overflow-y: auto;
-
-    
 }
 
 div.accordion {
@@ -405,7 +438,12 @@ table.ability {
     }
 }
 
+
 #spell-list {
+    padding: 0 1.25rem 1.25rem 1.25rem; 
+    margin: 0;
+    height: 100%;
+
     .button-list {
         margin: 0vw 0.6vw;
         padding: 0.3vw 0.6vw;
@@ -439,7 +477,7 @@ table.ability {
 
     .list-group-item:first-child {
         border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
+        border-top-right-radius: 0;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
@@ -452,11 +490,16 @@ table.ability {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-left-radius: 0.8rem;
-        border-bottom-right-radius: 0.8rem;
+        border-bottom-right-radius: 0;
     }
 }
 
+#spellbox {
+    height: 100%;
+}
+
 #spell-display {
+    height: 100%;
     h1 {
         margin: 0;
     }
@@ -518,8 +561,29 @@ table.ability {
     }
 
     #spell-desc > p {
-            margin-top: 1rem;
-        }
+        margin-top: 1rem;
+    }
+}
+
+#spell-search {
+    width: 85%;
+    padding: 0.5rem 0;
+
+    input {
+        color: rgb(var(--blue));
+        background: rgb(var(--black) / 0.5);
+        border: 1px solid rgb(var(--blue));
+        border-radius: 1rem;
+    }
+    
+    #spell-searchbar {
+        max-height: 2rem;
+    }
+}
+
+#spell-scrolllist {
+    border: 1px solid rgb(var(--blue));
+    border-radius: 0.8rem;
 }
 
 .horizontal-menu.show {

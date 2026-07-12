@@ -49,3 +49,21 @@ $("#spellbox").on("click", ".button-lvl", function () {
         }
     )
 });
+
+function searchSpell () {
+    let search = $(this).val().toLowerCase();
+    $(".button-list").each(function() {
+        let searchable = $(this).data("name").toLowerCase();
+
+        if (searchable.includes(search)) {
+            $(this).removeClass("d-none");
+        } else {
+            $(this).addClass("d-none");
+        }
+    });
+}
+
+$("#spell-searchbar").on("input", searchSpell);
+$(function () {$("#spell-searchbar").trigger("input");});
+
+$(function() {console.log(window.innerWidth);});

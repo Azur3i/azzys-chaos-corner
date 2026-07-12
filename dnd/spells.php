@@ -23,17 +23,22 @@ $targetSpell = $spells[$spellName];
     <div class="row justify-content-center">
         <div class="main-content col-md-12 col-lg-9 mx-auto py-0">
             <div class="content-list row" style="padding: 0;" id="spell-view">
-                <div class="content-list col-md-12 col-lg-4" style="padding: 1.25rem; margin: 0;" id="spell-list">
-                    <div class="scroll">
-                        <ul class="list-group">
+                <div class="content-list col-md-12 col-lg-4" id="spell-list">
+                    <div class="row mx-auto align-items-center justify-content-center" id="spell-search">
+                        <p class="sm col-auto">Search:</p>
+                        <input id="spell-searchbar" class="sm col align-items-center py-1 px-3"></input>
+                    </div>
+                    <div class="scroll row" style="margin: 0;" id="spell-scrolllist">
+                        <ul class="list-group" style="padding: 0;">
                             <?php $i = 0;
                             foreach ($spells as $x => $y): ?>
                                 <a 
                                     class="list-group-item blue low-opac button-list d-grid w-100 align-items-center"
                                     style="outline: none; box-shadow: none; grid-template-columns: 1fr auto;"
                                     id="<?= $x ?>"
-                                    href="#<?= $x ?>">
-                                    <span data="name" class="md" style="text-align: left;"><?= $y["name"] ?></span>
+                                    href="#<?= $x ?>"
+                                    data-name="<?= $y["name"] ?>">
+                                    <span class="md" style="text-align: left;"><?= $y["name"] ?></span>
                                     <span data="school" class="sm" style="opacity: 0.7;"><?= get_level($y["level"], $y["school"]) ?></span>
                                 </a>
                                 <?php $i++;
