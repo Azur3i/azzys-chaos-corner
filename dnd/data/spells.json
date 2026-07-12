@@ -218,6 +218,26 @@
         "lists": ["warlock"],
         "source": "Player's Handbook"
     },
+    "earth-tremor": {
+        "name": "Earth Tremor",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "s",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You cause a tremor in the ground in a 10ft radius. Each creature other than you in that area must make a DEX saving throw. On a failed save, a creature takes {*}d6 @bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "druid", "sorcerer", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
     "fireball": {
         "name": "Fireball",
         "level": 3,
@@ -324,6 +344,27 @@
         "lists": ["artificer", "cleric", "druid"],
         "source": "Player's Handbook"
     },
+    "healing-word": {
+        "name": "Healing Word",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": ["b"],
+        "range": "60ft.",
+        "comp": [true, false, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A creature of your choice that you can see within range regains hit points equal to {*}d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "cleric", "druid"],
+        "source": "Player's Handbook"
+    },
+
     "hellish-rebuke": {
         "name": "Hellish Rebuke",
         "level": 1,
@@ -390,6 +431,26 @@
         "lists": ["bard", "wizard"],
         "source": "Player's Handbook"
     },
+    "infestation": {
+        "name": "Infestation",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, "a living flea"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You cause a cloud of mites, fleas, and other parasites to appear momentarily on one creature you can see within range. The target must succeed on a CON saving throw, or it takes {*}d6 @poison damage and moves 5ft. in a random direction if it is able to move and its speed is at least 5ft.. Roll a d4 for the direction: 1, north; 2, south; 3, east; or 4, west. This movement doesn’t provoke opportunity attacks, and if the direction rolled is blocked, the target doesn't move."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["druid", "sorcerer", "warlock", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
     "lesser-restoration": {
         "name": "Lesser Restoration",
         "level": 2,
@@ -409,6 +470,26 @@
         
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
+    },
+    "lightning-lure": {
+        "name": "Lightning Lure",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "15ft.",
+        "comp": [true, false, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15ft. of you. The target must succeed on a STR saving throw or be pulled up to 10ft. in a straight line toward you and then take {*}d8 @lightning damage if it is within 5ft. of you."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "sorcerer", "warlock", "wizard"],
+        "source": "Tasha's Cauldron of Everything"
     },
     "mage-hand": {
         "name": "Mage Hand",
@@ -454,6 +535,29 @@
         "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
         
         "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "mending": {
+        "name": "Mending",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": ["1m"],
+        "range": "t",
+        "comp": [true, true, "two lodestones"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "This spell repairs a single break or tear that is no longer than 1ft. in any dimension in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. "
+            },
+            {
+                "desc": "This spell can physically repair a magic item or construct, but cannot restore magic to such an object."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "druid", "sorcerer", "wizard", "artificer"],
         "source": "Player's Handbook"
     },
     "minor-illusion": {
@@ -860,6 +964,26 @@
         
         "lists": ["oracle", "wizard"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
+    "vicious-mockery": {
+        "name": "Vicious Mockery",
+        "level": 0,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, false, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a WIS saving throw or take {*}d4 @psychic damage and gain disadvantage on the next attack roll it makes before the end of its next turn."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["bard"],
+        "source": "Player's Handbook"
     },
     "wall-of-fire": {
         "name": "Wall of Fire",
