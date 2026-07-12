@@ -238,7 +238,6 @@
         "lists": ["bard", "druid", "sorcerer", "wizard"],
         "source": "Xanathar's Guide to Everything"
     },
-
     "fireball": {
         "name": "Fireball",
         "level": 3,
@@ -345,6 +344,27 @@
         "lists": ["artificer", "cleric", "druid"],
         "source": "Player's Handbook"
     },
+    "healing-word": {
+        "name": "Healing Word",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": ["b"],
+        "range": "60ft.",
+        "comp": [true, false, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A creature of your choice that you can see within range regains hit points equal to {*}d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "cleric", "druid"],
+        "source": "Player's Handbook"
+    },
+
     "hellish-rebuke": {
         "name": "Hellish Rebuke",
         "level": 1,
