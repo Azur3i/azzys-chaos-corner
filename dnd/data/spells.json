@@ -525,6 +525,29 @@
         "lists": ["bard", "wizard"],
         "source": "Player's Handbook"
     },
+    "hold-person": {
+        "name": "Hold Person",
+        "level": 2,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, "a small, straight piece of iron"],
+        "duration": ["i", null, true],
+        
+        "desc": [
+            {
+                "desc": "Choose a humanoid that you can see within range. The target must succeed on a WIS saving throw or be paralyzed for the duration. At the end of each of its turns, the target can make another WIS saving throw. On a success, the spell ends on the target."
+            },
+            {
+                "desc": "You may affect {*} humanoid(s) with this spell. If you affect multiple, they need to be within 30ft. of each other."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["bard","druid","sorcerer","warlock","wizard"],
+        "source": "Player's Handbook"
+    },
     "infestation": {
         "name": "Infestation",
         "level": 0,
