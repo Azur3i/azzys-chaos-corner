@@ -1,4 +1,24 @@
 {
+    "aid": {
+        "name": "Aid",
+        "level": 2,
+        "school": "abjuration",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, "a tiny strip of white cloth"],
+        "duration": ["h", 8, false],
+        
+        "desc": [
+            {
+                "desc": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s HP maximum and current HP increase by {*} for the duration."
+            }
+        ],
+        "levels": [5, 10, 15, 20, 25, 30, 35, 40],
+        
+        "lists": ["artificer","bard","cleric","paladin","ranger"],
+        "source": "Player's Handbook"
+    },
     "armaments-of-annihilation": {
         "name": "Armaments of Annihilation",
         "level": 3,
