@@ -1,4 +1,30 @@
 {
+    "arcane-lock": {
+        "name": "Arcane Lock",
+        "level": 2,
+        "school": "abjuration",
+
+        "castTime": ["a"],
+        "range": "t",
+        "comp": [true, true, "gold dust worth at least 25 gp, which the spell consumes"],
+        "duration": ["d"],
+        
+        "desc": [
+            {
+                "desc": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked. Only you and the creatures you designate when you cast this spell are able to open the object normally."
+            },
+            {
+                "desc": "You may set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken, or the spell is dispelled or suppressed. Casting Knock on the object suppresses Arcane Lock for 10 minutes."
+            },
+            {
+                "desc": "While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "armaments-of-annihilation": {
         "name": "Armaments of Annihilation",
         "level": 3,
@@ -40,6 +66,64 @@
         "lists": ["artificer", "wizard", "oracle"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
+    "augury": {
+        "name": "Augury",
+        "level": 2,
+        "school": "divination",
+
+        "castTime": ["m"],
+        "range": "s",
+        "comp": [true, true, "specially marked sticks, bones, or similar tokens worth at least 25 gp"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The DM chooses from the following possible omens:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "Weal, for good results"
+                    },
+                    {
+                        "desc": "Woe, for bad results"
+                    },
+                    {
+                        "desc": "Weal and woe, for both good and bad results"
+                    },
+                    {
+                        "desc": "Nothing, for results that are not especially good or bad"
+                    }
+                ]
+            },
+            {
+                "desc": "The spell does not take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion. If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "barkskin": {
+        "name": "Barkskin",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "t",
+        "comp": [true, true, "a handful of oak bark"],
+        "duration": ["h", null, true],
+        
+        "desc": [
+            {
+                "desc": "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "ranger"],
+        "source": "Player's Handbook"
+    },
     "bless": {
         "name": "Bless",
         "level": 1,
@@ -59,6 +143,49 @@
         
         "lists": ["cleric", "paladin"],
         "source": "Player's Handbook"
+    },
+    "blur": {
+        "name": "Blur",
+        "level": 2,
+        "school": "illusion",
+
+        "castTime": ["a"],
+        "range": "s",
+        "comp": [true, false, false],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "Your body becomes blurred, shifting and wavering to all who see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "catapult": {
+        "name": "Catapult",
+        "level": 1,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [false, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "Choose one object weighing 1 to 5 lbs within range that is not being worn or carried. You may launch the object in a straight line up to 90ft. in a direction you choose before falling to the ground. If the object finds a creature in its path, that creature must succeed on a DEX saving throw, being struck by the object and taking {*}d8 @bludgeoning damage on a failed save. If the object strikes any creature or other solid surface, it stops moving and takes the same damage as that what it hit."
+            },
+            {
+                "desc": "Secondary scaling for weight yet to be added {*}{*}{*}"
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
+        
+        "lists": ["sorcerer", "wizard", "artificer"],
+        "source": "Xanathar's Guide to Everything"
     },
     "charm-person": {
         "name": "Charm Person",
@@ -81,6 +208,26 @@
         "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
         
         "lists": ["bard", "druid", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "color-spray": {
+        "name": "Color Spray",
+        "level": 1,
+        "school": "illusion",
+
+        "castTime": ["a"],
+        "range": "s",
+        "comp": [true, true, "a pinch of powder or sand that is colored red, yellow, and blue"],
+        "duration": ["ro"],
+        
+        "desc": [
+            {
+                "desc": "A dazzling array of flashing, colored light springs from your hand. This spell blinds all creatures in a 15ft. cone originating from you until the end of your next turn, starting at the creature with the lowest current hitpoints, in ascending order of current hitpoints, up to a maximum of {*}d10 collective hitpoints of all creatures affected (ignoring unconscious creatures and creatures that cannot see)."
+            }
+        ],
+        "levels": [6, 8, 10, 12, 14, 16, 18, 20, 22],
+        
+        "lists": ["bard", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
     "command": {
@@ -147,6 +294,29 @@
         "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
         
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "dancing-lights": {
+        "name": "Dancing Lights",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, "a bit of phosphorus or wychwood, or a glowworm"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration, each shedding dim light in a 10ft. radius. You can also combine the four lights into one glowing, vaguely humanoid, form of Medium size."
+            },
+            {
+                "desc": "As a bonus action on your turn, you can move the lights up to 60ft. to a new spot within range. A light must be within 20ft. of another light created by this spell, and a light winks out if it exceeds the spell's range."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
     "darkness": {
@@ -216,6 +386,41 @@
         "levels": null,
         
         "lists": ["paladin"],
+        "source": "Player's Handbook"
+    },
+    "druidcraft": {
+        "name": "Druidcraft",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "Whispering to the spirits of nature, you create one of the following effects within range:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "For one round, you create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on."
+                    },
+                    {
+                        "desc": "You instantly make a flower blossom, a seed pod open, or a leaf bud bloom."
+                    },
+                    {
+                        "desc": "You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk, that must fit within a 5ft. cube."
+                    },
+                    {
+                        "desc": "You instantly light or snuff out a candle, a torch, or a small campfire."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid"],
         "source": "Player's Handbook"
     },
     "eldritch-blast": {
@@ -347,6 +552,49 @@
         "lists": ["druid", "ranger", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
+    "gift-of-alacrity": {
+        "name": "Gift of Alacrity",
+        "level": 1,
+        "school": "divination",
+
+        "castTime": ["m"],
+        "range": "t",
+        "comp": [true, true, false],
+        "duration": ["h", 8],
+        
+        "desc": [
+            {
+                "desc": "You touch a willing creature. For the duration, the target may add 1d8 to its initiative rolls."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["wizard"],
+        "source": "Explorer's Guide to Wildemount"
+    },
+    "goodberry": {
+        "name": "Goodberry",
+        "level": 1,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "t",
+        "comp": [true, true, "a sprig of mistletoe"],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "Up to ten magically infused berries appear in your hand. A creature may use its action to eat one berry, which restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day."
+            }, 
+            {
+                "desc": "The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "ranger"],
+        "source": "Player's Handbook"
+    },
     "guidance": {
         "name": "Guidance",
         "level": 0,
@@ -365,6 +613,26 @@
         "levels": null,
         
         "lists": ["artificer", "cleric", "druid"],
+        "source": "Player's Handbook"
+    },
+    "guiding-bolt": {
+        "name": "Guiding Bolt",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, false],
+        "duration": ["ro"],
+        
+        "desc": [
+            {
+                "desc": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 radiant damage, and they are covered in a dim, mystical glittering light. The next attack roll made against this target before the end of your next turn has advantage."
+            }
+        ],
+        "levels": [4, 5, 6, 7, 8, 9, 10, 11, 12],
+        
+        "lists": ["cleric"],
         "source": "Player's Handbook"
     },
     "healing-word": {
@@ -712,6 +980,46 @@
         "lists": ["cleric", "druid", "paladin", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "ray-of-sickness": {
+        "name": "Ray of Sickness",
+        "level": 1,
+        "school": "necromancy",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d8 poison damage and must succeed on a CON saving throw, or is also poisoned until the end of your next turn."
+            }
+        ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "sacred-fire": {
+        "name": "Sacred Fire",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a DEX saving throw or take {*}d8 radiant damage. The target gains no benefit from cover for this saving throw."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["cleric"],
+        "source": "Player's Handbook"
+    },
     "sanctuary": {
         "name": "Sanctuary",
         "level": 1,
@@ -997,6 +1305,32 @@
         
         "lists": ["oracle", "wizard"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
+    "unseen-servant": {
+        "name": "Unseen Servant",
+        "level": 1,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, "a piece of string and a bit of wood"],
+        "duration": ["h"],
+        
+        "desc": [
+            {
+                "desc": "This spell creates an invisible, mindless, shapeless, Medium-size force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, a Strength of 2, and it cannot attack. If it drops to 0 hit points, the spell ends."
+            },
+            {
+                "desc": "Once on each of your turns as a bonus action, you may mentally command the servant to move up to 15 feet and interact with an object. The servant is able to perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command."
+            },
+            {
+                "desc": "If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "warlock", "wizard"],
+        "source": "Player's Handbook"
     },
     "vicious-mockery": {
         "name": "Vicious Mockery",
