@@ -749,6 +749,26 @@
         "lists": ["bard","sorcerer","warlock","wizard"],
         "source": "Player's Handbook"
     },
+    "mass-healing-word": {
+        "name": "Mass Healing Word",
+        "level": 3,
+        "school": "evocation",
+
+        "castTime": ["b"],
+        "range": "60ft.",
+        "comp": [true, false, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain HP equal to {*}d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+            },
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7],
+        
+        "lists": ["bard","cleric"],
+        "source": "Player's Handbook"
+    },
     "mold-earth": {
         "name": "Mold Earth",
         "level": 0,
