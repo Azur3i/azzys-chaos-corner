@@ -47,11 +47,11 @@ require_once ROOT . "/scripts/functions.php"; ?>
                 <p class="lg">Components</p>
                 <p class="md">
                     <?php 
-                    echo $targetSpell["comp"][0] ? "<b style='color: rgb(var(--pink));'>V</b>erbal" : "";
-                    echo $targetSpell["comp"][0] && $targetSpell["comp"][1] ? ", " : "";
-                    echo $targetSpell["comp"][1] ? "<b style='color: rgb(var(--pink));'>S</b>omatic" : "";
-                    echo ($targetSpell["comp"][0] || $targetSpell["comp"][1]) && $targetSpell["comp"][2] ? "<br >" : "";
-                    echo $targetSpell["comp"][2] ? "<b style='color: rgb(var(--pink));'>M</b>aterial: " . $targetSpell["comp"][2] : "";
+                    echo $targetSpell["vsm"][0] ? "<b style='color: rgb(var(--pink));'>V</b>erbal" : "";
+                    echo $targetSpell["vsm"][0] && $targetSpell["vsm"][1] ? ", " : "";
+                    echo $targetSpell["vsm"][1] ? "<b style='color: rgb(var(--pink));'>S</b>omatic" : "";
+                    echo ($targetSpell["vsm"][0] || $targetSpell["vsm"][1]) && $targetSpell["vsm"][2] ? "<br >" : "";
+                    echo $targetSpell["vsm"][2] ? "<b style='color: rgb(var(--pink));'>M</b>aterial: " . $targetSpell["vsm"][2] : "";
                     ?> 
                 </p>
             </div>
