@@ -1547,5 +1547,67 @@
         
         "lists": ["bard", "cleric", "paladin"],
         "source": "Player's Handbook"
+    },
+    "crown-of-madness": {
+        "name": "Crown of Madness",
+        "level": 2,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": ["120ft."],
+        "comp": [true, true, false],
+        "duration": ["m"],
+        
+        "desc": [
+            {
+                "desc": "One humanoid of your choice that you are able to see within range must make a WIS saving throw. On a failure, it becomes charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes."
+            },
+            {
+                "desc": "The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target is able to act normally on its turn if you choose no creature or if none are within its reach."
+            },
+            {
+                "desc": "On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target may make a WIS saving throw at the end of each of its turns. On a success, the spell ends."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "enlarge-reduce": {
+        "name": "Enlarge/Reduce",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": ["30ft."],
+        "comp": [true, true, "a pinch of powdered iron"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it may make a CON saving throw. On a success, the spell has no effect."
+            },
+            {
+                "desc": "If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once."
+            },
+            {
+                "type": "list",
+                "content": [
+                    {
+                        "name": "Enlarge",
+                        "desc": "The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category (from Medium to Large, for example). If there is not enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size, dealing 1d4 extra damage."
+                    },
+                    {
+                        "name": "Reduce",
+                        "desc": "The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category (from Medium to Small, for example). Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. Likewise, the target's weapons also shrink to match its new size, deal 1d4 less damage (this cannot reduce the damage below 1)."
+                    }
+                ]
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
     }
 }
