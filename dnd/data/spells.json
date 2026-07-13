@@ -1672,7 +1672,6 @@
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
     },
-
     "wrathful-smite": {
         "name": "Wrathful Smite",
         "level": 1,
