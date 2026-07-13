@@ -54,12 +54,9 @@ function filterSpell () {
     let search = $("#spell-searchbar").val().toLowerCase();
 
     let [wl, bl] = getFilters();
-    if (search !== "") {
-        wl.push(search);
-    }
     $(".button-list").each(function() {
+        let name = $(this).data("name").toLowerCase();
         let prop = [
-            $(this).data("name").toLowerCase(),
             $(this).data("level").toString(),
             $(this).data("school").toLowerCase(),
             ...$(this).data("lists").toLowerCase().split(" ")
@@ -71,6 +68,10 @@ function filterSpell () {
             if (wl.every(filter => prop.includes(filter))) {
                 hidden = false;
             }
+        }
+
+        if (!name.includes(search)) {
+            hidden = true;
         }
         
         if (bl.some(filter => prop.includes(filter))) {

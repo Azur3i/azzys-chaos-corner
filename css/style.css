@@ -294,6 +294,32 @@ a {
     justify-content: center;
 }
 
+.button-switch {
+    padding: 0vw 0.6vw;
+    cursor: pointer;
+    height: 2rem;
+
+    background-color: rgb(var(--color) / var(--bg-opac));
+    border: 1px solid rgb(var(--color));
+    border-radius: 0.8rem;
+    transition: 0.1s ease-in-out;
+
+    color: rgb(var(--color));
+    text-decoration: none;
+    text-align: center;
+}
+
+.button-switch:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 0;
+}
+
+.button-switch:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+}
 
 .button:hover,
 .button.checked {
