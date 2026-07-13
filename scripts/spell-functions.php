@@ -15,7 +15,7 @@ function get_level($level, $school) {
     }
 }
 
-function get_time($time) {
+function gets_time($time) {
     $times = [
         "a" => "action",
         "b" => "bonus action",
@@ -33,22 +33,39 @@ function get_time($time) {
         return "Special";
     } else {
         $result = ($time[1] ?? 1) . " " . $times[$time[0]] . (!empty($time[1]) ? "s" : "");
+        $ritual = "";
+        if (!empty($time[3])) {
+            $ritual = " (ritual)";
+        }
+
         if (empty($time[2])) {
-            return $result;
+            return $result . $ritual;
         } elseif ($time[2] === true) {
-            return "Concentration, up to " . $result;
+            return "Concentration, up to " . $result . $ritual;
         } else {
             return $result . ", which you take when " . $time[2];
         }
     }
 }
 
-function get_dist($dist) {
-    switch ($dist) {
-        case "t": return "Touch"; break;
-        case "s": return "Self"; break;
-        default: return $dist;
+function get_time($time) {
+    if ($time["time"] === "instant") {return "Instantaneous";}
+    if ($time["time"] === "special") {return "Special";}
+    if ($time["time"] === "until dispelled") {return "Until dispelled";}
+    if ($time["time"] === "unlimited") {return "Unlimited";}
+
+    $result = $time["amount"] . " " . $time["time"] . ($time["amount"] !== 1 ? "s" : "");
+
+    if (isset($time["concentration"])) {
+        $result = "Concentration, up to " . $result;
+    } elseif ($time["time"] === "reaction") {
+        $result = $result . ", which you take when " . $time["condition"];
     }
+    if (isset($time["ritual"])) {
+        $result = $result . " (ritual)";
+    }
+
+    return $result;
 }
 
 function get_first_level($desc, $levels) {
