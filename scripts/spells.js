@@ -148,3 +148,24 @@ function getFilters() {
 
     return [pos, neg];
 }
+
+$(document).on("keydown", function(e) {
+    if (e.key === "ArrowDown") {
+        e.preventDefault();
+        $(function () {
+            $(".button-list.active").next().each(function () {
+                $(this).trigger("click");
+                this.scrollIntoView({behavior: "smooth", block: "nearest"});
+            });
+        });
+    }
+    if (e.key === "ArrowUp") {
+        e.preventDefault();
+        $(function () {
+            $(".button-list.active").prev().each(function () {
+                $(this).trigger("click");
+                this.scrollIntoView({behavior: "smooth", block: "nearest"});
+            });
+        });
+    }
+});
