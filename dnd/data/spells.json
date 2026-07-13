@@ -251,6 +251,26 @@
         "lists": ["bard", "druid", "sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "cloud-of-daggers": {
+        "name": "Cloud of Daggers",
+        "level": 2,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, "a sliver of glass"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You fill the air in a 5ft. cube with spinning daggers, centered on a point you choose within range. A creature takes {*}d4 @slashing damage when it enters the spell's area for the first time on a turn, or starts its turn there."
+            }
+        ],
+        "levels": [4, 6, 8, 10, 12, 14, 16, 18],
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
     "color-spray": {
         "name": "Color Spray",
         "level": 1,
@@ -269,6 +289,29 @@
         "levels": [6, 8, 10, 12, 14, 16, 18, 20, 22],
         
         "lists": ["bard", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "cordon-of-arrows": {
+        "name": "Cordon of Arrows",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "5ft.",
+        "comp": [true, true, "four or more arrows or bolts"],
+        "duration": ["h", 8],
+        
+        "desc": [
+            {
+                "desc": "You plant {*} pieces of nonmagical ammunition (arrows or crossbow bolts) in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30ft. of the ammunition for the first time on a turn, or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a DEX saving throw or take 1d6 @piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains."
+            },
+            {
+                "desc": "When you cast this spell, you may designate any creatures you choose, and the spell ignores them."
+            }
+        ],
+        "levels": [4, 6, 8, 10, 12, 14, 16, 18],
+        
+        "lists": ["ranger"],
         "source": "Player's Handbook"
     },
     "command": {
@@ -691,7 +734,7 @@
         
         "desc": [
             {
-                "desc": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 radiant damage, and they are covered in a dim, mystical glittering light. The next attack roll made against this target before the end of your next turn has advantage."
+                "desc": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 @radiant damage, and they are covered in a dim, mystical glittering light. The next attack roll made against this target before the end of your next turn has advantage."
             }
         ],
         "levels": [4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -1165,6 +1208,26 @@
         "lists": ["cleric", "druid", "paladin", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "ray-of-frost": {
+        "name": "Ray of Frost",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A frigid beam of blue-white light streaks towards a creature within range. Make a ranged spell attack against the target. On a hit, it takes {*}d8 @cold damage, and its speed is reduced by 10ft. until the start of your next turn."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "ray-of-sickness": {
         "name": "Ray of Sickness",
         "level": 1,
@@ -1177,7 +1240,7 @@
         
         "desc": [
             {
-                "desc": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d8 poison damage and must succeed on a CON saving throw, or is also poisoned until the end of your next turn."
+                "desc": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d8 @poison damage and must succeed on a CON saving throw, or is also poisoned until the end of your next turn."
             }
         ],
         "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -1329,6 +1392,26 @@
         "lists": ["cleric", "paladin"],
         "source": "Player's Handbook"
     },
+    "silence": {
+        "name": "Silence",
+        "level": 2,
+        "school": "illusion",
+
+        "castTime": ["a"],
+        "range": "120ft.",
+        "comp": [true, true, false],
+        "duration": ["m", 10, true],
+        
+        "desc": [
+            {
+                "desc": "For the duration, no sound is able to be created within or pass through a 20ft. sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to @thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "ranger"],
+        "source": "Player's Handbook"
+    },
     "silent-image": {
         "name": "Silent Image",
         "level": 1,
@@ -1400,26 +1483,6 @@
         
         "lists": ["oracle"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
-    },
-    "ray-of-frost": {
-        "name": "Ray of Frost",
-        "level": 0,
-        "school": "evocation",
-
-        "castTime": ["a"],
-        "range": "60ft.",
-        "comp": [true, true, false],
-        "duration": ["i"],
-        
-        "desc": [
-            {
-                "desc": "A frigid beam of blue-white light streaks towards a creature within range. Make a ranged spell attack against the target. On a hit, it takes {*}d8 @cold damage, and its speed is reduced by 10ft. until the start of your next turn."
-            }
-        ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["artificer", "sorcerer", "wizard"],
-        "source": "Player's Handbook"
     },
     "thaumaturgy": {
         "name": "Thaumaturgy",
@@ -1609,6 +1672,7 @@
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
         "source": "Player's Handbook"
     },
+
     "wrathful-smite": {
         "name": "Wrathful Smite",
         "level": 1,
@@ -1621,13 +1685,98 @@
         
         "desc": [
             {
-                "desc": "The next time you hit with a melee weapon attack during the duration, your attack deals an extra 1d6 @psychic damage. Additionally, if the target is a creature, it must make a WIS saving throw or be frightened of you until the spell ends. As an action, the creature may make a Wisdom check against your spell save DC to steel its resolve and end this spell."
+                        "desc": "The next time you hit with a melee weapon attack during the duration, your attack deals an extra 1d6 @psychic damage. Additionally, if the target is a creature, it must make a WIS saving throw or be frightened of you until the spell ends. As an action, the creature may make a Wisdom check against your spell save DC to steel its resolve and end this spell."
             }
         ],
         "levels": null,
         
         "lists": ["paladin"],
         "source": "Player's Handbook"
+    },
+    "warding-wind": {
+        "name": "Warding Wind",
+        "level": 2,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "s",
+        "comp": [true, false, false],
+        "duration": ["m", 10, true],
+        
+        "desc": [
+            {
+                "desc": "A strong wind (20 miles per hour) blows around you in a 10ft. radius and moves with you, remaining centered on you. The wind lasts for the spell's duration."
+            },
+            {
+                "desc": "The wind has the following effects:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "It deafens you and other creatures in its area."
+                    },
+                    {
+                        "desc": "It extinguishes unprotected flames in its area that are torch-sized or smaller."
+                    },
+                    {
+                        "desc": "The area is difficult terrain for creatures other than you."
+                    },
+                    {
+                        "desc": "The attack rolls of ranged weapon attacks have disadvantage if they pass in or out of the wind."
+                    },
+                    {
+                        "desc": "It hedges out vapor, gas, and fog that can be dispersed by strong wind."
+                    }
+                ]
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "druid", "sorcerer", "warlock"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "witch-bolt": {
+        "name": "Witch Bolt",
+        "level": 2,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, "a twig from a tree that has been struck by lightning"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes {*}d12 @lightning damage, and for the duration, at the end of each of your turns, you may use your action to deal 1d12 @lightning damage to the target automatically. The spell ends if you use your action to do anything else, if the target is ever outside the spell's range, or if the target has total cover from you."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "zephyr-strike": {
+        "name": "Zephyr Strike",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": ["b"],
+        "range": "s",
+        "comp": [true, false, false],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You move like the wind. For the duration, your movement does not provoke opportunity attacks."
+            },
+            {
+                "desc": "Once before the spell ends, you can give yourself advantage on one weapon attack roll on your turn. That attack deals an extra 1d8 @force damage on a hit. Whether you hit or miss, your walking speed increases by 30ft. until the end of that turn."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["ranger"],
+        "source": "Xanathar's Guide to Everything"
+
     },
     "zone-of-truth": {
         "name": "Zone of Truth",
@@ -1650,6 +1799,68 @@
         "levels": null,
         
         "lists": ["bard", "cleric", "paladin"],
+        "source": "Player's Handbook"
+    },
+    "crown-of-madness": {
+        "name": "Crown of Madness",
+        "level": 2,
+        "school": "enchantment",
+
+        "castTime": ["a"],
+        "range": ["120ft."],
+        "comp": [true, true, false],
+        "duration": ["m"],
+        
+        "desc": [
+            {
+                "desc": "One humanoid of your choice that you are able to see within range must make a WIS saving throw. On a failure, it becomes charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes."
+            },
+            {
+                "desc": "The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target is able to act normally on its turn if you choose no creature or if none are within its reach."
+            },
+            {
+                "desc": "On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target may make a WIS saving throw at the end of each of its turns. On a success, the spell ends."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "enlarge-reduce": {
+        "name": "Enlarge/Reduce",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": ["30ft."],
+        "comp": [true, true, "a pinch of powdered iron"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it may make a CON saving throw. On a success, the spell has no effect."
+            },
+            {
+                "desc": "If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once."
+            },
+            {
+                "type": "list",
+                "content": [
+                    {
+                        "name": "Enlarge",
+                        "desc": "The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category (from Medium to Large, for example). If there is not enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size, dealing 1d4 extra damage."
+                    },
+                    {
+                        "name": "Reduce",
+                        "desc": "The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category (from Medium to Small, for example). Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. Likewise, the target's weapons also shrink to match its new size, deal 1d4 less damage (this cannot reduce the damage below 1)."
+                    }
+                ]
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "druid", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     }
 }

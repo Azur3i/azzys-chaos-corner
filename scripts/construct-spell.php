@@ -73,21 +73,33 @@ require_once ROOT . "/scripts/functions.php"; ?>
         
         <?php if ($targetSpell["levels"] !== null): ?>
         
+            <hr >
+            <div style="padding: 1rem;" class="row spell-list align-items-center">
+                <p class="md col-2 text-center">Different levels:</p>
+                <div class="spell-level-selector d-flex col-10">
+                    <?php foreach($targetSpell["levels"] as $i => $level):?>
+                        <a class="blue button-lvl md <?= $i === 0 ? "active" : "" ?>" value="<?= $i ?>">
+                            <?php if ($targetSpell["level"] === 0) {
+                                echo $cantripLevels[$i];
+                            } else {
+                                echo $targetSpell["level"] + $i;
+                            } ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+        <?php endif; ?>
+
         <hr >
         <div style="padding: 1rem;" class="row spell-list align-items-center">
-            <p class="md col-2 text-center">Different levels:</p>
+            <p class="md col-2 text-center">Spelllists: </p>
             <div class="spell-level-selector d-flex col-10">
-                <?php foreach($targetSpell["levels"] as $i => $level):?>
-                    <a class="blue button-lvl md <?= $i === 0 ? "active" : "" ?>" value="<?= $i ?>">
-                        <?php if ($targetSpell["level"] === 0) {
-                            echo $cantripLevels[$i];
-                        } else {
-                            echo $targetSpell["level"] + $i;
-                        } ?>
-                    </a>
-                <?php endforeach; ?>
+                <p class="md">
+                <?= ucwords(implode(", ", $targetSpell["lists"])); ?>
+                </p>
             </div>
         </div>
-        <?php endif; ?>
+        
     </div>
 </div>
