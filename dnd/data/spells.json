@@ -210,6 +210,26 @@
         "lists": ["bard", "druid", "sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "cloud-of-daggers": {
+        "name": "Cloud of Daggers",
+        "level": 2,
+        "school": "conjuration",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, "a sliver of glass"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You fill the air in a 5ft. cube with spinning daggers, centered on a point you choose within range. A creature takes {*}d4 @slashing damage when it enters the spell's area for the first time on a turn, or starts its turn there."
+            }
+        ],
+        "levels": [4, 6, 8, 10, 12, 14, 16, 18],
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
     "color-spray": {
         "name": "Color Spray",
         "level": 1,
