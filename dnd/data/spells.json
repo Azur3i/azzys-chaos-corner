@@ -250,6 +250,29 @@
         "lists": ["bard", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
+    "cordon-of-arrows": {
+        "name": "Cordon of Arrows",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": ["a"],
+        "range": "5ft.",
+        "comp": [true, true, "four or more arrows or bolts"],
+        "duration": ["h", 8],
+        
+        "desc": [
+            {
+                "desc": "You plant {*} pieces of nonmagical ammunition (arrows or crossbow bolts) in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30ft. of the ammunition for the first time on a turn, or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a DEX saving throw or take 1d6 @piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains."
+            },
+            {
+                "desc": "When you cast this spell, you may designate any creatures you choose, and the spell ignores them."
+            }
+        ],
+        "levels": [4, 6, 8, 10, 12, 14, 16, 18],
+        
+        "lists": ["ranger"],
+        "source": "Player's Handbook"
+    },
     "command": {
         "name": "Command",
         "level": 1,
