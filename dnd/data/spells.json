@@ -1130,7 +1130,7 @@
         
         "desc": [
             {
-                "desc": "For the duration, no sound is able to be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there."
+                "desc": "For the duration, no sound is able to be created within or pass through a 20ft. sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to @thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there."
             }
         ],
         "levels": null,
@@ -1410,7 +1410,7 @@
         
         "desc": [
             {
-                "desc": "A strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell's duration."
+                "desc": "A strong wind (20 miles per hour) blows around you in a 10ft. radius and moves with you, remaining centered on you. The wind lasts for the spell's duration."
             },
             {
                 "desc": "The wind has the following effects:",
@@ -1458,6 +1458,29 @@
         
         "lists": ["sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
+    },
+    "zephyr-strike": {
+        "name": "Zephyr Strike",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": ["b"],
+        "range": "s",
+        "comp": [true, false, false],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "You move like the wind. For the duration, your movement does not provoke opportunity attacks."
+            },
+            {
+                "desc": "Once before the spell ends, you can give yourself advantage on one weapon attack roll on your turn. That attack deals an extra 1d8 @force damage on a hit. Whether you hit or miss, your walking speed increases by 30ft. until the end of that turn."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["ranger"],
+        "source": "Xanathar's Guide to Everything"
     },
     "zone-of-truth": {
         "name": "Zone of Truth",
