@@ -108,17 +108,30 @@ $(".button-toggle-2").hover(
         $(this).removeClass("hover");
     });
 
-$(".button-toggle-2").click(function () {
-    if ($(this).hasClass("pos")) {
-        $(this).removeClass("pos");
-        $(this).addClass("neg");
-    } else if ($(this).hasClass("neg")) {
-        $(this).removeClass("neg");
-    } else {
-        $(this).addClass("pos");
-    };
-
-    filterSpell();
+$(".button-toggle-2").on({
+    "click": function () {
+        if ($(this).hasClass("pos")) {
+            $(this).removeClass("pos");
+            $(this).addClass("neg");
+        } else if ($(this).hasClass("neg")) {
+            $(this).removeClass("neg");
+        } else {
+            $(this).addClass("pos");
+        };
+        filterSpell();
+    },
+    "contextmenu": function(e) {
+        e.preventDefault();
+        if ($(this).hasClass("neg")) {
+            $(this).removeClass("neg");
+            $(this).addClass("pos");
+        } else if ($(this).hasClass("pos")) {
+            $(this).removeClass("pos");
+        } else {
+            $(this).addClass("neg");
+        };
+        filterSpell();
+    }
 });
 
 function getFilters() {
