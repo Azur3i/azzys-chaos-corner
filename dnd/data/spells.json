@@ -129,6 +129,29 @@
         "lists": ["bard", "cleric", "paladin"],
         "source": "Player's Handbook"
     },
+    "comprehend-languages": {
+        "name": "Comprehend Languages",
+        "level": 1,
+        "school": "divination",
+
+        "castTime": ["a"],
+        "range": "s",
+        "comp": [true, true, "a pinch of soot and salt"],
+        "duration": ["h"],
+        
+        "desc": [
+            {
+                "desc": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text."
+            },
+            {
+                "desc": "his spell does not decode secret messages in a text or glyph, such as an arcane sigil, that is not part of a written language."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard","sorcerer","warlock","wizard"],
+        "source": "Player's Handbook"
+    },
     "cure-wounds": {
         "name": "Cure Wounds",
         "level": 1,
