@@ -17,13 +17,30 @@ uasort($spells, function ($a, $b) {
 $spellName = array_key_first($spells);
 $targetSpell = $spells[$spellName];
 
+$schools = [];
+foreach ($spells as $spell) {
+    if (!in_array($spell["school"], $schools)) {
+        $schools[] = $spell["school"];
+    }
+}
+
+// --
+
+$classes = json_decode(file_get_contents(ROOT . "/dnd/data/classes.json"), true);
+$casters = [];
+foreach ($classes as $x => $class) {
+    if ($class["magic"]["caster"] !== "none") {
+        $casters[$x] = $class;
+    }
+}
+
 ?>
 
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="main-content col-md-12 col-lg-9 mx-auto py-0">
             <div class="content-list row" style="padding: 0;" id="spell-view">
-                <div class="content-list col-md-12 col-lg-4" id="spell-list">
+                <div class="content-list col-md-12 col-lg-4" style="position: relative;" id="spell-list">
                     
                     <!-- searchbar -->
                     <div class="row mx-auto align-items-center justify-content-center" id="spell-search">
@@ -33,28 +50,30 @@ $targetSpell = $spells[$spellName];
                     </div>
 
                     <!-- filter menu -->
-                    <div class="d-flex d-none content-list black" style="margin: 0;" id="filter-menu">
-                        <p class="md title col-auto">Filters:</p>
+                    <div class="d-none content-list" style="position: absolute;" id="filter-menu">
                         <div class="row" style="margin: 0;">
-                            <div class="col row">
-                                <a class="button-toggle blue">Option 1</a>
-                                <a class="button-toggle blue">Option 2</a>
-                                <a class="button-toggle blue">Option 3</a>
-                                <a class="button-toggle blue">Option 4</a>
-                                <a class="button-toggle blue">Option 5</a>
+                            <p class="md title">Filters:</p>
+                        </div>
+                        <hr >
+                        <div class="row" style="margin: 0;">
+                            <div class="col row pink justify-content-center">
+                                <p class="md title" style="height: 3rem;">Classlists</p>
+                                <?php foreach ($casters as $name => $caster): ?>
+                                    <a class="button-toggle-2 col-5 spell-toggle toggle-classlist toggle sm" id="<?= $name ?>"><?= $caster["name"] ?></a>
+                                <?php endforeach; ?>
                             </div>
-                            <div class="col row">
-                                <a class="button-toggle blue">Option 1</a>
-                                <a class="button-toggle blue">Option 2</a>
-                                <a class="button-toggle blue">Option 3</a>
-                                <a class="button-toggle blue">Option 4</a>
-                                <a class="button-toggle blue">Option 5</a>
+                            <div class="col row pink justify-content-center">
+                                <p class="md title">Schools</p>
+                                <?php foreach ($schools as $school): ?>
+                                    <a class="button-toggle-2 col-5 spell-toggle toggle-school sm" id="<?= $school ?>"><?= ucfirst($school) ?></a>
+                                <?php endforeach; ?>
                             </div>
                         </div>
+                        <hr >
                     </div>
                     
                     <!-- spell list -->
-                    <div class="scroll row" style="margin: 0;" id="spell-scrolllist">
+                    <div class="scroll row" id="spell-scrolllist">
                         <ul class="list-group" style="padding: 0;">
                             <?php $i = 0;
                             foreach ($spells as $x => $y): ?>

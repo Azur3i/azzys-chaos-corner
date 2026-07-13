@@ -50,23 +50,39 @@ $("#spellbox").on("click", ".button-lvl", function () {
     )
 });
 
-function searchSpell () {
-    let search = $(this).val().toLowerCase();
-    $(".button-list").each(function() {
-        let searchable = $(this).data("name").toLowerCase();
+function filterSpell () {
+    let search = $("#spell-searchbar").val().toLowerCase();
 
-        if (searchable.includes(search)) {
-            $(this).removeClass("d-none");
-        } else {
-            $(this).addClass("d-none");
+    let [wl, bl] = getFilters();
+    if (search !== "") {
+        wl.push(search);
+    }
+    $(".button-list").each(function() {
+        let prop = [
+            $(this).data("name").toLowerCase(),
+            $(this).data("level").toString(),
+            $(this).data("school").toLowerCase(),
+            ...$(this).data("lists").toLowerCase().split(" ")
+        ];
+        let hidden = false
+
+        if (wl.length > 0) {
+            hidden = true;
+            if (wl.every(filter => prop.includes(filter))) {
+                hidden = false;
+            }
         }
+        
+        if (bl.some(filter => prop.includes(filter))) {
+            hidden = true;
+        }
+
+        $(this).toggleClass("d-none", hidden);
     });
 }
 
-$("#spell-searchbar").on("input", searchSpell);
+$("#spell-searchbar").on("input", filterSpell);
 $(function () {$("#spell-searchbar").trigger("input");});
-
-$(function() {console.log(window.innerWidth);});
 
 $(".button-toggle").click(function () {
     $(this).toggleClass("active");
@@ -83,3 +99,38 @@ $(".button-toggle").hover(
 $("#filter-button").click(function () {
     $("#filter-menu").toggleClass("d-none");
 });
+
+$(".button-toggle-2").hover(
+    function () {
+        $(this).addClass("hover");
+    },
+    function () {
+        $(this).removeClass("hover");
+    });
+
+$(".button-toggle-2").click(function () {
+    if ($(this).hasClass("pos")) {
+        $(this).removeClass("pos");
+        $(this).addClass("neg");
+    } else if ($(this).hasClass("neg")) {
+        $(this).removeClass("neg");
+    } else {
+        $(this).addClass("pos");
+    };
+
+    filterSpell();
+});
+
+function getFilters() {
+    let pos = [];
+    let neg = [];
+    $(".button-toggle-2").each(function () {
+        if ($(this).hasClass("pos")) {
+            pos.push($(this).attr("id"));
+        } else if ($(this).hasClass("neg")) {
+            neg.push($(this).attr("id"));
+        }
+    });
+
+    return [pos, neg];
+}
