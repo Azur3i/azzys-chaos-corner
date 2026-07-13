@@ -627,7 +627,7 @@
         
         "desc": [
             {
-                "desc": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 radiant damage, and they are covered in a dim, mystical glittering light. The next attack roll made against this target before the end of your next turn has advantage."
+                "desc": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 @radiant damage, and they are covered in a dim, mystical glittering light. The next attack roll made against this target before the end of your next turn has advantage."
             }
         ],
         "levels": [4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -980,6 +980,26 @@
         "lists": ["cleric", "druid", "paladin", "warlock", "wizard"],
         "source": "Player's Handbook"
     },
+    "ray-of-frost": {
+        "name": "Ray of Frost",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "60ft.",
+        "comp": [true, true, false],
+        "duration": ["i"],
+        
+        "desc": [
+            {
+                "desc": "A frigid beam of blue-white light streaks towards a creature within range. Make a ranged spell attack against the target. On a hit, it takes {*}d8 @cold damage, and its speed is reduced by 10ft. until the start of your next turn."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
     "ray-of-sickness": {
         "name": "Ray of Sickness",
         "level": 1,
@@ -992,7 +1012,7 @@
         
         "desc": [
             {
-                "desc": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d8 poison damage and must succeed on a CON saving throw, or is also poisoned until the end of your next turn."
+                "desc": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d8 @poison damage and must succeed on a CON saving throw, or is also poisoned until the end of your next turn."
             }
         ],
         "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -1189,26 +1209,6 @@
         
         "lists": ["oracle"],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
-    },
-    "ray-of-frost": {
-        "name": "Ray of Frost",
-        "level": 0,
-        "school": "evocation",
-
-        "castTime": ["a"],
-        "range": "60ft.",
-        "comp": [true, true, false],
-        "duration": ["i"],
-        
-        "desc": [
-            {
-                "desc": "A frigid beam of blue-white light streaks towards a creature within range. Make a ranged spell attack against the target. On a hit, it takes {*}d8 @cold damage, and its speed is reduced by 10ft. until the start of your next turn."
-            }
-        ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["artificer", "sorcerer", "wizard"],
-        "source": "Player's Handbook"
     },
     "thaumaturgy": {
         "name": "Thaumaturgy",
@@ -1438,6 +1438,26 @@
         
         "lists": ["bard", "druid", "sorcerer", "warlock"],
         "source": "Xanathar's Guide to Everything"
+    },
+    "witch-bolt": {
+        "name": "Witch Bolt",
+        "level": 2,
+        "school": "evocation",
+
+        "castTime": ["a"],
+        "range": "30ft.",
+        "comp": [true, true, "a twig from a tree that has been struck by lightning"],
+        "duration": ["m", null, true],
+        
+        "desc": [
+            {
+                "desc": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes {*}d12 @lightning damage, and for the duration, at the end of each of your turns, you may use your action to deal 1d12 @lightning damage to the target automatically. The spell ends if you use your action to do anything else, if the target is ever outside the spell's range, or if the target has total cover from you."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
     },
     "zone-of-truth": {
         "name": "Zone of Truth",
