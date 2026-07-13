@@ -37,7 +37,7 @@ require_once ROOT . "/scripts/functions.php"; ?>
             </div>
             <div class="col title">
                 <p class="lg">Range</p>
-                <p class="md"><?= get_dist($targetSpell["range"]) ?> </p>
+                <p class="md"><?= ucwords($targetSpell["range"]) ?> </p>
             </div>
             <div class="col title">
                 <p class="lg">Duration</p>

@@ -4,17 +4,22 @@
         "level": 2,
         "school": "abjuration",
 
-        "castTime": ["a"],
-        "range": "t",
-        "comp": [true, true, "gold dust worth at least 25 gp, which the spell consumes"],
-        "duration": ["d"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "comp": [true, true, "gold dust worth at least 25gp, which the spell consumes"],
+        "duration": {
+            "time": "until dispelled"
+        },
         
         "desc": [
             {
                 "desc": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked. Only you and the creatures you designate when you cast this spell are able to open the object normally."
             },
             {
-                "desc": "You may set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken, or the spell is dispelled or suppressed. Casting Knock on the object suppresses Arcane Lock for 10 minutes."
+                "desc": "You may set a password that, when spoken within 5ft. of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken, or the spell is dispelled or suppressed. Casting @knock on the object suppresses @arcane lock for 10 minutes."
             },
             {
                 "desc": "While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10."
@@ -30,10 +35,17 @@
         "level": 3,
         "school": "conjuration",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "120ft.",
         "comp": [true, true, "a set of bullet casings"],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -71,10 +83,16 @@
         "level": 2,
         "school": "divination",
 
-        "castTime": ["m"],
-        "range": "s",
-        "comp": [true, true, "specially marked sticks, bones, or similar tokens worth at least 25 gp"],
-        "duration": ["i"],
+        "castTime": {
+            "amount": 1,
+            "time": "minute",
+            "ritual": true
+        },
+        "range": "self",
+        "comp": [true, true, "specially marked sticks, bones, or similar tokens worth at least 25gp"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -96,7 +114,7 @@
                 ]
             },
             {
-                "desc": "The spell does not take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion. If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+                "desc": "The spell does not take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion. If you cast the spell two or more times before completing your next long rest, there is a cumulative 25% chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
             }
         ],
         "levels": null,
@@ -109,14 +127,21 @@
         "level": 2,
         "school": "transmutation",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, "a handful of oak bark"],
-        "duration": ["h", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
         
         "desc": [
             {
-                "desc": "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing."
+                "desc": "You touch a willing creature. For the duration, the target's skin has a rough, bark-like appearance, and the target's AC cannot be less than 16, regardless of what kind of armor it is wearing."
             }
         ],
         "levels": null,
@@ -129,10 +154,17 @@
         "level": 1,
         "school": "enchantment",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [true, true, "a sprinkling of holy water"],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -149,10 +181,17 @@
         "level": 2,
         "school": "illusion",
 
-        "castTime": ["a"],
-        "range": "s",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
         "comp": [true, false, false],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -169,14 +208,19 @@
         "level": 1,
         "school": "transmutation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [false, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
-                "desc": "Choose one object weighing 1 to 5 lbs within range that is not being worn or carried. You may launch the object in a straight line up to 90ft. in a direction you choose before falling to the ground. If the object finds a creature in its path, that creature must succeed on a DEX saving throw, being struck by the object and taking {*}d8 @bludgeoning damage on a failed save. If the object strikes any creature or other solid surface, it stops moving and takes the same damage as that what it hit."
+                "desc": "Choose one object weighing 1 to 5lbs. within range that is not being worn or carried. You may launch the object in a straight line up to 90ft. in a direction you choose before falling to the ground. If the object finds a creature in its path, that creature must succeed on a DEX saving throw, or be struck by the object and take {*}d8 @bludgeoning damage. If the object strikes any creature or other solid surface, it stops moving and takes the same damage as that what it hit."
             },
             {
                 "desc": "Secondary scaling for weight yet to be added {*}{*}{*}"
@@ -192,10 +236,16 @@
         "level": 1,
         "school": "enchantment",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [true, true, false],
-        "duration": ["m"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
         
         "desc": [
             {
@@ -215,10 +265,16 @@
         "level": 1,
         "school": "illusion",
 
-        "castTime": ["a"],
-        "range": "s",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
         "comp": [true, true, "a pinch of powder or sand that is colored red, yellow, and blue"],
-        "duration": ["ro"],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
         
         "desc": [
             {
@@ -235,10 +291,16 @@
         "level": 1,
         "school": "enchantment",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, false, false],
-        "duration": ["ro"],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
         
         "desc": [
             {
@@ -281,10 +343,15 @@
         "level": 1,
         "school": "evocation",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -301,10 +368,17 @@
         "level": 0,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "120ft.",
         "comp": [true, true, "a bit of phosphorus or wychwood, or a glowworm"],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -324,10 +398,17 @@
         "level": 2,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, "bat fur, and a drop of pitch, or piece of coal"],
-        "duration": ["m", 10, true],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -350,10 +431,16 @@
         "level": 1,
         "school": "conjuration",
 
-        "castTime": ["re", null, "falling 30ft. or more"],
-        "range": "s",
+        "castTime": {
+            "amount": 1,
+            "time": "reaction",
+            "condition": "you fall 30ft. or more"
+        },
+        "range": "self",
         "comp": [true, true, "a cicada"],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -373,10 +460,17 @@
         "level": 1,
         "school": "evocation",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, false],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -393,10 +487,15 @@
         "level": 0,
         "school": "transmutation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -428,10 +527,15 @@
         "level": 0,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "120ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -451,10 +555,15 @@
         "level": 1,
         "school": "evocation",
 
-        "castTime": ["a"],
-        "range": "s",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -471,10 +580,15 @@
         "level": 3,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "150ft.",
         "comp": [true, true, "a tiny ball of bat guano and sulfur"],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -491,10 +605,15 @@
         "level": 0,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "120ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -511,10 +630,16 @@
         "level": 4,
         "school": "evocation",
 
-        "castTime": ["a"],
-        "range": "s",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
         "comp": [true, true, "a bit of phosphorus, or a firefly"],
-        "duration": ["m", 10],
+        "duration": {
+            "amount": 10,
+            "time": "minute"
+        },
         
         "desc": [
             {
@@ -537,10 +662,16 @@
         "level": 1,
         "school": "conjuration",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "120ft.",
         "comp": [true, true, false],
-        "duration": ["h", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
         
         "desc": [
             {
@@ -557,10 +688,16 @@
         "level": 1,
         "school": "divination",
 
-        "castTime": ["m"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "touch",
         "comp": [true, true, false],
-        "duration": ["h", 8],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
         
         "desc": [
             {
@@ -577,10 +714,15 @@
         "level": 1,
         "school": "transmutation",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, "a sprig of mistletoe"],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -600,10 +742,17 @@
         "level": 0,
         "school": "divination",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, false],
-        "duration": ["m", 1, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -620,14 +769,20 @@
         "level": 1,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "120ft.",
         "comp": [true, true, false],
-        "duration": ["ro"],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
         
         "desc": [
             {
-                "desc": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 radiant damage, and they are covered in a dim, mystical glittering light. The next attack roll made against this target before the end of your next turn has advantage."
+                "desc": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 @radiant damage, and they are covered in a dim, mystical glittering light. The next attack roll made against this target before the end of your next turn has advantage."
             }
         ],
         "levels": [4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -640,10 +795,15 @@
         "level": 1,
         "school": "evocation",
 
-        "castTime": ["b"],
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
         "range": "60ft.",
         "comp": [true, false, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -663,7 +823,9 @@
         "castTime": ["re", null, "you are damaged by a creature within 60ft. of you that you can see"],
         "range": "60ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -680,10 +842,17 @@
         "level": 1,
         "school": "enchantment",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, false],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -703,10 +872,17 @@
         "level": 1,
         "school": "enchantment",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, false],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -726,10 +902,15 @@
         "level": 0,
         "school": "conjuration",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [true, true, "a living flea"],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -757,10 +938,15 @@
         "level": 2,
         "school": "abjuration",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -777,10 +963,15 @@
         "level": 0,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "15ft.",
         "comp": [true, false, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -797,10 +988,16 @@
         "level": 0,
         "school": "conjuration",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [true, true, false],
-        "duration": ["m"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
         
         "desc": [
             {
@@ -823,10 +1020,15 @@
         "level": 1,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "120ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -843,10 +1045,15 @@
         "level": 0,
         "school": "transmutation",
 
-        "castTime": ["m"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "touch",
         "comp": [true, true, "two lodestones"],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -866,10 +1073,16 @@
         "level": 0,
         "school": "illusion",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [true, true, "a bit of fleece"],
-        "duration": ["m"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
         
         "desc": [
             {
@@ -895,10 +1108,15 @@
         "level": 0,
         "school": "transmutation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [false, true, false],
-        "duration": ["s"],
+        "duration": {
+            "time": "special"
+        },
         
         "desc": [
             {
@@ -930,10 +1148,15 @@
         "level": 1,
         "school": "transmutation",
 
-        "castTime": ["a"],
-        "range": "s",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
         "comp": [true, true, "a severed finger"],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -953,10 +1176,17 @@
         "level": 1,
         "school": "abjuration",
 
-        "castTime": ["a"],
-        "range": "t",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
         "comp": [true, true, "holy water, or powdered silver and iron, which the spell consumes"],
-        "duration": ["m", 10, true],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -985,14 +1215,19 @@
         "level": 1,
         "school": "necromancy",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
-                "desc": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d8 poison damage and must succeed on a CON saving throw, or is also poisoned until the end of your next turn."
+                "desc": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d8 @poison damage and must succeed on a CON saving throw, or is also poisoned until the end of your next turn."
             }
         ],
         "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -1005,14 +1240,19 @@
         "level": 0,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
-                "desc": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a DEX saving throw or take {*}d8 radiant damage. The target gains no benefit from cover for this saving throw."
+                "desc": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a DEX saving throw or take {*}d8 @radiant damage. The target gains no benefit from cover for this saving throw."
             }
         ],
         "levels": [1, 2, 3, 4],
@@ -1025,10 +1265,16 @@
         "level": 1,
         "school": "abjuration",
 
-        "castTime": ["b"],
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
         "range": "30ft.",
         "comp": [true, true, "a small silver mirror"],
-        "duration": ["m"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
         
         "desc": [
             {
@@ -1048,10 +1294,15 @@
         "level": 0,
         "school": "transmutation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [false, true, false],
-        "duration": ["s"],
+        "duration": {
+            "time": "special"
+        },
         
         "desc": [
             {
@@ -1083,10 +1334,17 @@
         "level": 1,
         "school": "abjuration",
 
-        "castTime": ["b"],
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
         "range": "60ft.",
         "comp": [true, true, "a small parchment with a bit of holy text written on it"],
-        "duration": ["m", 10, true],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -1103,10 +1361,17 @@
         "level": 1,
         "school": "illusion",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, "a bit of fleece"],
-        "duration": ["m", 10, true],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -1129,10 +1394,16 @@
         "level": 1,
         "school": "enchantment",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "90ft.",
         "comp": [false, true, "a pinch of fine sand, rose petals, or a cricket"],
-        "duration": ["m"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
         
         "desc": [
             {
@@ -1152,10 +1423,15 @@
         "level": 0,
         "school": "conjuration",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -1175,10 +1451,15 @@
         "level": 0,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -1195,10 +1476,16 @@
         "level": 0,
         "school": "transmutation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "30ft.",
         "comp": [true, false, false],
-        "duration": ["m"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
         
         "desc": [
             {
@@ -1239,10 +1526,15 @@
         "level": 0,
         "school": "necromancy",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -1259,10 +1551,17 @@
         "level": 9,
         "school": "necromancy",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "240ft.",
         "comp": [false, true, "a hollow crystal orb containing a vacuum"],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -1288,10 +1587,15 @@
         "level": 0,
         "school": "transmutation",
 
-        "castTime": ["b"],
-        "range": "s",
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
         "comp": [false, true, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -1311,20 +1615,26 @@
         "level": 1,
         "school": "conjuration",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, "a piece of string and a bit of wood"],
-        "duration": ["h"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
         
         "desc": [
             {
-                "desc": "This spell creates an invisible, mindless, shapeless, Medium-size force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, a Strength of 2, and it cannot attack. If it drops to 0 hit points, the spell ends."
+                "desc": "This spell creates an invisible, mindless, shapeless, Medium-size force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has 10 AC, 1 hitpoint, a STR score of 2, and it cannot attack. If it drops to 0 hitpoints, the spell ends."
             },
             {
-                "desc": "Once on each of your turns as a bonus action, you may mentally command the servant to move up to 15 feet and interact with an object. The servant is able to perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command."
+                "desc": "Once on each of your turns as a bonus action, you may mentally command the servant to move up to 15ft. and interact with an object. The servant is able to perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command."
             },
             {
-                "desc": "If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends."
+                "desc": "If you command the servant to perform a task that would move it more than 60ft. away from you, the spell ends."
             }
         ],
         "levels": null,
@@ -1337,10 +1647,15 @@
         "level": 0,
         "school": "enchantment",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, false, false],
-        "duration": ["i"],
+        "duration": {
+            "time": "instant"
+        },
         
         "desc": [
             {
@@ -1357,10 +1672,17 @@
         "level": 4,
         "school": "evocation",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "120ft.",
         "comp": [true, true, "a small piece of phosphorus"],
-        "duration": ["m", null, true],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
         
         "desc": [
             {
@@ -1383,10 +1705,16 @@
         "level": 2,
         "school": "enchantment",
 
-        "castTime": ["a"],
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
         "range": "60ft.",
         "comp": [true, true, false],
-        "duration": ["m", 10],
+        "duration": {
+            "amount": 10,
+            "time": "minute"
+        },
         
         "desc": [
             {
@@ -1399,6 +1727,32 @@
         "levels": null,
         
         "lists": ["bard", "cleric", "paladin"],
+        "source": "Player's Handbook"
+    },
+    "green-flame-blade": {
+        "name": "Green-Flame Blade",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "TBA",
+        "comp": [false, false, false],
+        "duration": {},
+        
+        "desc": [
+            {
+                "desc": "TBA"
+            },
+            {
+                "desc": "TBA"
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["TBA"],
         "source": "Player's Handbook"
     }
 }
