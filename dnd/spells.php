@@ -22,6 +22,9 @@ foreach ($spells as $spell) {
     if (!in_array($spell["school"], $schools)) {
         $schools[] = $spell["school"];
     }
+    uasort($schools, function ($a, $b) {
+    return strcmp($a, $b);
+});
 }
 
 // --
