@@ -63,20 +63,43 @@ function filterSpell () {
         ];
         let hidden = false
 
-        if (wl.length > 0) {
-            hidden = true;
-            if (wl.every(filter => prop.includes(filter))) {
-                hidden = false;
+        let operand = getLogicOp();
+
+
+        if (operand == "and") {
+            if (wl.length > 0) {
+                hidden = true;
+                if (wl.every(filter => prop.includes(filter))) {
+                    hidden = false;
+                }
+            }
+
+            if (!name.includes(search)) {
+                hidden = true;
+            }
+            
+            if (bl.some(filter => prop.includes(filter))) {
+                hidden = true;
+            }
+        } else if (operand == "or") {
+            hidden = false;
+
+            if (wl.length > 0) {
+                hidden = true;
+                if (wl.some(filter => prop.includes(filter))) {
+                    hidden = false;
+                }
+            }
+
+            if (!name.includes(search)) {
+                hidden = true;
+            }
+
+            if (bl.some(filter => prop.includes(filter))) {
+                hidden = true;
             }
         }
-
-        if (!name.includes(search)) {
-            hidden = true;
-        }
         
-        if (bl.some(filter => prop.includes(filter))) {
-            hidden = true;
-        }
 
         $(this).toggleClass("d-none", hidden);
     });
@@ -169,3 +192,14 @@ $(document).on("keydown", function(e) {
         });
     }
 });
+
+$(".classlist-andor").click(function () {
+    $(".classlist-andor").removeClass("active");
+    $(this).addClass("active");
+
+    filterSpell();
+});
+
+function getLogicOp() {
+    return $(".classlist-andor.active").data("id");
+}

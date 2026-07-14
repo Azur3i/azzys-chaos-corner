@@ -60,12 +60,12 @@ foreach ($classes as $x => $class) {
                                 <div class="d-flex row justify-content-center align-items-center" style="margin: 0;">
                                     <p class="md title align-items-center col-auto" style="height: 3rem;">Classlists</p>
                                     <div class="col-auto d-flex">
-                                        <a class="button-switch sm andor" data-id="classlist-andor">AND</a>
-                                        <a class="button-switch sm andor" data-id="classlist-andor">OR</a>
+                                        <a class="button-switch sm andor classlist-andor active" data-id="and">AND</a>
+                                        <a class="button-switch sm andor classlist-andor" data-id="or">OR</a>
                                     </div>
                                 </div>
                                 <?php foreach ($casters as $name => $caster): ?>
-                                    <a class="button-toggle-2 col-5 spell-toggle toggle-classlist toggle sm" id="<?= $name ?>"><?= $caster["name"] ?></a>
+                                    <a class="button-toggle-2 col-5 spell-toggle toggle-classlist toggle sm" id="<?= $name ?>" data-id="classlist"><?= $caster["name"] ?></a>
                                 <?php endforeach; ?>
                             </div>
                             <div class="col row pink justify-content-center">

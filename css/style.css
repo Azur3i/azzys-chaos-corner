@@ -321,6 +321,16 @@ a {
     margin-left: 0;
 }
 
+.button-switch.hover {
+    background-color: rgb(var(--color) / 0.7);
+    color: rgb(var(--black));
+}
+
+.button-switch.active {
+    background-color: rgb(var(--color)) !important;
+    color: rgb(var(--black));
+}
+
 .button:hover,
 .button.checked {
     --bg-opac: 1;
