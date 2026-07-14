@@ -1,11 +1,8 @@
 <?php 
+
 define("ROOT",  __DIR__ . "/..");
 $classes = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
-$types = [
-    "Full casters" => "full",
-    "Half casters" => "half",
-    "Martial" => "none"
-]
+
 ?>
 
 <?php include ROOT . "/tpl/header.php"; ?>
@@ -28,11 +25,13 @@ $types = [
                                 <?php $id = "sbcls-$i"; ?>
                                 <div class="accordion-item blue low-opac">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed"
+                                        <button class="accordion-button collapsed subclass-accordion"
                                                 type="button"
                                                 data-bs-toggle="collapse"
-                                                data-bs-target="#<?= $id ?>">
-                                            <?= $subclass["name"]; ?>
+                                                data-bs-target="#<?= $id ?>"
+                                                style="grid-template-columns: 1fr auto;">
+                                            <span><?= $subclass["name"]; ?></span>
+                                            <span class="sm ms-auto" style="opacity: 0.7;"><?= $subclass["source"]?></span>
                                         </button>
                                     </h2>
 

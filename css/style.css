@@ -374,6 +374,10 @@ button.accordion-button:hover {
     transition: 0.2s ease-in-out;
 }
 
+.subclass-accordion::after {
+    margin-left: 3rem;
+}
+
 .accordion-item { 
     --bs-accordion-bg: transparent;
     --bs-accordion-border-color: transparent;

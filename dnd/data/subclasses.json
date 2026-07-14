@@ -59,7 +59,8 @@
                         "desc": "Whenever you enter you rage, you may choose a number of willing creatures you can see within 30ft. of you equal to your CON (minimum of 1). You gain 5 temporary hitpoints for each creature that accepts this feature. Until the rage ends, the chosen creatures gain 1d6 bonus damage on attack rolls once per turn."
                     }
                 ]
-            }
+            },
+            "source": "Tasha's Cauldron of Everything"
         }
     },
     "bard": {
@@ -88,7 +89,8 @@
                         "desc": "Your appearance permanently gains an otherworldy aspect that makes you look more lovely and fierce. As a bonus action, you may assume a magically majestic prescence for 1 minute, or until you are incapacitated. For the duration, whenever any creature tries to attack you for the first time on a turn, the attacker must make a CHA saving throw against your spell save DC. On a failed save, it cannot attack you on this turn, and it must choose a new target for its attack, or the attack is wasted. On a successful save, it may attack you on this turn, but it has disadvantage on any saving throw it makes against your spells on your next turn. You may use this feature once per short rest."
                     }
                 ]
-            }
+            },
+            "source": "Xanathar's Guide to Everything"
         },
         "college-of-valor": {
             "name": "College of Valor",
@@ -119,7 +121,8 @@
                         "desc": "You have mastered the art of weaving spellcasting and weapon use into a single, harmonious act. When you use your action to cast a bard spell, as a bonus action, you may make a weapon attack."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "blood-hunter": {},
@@ -164,7 +167,8 @@
                         "desc": "You have learned to use magic to alter your physical form in more subtle ways. You may cast the @alter self spell at will."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "paladin": {
@@ -253,7 +257,8 @@
                         "desc": "As an action, you may emenate an aura of sunlight. For 1 minute, bright light shines from you in a 30ft. radius, and dim light in another 30ft. Whenever an enemy creature starts its turn in the bright light, the creature takes 10 @radiant damage. Additionally, for the duration, you gain advantage on saving throws against spells cast by fiends or undead. You may use this feature once per long rest."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "fighter": {},
@@ -335,7 +340,8 @@
                         ]
                     }
                 ]
-            }
+            },
+            "source": "Tasha's Cauldron of Everything"
         },
         "way-of-the-drunken-master": {
             "name": "Way of the Drunken Master",
@@ -386,7 +392,8 @@
                         "type": "list"
                     }
                 ]
-            }
+            },
+            "source": "Xanathar's Guide to Everything"
         }
     },
     "oracle": {},
@@ -478,7 +485,8 @@
                         "desc": "You gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster. Immediately after a creature casts a spell that targets you, or includes you in its area of effect, you may use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failure, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level, and of a level you can cast. It does not have to be a wizard spell. For the next 8 hours, you know this spell, and may cast it using your spell slots. The creature you stole the spell from cannot cast this spell until these 8 hours have passed. You may use this feature once per long rest."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         },
         "assassin": {
             "name": "Assassin",
@@ -515,7 +523,8 @@
                         "desc": "You become a master of instant death. When you attack and hit a creature that is surprised, it must succeed on a CON saving throw (DC 8 + your DEX + your proficiency bonus). On a failed save, the damage your attack deals against the creature is doubled."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         },
         "thief": {
             "name": "Thief",
@@ -564,7 +573,8 @@
                         "desc": "On the first round of any combat, you may make two turns. You take your first turn at your normal initiative, and your second turn at your initiative - 10. You cannot use this feature if you are surprised."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "sorcerer": {
@@ -647,7 +657,8 @@
                         "desc": "As a bonus action, you may spend 6 sorcery points to transform yourself into a shadowy form. In this form, you gain resistance to all damage except @force and @radiant damage, and you may move through other creatures and objects as if they were difficult terrain. You take 5 @force damage if you end your turn inside an object. This form lasts for 1 minute, until you are incapacitated or die, or if you dismiss it as a bonus action."
                     }
                 ]
-            }
+            },
+            "source": "Xanathar's Guide to Everything"
         }
     },
     "warlock": {
@@ -800,7 +811,8 @@
                         ]
                     }
                 ]
-            }
+            },
+            "source": "Asmodeus: King of Hell"
         },
         "the-hexblade": {
             "name": "The Hexblade",
@@ -865,7 +877,8 @@
                         "desc": "You may spread your hexblade's curse from creature to creature. Whenever the creature cursed by your hexblade's curse feature dies, you may apply the curse to a different creature you can see within 30ft. of you, provided you aren't incapacitated. When you apply the curse in this way, you do not regain hitpoints from the death of the previously cursed creature."
                     }
                 ]
-            }
+            },
+            "source": "Xanathar's Guide to Everything"
         },
         "the-fiend": {
             "name": "The Fiend",
@@ -914,7 +927,8 @@
                         "desc": "Whenever you hit a creature with an attack, you may use this feature to instantly transport the target through the 9 hells. The creature disappears and hurtles through a nightmarish landscape. At the end of your next turn, the target returns to the nearest unoccupied space to where it previously was. If the target is not a fiend, the target takes 10d10 @psychic damage. You may use this trait once every long rest."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "wizard": {
@@ -968,7 +982,8 @@
                         "desc": "You may add your INT (minimum of +1) to the damage of your melee weapon attacks while your Bladesong is active."
                     }
                 ]
-            }
+            },
+            "source": "Tasha's Cauldron of Everything"
         },
         "chronurgy-magic": {
             "name": "Chronurgy Magic",
@@ -1001,7 +1016,8 @@
                         "desc": "You may peer through possible futures and magically pull one of them into events around you, ensuring a particular outcome. Whenever you or a creature you can see within 60ft. of you makes an attack roll, ability check or saving throw, you may use your reaction to ignore the die roll and decide whether the number rolled is the minimum needed to succeed, or one less than that number (your choice)."
                     }
                 ]
-            }
+            },
+            "source": "Explorer's Guide to Wildemount"
         },
         "school-of-abjuration": {
             "name": "School of Abjuration",
@@ -1038,7 +1054,8 @@
                         "desc": "You gain advantage on saving throws against spells, and gain resistance to the damage of spells."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         },
         "school-of-conjuration": {
             "name": "School of Conjuration",
@@ -1075,7 +1092,8 @@
                         "desc": "Any creature that you summon or create with a conjuration spell has 30 temporary hitpoints."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         },
         "school-of-divination": {
             "name": "School of Divination",
@@ -1131,7 +1149,8 @@
                         "desc": "The visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You may roll 3d20 for your portent feature."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         },
         "school-of-necromancy": {
             "name": "School of Necromancy",
@@ -1168,7 +1187,8 @@
                         "desc": "As an action, you may choose 1 undead that you can see within 60ft. of you. That creature must succeed on a CHA saving throw against your wizard spell save DC. On a failure, it becomes friendly to you, and obeys your commands until you use this feature again. On a success, you cannot use this feature on that creature again. Intelligent undead are harder to control in this way. If the target has an INT score of 8 or higher, it gains advantage on the saving throw. If the target has an INT score of 12 or higher, it may repeat the saving throw at the end of every hour, ending the effect on itself on a success."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     }
 }

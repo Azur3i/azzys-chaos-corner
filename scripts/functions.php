@@ -92,13 +92,17 @@ function renderAbility($ability, $z=0, $cls=null) {
                 <?php foreach ($sbclss[$cls] as $id => $sbcls): ?>
                     <div class="accordion-item blue low-opac">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed"
+                            <button class="accordion-button collapsed subclass-accordion"
                                     type="button"
                                     data-bs-toggle="collapse"
-                                    data-bs-target="#<?= $id ?>">
-                                <?= $sbcls["name"]; ?>
+                                    data-bs-target="#<?= $id ?>"
+                                    style="grid-template-columns: 1fr auto;">
+                                <span><?= $sbcls["name"]; ?></span>
+                                <span class="sm ms-auto" style="opacity: 0.7;"><?= $sbcls["source"]?></span>
                             </button>
                         </h2>
+
+                        
 
                         <div id="<?= $id ?>"
                             class="accordion-collapse collapse"
