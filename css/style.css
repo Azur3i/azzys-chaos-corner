@@ -375,7 +375,7 @@ button.accordion-button:hover {
 }
 
 .subclass-accordion::after {
-    margin-left: 3rem;
+    margin-left: 5%;
 }
 
 .accordion-item { 
