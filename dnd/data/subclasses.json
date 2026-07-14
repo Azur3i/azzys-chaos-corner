@@ -170,7 +170,7 @@
     "paladin": {
         "oath-of-devotion": {
             "name": "Oath of Devotion",
-            "desc": ["The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue and order. Sometimes called cavaliers, white knights or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good, and use their gods' tenents as the measure of their devotion. They hold angels – the perfect servants of good – as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."],
+            "desc": ["The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue and order. Sometimes called cavaliers, white knights or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good, and use their gods' tenents as the measure of their devotion. They hold angels - the perfect servants of good - as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."],
             "magic": {
                 "caster": "none"
             },
@@ -651,6 +651,157 @@
         }
     },
     "warlock": {
+        "the-catalyst": {
+            "name": "The Catalyst",
+            "desc": ["Stumbling upon ancient ruins, or research of ancient texts and scripts, you stumbled upon a seemingly well-maintained crypt, housing an uncannily unblemished statue of gold grandeur. Equally uncanny, it granted you an enticing offer: an eternal life of power. Either by accident, or by choice, you granted access to your body and soul to C'ta-rizh the Accumulator, a devilish entity older than script and man, more knowledgeable than many a deity. It bides its time - waiting, collecting, preserving - to achieve its goals, now with you in its ranks, whether you want to or not."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Expanded Spell List",
+                        "desc": "The following spells are added to the warlock spell list for you:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Spell level", "Spells"],
+                                ["1st", "@compelled duel, @sanctuary"],
+                                ["2nd", "@blur, @spike growth"],
+                                ["3rd", "@armaments of annihilation, @pulse wave"],
+                                ["4th", "@compulsion, @summon construct"],
+                                ["5th", "@antilife shell, @destructive wave"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Mechanized Infantry",
+                        "desc": "Through this pact with the Preserver, you have become partially mechanical. Your body gains the following properties:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Your soul is not fully present, and your body has been put in a form of industrial stasis. You cannot age – naturally, nor magically – and cannot die of old age."
+                            },
+                            {
+                                "desc": "Your heart has been replaced by a magical energy core. This core may act as the arcane focus for your Warlock spells. Losing access to magic – be it through an antimagic field, the wish spell, divine intervention, or other means – will dispel your heart for the duration, and cause you to fall unconscious. Instantaneous spells and effects will stop your heart momentarily, causing you to fall prone. A spell needs to be of a level equal to half your Warlock level, rounded up, to successfully dispel your heart. If you are unconscious in this way for more than 1d4 + 1 days in succession, you will die."
+                            },
+                            {
+                                "desc": "You gain resistance against @psychic damage."
+                            },
+                            {
+                                "desc": "Additionally, choose one of the following enhancements:",
+                                "type": "list",
+                                "content": [
+                                    {
+                                        "name": "Chest",
+                                        "desc": "You gain +1 to CON saving throws, and +1 AC."
+                                    },
+                                    {
+                                        "name": "Legs",
+                                        "desc": "You gain +1 to DEX saving throws, and +10ft. movement speed."
+                                    },
+                                    {
+                                        "name": "Eyes",
+                                        "desc": "You gain +1 to WIS saving throws, and 30ft. of darkvision. If you already have darkvision, the range of your darkvision increases by 30ft. instead."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Enlister, Constructor",
+                        "desc": "When you kill a creature, you may use your reaction to constrict their soul into steel, enlisting them into your master's legions as your servant. The creature is resurrected into an automaton. Automatons have their own initiative. An automaton takes 10gp per week to maintain, or it'll break down. A destroyed automaton will turn to dust. You may have one automaton at a time. If you attempt to make more automatons than you are able to, the oldest automaton will turn to dust. Statblock will be added later."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Rite of Preservation",
+                        "desc": "As an action, you may allow your patron to partially possess your neural networks. You transform: your nerves branch into steel, your hair (if you have it) drapes into fine copper wires, your bones become adamantine rods, and your skin turns into a bronzed alloy sheet. Your body hardens, and you become an immovable statue. You may use this trait once every long rest. For 1 minute, you gain the following effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Your speed becomes 0ft., you cannot benefit from any bonus to your speed, and you cannot make weapon attacks."
+                            },
+                            {
+                                "desc": "Your form becomes absolute, and you cannot be affected by spells that would change your form or forcibly move/tilt your body (such as the @polymorph, @enlarge/reduce or @gust spells), unless of 5th level or higher. A creature attempting to move your body must succeed on a STR check with a DC equal to 2 times your AC."
+                            },
+                            {
+                                "desc": "Weapon and spell attacks that hit but are within 5 of your AC deal damage as if you have resistance to the damage. You gain advantage to CON saving throws, but disadvantage to DEX saving throws."
+                            },
+                            {
+                                "desc": "You lose all your regular senses, including sight, hearing and smell, instead gaining blindsight with a range equal to the range of your darkvision, or 60ft. (whichever is larger), as well as 20ft. truesight. For the duration, you don't need to breathe, but cannot speak."
+                            },
+                            {
+                                "desc": "You may ignore somatic and verbal components for your Warlock spells."
+                            },
+                            {
+                                "desc": "Once on your turn, you may use your bonus action to empower a creature within 30ft. of you. The next time that creature casts a spell in the next round, the spell's effects increase as if it was cast 1 level higher."
+                            },
+                            {
+                                "desc": "You may cast the @magic missile spell once per turn, at 1st level, without expending a spell slot."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Uniformity",
+                        "desc": "You may communicate telepathically with any construct within 30ft. of you. Constructs are generally biased to view you as friendly. You gain advantage on CHA skill checks made against constructs."
+                    },
+                    {
+                        "name": "Rite of Preservation",
+                        "desc": "You gain the following additional effects while transformed:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You may use this trait 2 times every long rest. Every usage past the first results in a weakened rite, preventing the use of bonus actions and reactions."
+                            },
+                            {
+                                "desc": "You gain the ability to telepathically communicate with a number of non-construct creatures up to your CHA modifier. This has a range of 120ft."
+                            },
+                            {
+                                "desc": "You may call upon your patron to further solidify your outer shell. You may expend 1 spell slot and gain temporary hitpoints equal to 5 times the level of the spell slot."
+                            },
+                            {
+                                "desc": "ou cannot be affected by spells that would change your form or forcibly move/tilt your body, unless of 7th level or higher."
+                            },
+                            {
+                                "desc": "You may ignore somatic and verbal components for your Warlock spells."
+                            },
+                            {
+                                "desc": "Once on your turn, you may use your bonus action to empower a creature within 30ft. of you. The next time that creature casts a spell in the next round, the spell's effects increase as if it was cast 1 level higher."
+                            },
+                            {
+                                "desc": "You may cast the @magic missile spell once per turn, at 1st level, without expending a spell slot."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Enlister, Constructor",
+                        "desc": "You may maintain 2 automatons at a time, instead of 1."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Rite of Preservation",
+                        "desc": "You gain the following additional effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You may use this trait 3 times every long rest. Every usage past the first results in a weakened rite, preventing the use of bonus actions and reactions."
+                            },
+                            {
+                                "desc": "At the start of the rite, choose up to 3 spells of 5th level or lower. While the rite lasts, you and the automatons from your enlister, constructor feature gain immunity to the damage and effects of these spells."
+                            },
+                            {
+                                "desc": "You cannot be affected by spells that would change your form or forcibly move/tilt your body, unless of 9th level."
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
         "the-hexblade": {
             "name": "The Hexblade",
             "desc": ["You have made your pact with a mysterious entity from the Shadowfell - a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.", "Because the Raven Queen is known to have forged the first of these weapons, many sages speculate that she and the force are one and that the weapons, along with hexblade warlocks, are tools she uses to manipulate events on the Material Plane to her inscrutable ends."],
