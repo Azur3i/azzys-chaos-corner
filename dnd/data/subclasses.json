@@ -775,16 +775,7 @@
                                 "desc": "You may call upon your patron to further solidify your outer shell. You may expend 1 spell slot and gain temporary hitpoints equal to 5 times the level of the spell slot."
                             },
                             {
-                                "desc": "ou cannot be affected by spells that would change your form or forcibly move/tilt your body, unless of 7th level or higher."
-                            },
-                            {
-                                "desc": "You may ignore somatic and verbal components for your Warlock spells."
-                            },
-                            {
-                                "desc": "Once on your turn, you may use your bonus action to empower a creature within 30ft. of you. The next time that creature casts a spell in the next round, the spell's effects increase as if it was cast 1 level higher."
-                            },
-                            {
-                                "desc": "You may cast the @magic missile spell once per turn, at 1st level, without expending a spell slot."
+                                "desc": "You cannot be affected by spells that would change your form or forcibly move/tilt your body, unless of 7th level or higher."
                             }
                         ]
                     },
