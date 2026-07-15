@@ -23,7 +23,7 @@ $classes = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), tr
                             <?php foreach ($subclasses as $sbclsName => $subclass): ?>
                             
                                 <?php $id = "sbcls-$i"; ?>
-                                <div class="accordion-item blue low-opac">
+                                <div class="accordion-item blue low-opac shadow-lg">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed subclass-accordion"
                                                 type="button"

@@ -8,7 +8,7 @@ require_once ROOT . "/scripts/functions.php";
     <?php foreach ($abilities as $ability):
         $id = "level-$level-" . strtolower(preg_replace("/[^a-z0-9]/i", "", $ability["name"])); ?>
 
-        <div class="accordion-item blue low-opac">
+        <div class="accordion-item blue low-opac shadow-lg">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed"
                         type="button"
