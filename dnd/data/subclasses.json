@@ -911,16 +911,58 @@
                         ]
                     }
                 ],
-                "10": [
+                "14": [
                     {
                         "name": "Shadow Walk",
                         "desc": "When you are in dim light or darkness, as a bonus action, you are able to teleport up to 120ft. to an unoccupied space you can see that is also in dim light or darkness."
                     }
                 ],
-                "14": [
+                "18": [
                     {
                         "name": "Umbral Form",
                         "desc": "As a bonus action, you may spend 6 sorcery points to transform yourself into a shadowy form. In this form, you gain resistance to all damage except @force and @radiant damage, and you may move through other creatures and objects as if they were difficult terrain. You take 5 @force damage if you end your turn inside an object. This form lasts for 1 minute, until you are incapacitated or die, or if you dismiss it as a bonus action."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        },
+        "storm-sorcery": {
+            "name": "Storm Sorcery",
+            "desc": ["Your innate magic comes from the power of elemental air. Many with this power can trace their magic back to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so powerful that folk still tell stories of it, or your lineage might include the influence of potent air creatures such as vaati or djinn. Whatever the case, the magic of the storm permeates your being.","Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Wind Speaker",
+                        "desc": "The arcane magic you command is infused with elemental air. You can speak, read, and write Primordial. Knowing this language allows you to understand and be understood by those who speak its dialects: Aquan, Auran, Ignan, and Terran."
+                    },
+                    {
+                        "name": "Tempestuous Magic",
+                        "desc": "As a bonus action, you may cause whirling gusts of elemental air to briefly surround you, immediately before or after you cast a spell of 1st level or higher. Doing so allows you to fly up to 10ft. without provoking opportunity attacks."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Heart of the Storm",
+                        "desc": "You gain resistance to @lightning and @thunder damage. Additionally, whenever you start casting a spell of 1st level or higher that deals @lightning or @thunder damage, stormy magic erupts from you. This eruption causes creatures of your choice that you can see within 10ft. of you to take @lightning or @thunder damage, your choice, equal to half your sorcerer level."
+                    },
+                    {
+                        "name": "Storm Guide",
+                        "desc": "You gain the ability to subtly control the weather around you. If it is raining, as an action, you may cause the rain to stop falling in a 20ft. radius sphere centered on you. You can end this effect as a bonus action. If it is windy, as a bonus action, you may choose each round which direction the wind blows in a 100ft. radius sphere centered on you. The wind blows in that direction until the end of your next turn. This feature does not alter the speed of the wind."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Storm's Fury",
+                        "desc": "As a reaction whenever you are hit by a melee attack, you may deal @lightning damage equal to your sorcerer level to the attacker, and force it to succeed on a STR saving throw or be pushed in a straight line up to 20ft. away from you."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Wind Soul",
+                        "desc": "You gain immunity to @lightning and @thunder damage. You gain a magical flying speed of 60ft. As an action, you may reduce your flying speed to 30ft. for 1 hour and choose a number of creatures within 30ft. of you equal to 3 + your CHA and give the chosen creatures a magical flying speed of 30ft. for 1 hour. You may do so once every short rest."
                     }
                 ]
             },
