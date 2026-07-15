@@ -185,6 +185,73 @@
         }
     },
     "druid": {
+        "circle-of-spores": {
+            "name": "Circle of Spores",
+            "desc": ["Druids of the Circle of Spores find beauty in decay. They see within mold and other fungi the ability to transform lifeless material into abundant, albeit somewhat strange, life. These druids believe that life and death are parts of a grand cycle, with one leading to the other and then back again. Death isn't the end of life, but instead a change of state that sees life shift into a new form.", "Druids of this circle have a complex relationship with the undead. They see nothing inherently wrong with undeath, which they consider to be a companion to life and death. But these druids believe that the natural cycle is healthiest when each segment of it is vibrant and changing. Undead that seek to replace all life with undeath, or that try to avoid passing to a final rest, violate the cycle and must be thwarted."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Circle Spells",
+                        "desc": "Your symbiotic link to fungi and your ability to tap into the cycle of life and death grants you access to certain spells. You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Druid level", "Spells"],
+                                ["2nd", "@chill touch"],
+                                ["3rd", "@blindness/deafness, @gentle repose"],
+                                ["5th", "@animate dead, @gaseous form"],
+                                ["7th", "@blight, @confusion"],
+                                ["9th", "@cloudkill, @contagion"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Halo of Spores",
+                        "desc": "You are surrounded by invisible, necrotic spores that are harmless until you unleash them on a creature nearby. Whenever a creature you can see moves into a space within 10ft. of you or starts its turn there, you may use your reaction to force the creature to succeed on a CON saving throw, or take 1d4 @necrotic damage."
+                    },
+                    {
+                        "name": "Symbiotic Entity",
+                        "desc": "You gain the ability to channel magic into your spores. As an action, you may expend a use of your wild shape feature to awaken those spores, rather than transforming into a beast form. Whenever you do, you gain 4 temporary hitpoints for each level you have in this class. This lasts for 10 minutes, until you lose all temporary hitpoints, or until you use your wild shape feature again. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Whenever you deal damage with your halo of spores feature, you may roll the damage die a second time and add it to the total."
+                            },
+                            {
+                                "desc": "Your melee weapon attacks deal a bonus 1d6 @necrotic damage on a hit."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Fungal Infestation",
+                        "desc": "Your spores gain the ability to infest a corpse and animate it. If a beast or a humanoid that is Small or Medium dies within 10ft. of you, you may use your reaction to animate it, causing it to stand up immediately with 1 hitpoint. The creature uses the zombie statblock (from the Monster Manual). It remains animate for 1 hour, after which time it collapses and dies. In combat, the zombie's turn comes immediately after yours. It obeys your mental commands, and the only action it may take is the @attack action, making one melee attack. You may use this feature a number of times equal to your WIS (minimum of 1) every long rest."
+                    },
+                    {
+                        "name": "Halo of Spores",
+                        "desc": "Your halo of spores deals 1d6 @necrotic damage."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Spreading Spores",
+                        "desc": "You gain the ability to seed an area with deadly spores. As a bonus action while your symbiotic entity feature is active, you may hurl spores up to 30ft. away, where they swirl in a 10ft. cube for 1 minute. Whenever a creature moves into the cube or starts its turn there, it must succeed on a CON saving throw, or take your halo of spores damage. A creature may take this damage no more than once per turn. While the cube of spores persists, you cannot use your halo of spores reaction. The spores disappear early if you use this feature again, if you dismiss them as a bonus action, or if your symbiotic entity feature is no longer active."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Fungal Body",
+                        "desc": "The fungal spores in your body alter you. You cannot be blinded, deafened, frightened, or poisoned, and any critical hit against you counts as a normal hit instead, unless you're incapacitated."
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        },
         "circle-of-the-moon": {
             "name": "Circle of the Moon",
             "desc": ["Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid. Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood."],
