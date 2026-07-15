@@ -526,6 +526,65 @@
             },
             "source": "Player's Handbook"
         },
+        "phantom": {
+            "name": "Phantom",
+            "desc": ["Many rogues walk a fine line between life and death, risking their own lives and taking the lives of others. While adventuring on that line, some rogues discover a mystical connection to death itself. These rogues take knowledge from the dead and become immersed in negative energy, eventually becoming like ghosts. Thieves' guilds value them as highly effective information gatherers and spies.", "Many shadar-kai of the Shadowfell are masters of these macabre techniques, and some are willing to teach this path. In places like Thay in the Forgotten Realms and Karrnath in Eberron, where many necromancers practice their craft, a Phantom can become a wizard's confidant and right hand. In temples of gods of death, the Phantom might work as an agent to track down those who try to cheat death and to recover knowledge that might otherwise be lost to the grave."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Whispers of the Dead",
+                        "desc": "Echoes of those who have died cling to you. Whenever you finish a short rest, you may gain one skill or tool proficiency of your choice, as a ghostly presence shares its knowledge with you. You lose this proficiency when you use this feature to choose a different proficiency."
+                    },
+                    {
+                        "name": "Wails from the Grave",
+                        "desc": "As you nudge someone closer to the grave, you may channel the power of death to harm someone else as well. Immediately after you deal your sneak attack damage to a creature on your turn, you may target a secord creature that you can see within 30ft. of the first creature. This deals @necrotic damage equal to half the number of sneak attack dice for your level, rounded up. You may use this feature an amount of times equal to your proficiency bonus every long rest."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Tokens of the Departed",
+                        "desc": "When a life ends in your presence, you're able to snatch a token from the departing soul; a sliver of its life essence that takes physical form. As a reaction when a creature you can see dies within 30ft. of you, you may open your free hand and cause a Tiny trinket to appear there; a soul trinket. The DM determines the trinket's form or has you roll on the Trinkets table in the Player's Handbook to generate it. You may have a maximum number of soul trinkets equal to your proficiency, and you cannot create one while at your maximum. You may use soul trinkets in the following ways:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "While a soul trinket is on your person, you gain advantage on death saving throws and CON saving throws, for your vitality is enhanced by the life essence within the trinket."
+                            },
+                            {
+                                "desc": "Whenever you deal sneak attack damage on your turn, you may destroy one of your soul trinkets that's on your person to immediately use your wails of the grave feature without expending a use."
+                            },
+                            {
+                                "desc": "As an action, you may destroy one of your soul trinkets, no matter where it's located. Whenever you do so, you may ask the spirit associated with the trinket one question. The spirit appears to you and answers in a language it knew in life. It's under no obligation to be truthful, and it answers as concisely as possible, eager to be free. The spirit knows only what it knew in life, as determined by the DM."
+                            }
+                        ]
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Ghost Walk",
+                        "desc": "You may partially phase into the realm of the dead, becoming like a ghost yourself. As a bonus action, you assume a spectral form. While in this form, you gain a flying speed of 10ft., may hover, and attack rolls have disadvantage against you. You may move through creatures and objects as if they were difficult terrain, taking 1d10 @force damage if you end your turn inside a creature or object. You stay in this form for 10 minutes, or until you end it as a bonus action. You may use this feature once per long rest. You may also destroy one of your soul trinkets as part of the bonus action you use to activate ghost walk to use this feature without expending a use."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Death's Friend",
+                        "desc": "Your association with death has become so close that you gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Whenever you use your wails of the grave feature, you may now deal the @necrotic damage to both the first and second creature."
+                            },
+                            {
+                                "desc": "At the end of a long rest, a soul trinket appears in your hand if you don't have any, as the spirits of the dead are drawn to you."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        },
         "swashbuckler": {
             "name": "Swashbuckler",
             "desc": ["You focus your training on the art of the blade, relying on speed, elegance, and charm in equal parts. While some warriors are brutes clad in heavy armor, your method of fighting looks almost like a performance. Duelists and pirates typically belong to this archetype.", "A Swashbuckler excels in single combat, and can fight with two weapons while safely darting away from an opponent."],
@@ -536,7 +595,7 @@
                 "3": [
                     {
                         "name": "Fancy Footwork",
-                        "desc": "you learn how to land a strike and then slip away without reprisal. During your turn, if you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn."
+                        "desc": "You learn how to land a strike and then slip away without reprisal. During your turn, if you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn."
                     },
                     {
                         "name": "Rakish Audacity",
