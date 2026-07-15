@@ -261,7 +261,52 @@
             "source": "Player's Handbook"
         }
     },
-    "fighter": {},
+    "fighter": {
+        "samurai": {
+            "name": "Samurai",
+            "desc": ["The Samurai is a fighter who draws on an implacable fighting spirit to overcome enemies. A samurai's resolve is nearly unbreakable, and the enemies in a samurai's path have two choices: yield or die fighting."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiency",
+                        "desc": "You gain proficiency in one of the following skills of your choice: History (INT), Insight (WIS), Performance (CHA), or Persuasion (CHA). Alternatively, you learn one language of your choice."
+                    },
+                    {
+                        "name": "Fighting Spirit",
+                        "desc": "Your intensity in battle is able to shield you, and help you strike true. As a bonus action, you may give yourself advantage on all weapon attack rolls until the end of your current turn. Whenever you do so, you gain 5 temporary hitpoints. You may use this feature three times per long rest."
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Elegant Courtier",
+                        "desc": "Your discipline and attention to detail allow you to excel in social situations. Whenever you make a Persuasion (CHA) check, you gain a bonus equal to your WIS. Your self-control also causes you to gain proficiency in WIS saving throws. If you already have this proficiency, you instead gain proficiency in either INT or CHA saving throws, your choice."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Tireless Spirit",
+                        "desc": "Whenever you roll initiative and have no uses of your fighting spirit feature remaining, you regain one use."
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Rapid Strike",
+                        "desc": "You learn to trade accuracy for swift strikes. Whenever you take the @attack action on your turn and have advantage on an attack roll against one of the targets, you may forego the advantage for that roll to make an additional weapon attack against that target, as part of the same action. You may do so once per turn."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Strength Before Death",
+                        "desc": "Your fighting spirit can delay the grasp of death. Whenever you take damage that reduces you to 0 hitpoints, you may use your reaction to delay falling unconscious and immediately take an extra turn. While you have 0 hitpoints during that extra turn, taking damage causes death saving throw failures as normal, and three death saving throws can still kill you. When the extra turn ends, you fall unconscious if you still have 0 hitpoints. You may use this feature once per long rest."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        }
+    },
     "monk": {
         "way-of-the-astral-self": {
             "name": "Way of the Astral Self",
