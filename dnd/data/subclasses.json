@@ -126,7 +126,64 @@
         }
     },
     "blood-hunter": {},
-    "cleric": {},
+    "cleric": {
+        "grave-domain": {
+            "name": "Grave Domain",
+            "desc": ["Gods of the grave watch over the line between life and death. To these deities, death and the afterlife are a foundational part of the multiverse’s workings. To resist death, or to desecrate the dead’s rest, is an abomination. Deities of the grave include Kelemvor, Wee Jas, the ancestral spirits of the Undying Court, Hades, Anubis, and Osiris. These deities teach their followers to respect the dead and pay them due homage. Followers of these deities seek to put restless spirits to rest, destroy the undead wherever they find them, and ease the suffering of dying creatures. Their magic also allows them to stave off a creature’s death, though they refuse to use such magic to extend a creature’s lifespan beyond its mortal limits."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Cleric level", "Spells"],
+                                ["3rd", "@bane, @false life"],
+                                ["5th", "@gentle repose, @ray of enfeeblement"],
+                                ["9th", "@revivify, @vampiric touch"],
+                                ["13th", "@blight, @death ward"],
+                                ["17th", "@antilife shell, @raise dead"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Circle of Mortality",
+                        "desc": "You gain the ability to manipulate the line between life and death. Whenever you would normally roll one or more dice to restore hitpoints with a spell to a creature at 0 hitpoints, you instead use the highest number possible for each die. Additionally, you learn the @spare the dying cantrip, which does not count against the number of cleric cantrips you know. For you, it has a range of 30ft., and you may cast it as a bonus action."
+                    }
+                ],
+                "2": [
+                    {
+                        "name": "Path to the Grave",
+                        "desc": "You mark another creature's life force for termination. As an action, you choose one creature you can see within 30ft. of you, cursing it until the end of your next turn. The next time a creature hostile to the target hits the target with an attack"
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Sentinel at Death's Door",
+                        "desc": "You gain the ability to impede death's progress. As a reaction when a creature you can see within 30ft. of you suffers a critical hit, you may turn that attack into a normal hit. Any effects triggered by a critical hit are canceled. You may use this feature a number of times equal to your WIS (minimum of 1) every long rest."
+                    }
+                ],
+                "8": [
+                    {
+                        "name": "Potent Spellcasting",
+                        "desc": "You may add your WIS to the damage you deal with any cleric cantrip."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Keeper of Souls",
+                        "desc": "You may seize a trace of vitality from a parting soul and use it to heal the living. Whenever a hostile creature you can see within 30ft. of you, you or a friendly creature of your choice that is within 30ft. of you regains hitpoints equal to the enemy's number of Hit Dice. You may use this feature only if you are not incapacitated. You may use this feature once per turn."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        }
+    },
     "druid": {
         "circle-of-the-moon": {
             "name": "Circle of the Moon",
