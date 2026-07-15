@@ -30,23 +30,17 @@ function checkSubclass (cls, sbcls) {
     )
 };
 
-$(".subclass-check").click(function () {
+$(".subclass-check").click(function (e) {
     let data = $(this).attr("data").split("~");
-    let cls = data[0];
-    let sbcls = data[1];
-    checkSubclass(cls, sbcls);
+
+    history.pushState(null, "", "#" + data[1]);
+    checkSubclass($("h1").data("name"), location.hash.substring(1));
 });
 
 $(function () {
-    let mainClass = $("h1").data("name");
-    let subClass = location.hash.substring(1);
-
-    checkSubclass(mainClass, subClass);
+    checkSubclass($("h1").data("name"), location.hash.substring(1));
 });
 
 $(window).on("hashchange", function () {
-    let mainClass = $("h1").data("name");
-    let subClass = location.hash.substring(1);
-
-    checkSubclass(mainClass, subClass);
+    checkSubclass($("h1").data("name"), location.hash.substring(1));
 });
