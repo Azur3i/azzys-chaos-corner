@@ -1,5 +1,85 @@
 {
-    "artificer": {},
+    "artificer": {
+        "battle-smith": {
+            "name": "Battle Smith",
+            "desc": ["Armies require protection, and someone has to put things back together if defenses fail. A combination of protector and medic, a Battle Smith is an expert at defending others and repairing both materiel and personnel. To aid in their work, Battle Smiths are accompanied by a steel defender, a protective companion of their own creation. Many soldiers tell stories of nearly dying before being saved by a Battle Smith and a steel defender."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Specialism Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Artificer level", "Spells"],
+                                ["3rd", "@heroism, @shield"],
+                                ["5th", "@branding smite, @warding bond"],
+                                ["9th", "@aura of vitality, @conjure barrage"],
+                                ["13th", "@aura of purity, @fire shield"],
+                                ["17th", "@banishing smite, @mass cure wounds"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tool Proficiency",
+                        "desc": "You gain proficiency with smith's tools. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice."
+                    },
+                    {
+                        "name": "Battle Magic",
+                        "desc": "Your combat training and your experiments with magic have paid off in 2 ways. You gain proficiency with martial weapons. Additionally, when you attack with a magic weapon, you may use your INT, instead of STR or DEX, for the attack and damage rolls."
+                    },
+                    {
+                        "name": "Steel Defender",
+                        "desc": "Your tinkering has borne you a faithful companion, a steel defender. It's friendly to you and your companions, and it obeys your commands. See its game statistics in the Steel Defender stat block, which uses your proficiency bonus in severel place. You determine the creature's appearance and whether it has 2 legs or 4; your choice has no effect on its game statistics. In combat, the defender shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the defender can take any action of its choice, not just dodge. If the mending spell is cast on it, it regains 2d6 hitpoints. If it has died within the last hour, you may use your smith's tools and a 1st level spell slot as an action to revive it, provided you are within 5ft. of it. The steel defender returns to life after 1 minute, with all its hitpoints restored. At the end of a long rest, you may create a new steel defender if you have smith's tools with you. If you already have a defender from this feature, the first one immediately perishes. The defender also perishes if you die. Statblock will be added later."
+                    }
+                ],
+                "5": [
+                    {
+                        "name": "Extra Attack",
+                        "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Arcane Jolt",
+                        "desc": "You've learnt new ways to channel arcane energy to harm or heal. When either you hit a target with a magic weapon attack, or your steel defender hits a target, you may channel magical energy through the strike to create one of the following effects. You may use this energy a number of times equal to your INT (minimum of 1) per long rest, but no more than once per turn.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "The target takes an extra 2d6 @force damage."
+                            },
+                            {
+                                "desc": "Choose one creature or object you can see within 30ft. of the target. Healing energy flows into the chosen recipient, restoring 2d6 hitpoints to it."
+                            }
+                        ]
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Improved Defender",
+                        "desc": "Your arcane jolt feature and steel defender become more powerful:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "The extra damage and the healing of your arcane jolt feature both increase to 4d6."
+                            },
+                            {
+                                "desc": "Your steel defender gains a +2 bonus to AC."
+                            },
+                            {
+                                "desc": "Whenever your steel defender uses its deflect attack, the attacker takes @force damage equal to 1d4 + your INT."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        }
+    },
     "barbarian": {
         "path-of-the-beast": {
             "name": "Path of the Beast",
@@ -129,7 +209,7 @@
     "cleric": {
         "grave-domain": {
             "name": "Grave Domain",
-            "desc": ["Gods of the grave watch over the line between life and death. To these deities, death and the afterlife are a foundational part of the multiverse’s workings. To resist death, or to desecrate the dead’s rest, is an abomination. Deities of the grave include Kelemvor, Wee Jas, the ancestral spirits of the Undying Court, Hades, Anubis, and Osiris. These deities teach their followers to respect the dead and pay them due homage. Followers of these deities seek to put restless spirits to rest, destroy the undead wherever they find them, and ease the suffering of dying creatures. Their magic also allows them to stave off a creature’s death, though they refuse to use such magic to extend a creature’s lifespan beyond its mortal limits."],
+            "desc": ["Gods of the grave watch over the line between life and death. To these deities, death and the afterlife are a foundational part of the multiverse's workings. To resist death, or to desecrate the dead's rest, is an abomination. Deities of the grave include Kelemvor, Wee Jas, the ancestral spirits of the Undying Court, Hades, Anubis, and Osiris. These deities teach their followers to respect the dead and pay them due homage. Followers of these deities seek to put restless spirits to rest, destroy the undead wherever they find them, and ease the suffering of dying creatures. Their magic also allows them to stave off a creature's death, though they refuse to use such magic to extend a creature's lifespan beyond its mortal limits."],
             "magic": {
                 "caster": "none"
             },
@@ -383,6 +463,86 @@
                 ]
             },
             "source": "Player's Handbook"
+        },
+        "oath-of-perfection": {
+            "name": "Oath of Perfection",
+            "desc": ["The Oath of Perfection is considered an extremist branch of many religions. Found in the worship of many deities of light, their goal is purification through erasure. A blessed being is one in peak form, ready to be sacrificed to the light in searing radiance and holy justice. Known as annihilators in some groups, sentinels of light in others, they are destroyers, and will erase all that fits the right to be."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Paladin level", "Spells"],
+                                ["3rd", "@protection from evil and good, @sanctuary"],
+                                ["5th", "@lesser restoration, @zone of truth"],
+                                ["9th", "@beacon of hope, @dispel magic"],
+                                ["13th", "@freedom of movement, @guardian of faith"],
+                                ["17th", "@commune, @flame strike"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tenets of Perfection",
+                        "desc": "Though the exact words and strictures of the Oath of Perfection vary, paladins of this oath share these tenets:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Beauty",
+                                "desc": "The world is beautiful, and every creature, no matter how wicked, deserves a chance to be remade in the image of your deity."
+                            },
+                            {
+                                "name": "Sovereignity",
+                                "desc": "You take no orders, and follow no law. Your god's word is your law, and your command."
+                            },
+                            {
+                                "name": "Motion",
+                                "desc": "Never stop moving. Stagnation is death."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Channel Divinity",
+                        "desc": "You gain the following 2 Channel Divinity options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Attuning Mist",
+                                "desc": "As a bonus action, you may surround yourself in a nebula of soothing mist. For the next minute, you gain a 10ft. aura that sheds dim light in its radius. A creature that ends its turn inside this aura recovers 1d4 hitpoints, increased to 2d4 if this creature has more than half their maximum hitpoints remaining. Whenever a creature within melee range that is missing hitpoints regains hitpoints to their maximum, you may use your reaction to make a melee attack against this creature, turning the mist into searing light. If the creature still has its maximum hitpoints remaining when making the attack, on a hit, the damage of this attack is doubled."
+                            },
+                            {
+                                "name": "Spiritual Reduction",
+                                "desc": "Something something bonk bye bye max HP."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Aura of Perfection",
+                        "desc": "Whenever a creature within 10ft. of you that you can see and that has all their hitpoints remaining takes damage, you may either halve or double the damage done to them (your choice). A creature may benefit from this feature from only 1 paladin at a time. Additionally, when targeting a creature in this range with a spell or effect that would recover its hitpoints, the creature recovers the maximum amount that spell or effect can recover if this would put it at its maximum."
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Purity of Consciousness",
+                        "desc": "When you are subjected to an effect that allows you to make a CON saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail. "
+                    }
+                ],
+                "20": [
+                    {
+                        "name": "Erasure",
+                        "desc": "Your divine smite trait deals triple damage against creatures with its maximum hitpoints remaining. This trait only functions if you are at your maximum hitpoints yourself."
+                    }
+                ]
+            },
+            "source": "Asmodeus: King of Hell"
         }
     },
     "fighter": {
