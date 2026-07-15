@@ -1,5 +1,6 @@
 <?php
 $classes = json_decode(file_get_contents(ROOT . "/dnd/data/classes.json"), true);
+$class = $target;
 $target = $classes[$target];
 $levels = [
     [1, 2], [3, 4],
@@ -18,7 +19,7 @@ $levels = [
         >
         <img src="/assets/img/back.png" style="width: 2rem;">
     </a>
-    <h1 class="title"><?= $target["name"] ?></h1>
+    <h1 class="title" data-name="<?= $class ?>"><?= $target["name"] ?></h1>
         <p class="sm title" style="opacity: 0.5;"><i>You must have a <?= implode(" and ", $target["mc-scores"]) ?> score of 13 or higher in order to multiclass in or out of this class.</i></p>
 
     <hr >
