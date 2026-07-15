@@ -726,7 +726,98 @@
         }
     },
     "oracle": {},
-    "ranger": {},
+    "ranger": {
+        "hunter-conclave": {
+            "name": "Hunter Conclave",
+            "desc": ["Some rangers seek to master weapons to better protect civilization from the terrors of the wilderness. Members of the Hunter Conclave learn specialized fighting techniques for use against the most dire threats, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Hunter's Prey",
+                        "desc": "Choose one of the following features:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Colossus Slayer",
+                                "desc": "Your tenacity is able to wear down the most potent foes. Whenever you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it is missing hitpoints. You may deal this extra damage only once per turn."
+                            },
+                            {
+                                "name": "Giant Killer",
+                                "desc": "After a Large or larger creature within 5ft. attacks you, you may use your reaction to attack that creature immediately after its attack, provided that you can see the creature."
+                            },
+                            {
+                                "name": "Horde Breaker",
+                                "desc": "Once on each of your turns when you make a weapon attack, you may make another attack with the same weapon against a different creature that is within 5ft. of the original target and within range of your weapon."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Defensive Tactics",
+                        "desc": "Choose one of the following features:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Escape the Horde",
+                                "desc": "Opportunity attacks against you gain disadvantage."
+                            },
+                            {
+                                "name": "Multiattack Defense",
+                                "desc": "Whenever a creature hits you with an attack, you gain +4 AC against all subsequent attacks made by that creature for the rest of the turn."
+                            },
+                            {
+                                "name": "Steel Will",
+                                "desc": "You gain advantage on saving throws against being frightened."
+                            }
+                        ]
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Multiattack",
+                        "desc": "Choose one of the following features:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Volley",
+                                "desc": "As an action, you may make a ranged attack against any number of creatures in a 10ft. radius sphere, the center of which needs to be within your weapon's range. You must have ammunition for each target as normal, and you make a separate attack roll for each target."
+                            },
+                            {
+                                "name": "Multiattack Defense",
+                                "desc": "As an action, you may make melee attacks against any number of creatures within 5ft. of you, with a separate attack roll for each target."
+                            }
+                        ]
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Superior Hunter's Defense",
+                        "desc": "Choose one of the following features:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Evasion",
+                                "desc": "When you are forced to make a DEX saving throw to take only half damage from an area attack, you instead take no damage if you succeed the saving throw, and half damage if you fail."
+                            },
+                            {
+                                "name": "Redirect Attack",
+                                "desc": "Whenever a creature misses you with a melee attack, as a reaction, you may force the attacker to repeat the same attack against another creature of your choice, other than the attacker, within 5ft. of it."
+                            },
+                            {
+                                "name": "Uncanny Dodge",
+                                "desc": "When an attacker that you can see hits you with an attack, you may use your reaction to halve the attack's damage."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        }
+    },
     "rogue": {
         "arcane-trickster": {
             "name": "Arcane Trickster",
