@@ -526,6 +526,44 @@
             },
             "source": "Player's Handbook"
         },
+        "swashbuckler": {
+            "name": "Swashbuckler",
+            "desc": ["You focus your training on the art of the blade, relying on speed, elegance, and charm in equal parts. While some warriors are brutes clad in heavy armor, your method of fighting looks almost like a performance. Duelists and pirates typically belong to this archetype.", "A Swashbuckler excels in single combat, and can fight with two weapons while safely darting away from an opponent."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Fancy Footwork",
+                        "desc": "you learn how to land a strike and then slip away without reprisal. During your turn, if you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn."
+                    },
+                    {
+                        "name": "Rakish Audacity",
+                        "desc": "Your confidence propels you into battle, granting a bonus to your initiative rolls equal to your CHA. You also gain an additional way to use your sneak attack: you do not need advantage on the attack roll if you are within 5ft. of your target, no other creatures are within 5ft. of you, and you do not have disadvantage on the attack roll. All other rules for sneak attack still apply."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Panache",
+                        "desc": "Your charm becomes extraordinarily beguiling. As an action, you may make a Persuasion (CHA) check contested by the target's Insight (WIS) as long as the creature is able to hear you, and shares a language with you. On a success, if the creature is hostile to you, it gains disadvantage on attack rolls against targets other than you, and cannot make opportunity attacks against targets other than you. This effect lasts for 1 minute, until a creature hostile to the target attacks the target or affects it with a spell, or until you and the target are more than 60ft. apart. If the creature is not hostile to you, it is charmed by you for 1 minute. While charmed in this way, it regards you as a friendly acquaintance. This effect ends immediately if you or an ally does anything harmful to it."
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Elegant Maneuver",
+                        "desc": "You may use a bonus action to gain advantage on the next Acrobatics (DEX) or Athletics (STR) check you make during the same turn."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Master Duelist",
+                        "desc": "Your mastery of the blade lets you turn failure into success in combat. If you miss with an attack roll, you may roll it again with advantage. You may use this feature once per short rest."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        },
         "thief": {
             "name": "Thief",
             "desc": ["You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ."],
