@@ -1738,6 +1738,49 @@
             },
             "source": "Explorer's Guide to Wildemount"
         },
+        "graviturgy-magic": {
+            "name": "Graviturgy Magic",
+            "desc": ["Understanding and mastering the forces that draw bodies of matter together or drive them apart, the students of the Graviturgy arcane tradition learn to further bend and manipulate the violent energy of gravity to their benefit, and the terrible detriment of their enemies."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Adjust Density",
+                        "desc": "As an action, you may magically alter the weight of one object or creature that you can see within 30ft. of you. The object or creature must be Large or smaller. The target's weight is halved or doubled for up to 1 minute, or until your concentration ends (as if you were concentrating on a spell). While the weight of a creature is halved by this effect, the creature's speed increases by 10ft., it may jump twice as far as normal, and it gains disadvantage on STR checks and STR saving throws. While the weight of a creature is doubled by this effect, the creature's speed is reduced by 10ft., and it gains advantage on STR checks and STR saving throws."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Gravity Well",
+                        "desc": "Whenever you cast a spell on a creature, you may move the target 5ft. to an unoccupied space of your choice if the target is willing, the spell hits it with an attack, or if it fails the saving throw against the spell."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Violent Attraction",
+                        "desc": "You may use your reaction for the following uses. You may do so an amount of times equal to your INT every long rest.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Whenever a creature that you can see within 60ft. is hit with a weapon attack, you may increase the attack's velocity, causing the attack's target to take an extra 1d10 damage of the weapon's type."
+                            },
+                            {
+                                "desc": "Whenever a creature that you can see within 60ft. takes damage from a fall, you may increase the fall's damage by 2d10."
+                            }
+                        ]
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Event Horizon",
+                        "desc": "As an action, you may magically emit a powerful field of gravitational energy that tugs at other creatures for up to 1 minute, or until your concentration ends (as if you were concentrating on a spell). For the duration, whenever a creature hostile to you starts its turn within 30ft. of you, it must make a STR saving throw, taking 2d10 force and have its speed reduced to 0 until the start of its next turn on a failed save, or take half as much damage and have its movement speed halved, rounded down, until the start of its next turn. You may use this feature once per long rest. You may use a spell slot of 3rd level or higher to use this feature without expending a use."
+                    }
+                ]
+            },
+            "source": "Explorer's Guide to Wildemount"
+        },
         "school-of-abjuration": {
             "name": "School of Abjuration",
             "desc": ["The School of Abjuration emphasizes magic that blocks, banishes, or protects. Detractors of this school say that its tradition is about denial, negation rather than positive assertion. You understand, however, that ending harmful effects, protecting the weak, and banishing evil influences is anything but a philosophical void. It is a proud and respected vocation. Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed."],
