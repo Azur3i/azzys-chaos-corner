@@ -1387,6 +1387,151 @@
                 ]
             },
             "source": "Xanathar's Guide to Everything"
+        },
+        "wild-magic": {
+            "name": "Wild Magic",
+            "desc": ["Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Wild Magic Surge",
+                        "desc": "Your spellcasting is able to unleash surges of untamed magic. Once per turn, the DM may have you roll 1d20 immediately after you cast a non-cantrip sorcerer spell. If you roll a 1, roll on the wild magic surge table below to create a magical effect. If that effect is a spell, it is too wild to be affected by your Metamagic, and if it normally requires concentration, it does not require concentration in this case; the spell lasts for its full duration.",
+                        "type": "table",
+                        "content": {
+                            "header": false,
+                            "content": [
+                                ["1d100", "Effect", "1d100", "Effect"],
+                                [
+                                    "1-2", "Roll on this table at the start of each of your turns for the next minute, ignoring this result on subsequent rolls.",
+                                    "51-52", "A spectral shield hovers near you for the next minute, granting you +2 AC and immunity to the @magic missile spell"
+                                ],
+                                [
+                                    "3-4", "You gain the ability to see invisible creatures for 1 minute, as long as you have line of sight to them.",
+                                    "53-54", "You are immune to being intoxicated by alcohol for 5d6 days."
+                                ],
+                                [
+                                    "5-6", "A modron chosen and controlled by the DM appears in an unoccupied space within 5ft., disappearing after 1 minute.",
+                                    "55-56", "Your hair falls out. It grows back within 24 hours."
+                                ],
+                                [
+                                    "7-8", "You cast the @fireball spell as a 3rd level spell, centered on yourself.",
+                                    "57-58", "Any flammable object you touch that isn't worn or carried by another creature bursts into flame. This effect lasts for 1 minute."
+                                ],
+                                [
+                                    "9-10", "You cast the @magic missile spell as a 5th level spell.",
+                                    "59-60", "You regain your lowest level expended spell slot."
+                                ],
+                                [
+                                    "11-12", "Roll 1d10. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow.",
+                                    "61-62", "You must shout when you speak for 1 minute."
+                                ],
+                                [
+                                    "13-14", "You cast the @confusion spell, centered on yourself.",
+                                    "63-64", "You cast the @fog cloud spell, centered on yourself."
+                                ],
+                                [
+                                    "15-16", "You regain 5 hitpoints at the start of each of your turns for 1 minute.",
+                                    "65-66", "Up to 3 creatures of your choice within 30ft. of you take 4d10 @lightning damage."
+                                ],
+                                [
+                                    "17-18", "You grow a long beard made of feathers that remains until you sneeze, at which point the feathers explode out from your face.",
+                                    "67-68", "You are frightened by the nearest creature until the end of your turn."
+                                ],
+                                [
+                                    "19-20", "You cast the @grease spell centered on yourself.",
+                                    "69-70", "Each creature within 30ft. of you becomes invisible for 1 minute. This invisibility ends on a creature if it attacks or casts a spell."
+                                ],
+                                [
+                                    "21-22", "Creatures gains disadvantage against the next spell you cast within the next minute that involves a saving throw.",
+                                    "71-72", "You gain resistance to all damage for 1 minute."
+                                ],
+                                [
+                                    "23-24", "Your skin turns a vibrant shade of blue. This effects can be ended with a @remove curse spell.",
+                                    "73-74", "A random creature within 60ft. of you becomes poisoned for 1d4 hours."
+                                ],
+                                [
+                                    "25-26", "An eye appears on your forehead for 1 minute. While it persists, you gain advantage on Perception (WIS) checks that rely on sight.",
+                                    "75-76", "You glow with bright light in a 30ft. radius for 1 minute. Any creature that ends its turn within 5ft. of you is blinded until the end of its next turn."
+                                ],
+                                [
+                                    "27-28", "All your spells with a casting time of 1 action have a casting time of 1 bonus action for 1 minute.",
+                                    "77-78", "You cast the @polymorph spell on yourself. If you fail the saving throw, you turn into a sheep for the spell's duration."
+                                ],
+                                [
+                                    "29-30", "You teleport up to 60ft. to an unoccupied space you can see.",
+                                    "79-80", "Illusory butterflies and flower petals flutter in the air within 10ft. of you for 1 minute."
+                                ],
+                                [
+                                    "31-32", "You are transported to the Astral Plane until the end of your next turn. You return to the space you previously occupied, or the nearest unoccupied space should that space be occupied.",
+                                    "81-82", "You may take one additional action immediately."
+                                ],
+                                [
+                                    "33-34", "The next damaging spell you cast within the next minute deals its maximum possible damage.",
+                                    "83-84", "Each creature within 30ft. of you takes 1d10 @necrotic damage. You regain hitpoints equal to the total @necrotic damage you deal in this way."
+                                ],
+                                [
+                                    "35-36", "Roll 1d10. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum of 1 year), if the roll is even, you get older.",
+                                    "85-86", "You cast the @mirror image spell."
+                                ],
+                                [
+                                    "37-38", "1d6 flumphs controlled by the DM appear in unoccupied spaces within 60ft. for you, and are frightened of you. They disappear after 1 minute.",
+                                    "87-88", "You cast the @fly spell on a random creature within 60ft. of you."
+                                ],
+                                [
+                                    "39-40", "You regain 2d10 hitpoints.",
+                                    "89-90", "You become invisible for 1 minute. During that time, other creatures cannot hear you. This effect ends if you attack or cast a spell."
+                                ],
+                                [
+                                    "41-42", "You turn into a potted plant until the start of your next turn. While transformed, you are incapacitated and gain vulnerability to all damage. If you drop to 0 hitpoints, your pot breaks, and your form reverts.",
+                                    "91-92", "If you die within the next minute, you immediately come back to life as if by the @reincarnate spell."
+                                ],
+                                [
+                                    "43-44", "As a bonus action, you may teleport up to 20ft. to an unoccupied space you can see for 1 minute.",
+                                    "93-94", "Your size increases by one size category for 1 minute."
+                                ],
+                                [
+                                    "45-46", "You cast the @levitate spell on yourself.",
+                                    "95-96", "You and all creatures within 30ft. of you gain vulnerability to @piercing damage for 1 minute."
+                                ],
+                                [
+                                    "47-48", "A unicorn controlled by the DM appears in a space within 5ft. of you. It disappears after 1 minute.",
+                                    "97-98", "You are surrounded by faint, ethereal music for 1 minute."
+                                ],
+                                [
+                                    "49-50", "You cannot speak for 1 minute. Whenever you try, pink bubbles float out of your mouth.",
+                                    "99-100", "You regain all expended sorcery points."
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tides of Chaos",
+                        "desc": "You are able to manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. You may use this feature once per long rest. Any time before you regain this feature, the DM may have you roll on the wild magic surge table immediately after you cast a non-cantrip sorcerer spell, after which you regain this feature."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Bend Luck",
+                        "desc": "You gain the ability to twist fate using your wild magic. As a reaction when another creature you can see makes an attack roll, ability check or saving throw, you may spend 2 sorcery points to roll 1d4 and either add or subtract the result from the creature's roll. You may do so after the creature rolls, but before any effects of the roll occur."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Controlled Chaos",
+                        "desc": "You gain a modicum of control over the surges of your wild magic. Whenever you roll on the wild surge magic table, you may roll twice, and use either number."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Spell Bombardment",
+                        "desc": "The harmful energy of your spells intensifies. Whenever you roll damage for a spell and roll the highest number possible on any of the dice, you may choose one of those dice and roll it again, adding the result to the damage. You may use this feature once per turn."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
         }
     },
     "warlock": {
