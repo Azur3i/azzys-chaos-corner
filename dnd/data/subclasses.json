@@ -142,6 +142,113 @@
             },
             "source": "Tasha's Cauldron of Everything"
         },
+        "path-of-the-totem-warrior": {
+            "name": "Path of the Totem Warrior",
+            "desc": ["The Path of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal as guide, protector, and inspiration. In battle, your totem spirit fills you with supernatural might, adding magical fuel to your barbarian rage.", "Most barbarian tribes consider a totem animal to be kin to a particular clan. In such cases, it is unusual for an individual to have more than one totem animal spirit, though exceptions exist."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Spirit Seeker",
+                        "desc": "Yours is a path that seeks attunement with the natural world, giving you kinship with beasts. You gain the ability to cast the @beast sense and @speak with animal spells, but only as rituals."
+                    },
+                    {
+                        "name": "Totem Spirit",
+                        "desc": "You choose a totem spirit and gain its feature. You must make or acquire a physical totem object - an amulet or similar adornment - that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow. Your totem animal might be an animal related to those listed here but more appropriate to your homeland; for example, you could choose a hawk or vulture instead of an eagle.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bear",
+                                "desc": "The spirit of the bear makes you tough enough to stand up to any punishment. While raging, you gain resistance to all damage types except @psychic damage."
+                            },
+                            {
+                                "name": "Eagle",
+                                "desc": "The spirit of the eagle makes you into a predator who can weave through the fray with ease. While you're raging and are not wearing heavy armor, other creature gain disadvantage on opportunity attacks against you, and you may use the @dash action as a bonus action on your turn."
+                            },
+                            {
+                                "name": "Elk",
+                                "desc": "The spirit of the elk makes you extraordinarily swift. While you're raging and are not wearing heavy armor, your walking speed increases by 15ft."
+                            },
+                            {
+                                "name": "Tiger",
+                                "desc": "The spirit of the tiger empowers your leaps. While raging, you may add 10ft. to your long jump distance, and 3ft. to your high jump distance."
+                            },
+                            {
+                                "name": "Wolf",
+                                "desc": "The spirit of the wolf makes you a leader of hunters. While you're raging, any number of creatures of your choice gain advantage on melee attack rolls against any creature within 5ft. of you."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Aspect of the Beast",
+                        "desc": "You gain a magical benefit based on a totem animal of your choice. You may choose the same animal, or a different one.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bear",
+                                "desc": "You gain the might of a bear. Your carrying capacity, including maximum load and maximum lift, is doubled, and you gain advantage on STR checks made to push, pull, life, or break objects."
+                            },
+                            {
+                                "name": "Eagle",
+                                "desc": "You gain the eyesight of an eagle. You are able to see 1mi. away with no difficulty, able to discern even fine details as though looking at something no more than 100ft. away from you. Additionally, dim light doesn't impose disadvantage on your Perception (WIS) checks."
+                            },
+                            {
+                                "name": "Elk",
+                                "desc": "The elk sprit helps you roam far and fast. Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to 10 companions while they're within 60ft. of you and not incapacitated. "
+                            },
+                            {
+                                "name": "Tiger",
+                                "desc": "The tiger spirit hones your survival instincts. You gain proficiency in two skills from the following list: Athletics (STR), Acrobatics (DEX), Stealth (DEX), Survival (WIS)."
+                            },
+                            {
+                                "name": "Wolf",
+                                "desc": "You gain the huntin sensibilities of a wolf. You may track other creatures while traveling at a fast pace, and you are able to move stealthily while traveling at a normal pace."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Spirit Walker",
+                        "desc": "You may cast the @commune with nature spell, but only as a ritual. Whenever you do so, a spiritual version of one of the animals you chose for your totem spirit feature or aspect of the beast feature appears to you to convey the information you seek."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Totemic Attunement",
+                        "desc": "You gain a magical benefit based on a totem animal of your choice. You may choose the same animal, or a different one.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bear",
+                                "desc": "While you're raging, any creature of your choice within 5ft. of you gains disadvantage on attack rolls other than you or another creature with this feature. If a creature cannot see or hear you, or is immune to being frightened, that creature is immune to this attack."
+                            },
+                            {
+                                "name": "Eagle",
+                                "desc": "While raging, you gain a flying speed equal to your current movement speed. If you end your turn in the air and nothing besides this feature is holding you aloft, you fall."
+                            },
+                            {
+                                "name": "Elk",
+                                "desc": "While raging, as a bonus action, you may pass through the space of a Large or smaller creature. That creature must succeed on a STR saving throw, DC 8 + proficiency + STR, or take 1d12 + STR @bludgeoning damage and be knocked prone."
+                            },
+                            {
+                                "name": "Tiger",
+                                "desc": "While you're raging, if you move at least 20ft. in a straight line towards a Large or smaller target before making a melee weapon attack against it, as a bonus action, you may make an additional melee weapon attack against it."
+                            },
+                            {
+                                "name": "Wolf",
+                                "desc": "While you're raging, as a bonus action, you may knock a Large or smaller creature prone whenever you hit it with a melee attack."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        },
         "path-of-wild-magic": {
             "name": "Path of Wild Magic",
             "desc": ["Many places in the multiverse abound with beauty, intense emotion, and rampant magic; the Feywild, the Upper Planes, and other realms of supernatural power radiate with such forces and can profoundly influence people. As folk of deep feeling, barbarians are especially susceptible to these wild influences, with some barbarians being transformed by the magic. These magic-suffused barbarians walk the Path of Wild Magic. Elf, tiefling, aasimar, and genasi barbarians often seek this path, eager to manifest the otherworldly magic of their ancestors."],
