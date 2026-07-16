@@ -712,6 +712,123 @@
                 ]
             },
             "source": "Asmodeus: King of Hell"
+        },
+        "betrayed": {
+            "name": "Betrayed",
+            "desc": ["You swore to uphold the law, but found a lord bending it to his own will, using you as an agent of his tyrannical rule. Or, perhaps a goddess of mercy sacrificed you for her own goals, breaking her own ideals you fought to upheld for her. No matter the reason, you did not break your oath; you stuck by it until the very end, until it eventually broke you. But you did not surrender. You fight against the pits of despair looming to draw you in, and draw power from other sources to restore your corrupted ideal to its former glory. Thus is the path of those that uphold their oath by breaking it."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "quote": "If blood rains from the sky to nourish the depraved...",
+                        "name": "Rebirth of an Oath",
+                        "desc": "You once had a different oath, some allegiance you wouldn't forsake for the world. But that did not matter. The betrayed paladin, much like the oathbreaker, is not a path you set out for. Instead, when your loftiest ideals, and her proudest protectors failed to uphold the dream you shared, it left you with nothing but your life, and a fading power likely to soon leave you too. But you keep fighting for it, as if for your very own life. Should you meet any person that used to be part of your prior belief, but abandoned it, you will have a bad impression of them, and they will trigger any ability or spell you use that a fiend or evil creature would."
+                    },
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Paladin level", "Spells"],
+                                ["3rd", "@hunter's mark, @false life"],
+                                ["5th", "@detect thoughts, @enhance ability"],
+                                ["9th", "@elemental weapon, @thunder step"],
+                                ["13th", "@sickening radiance, @polymorph"],
+                                ["17th", "@arcane hand, @destructive wave"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tenets of Rebirth",
+                        "desc": "Though the exact words and strictures of the betrayed paladin vary, paladins of this oath share these tenets:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Survival",
+                                "desc": "You live for your cause, so do not let your cause die with you. Do not squander your final breath on deluded glory, but live on, to fight another day."
+                            },
+                            {
+                                "name": "Passion",
+                                "desc": "As you are all that is left of your belief, its future will fade if the fire inside you dies. You cannot afford for your resolve to waiver, you need to believe in your oath."
+                            },
+                            {
+                                "name": "Resourcefulness",
+                                "desc": "If you ever wish to rise from the ruins of your broken order, and see the sun set once more upon a belief not even her proudest paragons could uphold, you will need all the tools you can get. Utilize whatever you can find, repurpose it to fit your aims. Even the bones of sinners could become weapons."
+                            },
+                            {
+                                "name": "Sanctification",
+                                "desc": "You will have to repair old sanctuaries, build new ones, and vanquish heresy. Only you can return the light that was lost from this world. May your holy symbol be a shield for your followers, a blight upon your enemies, and a brick to build upon a foundation of the past's shattered sins."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Channel Divinity",
+                        "desc": "You gain the following 2 Channel Divinity options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Nourishment of the Broken",
+                                "desc": "As a bonus action after you damage a creature you can see within 5ft. of you, it and all creatures of your choice within 5ft. of both you and the target have their life force sucked out. They must succeed on a CON saving throw, or take 1d4 + CHA @necrotic damage. You restore hitpoints equal to half the @necrotic damage done, rounded down."
+                            },
+                            {
+                                "name": "Heaven's Due",
+                                "desc": "As an action, you unleash your suffering on all that claim to be good or evil. Every aberration, celestial, elemental, fiend, fey and and undead within 30ft. of you must succeed on an INT saving throw, or gain disadvantage on attack rolls while they're within 60ft. of you for 1 minute. Any of your attack rolls of 19 or 20 on the d20 against an affected creature is a critical hit. An affected creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "quote": "...running from the edge of the savage, enraged.",
+                        "name": "Aura of Rage",
+                        "desc": "Whenever you or a creature within 5ft. of you take @bludgeoning, @piercing or @slashing damage, you may give it resistance to @bludgeoning, @piercing and @slashing damage until the end of your next turn. Additionally, if you or a creature within 5ft. of you is attacked by a creature within 10ft. of you, the attacker cannot make opportunity attacks against you until the end of your next turn. The range of this aura increases to 10ft. for protection and 30ft. for attackers at 18th level."
+                    }
+                ],
+                "15": [
+                    {
+                        "quote": "Beware the avenger, with weapons reforged...",
+                        "name": "Reforged Fury",
+                        "desc": "Your armor grants you a bonus +1 AC, and even though your physical strength instills a deep-rooted fear in you, you gain +1 to STR checks and saving throws. Additionally, as an action, you may imbue your armor with divine magic, making it grow one size category larger for 1 minute. While in this state, you count as a construct on top of your other creature types for the sake of spells and effects that target creatures of that type, and you gain 5ft. reach on your melee weapons. This state lasts until you fall unconscious, or until you dismiss it as a bonus action."
+                    }
+                ],
+                "20": [
+                    {
+                        "quote": "...their profaned wrath leaves the defiler scorched.",
+                        "name": "Oath Cleanser",
+                        "desc": "You have restored your oath to its pure form, and are once more able to fight for it with all your conviction. Every time you finish a long rest, you may choose between the 20th level feature of either your original paladin oath, or this one. As a bonus action, you become the Paladin Reborn. You may use this feature aonce per long rest. As the Paladin Reborn, you gain the following benefits for 1 minute:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Blinding light emanates from you in a 60ft. radius, granting you a bonus to damage you deal with spells and your divine smite trait equal to your CHA."
+                            },
+                            {
+                                "desc": "Creatures you deal @radiant damage to start leaving a glowing trail."
+                            },
+                            {
+                                "desc": "You may make one of the following sweeping blows. You may make one sweeping blow every turn.",
+                                "type": "list",
+                                "content": [
+                                    {
+                                        "desc": "You swipe your weapon in a large arc. Make a melee weapon attack against the main target; all creatures in a cone equal to 5ft. + your reach in size, centered on the main target, must succeed on a DEX saving throw or take half your weapon's damage, rounded down."
+                                    },
+                                    {
+                                        "desc": "After moving at least 10ft. in a straight line, you may jump to an unoccupied space you can see. Every creature in a circle the radius of which equals 5ft. + your reach must succeed on a DEX saving throw or take half your weapon's damage, rounded down."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Reforged Fury",
+                        "desc": "While transformed, you resemble an angelic machine, and may choose to change your weapon's damage type to @radiant damage."
+                    }
+                ]
+            },
+            "source": "The Archivist's Anthology of Forgotten Lore"
         }
     },
     "fighter": {
