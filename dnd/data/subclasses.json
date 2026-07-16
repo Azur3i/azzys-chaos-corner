@@ -2022,6 +2022,78 @@
                 ]
             },
             "source": "Player's Handbook"
+        },
+        "school-of-transmutation": {
+            "name": "School of Transmutation",
+            "desc": ["You are a student of spells that modify energy and matter. To you, the world is not a fixed thing, but eminently mutable, and you delight in being an agent of change. You wield the raw stuff of creation and learn to alter both physical forms and mental qualities. Your magic gives you the tools to become a smith on reality's forge.", "Some transmuters are tinkerers and pranksters, turning people into toads and transforming copper into silver for fun and occasional profit. Others pursue their magical studies with deadly seriousness, seeking the power of the gods to make and destroy worlds."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Transmutation Savant",
+                        "desc": "The gold and time you must spend to copy a transmutation spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Minor Alchemy",
+                        "desc": "You may temporarily alter the physical properties of one nonmagical object, changing it from one substance into another. You perform a special alchemical procedure on one object composed entirely of wood, stone (but not a gemstone), iron, copper, or silver, transforming it into a different one of those materials. For each 10 minutes you spend performing the procedure, you can transform up to 1cu.ft. of material. After 1 hour, or until you lose your concentration (as if you were concentrating on a spell), the material reverts to its original substance."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Transmuter's Stone",
+                        "desc": "You may spend 8 hours creating a transmuter's stone that stores transmutation magic. You may benefit from the stone yourself, or give it to another creature. A creature gains a benefit of your choice as long as the stone is in the creature's possession. Whenever you creature When you create the stone, choose the benefit from the following options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Darkvision out to a range of 60ft."
+                            },
+                            {
+                                "desc": "An increase to speed of 10ft. while the creature is unencumbered."
+                            },
+                            {
+                                "desc": "Proficiency in CON saving throws."
+                            },
+                            {
+                                "desc": "Resistance to @acid, @cold, @fire, @lightning, or @thunder damage, your choice."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Shapechanger",
+                        "desc": "You may add the @polymorph spell to your spellbook, if it is not there already. You may cast the @polymorph spell without spending a spell slot; you may only target yourself, and transform into a beast of a CR of at most 1. You may use this feature once per short rest, though you are able to cast the @polymorph spell with a spell slot normally."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Master Transmuter",
+                        "desc": "As an action, you may consume the reserve of transmutation magic stored within your transmuter's stone in a single burst. Whenever you do so, the stone is destroyed and cannot be remade until you finish a long rest, but you may choose one of the following effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Major Transformation",
+                                "desc": "You may transmute one nonmagical object no larger than a 5ft. cube into another nonmagical object of similar size and mass, and of equal or lesser value. You must spend 10 minutes handling the object to transform it."
+                            },
+                            {
+                                "name": "Panacea",
+                                "desc": "You remove all curses, diseases and poisons affecting a creature that you touch with the transmuter's stone. The creature regains all its hitpoints."
+                            },
+                            {
+                                "name": "Restore Life",
+                                "desc": "You cast the @raise dead spell on a creature you touch with the transmuter's stone, without expending a spell slot or needing to have the spell in your spellbook."
+                            },
+                            {
+                                "name": "Restore Youth",
+                                "desc": "You reduce the apparent age of a willing creature you touch with the transmuter's stone by 3d10 years, to a minimum of 13 years. This effect does not extend the creature's lifespan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
         }
     }
 }
