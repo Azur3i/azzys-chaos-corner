@@ -1947,6 +1947,44 @@
             },
             "source": "Player's Handbook"
         },
+        "school-of-illusion": {
+            "name": "School of Illusion",
+            "desc": ["You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists - including many gnome wizards - are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Illusion Savant",
+                        "desc": "The gold and time you must spend to copy a illusion spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Improved Minor Illusion",
+                        "desc": "You learn the @minor illusion cantrip. If you already know this cantrip, you learn a different wizard cantrip of your choice. This cantrip does not count against the number of cantrips known. Whenever you cast @minor illusion, you are able to create both a sound and an image with a single casting."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Malleable Illusions",
+                        "desc": "Whenever you cast an illusion spell that has a duration of 1 minute or longer, as an action, you may change the nature of that illusion (using the spell's normal parameters for the illusion), provided that you can see the illusion."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Illusory Self",
+                        "desc": "You may create an illusory duplicate of yourself as an instant, almost instinctual reaction to danger. As a reaction when a creature makes an attack roll against you, you may interpose the illusory duplicate between the attacker and yourself. The attack automatically misses you, at which point the illusion dissipates. You may use this feature once per short rest."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Illusory Reality",
+                        "desc": "You have learned the secret of weaving shadow magic into your illusions to give them a semi-reality. Whenever you cast an illusion spell of 1st level or higher, you may choose one inanimate, nonmagical object that is part of the illusion and make that object real. You may do this on your turn as a bonus action while the spell is ongoing. The object remains real for 1 minute. For example, you may create an illusion of a bridge over a chasm and then make it real long enough for your allies to cross. The object cannot deal damage or otherwise directly harm anyone."
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        },
         "school-of-necromancy": {
             "name": "School of Necromancy",
             "desc": ["The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate. Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies."],
