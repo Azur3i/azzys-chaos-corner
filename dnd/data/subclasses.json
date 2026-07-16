@@ -1845,7 +1845,7 @@
                     }
                 ]
             },
-            "source": "Explorer's Guide to Wildemount"
+            "source": "Tasha's Cauldron of Everything"
         },
         "school-of-abjuration": {
             "name": "School of Abjuration",
@@ -2203,6 +2203,44 @@
                 ]
             },
             "source": "Player's Handbook"
+        },
+        "war-magic": {
+            "name": "War Magic",
+            "desc": ["A variety of arcane colleges specialize in training wizards for war. The tradition of War Magic blends principles of evocation and abjuration, rather than specializing in either of those schools. It teaches techniques that empower a caster’s spells, while also providing methods for wizards to bolster their own defenses.", "Followers of this tradition are known as war mages. They see their magic as both a weapon and armor, a resource superior to any piece of steel. War mages act fast in battle, using their spells to seize tactical control of a situation. Their spells strike hard, while their defensive skills foil their opponents’ attempts to counterattack. War mages are also adept at turning other spellcasters' magical energy against them.", "In great battles, a war mage often works with evokers, abjurers, and other types of wizards. Evokers, in particular, sometimes tease war mages for splitting their attention between offense and defense. A war mage's typical response: \"What good is being able to throw a mighty @fireball if I die before I can cast it?\""],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Arcane Deflection",
+                        "desc": "You have learned to weave your magic to fortify yourself against harm. As a reaction when you are hit by an attack, or when you fail a saving throw, you may gain +2 AC against that attack, or a +4 bonus to that saving throw. When you use this feature, you cannot cast non-cantrip spells until the end of your next turn."
+                    },
+                    {
+                        "name": "Tactical Wit",
+                        "desc": "Your keen ability to assess tactical situations allows you to act quickly in battle. You gain a bonus to initiative equal to your INT."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Power Surge",
+                        "desc": "You may store magical energy within yourself to later empower your damaging spells. You may store a maximum number of power surges equal to your INT (minimum of 1). Whenever you finish a long rest, the number of power surges you have stored resets to 1. Whenever you successfully end a spell with the @dispel magic or @counterspell spells, you gain a power surge, as you steal magic from the spell you foiled. If you end a short rest without any stored power surges, you gain one power surge. Once per turn, whenever you deal damage to a creature or object with a wizard spell, you may spend a power surge to deal extra @force damage equal to half your wizard level to the target."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Durable Magic",
+                        "desc": "The magic you channel helps ward off harm. While you maintain concentration on a spell, you gain +2 AC and bonus to saving throws."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Deflecting Shroud",
+                        "desc": "Your arcane deflection feature becomes infused with deadly magic. Whenever you use your arcane deflection feature, you may cause magical energy to arc up from you, causing up to three creatures of your choice within 60ft. of you to take @force damage equal to half your wizard level."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
         }
     }
 }
