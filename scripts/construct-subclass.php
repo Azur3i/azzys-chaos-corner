@@ -3,6 +3,8 @@ $subclasses = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"),
 $subclass = $target;
 $target = $subclasses[$mainClass][$target];
 
+require_once ROOT . "/scripts/functions.php";
+
 $subclassTypes = [
     "artificer" => "Artificer Specialism",
     "barbarian" => "Primal Path",
@@ -38,7 +40,7 @@ $subclassTypes = [
 
     <hr >
 
-    <p class="md title"><?= implode('</p><br ><p class="md title">', $target["desc"]) ?></p>
+    <p class="md title"><?= implode('</p><br ><p class="md title">', renderText($target["desc"])) ?></p>
     
     <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
 

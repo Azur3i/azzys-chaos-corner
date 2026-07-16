@@ -3,6 +3,8 @@
 define("ROOT",  __DIR__ . "/..");
 $classes = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
 
+require_once ROOT . "/scripts/functions.php";
+
 ?>
 
 <?php include ROOT . "/tpl/header.php"; ?>
@@ -31,7 +33,7 @@ $classes = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), tr
                                                 data-bs-target="#<?= $id ?>"
                                                 style="grid-template-columns: 1fr auto;">
                                             <span><?= $subclass["name"]; ?></span>
-                                            <span class="sm ms-auto" style="opacity: 0.7;"><?= $subclass["source"]?></span>
+                                            <span class="sm ms-auto" style="opacity: 0.7;"><?= $subclass["source"] ?></span>
                                         </button>
                                     </h2>
 
@@ -40,7 +42,7 @@ $classes = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), tr
                                         data-bs-parent="#sbcls-list-<?= $clsName ?>">
                                         <div class="accordion-body">
                                             <div class="row">
-                                                <p class="md"><?= implode('</p><br ><p class="md">', $subclass["desc"]); ?></p>
+                                                <p class="md"><?= implode('</p><br ><p class="md">', renderText($subclass["desc"])); ?></p>
                                             </div>
                                             <hr >
                                             <div class="row">

@@ -109,7 +109,7 @@ function renderAbility($ability, $z=0, $cls=null) {
                             data-bs-parent="#subclass-list">
                             <div class="accordion-body">
                                 <div class="row">
-                                    <p class="md"><?= implode('</p><br ><p class="md">', $sbcls["desc"]); ?></p>
+                                    <p class="md"><?= implode('</p><br ><p class="md">', renderText($sbcls["desc"])); ?></p>
                                 </div>
                                 <hr >
                                 <div class="row">
