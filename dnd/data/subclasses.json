@@ -1824,7 +1824,7 @@
                 "2": [
                     {
                         "name": "Divination Savant",
-                        "desc": "The gold and time you must spend to copy a divnation spell into your spellbook is halved."
+                        "desc": "The gold and time you must spend to copy a divination spell into your spellbook is halved."
                     },
                     {
                         "name": "Portent",
@@ -1866,6 +1866,44 @@
                     {
                         "name": "Greater Portent",
                         "desc": "The visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You may roll 3d20 for your portent feature."
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        },
+        "school-of-enchantment": {
+            "name": "School of Enchantment",
+            "desc": ["As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Enchantment Savant",
+                        "desc": "The gold and time you must spend to copy a enchantment spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Hypnotic Gaze",
+                        "desc": "Your soft words and enchanting gaze may magically enthrall another creature. As an action, choose a creature that you can see within 5ft. of you. If the target is able to see or hear you, it must succeed on a WIS saving throw or be charmed by you until the end of your next turn. The charmed creature's speed drops to 0, and the creature is incapacitated and visibly dazed. On subsequent turns, as an action, you are able to maintain this effect, extending its duration until the end of your next turn. The effect ends if you move more than 5ft. away from the target, if the target is not able to hear or see you, or if the target takes damage. Once the effect ends, or if the creature succeeds on its initial saving throw, the creature is immune to this feature until you finish a long rest."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Instinctive Charm",
+                        "desc": "Whenever a creature you can see within 30ft. of you makes an attack roll against you, as a reaction, you may divert the attack, provided that another creature is within the attack's range. You must choose to use this feature before knowing whether the attack hits or misses. Creature that are immune to being charmed are also immune to this feature. The attacker must succeed on a WIS saving throw or target the creature, other than you or itself, that is closest to it. If multiple creatures are closest, the attacker may choose who to target. On a successful save, the target becomes immune to this feature until you finish a long rest."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Split Enchantment",
+                        "desc": "Whenever you cast an enchantmnet spell of 1st level or higher that targets only one creature, you may have it target a second creature."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Alter Memories",
+                        "desc": "You gain the ability to make a creature unaware of your magical influence on it. Whenever you cast an enchantment spell to charm or more creature, you may alter one creature's understanding so that it remains unaware of being charmed. Additionally, once before the spell ends, you may use your action to try and make the chosen creature forget some of the time it spent charmed. The target must succeed on an INT saving throw or lose a number of hours of its memories equal to 1 + CHA (minimum of 1). You may make the creature forget less time, and the amount of time cannot exceed the duration of your enchantment spell."
                     }
                 ]
             },
