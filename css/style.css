@@ -358,17 +358,17 @@ div.accordion {
     width: 97%;
 }
 
-button.accordion-button {
+.accordion-button {
     background-color: transparent;
     border: none;
     transition: 0.5s ease-in-out;
-    border-radius: 0.8rem;
+    border-radius: 0;
     font-size: --fontsize;
     color: rgb(var(--color));
     text-decoration: none;
 }
 
-button.accordion-button:hover {
+.accordion-button:hover {
     background: rgb(var(--color));
     color: rgb(var(--black));
     transition: 0.2s ease-in-out;
@@ -385,36 +385,24 @@ button.accordion-button:hover {
     --bs-accordion-active-color: rgb(var(--black));
     background: rgb(var(--color) / 0.2);
     border: 1px solid rgb(var(--color));
+    border-radius: 0;
 
     color: rgb(var(--white));
 }
 
-.accordion-item:first-of-type .accordion-button:first-of-type,
-.accordion-item:first-of-type {
+.accordion-item:first-of-type,
+.accordion-item:first-of-type > .accordion-header > .accordion-button {
     border-top-right-radius: 0.8rem !important;
     border-top-left-radius: 0.8rem !important;
-
-    border-bottom-right-radius: 0vw !important;
-    border-bottom-left-radius: 0vw !important;
 }
 
-.accordion-item:last-of-type .accordion-button:last-of-type,
-.accordion-item:last-of-type {
-    border-top-right-radius: 0vw !important;
-    border-top-left-radius: 0vw !important;
-
+.accordion-item:last-of-type,
+.accordion-item:last-of-type > .accordion-header > .accordion-button {
     border-bottom-right-radius: 0.8rem !important;
     border-bottom-left-radius: 0.8rem !important;
 }
 
-.accordion-item:not(:first-of-type):not(:last-of-type) .accordion-button {
-    border-radius: 0 !important;
-}
 
-.accordion-item:first-of-type:last-of-type .accordion-button,
-.accordion-item:first-of-type:last-of-type {
-    border-radius: 0.8rem !important;
-}
 
 .content-list {
     background: rgb(var(--blue) / 0.2);
