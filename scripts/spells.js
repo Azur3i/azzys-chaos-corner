@@ -45,8 +45,15 @@ $("#spellbox").on("click", ".button-lvl", function () {
             spell: spell
         },
         function(response) {
-            $(".level-replace").text(response);
-        }
+            if (Array.isArray(response)) {
+                response.forEach((param, index) => {
+                    console.log(param);
+                    $(`.level-replace-${index}`).html(param);
+                })
+            } else {
+                $(".level-replace-0").text(response);
+            }
+        }, "json"
     )
 });
 
