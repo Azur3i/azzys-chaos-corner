@@ -350,22 +350,19 @@
         },
         "desc": [
             {
-                "desc": "Choose one object weighing 1 to 5 lbs within range that is not being worn or carried. You may launch the object in a straight line up to 90ft. in a direction you choose before falling to the ground. If the object finds a creature in its path, that creature must succeed on a DEX saving throw, being struck by the object and taking {*}d8 @bludgeoning damage on a failed save. If the object strikes any creature or other solid surface, it stops moving and takes the same damage as that what it hit."
-            },
-            {
-                "desc": "Secondary scaling for weight yet to be added {*}{*}{*}"
+                "desc": "Choose one object weighing up to {1}lbs. within range that is not being worn or carried. You may launch the object in a straight line up to 90ft. in a direction you choose before falling to the ground. If the object finds a creature in its path, that creature must succeed on a DEX saving throw, or be struck by the object and take {2}d8 @bludgeoning damage. If the object strikes any creature or other solid surface, it stops moving and takes the same damage as that what it hit."
             }
         ],
         "levels": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
+            [5, 3],
+            [10, 4],
+            [15, 5],
+            [20, 6],
+            [25, 7],
+            [30, 8],
+            [35, 9],
+            [40, 10],
+            [45, 11]
         ],
         "lists": [
             "sorcerer",
@@ -3080,6 +3077,37 @@
         "levels": [["", 1], ["deals a bonus 1d8 @thunder damage and ", 2], ["deals a bonus 2d8 @thunder damage and ", 3], ["deals a bonus 3d8 @thunder damage and ", 4]],
         "lists": [
             "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "chill-touch": {
+        "name": "Chill Touch",
+        "level": 0,
+        "school": "necromancy",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        "desc": [
+            {
+                "desc": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes {*}d8 @necrotic damage, and it cannot regain hitpoints until the start of your next turn. Until then, the hand clings to the target. If you hit an undead target, it also gains disadvantage on attack rolls against you until the end of your next turn."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        "lists": [
             "sorcerer",
             "warlock",
             "wizard"
