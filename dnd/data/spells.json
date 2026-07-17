@@ -3147,5 +3147,42 @@
             "wizard"
         ],
         "source": "Player's Handbook"
+    },
+    "friends": {
+        "name": "Friends",
+        "level": 0,
+        "school": "enchantment",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [
+            false,
+            true,
+            "a small amount of makeup applied to your face"
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "For the duration, you gain advantage on all CHA checks directed at a creature of your choice that is not hostile toward you."
+            },
+            {
+                "desc": "When the spell ends, the creature realizes that you used magic to influence its mood and may become hostile toward you. A creature prone to violence may attack you. Another creature may seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "bard",
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
     }
 }
