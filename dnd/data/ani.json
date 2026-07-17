@@ -20,10 +20,10 @@
                 "type": "table",
                 "content": {
                     "content": [
-                        ["1", "Tuna: The target takes 1d4 cold damage and 1d4 bludgeoning damage."],
-                        ["2", "Electric Eel: The target takes 1d8 electric damage."],
-                        ["3", "Crab: The crab clings onto the targets skin, continuously pinching the target. The target takes 1d4 piercing damage on the start of each of its turns for the next minute. The target may use spend an action to remove the crab, ending the effect early."],
-                        ["4", "Octopus: The octopus attempts to cling onto the target’s face. The target takes 1d4 poison damage and must make succeed on STR saving throw, on a failure the target gets the blinded condition until the end of its next turn."]
+                        ["1", "Tuna: The target takes 1d4 @cold damage and 1d4 @bludgeoning damage."],
+                        ["2", "Electric Eel: The target takes 1d8 @electric damage."],
+                        ["3", "Crab: The crab clings onto the targets skin, continuously pinching the target. The target takes 1d4 @piercing damage on the start of each of its turns for the next minute. The target may use spend an action to remove the crab, ending the effect early."],
+                        ["4", "Octopus: The octopus attempts to cling onto the target’s face. The target takes 1d4 @poison damage and must make succeed on STR saving throw, on a failure the target gets the blinded condition until the end of its next turn."]
                     ]
                 }
             },
