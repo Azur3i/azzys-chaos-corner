@@ -3519,5 +3519,154 @@
             "paladin"
         ],
         "source": "Player's Handbook"
+    },
+    "true-strike": {
+        "name": "True Strike",
+        "level": 0,
+        "school": "divination",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [
+            false,
+            true,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "round",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "mind-sliver": {
+        "name": "Mind Sliver",
+        "level": 0,
+        "school": "enchantment",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        "desc": [
+            {
+                "desc": "You drive a disorienting spike of psychic energy into the mind of a creature you can see within range. The target must succeed on an INT saving throw or take {*}d6 @psychic damage, and subtract 1d4 from the next saving throw it makes before the end of your next turn."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        "lists": [
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Tasha's Cauldron of Everything"
+    },
+    "prestidigitation": {
+        "name": "Prestidigitation",
+        "level": 0,
+        "school": "transmutation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "10ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "time": "special"
+        },
+        "desc": [
+            {
+                "desc": "You create a minor magical trick within range that novice spellcasters use for practice. Choose one of the following magical effects:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor."
+                    },
+                    {
+                        "desc": "You instantaneously light or snuff out a candle, a torch, or a small campfire."
+                    },
+                    {
+                        "desc": "You instantaneously clear or soil an object no larger than 1cu.ft."
+                    },
+                    {
+                        "desc": "You chill, warm or flavor up to 1cu.ft. of nonliving material for 1 hour."
+                    },
+                    {
+                        "desc": "You make a color, small mark or symbol appear on an object or surface for 1 hour."
+                    },
+                    {
+                        "desc": "You create a nonmagical trinket or illusory image that is able to fit your hand. It lasts until the end of your next turn."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "artificer",
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "sword-burst": {
+        "name": "Sword Burst",
+        "level": 0,
+        "school": "conjuration",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (5ft. radius)",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You create a momentary circle of spectral blades that sweep around you. All other creatures within 5ft. of you must succeed on a DEX saving throw, or take {*}d6 @force damage."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        "lists": [
+            "artificer",
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Tasha's Cauldron of Everything"
     }
 }
