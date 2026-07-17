@@ -3379,5 +3379,34 @@
         
         "lists": ["druid", "sorcerer", "wizard"],
         "source": "Xanathar's Guide to Everything"
+    },
+    "magic-stone": {
+        "name": "Magic Stone",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch 1 to 3 pebbles and imbue them with magic. You or someone else may make a ranged spell attack with one of the pebbles by throwing it, or hurling it with a sling. If thrown, it has a range of 60ft. If someone else attacks with the pebble, that attacker adds your spellcasting ability modifier (not the attacker's) to the attack roll. On a hit, the target takes 1d6 + your spellcasting ability modifier @bludgeoning damage. Hit or miss, the spell then ends on the stone."
+            },
+            {
+                "desc": "If you cast this spell again, the spell ends early on any pebbles still affected by it."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "druid", "warlock"],
+        "source": "Xanathar's Guide to Everything"
     }
 }
