@@ -3184,5 +3184,37 @@
             "wizard"
         ],
         "source": "Player's Handbook"
+    },
+    "frostbite": {
+        "name": "Frostbite",
+        "level": 0,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You cause numbing frost to form on a creature that you can see within range. The target must succeed on a CON saving throw, or take {*}d6 @cold damage and gain disadvantage on the next weapon attack roll it makes before the end of its next turn."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "artificer",
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Xanathar's Guide to Everything"
     }
 }
