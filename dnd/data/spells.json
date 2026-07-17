@@ -3583,5 +3583,58 @@
             "wizard"
         ],
         "source": "Tasha's Cauldron of Everything"
+    },
+    "prestidigitation": {
+        "name": "Prestidigitation",
+        "level": 0,
+        "school": "transmutation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "10ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "time": "special"
+        },
+        "desc": [
+            {
+                "desc": "You create a minor magical trick within range that novice spellcasters use for practice. Choose one of the following magical effects:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor."
+                    },
+                    {
+                        "desc": "You instantaneously light or snuff out a candle, a torch, or a small campfire."
+                    },
+                    {
+                        "desc": "You instantaneously clear or soil an object no larger than 1cu.ft."
+                    },
+                    {
+                        "desc": "You chill, warm or flavor up to 1cu.ft. of nonliving material for 1 hour."
+                    },
+                    {
+                        "desc": "You make a color, small mark or symbol appear on an object or surface for 1 hour."
+                    },
+                    {
+                        "desc": "You create a nonmagical trinket or illusory image that is able to fit your hand. It lasts until the end of your next turn."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "artificer",
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
     }
 }
