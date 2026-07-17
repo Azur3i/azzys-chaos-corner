@@ -3636,5 +3636,37 @@
             "wizard"
         ],
         "source": "Player's Handbook"
+    },
+    "sword-burst": {
+        "name": "Sword Burst",
+        "level": 0,
+        "school": "conjuration",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (5ft. radius)",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You create a momentary circle of spectral blades that sweep around you. All other creatures within 5ft. of you must succeed on a DEX saving throw, or take {*}d6 @force damage."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        "lists": [
+            "artificer",
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Tasha's Cauldron of Everything"
     }
 }
