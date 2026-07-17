@@ -3,44 +3,62 @@
         "name": "Aid",
         "level": 2,
         "school": "abjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, true, "a tiny strip of white cloth"],
+        "vsm": [
+            true,
+            true,
+            "a tiny strip of white cloth"
+        ],
         "duration": {
             "amount": 8,
             "time": "hour",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's HP maximum and current HP increase by {*} for the duration."
             }
         ],
-        "levels": [5, 10, 15, 20, 25, 30, 35, 40],
-        
-        "lists": ["artificer","bard","cleric","paladin","ranger"],
+        "levels": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+        ],
+        "lists": [
+            "artificer",
+            "bard",
+            "cleric",
+            "paladin",
+            "ranger"
+        ],
         "source": "Player's Handbook"
     },
     "arcane-lock": {
         "name": "Arcane Lock",
         "level": 2,
         "school": "abjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, "gold dust worth at least 25 gp, which the spell consumes"],
+        "vsm": [
+            true,
+            true,
+            "gold dust worth at least 25 gp, which the spell consumes"
+        ],
         "duration": {
             "time": "until dispelled"
         },
-        
         "desc": [
             {
                 "desc": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked. Only you and the creatures you designate when you cast this spell are able to open the object normally."
@@ -53,27 +71,31 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["artificer", "wizard"],
+        "lists": [
+            "artificer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "armaments-of-annihilation": {
         "name": "Armaments of Annihilation",
         "level": 3,
         "school": "conjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, "a set of bullet casings"],
+        "vsm": [
+            true,
+            true,
+            "a set of bullet casings"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You summon the armaments of annihilation, cosmic weapons existing of a cannon and a battery. The cannon is mounted on your shoulder (but has no weight), and the battery takes up a 5ft. by 5ft. space up to 10ft. away from you. The battery can be picked up and thrown or otherwise moved."
@@ -100,27 +122,40 @@
                 ]
             }
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7],
-        
-        "lists": ["artificer", "wizard", "oracle"],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "lists": [
+            "artificer",
+            "wizard",
+            "oracle"
+        ],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "augury": {
         "name": "Augury",
         "level": 2,
         "school": "divination",
-
         "castTime": {
             "amount": 1,
             "time": "action",
             "ritual": true
         },
         "range": "self",
-        "vsm": [true, true, "specially marked sticks, bones, or similar tokens worth at least 25 gp"],
+        "vsm": [
+            true,
+            true,
+            "specially marked sticks, bones, or similar tokens worth at least 25 gp"
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The DM chooses from the following possible omens:",
@@ -145,81 +180,136 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["cleric", "druid", "wizard"],
+        "lists": [
+            "cleric",
+            "druid",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "barkskin": {
         "name": "Barkskin",
         "level": 2,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, "a handful of oak bark"],
+        "vsm": [
+            true,
+            true,
+            "a handful of oak bark"
+        ],
         "duration": {
             "amount": 1,
             "time": "hour",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing."
             }
         ],
         "levels": null,
-        
-        "lists": ["druid", "ranger"],
+        "lists": [
+            "druid",
+            "ranger"
+        ],
         "source": "Player's Handbook"
     },
     "bless": {
         "name": "Bless",
         "level": 1,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, true, "a sprinkling of holy water"],
+        "vsm": [
+            true,
+            true,
+            "a sprinkling of holy water"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You bless up to {*} creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target may roll 1d4 and add the number rolled to the attack roll or saving throw."
             }
         ],
-        "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
-        
-        "lists": ["cleric", "paladin"],
+        "levels": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "lists": [
+            "cleric",
+            "paladin"
+        ],
+        "source": "Player's Handbook"
+    },
+    "blur": {
+        "name": "Blur",
+        "level": 2,
+        "school": "illusion",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "Your body becomes blurred, shifting and wavering to all who see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "artificer",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "calm-emotions": {
         "name": "Calm Emotions",
         "level": 2,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, false],
-                "duration": {
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20ft. radius sphere centered on a point you choose within range must make a CHA saving throw; a creature can choose to fail this saving throw if it wishes. If a creature fails its saving throw, choose one of the following two effects.",
@@ -232,55 +322,32 @@
                         "desc": "You make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise."
                     }
                 ]
-                        }
-        ],
-        "levels": null,
-        
-        "lists": ["bard","cleric"],
-        "source": "Player's Handbook"
-    },
-    "blur": {
-        "name": "Blur",
-        "level": 2,
-        "school": "illusion",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "self",
-        "vsm": [true, false, false],
-        "duration": {
-            "amount": 1,
-            "time": "minute",
-            "concentration": true
-        },
-
-        "desc": [
-            {
-                "desc": "Your body becomes blurred, shifting and wavering to all who see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
             }
         ],
-
         "levels": null,
-        "lists": ["artificer", "sorcerer", "wizard"],
+        "lists": [
+            "bard",
+            "cleric"
+        ],
         "source": "Player's Handbook"
     },
     "catapult": {
         "name": "Catapult",
         "level": 1,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [false, true, false],
+        "vsm": [
+            false,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "Choose one object weighing 1 to 5 lbs within range that is not being worn or carried. You may launch the object in a straight line up to 90ft. in a direction you choose before falling to the ground. If the object finds a creature in its path, that creature must succeed on a DEX saving throw, being struck by the object and taking {*}d8 @bludgeoning damage on a failed save. If the object strikes any creature or other solid surface, it stops moving and takes the same damage as that what it hit."
@@ -289,27 +356,42 @@
                 "desc": "Secondary scaling for weight yet to be added {*}{*}{*}"
             }
         ],
-        "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
-        
-        "lists": ["sorcerer", "wizard", "artificer"],
+        "levels": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "lists": [
+            "sorcerer",
+            "wizard",
+            "artificer"
+        ],
         "source": "Xanathar's Guide to Everything"
     },
     "charm-person": {
         "name": "Charm Person",
         "level": 1,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "You attempt to charm a humanoid you can see within range. It must make a WIS saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends, or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you."
@@ -318,109 +400,127 @@
                 "desc": "You may affect {*} creature(s) with this spell. If you affect multiple, they need to be within 30ft. of each other."
             }
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["bard", "druid", "sorcerer", "warlock", "wizard"],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "lists": [
+            "bard",
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "cloud-of-daggers": {
         "name": "Cloud of Daggers",
         "level": 2,
         "school": "conjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, "a sliver of glass"],
+        "vsm": [
+            true,
+            true,
+            "a sliver of glass"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You fill the air in a 5ft. cube with spinning daggers, centered on a point you choose within range. A creature takes {*}d4 @slashing damage when it enters the spell's area for the first time on a turn, or starts its turn there."
             }
         ],
-        "levels": [4, 6, 8, 10, 12, 14, 16, 18],
-        
-        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "levels": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+        ],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "color-spray": {
         "name": "Color Spray",
         "level": 1,
         "school": "illusion",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "self",
-        "vsm": [true, true, "a pinch of powder or sand that is colored red, yellow, and blue"],
+        "vsm": [
+            true,
+            true,
+            "a pinch of powder or sand that is colored red, yellow, and blue"
+        ],
         "duration": {
             "amount": 1,
             "time": "round"
         },
-        
         "desc": [
             {
                 "desc": "A dazzling array of flashing, colored light springs from your hand. This spell blinds all creatures in a 15ft. cone originating from you until the end of your next turn, starting at the creature with the lowest current hitpoints, in ascending order of current hitpoints, up to a maximum of {*}d10 collective hitpoints of all creatures affected (ignoring unconscious creatures and creatures that cannot see)."
             }
         ],
-        "levels": [6, 8, 10, 12, 14, 16, 18, 20, 22],
-        
-        "lists": ["bard", "sorcerer", "wizard"],
-        "source": "Player's Handbook"
-    },
-    "cordon-of-arrows": {
-        "name": "Cordon of Arrows",
-        "level": 2,
-        "school": "transmutation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "5ft.",
-        "vsm": [true, true, "four or more arrows or bolts"],
-        "duration": {
-            "amount": 8,
-            "time": "hour"
-        },
-        
-        "desc": [
-            {
-                "desc": "You plant {*} pieces of nonmagical ammunition (arrows or crossbow bolts) in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30ft. of the ammunition for the first time on a turn, or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a DEX saving throw or take 1d6 @piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains."
-            },
-            {
-                "desc": "When you cast this spell, you may designate any creatures you choose, and the spell ignores them."
-            }
+        "levels": [
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22
         ],
-        "levels": [4, 6, 8, 10, 12, 14, 16, 18],
-        
-        "lists": ["ranger"],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "command": {
         "name": "Command",
         "level": 1,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, false, false],
+        "vsm": [
+            true,
+            false,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "round"
         },
-        
         "desc": [
             {
                 "desc": "You speak a one word command to a creature you can see within range. The target must succeed on a WIS saving throw, or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it. If the target cannot follow your command, the spell ends. Some typical commands and their effects:",
@@ -452,28 +552,43 @@
                 "desc": "You may affect {*} creature(s) with this spell. If you affect multiple, they need to be within 30ft. of each other."
             }
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["bard", "cleric", "paladin"],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "lists": [
+            "bard",
+            "cleric",
+            "paladin"
+        ],
         "source": "Player's Handbook"
     },
     "comprehend-languages": {
         "name": "Comprehend Languages",
         "level": 1,
         "school": "divination",
-
         "castTime": {
             "amount": 1,
             "time": "action",
             "ritual": true
         },
         "range": "self",
-        "vsm": [true, true, "a pinch of soot and salt"],
+        "vsm": [
+            true,
+            true,
+            "a pinch of soot and salt"
+        ],
         "duration": {
             "amount": 1,
             "time": "hour"
         },
-        
         "desc": [
             {
                 "desc": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text."
@@ -483,52 +598,155 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard","sorcerer","warlock","wizard"],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "cordon-of-arrows": {
+        "name": "Cordon of Arrows",
+        "level": 2,
+        "school": "transmutation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "5ft.",
+        "vsm": [
+            true,
+            true,
+            "four or more arrows or bolts"
+        ],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
+        "desc": [
+            {
+                "desc": "You plant {*} pieces of nonmagical ammunition (arrows or crossbow bolts) in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30ft. of the ammunition for the first time on a turn, or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a DEX saving throw or take 1d6 @piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains."
+            },
+            {
+                "desc": "When you cast this spell, you may designate any creatures you choose, and the spell ignores them."
+            }
+        ],
+        "levels": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+        ],
+        "lists": [
+            "ranger"
+        ],
+        "source": "Player's Handbook"
+    },
+    "crown-of-madness": {
+        "name": "Crown of Madness",
+        "level": 2,
+        "school": "enchantment",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "desc": [
+            {
+                "desc": "One humanoid of your choice that you are able to see within range must make a WIS saving throw. On a failure, it becomes charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes."
+            },
+            {
+                "desc": "The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target is able to act normally on its turn if you choose no creature or if none are within its reach."
+            },
+            {
+                "desc": "On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target may make a WIS saving throw at the end of each of its turns. On a success, the spell ends."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "cure-wounds": {
         "name": "Cure Wounds",
         "level": 1,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "A creature you touch regains a number of hitpoints equal to {*}d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
             }
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "lists": [
+            "artificer",
+            "bard",
+            "cleric",
+            "druid",
+            "paladin",
+            "ranger"
+        ],
         "source": "Player's Handbook"
     },
     "dancing-lights": {
         "name": "Dancing Lights",
         "level": 0,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, "a bit of phosphorus or wychwood, or a glowworm"],
+        "vsm": [
+            true,
+            true,
+            "a bit of phosphorus or wychwood, or a glowworm"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration, each shedding dim light in a 10ft. radius. You can also combine the four lights into one glowing, vaguely humanoid, form of Medium size."
@@ -538,31 +756,37 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["artificer", "bard", "sorcerer", "wizard"],
+        "lists": [
+            "artificer",
+            "bard",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "darkness": {
         "name": "Darkness",
         "level": 2,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, "bat fur, and a drop of pitch, or piece of coal"],
+        "vsm": [
+            true,
+            true,
+            "bat fur, and a drop of pitch, or piece of coal"
+        ],
         "duration": {
             "amount": 10,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "Magical darkness spreads from a point you choose within range to fill a 15ft. radius sphere. The darkness spreads around corners. A creature with darkvision cannot see through this darkness, and nonmagical light cannot illuminate it."
-            }, 
+            },
             {
                 "desc": "If the point you choose is on an object you are holding, or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness."
             },
@@ -571,26 +795,31 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["sorcerer", "warlock", "wizard"],
+        "lists": [
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "dive-of-desolation": {
         "name": "Dive of Desolation",
         "level": 1,
         "school": "conjuration",
-
         "castTime": {
             "amount": 1,
             "time": "reaction",
             "condition": "falling 30ft. or more"
         },
         "range": "self",
-        "vsm": [true, true, "a cicada"],
+        "vsm": [
+            true,
+            true,
+            "a cicada"
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You channel your soul, briefly hover mid-air and wrap yourself in a blinding light. Losing all forward momentum, you drop straight down and accelerate your fall to dangerous speeds, landing within seconds."
@@ -599,53 +828,71 @@
                 "desc": "Upon landing, you negate the fall damage you would've taken; the white light roars outward, sending out a shockwave, audible within 300ft. Any creature within 10ft. of your landing point needs to succeed on a DEX saving throw, taking {*}d8 @force damage on a failed save, or half as much on a successful one. "
             }
         ],
-        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
-        
-        "lists": ["sorcerer", "warlock", "wizard"],
+        "levels": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "lists": [
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "divine-favor": {
         "name": "Divine Favor",
         "level": 1,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "Your prayer empowers you with divine radiance. For the duration, your weapon attacks deal an extra 1d4 @radiant damage on hit."
             }
         ],
         "levels": null,
-        
-        "lists": ["paladin"],
+        "lists": [
+            "paladin"
+        ],
         "source": "Player's Handbook"
     },
     "druidcraft": {
         "name": "Druidcraft",
         "level": 0,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "Whispering to the spirits of nature, you create one of the following effects within range:",
@@ -667,25 +914,69 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["druid"],
+        "lists": [
+            "druid"
+        ],
         "source": "Player's Handbook"
+    },
+    "earth-tremor": {
+        "name": "Earth Tremor",
+        "level": 1,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You cause a tremor in the ground in a 10ft radius. Each creature other than you in that area must succeed on a DEX saving throw, or take {*}d6 @bludgeoning damage and be knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared."
+            }
+        ],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "lists": [
+            "bard",
+            "druid",
+            "sorcerer",
+            "wizard"
+        ],
+        "source": "Xanathar's Guide to Everything"
     },
     "eldritch-blast": {
         "name": "Eldritch Blast",
         "level": 0,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "A beam of crackling energy streaks towards a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 @force damage."
@@ -694,102 +985,118 @@
                 "desc": "This spell creates {*} beam(s) of energy. Should there be multiple, make a seperate attack roll for each one."
             }
         ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["warlock"],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "warlock"
+        ],
         "source": "Player's Handbook"
     },
-    "earth-tremor": {
-        "name": "Earth Tremor",
-        "level": 1,
-        "school": "evocation",
-
+    "enlarge-reduce": {
+        "name": "Enlarge/Reduce",
+        "level": 2,
+        "school": "transmutation",
         "castTime": {
             "amount": 1,
             "time": "action"
         },
-        "range": "self",
-        "vsm": [true, true, false],
-        "duration": {
-            "time": "instant"
-        },
-        
-        "desc": [
-            {
-                "desc": "You cause a tremor in the ground in a 10ft radius. Each creature other than you in that area must succeed on a DEX saving throw, or take {*}d6 @bludgeoning damage and be knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared."
-            }
+        "range": "30ft.",
+        "vsm": [
+            true,
+            true,
+            "a pinch of powdered iron"
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["bard", "druid", "sorcerer", "wizard"],
-        "source": "Xanathar's Guide to Everything"
-    },
-    "fireball": {
-        "name": "Fireball",
-        "level": 3,
-        "school": "evocation",
-
-        "castTime": {
+        "duration": {
             "amount": 1,
-            "time": "action"
+            "time": "minute",
+            "concentration": true
         },
-        "range": "150ft.",
-        "vsm": [true, true, "a tiny ball of bat guano and sulfur"],
-        "duration": {
-            "time": "instant"
-        },
-        
         "desc": [
             {
-                "desc": "A bright streak flashes from your pointing finger to a point you choose within range, then blossoms with a low roar into an explosion of flame. Each creature in a 20ft. radius must make a DEX saving throw, taking {*}d6 @fire damage on a failed save, or half as much on a successful one. The fire spreads around corners, and ignites flammable objects in the area that aren't being worn or carried."
+                "desc": "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it may make a CON saving throw. On a success, the spell has no effect."
+            },
+            {
+                "desc": "If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.",
+                "type": "list",
+                "content": [
+                    {
+                        "name": "Enlarge",
+                        "desc": "The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category (from Medium to Large, for example). If there is not enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size, dealing 1d4 extra damage."
+                    },
+                    {
+                        "name": "Reduce",
+                        "desc": "The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category (from Medium to Small, for example). Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. Likewise, the target's weapons also shrink to match its new size, deal 1d4 less damage (this cannot reduce the damage below 1)."
+                    }
+                ]
             }
         ],
-        "levels": [8, 9, 10, 11, 12, 13, 14],
-        
-        "lists": ["sorcerer", "wizard"],
+        "levels": null,
+        "lists": [
+            "artificer",
+            "bard",
+            "druid",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "fire-bolt": {
         "name": "Fire Bolt",
         "level": 0,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d10 @fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried."
             }
         ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["artificer", "sorcerer", "wizard"],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "artificer",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "fire-shield": {
         "name": "Fire Shield",
         "level": 4,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "self",
-        "vsm": [true, true, "a bit of phosphorus, or a firefly"],
+        "vsm": [
+            true,
+            true,
+            "a bit of phosphorus, or a firefly"
+        ],
         "duration": {
             "amount": 10,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10ft. radius, and dim light in another 10ft. You can end the spell early by using an action to dismiss it."
@@ -802,212 +1109,323 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["druid", "sorcerer", "wizard"],
+        "lists": [
+            "druid",
+            "sorcerer",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "fireball": {
+        "name": "Fireball",
+        "level": 3,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "150ft.",
+        "vsm": [
+            true,
+            true,
+            "a tiny ball of bat guano and sulfur"
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "A bright streak flashes from your pointing finger to a point you choose within range, then blossoms with a low roar into an explosion of flame. Each creature in a 20ft. radius must make a DEX saving throw, taking {*}d6 @fire damage on a failed save, or half as much on a successful one. The fire spreads around corners, and ignites flammable objects in the area that aren't being worn or carried."
+            }
+        ],
+        "levels": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "lists": [
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "fog-cloud": {
         "name": "Fog Cloud",
         "level": 1,
         "school": "conjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "hour",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You create a {*}ft. radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 mi/h) disperses it."
             }
         ],
-        "levels": [20, 40, 60, 80, 100, 120, 140, 160, 180],
-        
-        "lists": ["druid", "ranger", "sorcerer", "wizard"],
+        "levels": [
+            20,
+            40,
+            60,
+            80,
+            100,
+            120,
+            140,
+            160,
+            180
+        ],
+        "lists": [
+            "druid",
+            "ranger",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "gift-of-alacrity": {
         "name": "Gift of Alacrity",
         "level": 1,
         "school": "divination",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 8,
             "time": "hour"
         },
-        
         "desc": [
             {
                 "desc": "You touch a willing creature. For the duration, the target may add 1d8 to its initiative rolls."
             }
         ],
         "levels": null,
-        
-        "lists": ["wizard"],
+        "lists": [
+            "wizard"
+        ],
         "source": "Explorer's Guide to Wildemount"
     },
     "goodberry": {
         "name": "Goodberry",
         "level": 1,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, "a sprig of mistletoe"],
+        "vsm": [
+            true,
+            true,
+            "a sprig of mistletoe"
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "Up to ten magically infused berries appear in your hand. A creature may use its action to eat one berry, which restores 1 hitpoint, and the berry provides enough nourishment to sustain a creature for one day."
-            }, 
+            },
             {
                 "desc": "The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell."
             }
         ],
         "levels": null,
-        
-        "lists": ["druid", "ranger"],
+        "lists": [
+            "druid",
+            "ranger"
+        ],
         "source": "Player's Handbook"
     },
     "guidance": {
         "name": "Guidance",
         "level": 0,
         "school": "divination",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You touch 1 willing creature. Once before the spell ends, the target may roll 1d4, and add the number rolled to one ability check of its choice. It may roll this die before or after making the ability check. The spell then ends."
             }
         ],
         "levels": null,
-        
-        "lists": ["artificer", "cleric", "druid"],
+        "lists": [
+            "artificer",
+            "cleric",
+            "druid"
+        ],
         "source": "Player's Handbook"
     },
     "guiding-bolt": {
         "name": "Guiding Bolt",
         "level": 1,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "round"
         },
-        
         "desc": [
             {
                 "desc": "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 @radiant damage, and they are covered in a dim, mystical glittering light. The next attack roll made against this target before the end of your next turn has advantage."
             }
         ],
-        "levels": [4, 5, 6, 7, 8, 9, 10, 11, 12],
-        
-        "lists": ["cleric"],
+        "levels": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "lists": [
+            "cleric"
+        ],
         "source": "Player's Handbook"
     },
     "healing-word": {
         "name": "Healing Word",
         "level": 1,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "bonus action"
         },
         "range": "60ft.",
-        "vsm": [true, false, false],
+        "vsm": [
+            true,
+            false,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "A creature of your choice that you can see within range regains hitpoints equal to {*}d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
             }
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["bard", "cleric", "druid"],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "lists": [
+            "bard",
+            "cleric",
+            "druid"
+        ],
         "source": "Player's Handbook"
     },
     "hellish-rebuke": {
         "name": "Hellish Rebuke",
         "level": 1,
         "school": "divination",
-
         "castTime": {
             "amount": 1,
             "time": "reaction",
             "condition": "you are damaged by a creature within 60ft. of you that you can see"
         },
         "range": "60ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a DEX saving throw, taking {*}d10 @fire damage on a failed save, or half as much on a successful one."
             }
         ],
-        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
-        
-        "lists": ["warlock"],
+        "levels": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "lists": [
+            "warlock"
+        ],
         "source": "Player's Handbook"
     },
     "heroism": {
         "name": "Heroism",
         "level": 1,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "A willing creature you touch is imbued with bravery. For the duration, the creature is immune to being frightened, and gains temporary hitpoints equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hitpoints from this spell."
@@ -1016,28 +1434,42 @@
                 "desc": "You may affect {*} creature(s) with this spell."
             }
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["bard", "paladin"],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "lists": [
+            "bard",
+            "paladin"
+        ],
         "source": "Player's Handbook"
     },
     "hideous-laughter": {
         "name": "Hideous Laughter",
         "level": 1,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a WIS saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an INT score of 4 or less isn't affected."
@@ -1047,25 +1479,29 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard", "wizard"],
+        "lists": [
+            "bard",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "hold-person": {
         "name": "Hold Person",
         "level": 2,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, "a small, straight piece of iron"],
+        "vsm": [
+            true,
+            true,
+            "a small, straight piece of iron"
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "Choose a humanoid that you can see within range. The target must succeed on a WIS saving throw or be paralyzed for the duration. At the end of each of its turns, the target can make another WIS saving throw. On a success, the spell ends on the target."
@@ -1074,28 +1510,44 @@
                 "desc": "You may affect {*} humanoid(s) with this spell. If you affect multiple, they need to be within 30ft. of each other."
             }
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8],
-        
-        "lists": ["bard","druid","sorcerer","warlock","wizard"],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "lists": [
+            "bard",
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "hypnotic-pattern": {
         "name": "Hypnotic Pattern",
         "level": 3,
         "school": "illusion",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [false, true, "a glowing stick of incense or a crystal vial filled with phosphorescent material"],
+        "vsm": [
+            false,
+            true,
+            "a glowing stick of incense or a crystal vial filled with phosphorescent material"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You create a twisting pattern of colors that weaves through the air inside a 30ft. cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a WIS saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0."
@@ -1105,25 +1557,31 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard","sorcerer","warlock","wizard"],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "infestation": {
         "name": "Infestation",
         "level": 0,
         "school": "conjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, true, "a living flea"],
+        "vsm": [
+            true,
+            true,
+            "a living flea"
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You cause a cloud of mites, fleas, and other parasites to appear momentarily on one creature you can see within range. The target must succeed on a CON saving throw or take {*}d6 @poison damage and move 5ft. in a random direction if it is able to move and its speed is at least 5ft. This movement doesn't provoke opportunity attacks, and if the direction rolled is blocked, the target doesn't move. Roll 1d4 for the direction:",
@@ -1131,86 +1589,131 @@
                 "content": {
                     "header": true,
                     "content": [
-                        ["1d4", "Direction"],
-                        [1, "North"],
-                        [2, "South"],
-                        [3, "East"],
-                        [4, "West"]
+                        [
+                            "1d4",
+                            "Direction"
+                        ],
+                        [
+                            1,
+                            "North"
+                        ],
+                        [
+                            2,
+                            "South"
+                        ],
+                        [
+                            3,
+                            "East"
+                        ],
+                        [
+                            4,
+                            "West"
+                        ]
                     ]
                 }
             }
         ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["druid", "sorcerer", "warlock", "wizard"],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Xanathar's Guide to Everything"
     },
     "lesser-restoration": {
         "name": "Lesser Restoration",
         "level": 2,
         "school": "abjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You touch a creature and may end either one disease or one condition afflicting it. The condition may be blinded, deafened, paralyzed, or poisoned."
             }
         ],
         "levels": null,
-        
-        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
+        "lists": [
+            "artificer",
+            "bard",
+            "cleric",
+            "druid",
+            "paladin",
+            "ranger"
+        ],
         "source": "Player's Handbook"
     },
     "lightning-lure": {
         "name": "Lightning Lure",
         "level": 0,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "15ft.",
-        "vsm": [true, false, false],
+        "vsm": [
+            true,
+            false,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15ft. of you. The target must succeed on a STR saving throw or be pulled up to 10ft. in a straight line toward you and then take {*}d8 @lightning damage if it is within 5ft. of you."
             }
         ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["artificer", "sorcerer", "warlock", "wizard"],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "artificer",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Tasha's Cauldron of Everything"
     },
     "mage-hand": {
         "name": "Mage Hand",
         "level": 0,
         "school": "conjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration, or until you dismiss it as an action. The hand vanishes if it is ever more than 30ft. away from you, or if you cast this spell again."
@@ -1223,50 +1726,108 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["artificer", "bard", "sorcerer", "warlock", "wizard"],
+        "lists": [
+            "artificer",
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "magic-missile": {
         "name": "Magic Missile",
         "level": 1,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You create {*} glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 @force damage to its target. The darts all strike simultaneously and you can direct them to hit one creature or several."
             }
         ],
-        "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
-        
-        "lists": ["sorcerer", "wizard"],
+        "levels": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "lists": [
+            "sorcerer",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "mass-healing-word": {
+        "name": "Mass Healing Word",
+        "level": 3,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "60ft.",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain HP equal to {*}d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+            }
+        ],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "lists": [
+            "bard",
+            "cleric"
+        ],
         "source": "Player's Handbook"
     },
     "mending": {
         "name": "Mending",
         "level": 0,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, "two lodestones"],
+        "vsm": [
+            true,
+            true,
+            "two lodestones"
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "This spell repairs a single break or tear that is no longer than 1ft. in any dimension in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. "
@@ -1276,26 +1837,34 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard", "cleric", "druid", "sorcerer", "wizard", "artificer"],
+        "lists": [
+            "bard",
+            "cleric",
+            "druid",
+            "sorcerer",
+            "wizard",
+            "artificer"
+        ],
         "source": "Player's Handbook"
     },
     "minor-illusion": {
         "name": "Minor Illusion",
         "level": 0,
         "school": "illusion",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, true, "a bit of fleece"],
+        "vsm": [
+            true,
+            true,
+            "a bit of fleece"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action, or cast this spell again."
@@ -1311,26 +1880,33 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["artificer", "bard", "sorcerer", "warlock", "wizard"],
+        "lists": [
+            "artificer",
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "mirror-image": {
         "name": "Mirror Image",
         "level": 2,
         "school": "illusion",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "self",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates."
@@ -1349,50 +1925,31 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard","sorcerer","warlock","wizard"],
-        "source": "Player's Handbook"
-    },
-    "mass-healing-word": {
-        "name": "Mass Healing Word",
-        "level": 3,
-        "school": "evocation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "bonus action"
-        },
-        "range": "60ft.",
-        "vsm": [true, false, false],
-        "duration": {
-            "time": "instant"
-        },
-        
-        "desc": [
-            {
-                "desc": "As you call out words of restoration, up to six creatures of your choice that you can see within range regain HP equal to {*}d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs."
-            }
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
         ],
-        "levels": [1, 2, 3, 4, 5, 6, 7],
-        
-        "lists": ["bard","cleric"],
         "source": "Player's Handbook"
     },
     "mold-earth": {
         "name": "Mold Earth",
         "level": 0,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [false, true, false],
+        "vsm": [
+            false,
+            true,
+            false
+        ],
         "duration": {
             "time": "special"
         },
-        
         "desc": [
             {
                 "desc": "You choose a portion of dirt or stone that you can see within range and that fits within a 5ft. cube. You manipulate it in one of the following ways:",
@@ -1414,27 +1971,32 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["druid", "sorcerer", "wizard"],
+        "lists": [
+            "druid",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Xanathar's Guide to Everything"
     },
     "phantasmal-killer": {
         "name": "Phantasmal Killer",
         "level": 4,
         "school": "illusion",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature"
@@ -1443,26 +2005,37 @@
                 "desc": "The target must make a WIS saving throw. On a failed save, the target becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a WIS saving throw or take {*}d10 @psychic damage. On a successful save, the spell ends."
             }
         ],
-        "levels": [4, 5, 6, 7, 8, 9],
-        
-        "lists": ["bard", "wizard"],
+        "levels": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "lists": [
+            "bard",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "power-fist": {
         "name": "Power Fist",
         "level": 1,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "self",
-        "vsm": [true, true, "a severed finger"],
+        "vsm": [
+            true,
+            true,
+            "a severed finger"
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "quote": "\"Please cease existing.\" - Crank"
@@ -1472,27 +2045,34 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["artificer", "druid", "ranger", "warlock", "wizard"],
+        "lists": [
+            "artificer",
+            "druid",
+            "ranger",
+            "warlock",
+            "wizard"
+        ],
         "source": "Azzurey's League of Legends Spells"
     },
     "protection-from-evil-and-good": {
         "name": "Protection from Evil and Good",
         "level": 1,
         "school": "abjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "touch",
-        "vsm": [true, true, "holy water, or powdered silver and iron, which the spell consumes"],
+        "vsm": [
+            true,
+            true,
+            "holy water, or powdered silver and iron, which the spell consumes"
+        ],
         "duration": {
             "amount": 10,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "For the duration, one willing creature you touch is protected against the following types of creatures: aberrations, celestials, elementals, fey, fiends, and undead. The protection grants the following benefits:",
@@ -1511,101 +2091,140 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["cleric", "druid", "paladin", "warlock", "wizard"],
+        "lists": [
+            "cleric",
+            "druid",
+            "paladin",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "ray-of-frost": {
         "name": "Ray of Frost",
         "level": 0,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "A frigid beam of blue-white light streaks towards a creature within range. Make a ranged spell attack against the target. On a hit, it takes {*}d8 @cold damage, and its speed is reduced by 10ft. until the start of your next turn."
             }
         ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["artificer", "sorcerer", "wizard"],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "artificer",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "ray-of-sickness": {
         "name": "Ray of Sickness",
         "level": 1,
         "school": "necromancy",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d8 @poison damage and must succeed on a CON saving throw, or is also poisoned until the end of your next turn."
             }
         ],
-        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
-        
-        "lists": ["sorcerer", "wizard"],
+        "levels": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "lists": [
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "sacred-fire": {
         "name": "Sacred Fire",
         "level": 0,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a DEX saving throw or take {*}d8 @radiant damage. The target gains no benefit from cover for this saving throw."
             }
         ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["cleric"],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "cleric"
+        ],
         "source": "Player's Handbook"
     },
     "sanctuary": {
         "name": "Sanctuary",
         "level": 1,
         "school": "abjuration",
-
         "castTime": {
             "amount": 1,
             "time": "bonus action"
         },
         "range": "30ft.",
-        "vsm": [true, true, "a small silver mirror"],
+        "vsm": [
+            true,
+            true,
+            "a small silver mirror"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "You ward a creature within range against attack. For the duration, any creature who targets the warded creature with an attack or harmful spell must succeed on a WIS saving throw, or choose a new target or lose the attack or spell. This spell does not protect the warded creature from area effects, such as the explosion of a fireball."
@@ -1615,26 +2234,30 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["artificer", "cleric"],
+        "lists": [
+            "artificer",
+            "cleric"
+        ],
         "source": "Player's Handbook"
     },
     "sending": {
         "name": "Sending",
         "level": 3,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "Unlimited",
-        "vsm": [true, true, "a short piece of fine copper wire"],
+        "vsm": [
+            true,
+            true,
+            "a short piece of fine copper wire"
+        ],
         "duration": {
             "amount": 1,
             "time": "round"
         },
-        
         "desc": [
             {
                 "desc": "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with INT scores of at least 1 to understand the meaning of your message."
@@ -1644,25 +2267,30 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard","cleric","wizard"],
+        "lists": [
+            "bard",
+            "cleric",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "shape-water": {
         "name": "Shape Water",
         "level": 0,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [false, true, false],
+        "vsm": [
+            false,
+            true,
+            false
+        ],
         "duration": {
             "time": "special"
         },
-        
         "desc": [
             {
                 "desc": "You choose an area of water that you can see within range and that fits within a 5ft. cube. You manipulate it in one of the following ways:",
@@ -1684,25 +2312,30 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["druid", "sorcerer", "wizard"],
+        "lists": [
+            "druid",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "shatter": {
         "name": "Shatter",
         "level": 2,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, "a chip of mica"],
+        "vsm": [
+            true,
+            true,
+            "a chip of mica"
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range. Each creature in a 10ft. radius sphere centered on that point must make a CON saving throw. A creature takes {*}d8 @thunder damage on a failed save, or half as much damage on a successful one. A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw."
@@ -1711,83 +2344,107 @@
                 "desc": "A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area."
             }
         ],
-        "levels": [3, 4, 5, 6, 7, 8, 9, 10],
-        
-        "lists": ["bard","sorcerer","warlock","wizard"],
+        "levels": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "shield-of-faith": {
         "name": "Shield of Faith",
         "level": 1,
         "school": "abjuration",
-
         "castTime": {
             "amount": 1,
             "time": "bonus action"
         },
         "range": "60ft.",
-        "vsm": [true, true, "a small parchment with a bit of holy text written on it"],
+        "vsm": [
+            true,
+            true,
+            "a small parchment with a bit of holy text written on it"
+        ],
         "duration": {
             "amount": 10,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "A shimmering field appears and surrounds a creature of your choice within range, granting it +2 AC for the duration."
             }
         ],
         "levels": null,
-        
-        "lists": ["cleric", "paladin"],
+        "lists": [
+            "cleric",
+            "paladin"
+        ],
         "source": "Player's Handbook"
     },
     "silence": {
         "name": "Silence",
         "level": 2,
         "school": "illusion",
-
         "castTime": {
             "amount": 1,
             "time": "action",
             "ritual": true
         },
         "range": "120ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 10,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "For the duration, no sound is able to be created within or pass through a 20ft. sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to @thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there."
             }
         ],
         "levels": null,
-        
-        "lists": ["bard", "cleric", "ranger"],
+        "lists": [
+            "bard",
+            "cleric",
+            "ranger"
+        ],
         "source": "Player's Handbook"
     },
     "silent-image": {
         "name": "Silent Image",
         "level": 1,
         "school": "illusion",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, "a bit of fleece"],
+        "vsm": [
+            true,
+            true,
+            "a bit of fleece"
+        ],
         "duration": {
             "amount": 10,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You create the image of an object, a creature or some other visible phenomenon that is no larger than a 15ft. cube. The image appears at a spot within range, and lasts for the duration. The image is purely visual: it is not accompanied by sound, smell or other sensory effects."
@@ -1800,26 +2457,31 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard", "sorcerer", "wizard"],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "sleep": {
         "name": "Sleep",
         "level": 1,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "90ft.",
-        "vsm": [false, true, "a pinch of fine sand, rose petals, or a cricket"],
+        "vsm": [
+            false,
+            true,
+            "a pinch of fine sand, rose petals, or a cricket"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "This spell sends creatures into a magical slumber. Roll {*}d8. The total is how many hitpoints of creatures this spell can affect. Creatures within 20ft. of a point you choose within range are affected in ascending order of their current hitpoints, ignoring unconscious creatures. Subtract each creature's hitpoints from the total before moving on to the creature with the next lowest hitpoints. A creature's hitpoints must be equal to or less than the remaining total for that creature to be affected. Undead and creatures immune to being charmed aren't affected by this spell."
@@ -1828,26 +2490,41 @@
                 "desc": "Starting with the creature that has the lowest current hitpoints, each creature affected by the spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to wake the sleeper. "
             }
         ],
-        "levels": [5, 7, 9, 11, 13, 15, 17, 19, 21],
-        
-        "lists": ["bard", "sorcerer", "wizard"],
+        "levels": [
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21
+        ],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "spaciodisplacement": {
         "name": "Spaciodisplacement",
         "level": 0,
         "school": "conjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You shift all of existence, except one creature, slightly into a direction of choice, causing the target to appear to blink 5ft. This creature takes {*}d4 @psychic damage."
@@ -1856,27 +2533,35 @@
                 "desc": "The shift can be into any direction, but the target cannot be shifted into a solid object. If the target is shifted into the space of another creature, both the target and that creature take an additional {*}d4 @force damage. The target is then shunted out to the nearest unoccupied space again."
             }
         ],
-        "levels": [1, 3, 5, 7],
-        
-        "lists": ["oracle"],
+        "levels": [
+            1,
+            3,
+            5,
+            7
+        ],
+        "lists": [
+            "oracle"
+        ],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "thaumaturgy": {
         "name": "Thaumaturgy",
         "level": 0,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, false, false],
+        "vsm": [
+            true,
+            false,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "You manifest a minor wonder - a sign of supernatural power - within range. Create one of the following effects:",
@@ -1907,52 +2592,65 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["cleric"],
+        "lists": [
+            "cleric"
+        ],
         "source": "Player's Handbook"
     },
     "toll-the-dead": {
         "name": "Toll the Dead",
         "level": 0,
         "school": "necromancy",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a WIS saving throw, or take {*}d8 @necrotic damage. If the target is missing any of its hitpoints, it takes {*}d12 @necrotic damage instead."
             }
         ],
-        "levels": [1,2,3,4],
-        
-        "lists": ["cleric", "warlock", "wizard"],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "cleric",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "true-silence": {
         "name": "True Silence",
         "level": 9,
         "school": "necromancy",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "240ft.",
-        "vsm": [false, true, "a hollow crystal orb containing a vacuum"],
+        "vsm": [
+            false,
+            true,
+            "a hollow crystal orb containing a vacuum"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "With a gentle shush, silence falls at your whim."
@@ -1968,25 +2666,30 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard", "cleric", "oracle"],
+        "lists": [
+            "bard",
+            "cleric",
+            "oracle"
+        ],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "undo": {
         "name": "Undo",
         "level": 0,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "bonus action"
         },
         "range": "self",
-        "vsm": [false, true, false],
+        "vsm": [
+            false,
+            true,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You magically rewind yourself to a previous position. You blink to the space you were in 6 seconds. In combat, you blink to the space you were in at the start of your previous turn."
@@ -1995,28 +2698,37 @@
                 "desc": "{*}"
             }
         ],
-        "levels": ["", "", "You may also cast this cantrip as a reaction, which you take when you are subjected to a DEX saving throw to avoid an effect, taking half the damage on a failed save, and no damage on a successful one.", "You may also cast this cantrip as a reaction, which you take when you are subjected to a DEX saving throw to avoid an effect, taking half the damage on a failed save, and no damage on a successful one."],
-        
-        "lists": ["oracle", "wizard"],
+        "levels": [
+            "",
+            "",
+            "You may also cast this cantrip as a reaction, which you take when you are subjected to a DEX saving throw to avoid an effect, taking half the damage on a failed save, and no damage on a successful one.",
+            "You may also cast this cantrip as a reaction, which you take when you are subjected to a DEX saving throw to avoid an effect, taking half the damage on a failed save, and no damage on a successful one."
+        ],
+        "lists": [
+            "oracle",
+            "wizard"
+        ],
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "unseen-servant": {
         "name": "Unseen Servant",
         "level": 1,
         "school": "conjuration",
-
         "castTime": {
             "amount": 1,
             "time": "action",
             "ritual": true
         },
         "range": "60ft.",
-        "vsm": [true, true, "a piece of string and a bit of wood"],
+        "vsm": [
+            true,
+            true,
+            "a piece of string and a bit of wood"
+        ],
         "duration": {
             "amount": 1,
             "time": "hour"
         },
-        
         "desc": [
             {
                 "desc": "This spell creates an invisible, mindless, shapeless, Medium-size force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hitpoint, a STR score of 2, and it cannot attack. If it drops to 0 hitpoints, the spell ends."
@@ -2029,52 +2741,65 @@
             }
         ],
         "levels": null,
-        
-        "lists": ["bard", "warlock", "wizard"],
+        "lists": [
+            "bard",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     },
     "vicious-mockery": {
         "name": "Vicious Mockery",
         "level": 0,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, false, false],
+        "vsm": [
+            true,
+            false,
+            false
+        ],
         "duration": {
             "time": "instant"
         },
-        
         "desc": [
             {
                 "desc": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target is able to hear you (though it need not understand you), it must succeed on a WIS saving throw or take {*}d4 @psychic damage, and gain disadvantage on the next attack roll it makes before the end of its next turn."
             }
         ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["bard"],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "bard"
+        ],
         "source": "Player's Handbook"
     },
     "wall-of-fire": {
         "name": "Wall of Fire",
         "level": 4,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, "a small piece of phosphorus"],
+        "vsm": [
+            true,
+            true,
+            "a small piece of phosphorus"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You create a wall of fire on a solid surface within range. You can make the wall up to 60ft. long, 20ft. high and 1ft. thick, or a ringed wall up to 20ft. in diameter, 20ft. high and 1ft. thick. The wall is opaque and lasts for the duration."
@@ -2085,56 +2810,44 @@
             {
                 "desc": "One side of the wall, selected by you when you cast, deals {*}d8 @fire damage to each creature that ends its turn within 10ft. of that side of the wall, or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn, or ends its turn there. The other side of the wall deals no damage."
             }
-            ],
-        "levels": [5, 6, 7, 8, 9, 10],
-        
-        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
-        "source": "Player's Handbook"
-    },
-    "wrathful-smite": {
-        "name": "Wrathful Smite",
-        "level": 1,
-        "school": "evocation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "bonus action"
-        },
-        "range": "self",
-        "vsm": [true, false, false],
-        "duration": {
-            "amount": 1,
-            "time": "minute",
-            "concentration": true
-        },
-        
-        "desc": [
-            {
-                        "desc": "The next time you hit with a melee weapon attack during the duration, your attack deals an extra 1d6 @psychic damage. Additionally, if the target is a creature, it must make a WIS saving throw or be frightened of you until the spell ends. As an action, the creature may make a Wisdom check against your spell save DC to steel its resolve and end this spell."
-            }
         ],
-        "levels": null,
-        
-        "lists": ["paladin"],
+        "levels": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "lists": [
+            "artificer",
+            "bard",
+            "cleric",
+            "druid",
+            "paladin",
+            "ranger"
+        ],
         "source": "Player's Handbook"
     },
     "warding-wind": {
         "name": "Warding Wind",
         "level": 2,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "self",
-        "vsm": [true, false, false],
+        "vsm": [
+            true,
+            false,
+            false
+        ],
         "duration": {
             "amount": 10,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "A strong wind (20 miles per hour) blows around you in a 10ft. radius and moves with you, remaining centered on you. The wind lasts for the spell's duration."
@@ -2160,56 +2873,107 @@
                     }
                 ]
             }
-            ],
+        ],
         "levels": null,
-        
-        "lists": ["bard", "druid", "sorcerer", "warlock"],
+        "lists": [
+            "bard",
+            "druid",
+            "sorcerer",
+            "warlock"
+        ],
         "source": "Xanathar's Guide to Everything"
     },
     "witch-bolt": {
         "name": "Witch Bolt",
         "level": 2,
         "school": "evocation",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "30ft.",
-        "vsm": [true, true, "a twig from a tree that has been struck by lightning"],
+        "vsm": [
+            true,
+            true,
+            "a twig from a tree that has been struck by lightning"
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes {*}d12 @lightning damage, and for the duration, at the end of each of your turns, you may use your action to deal 1d12 @lightning damage to the target automatically. The spell ends if you use your action to do anything else, if the target is ever outside the spell's range, or if the target has total cover from you."
             }
-            ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["sorcerer", "warlock", "wizard"],
+        ],
+        "levels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "lists": [
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "wrathful-smite": {
+        "name": "Wrathful Smite",
+        "level": 1,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "The next time you hit with a melee weapon attack during the duration, your attack deals an extra 1d6 @psychic damage. Additionally, if the target is a creature, it must make a WIS saving throw or be frightened of you until the spell ends. As an action, the creature may make a Wisdom check against your spell save DC to steel its resolve and end this spell."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "paladin"
+        ],
         "source": "Player's Handbook"
     },
     "zephyr-strike": {
         "name": "Zephyr Strike",
         "level": 2,
         "school": "transmutation",
-
         "castTime": {
             "amount": 1,
             "time": "bonus action"
         },
         "range": "self",
-        "vsm": [true, false, false],
+        "vsm": [
+            true,
+            false,
+            false
+        ],
         "duration": {
             "amount": 1,
             "time": "minute",
             "concentration": true
         },
-        
         "desc": [
             {
                 "desc": "You move like the wind. For the duration, your movement does not provoke opportunity attacks."
@@ -2217,29 +2981,31 @@
             {
                 "desc": "Once before the spell ends, you can give yourself advantage on one weapon attack roll on your turn. That attack deals an extra 1d8 @force damage on a hit. Whether you hit or miss, your walking speed increases by 30ft. until the end of that turn."
             }
-            ],
+        ],
         "levels": null,
-        
-        "lists": ["ranger"],
+        "lists": [
+            "ranger"
+        ],
         "source": "Xanathar's Guide to Everything"
-
     },
     "zone-of-truth": {
         "name": "Zone of Truth",
         "level": 2,
         "school": "enchantment",
-
         "castTime": {
             "amount": 1,
             "time": "action"
         },
         "range": "60ft.",
-        "vsm": [true, true, false],
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 10,
             "time": "minute"
         },
-        
         "desc": [
             {
                 "desc": "You create a magical zone that guards against deception in a 15ft. radius sphere centered on a point of your choice within range. For the duration, a creature that enters the spell's area for the first time on a turn, or starts its turn there, must succeed on a CHA saving throw, or cannot speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw."
@@ -2247,83 +3013,45 @@
             {
                 "desc": "An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such creatures can be evasive in its answers as long as it remains within the boundaries of the truth."
             }
-            ],
+        ],
         "levels": null,
-        
-        "lists": ["bard", "cleric", "paladin"],
+        "lists": [
+            "bard",
+            "cleric",
+            "paladin"
+        ],
         "source": "Player's Handbook"
     },
-    "crown-of-madness": {
-        "name": "Crown of Madness",
-        "level": 2,
-        "school": "enchantment",
-
+    "blade-ward": {
+        "name": "Blade Ward",
+        "level": 0,
+        "school": "abjuration",
         "castTime": {
             "amount": 1,
             "time": "action"
         },
-        "range": "120ft.",
-        "vsm": [true, true, false],
+        "range": "self",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
         "duration": {
             "amount": 1,
-            "time": "minute"
+            "time": "round"
         },
-        
         "desc": [
             {
-                "desc": "One humanoid of your choice that you are able to see within range must make a WIS saving throw. On a failure, it becomes charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes."
-            },
-            {
-                "desc": "The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target is able to act normally on its turn if you choose no creature or if none are within its reach."
-            },
-            {
-                "desc": "On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target may make a WIS saving throw at the end of each of its turns. On a success, the spell ends."
+                "desc": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you gain resistance to @bludgeoning, @piercing, and @slashing damage dealt by weapon attacks."
             }
-            ],
+        ],
         "levels": null,
-        
-        "lists": ["bard", "sorcerer", "warlock", "wizard"],
-        "source": "Player's Handbook"
-    },
-    "enlarge-reduce": {
-        "name": "Enlarge/Reduce",
-        "level": 2,
-        "school": "transmutation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "30ft.",
-        "vsm": [true, true, "a pinch of powdered iron"],
-        "duration": {
-            "amount": 1,
-            "time": "minute",
-            "concentration": true
-        },
-        
-        "desc": [
-            {
-                "desc": "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it may make a CON saving throw. On a success, the spell has no effect."
-            },
-            {
-                "desc": "If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.",
-                "type": "list",
-                "content": [
-                    {
-                        "name": "Enlarge",
-                        "desc": "The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category (from Medium to Large, for example). If there is not enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size, dealing 1d4 extra damage."
-                    },
-                    {
-                        "name": "Reduce",
-                        "desc": "The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category (from Medium to Small, for example). Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. Likewise, the target's weapons also shrink to match its new size, deal 1d4 less damage (this cannot reduce the damage below 1)."
-                    }
-                ]
-            }
-            ],
-        "levels": null,
-        
-        "lists": ["artificer", "bard", "druid", "sorcerer", "wizard"],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
         "source": "Player's Handbook"
     }
 }

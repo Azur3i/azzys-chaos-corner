@@ -2432,10 +2432,6 @@
                 {
                     "name": "Aura of Protection",
                     "desc": "Whenever you or any creature of your choice within 10ft. of you must make a saving throw, the creature gains a bonus to the saving throw equal to your CHA, minimum of +1. You must be conscious for this trait to be active."
-                },
-                {
-                    "name": "Countercharm",
-                    "desc": "As an action, you may start a performance that lasts until the end of your next turn. During that time, you and any creature of your choice within 30ft. of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced, or if you voluntarily end it, which requires no action."
                 }
             ],
             "7": [
