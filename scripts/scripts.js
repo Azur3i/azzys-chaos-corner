@@ -12,10 +12,7 @@ $("tbody td:not([rowspan])").hover(
     }
 );
 
-$(".subclass-check").click(function () {
-    let data = $(this).attr("data").split("~");
-    let cls = data[0];
-    let sbcls = data[1];
+function checkSubclass (cls, sbcls) {
     $(".subclass-check").removeClass("checked");
     $(this).addClass("checked");
     $.post(
@@ -31,4 +28,19 @@ $(".subclass-check").click(function () {
         }
         , "json"
     )
+};
+
+$(".subclass-check").click(function (e) {
+    let data = $(this).attr("data").split("~");
+
+    history.pushState(null, "", "#" + data[1]);
+    checkSubclass($("h1").data("name"), location.hash.substring(1));
+});
+
+$(function () {
+    checkSubclass($("h1").data("name"), location.hash.substring(1));
+});
+
+$(window).on("hashchange", function () {
+    checkSubclass($("h1").data("name"), location.hash.substring(1));
 });

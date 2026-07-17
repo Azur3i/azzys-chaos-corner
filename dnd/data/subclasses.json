@@ -1,5 +1,85 @@
 {
-    "artificer": {},
+    "artificer": {
+        "battle-smith": {
+            "name": "Battle Smith",
+            "desc": ["Armies require protection, and someone has to put things back together if defenses fail. A combination of protector and medic, a Battle Smith is an expert at defending others and repairing both materiel and personnel. To aid in their work, Battle Smiths are accompanied by a steel defender, a protective companion of their own creation. Many soldiers tell stories of nearly dying before being saved by a Battle Smith and a steel defender."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Specialism Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Artificer level", "Spells"],
+                                ["3rd", "@heroism, @shield"],
+                                ["5th", "@branding smite, @warding bond"],
+                                ["9th", "@aura of vitality, @conjure barrage"],
+                                ["13th", "@aura of purity, @fire shield"],
+                                ["17th", "@banishing smite, @mass cure wounds"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tool Proficiency",
+                        "desc": "You gain proficiency with smith's tools. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice."
+                    },
+                    {
+                        "name": "Battle Magic",
+                        "desc": "Your combat training and your experiments with magic have paid off in 2 ways. You gain proficiency with martial weapons. Additionally, when you attack with a magic weapon, you may use your INT, instead of STR or DEX, for the attack and damage rolls."
+                    },
+                    {
+                        "name": "Steel Defender",
+                        "desc": "Your tinkering has borne you a faithful companion, a steel defender. It's friendly to you and your companions, and it obeys your commands. See its game statistics in the Steel Defender stat block, which uses your proficiency bonus in severel place. You determine the creature's appearance and whether it has 2 legs or 4; your choice has no effect on its game statistics. In combat, the defender shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the defender can take any action of its choice, not just dodge. If the mending spell is cast on it, it regains 2d6 hitpoints. If it has died within the last hour, you may use your smith's tools and a 1st level spell slot as an action to revive it, provided you are within 5ft. of it. The steel defender returns to life after 1 minute, with all its hitpoints restored. At the end of a long rest, you may create a new steel defender if you have smith's tools with you. If you already have a defender from this feature, the first one immediately perishes. The defender also perishes if you die. Statblock will be added later."
+                    }
+                ],
+                "5": [
+                    {
+                        "name": "Extra Attack",
+                        "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Arcane Jolt",
+                        "desc": "You've learnt new ways to channel arcane energy to harm or heal. When either you hit a target with a magic weapon attack, or your steel defender hits a target, you may channel magical energy through the strike to create one of the following effects. You may use this energy a number of times equal to your INT (minimum of 1) per long rest, but no more than once per turn.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "The target takes an extra 2d6 @force damage."
+                            },
+                            {
+                                "desc": "Choose one creature or object you can see within 30ft. of the target. Healing energy flows into the chosen recipient, restoring 2d6 hitpoints to it."
+                            }
+                        ]
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Improved Defender",
+                        "desc": "Your arcane jolt feature and steel defender become more powerful:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "The extra damage and the healing of your arcane jolt feature both increase to 4d6."
+                            },
+                            {
+                                "desc": "Your steel defender gains a +2 bonus to AC."
+                            },
+                            {
+                                "desc": "Whenever your steel defender uses its deflect attack, the attacker takes @force damage equal to 1d4 + your INT."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        }
+    },
     "barbarian": {
         "path-of-the-beast": {
             "name": "Path of the Beast",
@@ -59,7 +139,177 @@
                         "desc": "Whenever you enter you rage, you may choose a number of willing creatures you can see within 30ft. of you equal to your CON (minimum of 1). You gain 5 temporary hitpoints for each creature that accepts this feature. Until the rage ends, the chosen creatures gain 1d6 bonus damage on attack rolls once per turn."
                     }
                 ]
-            }
+            },
+            "source": "Tasha's Cauldron of Everything"
+        },
+        "path-of-the-totem-warrior": {
+            "name": "Path of the Totem Warrior",
+            "desc": ["The Path of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal as guide, protector, and inspiration. In battle, your totem spirit fills you with supernatural might, adding magical fuel to your barbarian rage.", "Most barbarian tribes consider a totem animal to be kin to a particular clan. In such cases, it is unusual for an individual to have more than one totem animal spirit, though exceptions exist."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Spirit Seeker",
+                        "desc": "Yours is a path that seeks attunement with the natural world, giving you kinship with beasts. You gain the ability to cast the @beast sense and @speak with animal spells, but only as rituals."
+                    },
+                    {
+                        "name": "Totem Spirit",
+                        "desc": "You choose a totem spirit and gain its feature. You must make or acquire a physical totem object - an amulet or similar adornment - that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow. Your totem animal might be an animal related to those listed here but more appropriate to your homeland; for example, you could choose a hawk or vulture instead of an eagle.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bear",
+                                "desc": "The spirit of the bear makes you tough enough to stand up to any punishment. While raging, you gain resistance to all damage types except @psychic damage."
+                            },
+                            {
+                                "name": "Eagle",
+                                "desc": "The spirit of the eagle makes you into a predator who can weave through the fray with ease. While you're raging and are not wearing heavy armor, other creature gain disadvantage on opportunity attacks against you, and you may use the @dash action as a bonus action on your turn."
+                            },
+                            {
+                                "name": "Elk",
+                                "desc": "The spirit of the elk makes you extraordinarily swift. While you're raging and are not wearing heavy armor, your walking speed increases by 15ft."
+                            },
+                            {
+                                "name": "Tiger",
+                                "desc": "The spirit of the tiger empowers your leaps. While raging, you may add 10ft. to your long jump distance, and 3ft. to your high jump distance."
+                            },
+                            {
+                                "name": "Wolf",
+                                "desc": "The spirit of the wolf makes you a leader of hunters. While you're raging, any number of creatures of your choice gain advantage on melee attack rolls against any creature within 5ft. of you."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Aspect of the Beast",
+                        "desc": "You gain a magical benefit based on a totem animal of your choice. You may choose the same animal, or a different one.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bear",
+                                "desc": "You gain the might of a bear. Your carrying capacity, including maximum load and maximum lift, is doubled, and you gain advantage on STR checks made to push, pull, life, or break objects."
+                            },
+                            {
+                                "name": "Eagle",
+                                "desc": "You gain the eyesight of an eagle. You are able to see 1mi. away with no difficulty, able to discern even fine details as though looking at something no more than 100ft. away from you. Additionally, dim light doesn't impose disadvantage on your Perception (WIS) checks."
+                            },
+                            {
+                                "name": "Elk",
+                                "desc": "The elk sprit helps you roam far and fast. Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to 10 companions while they're within 60ft. of you and not incapacitated. "
+                            },
+                            {
+                                "name": "Tiger",
+                                "desc": "The tiger spirit hones your survival instincts. You gain proficiency in two skills from the following list: Athletics (STR), Acrobatics (DEX), Stealth (DEX), Survival (WIS)."
+                            },
+                            {
+                                "name": "Wolf",
+                                "desc": "You gain the huntin sensibilities of a wolf. You may track other creatures while traveling at a fast pace, and you are able to move stealthily while traveling at a normal pace."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Spirit Walker",
+                        "desc": "You may cast the @commune with nature spell, but only as a ritual. Whenever you do so, a spiritual version of one of the animals you chose for your totem spirit feature or aspect of the beast feature appears to you to convey the information you seek."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Totemic Attunement",
+                        "desc": "You gain a magical benefit based on a totem animal of your choice. You may choose the same animal, or a different one.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bear",
+                                "desc": "While you're raging, any creature of your choice within 5ft. of you gains disadvantage on attack rolls other than you or another creature with this feature. If a creature cannot see or hear you, or is immune to being frightened, that creature is immune to this attack."
+                            },
+                            {
+                                "name": "Eagle",
+                                "desc": "While raging, you gain a flying speed equal to your current movement speed. If you end your turn in the air and nothing besides this feature is holding you aloft, you fall."
+                            },
+                            {
+                                "name": "Elk",
+                                "desc": "While raging, as a bonus action, you may pass through the space of a Large or smaller creature. That creature must succeed on a STR saving throw, DC 8 + proficiency + STR, or take 1d12 + STR @bludgeoning damage and be knocked prone."
+                            },
+                            {
+                                "name": "Tiger",
+                                "desc": "While you're raging, if you move at least 20ft. in a straight line towards a Large or smaller target before making a melee weapon attack against it, as a bonus action, you may make an additional melee weapon attack against it."
+                            },
+                            {
+                                "name": "Wolf",
+                                "desc": "While you're raging, as a bonus action, you may knock a Large or smaller creature prone whenever you hit it with a melee attack."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        },
+        "path-of-wild-magic": {
+            "name": "Path of Wild Magic",
+            "desc": ["Many places in the multiverse abound with beauty, intense emotion, and rampant magic; the Feywild, the Upper Planes, and other realms of supernatural power radiate with such forces and can profoundly influence people. As folk of deep feeling, barbarians are especially susceptible to these wild influences, with some barbarians being transformed by the magic. These magic-suffused barbarians walk the Path of Wild Magic. Elf, tiefling, aasimar, and genasi barbarians often seek this path, eager to manifest the otherworldly magic of their ancestors."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Magic Awareness",
+                        "desc": "As an action, you may open your awareness to the presence of concentrated magic. Until the end of your next turn, you know the location of any spell or magic item within 60ft. of you that isn't behind total cover. Whenever you sense a spell, you learn which school of magic it belongs to. You may use this feature a number of times equal to your proficiency bonus every long rest."
+                    },
+                    {
+                        "name": "Wild Surge",
+                        "desc": "The magical energy roiling inside you sometimes erupts from you. Whenever you enter your rage, roll on the following table to determine the magical effect produced. If the effect requires a saving throw, the DC equals 8 + proficiency bonus + CON.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d8", "Effect"],
+                                [1, "Each creature of your choice that you can see within 30ft. of you must succeed on a CON saving throw or take 1d12 @necrotic damage. You gain 1d12 temporary hitpoints."],
+                                [2, "You may teleport up to 30ft. to an unoccupied space you can see. Until your rage ends, you may use this effect again on each of your turns as a bonus action."],
+                                [3, "An intangible spirit, which looks like a flumph or pixie, your choice, appears within 5ft. of a creature of your choice that you can see within 30ft. of you. At the end of the current turn, the spirit explodes. Each creature within 5ft. of it must succeed on a DEX saving throw, or take 1d6 @force damage. Until your rage ends, you may use this effect again, summoning another spirit, on each of your turns as a bonus action."],
+                                [4, "Magic infuses one weapon or your choice that you are holding. Until your rage ends, the weapon's damage type changes to @force, and it gains the light and thrown properties, with a range of 20/60ft. If the weapon leaves your hand, the weapon reappears in your hand at the end of the current turn."],
+                                [5, "Whenever a creature hits you with an attack before your rage ends, that creature takes 1d6 @force damage, as magic lashes out in retribution."],
+                                [6, "Until your rage ends, you are surrounded by multicolored, protective lights. You gain +1 AC, and any number of creatures of your choice while within 10ft. of you gain the same bonus."],
+                                [7, "Flowers and vines temporarily grow around you. Until your rage ends, the ground within 15ft. of you is difficult terrain for any number of creatures of your choice."],
+                                [8, "A bolt of light shoots from your chest. Another creature of your choice that you can see within 30ft. of you must succeed on a CON saving throw, or take 1d6 @radiant damage, and be blinded until the start of your next turn. Until your rage ends, you may use this effect again on each of your turns as a bonus action."]
+                            ]
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Bolstering Magic",
+                        "desc": "You may harness your wild magic to bolster yourself or a companion. As an action, you may touch one creature and confer one of the following benefits of your choice to that creature. You may use this feature a number of times equal to your proficiency bonus every long rest.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "For 10 minutes, the creature may roll 1d6 whenever it makes an attack roll or ability check, and add half the number rolled, rounded up."
+                            },
+                            {
+                                "desc": "Roll 1d6. The creature regains one expended spell slot, the level of which equals half the number rolled, rounded up, or lower, the creature's choice. A creature may receive this feature once per long rest."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Unstable Backlash",
+                        "desc": "When you are imperiled during your rage, the magic within you may lash out. Immediately after you take damage or fail a saving throw while raging, you may use your reaction to roll on the wild magic table and immediately produce the effect rolled. This effect replaces your current effect."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Controlled Surge",
+                        "desc": "Whenever you roll on the wild magic table, you may roll the die twice and choose which of the two effects to unleash. If you roll the same number on both dice, you may ignore the number and choose any effect."
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
         }
     },
     "bard": {
@@ -88,7 +338,8 @@
                         "desc": "Your appearance permanently gains an otherworldy aspect that makes you look more lovely and fierce. As a bonus action, you may assume a magically majestic prescence for 1 minute, or until you are incapacitated. For the duration, whenever any creature tries to attack you for the first time on a turn, the attacker must make a CHA saving throw against your spell save DC. On a failed save, it cannot attack you on this turn, and it must choose a new target for its attack, or the attack is wasted. On a successful save, it may attack you on this turn, but it has disadvantage on any saving throw it makes against your spells on your next turn. You may use this feature once per short rest."
                     }
                 ]
-            }
+            },
+            "source": "Xanathar's Guide to Everything"
         },
         "college-of-valor": {
             "name": "College of Valor",
@@ -119,12 +370,137 @@
                         "desc": "You have mastered the art of weaving spellcasting and weapon use into a single, harmonious act. When you use your action to cast a bard spell, as a bonus action, you may make a weapon attack."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "blood-hunter": {},
-    "cleric": {},
+    "cleric": {
+        "grave-domain": {
+            "name": "Grave Domain",
+            "desc": ["Gods of the grave watch over the line between life and death. To these deities, death and the afterlife are a foundational part of the multiverse's workings. To resist death, or to desecrate the dead's rest, is an abomination. Deities of the grave include Kelemvor, Wee Jas, the ancestral spirits of the Undying Court, Hades, Anubis, and Osiris. These deities teach their followers to respect the dead and pay them due homage. Followers of these deities seek to put restless spirits to rest, destroy the undead wherever they find them, and ease the suffering of dying creatures. Their magic also allows them to stave off a creature's death, though they refuse to use such magic to extend a creature's lifespan beyond its mortal limits."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Cleric level", "Spells"],
+                                ["3rd", "@bane, @false life"],
+                                ["5th", "@gentle repose, @ray of enfeeblement"],
+                                ["9th", "@revivify, @vampiric touch"],
+                                ["13th", "@blight, @death ward"],
+                                ["17th", "@antilife shell, @raise dead"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Circle of Mortality",
+                        "desc": "You gain the ability to manipulate the line between life and death. Whenever you would normally roll one or more dice to restore hitpoints with a spell to a creature at 0 hitpoints, you instead use the highest number possible for each die. Additionally, you learn the @spare the dying cantrip, which does not count against the number of cleric cantrips you know. For you, it has a range of 30ft., and you may cast it as a bonus action."
+                    }
+                ],
+                "2": [
+                    {
+                        "name": "Path to the Grave",
+                        "desc": "You mark another creature's life force for termination. As an action, you choose one creature you can see within 30ft. of you, cursing it until the end of your next turn. The next time a creature hostile to the target hits the target with an attack"
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Sentinel at Death's Door",
+                        "desc": "You gain the ability to impede death's progress. As a reaction when a creature you can see within 30ft. of you suffers a critical hit, you may turn that attack into a normal hit. Any effects triggered by a critical hit are canceled. You may use this feature a number of times equal to your WIS (minimum of 1) every long rest."
+                    }
+                ],
+                "8": [
+                    {
+                        "name": "Potent Spellcasting",
+                        "desc": "You may add your WIS to the damage you deal with any cleric cantrip."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Keeper of Souls",
+                        "desc": "You may seize a trace of vitality from a parting soul and use it to heal the living. Whenever a hostile creature you can see within 30ft. of you, you or a friendly creature of your choice that is within 30ft. of you regains hitpoints equal to the enemy's number of Hit Dice. You may use this feature only if you are not incapacitated. You may use this feature once per turn."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        }
+    },
     "druid": {
+        "circle-of-spores": {
+            "name": "Circle of Spores",
+            "desc": ["Druids of the Circle of Spores find beauty in decay. They see within mold and other fungi the ability to transform lifeless material into abundant, albeit somewhat strange, life. These druids believe that life and death are parts of a grand cycle, with one leading to the other and then back again. Death isn't the end of life, but instead a change of state that sees life shift into a new form.", "Druids of this circle have a complex relationship with the undead. They see nothing inherently wrong with undeath, which they consider to be a companion to life and death. But these druids believe that the natural cycle is healthiest when each segment of it is vibrant and changing. Undead that seek to replace all life with undeath, or that try to avoid passing to a final rest, violate the cycle and must be thwarted."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Circle Spells",
+                        "desc": "Your symbiotic link to fungi and your ability to tap into the cycle of life and death grants you access to certain spells. You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Druid level", "Spells"],
+                                ["2nd", "@chill touch"],
+                                ["3rd", "@blindness/deafness, @gentle repose"],
+                                ["5th", "@animate dead, @gaseous form"],
+                                ["7th", "@blight, @confusion"],
+                                ["9th", "@cloudkill, @contagion"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Halo of Spores",
+                        "desc": "You are surrounded by invisible, necrotic spores that are harmless until you unleash them on a creature nearby. Whenever a creature you can see moves into a space within 10ft. of you or starts its turn there, you may use your reaction to force the creature to succeed on a CON saving throw, or take 1d4 @necrotic damage."
+                    },
+                    {
+                        "name": "Symbiotic Entity",
+                        "desc": "You gain the ability to channel magic into your spores. As an action, you may expend a use of your wild shape feature to awaken those spores, rather than transforming into a beast form. Whenever you do, you gain 4 temporary hitpoints for each level you have in this class. This lasts for 10 minutes, until you lose all temporary hitpoints, or until you use your wild shape feature again. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Whenever you deal damage with your halo of spores feature, you may roll the damage die a second time and add it to the total."
+                            },
+                            {
+                                "desc": "Your melee weapon attacks deal a bonus 1d6 @necrotic damage on a hit."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Fungal Infestation",
+                        "desc": "Your spores gain the ability to infest a corpse and animate it. If a beast or a humanoid that is Small or Medium dies within 10ft. of you, you may use your reaction to animate it, causing it to stand up immediately with 1 hitpoint. The creature uses the zombie statblock (from the Monster Manual). It remains animate for 1 hour, after which time it collapses and dies. In combat, the zombie's turn comes immediately after yours. It obeys your mental commands, and the only action it may take is the @attack action, making one melee attack. You may use this feature a number of times equal to your WIS (minimum of 1) every long rest."
+                    },
+                    {
+                        "name": "Halo of Spores",
+                        "desc": "Your halo of spores deals 1d6 @necrotic damage."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Spreading Spores",
+                        "desc": "You gain the ability to seed an area with deadly spores. As a bonus action while your symbiotic entity feature is active, you may hurl spores up to 30ft. away, where they swirl in a 10ft. cube for 1 minute. Whenever a creature moves into the cube or starts its turn there, it must succeed on a CON saving throw, or take your halo of spores damage. A creature may take this damage no more than once per turn. While the cube of spores persists, you cannot use your halo of spores reaction. The spores disappear early if you use this feature again, if you dismiss them as a bonus action, or if your symbiotic entity feature is no longer active."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Fungal Body",
+                        "desc": "The fungal spores in your body alter you. You cannot be blinded, deafened, frightened, or poisoned, and any critical hit against you counts as a normal hit instead, unless you're incapacitated."
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        },
         "circle-of-the-moon": {
             "name": "Circle of the Moon",
             "desc": ["Druids of the Circle of the Moon are fierce guardians of the wilds. Their order gathers under the full moon to share news and trade warnings. They haunt the deepest parts of the wilderness, where they might go for weeks on end before crossing paths with another humanoid creature, let alone another druid. Changeable as the moon, a druid of this circle might prowl as a great cat one night, soar over the treetops as an eagle the next day, and crash through the undergrowth in bear form to drive off a trespassing monster. The wild is in the druid's blood."],
@@ -164,13 +540,14 @@
                         "desc": "You have learned to use magic to alter your physical form in more subtle ways. You may cast the @alter self spell at will."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "paladin": {
         "oath-of-devotion": {
             "name": "Oath of Devotion",
-            "desc": ["The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue and order. Sometimes called cavaliers, white knights or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good, and use their gods' tenents as the measure of their devotion. They hold angels – the perfect servants of good – as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."],
+            "desc": ["The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue and order. Sometimes called cavaliers, white knights or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good, and use their gods' tenents as the measure of their devotion. They hold angels - the perfect servants of good - as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."],
             "magic": {
                 "caster": "none"
             },
@@ -253,10 +630,253 @@
                         "desc": "As an action, you may emenate an aura of sunlight. For 1 minute, bright light shines from you in a 30ft. radius, and dim light in another 30ft. Whenever an enemy creature starts its turn in the bright light, the creature takes 10 @radiant damage. Additionally, for the duration, you gain advantage on saving throws against spells cast by fiends or undead. You may use this feature once per long rest."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
+        },
+        "oath-of-perfection": {
+            "name": "Oath of Perfection",
+            "desc": ["The Oath of Perfection is considered an extremist branch of many religions. Found in the worship of many deities of light, their goal is purification through erasure. A blessed being is one in peak form, ready to be sacrificed to the light in searing radiance and holy justice. Known as annihilators in some groups, sentinels of light in others, they are destroyers, and will erase all that fits the right to be."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Paladin level", "Spells"],
+                                ["3rd", "@protection from evil and good, @sanctuary"],
+                                ["5th", "@lesser restoration, @zone of truth"],
+                                ["9th", "@beacon of hope, @dispel magic"],
+                                ["13th", "@freedom of movement, @guardian of faith"],
+                                ["17th", "@commune, @flame strike"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tenets of Perfection",
+                        "desc": "Though the exact words and strictures of the Oath of Perfection vary, paladins of this oath share these tenets:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Beauty",
+                                "desc": "The world is beautiful, and every creature, no matter how wicked, deserves a chance to be remade in the image of your deity."
+                            },
+                            {
+                                "name": "Sovereignity",
+                                "desc": "You take no orders, and follow no law. Your god's word is your law, and your command."
+                            },
+                            {
+                                "name": "Motion",
+                                "desc": "Never stop moving. Stagnation is death."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Channel Divinity",
+                        "desc": "You gain the following 2 Channel Divinity options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Attuning Mist",
+                                "desc": "As a bonus action, you may surround yourself in a nebula of soothing mist. For the next minute, you gain a 10ft. aura that sheds dim light in its radius. A creature that ends its turn inside this aura recovers 1d4 hitpoints, increased to 2d4 if this creature has more than half their maximum hitpoints remaining. Whenever a creature within melee range that is missing hitpoints regains hitpoints to their maximum, you may use your reaction to make a melee attack against this creature, turning the mist into searing light. If the creature still has its maximum hitpoints remaining when making the attack, on a hit, the damage of this attack is doubled."
+                            },
+                            {
+                                "name": "Spiritual Reduction",
+                                "desc": "Something something bonk bye bye max HP."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Aura of Perfection",
+                        "desc": "Whenever a creature within 10ft. of you that you can see and that has all their hitpoints remaining takes damage, you may either halve or double the damage done to them (your choice). A creature may benefit from this feature from only 1 paladin at a time. Additionally, when targeting a creature in this range with a spell or effect that would recover its hitpoints, the creature recovers the maximum amount that spell or effect can recover if this would put it at its maximum."
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Purity of Consciousness",
+                        "desc": "When you are subjected to an effect that allows you to make a CON saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail. "
+                    }
+                ],
+                "20": [
+                    {
+                        "name": "Erasure",
+                        "desc": "Your divine smite trait deals triple damage against creatures with its maximum hitpoints remaining. This trait only functions if you are at your maximum hitpoints yourself."
+                    }
+                ]
+            },
+            "source": "Asmodeus: King of Hell"
+        },
+        "betrayed": {
+            "name": "Betrayed",
+            "desc": ["You swore to uphold the law, but found a lord bending it to his own will, using you as an agent of his tyrannical rule. Or, perhaps a goddess of mercy sacrificed you for her own goals, breaking her own ideals you fought to upheld for her. No matter the reason, you did not break your oath; you stuck by it until the very end, until it eventually broke you. But you did not surrender. You fight against the pits of despair looming to draw you in, and draw power from other sources to restore your corrupted ideal to its former glory. Thus is the path of those that uphold their oath by breaking it."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "quote": "If blood rains from the sky to nourish the depraved...",
+                        "name": "Rebirth of an Oath",
+                        "desc": "You once had a different oath, some allegiance you wouldn't forsake for the world. But that did not matter. The betrayed paladin, much like the oathbreaker, is not a path you set out for. Instead, when your loftiest ideals, and her proudest protectors failed to uphold the dream you shared, it left you with nothing but your life, and a fading power likely to soon leave you too. But you keep fighting for it, as if for your very own life. Should you meet any person that used to be part of your prior belief, but abandoned it, you will have a bad impression of them, and they will trigger any ability or spell you use that a fiend or evil creature would."
+                    },
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Paladin level", "Spells"],
+                                ["3rd", "@hunter's mark, @false life"],
+                                ["5th", "@detect thoughts, @enhance ability"],
+                                ["9th", "@elemental weapon, @thunder step"],
+                                ["13th", "@sickening radiance, @polymorph"],
+                                ["17th", "@arcane hand, @destructive wave"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tenets of Rebirth",
+                        "desc": "Though the exact words and strictures of the betrayed paladin vary, paladins of this oath share these tenets:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Survival",
+                                "desc": "You live for your cause, so do not let your cause die with you. Do not squander your final breath on deluded glory, but live on, to fight another day."
+                            },
+                            {
+                                "name": "Passion",
+                                "desc": "As you are all that is left of your belief, its future will fade if the fire inside you dies. You cannot afford for your resolve to waiver, you need to believe in your oath."
+                            },
+                            {
+                                "name": "Resourcefulness",
+                                "desc": "If you ever wish to rise from the ruins of your broken order, and see the sun set once more upon a belief not even her proudest paragons could uphold, you will need all the tools you can get. Utilize whatever you can find, repurpose it to fit your aims. Even the bones of sinners could become weapons."
+                            },
+                            {
+                                "name": "Sanctification",
+                                "desc": "You will have to repair old sanctuaries, build new ones, and vanquish heresy. Only you can return the light that was lost from this world. May your holy symbol be a shield for your followers, a blight upon your enemies, and a brick to build upon a foundation of the past's shattered sins."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Channel Divinity",
+                        "desc": "You gain the following 2 Channel Divinity options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Nourishment of the Broken",
+                                "desc": "As a bonus action after you damage a creature you can see within 5ft. of you, it and all creatures of your choice within 5ft. of both you and the target have their life force sucked out. They must succeed on a CON saving throw, or take 1d4 + CHA @necrotic damage. You restore hitpoints equal to half the @necrotic damage done, rounded down."
+                            },
+                            {
+                                "name": "Heaven's Due",
+                                "desc": "As an action, you unleash your suffering on all that claim to be good or evil. Every aberration, celestial, elemental, fiend, fey and and undead within 30ft. of you must succeed on an INT saving throw, or gain disadvantage on attack rolls while they're within 60ft. of you for 1 minute. Any of your attack rolls of 19 or 20 on the d20 against an affected creature is a critical hit. An affected creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "quote": "...running from the edge of the savage, enraged.",
+                        "name": "Aura of Rage",
+                        "desc": "Whenever you or a creature within 5ft. of you take @bludgeoning, @piercing or @slashing damage, you may give it resistance to @bludgeoning, @piercing and @slashing damage until the end of your next turn. Additionally, if you or a creature within 5ft. of you is attacked by a creature within 10ft. of you, the attacker cannot make opportunity attacks against you until the end of your next turn. The range of this aura increases to 10ft. for protection and 30ft. for attackers at 18th level."
+                    }
+                ],
+                "15": [
+                    {
+                        "quote": "Beware the avenger, with weapons reforged...",
+                        "name": "Reforged Fury",
+                        "desc": "Your armor grants you a bonus +1 AC, and even though your physical strength instills a deep-rooted fear in you, you gain +1 to STR checks and saving throws. Additionally, as an action, you may imbue your armor with divine magic, making it grow one size category larger for 1 minute. While in this state, you count as a construct on top of your other creature types for the sake of spells and effects that target creatures of that type, and you gain 5ft. reach on your melee weapons. This state lasts until you fall unconscious, or until you dismiss it as a bonus action."
+                    }
+                ],
+                "20": [
+                    {
+                        "quote": "...their profaned wrath leaves the defiler scorched.",
+                        "name": "Oath Cleanser",
+                        "desc": "You have restored your oath to its pure form, and are once more able to fight for it with all your conviction. Every time you finish a long rest, you may choose between the 20th level feature of either your original paladin oath, or this one. As a bonus action, you become the Paladin Reborn. You may use this feature aonce per long rest. As the Paladin Reborn, you gain the following benefits for 1 minute:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Blinding light emanates from you in a 60ft. radius, granting you a bonus to damage you deal with spells and your divine smite trait equal to your CHA."
+                            },
+                            {
+                                "desc": "Creatures you deal @radiant damage to start leaving a glowing trail."
+                            },
+                            {
+                                "desc": "You may make one of the following sweeping blows. You may make one sweeping blow every turn.",
+                                "type": "list",
+                                "content": [
+                                    {
+                                        "desc": "You swipe your weapon in a large arc. Make a melee weapon attack against the main target; all creatures in a cone equal to 5ft. + your reach in size, centered on the main target, must succeed on a DEX saving throw or take half your weapon's damage, rounded down."
+                                    },
+                                    {
+                                        "desc": "After moving at least 10ft. in a straight line, you may jump to an unoccupied space you can see. Every creature in a circle the radius of which equals 5ft. + your reach must succeed on a DEX saving throw or take half your weapon's damage, rounded down."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Reforged Fury",
+                        "desc": "While transformed, you resemble an angelic machine, and may choose to change your weapon's damage type to @radiant damage."
+                    }
+                ]
+            },
+            "source": "The Archivist's Anthology of Forgotten Lore"
         }
     },
-    "fighter": {},
+    "fighter": {
+        "samurai": {
+            "name": "Samurai",
+            "desc": ["The Samurai is a fighter who draws on an implacable fighting spirit to overcome enemies. A samurai's resolve is nearly unbreakable, and the enemies in a samurai's path have two choices: yield or die fighting."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiency",
+                        "desc": "You gain proficiency in one of the following skills of your choice: History (INT), Insight (WIS), Performance (CHA), or Persuasion (CHA). Alternatively, you learn one language of your choice."
+                    },
+                    {
+                        "name": "Fighting Spirit",
+                        "desc": "Your intensity in battle is able to shield you, and help you strike true. As a bonus action, you may give yourself advantage on all weapon attack rolls until the end of your current turn. Whenever you do so, you gain 5 temporary hitpoints. You may use this feature three times per long rest."
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Elegant Courtier",
+                        "desc": "Your discipline and attention to detail allow you to excel in social situations. Whenever you make a Persuasion (CHA) check, you gain a bonus equal to your WIS. Your self-control also causes you to gain proficiency in WIS saving throws. If you already have this proficiency, you instead gain proficiency in either INT or CHA saving throws, your choice."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Tireless Spirit",
+                        "desc": "Whenever you roll initiative and have no uses of your fighting spirit feature remaining, you regain one use."
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Rapid Strike",
+                        "desc": "You learn to trade accuracy for swift strikes. Whenever you take the @attack action on your turn and have advantage on an attack roll against one of the targets, you may forego the advantage for that roll to make an additional weapon attack against that target, as part of the same action. You may do so once per turn."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Strength Before Death",
+                        "desc": "Your fighting spirit can delay the grasp of death. Whenever you take damage that reduces you to 0 hitpoints, you may use your reaction to delay falling unconscious and immediately take an extra turn. While you have 0 hitpoints during that extra turn, taking damage causes death saving throw failures as normal, and three death saving throws can still kill you. When the extra turn ends, you fall unconscious if you still have 0 hitpoints. You may use this feature once per long rest."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        }
+    },
     "monk": {
         "way-of-the-astral-self": {
             "name": "Way of the Astral Self",
@@ -335,7 +955,8 @@
                         ]
                     }
                 ]
-            }
+            },
+            "source": "Tasha's Cauldron of Everything"
         },
         "way-of-the-drunken-master": {
             "name": "Way of the Drunken Master",
@@ -386,11 +1007,103 @@
                         "type": "list"
                     }
                 ]
-            }
+            },
+            "source": "Xanathar's Guide to Everything"
         }
     },
     "oracle": {},
-    "ranger": {},
+    "ranger": {
+        "hunter-conclave": {
+            "name": "Hunter Conclave",
+            "desc": ["Some rangers seek to master weapons to better protect civilization from the terrors of the wilderness. Members of the Hunter Conclave learn specialized fighting techniques for use against the most dire threats, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Hunter's Prey",
+                        "desc": "Choose one of the following features:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Colossus Slayer",
+                                "desc": "Your tenacity is able to wear down the most potent foes. Whenever you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it is missing hitpoints. You may deal this extra damage only once per turn."
+                            },
+                            {
+                                "name": "Giant Killer",
+                                "desc": "After a Large or larger creature within 5ft. attacks you, you may use your reaction to attack that creature immediately after its attack, provided that you can see the creature."
+                            },
+                            {
+                                "name": "Horde Breaker",
+                                "desc": "Once on each of your turns when you make a weapon attack, you may make another attack with the same weapon against a different creature that is within 5ft. of the original target and within range of your weapon."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Defensive Tactics",
+                        "desc": "Choose one of the following features:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Escape the Horde",
+                                "desc": "Opportunity attacks against you gain disadvantage."
+                            },
+                            {
+                                "name": "Multiattack Defense",
+                                "desc": "Whenever a creature hits you with an attack, you gain +4 AC against all subsequent attacks made by that creature for the rest of the turn."
+                            },
+                            {
+                                "name": "Steel Will",
+                                "desc": "You gain advantage on saving throws against being frightened."
+                            }
+                        ]
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Multiattack",
+                        "desc": "Choose one of the following features:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Volley",
+                                "desc": "As an action, you may make a ranged attack against any number of creatures in a 10ft. radius sphere, the center of which needs to be within your weapon's range. You must have ammunition for each target as normal, and you make a separate attack roll for each target."
+                            },
+                            {
+                                "name": "Multiattack Defense",
+                                "desc": "As an action, you may make melee attacks against any number of creatures within 5ft. of you, with a separate attack roll for each target."
+                            }
+                        ]
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Superior Hunter's Defense",
+                        "desc": "Choose one of the following features:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Evasion",
+                                "desc": "When you are forced to make a DEX saving throw to take only half damage from an area attack, you instead take no damage if you succeed the saving throw, and half damage if you fail."
+                            },
+                            {
+                                "name": "Redirect Attack",
+                                "desc": "Whenever a creature misses you with a melee attack, as a reaction, you may force the attacker to repeat the same attack against another creature of your choice, other than the attacker, within 5ft. of it."
+                            },
+                            {
+                                "name": "Uncanny Dodge",
+                                "desc": "When an attacker that you can see hits you with an attack, you may use your reaction to halve the attack's damage."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        }
+    },
     "rogue": {
         "arcane-trickster": {
             "name": "Arcane Trickster",
@@ -478,7 +1191,8 @@
                         "desc": "You gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster. Immediately after a creature casts a spell that targets you, or includes you in its area of effect, you may use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failure, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level, and of a level you can cast. It does not have to be a wizard spell. For the next 8 hours, you know this spell, and may cast it using your spell slots. The creature you stole the spell from cannot cast this spell until these 8 hours have passed. You may use this feature once per long rest."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         },
         "assassin": {
             "name": "Assassin",
@@ -515,7 +1229,105 @@
                         "desc": "You become a master of instant death. When you attack and hit a creature that is surprised, it must succeed on a CON saving throw (DC 8 + your DEX + your proficiency bonus). On a failed save, the damage your attack deals against the creature is doubled."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
+        },
+        "phantom": {
+            "name": "Phantom",
+            "desc": ["Many rogues walk a fine line between life and death, risking their own lives and taking the lives of others. While adventuring on that line, some rogues discover a mystical connection to death itself. These rogues take knowledge from the dead and become immersed in negative energy, eventually becoming like ghosts. Thieves' guilds value them as highly effective information gatherers and spies.", "Many shadar-kai of the Shadowfell are masters of these macabre techniques, and some are willing to teach this path. In places like Thay in the Forgotten Realms and Karrnath in Eberron, where many necromancers practice their craft, a Phantom can become a wizard's confidant and right hand. In temples of gods of death, the Phantom might work as an agent to track down those who try to cheat death and to recover knowledge that might otherwise be lost to the grave."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Whispers of the Dead",
+                        "desc": "Echoes of those who have died cling to you. Whenever you finish a short rest, you may gain one skill or tool proficiency of your choice, as a ghostly presence shares its knowledge with you. You lose this proficiency when you use this feature to choose a different proficiency."
+                    },
+                    {
+                        "name": "Wails from the Grave",
+                        "desc": "As you nudge someone closer to the grave, you may channel the power of death to harm someone else as well. Immediately after you deal your sneak attack damage to a creature on your turn, you may target a secord creature that you can see within 30ft. of the first creature. This deals @necrotic damage equal to half the number of sneak attack dice for your level, rounded up. You may use this feature an amount of times equal to your proficiency bonus every long rest."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Tokens of the Departed",
+                        "desc": "When a life ends in your presence, you're able to snatch a token from the departing soul; a sliver of its life essence that takes physical form. As a reaction when a creature you can see dies within 30ft. of you, you may open your free hand and cause a Tiny trinket to appear there; a soul trinket. The DM determines the trinket's form or has you roll on the Trinkets table in the Player's Handbook to generate it. You may have a maximum number of soul trinkets equal to your proficiency, and you cannot create one while at your maximum. You may use soul trinkets in the following ways:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "While a soul trinket is on your person, you gain advantage on death saving throws and CON saving throws, for your vitality is enhanced by the life essence within the trinket."
+                            },
+                            {
+                                "desc": "Whenever you deal sneak attack damage on your turn, you may destroy one of your soul trinkets that's on your person to immediately use your wails of the grave feature without expending a use."
+                            },
+                            {
+                                "desc": "As an action, you may destroy one of your soul trinkets, no matter where it's located. Whenever you do so, you may ask the spirit associated with the trinket one question. The spirit appears to you and answers in a language it knew in life. It's under no obligation to be truthful, and it answers as concisely as possible, eager to be free. The spirit knows only what it knew in life, as determined by the DM."
+                            }
+                        ]
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Ghost Walk",
+                        "desc": "You may partially phase into the realm of the dead, becoming like a ghost yourself. As a bonus action, you assume a spectral form. While in this form, you gain a flying speed of 10ft., may hover, and attack rolls have disadvantage against you. You may move through creatures and objects as if they were difficult terrain, taking 1d10 @force damage if you end your turn inside a creature or object. You stay in this form for 10 minutes, or until you end it as a bonus action. You may use this feature once per long rest. You may also destroy one of your soul trinkets as part of the bonus action you use to activate ghost walk to use this feature without expending a use."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Death's Friend",
+                        "desc": "Your association with death has become so close that you gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Whenever you use your wails of the grave feature, you may now deal the @necrotic damage to both the first and second creature."
+                            },
+                            {
+                                "desc": "At the end of a long rest, a soul trinket appears in your hand if you don't have any, as the spirits of the dead are drawn to you."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        },
+        "swashbuckler": {
+            "name": "Swashbuckler",
+            "desc": ["You focus your training on the art of the blade, relying on speed, elegance, and charm in equal parts. While some warriors are brutes clad in heavy armor, your method of fighting looks almost like a performance. Duelists and pirates typically belong to this archetype.", "A Swashbuckler excels in single combat, and can fight with two weapons while safely darting away from an opponent."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Fancy Footwork",
+                        "desc": "You learn how to land a strike and then slip away without reprisal. During your turn, if you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn."
+                    },
+                    {
+                        "name": "Rakish Audacity",
+                        "desc": "Your confidence propels you into battle, granting a bonus to your initiative rolls equal to your CHA. You also gain an additional way to use your sneak attack: you do not need advantage on the attack roll if you are within 5ft. of your target, no other creatures are within 5ft. of you, and you do not have disadvantage on the attack roll. All other rules for sneak attack still apply."
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Panache",
+                        "desc": "Your charm becomes extraordinarily beguiling. As an action, you may make a Persuasion (CHA) check contested by the target's Insight (WIS) as long as the creature is able to hear you, and shares a language with you. On a success, if the creature is hostile to you, it gains disadvantage on attack rolls against targets other than you, and cannot make opportunity attacks against targets other than you. This effect lasts for 1 minute, until a creature hostile to the target attacks the target or affects it with a spell, or until you and the target are more than 60ft. apart. If the creature is not hostile to you, it is charmed by you for 1 minute. While charmed in this way, it regards you as a friendly acquaintance. This effect ends immediately if you or an ally does anything harmful to it."
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Elegant Maneuver",
+                        "desc": "You may use a bonus action to gain advantage on the next Acrobatics (DEX) or Athletics (STR) check you make during the same turn."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Master Duelist",
+                        "desc": "Your mastery of the blade lets you turn failure into success in combat. If you miss with an attack roll, you may roll it again with advantage. You may use this feature once per short rest."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
         },
         "thief": {
             "name": "Thief",
@@ -564,7 +1376,8 @@
                         "desc": "On the first round of any combat, you may make two turns. You take your first turn at your normal initiative, and your second turn at your initiative - 10. You cannot use this feature if you are surprised."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "sorcerer": {
@@ -635,22 +1448,353 @@
                         ]
                     }
                 ],
-                "10": [
+                "14": [
                     {
                         "name": "Shadow Walk",
                         "desc": "When you are in dim light or darkness, as a bonus action, you are able to teleport up to 120ft. to an unoccupied space you can see that is also in dim light or darkness."
                     }
                 ],
-                "14": [
+                "18": [
                     {
                         "name": "Umbral Form",
                         "desc": "As a bonus action, you may spend 6 sorcery points to transform yourself into a shadowy form. In this form, you gain resistance to all damage except @force and @radiant damage, and you may move through other creatures and objects as if they were difficult terrain. You take 5 @force damage if you end your turn inside an object. This form lasts for 1 minute, until you are incapacitated or die, or if you dismiss it as a bonus action."
                     }
                 ]
-            }
+            },
+            "source": "Xanathar's Guide to Everything"
+        },
+        "storm-sorcery": {
+            "name": "Storm Sorcery",
+            "desc": ["Your innate magic comes from the power of elemental air. Many with this power can trace their magic back to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so powerful that folk still tell stories of it, or your lineage might include the influence of potent air creatures such as vaati or djinn. Whatever the case, the magic of the storm permeates your being.","Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Wind Speaker",
+                        "desc": "The arcane magic you command is infused with elemental air. You can speak, read, and write Primordial. Knowing this language allows you to understand and be understood by those who speak its dialects: Aquan, Auran, Ignan, and Terran."
+                    },
+                    {
+                        "name": "Tempestuous Magic",
+                        "desc": "As a bonus action, you may cause whirling gusts of elemental air to briefly surround you, immediately before or after you cast a spell of 1st level or higher. Doing so allows you to fly up to 10ft. without provoking opportunity attacks."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Heart of the Storm",
+                        "desc": "You gain resistance to @lightning and @thunder damage. Additionally, whenever you start casting a spell of 1st level or higher that deals @lightning or @thunder damage, stormy magic erupts from you. This eruption causes creatures of your choice that you can see within 10ft. of you to take @lightning or @thunder damage, your choice, equal to half your sorcerer level."
+                    },
+                    {
+                        "name": "Storm Guide",
+                        "desc": "You gain the ability to subtly control the weather around you. If it is raining, as an action, you may cause the rain to stop falling in a 20ft. radius sphere centered on you. You can end this effect as a bonus action. If it is windy, as a bonus action, you may choose each round which direction the wind blows in a 100ft. radius sphere centered on you. The wind blows in that direction until the end of your next turn. This feature does not alter the speed of the wind."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Storm's Fury",
+                        "desc": "As a reaction whenever you are hit by a melee attack, you may deal @lightning damage equal to your sorcerer level to the attacker, and force it to succeed on a STR saving throw or be pushed in a straight line up to 20ft. away from you."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Wind Soul",
+                        "desc": "You gain immunity to @lightning and @thunder damage. You gain a magical flying speed of 60ft. As an action, you may reduce your flying speed to 30ft. for 1 hour and choose a number of creatures within 30ft. of you equal to 3 + your CHA and give the chosen creatures a magical flying speed of 30ft. for 1 hour. You may do so once every short rest."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        },
+        "wild-magic": {
+            "name": "Wild Magic",
+            "desc": ["Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason. However it came to be, this chaotic magic churns within you, waiting for any outlet."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Wild Magic Surge",
+                        "desc": "Your spellcasting is able to unleash surges of untamed magic. Once per turn, the DM may have you roll 1d20 immediately after you cast a non-cantrip sorcerer spell. If you roll a 1, roll on the wild magic surge table below to create a magical effect. If that effect is a spell, it is too wild to be affected by your Metamagic, and if it normally requires concentration, it does not require concentration in this case; the spell lasts for its full duration.",
+                        "type": "table",
+                        "content": {
+                            "header": false,
+                            "content": [
+                                ["1d100", "Effect", "1d100", "Effect"],
+                                [
+                                    "1-2", "Roll on this table at the start of each of your turns for the next minute, ignoring this result on subsequent rolls.",
+                                    "51-52", "A spectral shield hovers near you for the next minute, granting you +2 AC and immunity to the @magic missile spell"
+                                ],
+                                [
+                                    "3-4", "You gain the ability to see invisible creatures for 1 minute, as long as you have line of sight to them.",
+                                    "53-54", "You are immune to being intoxicated by alcohol for 5d6 days."
+                                ],
+                                [
+                                    "5-6", "A modron chosen and controlled by the DM appears in an unoccupied space within 5ft., disappearing after 1 minute.",
+                                    "55-56", "Your hair falls out. It grows back within 24 hours."
+                                ],
+                                [
+                                    "7-8", "You cast the @fireball spell as a 3rd level spell, centered on yourself.",
+                                    "57-58", "Any flammable object you touch that isn't worn or carried by another creature bursts into flame. This effect lasts for 1 minute."
+                                ],
+                                [
+                                    "9-10", "You cast the @magic missile spell as a 5th level spell.",
+                                    "59-60", "You regain your lowest level expended spell slot."
+                                ],
+                                [
+                                    "11-12", "Roll 1d10. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow.",
+                                    "61-62", "You must shout when you speak for 1 minute."
+                                ],
+                                [
+                                    "13-14", "You cast the @confusion spell, centered on yourself.",
+                                    "63-64", "You cast the @fog cloud spell, centered on yourself."
+                                ],
+                                [
+                                    "15-16", "You regain 5 hitpoints at the start of each of your turns for 1 minute.",
+                                    "65-66", "Up to 3 creatures of your choice within 30ft. of you take 4d10 @lightning damage."
+                                ],
+                                [
+                                    "17-18", "You grow a long beard made of feathers that remains until you sneeze, at which point the feathers explode out from your face.",
+                                    "67-68", "You are frightened by the nearest creature until the end of your turn."
+                                ],
+                                [
+                                    "19-20", "You cast the @grease spell centered on yourself.",
+                                    "69-70", "Each creature within 30ft. of you becomes invisible for 1 minute. This invisibility ends on a creature if it attacks or casts a spell."
+                                ],
+                                [
+                                    "21-22", "Creatures gains disadvantage against the next spell you cast within the next minute that involves a saving throw.",
+                                    "71-72", "You gain resistance to all damage for 1 minute."
+                                ],
+                                [
+                                    "23-24", "Your skin turns a vibrant shade of blue. This effects can be ended with a @remove curse spell.",
+                                    "73-74", "A random creature within 60ft. of you becomes poisoned for 1d4 hours."
+                                ],
+                                [
+                                    "25-26", "An eye appears on your forehead for 1 minute. While it persists, you gain advantage on Perception (WIS) checks that rely on sight.",
+                                    "75-76", "You glow with bright light in a 30ft. radius for 1 minute. Any creature that ends its turn within 5ft. of you is blinded until the end of its next turn."
+                                ],
+                                [
+                                    "27-28", "All your spells with a casting time of 1 action have a casting time of 1 bonus action for 1 minute.",
+                                    "77-78", "You cast the @polymorph spell on yourself. If you fail the saving throw, you turn into a sheep for the spell's duration."
+                                ],
+                                [
+                                    "29-30", "You teleport up to 60ft. to an unoccupied space you can see.",
+                                    "79-80", "Illusory butterflies and flower petals flutter in the air within 10ft. of you for 1 minute."
+                                ],
+                                [
+                                    "31-32", "You are transported to the Astral Plane until the end of your next turn. You return to the space you previously occupied, or the nearest unoccupied space should that space be occupied.",
+                                    "81-82", "You may take one additional action immediately."
+                                ],
+                                [
+                                    "33-34", "The next damaging spell you cast within the next minute deals its maximum possible damage.",
+                                    "83-84", "Each creature within 30ft. of you takes 1d10 @necrotic damage. You regain hitpoints equal to the total @necrotic damage you deal in this way."
+                                ],
+                                [
+                                    "35-36", "Roll 1d10. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum of 1 year), if the roll is even, you get older.",
+                                    "85-86", "You cast the @mirror image spell."
+                                ],
+                                [
+                                    "37-38", "1d6 flumphs controlled by the DM appear in unoccupied spaces within 60ft. for you, and are frightened of you. They disappear after 1 minute.",
+                                    "87-88", "You cast the @fly spell on a random creature within 60ft. of you."
+                                ],
+                                [
+                                    "39-40", "You regain 2d10 hitpoints.",
+                                    "89-90", "You become invisible for 1 minute. During that time, other creatures cannot hear you. This effect ends if you attack or cast a spell."
+                                ],
+                                [
+                                    "41-42", "You turn into a potted plant until the start of your next turn. While transformed, you are incapacitated and gain vulnerability to all damage. If you drop to 0 hitpoints, your pot breaks, and your form reverts.",
+                                    "91-92", "If you die within the next minute, you immediately come back to life as if by the @reincarnate spell."
+                                ],
+                                [
+                                    "43-44", "As a bonus action, you may teleport up to 20ft. to an unoccupied space you can see for 1 minute.",
+                                    "93-94", "Your size increases by one size category for 1 minute."
+                                ],
+                                [
+                                    "45-46", "You cast the @levitate spell on yourself.",
+                                    "95-96", "You and all creatures within 30ft. of you gain vulnerability to @piercing damage for 1 minute."
+                                ],
+                                [
+                                    "47-48", "A unicorn controlled by the DM appears in a space within 5ft. of you. It disappears after 1 minute.",
+                                    "97-98", "You are surrounded by faint, ethereal music for 1 minute."
+                                ],
+                                [
+                                    "49-50", "You cannot speak for 1 minute. Whenever you try, pink bubbles float out of your mouth.",
+                                    "99-100", "You regain all expended sorcery points."
+                                ]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tides of Chaos",
+                        "desc": "You are able to manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. You may use this feature once per long rest. Any time before you regain this feature, the DM may have you roll on the wild magic surge table immediately after you cast a non-cantrip sorcerer spell, after which you regain this feature."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Bend Luck",
+                        "desc": "You gain the ability to twist fate using your wild magic. As a reaction when another creature you can see makes an attack roll, ability check or saving throw, you may spend 2 sorcery points to roll 1d4 and either add or subtract the result from the creature's roll. You may do so after the creature rolls, but before any effects of the roll occur."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Controlled Chaos",
+                        "desc": "You gain a modicum of control over the surges of your wild magic. Whenever you roll on the wild surge magic table, you may roll twice, and use either number."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Spell Bombardment",
+                        "desc": "The harmful energy of your spells intensifies. Whenever you roll damage for a spell and roll the highest number possible on any of the dice, you may choose one of those dice and roll it again, adding the result to the damage. You may use this feature once per turn."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
         }
     },
     "warlock": {
+        "the-catalyst": {
+            "name": "The Catalyst",
+            "desc": ["Stumbling upon ancient ruins, or research of ancient texts and scripts, you stumbled upon a seemingly well-maintained crypt, housing an uncannily unblemished statue of gold grandeur. Equally uncanny, it granted you an enticing offer: an eternal life of power. Either by accident, or by choice, you granted access to your body and soul to C'ta-rizh the Accumulator, a devilish entity older than script and man, more knowledgeable than many a deity. It bides its time - waiting, collecting, preserving - to achieve its goals, now with you in its ranks, whether you want to or not."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Expanded Spell List",
+                        "desc": "The following spells are added to the warlock spell list for you:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Spell level", "Spells"],
+                                ["1st", "@compelled duel, @sanctuary"],
+                                ["2nd", "@blur, @spike growth"],
+                                ["3rd", "@armaments of annihilation, @pulse wave"],
+                                ["4th", "@compulsion, @summon construct"],
+                                ["5th", "@antilife shell, @destructive wave"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Mechanized Infantry",
+                        "desc": "Through this pact with the Preserver, you have become partially mechanical. Your body gains the following properties:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Your soul is not fully present, and your body has been put in a form of industrial stasis. You cannot age – naturally, nor magically – and cannot die of old age."
+                            },
+                            {
+                                "desc": "Your heart has been replaced by a magical energy core. This core may act as the arcane focus for your Warlock spells. Losing access to magic – be it through an antimagic field, the wish spell, divine intervention, or other means – will dispel your heart for the duration, and cause you to fall unconscious. Instantaneous spells and effects will stop your heart momentarily, causing you to fall prone. A spell needs to be of a level equal to half your Warlock level, rounded up, to successfully dispel your heart. If you are unconscious in this way for more than 1d4 + 1 days in succession, you will die."
+                            },
+                            {
+                                "desc": "You gain resistance against @psychic damage."
+                            },
+                            {
+                                "desc": "Additionally, choose one of the following enhancements:",
+                                "type": "list",
+                                "content": [
+                                    {
+                                        "name": "Chest",
+                                        "desc": "You gain +1 to CON saving throws, and +1 AC."
+                                    },
+                                    {
+                                        "name": "Legs",
+                                        "desc": "You gain +1 to DEX saving throws, and +10ft. movement speed."
+                                    },
+                                    {
+                                        "name": "Eyes",
+                                        "desc": "You gain +1 to WIS saving throws, and 30ft. of darkvision. If you already have darkvision, the range of your darkvision increases by 30ft. instead."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Enlister, Constructor",
+                        "desc": "When you kill a creature, you may use your reaction to constrict their soul into steel, enlisting them into your master's legions as your servant. The creature is resurrected into an automaton. Automatons have their own initiative. An automaton takes 10gp per week to maintain, or it'll break down. A destroyed automaton will turn to dust. You may have one automaton at a time. If you attempt to make more automatons than you are able to, the oldest automaton will turn to dust. Statblock will be added later."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Rite of Preservation",
+                        "desc": "As an action, you may allow your patron to partially possess your neural networks. You transform: your nerves branch into steel, your hair (if you have it) drapes into fine copper wires, your bones become adamantine rods, and your skin turns into a bronzed alloy sheet. Your body hardens, and you become an immovable statue. You may use this trait once every long rest. For 1 minute, you gain the following effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Your speed becomes 0ft., you cannot benefit from any bonus to your speed, and you cannot make weapon attacks."
+                            },
+                            {
+                                "desc": "Your form becomes absolute, and you cannot be affected by spells that would change your form or forcibly move/tilt your body (such as the @polymorph, @enlarge/reduce or @gust spells), unless of 5th level or higher. A creature attempting to move your body must succeed on a STR check with a DC equal to 2 times your AC."
+                            },
+                            {
+                                "desc": "Weapon and spell attacks that hit but are within 5 of your AC deal damage as if you have resistance to the damage. You gain advantage to CON saving throws, but disadvantage to DEX saving throws."
+                            },
+                            {
+                                "desc": "You lose all your regular senses, including sight, hearing and smell, instead gaining blindsight with a range equal to the range of your darkvision, or 60ft. (whichever is larger), as well as 20ft. truesight. For the duration, you don't need to breathe, but cannot speak."
+                            },
+                            {
+                                "desc": "You may ignore somatic and verbal components for your Warlock spells."
+                            },
+                            {
+                                "desc": "Once on your turn, you may use your bonus action to empower a creature within 30ft. of you. The next time that creature casts a spell in the next round, the spell's effects increase as if it was cast 1 level higher."
+                            },
+                            {
+                                "desc": "You may cast the @magic missile spell once per turn, at 1st level, without expending a spell slot."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Uniformity",
+                        "desc": "You may communicate telepathically with any construct within 30ft. of you. Constructs are generally biased to view you as friendly. You gain advantage on CHA skill checks made against constructs."
+                    },
+                    {
+                        "name": "Rite of Preservation",
+                        "desc": "You gain the following additional effects while transformed:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You may use this trait 2 times every long rest. Every usage past the first results in a weakened rite, preventing the use of bonus actions and reactions."
+                            },
+                            {
+                                "desc": "You gain the ability to telepathically communicate with a number of non-construct creatures up to your CHA modifier. This has a range of 120ft."
+                            },
+                            {
+                                "desc": "You may call upon your patron to further solidify your outer shell. You may expend 1 spell slot and gain temporary hitpoints equal to 5 times the level of the spell slot."
+                            },
+                            {
+                                "desc": "You cannot be affected by spells that would change your form or forcibly move/tilt your body, unless of 7th level or higher."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Enlister, Constructor",
+                        "desc": "You may maintain 2 automatons at a time, instead of 1."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Rite of Preservation",
+                        "desc": "You gain the following additional effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You may use this trait 3 times every long rest. Every usage past the first results in a weakened rite, preventing the use of bonus actions and reactions."
+                            },
+                            {
+                                "desc": "At the start of the rite, choose up to 3 spells of 5th level or lower. While the rite lasts, you and the automatons from your enlister, constructor feature gain immunity to the damage and effects of these spells."
+                            },
+                            {
+                                "desc": "You cannot be affected by spells that would change your form or forcibly move/tilt your body, unless of 9th level."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Asmodeus: King of Hell"
+        },
         "the-hexblade": {
             "name": "The Hexblade",
             "desc": ["You have made your pact with a mysterious entity from the Shadowfell - a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.", "Because the Raven Queen is known to have forged the first of these weapons, many sages speculate that she and the force are one and that the weapons, along with hexblade warlocks, are tools she uses to manipulate events on the Material Plane to her inscrutable ends."],
@@ -714,7 +1858,8 @@
                         "desc": "You may spread your hexblade's curse from creature to creature. Whenever the creature cursed by your hexblade's curse feature dies, you may apply the curse to a different creature you can see within 30ft. of you, provided you aren't incapacitated. When you apply the curse in this way, you do not regain hitpoints from the death of the previously cursed creature."
                     }
                 ]
-            }
+            },
+            "source": "Xanathar's Guide to Everything"
         },
         "the-fiend": {
             "name": "The Fiend",
@@ -763,7 +1908,8 @@
                         "desc": "Whenever you hit a creature with an attack, you may use this feature to instantly transport the target through the 9 hells. The creature disappears and hurtles through a nightmarish landscape. At the end of your next turn, the target returns to the nearest unoccupied space to where it previously was. If the target is not a fiend, the target takes 10d10 @psychic damage. You may use this trait once every long rest."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         }
     },
     "wizard": {
@@ -817,7 +1963,8 @@
                         "desc": "You may add your INT (minimum of +1) to the damage of your melee weapon attacks while your Bladesong is active."
                     }
                 ]
-            }
+            },
+            "source": "Tasha's Cauldron of Everything"
         },
         "chronurgy-magic": {
             "name": "Chronurgy Magic",
@@ -850,7 +1997,117 @@
                         "desc": "You may peer through possible futures and magically pull one of them into events around you, ensuring a particular outcome. Whenever you or a creature you can see within 60ft. of you makes an attack roll, ability check or saving throw, you may use your reaction to ignore the die roll and decide whether the number rolled is the minimum needed to succeed, or one less than that number (your choice)."
                     }
                 ]
-            }
+            },
+            "source": "Explorer's Guide to Wildemount"
+        },
+        "graviturgy-magic": {
+            "name": "Graviturgy Magic",
+            "desc": ["Understanding and mastering the forces that draw bodies of matter together or drive them apart, the students of the Graviturgy arcane tradition learn to further bend and manipulate the violent energy of gravity to their benefit, and the terrible detriment of their enemies."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Adjust Density",
+                        "desc": "As an action, you may magically alter the weight of one object or creature that you can see within 30ft. of you. The object or creature must be Large or smaller. The target's weight is halved or doubled for up to 1 minute, or until your concentration ends (as if you were concentrating on a spell). While the weight of a creature is halved by this effect, the creature's speed increases by 10ft., it may jump twice as far as normal, and it gains disadvantage on STR checks and STR saving throws. While the weight of a creature is doubled by this effect, the creature's speed is reduced by 10ft., and it gains advantage on STR checks and STR saving throws."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Gravity Well",
+                        "desc": "Whenever you cast a spell on a creature, you may move the target 5ft. to an unoccupied space of your choice if the target is willing, the spell hits it with an attack, or if it fails the saving throw against the spell."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Violent Attraction",
+                        "desc": "You may use your reaction for the following uses. You may do so an amount of times equal to your INT every long rest.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Whenever a creature that you can see within 60ft. is hit with a weapon attack, you may increase the attack's velocity, causing the attack's target to take an extra 1d10 damage of the weapon's type."
+                            },
+                            {
+                                "desc": "Whenever a creature that you can see within 60ft. takes damage from a fall, you may increase the fall's damage by 2d10."
+                            }
+                        ]
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Event Horizon",
+                        "desc": "As an action, you may magically emit a powerful field of gravitational energy that tugs at other creatures for up to 1 minute, or until your concentration ends (as if you were concentrating on a spell). For the duration, whenever a creature hostile to you starts its turn within 30ft. of you, it must make a STR saving throw, taking 2d10 force and have its speed reduced to 0 until the start of its next turn on a failed save, or take half as much damage and have its movement speed halved, rounded down, until the start of its next turn. You may use this feature once per long rest. You may use a spell slot of 3rd level or higher to use this feature without expending a use."
+                    }
+                ]
+            },
+            "source": "Explorer's Guide to Wildemount"
+        },
+        "order-of-scribes": {
+            "name": "Order of Scribes",
+            "desc": ["Magic of the book-that's what many folk call wizardry. The name is apt, given how much time wizards spend poring over tomes and penning theories about the nature of magic. It's rare to see wizards traveling without books and scrolls sprouting from their bags, and a wizard would go to great lengths to plumb an archive of ancient knowledge.", "Among wizards, the Order of Scribes is the most bookish. It takes many forms in different worlds, but its primary mission is the same everywhere: recording magical discoveries so that wizardry can flourish. And while all wizards value spellbooks, a wizard in the Order of Scribes magically awakens their book, turning it into a trusted companion. All wizards study books, but a wizardly scribe talks to theirs!"],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Wizardly Quill",
+                        "desc": "As a bonus action, you may magically create a Tiny quill in your free hand. The quill disappears again if you create another one, or if you die. The magic quill has the following properties:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "The quill does not require ink. Whenever you write with it, it produces ink in a color of your choice on the writing surface."
+                            },
+                            {
+                                "desc": "If you use the quill to transcribe spells into your spellbook, it only takes 2 minutes per spell level to do so."
+                            },
+                            {
+                                "desc": "You may erase anything you write with the quill by waving the feature over the text as a bonus action while you're within 5ft. of it."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Awakened Spellbook",
+                        "desc": "Using specially prepared inks and ancient incantations passed down by your wizardly order, you have awakened an arcane sentience within your spellbook. While you're holding the book, it grants the following effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You may use the book as a spellcasting focus for your wizard spells."
+                            },
+                            {
+                                "desc": "Whenever you cast a wizard spell of 1st level or higher, you may magically alter the spell's formula for this casting only, replacing its damage type with a type that appears in another spell in your spellbook. The spell of which you copy the damage type must be of the same level as the spell slot you expend."
+                            },
+                            {
+                                "desc": "You may cast a wizard spell as a ritual using the spell's normal casting time, rather than adding 10 minutes to it. You may do so once per long rest."
+                            },
+                            {
+                                "name": "Replacing the Spellbook",
+                                "desc": "You may replace the book over the course of a short rest by using your wizardly quill to write arcane sigils in a blank book, or a magic spellbook to which you're attuned. At the end of the rest, your spellbook's consciousness is summoned into the new book, which the consciousness transforms into your spellbook, along with all its spells. If the previous book still existed somewhere, all the spells vanish from its pages."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Manifest Mind",
+                        "desc": "You are able to conjure forth the mind of your awakened spellbook. As a bonus action while the book is on your person, you may cause the mind to manifest as a Tiny spectral object, hovering in an unoccupied space of your choice within 60ft. of you. The spectral mind is intangible, and does not occupy its space, shedding dim light in a 10ft. radius. It looks like a ghostly tome, a cascade of text, or a scholar from the past, your choice. While manifested, the spectral mind is able to hear and see, and it gains darkvision with a range of 60ft. The mind may telepathically share with you what it sees and hears. Whenever you cast a wizard spell on your turn, you may cast it as if you were in the spectral mind's space, instead of your own, using its senses. You may do so a number of times equal to your proficiency bonus every long rest. Additionally, as a bonus action, you may cause the spectral mind to hover up to 30ft. to an unoccupied space that you or it can see. It may pass through creatures, but not objects. The spectral mind stops manifesting if it is ever more than 300ft. away from you, if someone casts the @dispel magic spell on it, if the awakened spellbook is destroyed, if you die, or if you dismiss the spectral mind as a bonus action. Once you conjure the mind, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to conjure it again. You may conjure the mind once per long rest. You may use a spell slot of 1st level or higher to use this feature without expending a use."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Master Scriviner",
+                        "desc": "Whenever you finish a long rest, you may create one magic scroll by touching your wizardly quill to a blank piece of paper or parchment, and causing one spell from your awakened spellbook to be copied onto the scroll. The spellbook must be within 5ft. of you when you make the scroll. The chosen spell must be of 1st or 2nd level, and must have a casting time of 1 action. Once in the scroll, the spell's power is enhanced, counting as 1 level higher than normal. You may cast the spell from the scroll by reading it as an action. The scroll is unintelligible to anyone else, and the spell vanishes from the scroll when you cast it or when you finish your next long rest. You are also adept at crafting spell scrolls, which are described in the treasure chapter of the Dungeon Master's Guide. The gold and time you must spend to make such a scroll are halved if you use your wizardly quill."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Event Horizon",
+                        "desc": "Your connection to your awakened spellbook has become so profound that your soul has become entwined with it. While the book is on your person, you gain advantage on all Arcana (INT) checks, as the spellbook helps you remember magical lore. Additionally, as a reaction when you take damage while your spellbook's mind is manifested, you may prevent all of that damage to you by dismissing the spectral mind, using its magic to save yourself. Once you do so, roll 3d6. The spellbook temporarily loses spells of your choice that have a combined spell level equal to that roll or higher. For example, if the roll's total is 9, spells vanish from the book that have a combined level of at least 9, which could mean one 9th-level spell, three 3rd-level spells, or some other combination. If there aren't enough spells in the book to cover this cost, you drop to 0 hitpoints. Until you finish 1d6 long rests, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. After you finish the required number of rests, the spells reappear in the spell book. You may use this reaction once per long rest."
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
         },
         "school-of-abjuration": {
             "name": "School of Abjuration",
@@ -887,7 +2144,8 @@
                         "desc": "You gain advantage on saving throws against spells, and gain resistance to the damage of spells."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         },
         "school-of-conjuration": {
             "name": "School of Conjuration",
@@ -924,7 +2182,8 @@
                         "desc": "Any creature that you summon or create with a conjuration spell has 30 temporary hitpoints."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
         },
         "school-of-divination": {
             "name": "School of Divination",
@@ -936,7 +2195,7 @@
                 "2": [
                     {
                         "name": "Divination Savant",
-                        "desc": "The gold and time you must spend to copy a divnation spell into your spellbook is halved."
+                        "desc": "The gold and time you must spend to copy a divination spell into your spellbook is halved."
                     },
                     {
                         "name": "Portent",
@@ -980,7 +2239,122 @@
                         "desc": "The visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You may roll 3d20 for your portent feature."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
+        },
+        "school-of-enchantment": {
+            "name": "School of Enchantment",
+            "desc": ["As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Enchantment Savant",
+                        "desc": "The gold and time you must spend to copy a enchantment spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Hypnotic Gaze",
+                        "desc": "Your soft words and enchanting gaze may magically enthrall another creature. As an action, choose a creature that you can see within 5ft. of you. If the target is able to see or hear you, it must succeed on a WIS saving throw or be charmed by you until the end of your next turn. The charmed creature's speed drops to 0, and the creature is incapacitated and visibly dazed. On subsequent turns, as an action, you are able to maintain this effect, extending its duration until the end of your next turn. The effect ends if you move more than 5ft. away from the target, if the target is not able to hear or see you, or if the target takes damage. Once the effect ends, or if the creature succeeds on its initial saving throw, the creature is immune to this feature until you finish a long rest."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Instinctive Charm",
+                        "desc": "Whenever a creature you can see within 30ft. of you makes an attack roll against you, as a reaction, you may divert the attack, provided that another creature is within the attack's range. You must choose to use this feature before knowing whether the attack hits or misses. Creature that are immune to being charmed are also immune to this feature. The attacker must succeed on a WIS saving throw or target the creature, other than you or itself, that is closest to it. If multiple creatures are closest, the attacker may choose who to target. On a successful save, the target becomes immune to this feature until you finish a long rest."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Split Enchantment",
+                        "desc": "Whenever you cast an enchantmnet spell of 1st level or higher that targets only one creature, you may have it target a second creature."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Alter Memories",
+                        "desc": "You gain the ability to make a creature unaware of your magical influence on it. Whenever you cast an enchantment spell to charm or more creature, you may alter one creature's understanding so that it remains unaware of being charmed. Additionally, once before the spell ends, you may use your action to try and make the chosen creature forget some of the time it spent charmed. The target must succeed on an INT saving throw or lose a number of hours of its memories equal to 1 + CHA (minimum of 1). You may make the creature forget less time, and the amount of time cannot exceed the duration of your enchantment spell."
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        },
+        "school-of-evocation": {
+            "name": "School of Evocation",
+            "desc": ["You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Evocation Savant",
+                        "desc": "The gold and time you must spend to copy a evocation spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Sculpt Spells",
+                        "desc": "You are able to create pockets of relative safety within the effects of your evocation spells. Whenever you cast an evocation spell that affects other creatures that you can see, you may choose a number of them equal to 1 + the spell's level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Potent Cantrip",
+                        "desc": "Your damaging cantrips affect even creatures that avoid the brunt of the effect. Whenever a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip's damage, but suffers no additional effect from the cantrip."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Empowered Evocation",
+                        "desc": "You may add your INT to a damage roll of any evocation spell that you cast (minimum of 1)."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Overchannel",
+                        "desc": "You may increase the power of your simpler spells. Whenever you cast a non-cantrip wizard spell of 5th level or lower that deals damage, you may deal maximum damage with that spell. If you use this feature more than once per long rest, you take 2d12 @necrotic damage for each level of the spell, immediately after you cast it. This damage increases by 1d12 per level for each usage of this feature past the second, and cannot be reduced by resistance and immunity."
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        },
+        "school-of-illusion": {
+            "name": "School of Illusion",
+            "desc": ["You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists - including many gnome wizards - are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Illusion Savant",
+                        "desc": "The gold and time you must spend to copy a illusion spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Improved Minor Illusion",
+                        "desc": "You learn the @minor illusion cantrip. If you already know this cantrip, you learn a different wizard cantrip of your choice. This cantrip does not count against the number of cantrips known. Whenever you cast @minor illusion, you are able to create both a sound and an image with a single casting."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Malleable Illusions",
+                        "desc": "Whenever you cast an illusion spell that has a duration of 1 minute or longer, as an action, you may change the nature of that illusion (using the spell's normal parameters for the illusion), provided that you can see the illusion."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Illusory Self",
+                        "desc": "You may create an illusory duplicate of yourself as an instant, almost instinctual reaction to danger. As a reaction when a creature makes an attack roll against you, you may interpose the illusory duplicate between the attacker and yourself. The attack automatically misses you, at which point the illusion dissipates. You may use this feature once per short rest."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Illusory Reality",
+                        "desc": "You have learned the secret of weaving shadow magic into your illusions to give them a semi-reality. Whenever you cast an illusion spell of 1st level or higher, you may choose one inanimate, nonmagical object that is part of the illusion and make that object real. You may do this on your turn as a bonus action while the spell is ongoing. The object remains real for 1 minute. For example, you may create an illusion of a bridge over a chasm and then make it real long enough for your allies to cross. The object cannot deal damage or otherwise directly harm anyone."
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
         },
         "school-of-necromancy": {
             "name": "School of Necromancy",
@@ -1017,7 +2391,118 @@
                         "desc": "As an action, you may choose 1 undead that you can see within 60ft. of you. That creature must succeed on a CHA saving throw against your wizard spell save DC. On a failure, it becomes friendly to you, and obeys your commands until you use this feature again. On a success, you cannot use this feature on that creature again. Intelligent undead are harder to control in this way. If the target has an INT score of 8 or higher, it gains advantage on the saving throw. If the target has an INT score of 12 or higher, it may repeat the saving throw at the end of every hour, ending the effect on itself on a success."
                     }
                 ]
-            }
+            },
+            "source": "Player's Handbook"
+        },
+        "school-of-transmutation": {
+            "name": "School of Transmutation",
+            "desc": ["You are a student of spells that modify energy and matter. To you, the world is not a fixed thing, but eminently mutable, and you delight in being an agent of change. You wield the raw stuff of creation and learn to alter both physical forms and mental qualities. Your magic gives you the tools to become a smith on reality's forge.", "Some transmuters are tinkerers and pranksters, turning people into toads and transforming copper into silver for fun and occasional profit. Others pursue their magical studies with deadly seriousness, seeking the power of the gods to make and destroy worlds."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Transmutation Savant",
+                        "desc": "The gold and time you must spend to copy a transmutation spell into your spellbook is halved."
+                    },
+                    {
+                        "name": "Minor Alchemy",
+                        "desc": "You may temporarily alter the physical properties of one nonmagical object, changing it from one substance into another. You perform a special alchemical procedure on one object composed entirely of wood, stone (but not a gemstone), iron, copper, or silver, transforming it into a different one of those materials. For each 10 minutes you spend performing the procedure, you can transform up to 1cu.ft. of material. After 1 hour, or until you lose your concentration (as if you were concentrating on a spell), the material reverts to its original substance."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Transmuter's Stone",
+                        "desc": "You may spend 8 hours creating a transmuter's stone that stores transmutation magic. You may benefit from the stone yourself, or give it to another creature. A creature gains a benefit of your choice as long as the stone is in the creature's possession. Whenever you creature When you create the stone, choose the benefit from the following options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Darkvision out to a range of 60ft."
+                            },
+                            {
+                                "desc": "An increase to speed of 10ft. while the creature is unencumbered."
+                            },
+                            {
+                                "desc": "Proficiency in CON saving throws."
+                            },
+                            {
+                                "desc": "Resistance to @acid, @cold, @fire, @lightning, or @thunder damage, your choice."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Shapechanger",
+                        "desc": "You may add the @polymorph spell to your spellbook, if it is not there already. You may cast the @polymorph spell without spending a spell slot; you may only target yourself, and transform into a beast of a CR of at most 1. You may use this feature once per short rest, though you are able to cast the @polymorph spell with a spell slot normally."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Master Transmuter",
+                        "desc": "As an action, you may consume the reserve of transmutation magic stored within your transmuter's stone in a single burst. Whenever you do so, the stone is destroyed and cannot be remade until you finish a long rest, but you may choose one of the following effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Major Transformation",
+                                "desc": "You may transmute one nonmagical object no larger than a 5ft. cube into another nonmagical object of similar size and mass, and of equal or lesser value. You must spend 10 minutes handling the object to transform it."
+                            },
+                            {
+                                "name": "Panacea",
+                                "desc": "You remove all curses, diseases and poisons affecting a creature that you touch with the transmuter's stone. The creature regains all its hitpoints."
+                            },
+                            {
+                                "name": "Restore Life",
+                                "desc": "You cast the @raise dead spell on a creature you touch with the transmuter's stone, without expending a spell slot or needing to have the spell in your spellbook."
+                            },
+                            {
+                                "name": "Restore Youth",
+                                "desc": "You reduce the apparent age of a willing creature you touch with the transmuter's stone by 3d10 years, to a minimum of 13 years. This effect does not extend the creature's lifespan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
+        },
+        "war-magic": {
+            "name": "War Magic",
+            "desc": ["A variety of arcane colleges specialize in training wizards for war. The tradition of War Magic blends principles of evocation and abjuration, rather than specializing in either of those schools. It teaches techniques that empower a caster’s spells, while also providing methods for wizards to bolster their own defenses.", "Followers of this tradition are known as war mages. They see their magic as both a weapon and armor, a resource superior to any piece of steel. War mages act fast in battle, using their spells to seize tactical control of a situation. Their spells strike hard, while their defensive skills foil their opponents’ attempts to counterattack. War mages are also adept at turning other spellcasters' magical energy against them.", "In great battles, a war mage often works with evokers, abjurers, and other types of wizards. Evokers, in particular, sometimes tease war mages for splitting their attention between offense and defense. A war mage's typical response: \"What good is being able to throw a mighty @fireball if I die before I can cast it?\""],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Arcane Deflection",
+                        "desc": "You have learned to weave your magic to fortify yourself against harm. As a reaction when you are hit by an attack, or when you fail a saving throw, you may gain +2 AC against that attack, or a +4 bonus to that saving throw. When you use this feature, you cannot cast non-cantrip spells until the end of your next turn."
+                    },
+                    {
+                        "name": "Tactical Wit",
+                        "desc": "Your keen ability to assess tactical situations allows you to act quickly in battle. You gain a bonus to initiative equal to your INT."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Power Surge",
+                        "desc": "You may store magical energy within yourself to later empower your damaging spells. You may store a maximum number of power surges equal to your INT (minimum of 1). Whenever you finish a long rest, the number of power surges you have stored resets to 1. Whenever you successfully end a spell with the @dispel magic or @counterspell spells, you gain a power surge, as you steal magic from the spell you foiled. If you end a short rest without any stored power surges, you gain one power surge. Once per turn, whenever you deal damage to a creature or object with a wizard spell, you may spend a power surge to deal extra @force damage equal to half your wizard level to the target."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Durable Magic",
+                        "desc": "The magic you channel helps ward off harm. While you maintain concentration on a spell, you gain +2 AC and bonus to saving throws."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Deflecting Shroud",
+                        "desc": "Your arcane deflection feature becomes infused with deadly magic. Whenever you use your arcane deflection feature, you may cause magical energy to arc up from you, causing up to three creatures of your choice within 60ft. of you to take @force damage equal to half your wizard level."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
         }
     }
 }

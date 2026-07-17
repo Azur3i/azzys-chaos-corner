@@ -45,15 +45,21 @@ $("#spellbox").on("click", ".button-lvl", function () {
             spell: spell
         },
         function(response) {
-            $(".level-replace").text(response);
-        }
+            if (Array.isArray(response)) {
+                response.forEach((param, index) => {
+                    console.log(param);
+                    $(`.level-replace-${index}`).html(param);
+                })
+            } else {
+                $(".level-replace-0").text(response);
+            }
+        }, "json"
     )
 });
 
 function filterSpell () {
     let search = $("#spell-searchbar").val().toLowerCase();
 
-    let [wl, bl] = getFilters();
     $(".button-list").each(function() {
         let name = $(this).data("name").toLowerCase();
         let prop = [
@@ -61,7 +67,37 @@ function filterSpell () {
             $(this).data("school").toLowerCase(),
             ...$(this).data("lists").toLowerCase().split(" ")
         ];
-        let hidden = false
+        let hidden = false;
+
+        let el = [
+            ".button-toggle-2.toggle-school",
+            ".button-toggle-2.toggle-classlist"
+        ];
+        el.forEach(element => {
+            let [wl, bl] = getFilters(element);
+            let [operand] = getLogicOp();
+
+            if (element != ".button-toggle-2.toggle-school") {
+                if (operand == "and") {
+                    hidden = applyAnd(prop, wl, bl, operand, hidden);
+                } else if (operand == "or") {
+                    hidden = applyOr(prop, wl, bl, operand, hidden);
+                }
+            } else {
+                hidden = applyOr(prop, wl, bl, operand, hidden);
+            }
+
+            if (!name.includes(search)) {
+                hidden = true;
+            }
+        });
+
+        $(this).toggleClass("d-none", hidden);
+    });
+}
+
+function applyAnd (prop, wl, bl, operand, hidden) {
+    if (hidden == false) {
 
         if (wl.length > 0) {
             hidden = true;
@@ -69,17 +105,31 @@ function filterSpell () {
                 hidden = false;
             }
         }
-
-        if (!name.includes(search)) {
-            hidden = true;
-        }
         
         if (bl.some(filter => prop.includes(filter))) {
             hidden = true;
         }
+    }
 
-        $(this).toggleClass("d-none", hidden);
-    });
+    return hidden;
+}
+
+function applyOr (prop, wl, bl, operand, hidden) {
+    if (hidden == false) {
+    
+        if (wl.length > 0) {
+            hidden = true;
+            if (wl.some(filter => prop.includes(filter))) {
+                hidden = false;
+            }
+        }
+
+        if (bl.some(filter => prop.includes(filter))) {
+            hidden = true;
+        }
+    }
+
+    return hidden;
 }
 
 $("#spell-searchbar").on("input", filterSpell);
@@ -135,10 +185,10 @@ $(".button-toggle-2").on({
     }
 });
 
-function getFilters() {
+function getFilters(el) {
     let pos = [];
     let neg = [];
-    $(".button-toggle-2").each(function () {
+    $(el).each(function () {
         if ($(this).hasClass("pos")) {
             pos.push($(this).attr("id"));
         } else if ($(this).hasClass("neg")) {
@@ -169,3 +219,14 @@ $(document).on("keydown", function(e) {
         });
     }
 });
+
+$(".classlist-andor").click(function () {
+    $(".classlist-andor").removeClass("active");
+    $(this).addClass("active");
+
+    filterSpell();
+});
+
+function getLogicOp() {
+    return [$(".classlist-andor.active").data("id")];
+}

@@ -22,7 +22,7 @@ function renderDamageColors($str) {
 
 function renderActions($str) {
     $actions = [
-        "dash", "disengage", "hide"
+        "dash", "disengage", "hide", "use an object", "cast a spell", "attack"
     ];
     foreach ($actions as $action) {
         $str = str_replace("@$action", "<i>$action</i>", $str);
@@ -52,13 +52,21 @@ function fetchSubclasses($class) {
 }
 
 function renderAbility($ability, $z=0, $cls=null) {
-    if (!empty($ability["name"]) && $z !== 0) {
-        echo '<p class="md"><b>' . $ability["name"] . '. </b>' . renderText($ability["desc"]) . '</p>';
-    } elseif (!empty($ability["quote"])) {
+    if (!empty($ability["quote"])) {
         echo '<p class="md"><i>' . $ability["quote"] . '</i><p>';
-    } else {
-        echo '<p class="md">' . renderText($ability["desc"]) . '</p>';
     }
+
+    if (!empty($ability["name"]) || !empty($ability["desc"])) {
+        echo '<p class="md">';
+        if (!empty($ability["name"]) && $z !== 0) {
+            echo '<b>' . $ability["name"] . '. </b>';
+        }
+        if (!empty($ability["desc"])) {
+            echo renderText($ability["desc"]);
+        }
+        echo '</p>';
+    }
+
     if (!empty($ability["type"])):
         if (str_contains($ability["type"], "list")): ?>
             <ul>
@@ -92,20 +100,24 @@ function renderAbility($ability, $z=0, $cls=null) {
                 <?php foreach ($sbclss[$cls] as $id => $sbcls): ?>
                     <div class="accordion-item blue low-opac">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed"
+                            <button class="accordion-button collapsed subclass-accordion"
                                     type="button"
                                     data-bs-toggle="collapse"
-                                    data-bs-target="#<?= $id ?>">
-                                <?= $sbcls["name"]; ?>
+                                    data-bs-target="#<?= $id ?>"
+                                    style="grid-template-columns: 1fr auto;">
+                                <span><?= $sbcls["name"]; ?></span>
+                                <span class="sm ms-auto" style="opacity: 0.7;"><?= $sbcls["source"]?></span>
                             </button>
                         </h2>
+
+                        
 
                         <div id="<?= $id ?>"
                             class="accordion-collapse collapse"
                             data-bs-parent="#subclass-list">
                             <div class="accordion-body">
                                 <div class="row">
-                                    <p class="md"><?= implode('</p><br ><p class="md">', $sbcls["desc"]); ?></p>
+                                    <p class="md"><?= implode('</p><br ><p class="md">', renderText($sbcls["desc"])); ?></p>
                                 </div>
                                 <hr >
                                 <div class="row">

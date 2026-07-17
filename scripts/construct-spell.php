@@ -37,7 +37,7 @@ require_once ROOT . "/scripts/functions.php"; ?>
             </div>
             <div class="col title">
                 <p class="lg">Range</p>
-                <p class="md"><?= ucwords($targetSpell["range"]) ?> </p>
+                <p class="md"><?= ucfirst($targetSpell["range"]) ?> </p>
             </div>
             <div class="col title">
                 <p class="lg">Duration</p>
@@ -64,7 +64,7 @@ require_once ROOT . "/scripts/functions.php"; ?>
                 ob_start();
                 renderAbility($desc);
                 if ($targetSpell["levels"] !== null) {
-                    echo get_first_level(ob_get_clean(), $targetSpell["levels"]);
+                    echo renderText(get_first_level(ob_get_clean(), $targetSpell["levels"]));
                 } else {
                     echo ob_get_clean();
                 }
