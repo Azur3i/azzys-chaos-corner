@@ -3408,5 +3408,30 @@
         
         "lists": ["artificer", "druid", "warlock"],
         "source": "Xanathar's Guide to Everything"
+    },
+    "poison-spray": {
+        "name": "Poison Spray",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "10ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a CON saving throw or take {*}d12 poison damage."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "druid", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
     }
 }
