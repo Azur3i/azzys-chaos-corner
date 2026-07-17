@@ -3340,5 +3340,44 @@
         
         "lists": ["druid", "sorcerer", "wizard"],
         "source": "Xanathar's Guide to Everything"
+    },
+    "gust": {
+        "name": "Gust",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+             {
+                "desc": "You seize the air and compel it to create one of the following effects at a point you can see within range:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "One Medium or smaller creature that you choose must succeed on a STR saving throw or be pushed up to 5ft. away from you."
+                    },
+                    {
+                        "desc": "You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5lbs. The object is pushed up to 10ft. away from you. It isn't pushed with enough force to cause damage."
+                    },
+                    {
+                        "desc": "You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Xanathar's Guide to Everything"
     }
 }
