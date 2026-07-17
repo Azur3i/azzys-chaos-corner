@@ -218,6 +218,38 @@
         ],
         "source": "Player's Handbook"
     },
+    "blade-ward": {
+        "name": "Blade Ward",
+        "level": 0,
+        "school": "abjuration",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        "desc": [
+            {
+                "desc": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you gain resistance to @bludgeoning, @piercing, and @slashing damage dealt by weapon attacks."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
     "bless": {
         "name": "Bless",
         "level": 1,
@@ -291,6 +323,55 @@
         ],
         "source": "Player's Handbook"
     },
+    "booming-blade": {
+        "name": "Booming Blade",
+        "level": 0,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (5ft. radius)",
+        "vsm": [
+            false,
+            true,
+            "a melee weapon worth at least 1sp"
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        "desc": [
+            {
+                "desc": "You brandish the weapon used in the spell's casting. Make a melee attack with it against one creature within 5ft. of you. On a hit, the attack {1}causes the target to become sheathed in booming energy until the start of your next turn. If the target willingly moves 5ft. or more before then, the target takes {2}d8 @thunder damage, and the spell ends."
+            }
+        ],
+        "levels": [
+            [
+                "",
+                1
+            ],
+            [
+                "deals a bonus 1d8 @thunder damage and ",
+                2
+            ],
+            [
+                "deals a bonus 2d8 @thunder damage and ",
+                3
+            ],
+            [
+                "deals a bonus 3d8 @thunder damage and ",
+                4
+            ]
+        ],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Tasha's Cauldron of Everything"
+    },
     "calm-emotions": {
         "name": "Calm Emotions",
         "level": 2,
@@ -354,15 +435,42 @@
             }
         ],
         "levels": [
-            [5, 3],
-            [10, 4],
-            [15, 5],
-            [20, 6],
-            [25, 7],
-            [30, 8],
-            [35, 9],
-            [40, 10],
-            [45, 11]
+            [
+                5,
+                3
+            ],
+            [
+                10,
+                4
+            ],
+            [
+                15,
+                5
+            ],
+            [
+                20,
+                6
+            ],
+            [
+                25,
+                7
+            ],
+            [
+                30,
+                8
+            ],
+            [
+                35,
+                9
+            ],
+            [
+                40,
+                10
+            ],
+            [
+                45,
+                11
+            ]
         ],
         "lists": [
             "sorcerer",
@@ -411,6 +519,42 @@
         "lists": [
             "bard",
             "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "chill-touch": {
+        "name": "Chill Touch",
+        "level": 0,
+        "school": "necromancy",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        "desc": [
+            {
+                "desc": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes {*}d8 @necrotic damage, and it cannot regain hitpoints until the start of your next turn. Until then, the hand clings to the target. If you hit an undead target, it also gains disadvantage on attack rolls against you until the end of your next turn."
+            }
+        ],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
             "sorcerer",
             "warlock",
             "wizard"
@@ -603,6 +747,54 @@
         ],
         "source": "Player's Handbook"
     },
+    "control-flames": {
+        "name": "Control Flames",
+        "level": 0,
+        "school": "transmutation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [
+            false,
+            true,
+            false
+        ],
+        "duration": {
+            "time": "special"
+        },
+        "desc": [
+            {
+                "desc": "You choose nonmagical fire that you can see within range and that fits within a 5ft. cube. You may affect it in one of the following ways:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "You instantaneously expand the flame 5ft. in one direction, provided that wood or other fuel is present in the new location."
+                    },
+                    {
+                        "desc": "You instantaneously extinguish the flames within the cube."
+                    },
+                    {
+                        "desc": "You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour."
+                    },
+                    {
+                        "desc": "You cause simple shapes—such as the vague form of a creature, an inanimate object, or a location—to appear within the flames and animate as you like. The shapes last for 1 hour."
+                    }
+                ]
+            },
+            {
+                "desc": "If you cast this spell multiple times, you may have up to three of its non-instantaneous effects active at a time, and you may dismiss such an effect as an action."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "druid",
+            "sorcerer",
+            "wizard"
+        ],
+        "source": "Xanathar's Guide to Everything"
+    },
     "cordon-of-arrows": {
         "name": "Cordon of Arrows",
         "level": 2,
@@ -643,6 +835,45 @@
             "ranger"
         ],
         "source": "Player's Handbook"
+    },
+    "create-bonfire": {
+        "name": "Create Bonfire",
+        "level": 0,
+        "school": "conjuration",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "You create a bonfire on ground that you can see within range. Until the spell ends, the bonfire fills a 5ft. cube. Any creature in the bonfire's space when you cast the spell must succeed on a DEX saving throw or take {*}d8 @fire damage. A creature must also make the saving throw when it enters the bonfire's space for the first time on a turn or ends its turn there."
+            }
+        ],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "artificer",
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Xanathar's Guide to Everything"
     },
     "crown-of-madness": {
         "name": "Crown of Madness",
@@ -1193,6 +1424,75 @@
         ],
         "source": "Player's Handbook"
     },
+    "friends": {
+        "name": "Friends",
+        "level": 0,
+        "school": "enchantment",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [
+            false,
+            true,
+            "a small amount of makeup applied to your face"
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "For the duration, you gain advantage on all CHA checks directed at a creature of your choice that is not hostile toward you."
+            },
+            {
+                "desc": "When the spell ends, the creature realizes that you used magic to influence its mood and may become hostile toward you. A creature prone to violence may attack you. Another creature may seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "bard",
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "frostbite": {
+        "name": "Frostbite",
+        "level": 0,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You cause numbing frost to form on a creature that you can see within range. The target must succeed on a CON saving throw, or take {*}d6 @cold damage and gain disadvantage on the next weapon attack roll it makes before the end of its next turn."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "artificer",
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Xanathar's Guide to Everything"
+    },
     "gift-of-alacrity": {
         "name": "Gift of Alacrity",
         "level": 1,
@@ -1253,6 +1553,54 @@
             "ranger"
         ],
         "source": "Player's Handbook"
+    },
+    "green-flame-blade": {
+        "name": "Green-Flame Blade",
+        "level": 0,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (5ft. radius)",
+        "vsm": [
+            false,
+            true,
+            "a melee weapon worth at least 1sp"
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit,{1} you may cause green fire to leap from the target to a different creature of your choice that you can see within 5ft. of the target, dealing {2} @fire damage to it."
+            }
+        ],
+        "levels": [
+            [
+                "",
+                "your spellcasting ability modifier"
+            ],
+            [
+                " the target takes an additional 1d8 @fire damage, and",
+                "1d8 + your spellcasting ability modifier"
+            ],
+            [
+                " the target takes an additional 2d8 @fire damage, and",
+                "2d8 + your spellcasting ability modifier"
+            ],
+            [
+                " the target takes an additional 3d8 @fire damage, and",
+                "3d8 + your spellcasting ability modifier"
+            ]
+        ],
+        "lists": [
+            "artificer",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Tasha's Cauldron of Everything"
     },
     "guidance": {
         "name": "Guidance",
@@ -1324,6 +1672,50 @@
             "cleric"
         ],
         "source": "Player's Handbook"
+    },
+    "gust": {
+        "name": "Gust",
+        "level": 0,
+        "school": "transmutation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "You seize the air and compel it to create one of the following effects at a point you can see within range:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "One Medium or smaller creature that you choose must succeed on a STR saving throw or be pushed up to 5ft. away from you."
+                    },
+                    {
+                        "desc": "You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5lbs. The object is pushed up to 10ft. away from you. It isn't pushed with enough force to cause damage."
+                    },
+                    {
+                        "desc": "You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "druid",
+            "sorcerer",
+            "wizard"
+        ],
+        "source": "Xanathar's Guide to Everything"
     },
     "healing-word": {
         "name": "Healing Word",
@@ -1771,6 +2163,40 @@
         ],
         "source": "Player's Handbook"
     },
+    "magic-stone": {
+        "name": "Magic Stone",
+        "level": 0,
+        "school": "transmutation",
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "touch",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "desc": [
+            {
+                "desc": "You touch 1 to 3 pebbles and imbue them with magic. You or someone else may make a ranged spell attack with one of the pebbles by throwing it, or hurling it with a sling. If thrown, it has a range of 60ft. If someone else attacks with the pebble, that attacker adds your spellcasting ability modifier (not the attacker's) to the attack roll. On a hit, the target takes 1d6 + your spellcasting ability modifier @bludgeoning damage. Hit or miss, the spell then ends on the stone."
+            },
+            {
+                "desc": "If you cast this spell again, the spell ends early on any pebbles still affected by it."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "artificer",
+            "druid",
+            "warlock"
+        ],
+        "source": "Xanathar's Guide to Everything"
+    },
     "mass-healing-word": {
         "name": "Mass Healing Word",
         "level": 3,
@@ -2012,6 +2438,43 @@
         ],
         "lists": [
             "bard",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
+    },
+    "poison-spray": {
+        "name": "Poison Spray",
+        "level": 0,
+        "school": "conjuration",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "10ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "time": "instantaneous"
+        },
+        "desc": [
+            {
+                "desc": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a CON saving throw or take {*}d12 poison damage."
+            }
+        ],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "artificer",
+            "druid",
+            "sorcerer",
+            "warlock",
             "wizard"
         ],
         "source": "Player's Handbook"
@@ -2594,6 +3057,44 @@
         ],
         "source": "Player's Handbook"
     },
+    "thunderclap": {
+        "name": "Thunderclap",
+        "level": 0,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (5ft. radius)",
+        "vsm": [
+            false,
+            true,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You create a burst of thunderous sound, which can be heard 100ft. away. Each creature other than you within 5ft. of you must succeed on a CON saving throw or take {*}d6 @thunder damage."
+            }
+        ],
+        "levels": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "lists": [
+            "artificer",
+            "bard",
+            "druid",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Xanathar's Guide to Everything"
+    },
     "toll-the-dead": {
         "name": "Toll the Dead",
         "level": 0,
@@ -3017,421 +3518,6 @@
             "cleric",
             "paladin"
         ],
-        "source": "Player's Handbook"
-    },
-    "blade-ward": {
-        "name": "Blade Ward",
-        "level": 0,
-        "school": "abjuration",
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "self",
-        "vsm": [
-            true,
-            true,
-            false
-        ],
-        "duration": {
-            "amount": 1,
-            "time": "round"
-        },
-        "desc": [
-            {
-                "desc": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you gain resistance to @bludgeoning, @piercing, and @slashing damage dealt by weapon attacks."
-            }
-        ],
-        "levels": null,
-        "lists": [
-            "bard",
-            "sorcerer",
-            "warlock",
-            "wizard"
-        ],
-        "source": "Player's Handbook"
-    },
-    "booming-blade": {
-        "name": "Booming Blade",
-        "level": 0,
-        "school": "evocation",
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "self (5ft. radius)",
-        "vsm": [
-            false,
-            true,
-            "a melee weapon worth at least 1sp"
-        ],
-        "duration": {
-            "amount": 1,
-            "time": "round"
-        },
-        "desc": [
-            {
-                "desc": "You brandish the weapon used in the spell's casting. Make a melee attack with it against one creature within 5ft. of you. On a hit, the attack {1}causes the target to become sheathed in booming energy until the start of your next turn. If the target willingly moves 5ft. or more before then, the target takes {2}d8 @thunder damage, and the spell ends."
-            }
-        ],
-        "levels": [["", 1], ["deals a bonus 1d8 @thunder damage and ", 2], ["deals a bonus 2d8 @thunder damage and ", 3], ["deals a bonus 3d8 @thunder damage and ", 4]],
-        "lists": [
-            "bard",
-            "sorcerer",
-            "warlock",
-            "wizard"
-        ],
-        "source": "Tasha's Cauldron of Everything"
-    },
-    "chill-touch": {
-        "name": "Chill Touch",
-        "level": 0,
-        "school": "necromancy",
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "120ft.",
-        "vsm": [
-            true,
-            true,
-            false
-        ],
-        "duration": {
-            "amount": 1,
-            "time": "round"
-        },
-        "desc": [
-            {
-                "desc": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes {*}d8 @necrotic damage, and it cannot regain hitpoints until the start of your next turn. Until then, the hand clings to the target. If you hit an undead target, it also gains disadvantage on attack rolls against you until the end of your next turn."
-            }
-        ],
-        "levels": [1, 2, 3, 4],
-        "lists": [
-            "sorcerer",
-            "warlock",
-            "wizard"
-        ],
-        "source": "Player's Handbook"
-    },
-    "create-bonfire": {
-        "name": "Create Bonfire",
-        "level": 0,
-        "school": "conjuration",
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "60ft.",
-        "vsm": [
-            true,
-            true,
-            false
-        ],
-        "duration": {
-            "amount": 1,
-            "time": "minute",
-            "concentration": true
-        },
-        "desc": [
-            {
-                "desc": "You create a bonfire on ground that you can see within range. Until the spell ends, the bonfire fills a 5ft. cube. Any creature in the bonfire's space when you cast the spell must succeed on a DEX saving throw or take {*}d8 @fire damage. A creature must also make the saving throw when it enters the bonfire's space for the first time on a turn or ends its turn there."
-            }
-        ],
-        "levels": [1, 2, 3, 4],
-        "lists": [
-            "artificer",
-            "druid",
-            "sorcerer",
-            "warlock",
-            "wizard"
-        ],
-        "source": "Xanathar's Guide to Everything"
-    },
-    "friends": {
-        "name": "Friends",
-        "level": 0,
-        "school": "enchantment",
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "self",
-        "vsm": [
-            false,
-            true,
-            "a small amount of makeup applied to your face"
-        ],
-        "duration": {
-            "amount": 1,
-            "time": "minute",
-            "concentration": true
-        },
-        "desc": [
-            {
-                "desc": "For the duration, you gain advantage on all CHA checks directed at a creature of your choice that is not hostile toward you."
-            },
-            {
-                "desc": "When the spell ends, the creature realizes that you used magic to influence its mood and may become hostile toward you. A creature prone to violence may attack you. Another creature may seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it."
-            }
-        ],
-        "levels": null,
-        "lists": [
-            "bard",
-            "druid",
-            "sorcerer",
-            "warlock",
-            "wizard"
-        ],
-        "source": "Player's Handbook"
-    },
-    "frostbite": {
-        "name": "Frostbite",
-        "level": 0,
-        "school": "evocation",
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "60ft.",
-        "vsm": [
-            true,
-            false,
-            false
-        ],
-        "duration": {
-            "time": "instant"
-        },
-        "desc": [
-            {
-                "desc": "You cause numbing frost to form on a creature that you can see within range. The target must succeed on a CON saving throw, or take {*}d6 @cold damage and gain disadvantage on the next weapon attack roll it makes before the end of its next turn."
-            }
-        ],
-        "levels": null,
-        "lists": [
-            "artificer",
-            "druid",
-            "sorcerer",
-            "warlock",
-            "wizard"
-        ],
-        "source": "Xanathar's Guide to Everything"
-    },
-    "green-flame-blade": {
-        "name": "Green-Flame Blade",
-        "level": 0,
-        "school": "evocation",
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "self (5ft. radius)",
-        "vsm": [
-            false,
-            true,
-            "a melee weapon worth at least 1sp"
-        ],
-        "duration": {
-            "time": "instant"
-        },
-        "desc": [
-            {
-                "desc": "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit,{1} you may cause green fire to leap from the target to a different creature of your choice that you can see within 5ft. of the target, dealing {2} @fire damage to it."
-            }
-        ],
-        "levels": [
-            [
-                "",
-                "your spellcasting ability modifier"
-            ],
-            [
-                " the target takes an additional 1d8 @fire damage, and",
-                "1d8 + your spellcasting ability modifier"
-            ],
-            [
-                " the target takes an additional 2d8 @fire damage, and",
-                "2d8 + your spellcasting ability modifier"
-            ],
-            [
-                " the target takes an additional 3d8 @fire damage, and",
-                "3d8 + your spellcasting ability modifier"
-            ]
-        ],
-        "lists": [
-            "artificer",
-            "sorcerer",
-            "warlock",
-            "wizard"
-        ],
-        "source": "Tasha's Cauldron of Everything"
-    },
-    "thunderclap": {
-        "name": "Thunderclap",
-        "level": 0,
-        "school": "evocation",
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "self (5ft. radius)",
-        "vsm": [
-            false,
-            true,
-            false
-        ],
-        "duration": {
-            "time": "instant"
-        },
-        "desc": [
-            {
-                "desc": "You create a burst of thunderous sound, which can be heard 100ft. away. Each creature other than you within 5ft. of you must succeed on a CON saving throw or take {*}d6 @thunder damage."
-            }
-        ],
-        "levels": [1, 2, 3, 4],
-        "lists": [
-            "artificer",
-            "bard",
-            "druid",
-            "sorcerer",
-            "warlock",
-            "wizard"
-        ],
-        "source": "Xanathar's Guide to Everything"
-    },
-    "control-flames": {
-        "name": "Control Flames",
-        "level": 0,
-        "school": "transmutation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "60ft.",
-        "vsm": [false, true, false],
-        "duration": {
-            "time": "special"
-        },
-        
-        "desc": [
-            {
-                "desc": "You choose nonmagical fire that you can see within range and that fits within a 5ft. cube. You may affect it in one of the following ways:",
-                "type": "list",
-                "content": [
-                    {
-                        "desc": "You instantaneously expand the flame 5ft. in one direction, provided that wood or other fuel is present in the new location."
-                    },
-                    {
-                        "desc": "You instantaneously extinguish the flames within the cube."
-                    },
-                    {
-                        "desc": "You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour."
-                    },
-                    {
-                        "desc": "You cause simple shapes—such as the vague form of a creature, an inanimate object, or a location—to appear within the flames and animate as you like. The shapes last for 1 hour."
-                    }
-                ]
-            },
-            {
-                "desc": "If you cast this spell multiple times, you may have up to three of its non-instantaneous effects active at a time, and you may dismiss such an effect as an action."
-            }
-        ],
-        "levels": null,
-        
-        "lists": ["druid", "sorcerer", "wizard"],
-        "source": "Xanathar's Guide to Everything"
-    },
-    "gust": {
-        "name": "Gust",
-        "level": 0,
-        "school": "transmutation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "30ft.",
-        "vsm": [true, true, false],
-        "duration": {
-            "amount": 1,
-            "time": "hour",
-            "concentration": true
-        },
-        
-        "desc": [
-             {
-                "desc": "You seize the air and compel it to create one of the following effects at a point you can see within range:",
-                "type": "list",
-                "content": [
-                    {
-                        "desc": "One Medium or smaller creature that you choose must succeed on a STR saving throw or be pushed up to 5ft. away from you."
-                    },
-                    {
-                        "desc": "You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5lbs. The object is pushed up to 10ft. away from you. It isn't pushed with enough force to cause damage."
-                    },
-                    {
-                        "desc": "You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze."
-                    }
-                ]
-            }
-        ],
-        "levels": null,
-        
-        "lists": ["druid", "sorcerer", "wizard"],
-        "source": "Xanathar's Guide to Everything"
-    },
-    "magic-stone": {
-        "name": "Magic Stone",
-        "level": 0,
-        "school": "transmutation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "bonus action"
-        },
-        "range": "touch",
-        "vsm": [true, true, false],
-        "duration": {
-            "amount": 1,
-            "time": "minute"
-        },
-        
-        "desc": [
-            {
-                "desc": "You touch 1 to 3 pebbles and imbue them with magic. You or someone else may make a ranged spell attack with one of the pebbles by throwing it, or hurling it with a sling. If thrown, it has a range of 60ft. If someone else attacks with the pebble, that attacker adds your spellcasting ability modifier (not the attacker's) to the attack roll. On a hit, the target takes 1d6 + your spellcasting ability modifier @bludgeoning damage. Hit or miss, the spell then ends on the stone."
-            },
-            {
-                "desc": "If you cast this spell again, the spell ends early on any pebbles still affected by it."
-            }
-        ],
-        "levels": null,
-        
-        "lists": ["artificer", "druid", "warlock"],
-        "source": "Xanathar's Guide to Everything"
-    },
-    "poison-spray": {
-        "name": "Poison Spray",
-        "level": 0,
-        "school": "conjuration",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "10ft.",
-        "vsm": [true, true, false],
-        "duration": {
-            "time": "instantaneous"
-        },
-        
-        "desc": [
-            {
-                "desc": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a CON saving throw or take {*}d12 poison damage."
-            }
-        ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["artificer", "druid", "sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
     }
 }
