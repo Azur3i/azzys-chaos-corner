@@ -3552,5 +3552,36 @@
             "wizard"
         ],
         "source": "Player's Handbook"
+    },
+    "mind-sliver": {
+        "name": "Mind Sliver",
+        "level": 0,
+        "school": "enchantment",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        "desc": [
+            {
+                "desc": "You drive a disorienting spike of psychic energy into the mind of a creature you can see within range. The target must succeed on an INT saving throw or take {*}d6 @psychic damage, and subtract 1d4 from the next saving throw it makes before the end of your next turn."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        "lists": [
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Tasha's Cauldron of Everything"
     }
 }
