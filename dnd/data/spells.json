@@ -3297,5 +3297,48 @@
             "wizard"
         ],
         "source": "Xanathar's Guide to Everything"
+    },
+    "control-flames": {
+        "name": "Control Flames",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [false, true, false],
+        "duration": {
+            "time": "special"
+        },
+        
+        "desc": [
+            {
+                "desc": "You choose nonmagical fire that you can see within range and that fits within a 5ft. cube. You may affect it in one of the following ways:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "You instantaneously expand the flame 5ft. in one direction, provided that wood or other fuel is present in the new location."
+                    },
+                    {
+                        "desc": "You instantaneously extinguish the flames within the cube."
+                    },
+                    {
+                        "desc": "You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour."
+                    },
+                    {
+                        "desc": "You cause simple shapes—such as the vague form of a creature, an inanimate object, or a location—to appear within the flames and animate as you like. The shapes last for 1 hour."
+                    }
+                ]
+            },
+            {
+                "desc": "If you cast this spell multiple times, you may have up to three of its non-instantaneous effects active at a time, and you may dismiss such an effect as an action."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Xanathar's Guide to Everything"
     }
 }
