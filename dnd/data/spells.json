@@ -3053,5 +3053,37 @@
             "wizard"
         ],
         "source": "Player's Handbook"
+    },
+    "booming-blade": {
+        "name": "Booming Blade",
+        "level": 0,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (5ft. radius)",
+        "vsm": [
+            false,
+            true,
+            "a melee weapon worth at least 1sp"
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        "desc": [
+            {
+                "desc": "You brandish the weapon used in the spell's casting. Make a melee attack with it against one creature within 5ft. of you. On a hit, the attack {1}causes the target to become sheathed in booming energy until the start of your next turn. If the target willingly moves 5ft. or more before then, the target takes {2}d8 @thunder damage, and the spell ends."
+            }
+        ],
+        "levels": [["", 1], ["deals a bonus 1d8 @thunder damage and ", 2], ["deals a bonus 2d8 @thunder damage and ", 3], ["deals a bonus 3d8 @thunder damage and ", 4]],
+        "lists": [
+            "bard",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Player's Handbook"
     }
 }
