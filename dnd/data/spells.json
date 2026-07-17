@@ -3081,7 +3081,7 @@
             "warlock",
             "wizard"
         ],
-        "source": "Player's Handbook"
+        "source": "Tasha's Cauldron of Everything"
     },
     "chill-touch": {
         "name": "Chill Touch",
@@ -3146,7 +3146,7 @@
             "warlock",
             "wizard"
         ],
-        "source": "Player's Handbook"
+        "source": "Xanathar's Guide to Everything"
     },
     "friends": {
         "name": "Friends",
@@ -3216,5 +3216,53 @@
             "wizard"
         ],
         "source": "Xanathar's Guide to Everything"
+    },
+    "green-flame-blade": {
+        "name": "Green-Flame Blade",
+        "level": 0,
+        "school": "evocation",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (5ft. radius)",
+        "vsm": [
+            false,
+            true,
+            "a melee weapon worth at least 1sp"
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit,{1} you may cause green fire to leap from the target to a different creature of your choice that you can see within 5ft. of the target, dealing {2} @fire damage to it."
+            }
+        ],
+        "levels": [
+            [
+                "",
+                "your spellcasting ability modifier"
+            ],
+            [
+                " the target takes an additional 1d8 @fire damage, and",
+                "1d8 + your spellcasting ability modifier"
+            ],
+            [
+                " the target takes an additional 2d8 @fire damage, and",
+                "2d8 + your spellcasting ability modifier"
+            ],
+            [
+                " the target takes an additional 3d8 @fire damage, and",
+                "3d8 + your spellcasting ability modifier"
+            ]
+        ],
+        "lists": [
+            "artificer",
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "Tasha's Cauldron of Everything"
     }
 }
