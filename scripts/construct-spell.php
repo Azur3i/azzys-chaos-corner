@@ -33,15 +33,15 @@ require_once ROOT . "/scripts/functions.php"; ?>
         <div class="row spell-list align-items-center">
             <div class="col title">
                 <p class="lg">Casttime</p>
-                <p class="md"><?= get_time($targetSpell["castTime"]) ?> </p>
+                <p class="md"><?= get_first_level(get_time($targetSpell["castTime"]), $targetSpell["levels"]) ?> </p>
             </div>
             <div class="col title">
                 <p class="lg">Range</p>
-                <p class="md"><?= ucfirst($targetSpell["range"]) ?> </p>
+                <p class="md"><?= get_first_level(ucfirst($targetSpell["range"]), $targetSpell["levels"]) ?> </p>
             </div>
             <div class="col title">
                 <p class="lg">Duration</p>
-                <p class="md"><?= get_time($targetSpell["duration"]) ?> </p>
+                <p class="md"><?= get_first_level(get_time($targetSpell["duration"]), $targetSpell["levels"]) ?> </p>
             </div>
             <div class="col title">
                 <p class="lg">Components</p>

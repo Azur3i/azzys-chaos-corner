@@ -1483,7 +1483,7 @@
                 "desc": "You cause numbing frost to form on a creature that you can see within range. The target must succeed on a CON saving throw, or take {*}d6 @cold damage and gain disadvantage on the next weapon attack roll it makes before the end of its next turn."
             }
         ],
-        "levels": null,
+        "levels": [1,2,3,4],
         "lists": [
             "artificer",
             "druid",
@@ -2690,7 +2690,7 @@
                 "desc": "You ward a creature within range against attack. For the duration, any creature who targets the warded creature with an attack or harmful spell must succeed on a WIS saving throw, or choose a new target or lose the attack or spell. This spell does not protect the warded creature from area effects, such as the explosion of a fireball."
             },
             {
-                "desc": "If the warded creature makes an attack, casts a spell that affects an enemy, or deals damage to another creature, the spell ends."
+                "desc": "If the warded creature makes an attack, casts a spell that affects an unwilling creature, or deals damage to another creature, the spell ends."
             }
         ],
         "levels": null,
@@ -3668,5 +3668,100 @@
             "wizard"
         ],
         "source": "Tasha's Cauldron of Everything"
+    },
+    "compelled-duel": {
+        "name": "Compelled Duel",
+        "level": 1,
+        "school": "enchantment",
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "30ft.",
+        "vsm": [
+            true,
+            false,
+            false
+        ],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "You attempt to compel a creature into a duel. A creature that you can see within range must succeed a WIS saving throw, or be drawn to you, compelled by your divine demand. For the duration, it gains disadvantage on attack rolls against creatures other than you, and must succeed on a WIS saving throw each time it attempts to move to a space that is more than 30ft. away from you. On a success, this spell does not restrict the target's movement for that turn."
+            },
+            {
+                "desc": "The spell ends if you attack a creature other than the target, cast a spell that targets a hostile creature other than the target, if a creature hostile to it damages the target or casts a harmful spell on it, or if you end your turn more than 30ft. away from the target."
+            }
+        ],
+        "levels": null,
+        "lists": [
+            "paladin"
+        ],
+        "source": "Player's Handbook"
+    },
+    "blood-bolt": {
+        "name": "Blood Bolt",
+        "level": 0,
+        "school": "necromancy",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You hurl a twisting bolt of blood at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 @necrotic damage, and you gain a number of temporary hitpoints equal to your proficiency bonus."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        "lists": [
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "The Crooked Moon"
+    },
+    "hex": {
+        "name": "Hex",
+        "level": 1,
+        "school": "enchantment",
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "90ft.",
+        "vsm": [
+            true,
+            true,
+            "the petrified eye of a newt"
+        ],
+        "duration": {
+            "time": "{*}",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "You place a curse on a creature that you can see within range. For the duration, you deal an extra 1d6 @necrotic damage to the target whenever you hit it with an attack. Also, choose an ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability."
+            },
+            {
+                "desc": "If the target drops to 0 hitpoints before this spell ends, as a bonus action on subsequent turns, you may curse a new creature."
+            }
+        ],
+        "levels": ["1 hour", "1 hour", "8 hours", "8 hours", "24 hours", "24 hours", "24 hours", "24 hours", "24 hours"],
+        "lists": [
+            "warlock"
+        ],
+        "source": "Player's Handbook"
     }
 }

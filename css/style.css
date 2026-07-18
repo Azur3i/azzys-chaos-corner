@@ -655,6 +655,15 @@ table.ability {
     #spell-searchbar {
         max-height: 2rem;
     }
+
+    #clear-button {
+        position: absolute;
+        padding: 0;
+        width: 7%;
+        margin-left: -8%;
+        background: none;
+        border: none;
+    }
 }
 
 #spell-scrolllist {

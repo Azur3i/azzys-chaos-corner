@@ -3550,10 +3550,6 @@
                 {
                     "name": "Ability Score Improvement",
                     "desc": "You may increase one ability score by 2, or two ability scores by 1. Optionally, you may forego this improvement and choose a feat instead."
-                },
-                {
-                    "name": "Cantrips",
-                    "desc": "You learn an additional cantrip, for a total of 3."
                 }
             ],
             "5": [
