@@ -21,7 +21,11 @@ function get_time($time) {
     if ($time["time"] === "until dispelled") {return "Until dispelled";}
     if ($time["time"] === "unlimited") {return "Unlimited";}
 
-    $result = $time["amount"] . " " . $time["time"] . ($time["amount"] !== 1 ? "s" : "");
+    if (!empty($time["amount"])) {
+        $result = $time["amount"] . " " . $time["time"] . ($time["amount"] != 1 ? "s" : "");
+    } else {
+        $result = $time["time"];
+    }
 
     if (isset($time["concentration"])) {
         $result = "Concentration, up to " . $result;
@@ -35,18 +39,20 @@ function get_time($time) {
     return $result;
 }
 
-function get_first_level($desc, $levels) {
-    if (is_array($levels[0])) {
-        
-        foreach ($levels[0] as $i => $param) {
-            $j = $i + 1;
-            $desc = str_replace("{{$j}}", "<b><span style='color: rgb(var(--pink));' class='level-replace-$i'>$param</span></b>", $desc);
+function get_first_level($str, $levels) {
+    if ($levels !== null) {
+        if (is_array($levels[0])) {
+            
+            foreach ($levels[0] as $i => $param) {
+                $j = $i + 1;
+                $str = str_replace("{{$j}}", "<b><span style='color: rgb(var(--pink));' class='level-replace-$i'>$param</span></b>", $str);
+            }
+        } else {
+            $str = str_replace("{*}", "<b><span style='color: rgb(var(--pink));' class='level-replace-0'>$levels[0]</span></b>", $str);
         }
-    } else {
-        $desc = str_replace("{*}", "<b><span style='color: rgb(var(--pink));' class='level-replace-0'>$levels[0]</span></b>", $desc);
     }
 
-    return $desc;
+    return $str;
 }
 
 ?>

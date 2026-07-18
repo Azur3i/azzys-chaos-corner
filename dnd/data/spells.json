@@ -1483,7 +1483,7 @@
                 "desc": "You cause numbing frost to form on a creature that you can see within range. The target must succeed on a CON saving throw, or take {*}d6 @cold damage and gain disadvantage on the next weapon attack roll it makes before the end of its next turn."
             }
         ],
-        "levels": null,
+        "levels": [1,2,3,4],
         "lists": [
             "artificer",
             "druid",
@@ -3747,8 +3747,7 @@
             "the petrified eye of a newt"
         ],
         "duration": {
-            "amount": "{*}",
-            "time": "hour",
+            "time": "{*}",
             "concentration": true
         },
         "desc": [
@@ -3759,7 +3758,7 @@
                 "desc": "If the target drops to 0 hitpoints before this spell ends, as a bonus action on subsequent turns, you may curse a new creature."
             }
         ],
-        "levels": [1, 1, 8, 8, 24, 24, 24, 24, 24],
+        "levels": ["1 hour", "1 hour", "8 hours", "8 hours", "24 hours", "24 hours", "24 hours", "24 hours", "24 hours"],
         "lists": [
             "warlock"
         ],
