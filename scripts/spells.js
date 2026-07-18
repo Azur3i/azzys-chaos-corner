@@ -203,19 +203,17 @@ $(document).on("keydown", function(e) {
     if (e.key === "ArrowDown") {
         e.preventDefault();
         $(function () {
-            $(".button-list.active").next().each(function () {
-                $(this).trigger("click");
-                this.scrollIntoView({behavior: "smooth", block: "nearest"});
-            });
+            let next = $(".button-list.active").nextAll(":not(.d-none)").first()
+            next.trigger("click");
+            next[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
         });
     }
     if (e.key === "ArrowUp") {
         e.preventDefault();
         $(function () {
-            $(".button-list.active").prev().each(function () {
-                $(this).trigger("click");
-                this.scrollIntoView({behavior: "smooth", block: "nearest"});
-            });
+            let prev = $(".button-list.active").prevAll(":not(.d-none)").first()
+            prev.trigger("click");
+            prev[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
         });
     }
 });
@@ -230,3 +228,8 @@ $(".classlist-andor").click(function () {
 function getLogicOp() {
     return [$(".classlist-andor.active").data("id")];
 }
+
+$("#clear-button").click(function () {
+    $("#spell-searchbar").val("");
+    $("#spell-searchbar").trigger("input");
+});

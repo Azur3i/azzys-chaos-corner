@@ -48,7 +48,10 @@ foreach ($classes as $x => $class) {
                     <!-- searchbar -->
                     <div class="row mx-auto align-items-center justify-content-center" id="spell-search">
                         <p class="sm col-auto">Search:</p>
-                        <input id="spell-searchbar" class="sm col align-items-center py-1 px-3"></input>
+                        <div class="col align-items-center" style="position: relative;">
+                            <input id="spell-searchbar" class="sm py-1 px-3" style="width: 100%;"></input>
+                            <a id="clear-button" class="sm button col-aut white" style="">X</a>
+                        </div>
                         <a class="sm button-toggle pink col-auto align-items-center" style="height: 2rem; margin-left: 1rem; padding: 0 1rem;" id="filter-button">Filters</a>
                     </div>
 
