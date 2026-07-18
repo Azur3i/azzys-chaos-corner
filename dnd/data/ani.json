@@ -1,41 +1,4 @@
 {
-    "oceans-call": {
-        "name": "Ocean's Call",
-        "level": 0,
-        "school": "conjuration",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "30ft.",
-        "vsm": [true, true, false],
-        "duration": {
-            "time": "instantaneous"
-        },
-        
-        "desc": [
-            {
-                "desc": "You summon a random sea creature and magically hurl at a target you can see within range. Roll 1d4 to determine what sea creature you summon, then make a ranged spell attack, on a hit the sea creatures effects occur. If you miss or the effects ends the sea creature is transported back to the waters it came from with an audible splash.",
-                "type": "table",
-                "content": {
-                    "content": [
-                        ["1", "Tuna: The target takes 1d4 @cold damage and 1d4 @bludgeoning damage."],
-                        ["2", "Electric Eel: The target takes 1d8 @electric damage."],
-                        ["3", "Crab: The crab clings onto the targets skin, continuously pinching the target. The target takes 1d4 @piercing damage on the start of each of its turns for the next minute. The target may use spend an action to remove the crab, ending the effect early."],
-                        ["4", "Octopus: The octopus attempts to cling onto the target’s face. The target takes 1d4 @poison damage and must make succeed on STR saving throw, on a failure the target gets the blinded condition until the end of its next turn."]
-                    ]
-                }
-            },
-            {
-                "desc": "This spell creates {*} sea creatures. Should there be multiple, make a seperate attack roll for each one."
-            }
-            ],
-        "levels": [1, 2, 3, 4],
-        
-        "lists": ["druid", "wizard"],
-        "source": "Ani's Archive of Almost Anything"
-    }, 
         "name-of-spell": {
         "name": "Name of Spell",
         "level": 1,

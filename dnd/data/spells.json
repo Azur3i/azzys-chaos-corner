@@ -3763,5 +3763,44 @@
             "warlock"
         ],
         "source": "Player's Handbook"
+    },
+    "oceans-call": {
+        "name": "Ocean's Call",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You summon a random sea creature at a target you can see within range. Roll 1d4 to determine what sea creature you summon, then make a ranged spell attack. If you miss, or the effects ends, the sea creature is transported back to the waters it came from with an audible splash.",
+                "type": "table",
+                "content": {
+                    "header": false,
+                    "content": [
+                        ["1d4", "Effect"],
+                        [1, "A tuna flies in from an inexplicable direction, hitting the target in the head. The target takes 1d4 @cold damage and 1d4 @bludgeoning damage."],
+                        [2, "An electric eel drops onto the target and clings around its neck. The target takes 1d8 @lightning damage."],
+                        [3, "Crabs burrow from under the ground and cling onto the targets skin, continuously pinching it. The target takes 1d4 @piercing damage on the start of each of its turns for 1 minute. As an action, an affected creature may remove the crab, ending the effect on itself."],
+                        [4, "The octopus attempts to cling onto the target's face. The target takes 1d4 @poison damage and must succeed on a STR saving throw, or be blinded until the end of its next turn."]
+                    ]
+                }
+            },
+            {
+                "desc": "This spell summons {*} sea creature(s). Should there be multiple, roll 1d4 and make a seperate attack roll for each one."
+            }
+            ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["druid", "wizard"],
+        "source": "Ani's Archive of Almost Anything"
     }
 }
