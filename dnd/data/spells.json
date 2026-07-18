@@ -3701,5 +3701,35 @@
             "paladin"
         ],
         "source": "Player's Handbook"
+    },
+    "blood-bolt": {
+        "name": "Blood Bolt",
+        "level": 0,
+        "school": "necromancy",
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [
+            true,
+            true,
+            false
+        ],
+        "duration": {
+            "time": "instant"
+        },
+        "desc": [
+            {
+                "desc": "You hurl a twisting bolt of blood at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {*}d6 @necrotic damage, and you gain a number of temporary hitpoints equal to your proficiency bonus."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        "lists": [
+            "sorcerer",
+            "warlock",
+            "wizard"
+        ],
+        "source": "The Crooked Moon"
     }
 }
