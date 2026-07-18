@@ -3731,5 +3731,38 @@
             "wizard"
         ],
         "source": "The Crooked Moon"
+    },
+    "hex": {
+        "name": "Hex",
+        "level": 1,
+        "school": "enchantment",
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "90ft.",
+        "vsm": [
+            true,
+            true,
+            "the petrified eye of a newt"
+        ],
+        "duration": {
+            "amount": "{*}",
+            "time": "hour",
+            "concentration": true
+        },
+        "desc": [
+            {
+                "desc": "You place a curse on a creature that you can see within range. For the duration, you deal an extra 1d6 @necrotic damage to the target whenever you hit it with an attack. Also, choose an ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability."
+            },
+            {
+                "desc": "If the target drops to 0 hitpoints before this spell ends, as a bonus action on subsequent turns, you may curse a new creature."
+            }
+        ],
+        "levels": [1, 1, 8, 8, 24, 24, 24, 24, 24],
+        "lists": [
+            "warlock"
+        ],
+        "source": "Player's Handbook"
     }
 }
