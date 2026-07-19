@@ -691,6 +691,14 @@ table.ability {
     min-width: unset;
 }
 
+.p-margin {
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ----- */
+
 /* damage colors */
 
 .fire-dmg {color: #FF3300;}

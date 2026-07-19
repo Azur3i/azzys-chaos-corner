@@ -138,4 +138,15 @@ function renderAbility($ability, $z=0, $cls=null) {
             </div>
         <?php endif;
     endif;
-} ?>
+}
+
+function startsWith($str, $array) {
+    foreach ($array as $prefix) {
+        if (str_starts_with($str, $prefix)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+?>
