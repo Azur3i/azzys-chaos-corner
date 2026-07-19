@@ -3,7 +3,7 @@
 include ROOT . "/tpl/header.php"; 
 include ROOT . "/tpl/header-dnd.php";
 
-require_once ROOT . "/scripts/spell-functions.php";
+require_once ROOT . "/scripts/php/spells.php";
 
 $spells = json_decode(file_get_contents(ROOT . "/dnd/data/spells.json"), true);
 
@@ -113,7 +113,7 @@ foreach ($classes as $x => $class) {
 
                 <!-- spell display -->
                 <div id="spellbox" class="col-md-12 col-lg-8" style="padding-right: 0;">
-                    <?php include ROOT . "/scripts/construct-spell.php" ?>
+                    <?php include ROOT . "/scripts/constructors/spell.php" ?>
                 </div>
             </div>
         </div>
@@ -122,5 +122,5 @@ foreach ($classes as $x => $class) {
 
 <div id="title" data-id="Spells - "></div>
 
-<script src="/scripts/spells.js"></script>
+<script src="/scripts/js/spells.js"></script>
 <?php include ROOT . "/tpl/footer.php"; ?>

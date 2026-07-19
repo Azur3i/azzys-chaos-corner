@@ -59,7 +59,7 @@ $levels = [
         </div>
     </div>
     
-    <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
+    <?php include ROOT . "/scripts/constructors/spellslot-table.php"; ?>
 
     <?php foreach ($levels as $i => $row): ?>
         <hr >
@@ -69,7 +69,7 @@ $levels = [
             <?php endif; ?>
             <?php foreach ($row as $level): ?>
                 <div class="col col-md-12 col-lg-6">
-                    <?php include ROOT . "/scripts/construct-level.php"; ?>
+                    <?php include ROOT . "/scripts/constructors/level.php"; ?>
                 </div>
             <?php endforeach; ?>
         </div>

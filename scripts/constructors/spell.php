@@ -1,11 +1,11 @@
 <?php 
 
 if (!defined("ROOT")) {
-    define("ROOT",  __DIR__ . "/..");
+    define("ROOT",  __DIR__ . "/../..");
 }
 
-require_once ROOT . "/scripts/spell-functions.php";
-require_once ROOT . "/scripts/functions.php";
+require_once ROOT . "/scripts/php/spells.php";
+require_once ROOT . "/scripts/php/general.php";
 
 if (!empty($_GET)) {
     
@@ -17,7 +17,7 @@ if (!empty($_GET)) {
 
 $cantripLevels = [1, 5, 11, 17];
 
-require_once ROOT . "/scripts/functions.php"; ?>
+?>
 
 <div class="content-list" style="padding: 1.25rem; margin: 0;" id="spell-display" spell="<?= $spellName ?>">
     <div class="scroll">

@@ -3,7 +3,7 @@ $races = json_decode(file_get_contents(ROOT . "/dnd/data/races.json"), true);
 $class = $target;
 $target = $races[$target];
 
-require_once ROOT . "/scripts/functions.php";
+require_once ROOT . "/scripts/php/general.php";
 
 function renderASI ($asi) {
     if (count($asi) == 7) {
@@ -130,7 +130,7 @@ function renderASI ($asi) {
                     <div id="<?= $name ?>"
                             class="accordion-collapse collapse">
                         <div class="accordion-body md">
-                            <?php include ROOT . "/scripts/construct-subrace.php"; ?>
+                            <?php include ROOT . "/scripts/constructors/subrace.php"; ?>
                         </div>
                     </div>
                 </div>

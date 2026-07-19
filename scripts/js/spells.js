@@ -1,6 +1,6 @@
 function loadSpell(target) {
     $.get(
-        "/scripts/construct-spell.php", {target: target},
+        "/scripts/constructors/spell.php", {target: target},
         function(response) {
             $("#spellbox").html(response);
             updateButton(target);
@@ -42,7 +42,7 @@ $("#spellbox").on("click", ".button-lvl", function () {
     $(this).addClass("active");
 
     $.post(
-        "/scripts/retrieve_spell_level.php", {
+        "/scripts/getters/spell_level.php", {
             level: level,
             spell: spell
         },

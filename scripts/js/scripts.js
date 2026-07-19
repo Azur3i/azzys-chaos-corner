@@ -16,7 +16,7 @@ function checkSubclass (cls, sbcls) {
     $(".subclass-check").removeClass("checked");
     $(this).addClass("checked");
     $.post(
-        "/scripts/get-subclass.php", {
+        "/scripts/getters/subclass.php", {
             cls: cls,
             sbcls: sbcls
         },

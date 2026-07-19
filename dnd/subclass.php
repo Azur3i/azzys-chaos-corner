@@ -11,7 +11,7 @@ include ROOT . "/tpl/header-dnd.php";
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="main-content col-md-12 col-lg-9 mx-auto">
-            <?php include ROOT . "/scripts/construct-subclass.php"; ?>
+            <?php include ROOT . "/scripts/constructors/subclass.php"; ?>
         </div>
     </div>
 </div>
