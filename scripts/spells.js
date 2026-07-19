@@ -4,6 +4,8 @@ function loadSpell(target) {
         function(response) {
             $("#spellbox").html(response);
             updateButton(target);
+
+            document.title = $("#spellname").data("name") + " - Azzy's Chaos Corner"
         }
     )
 }

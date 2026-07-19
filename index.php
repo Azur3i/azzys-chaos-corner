@@ -14,6 +14,7 @@
         </div>
     </div>
 </div>
-    
+
+<div id="title" data-id=""></div>
 
 <?php include ROOT . "/tpl/footer.php" ?>

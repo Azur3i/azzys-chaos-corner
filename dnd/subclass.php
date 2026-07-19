@@ -16,4 +16,6 @@ include ROOT . "/tpl/header-dnd.php";
     </div>
 </div>
 
+<div id="title" data-id="<?= $target["name"] ?> - "></div>
+
 <?php include ROOT . "/tpl/footer.php"; ?>

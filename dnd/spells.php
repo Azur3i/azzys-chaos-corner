@@ -23,8 +23,8 @@ foreach ($spells as $spell) {
         $schools[] = $spell["school"];
     }
     uasort($schools, function ($a, $b) {
-    return strcmp($a, $b);
-});
+        return strcmp($a, $b);
+    });
 }
 
 // --
@@ -119,6 +119,8 @@ foreach ($classes as $x => $class) {
         </div>
     </div>
 </div>
+
+<div id="title" data-id="Spells - "></div>
 
 <script src="/scripts/spells.js"></script>
 <?php include ROOT . "/tpl/footer.php"; ?>

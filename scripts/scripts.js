@@ -39,6 +39,8 @@ $(".subclass-check").click(function (e) {
 
 $(function () {
     checkSubclass($("h1").data("name"), location.hash.substring(1));
+
+    document.title = $("#title").data("id") + "Azzy's Chaos Corner";
 });
 
 $(window).on("hashchange", function () {

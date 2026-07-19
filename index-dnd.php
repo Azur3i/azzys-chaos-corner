@@ -23,4 +23,6 @@
     </div>
 </div>
 
+<div id="title" data-id="D&D - "></div>
+
 <?php include __DIR__ . "/tpl/footer.php" ?>

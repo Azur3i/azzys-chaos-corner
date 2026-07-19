@@ -64,4 +64,6 @@ require_once ROOT . "/scripts/functions.php";
     </div>
 </div>
 
+<div id="title" data-id="Subclasses - "></div>
+
 <?php include ROOT . "/tpl/footer.php"; ?>

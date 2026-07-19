@@ -35,4 +35,6 @@ $types = [
     </div>
 </div>
 
+<div id="title" data-id="Classes - "></div>
+
 <?php include ROOT . "/tpl/footer.php"; ?>
