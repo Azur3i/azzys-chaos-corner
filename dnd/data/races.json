@@ -1,0 +1,110 @@
+{
+    "dwarf": {
+        "name": "Dwarf",
+        "desc": ["Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs – these common threads unite all dwarves."],
+        "asi": {
+            "CON": 2,
+            "total": 2
+        },
+        "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+        "alignment": "Accustomed to a life of hard work, most dwarves are lawful, further following the path of their clan in good or evil.",
+        "creatureType": "Humanoid",
+        "size": "Dwarves stand between 4ft. and 5ft. tall. Your size is Medium.",
+        "speed": 25,
+        "languages": "You can speak, read and write Dwarvish and Common. Dwarvish is full of hard consonants and guttural sounds, which spill over into whatever other language a dwarf might speak.",
+        "abilities": [
+            {
+                "name": "Darkvision",
+                "desc": "Accustomed to life underground, you have superior vision in dark and dim conditions. You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Dwarven Resilience",
+                "desc": "You gain advantage on saving throws against poison, and you gain resistance against @poison damage."
+            },
+            {
+                "name": "Dwarven Combat Training",
+                "desc": "You gain proficiency with the battleaxe, handaxe, light hammer and warhammer. Additionally, wearing heavy armor does not impose a penalty on your speed."
+            },
+            {
+                "name": "Tool Proficiency",
+                "desc": "You gain proficiency with one of these artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+            },
+            {
+                "name": "Stonecunning",
+                "desc": "Whenever you make a History (INT) check related to the origin of stonework, you are considered to have expertise in the History (INT) skill, adding double your proficiency bonus instead of the normal scenario. "
+            }
+        ],
+        "options": {
+            "hill-dwarf": {
+                "name": "Hill Dwarf",
+                "desc": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerun in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.",
+                "asi": {
+                    "WIS": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Dwarven Toughness",
+                        "desc": "Your hitpoint maximum is increased by a number equal to your level count."
+                    }
+                ],
+                "source": "Player's Handbook"
+            },
+            "mountain-dwarf": {
+                "name": "Mountain Dwarf",
+                "desc": "As a mountain dwarf, you're strong and hardy, accustomed to a difficult life in rugged terrain. You're probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerun, as well as the ruling Hylar clan and the noble Daewar c1an of Dragonlance, are mountain dwarves.",
+                "asi": {
+                    "STR": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Dwarven Armor Training",
+                        "desc": "You gain proficiency with light and medium armor."
+                    }
+                ]
+            }
+        },
+        "source": "Player's Handbook"
+    },
+    "human": {
+        "name": "Human",
+        "desc": ["In the reckonings of most worlds, humans are the youngest of the common races, late to arrive on the world scene and short-lived in comparison to dwarves, elves, and dragons. Perhaps it is because of their shorter lives that they strive to achieve as much as they can in the years they are given. Or maybe they feel they have something to prove to the elder races, and that's why they build their mighty empires on the foundation of conquest and trade. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds."],
+        "asi": {
+            "STR": 1,
+            "DEX": 1,
+            "CON": 1,
+            "INT": 1,
+            "WIS": 1,
+            "CHA": 1,
+            "total": 6
+        },
+        "age": "Humans reach adulthood in their teens and live less than a century.",
+        "alignment": "Humans are molded by nature and nurture, and have no preference for alignment.",
+        "creatureType": "Humanoid",
+        "size": "Humans vary widely in height and build, from barely 5ft. to well over 6ft. tall. Regardless of your position in that range, your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+        "abilities": [],
+        "options": {
+            "variant-human": {
+                "name": "Variant Human",
+                "asi": {
+                    "total": 2
+                },
+                "abilities": [
+                    {
+                        "name": "Skills",
+                        "desc": "You gain proficiency in one skill of your choice."
+                    },
+                    {
+                        "name": "Feat",
+                        "desc": "You gain 1 feat of your choice."
+                    }
+                ],
+                "source": "Player's Handbook"
+            }
+        },
+        "source": "Player's Handbook"
+    }
+}
