@@ -14,6 +14,16 @@ uasort($races, function ($a, $b) {
 $raceName = array_key_first($races);
 $target = $races[$raceName];
 
+$sources = [];
+foreach ($races as $race) {
+    if (!in_array($race["source"], $sources)) {
+        $sources[] = $race["source"];
+    }
+}
+
+uasort($sources, function ($a, $b) {
+    return strcmp($a, $b);
+});
 
 ?>
 
@@ -39,43 +49,6 @@ $target = $races[$raceName];
                             <p class="md title">Filters:</p>
                         </div>
 
-                        <hr >
-
-                        <div class="row" style="margin: 0;">
-
-                            <div class="col row pink justify-content-center">
-                                <div class="d-flex row justify-content-center align-items-center" style="margin: 0;">
-                                    <p class="md title align-items-center col-auto" style="height: 3rem;">Classes</p>
-                                    <div class="col-auto d-flex">
-                                        <a class="button-switch sm andor classlist-andor active" data-id="and">AND</a>
-                                        <a class="button-switch sm andor classlist-andor" data-id="or">OR</a>
-                                    </div>
-                                </div>
-                                <?php foreach ($casters as $name => $caster): ?>
-                                    <a class="button-toggle-2 col-5 spell-toggle toggle-classlist toggle sm" id="<?= $name ?>" data-id="classlist"><?= $caster["name"] ?></a>
-                                <?php endforeach; ?>
-                            </div>
-                            <div class="col row pink justify-content-center">
-                                <p class="md title">Schools</p>
-                                <?php foreach ($schools as $school): ?>
-                                    <a class="button-toggle-2 col-5 spell-toggle toggle-school sm" id="<?= $school ?>"><?= ucfirst($school) ?></a>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-
-                        <hr >
-
-                        <div class="row justify-content-center" style="margin: 0;">
-                            <div class="col row pink justify-content-center">
-                                <div class="d-flex row justify-content-center align-items-center" style="margin: 0;">
-                                    <p class="md title align-items-center col-auto" style="height: 3rem;">Levels</p>
-                                </div>
-                                <?php foreach ($levels as $i => $level): ?>
-                                    <a class="button-toggle-2 col-auto spell-toggle toggle-level sm justify-content-center" style="padding: 0.5rem 1rem;" id="<?= $i ?>"><?= $level ?></a>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                        
                         <hr >
 
                         <div class="row justify-content-center" style="margin: 0;">

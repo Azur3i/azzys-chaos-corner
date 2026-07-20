@@ -37,7 +37,7 @@ function renderASI ($asi) {
     $result = [];
     foreach ($asi as $score => $increase) {
         if ($score != "total") {
-            $result[] = "your $scoreNames[$score] score " . ($increase > 0 ? "in" : "de") . "creases by $increase";
+            $result[] = "your $scoreNames[$score] score " . ($increase > 0 ? "in" : "de") . "creases by " . abs($increase);
         }
     }
     if (count($result) > 1) {
@@ -51,7 +51,7 @@ function renderASI ($asi) {
 
 <div class="content-list" style="margin: 0;" id="race-display" race="<?= $raceName ?>">
     <div class="scroll">
-        <h1 class="title" data-name="<?= $class ?>"><?= $target["name"] ?></h1>
+        <h1 class="title" id="racename" data-name="<?= $target["name"] ?>"><?= $target["name"] ?></h1>
         <p class="sm title" style="opacity: 0.5;">Source: <?= $target["source"] ?></p>
 
         <hr >
@@ -60,7 +60,7 @@ function renderASI ($asi) {
         
         <hr >
         
-        <div class="mx-auto md row p-margin" style="width: 75%;">
+        <div class="mx-auto md row p-margin" style="width: 85%;">
             <div class="col">
                 <p class="lg title">Body</p>
 
@@ -107,7 +107,7 @@ function renderASI ($asi) {
         <hr >
         
         <p class="lg title">Abilities</p>
-        <div class="mx-auto row p-margin" style="width: 75%;">
+        <div class="mx-auto row p-margin" style="width: 85%;">
             <?php foreach ($target["abilities"] as $ability) {renderAbility($ability, 1);} ?>
         </div>
         <?php endif; ?>
