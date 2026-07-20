@@ -3855,5 +3855,36 @@
         
         "lists": ["sorcerer", "warlock", "wizard"],
         "source": "The Crooked Moon"
+    },
+    "buried-alive": {
+        "name": "Buried Alive",
+        "level": 4,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a pinch of grave dirt"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You send your enemies to their graves, even if they aren't dead yet. Choose a creature within range that you can see. The target must make a STR saving throw. On a failure, the ground opens and swallows the target, burying it up to 10ft. deep. On a success, the target is instead knocked prone, and its speed is reduced to 0 until the end of its next turn."
+            },
+            {
+                "desc": "While buried, the target has total cover, is restrained and blinded, and cannot breathe. A buried creature may use its action to dig out of the grave if it succeeds on a DC 15 Athletics (STR) check. On a success, it digs 5ft. closer to the surface. If it succeeds by 5 or more, it reaches the surface. When it does, it exits the ground prone."
+            },
+            {
+                "desc": "The target automatically succeeds on its saving throw if it's standing on any thickness of stone or metal, or at least 2in. of wood."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
     }
 }
