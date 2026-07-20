@@ -28,6 +28,54 @@
         "options": {},
         "source": "Age of the Clawed Crown"
     },
+    "dragonborn": {
+        "name": "Dragonborn",
+        "desc": ["The dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids."],
+        "asi": {
+            "STR": 2,
+            "CHA": 1,
+            "total": 3
+        },
+        "age": "Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10 year old human child by the age of 3, and reach adulthood by 15. They live to be around 80 years old.",
+        "alignment": "Far descendants from dragons, their path is oft similar to that of their lineage. Metallic dragonborn are often good, while chromatic dragonborn are more cruel and savage.",
+        "creatureType": "Humanoid",
+        "size": "Dragonborn are taller and heavier than humans, standing well over 6ft. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can read, speak and write Common and Draconic.",
+        "abilities": [
+            {
+                "name": "Draconic Ancestry",
+                "desc": "You are distantly related to a particular kind of dragon. Choose a type of dragon from the following:",
+                "type": "table",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["Dragon", "Damage type", "Breath Weapon Area", "Saving Throw"],
+                        ["Black", "@acid", "30ft. by 5ft. line", "DEX"],
+                        ["Blue", "@lightning", "30ft. by 5ft. line", "DEX"],
+                        ["Green", "@poison", "15ft. cone", "CON"],
+                        ["Red", "@fire", "15ft. cone", "CON"],
+                        ["White", "@cold", "15ft. cone", "CON"],
+                        ["Brass", "@acid", "30ft. by 5ft. line", "DEX"],
+                        ["Bronze", "@lightning", "30ft. by 5ft. line", "DEX"],
+                        ["Copper", "@poison", "30ft. by 5ft. line", "DEX"],
+                        ["Gold", "@fire", "15ft. cone", "CON"],
+                        ["Silver", "@cold", "15ft. cone", "CON"]
+                    ]
+                }
+            },
+            {
+                "name": "Breath Weapon",
+                "desc": "As an action, you may exhale destructive energy. It deals damage in an area according to your ancestry. All creature in the area must make a saving throw with DC 8 + CON + your proficiency, taking 2d6 damage on a failed save, or half as much on a successful one. The type of saving throw is determined by your ancestry. The damage of your breath weapon increases to 3d6 at level 6, 4d6 at level 11 and 5d6 at level 16. You may use this trait once per short or long rest."
+            },
+            {
+                "name": "Draconic Resistance",
+                "desc": "You gain resistance to the damage type associated with your ancestry."
+            }
+        ],
+        "options": {},
+        "source": "Player's Handbook"
+    },
     "dwarf": {
         "name": "Dwarf",
         "desc": ["Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs – these common threads unite all dwarves."],
