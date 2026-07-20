@@ -4067,5 +4067,33 @@
         
         "lists": ["druid", "ranger", "sorcerer", "warlock", "wizard"],
         "source": "The Crooked Moon"
+    },
+    "crimson-harvest": {
+        "name": "Crimson Harvest",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a vial of blood"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A wave of blood sweeps out from you. Each creature of your choice within 15ft. of you that is not behind total cover must make a DEX saving throw, taking {*}d10 @necrotic damage on a failed save, or half as much on a successful one."
+            },
+            {
+                "desc": "If you damage at least one Small or larger creature with this spell, a creature of your choice that you can see within the area regains a number of hitpoints equal to half the damage roll."
+            }
+            ],
+        "levels": [3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
     }
 }
