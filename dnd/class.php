@@ -14,4 +14,6 @@
 
 <div id="title" data-id="<?= $target["name"] ?> - "></div>
 
+<script src="/scripts/js/class.js"></script>
+
 <?php include ROOT . "/tpl/footer.php"; ?>
