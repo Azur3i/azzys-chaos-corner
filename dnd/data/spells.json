@@ -4025,7 +4025,7 @@
                 "desc": "You cause a creature that you can see within range to burst into consuming, relentless flames. The target must make a DEX saving throw, taking 2d8 @fire damage and either 2d8 @necrotic or @radiant damage, your choice, on a failed save, or half as much on a successful one."
             },
             {
-                "desc": "Additionally, on a failure, the flames linger. While they do, the target takes the damage again at the start of each of its turns. The target, or another creature within reach it, may use its action to allow the target to repeat the saving throw, ending the effect on itself on a success."
+                "desc": "Additionally, on a failure, the flames linger. While they do, the target takes the damage again at the start of each of its turns. The target, or another creature within reach of it, may use its action to allow the target to repeat the saving throw, ending the effect on itself on a success."
             },
             {
                 "desc": "A creature killed by the damage from this spell is reduced to ash, along with any nonmagical equipment it was wearing or carrying."
@@ -4034,6 +4034,38 @@
         "levels": null,
         
         "lists": ["druid", "paladin", "warlock"],
+        "source": "The Crooked Moon"
+    },
+    "creeping-rot": {
+        "name": "Creeping Rot",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You send tendrils of black and gray rot toward a target that you can see within range. Tendrils then leap from that target to up to {*} other targets within 30ft. of it. A target may be a creature, or a nonmagical plant that is not a creature, such as a tree or shrub. A target may be targeted by one tendril each."
+            },
+            {
+                "desc": "A creature hit by a tendril must succeed on a CON saving throw, or take 3d8 @necrotic damage and be poisoned for the duration. A creature poisoned in this way takes 1d8 @necrotic damage at the start of each of its turns. A poisoned creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            },
+            {
+                "desc": "A Plant creature automatically fails the saving throw from this spell. Nonmagical plants that are hit simply wither and die."
+            }
+            ],
+        "levels": [3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["druid", "ranger", "sorcerer", "warlock", "wizard"],
         "source": "The Crooked Moon"
     }
 }
