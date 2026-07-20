@@ -3829,5 +3829,31 @@
         
         "lists": ["cleric", "druid", "ranger", "sorcerer"],
         "source": "The Crooked Moon"
+    },
+    "blood-sacrifice": {
+        "name": "Blood Sacrifice",
+        "level": 2,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a drop of your own blood"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You sacrifice a portion of your lifeforce to enhance your magical power. When you cast this spell, you take {*}d6 @necrotic damage, which cannot be reduced or prevented in any way. For the duration, whenever you cast a spell that deals damage, one target of the spell of your choice takes an extra {*}d6 damage of the spell's normal damage type (your choice if there are multiple)."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
     }
 }
