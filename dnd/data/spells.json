@@ -3972,5 +3972,35 @@
         
         "lists": ["paladin", "warlock"],
         "source": "The Crooked Moon"
+    },
+    "chorus-of-the-lost": {
+        "name": "Chorus of the Lost",
+        "level": 2,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a silver bell worth at least 10gp"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You summon the eerie song and wailing of lost souls from a point you can see within range. Each creature in a 15ft. radius sphere centered on that point must make a WIS saving throw, taking {*}d6 @psychic damage on a failed save, or half as much on a successful one. Additionally, on a failure, the target becomes frightened of you for the duration. On a success, it instead becomes frightened of you until the end of its next turn."
+            },
+            {
+                "desc": "A frightened target may repeat the saving throw at the end of each of its turn, ending the effect on itself on a success."
+            }
+            ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "cleric", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
     }
 }
