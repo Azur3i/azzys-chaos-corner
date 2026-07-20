@@ -1,4 +1,33 @@
 {
+    "catfolk": {
+        "name": "Catfolk",
+        "desc": ["The mysterious catfolk are an all-female half cat hybrid people that dwell in secluded places. Having distant ancestors in the fey and beast corners, as well as an ancient, long-lost civilization, they distinguish themselves with their short builds and feline features. Their villages are spread out across any form of terrain, albeit well-hidden no matter what tribe you come across. In fact, the majority of the catfolk are secluded in such a fashion that often they have no contact with the outside world. The catfolk are usually nothing more than myths for anyone who comes across them, and they're often mistaken as fey or Tabaxi. Those who do find the catfolk villages inside the foliage of the feywild will most likely meet their end by sheer savagery."],
+        "asi": {
+            "STR": 1,
+            "CON": 1,
+            "INT": -2,
+            "WIS": 2,
+            "total": 2
+        },
+        "age": "A catfolk claims adulthood at the age of 12. They rarely live beyond 75 years.",
+        "alignment": "Wherever the catfolk live, they live in complete harmony with their environment, be it heavily forested areas, mountains or beachsides. Most catfolk are neutral.",
+        "creatureType": "Beast",
+        "size": "Catfolk are small, but ferocious in battle. The average catfolk stands at 3ft. to 4ft. in height. Your size is Small.",
+        "speed": 30,
+        "languages": "You can speak, read and write Catspeak, a primitive language that is hard to describe in script. Due to isolation, catfolk rarely come in contact with anyone that speaks Common. You may add Common to your list of languages at your DM's discretion.",
+        "abilities": [
+            {
+                "name": "Camouflage",
+                "desc": "You gain proficiency in the Stealth (DEX) skill."
+            },
+            {
+                "name": "Pack Tactics",
+                "desc": "You may add +2 to any attack roll whenever there is an ally within 5ft. of the target, and the ally is not incapacitated. This increases to +3 from 10th level."
+            }
+        ],
+        "options": {},
+        "source": "Age of the Clawed Crown"
+    },
     "dwarf": {
         "name": "Dwarf",
         "desc": ["Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs – these common threads unite all dwarves."],
@@ -152,7 +181,7 @@
                         "desc": "You gain proficiency in the Survival (WIS) and Perception (WIS) skills. Additionally, you may use this trait to cast the @longstrider spell, targeting yourself, requiring no material components. You may use this trait once per long rest."
                     }
                 ],
-                "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+                "source": "Age of the Clawed Crown"
             },
             "two-tailed-voxin": {
                 "name": "Two-tailed Voxin",
@@ -168,7 +197,7 @@
                         "desc": "You gain proficiency in the Arcana (INT) and Nature (INT) skills. Additionally, you may use this trait to cast the @entangle spell, requiring no material components. You can use this trait once per long rest. INT is your spellcasting ability for this spell."
                     }
                 ],
-                "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+                "source": "Age of the Clawed Crown"
             },
             "nine-tailed-voxin": {
                 "name": "Nine-tailed Voxin",
@@ -184,9 +213,9 @@
                         "desc": "You gain proficiency in the Persuasion (CHA) and Intimidation (CHA) skills. Additionally, you may use this trait to cast the @charm person spell, requiring no material components. While casting the @charm person spell using this trait, the target gains disadvantage on its saving throw. You may use this trait once per long rest. INT is your spellcasting ability for this spell."
                     }
                 ],
-                "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+                "source": "Age of the Clawed Crown"
             }
         },
-        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+        "source": "Age of the Clawed Crown"
     }
 }
