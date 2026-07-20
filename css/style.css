@@ -61,7 +61,8 @@
         height: 92%;
     }
 
-    #spell-display {
+    #spell-display,
+    #race-display {
         max-height: 66vh;
     }
 
@@ -79,6 +80,11 @@
     #spell-scrolllist {
         max-height: 75vh;
         height: 93%;
+    }
+
+    #spell-display,
+    #race-display {
+        max-height: 75vh;
     }
 
     #spell-search {
@@ -695,6 +701,10 @@ table.ability {
     p {
         margin-bottom: 1rem;
     }
+}
+
+#race-display {
+    height: 100%;
 }
 
 /* ----- */

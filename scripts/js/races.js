@@ -1,11 +1,11 @@
-function loadSpell(target) {
+function loadRace(target) {
     $.get(
-        "/scripts/constructors/spell.php", {target: target},
+        "/scripts/constructors/race.php", {target: target},
         function(response) {
-            $("#spellbox").html(response);
+            $("#racebox").html(response);
             updateButton(target);
 
-            document.title = $("#spellname").data("name") + " - Azzy's Chaos Corner"
+            document.title = $("#racename").data("name") + " - Azzy's Chaos Corner"
         }
     )
 }
@@ -16,49 +16,24 @@ function updateButton(button) {
 }
 
 $(function () {
-    let spell = location.hash.substring(1);
+    let race = location.hash.substring(1);
 
-    if (spell) {
-        loadSpell(spell);
+    if (race) {
+        loadRace(race);
     } else if (button) {
-        updateButton($(`#spell-display`).attr("spell"));
+        updateButton($(`#race-display`).attr("race"));
     }
 })
 
 $(".button-list").click(function (e) {
     e.preventDefault();
 
-    let spell = $(this).attr("id");
-    history.pushState(null, "", "#" + spell);
+    let race = $(this).attr("id");
+    history.pushState(null, "", "#" + race);
 
-    loadSpell(spell);
+    loadRace(race);
 });
 
-// ajax function to change level attribute
-$("#spellbox").on("click", ".button-lvl", function () {
-    let level = $(this).attr("value");
-    let spell = $("#spell-display").attr("spell");
-
-    $(".button-lvl").removeClass("active");
-    $(this).addClass("active");
-
-    $.post(
-        "/scripts/getters/spell_level.php", {
-            level: level,
-            spell: spell
-        },
-        function(response) {
-            if (Array.isArray(response)) {
-                response.forEach((param, index) => {
-                    console.log(param);
-                    $(`.level-replace-${index}`).html(param);
-                })
-            } else {
-                $(".level-replace-0").text(response);
-            }
-        }, "json"
-    )
-});
 
 function filterSpell () {
     let search = $("#spell-searchbar").val().toLowerCase();
@@ -149,6 +124,24 @@ function applyOr (prop, wl, bl, operand, hidden) {
     return hidden;
 }
 
+function getFilters (el) {
+    let pos = [];
+    let neg = [];
+    $(el).each(function () {
+        if ($(this).hasClass("pos")) {
+            pos.push($(this).attr("id"));
+        } else if ($(this).hasClass("neg")) {
+            neg.push($(this).attr("id"));
+        }
+    });
+
+    return [pos, neg];
+}
+
+function getLogicOp () {
+    return [$(".classlist-andor.active").data("id")];
+}
+
 $("#spell-searchbar").on("input", filterSpell);
 $(function () {$("#spell-searchbar").trigger("input");});
 
@@ -202,20 +195,6 @@ $(".button-toggle-2").on({
     }
 });
 
-function getFilters(el) {
-    let pos = [];
-    let neg = [];
-    $(el).each(function () {
-        if ($(this).hasClass("pos")) {
-            pos.push($(this).attr("id"));
-        } else if ($(this).hasClass("neg")) {
-            neg.push($(this).attr("id"));
-        }
-    });
-
-    return [pos, neg];
-}
-
 $(document).on("keydown", function(e) {
     if (e.key === "ArrowDown") {
         e.preventDefault();
@@ -241,10 +220,6 @@ $(".classlist-andor").click(function () {
 
     filterSpell();
 });
-
-function getLogicOp() {
-    return [$(".classlist-andor.active").data("id")];
-}
 
 $("#clear-button").click(function () {
     $("#spell-searchbar").val("");

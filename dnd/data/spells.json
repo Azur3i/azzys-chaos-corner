@@ -4095,5 +4095,30 @@
         
         "lists": ["sorcerer", "warlock", "wizard"],
         "source": "The Crooked Moon"
+    },
+    "crooked-ward": {
+        "name": "Crooked Ward",
+        "level": 3,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a five-pointed wicker star"],
+        "duration": {
+            "time": "{*}"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch an immobile surface and mark a symbol that causes agony in twisted creatures. An invisible, 30ft. radius sphere springs out from the point you touch. Every aberration, fey, fiend, monstrosity, or undead in the sphere gains disadvantage on ability checks and attack rolls. Whenever an affected creature enters the sphere for the the first time on a turn or starts its turn there, it must succeed on a WIS saving throw or be frightened of you until the start of its next turn."
+            }
+            ],
+        "levels": ["Concentration, up to 10 minutes", "Concentration, up to 1 hour", "Concentration, up to 8 hours", "24 hours", "24 hours", "24 hours", "24 hours"],
+        
+        "lists": ["druid", "ranger", "warlock", "wizard"],
+        "source": "The Crooked Moon"
     }
 }

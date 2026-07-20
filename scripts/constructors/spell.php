@@ -1,8 +1,6 @@
 <?php 
 
-if (!defined("ROOT")) {
-    define("ROOT",  __DIR__ . "/../..");
-}
+if (!defined("ROOT")) {define("ROOT",  __DIR__ . "/../..");}
 
 require_once ROOT . "/scripts/php/spells.php";
 require_once ROOT . "/scripts/php/general.php";
