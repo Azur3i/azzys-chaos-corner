@@ -3886,5 +3886,35 @@
         
         "lists": ["druid", "sorcerer", "warlock", "wizard"],
         "source": "The Crooked Moon"
+    },
+    "call-of-the-wild": {
+        "name": "Call of the Wild",
+        "level": 4,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a bit of animal fur or hide"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You unleash a primal howl that calls lesser creatures to your command. When you cast the spell, each Beast in a 50ft. radius sphere centered on you must make a WIS saving throw. On a failure, the target is charmed by you, it is able to understand your commands, and it follows them on its turn to the best of its abilities. For the duration, as an action, you may issue new commands. On a success, the target is charmed by you until the start of your next turn, but you gain no additional ability to command it."
+            },
+            {
+                "desc": "The howl is audible to anyone within 300ft. of you."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "druid", "ranger", "warlock"],
+        "source": "The Crooked Moon"
     }
 }
