@@ -3916,5 +3916,32 @@
         
         "lists": ["bard", "druid", "ranger", "warlock"],
         "source": "The Crooked Moon"
+    },
+    "captivate-undead": {
+        "name": "Captivate Undead",
+        "level": 1,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a pinch of bone dust"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You usurp the negative energy animating {*} Undead creature(s) that you can see within range, attempting to take control. The target must make a CHA saving throw. On a failure, for the duration, the target is charmed by you while ignoring immunity to being charmed, and it becomes friendly toward you. On a success, the target gains disadvantage on the next attack roll it makes against you before the start of your next turn. If you, or any of your allies, deal damage to the target, or force it to make a saving throw, the spell ends early."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "cleric", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
     }
 }
