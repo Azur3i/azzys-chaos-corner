@@ -67,32 +67,46 @@ function filterSpell () {
         let prop = [
             $(this).data("level").toString(),
             $(this).data("school").toLowerCase(),
+            $(this).data("source"),
             ...$(this).data("lists").toLowerCase().split(" ")
         ];
         let hidden = false;
 
-        let el = [
-            ".button-toggle-2.toggle-school",
-            ".button-toggle-2.toggle-classlist"
+        // filter options that can be filtered AND/OR
+        let elAndOr = [
+            ".button-toggle-2.toggle-school"
         ];
-        el.forEach(element => {
-            let [wl, bl] = getFilters(element);
-            let [operand] = getLogicOp();
 
-            if (element != ".button-toggle-2.toggle-school") {
-                if (operand == "and") {
-                    hidden = applyAnd(prop, wl, bl, operand, hidden);
-                } else if (operand == "or") {
-                    hidden = applyOr(prop, wl, bl, operand, hidden);
-                }
-            } else {
+        let [operand] = getLogicOp();
+
+        elAndOr.forEach(element => {
+            let [wl, bl] = getFilters(element);
+
+            if (operand == "and") {
+                hidden = applyAnd(prop, wl, bl, operand, hidden);
+            } else if (operand == "or") {
                 hidden = applyOr(prop, wl, bl, operand, hidden);
             }
-
-            if (!name.includes(search)) {
-                hidden = true;
-            }
         });
+
+        // filter options that can only be filtered OR; 
+        // filtering AND would be redundant as these can only have 1 value
+        let elOr = [
+            ".button-toggle-2.toggle-classlist",
+            ".button-toggle-2.toggle-level",
+            ".button-toggle-2.toggle-source"
+        ]
+
+        elOr.forEach(element => {
+            let [wl, bl] = getFilters(element);
+
+            hidden = applyOr(prop, wl, bl, operand, hidden);
+        });
+
+        // filter searchbar contents regardless of other active filters
+        if (!name.includes(search)) {
+            hidden = true;
+        }
 
         $(this).toggleClass("d-none", hidden);
     });
