@@ -3802,5 +3802,32 @@
         
         "lists": ["druid", "wizard"],
         "source": "Ani's Archive of Almost Anything"
+    },
+    "ancestral-communion": {
+        "name": "Ancestral Communion",
+        "level": 1,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You invoke the wisdom of your ancestors to gain insight into your trials. When you cast the spell, and at the start of each of your turns for the duration, you gain inspiration if you don't already have it."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid", "ranger", "sorcerer"],
+        "source": "The Crooked Moon"
     }
 }
