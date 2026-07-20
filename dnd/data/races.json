@@ -106,5 +106,87 @@
             }
         },
         "source": "Player's Handbook"
+    },
+    "voxin": {
+        "name": "Voxin",
+        "desc": ["A vastly mysterious race of humanoid beings with fluffy, bushy tails and long foxy ears, the voxin are a hidden civilization inside the feywild. Unmatched in their cunning and swiftness in battle, they can track their prey from miles away without breaking a sweat. Unlike the more savage catfolk, the voxin are a highly intelligent race, capable in knowledge and battle alike. Only if they need something will they ever show themselves to the outside world.", "The voxin are also a very versatile people. The one-tailed voxin are the biggest and strongest among them, providing food and protection for the entire city. The two-tailed voxin are hoarders of knowledge, isolating themselves in libraries to unlock secrets of natures unknown. The nine-tailed voxin are often smaller in stature, but their charms and quick wit sets them apart as persuasive hagglers. Together they form gigantic cities hidden in the feywild. Entire voxin cities have been reported completely vanishing after a rare sighting of them.", "You don't find them. They find you."],
+        "asi": {
+            "INT": 2,
+            "total": 2
+        },
+        "age": "Voxin reach physical maturity at an age of around 30, but their intellect reaches its peak at an age of as young as 8 years. Unfeigned by the concept of adulthood, voxin can live to be around 500 years old.",
+        "alignment": "Voxin live in big cities with strict social structures, tending heavily towards lawful alignments. Most of them move towards trickery and evil.",
+        "creatureType": "Fey",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, Sylvan and one language of your choice.",
+        "abilities": [
+            {
+                "name": "Cunning",
+                "desc": "You may treat any simple weapon as if it has the finesse property."
+            },
+            {
+                "name": "Darkvision",
+                "desc": "Predator in both night and day, you have keen eyes in even the darkest parts of the Feywild. You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Tail Count",
+                "desc": "Voxin are a very versatile race of creatures, having developed a social structure based on the amount of tails an individual has. Over time, their evolution has separated them into distinct groups. Choose one of the subraces below."
+            },
+            {
+                "name": "Voxin Step",
+                "desc": "Your foxlike traits give you foxlike reflexes as well. After taking an action on your turn, you may move up to half your base movement speed. This extra movement does not count toward the total you may move on your turn. Additionally, opportunity attacks have disadvantage against you."
+            }
+        ],
+        "options": {
+            "one-tailed-voxin": {
+                "name": "One-tailed Voxin",
+                "desc": "The one-tailed voxin are the brawn of the voxin race. Hunters, trackers and guardians for the great metropolises the voxin call their home, they are the most imposing among their kind. It's not uncommon for these brutes to possess more bestial traits, like patches of fur, or an enlongated snout. One-tailed voxin are the most common of the voxin.",
+                "size": "You stand with the tallest among your kind, ranging from just under 5ft. to a little over 6ft. tall. Your size is Medium.",
+                "asi": {
+                    "WIS": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Apex Predator",
+                        "desc": "You gain proficiency in the Survival (WIS) and Perception (WIS) skills. Additionally, you may use this trait to cast the @longstrider spell, targeting yourself, requiring no material components. You may use this trait once per long rest."
+                    }
+                ],
+                "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+            },
+            "two-tailed-voxin": {
+                "name": "Two-tailed Voxin",
+                "desc": "The two-tailed Voxin are the brains of the Voxin race. A well-known myth states that the two-tailed voxin are the origin of all vulpine creatures found in the realms. Possessing the shy nature of these creatures, only very rarely will you find one outside of the city, and even outside of the library are they rarely seen. They are hoarders of knowledge, possessing far more than the rest of their kind, unlocking secrets of arcane and eldritch natures alike.",
+                "size": "The two-tailed Voxin embody the average of a Voxin. You range from 4ft. to no more than 5ft. Your size is Small or Medium.",
+                "asi": {
+                    "INT": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Scholar of Nature",
+                        "desc": "You gain proficiency in the Arcana (INT) and Nature (INT) skills. Additionally, you may use this trait to cast the @entangle spell, requiring no material components. You can use this trait once per long rest. INT is your spellcasting ability for this spell."
+                    }
+                ],
+                "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+            },
+            "nine-tailed-voxin": {
+                "name": "Nine-tailed Voxin",
+                "desc": "The nine-tailed Voxin are the diplomats of the Voxin race. Vastly different from their peers; they are both predators and hoarders, but in a different pursuit. By far the rarest among their kind, most nine-tailed Voxin choose to live a nomadic life, outside the city, often finding their way around the world as entertainers, bards and merchants. Their short build and traits makes them incredible showmen and traders, but always be wary around them, because there's something enchanting about their charms. Perhaps a bit... too enchanting.",
+                "size": "The nine-tailed Voxin are short and often appear childlike, seemingly never reaching adulthood the way their one- and two-tailed peers do. They stand little under 3ft. to no more than 4ft. tall. Your size is Small.",
+                "asi": {
+                    "CHA": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Apex Predator",
+                        "desc": "You gain proficiency in the Persuasion (CHA) and Intimidation (CHA) skills. Additionally, you may use this trait to cast the @charm person spell, requiring no material components. While casting the @charm person spell using this trait, the target gains disadvantage on its saving throw. You may use this trait once per long rest. INT is your spellcasting ability for this spell."
+                    }
+                ],
+                "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+            }
+        },
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     }
 }
