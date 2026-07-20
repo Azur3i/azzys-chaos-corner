@@ -4002,5 +4002,38 @@
         
         "lists": ["bard", "cleric", "sorcerer", "warlock", "wizard"],
         "source": "The Crooked Moon"
+    },
+    "consuming-pyre": {
+        "name": "Consuming Pyre",
+        "level": 4,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You cause a creature that you can see within range to burst into consuming, relentless flames. The target must make a DEX saving throw, taking 2d8 @fire damage and either 2d8 @necrotic or @radiant damage, your choice, on a failed save, or half as much on a successful one."
+            },
+            {
+                "desc": "Additionally, on a failure, the flames linger. While they do, the target takes the damage again at the start of each of its turns. The target, or another creature within reach it, may use its action to allow the target to repeat the saving throw, ending the effect on itself on a success."
+            },
+            {
+                "desc": "A creature killed by the damage from this spell is reduced to ash, along with any nonmagical equipment it was wearing or carrying."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["druid", "paladin", "warlock"],
+        "source": "The Crooked Moon"
     }
 }
