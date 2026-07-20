@@ -3943,5 +3943,34 @@
         
         "lists": ["bard", "cleric", "sorcerer", "warlock", "wizard"],
         "source": "The Crooked Moon"
+    },
+    "chain-of-conviction": {
+        "name": "Chain of Conviction",
+        "level": 2,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "30ft.",
+        "vsm": [false, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You hurl a spectral, barbed chain at a creature you can see within range. The target must make a STR saving throw, taking {*}d6 @force damage on a failed save, or half as much on a successful one. Additionally, on a failure, the target is pulled up to 30ft. toward you, and becomes bound by the chain. While bound, the creature is tethered to you, cannot move or teleport to a space more than 30ft. away from you, and you gain advantage on attack rolls against it."
+            },
+            {
+                "desc": "A bound creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If you ever move more than 30ft. away from the bound creature, the spell ends early."
+            }
+            ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["paladin", "warlock"],
+        "source": "The Crooked Moon"
     }
 }
