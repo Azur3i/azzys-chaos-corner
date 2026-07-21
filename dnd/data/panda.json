@@ -33,39 +33,6 @@
         "lists": ["wizard"],
         "source": "Source"
     },
-    "call-lightning": {
-        "name": "Call Lightning",
-        "level": 3,
-        "school": "conjuration",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "120ft.",
-        "vsm": [true, true, false],
-        "duration": {
-            "amount": 10,
-            "time": "minute",
-            "concentration": true
-        },
-        
-        "desc": [
-            {
-                "desc": "A storm cloud, shaped like a 10ft. tall 60ft. radius cylinder, appears centered on a point you can see within range directly above you. If you cannot see a point in the air where the storm cloud could appear (eg. you are in a room that cannot accomodate the cloud), the spell fails."
-            },
-            {
-                "desc": "When you cast the spell, choose a point you can see under the cloud. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a DEX saving throw. A creature takes {*}d10 @lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you may use your action to call down lightning in this way again, targeting any point underneath the cloud."
-            },
-            {
-                "desc": "If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10."
-            }
-        ],
-        "levels": [3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["druid"],
-        "source": "Player's Handbook"
-    },
     "bane": {
         "name": "Bane",
         "level": 1,
@@ -90,7 +57,7 @@
         ],
         "levels": [3, 4, 5, 6, 7, 8, 9, 10],
         
-        "lists": ["bard, cleric"],
+        "lists": ["bard", "cleric"],
         "source": "Player's Handbook"
     },
     "chaos-bolt": {
@@ -183,6 +150,32 @@
         "levels": ["1 hour", "1 hour", "8 hours", "8 hours", "24 hours", "24 hours", "24 hours", "24 hours", "24 hours"],
         
         "lists": ["ranger"],
+        "source": "Player's Handbook"
+    },
+    "identify": {
+        "name": "Identify",
+        "level": 1,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute",
+            "ritual": true
+        },
+        "range": "touch",
+        "vsm": [true, true, "a pearl worth at least 100 gp and an owl feather"],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it. If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "wizard"],
         "source": "Player's Handbook"
     }
 }
