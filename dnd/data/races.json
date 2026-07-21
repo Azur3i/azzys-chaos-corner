@@ -690,5 +690,32 @@
         ],
         "options": {},
         "source": "Age of the Clawed Crown"
+    },
+    "half-orc": {
+        "name": "Half-orc",
+        "desc": ["When alliances between humans and orcs are sealed by marriages, half-orcs are born. Some half-orcs rise to become proud chiefs of orc tribes, their human blood giving them an edge over their full-blooded orc rivals. Some venture into the world to prove their worth among humans and other more civilized races. Many of these become adventurers, achieving greatness for their mighty deeds and notoriety for their barbaric customs and savage fury."],
+        "asi": {
+            "STR": 2,
+            "CON": 1,
+            "total": 3
+        },
+        "age": "Half-orcs mature a little faster than humans, reaching adulthood at around age 14. They age noticeably faster and rarely live longer than 75 years.",
+        "alignment": "Half-orcs inherit a tendency towards chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.",
+        "creatureType": "Humanoid",
+        "size": "Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6ft. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own, but is written in the Dwarvish script.",
+        "abilities": [
+            {
+                "name": "Relentless Endurance",
+                "desc": "When you are reduced to 0 hitpoints but not killed outright, you may drop to 1 hitpoint instead. You may use this trait once per long rest."
+            },
+            {
+                "name": "Savage Attacks",
+                "desc": "When you score a critical hit with a melee weapon attack, you may roll 1 of the weapon's damage dice 1 additional time and add it to the extra damage of the hit."
+            }
+        ],
+        "options": {},
+        "source": "Player's Handbook"
     }
 }
