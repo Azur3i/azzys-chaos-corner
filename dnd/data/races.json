@@ -43,7 +43,8 @@
                         "name": "Aetherius",
                         "desc": "As a bonus action, you may make any one object you touch incorporeal. For 10 minutes, the affected object becomes translucent, signaling it is now incorporeal. For the duration, no creature except yourself or other incorporeal beings can affect or be affected by the incorporeal object. The object can pass through walls only if you are holding or touching it. You may use this trait once per long rest."
                     }
-                ]
+                ],
+                "source": "Age of the Clawed Crown"
             },
             "larua": {
                 "name": "Larua",
@@ -65,7 +66,8 @@
                         "name": "Pestis",
                         "desc": "You gain resistance to @necrotic damage."
                     }
-                ]
+                ],
+                "source": "Age of the Clawed Crown"
             },
             "phantasma": {
                 "name": "Phantasma",
@@ -87,7 +89,8 @@
                         "name": "Mors in Vita",
                         "desc": "You gain resistance to @poison damage."
                     }
-                ]
+                ],
+                "source": "Age of the Clawed Crown"
             }
         },
         "source": "Age of the Clawed Crown"
@@ -263,7 +266,8 @@
                         "name": "Dwarven Armor Training",
                         "desc": "You gain proficiency with light and medium armor."
                     }
-                ]
+                ],
+                "source": "Player's Handbook"
             }
         },
         "source": "Player's Handbook"
@@ -658,6 +662,33 @@
                 "source": "Age of the Clawed Crown"
             }
         },
+        "source": "Age of the Clawed Crown"
+    },
+    "kenoa": {
+        "name": "Keno'a",
+        "desc": ["The mother of equality gazed upon the world, and saw it wasn't so. From the essences of imbalance, She created the keno'a, a Simic hybrid between multiple races, taking nothing but the most fitting properties. The keno'a stand as graceful and dexterous as the felines, but are capable of greater intelligence than most. Therefore, they are humanoids with feline features, made in Her image as the pinnacle of equality. However, after the banishment of their guardian deity, their numbers started dwindling, gradually losing their balanced form over the course of many generations of evolution. Today, most of the former keno'a are part of small tribes known as the catfolk, having lost most pride, wit and grace, though pure-blooded keno'a are alive today. Part of human society, or disguised as their peers, they have forgotten the teachings of their matriarch, yet hold some ability to subconsciously inspire Her teachings."],
+        "asi": {
+            "DEX": 2,
+            "INT": 1,
+            "total": 3
+        },
+        "age": "The keno'a take part in a divine ritual beknownst only to them, allowing to be reborn several times. They shed the burdens of an aged body, being reborn as a child, whilst keeping their life experiences. Each of their lifetimes reaches to 90 years, and they can be reborn up to 8 times.",
+        "alignment": "The mind of a keno'a tends to subconsciously mirror their surroundings, becoming good in the face of evil, inciting chaos in the eyes of the law. Despite that, they are inspired towards neutrality.",
+        "creatureType": "Beast",
+        "size": "Your size is Small or Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Catspeak and Common.",
+        "abilities": [
+            {
+                "name": "Equality",
+                "desc": ["You are a creation of the Goddess of Equality, your body a temple of balance, Her teachings bestowed upon you. You gain +1 to saving throws made with your 2 lowest ability scores. If any ability scores are tied for being lowest, choose one. This bonus increases to +2 at 7th level, and +3 at 14th level. As an action, you may steel your resolve further, doubling these bonuses for 1 minute.", "Alternatively, you may usher balance onto other creatures under your Matriarch's teachings: as an action, you may choose one creature you can see within 30ft. of you, and balance them in Her light. For 1 minute, that creature gains a -1 penalty to attack rolls, saving throws and ability checks made with the creature's 2 highest ability scores. This penalty increases to -2 at 7th level, and -3 at 14th level. This effect is regarded as a curse, and can be removed by the appropriate effects and spells, such as the greater restoration spell.", "You may use either of these traits once per long rest."]
+            },
+            {
+                "name": "Feline Reflexes",
+                "desc": "You gain +2 to Perception (WIS) checks, and +4 to Passive Perception. This does not count as being proficient in this skill. Additionally, when in a situation that would cause you to be surprised, you may roll 1d2. On a 2, you are not surprised."
+            }
+        ],
+        "options": {},
         "source": "Age of the Clawed Crown"
     }
 }
