@@ -66,22 +66,20 @@ function renderASI ($asi) {
 
                 <hr >
                 <div class="mx-auto md" style="width: 90%;">
-                    
-                    <?php echo (!empty($target["asi"])) ? "<p><b>Alignment Score Increase. </b>" . renderASI($target['asi']) . "</p>" : ""; ?>
+                    <?php if (empty($target["creatureType"]) && empty($target["size"]) && empty($target["speed"])): ?>
+                        <p style='text-align: center;'>Defined by options below.</p>
+                    <?php endif; ?>
+
+                    <?php echo (!empty($target["asi"])) ? "<p style='margin-bottom: 1rem;'><b>Alignment Score Increase. </b>" . renderASI($target['asi']) . "</p>" : ""; ?>
                     <?php echo (!empty($target["creatureType"])) ?
-                        "<p><b>Creature Type. </b>You are a" .
+                        "<p style='margin-bottom: 1rem;'><b>Creature Type. </b>You are a" .
                         (startsWith($target["creatureType"], ["a", "e", "i", "o", "u"]) ? "n" : "") .
                         " " .
                         $target["creatureType"] .
                         ".</p>" : "";
                     ?>
-                    
-                    <?php echo (!empty($target["size"])) ? "<p><b>Size. </b>" . $target['size'] . "</p>" : "" ?>
-                    <?php echo (!empty($target["speed"])) ? "<p><b>Speed. </b>Your base walking speed is " . $target['speed'] . "ft.</p>" : "" ?>
-
-                    <?php if (empty($target["creatureType"]) && empty($target["size"]) && empty($target["speed"])) {
-                        echo "<p style='text-align: center;'>Defined by options below.</p>";
-                    } ?>
+                    <?php echo (!empty($target["size"])) ? "<p style='margin-bottom: 1rem;'><b>Size. </b>" . $target['size'] . "</p>" : "" ?>
+                    <?php echo (!empty($target["speed"])) ? "<p style='margin-bottom: 1rem;'><b>Speed. </b>Your base walking speed is " . $target['speed'] . "ft.</p>" : "" ?>
                 </div>
 
                 
@@ -92,13 +90,13 @@ function renderASI ($asi) {
 
                 <hr >
                 <div class="mx-auto md" style="width: 90%;">
-                    <?php echo (!empty($target["age"])) ? "<p><b>Age. </b>" . $target['age'] . "</p>" : "" ?>
-                    <?php echo (!empty($target["alignment"])) ? "<p><b>Alignment. </b>" . $target['alignment'] . "</p>" : "" ?>
-                    <?php echo (!empty($target["languages"])) ? "<p><b>Languages. </b>" . $target['languages'] . "</p>" : "" ?>
-
-                    <?php if (empty($target["age"]) && empty($target["alignment"]) && empty($target["languages"])) {
-                        echo "<p style='text-align: center;'>Defined by options below.</p>";
-                    } ?>
+                    <?php if (empty($target["age"]) && empty($target["alignment"]) && empty($target["languages"])): ?>
+                        <p style='text-align: center;'>Defined by options below.</p>
+                    <?php endif; ?>
+                
+                    <?php foreach (["age", "alignment", "languages"] as $attr): ?>
+                        <?php echo (!empty($target[$attr])) ? "<p style='margin-bottom: 1rem;'><b>Age. </b>" . $target[$attr] . "</p>" : "" ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -108,7 +106,11 @@ function renderASI ($asi) {
         
         <p class="lg title">Abilities</p>
         <div class="mx-auto row p-margin" style="width: 85%;">
-            <?php foreach ($target["abilities"] as $ability) {renderAbility($ability, 1);} ?>
+            <?php foreach ($target["abilities"] as $ability): ?>
+            <div class="indent-li" style="margin-bottom: 1rem;">
+                <?php renderAbility($ability, 1); ?>
+            </div>
+            <?php endforeach; ?>
         </div>
         <?php endif; ?>
 
@@ -146,6 +148,5 @@ function renderASI ($asi) {
         </div>
         <?php endif; ?>
 
-    
     </div>
 </div>

@@ -697,9 +697,10 @@ table.ability {
     min-width: unset;
 }
 
-.p-margin {
-    p {
-        margin-bottom: 1rem;
+.indent-li {
+    ul {
+        width: 95%;
+        margin-left: 5%;
     }
 }
 
