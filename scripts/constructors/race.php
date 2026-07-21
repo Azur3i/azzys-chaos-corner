@@ -112,7 +112,10 @@ function renderASI ($asi) {
         </div>
         <?php endif; ?>
 
-        <?php if (count($target["options"])): ?>
+        <?php if (count($target["options"])): 
+        uasort($target["options"], function ($a, $b) {
+            return strcmp($a["name"], $b["name"]);
+        }); ?>
         <hr >
 
         <p class="lg title">Options & Subraces</p>
@@ -121,11 +124,13 @@ function renderASI ($asi) {
                 <?php foreach ($target["options"] as $name => $option): ?>
                     <div class="accordion-item blue low-opac shadow-lg">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed"
+                            <button class="accordion-button collapsed subclass-accordion"
                                     type="button"
                                     data-bs-toggle="collapse"
-                                    data-bs-target="#<?= $name ?>">
-                                <?= $option["name"] ?>
+                                    data-bs-target="#<?= $name ?>"
+                                    style="grid-template-columns: 1fr auto;">
+                                <span><?= $option["name"] ?></span>
+                                <span class="sm ms-auto" style="opacity: 0.7;"><?= $option["source"] ?></span>
                             </button>
                         </h2>
 
