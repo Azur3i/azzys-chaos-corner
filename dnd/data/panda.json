@@ -65,5 +65,33 @@
         
         "lists": ["druid"],
         "source": "Player's Handbook"
+    },
+    "bane": {
+        "name": "Bane",
+        "level": 1,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action",
+            "ritual": false
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a drop of blood"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "Up to {*} creatures of your choice that you can see within range must make CHA saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["bard, cleric"],
+        "source": "Player's Handbook"
     }
 }
