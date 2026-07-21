@@ -9,7 +9,7 @@
                 <ul class="navbar-nav ms-auto lavender low-opac">
                     <li class="nav-item"><a class="nav-link button md" href="/dnd/classes">Classes</a></li>
                     <li class="nav-item"><a class="nav-link button md" href="/dnd/subclasses">Subclasses</a></li>
-                    <li class="nav-item"><a class="nav-link button md" href="#">Races</a></li>
+                    <li class="nav-item"><a class="nav-link button md" href="/dnd/races">Races</a></li>
                     <li class="nav-item"><a class="nav-link button md" href="/dnd/spells">Spells</a></li>
                     <li class="nav-item"><a class="nav-link button md" href="#">Creatures</a></li>
                 </ul>

@@ -1,11 +1,9 @@
 <?php 
 
-if (!defined("ROOT")) {
-    define("ROOT",  __DIR__ . "/..");
-}
+if (!defined("ROOT")) {define("ROOT",  __DIR__ . "/../..");}
 
-require_once ROOT . "/scripts/spell-functions.php";
-require_once ROOT . "/scripts/functions.php";
+require_once ROOT . "/scripts/php/spells.php";
+require_once ROOT . "/scripts/php/general.php";
 
 if (!empty($_GET)) {
     
@@ -17,12 +15,12 @@ if (!empty($_GET)) {
 
 $cantripLevels = [1, 5, 11, 17];
 
-require_once ROOT . "/scripts/functions.php"; ?>
+?>
 
 <div class="content-list" style="padding: 1.25rem; margin: 0;" id="spell-display" spell="<?= $spellName ?>">
     <div class="scroll">
         <div class="row spell-list align-items-center" style="padding: 0; padding-left: 1.5rem;">
-            <h1 class="xlg col"><?= $targetSpell["name"] ?></h1>
+            <h1 class="xlg col" id="spellname" data-name="<?= $targetSpell["name"] ?>"><?= $targetSpell["name"] ?></h1>
             <h3 class="md col" style="text-align: right;">Source: <?= $targetSpell["source"] ?></h3>
 
             <p class="md" style="opacity: 0.7;"><?= get_level($targetSpell["level"], $targetSpell["school"]); ?></p>

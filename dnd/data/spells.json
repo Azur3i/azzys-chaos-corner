@@ -3763,5 +3763,362 @@
             "warlock"
         ],
         "source": "Player's Handbook"
+    },
+    "oceans-call": {
+        "name": "Ocean's Call",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You summon a random sea creature at a target you can see within range. Roll 1d4 to determine what sea creature you summon, then make a ranged spell attack. If you miss, or the effects ends, the sea creature is transported back to the waters it came from with an audible splash.",
+                "type": "table",
+                "content": {
+                    "header": false,
+                    "content": [
+                        ["1d4", "Effect"],
+                        [1, "A tuna flies in from an inexplicable direction, hitting the target in the head. The target takes 1d4 @cold damage and 1d4 @bludgeoning damage."],
+                        [2, "An electric eel drops onto the target and clings around its neck. The target takes 1d8 @lightning damage."],
+                        [3, "Crabs burrow from under the ground and cling onto the targets skin, continuously pinching it. The target takes 1d4 @piercing damage on the start of each of its turns for 1 minute. As an action, an affected creature may remove the crab, ending the effect on itself."],
+                        [4, "The octopus attempts to cling onto the target's face. The target takes 1d4 @poison damage and must succeed on a STR saving throw, or be blinded until the end of its next turn."]
+                    ]
+                }
+            },
+            {
+                "desc": "This spell summons {*} sea creature(s). Should there be multiple, roll 1d4 and make a seperate attack roll for each one."
+            }
+            ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["druid", "wizard"],
+        "source": "Ani's Archive of Almost Anything"
+    },
+    "ancestral-communion": {
+        "name": "Ancestral Communion",
+        "level": 1,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You invoke the wisdom of your ancestors to gain insight into your trials. When you cast the spell, and at the start of each of your turns for the duration, you gain inspiration if you don't already have it."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid", "ranger", "sorcerer"],
+        "source": "The Crooked Moon"
+    },
+    "blood-sacrifice": {
+        "name": "Blood Sacrifice",
+        "level": 2,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a drop of your own blood"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You sacrifice a portion of your lifeforce to enhance your magical power. When you cast this spell, you take {*}d6 @necrotic damage, which cannot be reduced or prevented in any way. For the duration, whenever you cast a spell that deals damage, one target of the spell of your choice takes an extra {*}d6 damage of the spell's normal damage type (your choice if there are multiple)."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "buried-alive": {
+        "name": "Buried Alive",
+        "level": 4,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a pinch of grave dirt"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You send your enemies to their graves, even if they aren't dead yet. Choose a creature within range that you can see. The target must make a STR saving throw. On a failure, the ground opens and swallows the target, burying it up to 10ft. deep. On a success, the target is instead knocked prone, and its speed is reduced to 0 until the end of its next turn."
+            },
+            {
+                "desc": "While buried, the target has total cover, is restrained and blinded, and cannot breathe. A buried creature may use its action to dig out of the grave if it succeeds on a DC 15 Athletics (STR) check. On a success, it digs 5ft. closer to the surface. If it succeeds by 5 or more, it reaches the surface. When it does, it exits the ground prone."
+            },
+            {
+                "desc": "The target automatically succeeds on its saving throw if it's standing on any thickness of stone or metal, or at least 2in. of wood."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "call-of-the-wild": {
+        "name": "Call of the Wild",
+        "level": 4,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a bit of animal fur or hide"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You unleash a primal howl that calls lesser creatures to your command. When you cast the spell, each Beast in a 50ft. radius sphere centered on you must make a WIS saving throw. On a failure, the target is charmed by you, it is able to understand your commands, and it follows them on its turn to the best of its abilities. For the duration, as an action, you may issue new commands. On a success, the target is charmed by you until the start of your next turn, but you gain no additional ability to command it."
+            },
+            {
+                "desc": "The howl is audible to anyone within 300ft. of you."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "druid", "ranger", "warlock"],
+        "source": "The Crooked Moon"
+    },
+    "captivate-undead": {
+        "name": "Captivate Undead",
+        "level": 1,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a pinch of bone dust"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You usurp the negative energy animating {*} Undead creature(s) that you can see within range, attempting to take control. The target must make a CHA saving throw. On a failure, for the duration, the target is charmed by you while ignoring immunity to being charmed, and it becomes friendly toward you. On a success, the target gains disadvantage on the next attack roll it makes against you before the start of your next turn. If you, or any of your allies, deal damage to the target, or force it to make a saving throw, the spell ends early."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "cleric", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "chain-of-conviction": {
+        "name": "Chain of Conviction",
+        "level": 2,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "30ft.",
+        "vsm": [false, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You hurl a spectral, barbed chain at a creature you can see within range. The target must make a STR saving throw, taking {*}d6 @force damage on a failed save, or half as much on a successful one. Additionally, on a failure, the target is pulled up to 30ft. toward you, and becomes bound by the chain. While bound, the creature is tethered to you, cannot move or teleport to a space more than 30ft. away from you, and you gain advantage on attack rolls against it."
+            },
+            {
+                "desc": "A bound creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If you ever move more than 30ft. away from the bound creature, the spell ends early."
+            }
+            ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["paladin", "warlock"],
+        "source": "The Crooked Moon"
+    },
+    "chorus-of-the-lost": {
+        "name": "Chorus of the Lost",
+        "level": 2,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a silver bell worth at least 10gp"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You summon the eerie song and wailing of lost souls from a point you can see within range. Each creature in a 15ft. radius sphere centered on that point must make a WIS saving throw, taking {*}d6 @psychic damage on a failed save, or half as much on a successful one. Additionally, on a failure, the target becomes frightened of you for the duration. On a success, it instead becomes frightened of you until the end of its next turn."
+            },
+            {
+                "desc": "A frightened target may repeat the saving throw at the end of each of its turn, ending the effect on itself on a success."
+            }
+            ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "cleric", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "consuming-pyre": {
+        "name": "Consuming Pyre",
+        "level": 4,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You cause a creature that you can see within range to burst into consuming, relentless flames. The target must make a DEX saving throw, taking 2d8 @fire damage and either 2d8 @necrotic or @radiant damage, your choice, on a failed save, or half as much on a successful one."
+            },
+            {
+                "desc": "Additionally, on a failure, the flames linger. While they do, the target takes the damage again at the start of each of its turns. The target, or another creature within reach of it, may use its action to allow the target to repeat the saving throw, ending the effect on itself on a success."
+            },
+            {
+                "desc": "A creature killed by the damage from this spell is reduced to ash, along with any nonmagical equipment it was wearing or carrying."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["druid", "paladin", "warlock"],
+        "source": "The Crooked Moon"
+    },
+    "creeping-rot": {
+        "name": "Creeping Rot",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You send tendrils of black and gray rot toward a target that you can see within range. Tendrils then leap from that target to up to {*} other targets within 30ft. of it. A target may be a creature, or a nonmagical plant that is not a creature, such as a tree or shrub. A target may be targeted by one tendril each."
+            },
+            {
+                "desc": "A creature hit by a tendril must succeed on a CON saving throw, or take 3d8 @necrotic damage and be poisoned for the duration. A creature poisoned in this way takes 1d8 @necrotic damage at the start of each of its turns. A poisoned creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            },
+            {
+                "desc": "A Plant creature automatically fails the saving throw from this spell. Nonmagical plants that are hit simply wither and die."
+            }
+            ],
+        "levels": [3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["druid", "ranger", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "crimson-harvest": {
+        "name": "Crimson Harvest",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a vial of blood"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A wave of blood sweeps out from you. Each creature of your choice within 15ft. of you that is not behind total cover must make a DEX saving throw, taking {*}d10 @necrotic damage on a failed save, or half as much on a successful one."
+            },
+            {
+                "desc": "If you damage at least one Small or larger creature with this spell, a creature of your choice that you can see within the area regains a number of hitpoints equal to half the damage roll."
+            }
+            ],
+        "levels": [3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "crooked-ward": {
+        "name": "Crooked Ward",
+        "level": 3,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a five-pointed wicker star"],
+        "duration": {
+            "time": "{*}"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch an immobile surface and mark a symbol that causes agony in twisted creatures. An invisible, 30ft. radius sphere springs out from the point you touch. Every aberration, fey, fiend, monstrosity, or undead in the sphere gains disadvantage on ability checks and attack rolls. Whenever an affected creature enters the sphere for the the first time on a turn or starts its turn there, it must succeed on a WIS saving throw or be frightened of you until the start of its next turn."
+            }
+            ],
+        "levels": ["Concentration, up to 10 minutes", "Concentration, up to 1 hour", "Concentration, up to 8 hours", "24 hours", "24 hours", "24 hours", "24 hours"],
+        
+        "lists": ["druid", "ranger", "warlock", "wizard"],
+        "source": "The Crooked Moon"
     }
 }

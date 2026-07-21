@@ -1,5 +1,7 @@
 <?php
 
+if (!defined("ROOT")) {define("ROOT", "../../");}
+
 function renderText($str) {
     $str = renderSpells($str);
     $str = renderActions($str);
@@ -31,7 +33,7 @@ function renderActions($str) {
 }
 
 function renderSpells($str) {
-    $spells = json_decode(file_get_contents("../dnd/data/spells.json"), true);
+    $spells = json_decode(file_get_contents(ROOT . "/dnd/data/spells.json"), true);
 
     foreach ($spells as $id => $spell) {
         $target = strtolower($spell["name"]);
@@ -41,7 +43,7 @@ function renderSpells($str) {
 }
 
 function fetchSubclasses($class) {
-    $subclasses = json_decode(file_get_contents("../dnd/data/subclasses.json"), true);
+    $subclasses = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
     $result = [];
     foreach ($subclasses as $subclass) {
         if ($subclass["mainClass"] === $class) {
@@ -94,7 +96,7 @@ function renderAbility($ability, $z=0, $cls=null) {
         <?php endif;
 
         if (str_contains($ability["type"], "subclass")):
-            $sbclss = json_decode(file_get_contents("../dnd/data/subclasses.json"), true);
+            $sbclss = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
             $i = 0; ?>
             <div class='accordion' id="subclass-list">
                 <?php foreach ($sbclss[$cls] as $id => $sbcls): ?>
@@ -138,4 +140,15 @@ function renderAbility($ability, $z=0, $cls=null) {
             </div>
         <?php endif;
     endif;
-} ?>
+}
+
+function startsWith($str, $array) {
+    foreach ($array as $prefix) {
+        if (str_starts_with($str, $prefix)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+?>

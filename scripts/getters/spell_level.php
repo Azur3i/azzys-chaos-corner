@@ -1,6 +1,6 @@
 <?php
-define("ROOT",  __DIR__ . "/..");
-require_once ROOT . "/scripts/functions.php";
+define("ROOT",  __DIR__ . "/../..");
+require_once ROOT . "/scripts/php/general.php";
 
 $spells = json_decode(file_get_contents(ROOT . "/dnd/data/spells.json"), true);
 

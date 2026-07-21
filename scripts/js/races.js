@@ -1,9 +1,11 @@
-function loadSpell(target) {
+function loadRace(target) {
     $.get(
-        "/scripts/construct-spell.php", {target: target},
+        "/scripts/constructors/race.php", {target: target},
         function(response) {
-            $("#spellbox").html(response);
+            $("#racebox").html(response);
             updateButton(target);
+
+            document.title = $("#racename").data("name") + " - Azzy's Chaos Corner"
         }
     )
 }
@@ -14,48 +16,24 @@ function updateButton(button) {
 }
 
 $(function () {
-    let spell = location.hash.substring(1);
+    let race = location.hash.substring(1);
 
-    if (spell) {
-        loadSpell(spell);
+    if (race) {
+        loadRace(race);
     } else if (button) {
-        updateButton($(`#spell-display`).attr("spell"));
+        updateButton($(`#race-display`).attr("race"));
     }
 })
 
 $(".button-list").click(function (e) {
     e.preventDefault();
 
-    let spell = $(this).attr("id");
-    history.pushState(null, "", "#" + spell);
+    let race = $(this).attr("id");
+    history.pushState(null, "", "#" + race);
 
-    loadSpell(spell);
+    loadRace(race);
 });
 
-$("#spellbox").on("click", ".button-lvl", function () {
-    let level = $(this).attr("value");
-    let spell = $("#spell-display").attr("spell");
-
-    $(".button-lvl").removeClass("active");
-    $(this).addClass("active");
-
-    $.post(
-        "/scripts/retrieve_spell_level.php", {
-            level: level,
-            spell: spell
-        },
-        function(response) {
-            if (Array.isArray(response)) {
-                response.forEach((param, index) => {
-                    console.log(param);
-                    $(`.level-replace-${index}`).html(param);
-                })
-            } else {
-                $(".level-replace-0").text(response);
-            }
-        }, "json"
-    )
-});
 
 function filterSpell () {
     let search = $("#spell-searchbar").val().toLowerCase();
@@ -65,32 +43,46 @@ function filterSpell () {
         let prop = [
             $(this).data("level").toString(),
             $(this).data("school").toLowerCase(),
+            $(this).data("source"),
             ...$(this).data("lists").toLowerCase().split(" ")
         ];
         let hidden = false;
 
-        let el = [
-            ".button-toggle-2.toggle-school",
-            ".button-toggle-2.toggle-classlist"
+        // filter options that can be filtered AND/OR
+        let elAndOr = [
+            ".button-toggle-2.toggle-school"
         ];
-        el.forEach(element => {
-            let [wl, bl] = getFilters(element);
-            let [operand] = getLogicOp();
 
-            if (element != ".button-toggle-2.toggle-school") {
-                if (operand == "and") {
-                    hidden = applyAnd(prop, wl, bl, operand, hidden);
-                } else if (operand == "or") {
-                    hidden = applyOr(prop, wl, bl, operand, hidden);
-                }
-            } else {
+        let [operand] = getLogicOp();
+
+        elAndOr.forEach(element => {
+            let [wl, bl] = getFilters(element);
+
+            if (operand == "and") {
+                hidden = applyAnd(prop, wl, bl, operand, hidden);
+            } else if (operand == "or") {
                 hidden = applyOr(prop, wl, bl, operand, hidden);
             }
-
-            if (!name.includes(search)) {
-                hidden = true;
-            }
         });
+
+        // filter options that can only be filtered OR; 
+        // filtering AND would be redundant as these can only have 1 value
+        let elOr = [
+            ".button-toggle-2.toggle-classlist",
+            ".button-toggle-2.toggle-level",
+            ".button-toggle-2.toggle-source"
+        ]
+
+        elOr.forEach(element => {
+            let [wl, bl] = getFilters(element);
+
+            hidden = applyOr(prop, wl, bl, operand, hidden);
+        });
+
+        // filter searchbar contents regardless of other active filters
+        if (!name.includes(search)) {
+            hidden = true;
+        }
 
         $(this).toggleClass("d-none", hidden);
     });
@@ -130,6 +122,24 @@ function applyOr (prop, wl, bl, operand, hidden) {
     }
 
     return hidden;
+}
+
+function getFilters (el) {
+    let pos = [];
+    let neg = [];
+    $(el).each(function () {
+        if ($(this).hasClass("pos")) {
+            pos.push($(this).attr("id"));
+        } else if ($(this).hasClass("neg")) {
+            neg.push($(this).attr("id"));
+        }
+    });
+
+    return [pos, neg];
+}
+
+function getLogicOp () {
+    return [$(".classlist-andor.active").data("id")];
 }
 
 $("#spell-searchbar").on("input", filterSpell);
@@ -185,20 +195,6 @@ $(".button-toggle-2").on({
     }
 });
 
-function getFilters(el) {
-    let pos = [];
-    let neg = [];
-    $(el).each(function () {
-        if ($(this).hasClass("pos")) {
-            pos.push($(this).attr("id"));
-        } else if ($(this).hasClass("neg")) {
-            neg.push($(this).attr("id"));
-        }
-    });
-
-    return [pos, neg];
-}
-
 $(document).on("keydown", function(e) {
     if (e.key === "ArrowDown") {
         e.preventDefault();
@@ -224,10 +220,6 @@ $(".classlist-andor").click(function () {
 
     filterSpell();
 });
-
-function getLogicOp() {
-    return [$(".classlist-andor.active").data("id")];
-}
 
 $("#clear-button").click(function () {
     $("#spell-searchbar").val("");

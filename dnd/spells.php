@@ -3,7 +3,7 @@
 include ROOT . "/tpl/header.php"; 
 include ROOT . "/tpl/header-dnd.php";
 
-require_once ROOT . "/scripts/spell-functions.php";
+require_once ROOT . "/scripts/php/spells.php";
 
 $spells = json_decode(file_get_contents(ROOT . "/dnd/data/spells.json"), true);
 
@@ -18,14 +18,22 @@ $spellName = array_key_first($spells);
 $targetSpell = $spells[$spellName];
 
 $schools = [];
+$sources = [];
 foreach ($spells as $spell) {
     if (!in_array($spell["school"], $schools)) {
         $schools[] = $spell["school"];
     }
-    uasort($schools, function ($a, $b) {
+    if (!in_array($spell["source"], $sources)) {
+        $sources[] = $spell["source"];
+    }
+}
+
+uasort($schools, function ($a, $b) {
     return strcmp($a, $b);
 });
-}
+uasort($sources, function ($a, $b) {
+    return strcmp($a, $b);
+});
 
 // --
 
@@ -36,6 +44,12 @@ foreach ($classes as $x => $class) {
         $casters[$x] = $class;
     }
 }
+
+// --
+
+$levels = ["Cantrip", 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// --
 
 ?>
 
@@ -60,11 +74,14 @@ foreach ($classes as $x => $class) {
                         <div class="row" style="margin: 0;">
                             <p class="md title">Filters:</p>
                         </div>
+
                         <hr >
+
                         <div class="row" style="margin: 0;">
+
                             <div class="col row pink justify-content-center">
                                 <div class="d-flex row justify-content-center align-items-center" style="margin: 0;">
-                                    <p class="md title align-items-center col-auto" style="height: 3rem;">Classlists</p>
+                                    <p class="md title align-items-center col-auto" style="height: 3rem;">Classes</p>
                                     <div class="col-auto d-flex">
                                         <a class="button-switch sm andor classlist-andor active" data-id="and">AND</a>
                                         <a class="button-switch sm andor classlist-andor" data-id="or">OR</a>
@@ -81,6 +98,33 @@ foreach ($classes as $x => $class) {
                                 <?php endforeach; ?>
                             </div>
                         </div>
+
+                        <hr >
+
+                        <div class="row justify-content-center" style="margin: 0;">
+                            <div class="col row pink justify-content-center">
+                                <div class="d-flex row justify-content-center align-items-center" style="margin: 0;">
+                                    <p class="md title align-items-center col-auto" style="height: 3rem;">Levels</p>
+                                </div>
+                                <?php foreach ($levels as $i => $level): ?>
+                                    <a class="button-toggle-2 col-auto spell-toggle toggle-level sm justify-content-center" style="padding: 0.5rem 1rem;" id="<?= $i ?>"><?= $level ?></a>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        
+                        <hr >
+
+                        <div class="row justify-content-center" style="margin: 0;">
+                            <div class="col row pink justify-content-center">
+                                <div class="d-flex row justify-content-center align-items-center" style="margin: 0;">
+                                    <p class="md title align-items-center col-auto" style="height: 3rem;">Sources</p>
+                                </div>
+                                <?php foreach ($sources as $name => $source): ?>
+                                    <a class="button-toggle-2 col-11 spell-toggle toggle-source toggle sm" id="<?= $source ?>" data-id="source"><?= $source ?></a>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+
                         <hr >
                     </div>
                     
@@ -113,12 +157,14 @@ foreach ($classes as $x => $class) {
 
                 <!-- spell display -->
                 <div id="spellbox" class="col-md-12 col-lg-8" style="padding-right: 0;">
-                    <?php include ROOT . "/scripts/construct-spell.php" ?>
+                    <?php include ROOT . "/scripts/constructors/spell.php" ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<script src="/scripts/spells.js"></script>
+<div id="title" data-id="Spells - "></div>
+
+<script src="/scripts/js/spells.js"></script>
 <?php include ROOT . "/tpl/footer.php"; ?>

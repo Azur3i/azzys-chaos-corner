@@ -1,6 +1,6 @@
 <?php 
-define("ROOT",  __DIR__ . "/..");
-require_once(ROOT . "/scripts/functions.php");
+define("ROOT",  __DIR__ . "/../..");
+require_once(ROOT . "/scripts/php/general.php");
 
 $subclasses = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
 $cls = $_POST["cls"];

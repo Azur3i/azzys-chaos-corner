@@ -3,7 +3,7 @@ $subclasses = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"),
 $subclass = $target;
 $target = $subclasses[$mainClass][$target];
 
-require_once ROOT . "/scripts/functions.php";
+require_once ROOT . "/scripts/php/general.php";
 
 $subclassTypes = [
     "artificer" => "Artificer Specialism",
@@ -42,13 +42,13 @@ $subclassTypes = [
 
     <p class="md title"><?= implode('</p><br ><p class="md title">', renderText($target["desc"])) ?></p>
     
-    <?php include ROOT . "/scripts/construct-spellslot-table.php"; ?>
+    <?php include ROOT . "/scripts/constructors/spellslot-table.php"; ?>
 
     <?php foreach ($target["levels"] as $level => $ability): ?>
         <hr >
         <div class="row mx-auto justify-content-center">
             <div class="col-10">
-                <?php include ROOT . "/scripts/construct-level.php"; ?>
+                <?php include ROOT . "/scripts/constructors/level.php"; ?>
             </div>
         </div>
     <?php endforeach; ?>

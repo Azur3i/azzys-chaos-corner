@@ -5,9 +5,8 @@ RewriteRule ^dnd/?$ index-dnd.php/ [L]
 RewriteRule ^dnd/classes/?$ dnd/classes.php/ [L]
 RewriteRule ^dnd/subclasses?$ dnd/subclasses.php/ [L]
 
-RewriteRule ^dnd/spells-([a-z-]+)?$ dnd/spells.php?target=$1/ [L]
 RewriteRule ^dnd/spells?$ dnd/spells.php/ [L]
-
+RewriteRule ^dnd/races?$ dnd/races.php/ [L]
 
 # subclass.php rewrite
 RewriteRule ^dnd/([a-z-]+)/([a-z-]+)/?$ dnd/subclass.php?class=$1&subclass=$2 [L]

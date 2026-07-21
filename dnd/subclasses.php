@@ -3,7 +3,7 @@
 define("ROOT",  __DIR__ . "/..");
 $classes = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
 
-require_once ROOT . "/scripts/functions.php";
+require_once ROOT . "/scripts/php/general.php";
 
 ?>
 
@@ -63,5 +63,7 @@ require_once ROOT . "/scripts/functions.php";
         </div>
     </div>
 </div>
+
+<div id="title" data-id="Subclasses - "></div>
 
 <?php include ROOT . "/tpl/footer.php"; ?>

@@ -1,6 +1,6 @@
 <?php 
 $abilities = $target["levels"][$level]; 
-require_once ROOT . "/scripts/functions.php";
+require_once ROOT . "/scripts/php/general.php";
 ?>
 
 <h2 class="title lg">Level <?= $level ?></h2>
