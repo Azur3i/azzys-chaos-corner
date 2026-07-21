@@ -54,22 +54,31 @@ function fetchSubclasses($class) {
 }
 
 function renderAbility($ability, $z=0, $cls=null) {
+    // quote
     if (!empty($ability["quote"])) {
         echo '<p class="md"><i>' . $ability["quote"] . '</i><p>';
     }
 
+    // name and description
     if (!empty($ability["name"]) || !empty($ability["desc"])) {
         echo '<p class="md">';
         if (!empty($ability["name"]) && $z !== 0) {
             echo '<b>' . $ability["name"] . '. </b>';
         }
         if (!empty($ability["desc"])) {
-            echo renderText($ability["desc"]);
+            if (is_array($ability["desc"])) {
+                echo implode('</p><p class="md" style="margin-left: 2rem;">', renderText($ability["desc"]));
+            } else {
+                echo renderText($ability["desc"]);
+            }
         }
         echo '</p>';
     }
 
+    
     if (!empty($ability["type"])):
+
+        // list
         if (str_contains($ability["type"], "list")): ?>
             <ul>
                 <?php foreach ($ability["content"] as $newAbility): ?>
@@ -77,7 +86,8 @@ function renderAbility($ability, $z=0, $cls=null) {
                 <?php endforeach; ?>
             </ul>
         <?php endif;
-            
+        
+        // table
         if (str_contains($ability["type"], "table")):
             $x = $ability["content"]["header"] ? " header" : ""; ?>
             <table class='ability<?= $x ?>'>
@@ -95,6 +105,7 @@ function renderAbility($ability, $z=0, $cls=null) {
             </table>
         <?php endif;
 
+        // subclass
         if (str_contains($ability["type"], "subclass")):
             $sbclss = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
             $i = 0; ?>
@@ -134,6 +145,7 @@ function renderAbility($ability, $z=0, $cls=null) {
             </div>
         <?php endif;
 
+        // subclass feature
         if (str_contains($ability["type"], "sbcls")): ?>
             <div class='accordion subclass-select hide'>
 
