@@ -1,4 +1,97 @@
 {
+    "anima": {
+        "name": "Anima",
+        "desc": ["Magically awakened or fragments of lingering emotion, “anima” is considered an umbrella term for those wayward spirits that weren't able to make their final departure from the Material Plain peacefully; that final fragment of their being determines what they become in their life's encore. There's nothing they want more than to move on from this life, even if it means tearing this world apart."],
+        "asi": {
+            "CON": 2,
+            "total": 2
+        },
+        "age": "Anima are ambiguously alive. They show no signs of aging, and they are immune to any effects that would age them. You physically resemble your form when you died. You can be freshly reanimated or thousands of years old.",
+        "alignment": "Anima tend toward neutrality, but always contain a sliver of memories of their previous life.",
+        "creatureType": "Undead",
+        "size": "Your body is translucent, but any close observer can easily make out your race in life. Your size is Small or Medium, depending on who you were.",
+        "speed": 30,
+        "languages": "Common and any additional languages you knew in life.",
+        "abilities": [
+            {
+                "name": "Incorporealis",
+                "desc": "Whenever an attack or spell would hit you, you may use your reaction to have the attack pass through you completely. The damage of the attack or spell becomes 1d10 @necrotic damage, instead of the damage it would normally do. You may use this trait once every long rest."
+            },
+            {
+                "name": "Genus",
+                "desc": "Your story in life determines who you are in death. Your visible body always resembles a playable race, but you don't gain any of its benefits. Choose one of the subraces below."
+            }
+        ],
+        "options": {
+            "umbra": {
+                "name": "Umbra",
+                "desc": "A light blue, translucent spirit most often found in abandoned houses. It is a spirit of regret most often sprouting from peaceful passings. Hundreds or thousands of years of natural energy accumulating around a faded mind creates what is known to man as an “umbra”, retaining but a sliver of their memories in life, cursed to forever wander the world, remembering naught but their remorse.",
+                "asi": {
+                    "WIS": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Ingredior",
+                        "desc": "You may move inside the space of another creature, and end your turn there. If you end your turn in the same space as a creature, unless it is an Undead, you and the creature both take 1d10 @psychic damage. You cannot use this trait if you are carrying anything that is not incorporeal."
+                    },
+                    {
+                        "name": "Nulla Forma",
+                        "desc": "You are able to move through walls and objects made of non-magical wood, stone and metal, treating it like difficult terrain. You may do this a number of times equal to your CON modifier, and only for a maximum distance of 5ft. multiplied by half your CON modifier, rounded down, each time. If you end your turn inside a wall or object, you take 1d10 @force damage, and are shunted out towards the side of the wall you entered it from. You cannot use this trait if you are carrying anything that is not incorporeal. Any expended uses of the nulla forma trait regenerate after finishing a long rest."
+                    },
+                    {
+                        "name": "Aetherius",
+                        "desc": "As a bonus action, you may make any one object you touch incorporeal. For 10 minutes, the affected object becomes translucent, signaling it is now incorporeal. For the duration, no creature except yourself or other incorporeal beings can affect or be affected by the incorporeal object. The object can pass through walls only if you are holding or touching it. You may use this trait once per long rest."
+                    }
+                ]
+            },
+            "larua": {
+                "name": "Larua",
+                "desc": "Black, putrid ghosts that border on monstrosity, the larua are spirits of vengeance, seeking revenge against a cause unbeknownst to even themselves. Some call them corrupted umbras, the regret of ones passing burning and flaring into deep-rooted hatred. They are harbingers of death and heralders of the end, unwilling and unable to rest until they have avenged that they held dear once, in life.",
+                "asi": {
+                    "DEX": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Dominus Noctus",
+                        "desc": "You are a master of blending into the shadows. You gain proficiency in the Stealth (DEX) skill. Additionally, you gain advantage on Stealth (DEX) rolls at night."
+                    },
+                    {
+                        "name": "Perimo",
+                        "desc": "Your mere presence gives other creatures goushonkhebumps. Whenever a creature other than you within 5ft. of you is hit with a melee attack, the creature takes an additional 1d4 @psychic damage. This increases to 1d6 at 5th level, 1d8 at 9th level, 1d10 at 13th level and 1d12 at 17th level."
+                    },
+                    {
+                        "name": "Pestis",
+                        "desc": "You gain resistance against @necrotic damage."
+                    }
+                ]
+            },
+            "phantasma": {
+                "name": "Phantasma",
+                "desc": "An age-old spirit that has lost its original form after many years of wandering. Sometimes called carrion ghosts, or parasite spirits, they seek refuge in corpses of the freshly deceased, breathing new “life” into them. They bond with this new body and use it as their own, but the decay doesn't stop; a phantasma's greatest struggle is to maintain its body. Because as the decay spreads and the body falls apart, the phantasma is ripped apart as well.",
+                "asi": {
+                    "INT": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Vita Contractus",
+                        "desc": "You inhabit the dead body of a recently deceased humanoid. In order to maintain your body, you must spend at least 1 hour per day outside of rest repairing decay, or suffer 1 level of exhaustion. Additionally, you may add +1 per level of exhaustion to any Intimidation (CHA) check."
+                    },
+                    {
+                        "name": "Auctoritas",
+                        "desc": ["Although your spirit is bound to your host body, you can temporarily leave it. Your spirit can survive for 10 minutes outside your host body, up to 30ft. away. If you attempt to move further than 30ft. away from your host body, you will be blocked, as if by an invisible and impenetrable wall. During this time, you are deafened and incorporeal; this means you cannot affect or be affected by creatures. Your spirit appears as a small, light green orb that sheds dim light in a 5ft. radius. You can move through gaps as small as 1ft. without squeezing.", "Additionally, as an action, you may attempt to possess one living creature (unless it is an Undead) you can see that is no more than 30ft. away from your host body. It must succeed on a DC 10 + CON + proficiency CON saving throw, or be possessed for 1 minute. During combat, any unwilling creature you are possessing may repeat the saving throw at the start of each of their turns, ending the possessions on itself on a success. When the possession ends, the creature previously possessed is knocked prone, and you are instantaneously returned to your host body.", "If you successfully possess a creature, the creature is incapacitated, and cannot move or speak, but is not deprived of awareness. You have full control over the creature's body and are able to perceive everything through its senses. Starting at 5th level, you also gain access to its memories, as if the creature is affected by a successful @detect thoughts spell. You keep your INT, WIS, CHA scores, personality and alignment. All remaining statistics are replaced by the creature's. The creature's eyes glow a faint green color. You may make a melee or ranged weapon attack the creature would be able to make, on your own turn. You may only take one action this way, and effects that give you or the possessed creature extra actions on its turn do not work. Additionally, as a bonus action, you may inflict pain upon the creature's mind. It must succeed on a DC 10 + CON + proficiency CHA saving throw or take 1d8 @psychic damage, increased to 2d8 on 6th level, 3d8 on 11th level and 4d8 on 16th level.", "If you force the creature to move more than 30ft. away from your host body while you are still possessing it, or if the creature is knocked unconscious, your spirit will be ripped out, dealing 1d10 @force damage to both you and the creature. If the creature takes damage and is reduced to 0 hitpoints, your spirit will be ripped out and you will take damage equal to 1d10 + the remaining damage @force damage. (Example: if a creature has 2 hitpoints and takes 4 damage while you are possessing it, you take 1d10 + 2 @force damage).", "You may use this trait once per long rest."]
+                    },
+                    {
+                        "name": "Mors in Vita",
+                        "desc": "You gain resistance against @poison damage."
+                    }
+                ]
+            }
+        },
+        "source": "Age of the Clawed Crown"
+    },
     "catfolk": {
         "name": "Catfolk",
         "desc": ["The mysterious catfolk are an all-female half cat hybrid people that dwell in secluded places. Having distant ancestors in the fey and beast corners, as well as an ancient, long-lost civilization, they distinguish themselves with their short builds and feline features. Their villages are spread out across any form of terrain, albeit well-hidden no matter what tribe you come across. In fact, the majority of the catfolk are secluded in such a fashion that often they have no contact with the outside world. The catfolk are usually nothing more than myths for anyone who comes across them, and they're often mistaken as fey or Tabaxi. Those who do find the catfolk villages inside the foliage of the feywild will most likely meet their end by sheer savagery."],
