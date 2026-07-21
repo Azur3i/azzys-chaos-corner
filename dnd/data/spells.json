@@ -2720,7 +2720,7 @@
         },
         "desc": [
             {
-                "desc": "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with INT scores of at least 1 to understand the meaning of your message."
+                "desc": "You send a short message of 25 words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with INT scores of at least 1 to understand the meaning of your message."
             },
             {
                 "desc": "You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive."
@@ -4120,5 +4120,38 @@
         
         "lists": ["druid", "ranger", "warlock", "wizard"],
         "source": "The Crooked Moon"
+    },
+    "call-lightning": {
+        "name": "Call Lightning",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "A storm cloud, shaped like a 10ft. tall, 60ft. radius cylinder, appears centered on a point you can see within range directly above you. If you cannot see a point in the air where the storm cloud could appear (eg. you are in a room that cannot accomodate the cloud), the spell fails."
+            },
+            {
+                "desc": "When you cast the spell, choose a point you can see under the cloud. A bolt of lightning flashes down from the cloud to that point. Each creature within 5ft. of that point must make a DEX saving throw, taking {*}d10 @lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you may use your action to call down lightning in this way again, targeting any point underneath the cloud."
+            },
+            {
+                "desc": "If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["druid"],
+        "source": "Player's Handbook"
     }
 }
