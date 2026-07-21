@@ -4,7 +4,7 @@
         "desc": ["The mysterious catfolk are an all-female half cat hybrid people that dwell in secluded places. Having distant ancestors in the fey and beast corners, as well as an ancient, long-lost civilization, they distinguish themselves with their short builds and feline features. Their villages are spread out across any form of terrain, albeit well-hidden no matter what tribe you come across. In fact, the majority of the catfolk are secluded in such a fashion that often they have no contact with the outside world. The catfolk are usually nothing more than myths for anyone who comes across them, and they're often mistaken as fey or Tabaxi. Those who do find the catfolk villages inside the foliage of the feywild will most likely meet their end by sheer savagery."],
         "asi": {
             "STR": 1,
-            "CON": 1,
+            "CON": 2,
             "INT": -2,
             "WIS": 2,
             "total": 2
@@ -23,6 +23,37 @@
             {
                 "name": "Pack Tactics",
                 "desc": "You may add +2 to any attack roll whenever there is an ally within 5ft. of the target, and the ally is not incapacitated. This increases to +3 from 10th level."
+            }
+        ],
+        "options": {},
+        "source": "Age of the Clawed Crown"
+    },
+    "cervitaur": {
+        "name": "Cervitaur",
+        "desc": ["A mystical sister family of the more well-known centaurs, cervitaurs are far descendants of dream spirits from the feywild. The four legs of a fawn adorned by a humanoid torso make for an agile and fast-witted creature that finds its home in the many types of heavy foliage. They trek around the feywild in their mostly solitary life. Although shy and easily scared, they are true friends of nature, nourishing their home with their dreamy magic."],
+        "asi": {
+            "DEX": 1,
+            "WIS": 2,
+            "total": 3
+        },
+        "age": "Cervitaurs mature and age at about the same rate as humans, reaching adulthood at around 18 years old, and living to around 80 years on average.",
+        "alignment": "Cervitaurs see themselves as a part of the environment. As nature adapts, so will they, and thus range from lawful to chaotic and from good to evil, based on the environment they grew up in.",
+        "creatureType": "Fey",
+        "size": "Your size is Medium.",
+        "speed": 40,
+        "languages": "You can speak, read and write Common and Sylvan.",
+        "abilities": [
+            {
+                "name": "Dream Spirit",
+                "desc": "You have a deep connection with the Plane of Dreams and are able to use its soothing power to put creatures to rest. As an action, you may point at a creature no more than 90ft. away from you. That creature falls into a magical slumber, as if affected by the @sleep spell. You may affect any creature with a CR equal to your level or lower. If the creature awakens by any means, the creature suffers 2d4 @psychic damage as a result. This increases to 2d6 at level 5, 2d8 at level 9, 2d10 at level 13 and 2d12 at level 17. You may use this trait a number of times equal to your WIS every long rest. Additionally, at the start of each of your turns, you recover 1 hitpoint for every sleeping creature within 30ft. of you."
+            },
+            {
+                "name": "Fawnish Build",
+                "desc": "Your skittish nature and often lush environments has evolved you to be more agile. The distance you can jump in both long jumps and high jumps is doubled for you, and jumping from a standing position does not give you a penalty. Additionally, any climb that requires hands and feet is especially difficult for you because of your deer-like legs. Climbing costs 5ft. per ft. of movement climbed, instead of the usual 1ft. per ft."
+            },
+            {
+                "name": "Natural Camouflage",
+                "desc": "You gain proficiency in the Stealth (DEX) skill. Additionally, you gain proficiency in one of the following skills: Nature (WIS) or Survival (WIS)."
             }
         ],
         "options": {},
