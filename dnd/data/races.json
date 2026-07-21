@@ -717,5 +717,68 @@
         ],
         "options": {},
         "source": "Player's Handbook"
+    },
+    "half-dragon": {
+        "name": "Half-dragon",
+        "desc": ["Half-dragons are the result when a human woman and a polymorphed dragon get a child together. Despite having similar ancestry, half-dragons differ from dragonborn in that they possess key draconic traits dragonborn are often missing; a tail, wings, and overflowing draconic energy. Despite often have traits such as horns and more claw-shaped hands and feet, they still retain a fraction of the smooth skin of their mother. Excruciatingly long-lived, and torn in both mind and body between their draconic and human natures, their bodies aren't built to withstand the power they possess, with dangerous results..."],
+        "asi": {
+            "CHA": 2,
+            "CON": 1,
+            "total": 3
+        },
+        "age": "Blessed, and at the same time cursed with the longevity and borderline immortality a dragon enjoys, half-dragons mature and age extremely slowly, with hundreds of years between your birth, adulthood and death. You reach adulthood, both physically and mentally, after around 200 years, and can live tens of thousands of years. Sadly, most half-dragons don't even make it to adulthood, due to the strains of nigh immortality.",
+        "alignment": "Half-dragons are most often raised by their human mothers, and adapt to their alignment. Although some are pulled towards their draconic nature, most half-dragons tend to choose their own path.",
+        "creatureType": "Dragon",
+        "size": "Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common and Draconic.",
+        "abilities": [
+            {
+                "name": "Ancestral Knowledge",
+                "desc": "You gain proficiency in the Arcana (INT) skill. Additionally, you gain advantage to any History (INT) check made for dragon-related objects or subjects."
+            },
+            {
+                "name": "Draconic Offspring",
+                "desc": "You are a child of a dragon and a human. Your father was a type of dragon of your choice. You are resistant to a single type of damage associated with your dragon parent (e.g. if your father was a white dragon, you are resistant to @cold damage; if your father was a deep (purple) dragon, you are resistant to @psychic damage, etc.). This trait cannot give resistance to @bludgeoning, @piercing, @slashing or @force damage. "
+            },
+            {
+                "name": "Dragon Traits",
+                "desc": ["You have a long tail extruding from behind you. You may attempt to grapple a creature with your tail. If you do, roll with disadvantage. Additionally, you can hold light objects with your tail (like a book or a torch). You cannot attack with your tail.", "You also have small wings attached to the lower half of your back. In your unawakened form, you cannot use them to fly, and they don't get in the way of armor."]
+            },
+            {
+                "name": "Awakening",
+                "desc": "A dragon is a creature of might and power, resulting in conflicting natures inside your own body. Half-dragons often struggle to contain the raw, primal energy swirling in their veins. If you fall below half your maximum hitpoints or lower, you lose control and temporarily overflow your body with raw draconic energy. Your awakening lasts for 1 hour. After your awakening ends, you gain 1 level of exhaustion. You can only awaken once every long rest. You:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "Gain much bigger wings. You gain a flying speed of 60ft., but gain disadvantage on attack rolls if you attempt to attack while flying. If your armor is not made to accomodate wings, it will break."
+                    },
+                    {
+                        "desc": "Gain immunity to the type associated to you by your Draconic Offspring trait, instead of the resistance you normally have."
+                    },
+                    {
+                        "desc": "Gain advantage on CON and CHA checks and saving throws, but disadvantage on DEX and WIS checks and saving throws."
+                    },
+                    {
+                        "desc": "Lose any proficiency bonuses on attack rolls."
+                    },
+                    {
+                        "desc": "Lose hitpoints at the start of your combat turns. At the start of your turn, roll 1d2. On a 1, you suffer damage equal to half your level, rounded down. On a 2, you suffer damage equal to a quarter of your level, rounded down. The minimum damage you can suffer by this trait is 1. Outside of combat, you do not lose hitpoints."
+                    },
+                    {
+                        "desc": "No longer have disadvantage while trying to grapple a creature with your tail."
+                    },
+                    {
+                        "desc": "Gain improved darkvision. The range of your darkvision is extended to 120ft., and you gain 10ft. blindsight."
+                    }
+                ]
+            },
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            }
+        ],
+        "options": {},
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     }
 }
