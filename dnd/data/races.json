@@ -63,7 +63,7 @@
                     },
                     {
                         "name": "Pestis",
-                        "desc": "You gain resistance against @necrotic damage."
+                        "desc": "You gain resistance to @necrotic damage."
                     }
                 ]
             },
@@ -85,7 +85,7 @@
                     },
                     {
                         "name": "Mors in Vita",
-                        "desc": "You gain resistance against @poison damage."
+                        "desc": "You gain resistance to @poison damage."
                     }
                 ]
             }
@@ -202,7 +202,7 @@
     },
     "dwarf": {
         "name": "Dwarf",
-        "desc": ["Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs – these common threads unite all dwarves."],
+        "desc": ["Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs - these common threads unite all dwarves."],
         "asi": {
             "CON": 2,
             "total": 2
@@ -220,7 +220,7 @@
             },
             {
                 "name": "Dwarven Resilience",
-                "desc": "You gain advantage on saving throws against poison, and you gain resistance against @poison damage."
+                "desc": "You gain advantage on saving throws against poison, and you gain resistance to @poison damage."
             },
             {
                 "name": "Dwarven Combat Training",
@@ -264,6 +264,276 @@
                         "desc": "You gain proficiency with light and medium armor."
                     }
                 ]
+            }
+        },
+        "source": "Player's Handbook"
+    },
+    "elf": {
+        "name": "Elf",
+        "desc": ["Elves are a magical people of otherworldly grace, living in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry."],
+        "asi": {
+            "DEX": 2,
+            "total": 2
+        },
+        "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+        "alignment": "Elves love freedom, variety, and self-expression, so they lean strongly towards the gentler aspects of chaos. They value and protect others' freedom as well as their own, and are good more often than not. Drow are an exception; their exile into the Underdark has made them vicious and dangerous. Drow are more often evil than not.",
+        "creatureType": "Humanoid",
+        "size": "Elves range from under 5 to over 6ft. tall and have slender builds. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common and Elvish.",
+        "abilities": [
+            {
+                "name": "Darkvision",
+                "desc": "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Fey Ancestry",
+                "desc": "You gain advantage on saving throws against being charmed, and magic cannot put you to sleep."
+            },
+            {
+                "name": "Trance",
+                "desc": "Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours each day. The Common word for this meditation is “trance”. While meditating, you dream after a fashion; such dreams are actually mental exercises that have become reflexive after years of practice. After resting in this way, you gain the same benefit a human would from 8 hours of sleep."
+            },
+            {
+                "name": "Keen Senses",
+                "desc": "You gain proficiency in the Perception (WIS) skill."
+            }
+        ],
+        "options": {
+            "drow": {
+                "name": "Dark Elf / Drow",
+                "desc": "Descended from an earlier subrace of dark-skinned elves, the Drow were banished from the surface world for following the goddess Lolth down the path to evil and corruption. Now they have built their own civilization in the depths of the Underdark, patterned after the Way of Lolth. Also called dark elves. The drow have black skin that resembles polished obsidian and stark white or pale yellow hair. They commonly have very pale eyes (so pale as to be mistaken for white) in shades of lilac, silver, pink, red, and blue. They lend to be smaller and thinner than most elves.",
+                "asi": {
+                    "CHA": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Superior Darkvision",
+                        "desc": "The range of your darkvision trait is increased to 120ft."
+                    },
+                    {
+                        "name": "Sunlight Sensitivity",
+                        "desc": "You gain disadvantage on attack rolls and Perception (WIS) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."
+                    },
+                    {
+                        "name": "Drow Magic",
+                        "desc": "You know the dancing lights cantrip. Starting at 3rd level, you may cast the @faerie fire spell with this trait. Starting at 5th level, you may cast the @darkness spell with this trait. You do not need material components for either spell. You may cast both spells once every long rest. CHA is your spellcasting ability for these spells."
+                    },
+                    {
+                        "name": "Drow Weapon Training",
+                        "desc": "You gain proficiency with rapiers, shortswords and hand crossbows."
+                    }
+                ],
+                "source": "Player's Handbook"
+            },
+            "eladrin": {
+                "name": "Eladrin",
+                "desc": "Eladrin are elves of the Feywild, a realm of perilous beauty and boundless magic. Using that magic, eladrin can step from one place to another in the blink of an eye, and each eladrin resonates with emotions captured in the Feywild in the form of seasons — affinities that affect the eladrin's mood and appearance. An eladrin's season can change, though some remain in one season forever.",
+                "asi": {
+                    "CHA": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Seasons",
+                        "desc": "Choose your season, or roll on the eladrin seasons table.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d4", "Season", "Fey Step Effect"],
+                                [1, "Autumn", "Immediately after you use your fey step trait, up to 2 creatures of your choice that you can see within 10ft. of you must succeed on a WIS saving throw or be charmed by you for 1 minute. If you or your companions deal damage to a creature charmed in this way, the effect ends."],
+                                [2, "Winter", "Whenever you use your fey step trait, a creature of your choice that you can see with 5ft. of you before you teleport must succeed on a WIS saving throw or be frightened of you until the end of your next turn."],
+                                [3, "Spring", "Whenever you use your fey step trait, you may touch a willing creature within 5ft. of you. That creature then teleports instead of you, appearing in an unoccupied space of your choice that you can see within 30ft. of you."],
+                                [4, "Summer", "Immediately after you use your fey step trait, each creature of your choice that you can see within 5ft. of you takes @fire damage equal to your CHA (minimum of 1)."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Fey Step",
+                        "desc": "As a bonus action, you may magically teleport up to 30ft. to an unoccupied space you can see. Starting at 3rd level, your fey step trait gains an additional effect based on your season; if the effect requires a saving throw, the DC is 8 + CHA + proficiency. The effects are listed in the eladrin seasons table."
+                    },
+                    {
+                        "name": "Trance",
+                        "desc": "Whenever you finish a trance, you may change your season. Additionally, you may gain up to 2 proficiencies with either a weapon or tool that you don't have, as you mystically acquire these proficiencies by drawing them from shared elven memory. You retain them until you finish a long rest, at which point you may choose again."
+                    }
+                ],
+                "source": "Mordenkainen Presents: Monsters of the Multiverse"
+            },
+            "high": {
+                "name": "High Elf",
+                "desc": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many of the worlds of D&D, there are two kinds of high elves. One type (which includes the gray elves and valley elves of Greyhawk, the Silvanesti of Dragonlance, and the sun elves of the Forgotten Realms) is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type (including the high elves of Greyhawk, the Qualinesti of Dragonlance, and the moon elves of the Forgotten Realms) are more common and more friendly, and often encountered among humans and other races.",
+                "asi": {
+                    "INT": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Cantrip",
+                        "desc": "You know 1 cantrip of your choice from the wizard spell list. INT is your spellcasting ability for it."
+                    },
+                    {
+                        "name": "Elf Weapon Training",
+                        "desc": "You gain proficiency with the longsword, shortsword, shortbow and longbow."
+                    },
+                    {
+                        "name": "Extra Language",
+                        "desc": "You can read, speak and write one additional language of your choice."
+                    }
+                ],
+                "source": "Player's Handbook"
+            },
+            "sea": {
+                "name": "Sea Elf",
+                "desc": "Sea elves fell in love with the wild beauty of the ocean in the earliest days of the multiverse. While other elves traveled from realm to realm, the sea elves navigated the deepest currents and explored the waters across a hundred worlds. Today, they live in small, hidden communities in the ocean shallows and on the Elemental Plane of Water.",
+                "asi": {
+                    "CON": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Sea Elf Training",
+                        "desc": "You have proficiency with the spear, trident, light crossbow, and net."
+                    },
+                    {
+                        "name": "Child of the Sea",
+                        "desc": "You have a swimming speed of 30ft., and you can breathe air and water."
+                    },
+                    {
+                        "name": "Friend of the Sea",
+                        "desc": "Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed."
+                    },
+                    {
+                        "name": "Extra Language",
+                        "desc": "You can speak, read and write Aquan."
+                    }
+                ],
+                "source": "Mordenkainen Presents: Monsters of the Multiverse"
+            },
+            "shadar-kai": {
+                "name": "Shadar-Kai",
+                "desc": "Sworn to the Raven Queen's service, the mysterious Shadar-kai venture into the Material Plane from the Shadowfell to advance her will. Once they were fey like the rest of their elven kin, and now they exist in a strange state between life and death. Eladrin and Shadar-kai are like reflections of each other: one bursting with emotion, the other nearly devoid of it.",
+                "asi": {
+                    "CON": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Blessing of the Raven Queen",
+                        "desc": "As a bonus action, you may magically teleport up to 30ft. to an unoccupied space you can see. Starting at 3rd level, after you teleport in this way, you have resistance to all damage until the start of your next turn. During that time, you appear ghostly and translucent. You may use this trait an amount of times equal to your proficiency per long rest."
+                    },
+                    {
+                        "name": "Necrotic Resistance",
+                        "desc": "You gain resistance to @necrotic damage."
+                    },
+                    {
+                        "name": "Trance",
+                        "desc": "Whenever you finish a trance, you may gain up to 2 proficiencies with either a weapon or tool that you don't have, as you mystically acquire these proficiencies by drawing them from shared elven memory. You retain them until you finish a long rest, at which point you may choose again."
+                    }
+                ],
+                "source": "Mordenkainen Presents: Monsters of the Multiverse"
+            },
+            "wood": {
+                "name": "Wood Elf",
+                "desc": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. This category includes the wild elves (Grugach) of Greyhawk and the Kagonesti of Dragonlance, as well as the races called wood elves in Greyhawk and the Forgotten Realms. In Faerun, wood elves (also called wild elves, green elves, or forest elves) are reclusive and distrusting of non-elves.",
+                "asi": {
+                    "WIS": 1,
+                    "total": 1
+                },
+                "speed": 35,
+                "abilities": [
+                    {
+                        "name": "Elf Weapon Training",
+                        "desc": "You gain proficiency with the longsword, shortsword, shortbow and longbow."
+                    },
+                    {
+                        "name": "Mask of the Wild",
+                        "desc": "You may attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist and other natural phenomena."
+                    }
+                ],
+                "source": "Player's Handbook"
+            },
+            "pallid": {
+                "name": "Pallid Elf",
+                "desc": "The pallid elves are a mystical and insightful people with skin as pale as the surface of Exandria's largest moon. They emerged from the Pallid Grove this century and wander the world with childlike curiosity.",
+                "asi": {
+                    "WIS": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Incisive Sense",
+                        "desc": "You gain advantage on Investigation (WIS) and Insight (WIS) checks."
+                    },
+                    {
+                        "name": "Blessing of the Moonweaver",
+                        "desc": "You know the @light cantrip. Starting at 3rd level, you may cast the @sleep spell with this trait. Starting at 5th level, you may cast the @invisibility spell, targeting yourself, with this trait. You do not need material components for either spell. You may cast both spells once every long rest. WIS is your spellcasting ability for these spells."
+                    }
+                ],
+                "source": "Explorer's Guide to Wildemount"
+            },
+            "mark-of-shadow": {
+                "name": "Mark of Shadow Elf",
+                "desc": "If you're an elf with the Mark of Shadow, you have this subrace, with the following traits.",
+                "asi": {
+                    "CHA": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Cunning Intuition",
+                        "desc": "Whenever you make an Stealth (DEX) or Performance (CHA) check, you may roll 1d4 and add the number rolled to the total ability check."
+                    },
+                    {
+                        "name": "Wards and Seals",
+                        "desc": "You know the @minor illusion cantrip. Starting at 3rd level, you may also cast the @invisibility spell with this trait. You do not need material components for it. You may cast it once per long rest. CHA is your spellcasting ability for these spells."
+                    },
+                    {
+                        "name": "Spells of the Mark",
+                        "desc": "If you have the spellcasting (or similar) class feature, you may add the following spells to the spell list of your spellcasting class:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Spell Level", "Spell"],
+                                ["1st", "@disguise self, @silent image"],
+                                ["2nd", "@darkness, @pass without trace"],
+                                ["3rd", "@clairvoyance, @major image"],
+                                ["4th", "@greater invisibility, @hallucinatory terrain"],
+                                ["5th", "@mislead"]
+                            ]
+                        }
+                    }
+                ],
+                "source": "Eberron: Rising from the Last War"
+            },
+            "astral": {
+                "name": "Astral Elf",
+                "desc": "Because nothing ages in the Astral Plane, astral elves from that plane are thousands of years old, and their longevity gives them an unusual perspective on time. Whether they choose to live in quiet contemplation or strike out to explore the reaches of the multiverse, they tend to see things through the lens of time as having little or no meaning to them.",
+                "asi": {
+                    "WIS": 1,
+                    "total": 1
+                },
+                "abilities": [
+                    {
+                        "name": "Astral Aspect",
+                        "desc": "Choose one of the following ability scores: INT, WIS or CHA. The chosen ability score becomes the spellcasting abilities for all cantrips and spells cast using this race's traits. This cannot be changed after character creation."
+                    },
+                    {
+                        "name": "Astral Fire",
+                        "desc": "You know one of the following cantrips of your choice: @dancing lights, @light, or @sacred flame"
+                    },
+                    {
+                        "name": "Radiant Soul",
+                        "desc": "After succeeding on a death save, you may regain hitpoints equal to your proficiency bonus + your Astral Aspect modifier. You may use this trait once every long rest."
+                    }, 
+                    {
+                        "name": "Trance",
+                        "desc": "Whenever you finish a trance, you may gain up to 2 proficiencies with either a weapon or tool that you don't have, as you mystically acquire these proficiencies by drawing them from shared elven memory. You retain them until you finish a long rest, at which point you may choose again."
+                    }
+                ],
+                "source": "Spelljammer: Adventures in Space"
             }
         },
         "source": "Player's Handbook"
@@ -381,7 +651,7 @@
                 },
                 "abilities": [
                     {
-                        "name": "Apex Predator",
+                        "name": "Unmatched Charms",
                         "desc": "You gain proficiency in the Persuasion (CHA) and Intimidation (CHA) skills. Additionally, you may use this trait to cast the @charm person spell, requiring no material components. While casting the @charm person spell using this trait, the target gains disadvantage on its saving throw. You may use this trait once per long rest. INT is your spellcasting ability for this spell."
                     }
                 ],
