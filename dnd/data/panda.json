@@ -32,5 +32,132 @@
         
         "lists": ["wizard"],
         "source": "Source"
+    },
+    "call-lightning": {
+        "name": "Call Lightning",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "A storm cloud, shaped like a 10ft. tall 60ft. radius cylinder, appears centered on a point you can see within range directly above you. If you cannot see a point in the air where the storm cloud could appear (eg. you are in a room that cannot accomodate the cloud), the spell fails."
+            },
+            {
+                "desc": "When you cast the spell, choose a point you can see under the cloud. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a DEX saving throw. A creature takes {*}d10 @lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you may use your action to call down lightning in this way again, targeting any point underneath the cloud."
+            },
+            {
+                "desc": "If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["druid"],
+        "source": "Player's Handbook"
+    },
+    "bane": {
+        "name": "Bane",
+        "level": 1,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a drop of blood"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "Up to {*} creatures of your choice that you can see within range must make CHA saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["bard, cleric"],
+        "source": "Player's Handbook"
+    },
+    "chaos-bolt": {
+        "name": "Chaos Bolt",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "You hurl an undulating, warbling mass of chaotic energy at one creature in range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 + {*}d6 damage. Choose one of the d8s. The number rolled on that die determines the attack's damage type, as shown below.",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["d8", "Damage Type"],
+                        [1, "@acid"],
+                        [2, "@cold"],
+                        [3, "@fire"],
+                        [4, "@force"],
+                        [5, "@lightning"],
+                        [6, "@poison"],
+                        [7, "@psychic"],
+                        [8, "@thunder"]
+                    ]
+                }
+            },
+            {
+                "desc": "If you roll the same number on both d8s, the chaotic energy leaps from the target to a different creature of your choice within 30 feet of it. Make a new attack roll against the new target, and make a new damage roll, which could cause the chaotic energy to leap again. However, a creature can be targeted only once by each casting of this spell."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["sorcerer"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "frost-fingers": {
+        "name": "Frost Fingers",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (15ft. cone)",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "Freezing cold blasts from your fingertips in a 15ft. cone. Each creature in that area must make a CON saving throw, taking {*}d8 @cold damage on a failed save, or half as much damage on a successful one. The cold freezes nonmagical liquids in the area that aren't being worn or carried."
+            }
+        ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["wizard"],
+        "source": "Icewind Dale - Rime of the Frostmaiden"
     }
 }
