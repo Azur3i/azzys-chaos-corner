@@ -134,5 +134,30 @@
         
         "lists": ["sorcerer"],
         "source": "Xanathar's Guide to Everything"
+    },
+    "frost-fingers": {
+        "name": "Frost Fingers",
+        "level": 1,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (15ft. cone)",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "Freezing cold blasts from your fingertips in a 15ft. cone. Each creature in that area must make a CON saving throw, taking {*}d8 @cold damage on a failed save, or half as much damage on a successful one. The cold freezes nonmagical liquids in the area that aren't being worn or carried."
+            }
+        ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["wizard"],
+        "source": "Icewind Dale - Rime of the Frostmaiden"
     }
 }
