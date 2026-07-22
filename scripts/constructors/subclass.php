@@ -35,7 +35,7 @@ $subclassTypes = [
         <img src="/assets/img/back.png" style="width: 2rem;">
     </a>
 
-    <h1 class="xlg title"><a class="to-subclass" href="/dnd/<?= $mainClass ?>#<?= $subclass ?>"><?= ucwords($mainClass) . "</a>: " . $target["name"] ?></h1>
+    <h1 class="xlg title"><a class="to-subclass" href="/dnd/<?= $mainClass ?>#<?= $subclass ?>"><u><?= ucwords($mainClass) . "</u></a>: " . $target["name"] ?></h1>
     <p class="sm title" style="opacity: 0.5;"><?= $subclassTypes[$mainClass] ?></p>
 
     <hr >
