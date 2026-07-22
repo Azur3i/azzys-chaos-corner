@@ -138,7 +138,7 @@ function renderASI ($asi) {
 
                         <div id="<?= $name ?>"
                                 class="accordion-collapse collapse">
-                            <div class="accordion-body md" style="padding-bottom: 0;">
+                            <div class="accordion-body md">
                                 <?php include ROOT . "/scripts/constructors/subrace.php"; ?>
                             </div>
                         </div>
