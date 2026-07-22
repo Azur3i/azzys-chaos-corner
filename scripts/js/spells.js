@@ -5,7 +5,7 @@ function loadSpell(target) {
             $("#spellbox").html(response);
             updateButton(target);
 
-            document.title = $("#spellname").data("name") + " - Azzy's Chaos Corner"
+            document.title = $("#spellname").data("name") + " - Spells - Azzy's Chaos Corner"
         }
     )
 }

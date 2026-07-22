@@ -5,7 +5,7 @@ function loadRace(target) {
             $("#racebox").html(response);
             updateButton(target);
 
-            document.title = $("#racename").data("name") + " - Azzy's Chaos Corner"
+            document.title = $("#racename").data("name") + " - Races - Azzy's Chaos Corner"
         }
     )
 }
