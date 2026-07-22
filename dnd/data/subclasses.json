@@ -142,6 +142,91 @@
             },
             "source": "Tasha's Cauldron of Everything"
         },
+        "path-of-the-experiment": {
+            "name": "Path of the Experiment",
+            "desc": ["Barbarians following the Path of the Experiment supplement their rage with alchemical cocktails that surge in their bodies through syringes and tubes of copper, steel, and glass. These formulas enhance their ability to channel primal might, or perhaps—because of their rage—they are the only people who can survive the chemicals flooding their veins. A barbarian may have created the implants and serums through their own experimentation, or they could have been subjected to the insidious work of others. Whatever the origin, it could have been well-intentioned and made to enhance or preserve the barbarian's life, or it might have been an unhinged alchemical exploration."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Experimental Implants (Optional)",
+                        "desc": "The experimental implants table offers examples of different forms your implants could take:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d6", "Implant", "Appearance"],
+                                [1, "Alchemical Injector", "Glass reservoir cylinders set in brass and iron frames hold multicolored, bubbling, or luminous alchemical fluids."],
+                                [2, "Alien Grafts", "Portions of your body have been replaced with parts of a dragon, a werewolf, or an Aberration's rubbery tentacles. Whenever you rage, the grafts overtake more of your body."],
+                                [3, "Construct Prosthesis", "You have prosthetic limbs, eyes, or other replacements made of metal, stone, or wood. Whenever you rage, the parts flare."],
+                                [4, "Crystal Formations", "Crystals grow from your body across your shoulders and down your limbs. Whenever you rage, the crystals glow, chime, or ring."],
+                                [5, "Fungal Inoculation", "Mushrooms and other fungal growths overtake parts of your body, and vein-like mycelium run along your skin from them. Whenever you rage, the veins pulse and writhe."],
+                                [6, "Sparktech Augmentation", "Copper, silver, and brass coils in your back and arms run wires along your skin to plugs. Whenever you rage, lightning crackles across the metal."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Alchemical Experiments",
+                        "desc": "You gain a set of alchemist's supplies, and gain proficiency with it. You may use alchemist's supplies instead of a herbalism kit to craft potions of healing, even if you are not a spellcaster."
+                    },
+                    {
+                        "name": "Volatile Serum",
+                        "desc": "You have an implanted series of syringes and resevoirs that hold elchemical serums, and deploy them into your body. Whenever you enter your rage, choose one of your serums to inject and gain its benefits. The chosen serum lasts for the duration of your rage, or until you choose a new serum as a bonus action. Choose from the following serums:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Ferocity",
+                                "desc": "This serum throws you into an energized frenzy. You may ignore difficult terrain, and when you hit a creature with a melee attack, you may make another attack with the same weapon against a different creature within 5ft. of the first, provided it is within your reach. On a hit, don't add your ability modifier to the damage, unless that modifier is negative. You may make this extra attack once per turn."
+                            },
+                            {
+                                "name": "Monstrosity",
+                                "desc": "The serum expands your body to monstrous proportions, and may change your appearance in cosmetic ways, such as by altering facial features, skin tone, and hair length or color. Your reach increases by 5ft., and once per turn when you miss with an attack that relies on STR, you may add your rage damage bonus to the attack roll, potentially causing the attack to hit. If you are smaller than Large, you become Large, along with anything you are wearing or carrying. If there is not enough room to accomodate the size change, your size doesn't change."
+                            },
+                            {
+                                "name": "Reconstruction",
+                                "desc": "The serum dulls pain and forces wounds to rapidly knit. On activation, and at the start of each of your turns, you may expend and roll a Hit Die. You regain a number of hitpoints equal to the number rolled + CON (minimum of 1). You gain any excess beyond your hitpoint maximum as temporary hitpoints. If you take @acid or @fire damage, this serum doesn't function at the start of your next turn."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Augmentation Compounds",
+                        "desc": "Through continued experimentation or your natural adaptation to your implants, you may now activate one of the compound options below, in addition to a serum, whenever you enter your rage or change your chosen serum. The chosen compound lasts for the duration of your rage, or until you choose a new compound.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Stimulated Senses",
+                                "desc": "You gain 30ft. blindsight. If you already have blindsight, its range increases by 30ft. instead."
+                            },
+                            {
+                                "name": "Maddening Fumes",
+                                "desc": "Your skin emits aggression-spiking fumes out to 30ft. While in that area, an enemy's speed is halved, and if it starts its turn there, it must succeed on a WIS saving throw, DC 8 + CON + proficiency, or gain disadvantage on attack rolls against targets other than you until the start of its next turn."
+                            },
+                            {
+                                "name": "Corrosive Expuslsion",
+                                "desc": "When you take the @attack action on your turn, you may replace one of your attacks with a spray of caustic chemicals from your implants. This takes the shape of a 15ft. cone, or a 30ft. by 5ft. line, your choice. Each creature in the area must make a DEX saving throw, DC 8 + CON + proficiency. Roll a number of d8s equal to your rage damage bonus. On a failure, a target takes @acid damage equal to the nuymber rolled, or half as much on a successful one."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Reactive Catalyst",
+                        "desc": "Your implants are now sensitive to your response to danger, and flood you with stimulating chemicals. Whenever you take damage, or whenever you are blinded, deafened, poisoned, or stunned, you may use your reaction to enter your rage before the damage or conditions are applied. Whenever you enter your rage, you end any of these conditions on yourself, including any triggering conditions. Additionally, while raging, you gain advantage on CON saving throws."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Biochemical Admixture",
+                        "desc": "Your body focuses and combines the strength of your serums. Whenever you activate an option of your volatile serum feature, you may activate 2 options instead of 1. Additionally, whenever a creature within 5ft. of you damages you with a melee attack while your rage is active, the attacker takes 1d12 @acid damage. A creature may take this damage only once per turn."
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        },
         "path-of-the-totem-warrior": {
             "name": "Path of the Totem Warrior",
             "desc": ["The Path of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal as guide, protector, and inspiration. In battle, your totem spirit fills you with supernatural might, adding magical fuel to your barbarian rage.", "Most barbarian tribes consider a totem animal to be kin to a particular clan. In such cases, it is unusual for an individual to have more than one totem animal spirit, though exceptions exist."],
