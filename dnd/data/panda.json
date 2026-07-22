@@ -177,5 +177,30 @@
         
         "lists": ["artificer", "bard", "wizard"],
         "source": "Player's Handbook"
+    },
+    "inflict-wounds": {
+        "name": "Inflict Wounds",
+        "level": 1,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "Make a melee spell attack against a creature you are able to reach. On a hit, the target takes {*}d10 necrotic damage."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
+        
+        "lists": ["cleric"],
+        "source": "Player's Handbook"
     }
 }
