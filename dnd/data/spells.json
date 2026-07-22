@@ -4298,5 +4298,790 @@
         
         "lists": ["wizard"],
         "source": "Icewind Dale - Rime of the Frostmaiden"
+    },
+    "culling-sickle": {
+        "name": "Culling Sickle",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a ghostly sickle that lasts for the duration, and may strike out at your foes. The sickle appears hovering in your space, and moves with you. Whenever you cast this spell, and as a bonus action on each of your turns, you may direct it to fly at and strike a creature within 30ft. of you. Make a ranged spell attack. On a hit, the target takes {*}d8 @necrotic damage, and you gain temporary hitpoints equal to half the damage dealt. After the sickle hits or misses, it returns to hover in your space."
+            }
+            ],
+        "levels": [2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["druid", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "cursed-cacophony": {
+        "name": "Cursed Cacophony",
+        "level": 3,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action",
+            "ritual": true
+        },
+        "range": "special",
+        "vsm": [false, true, "a sheet of music"],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You focus on a creature that you are familiar with that is on the same plane of existance as you. The target must succeed on a WIS saving throw, or be cursed for the duration. Once a target fails its saving throw against this spell, you cannot target it with a ritual casting of the spell for 24 hours."
+            },
+            {
+                "desc": "While cursed, the target hears haunting, discordant music, and gains disadvantage on ability checks, attack rolls, and saving throws. The first time the target fails one of these rolls during a turn, it may repeat the saving throw with neither advantage or disadvantage, ending the effect early on itself on a success."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock"],
+        "source": "The Crooked Moon"
+    },
+    "devils-due": {
+        "name": "Devil's Due",
+        "level": 1,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "reaction",
+            "condition": "another creature within range takes damage"
+        },
+        "range": "30ft.",
+        "vsm": [false, true, "a glob of pitch"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You absorb a measure of a creature's suffering and escaping vital essence. Expend and roll {*} Hit Di(c)e. You regain a number of hitpoints equal to the number rolled + your spellcasting modifier."
+            },
+            {
+                "desc": "If the creature took damage from a critical hit, you regain twice the amount of hitpoints."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "dissolution": {
+        "name": "Dissolution",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a creature, or nonmagical object, and break the target's substance down into its most fundamental components. Make a melee spell attack. On a hit, the target takes {*}d8 @force damage, and it suffers -1 AC against the next attack roll made against it before the end of your next turn."
+            }
+            ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["wizard"],
+        "source": "The Crooked Moon"
+    },
+    "eye-burn": {
+        "name": "Eye Burn",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "reaction",
+            "condition": "a creature you can see within range targets you with an attack"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a smear of camphor"],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        
+        "desc": [
+            {
+                "desc": "You sting the eyes of a creature attacking you. The target must make a CON saving throw. A creature with blindsight or immunity to being blinded succeeds automatically. On a failure, the target is blinded until the end of its turn. On a successful save, it must subtract 1d4 from the triggering attack roll, potentially turning the hit into a miss."
+            },
+            {
+                "desc": "Regardless of success, the target automatically succeeds on its saving throws against your subsequent castings of this spell for 24 hours."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["druid", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "field-of-reaping": {
+        "name": "Field of Reaping",
+        "level": 5,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, "a dried corn husk, or wheat hull"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a shadowy field that reaps escaping life force in a 30ft. cube, originating from a point within range. Any creature of your choice in the field when it appears, or when it enters the field for the first time on a its turn, or ends its turn there, is cursed until the end of its next turn. While cursed in this way, the first time the creature takes damage, it takes an extra {*}d6 @necrotic damage, and a creature of your choice that isn't cursed by the field regains a number of hitpoints equal to the damage taken."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5],
+        
+        "lists": ["cleric", "druid", "warlock"],
+        "source": "The Crooked Moon"
+    },
+    "ghastly-charge": {
+        "name": "Ghastly Charge",
+        "level": 6,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a scrap of a banner"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You call forth the spirits of long-dead knights, which charge forward from you in a 90ft. long, 20ft. wide line, at which point they vanish. Each creature of your choice in the line must make a WIS saving throw, taking {*}d12 @necrotic damage on a failed save, or half as much on a successful one. Additionally, on a failure, the target is frightened of you until the start of your next turn, and must immediately use its reaction, if available, to move as far as its speed allows away from you, using the safest route."
+            }
+            ],
+        "levels": [5, 6, 7, 8],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "harvest-moonglow": {
+        "name": "Harvest Moonglow",
+        "level": 3,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a piece of moonstone"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You call upon the light of the harvest moon to illuminate a 20ft. radius sphere centered on a point within range. The area is bathed in silvery, dim light. Invisible creatures and objects in the light become visible as translucent, shimmering images."
+            },
+            {
+                "desc": "As a bonus action, a creature may, if you let it, absorb some of the light, and gain {*}d6 temporary hitpoints."
+            }
+            ],
+        "levels": [2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["cleric", "druid", "ranger"],
+        "source": "The Crooked Moon"
+    },
+    "harrowing-ballad": {
+        "name": "Harrowing Ballad",
+        "level": 2,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You inflict a mind-eroding song on a creature you can see within range. If the creature has an INT score of 4 or higher, it must succeed on an INT saving throw, or be charmed by you for the duration."
+            },
+            {
+                "desc": "While charmed in this way, the target is struck with a rapidly repeating ballad that only it can hear. It takes {*}d6 @psychic damage at the start of each of its turns, and it gains disadvantage on Perception (WIS), checks, and on CON saving throws made to maintain concentration. The target may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["bard", "sorcerer", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "hungering-blade": {
+        "name": "Hungering Blade",
+        "level": 1,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You imbue a weapon you are holding, or your unarmed strikes, with ravenous negative energy. For the duration, whenever you hit a creature with an attack using the empowered weapon for the first time on a turn, the target takes @necrotic damage equal to your spellcasting ability modifier. Additionally, you gain a number of temporary hitpoints equal to the @necrotic damage dealt."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["paladin", "ranger", "warlock"],
+        "source": "The Crooked Moon"
+    },
+    "intrusive-despair": {
+        "name": "Intrusive Despair",
+        "level": 4,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, "a devil's trumpet blossom"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You curse a creature within range, filling its mind with creeping paranoia and despair. Whenever the target uses the @attack or @cast a spell actions, it must succeed, it must succeed on a WIS saving throw, or waste its action. Once the target succeeds on the saving throw against this spell three times, the effect ends."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "isolation": {
+        "name": "Isolation",
+        "level": 3,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "a small metal cube"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "A creature that you can see within range must succeed on a WIS saving throw, or have its mind shrouded in the dread of total isolation. For the duration, all other creatures are invisible toward the target, which the target cannot see through - even with blindsight, truesight, or magic such as the @see invisibility spell - and the target cannot perceive othere creatures with any of its other senses."
+            },
+            {
+                "desc": "The target moves around other creatures, or otherwise rationalizes not moving through spaces occupied by them (such as perceiving a door as closed, or as a wall if another creature is standing in the way). The target still feels pain, but cannot identify the source of any injury caused by another creature. The target may repeat the saving throw at the end of each of its turn, ending the spell on itself on a success."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "lucky-charm": {
+        "name": "Lucky Charm",
+        "level": 5,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a four-leaf clover, and a shard of a broken mirror"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a Tiny, nonmagical object, infusing it with a portion of your own luck for the duration. While another creature carries the object, that creature gains advantage on ability checks, attack rolls, and saving throws, while you gain disadvantage on them."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "paladin", "ranger", "warlock"],
+        "source": "The Crooked Moon"
+    },
+    "martyr": {
+        "name": "Martyr",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a dagger worth at least 1cp"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a dead creature that died within the last minute, and transfer your life energy into it. The target returns to life with hitpoints equal to your current hitpoint total."
+            },
+            {
+                "desc": "However, you immediately drop to 0 hitpoints, which nothing can prevent. You instantly gain 2 failed death saving throws, and must immediately make a death save. You cannot regain hitpoints or be stabilized until after you make this save."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["cleric", "paladin", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "mirrored-agony": {
+        "name": "Mirrored Agony",
+        "level": 5,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "reaction",
+            "condition": "a creature you can see within range damages a creature not hostile to you"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a pin, or a needle"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "The attacker must make a WIS saving throw, taking an amount equal to the damage it dealt with the triggering attack @psychic damage on a failed save, or half as much on a successful one."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "mist-of-mourning": {
+        "name": "Mist of Mourning",
+        "level": 3,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a vial of tears"],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You summon a thin mist that saps joy and vigor in a 20ft. radius sphere centered on a point within range. Each creature in the mist when it appears, or when it moves into the mist for the first time on a turn, or ends its turn there, must succeed on a CHA saving throw, or be filled with deep melancholy until the end of its next turn. An affected creature's speed is halved, it gains disadvantage on attack rolls, and it must subtract 1d8 from all its damage rolls."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "murder-of-crows": {
+        "name": "Murder of Crows",
+        "level": 4,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (30ft. cone)",
+        "vsm": [true, true, "a crow feather"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You summon and unleash a murder of deadly crows. Each creature of your choice in a 30ft. cone originating from you must make a DEX saving throw, taking {*}d6 @force on a failed save, or half as much on a successful one. Additionally, on a failure, a target is blinded. A blinded creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a succes. The effect also ends if the creature regains any number of hitpoints. The crows disperse and vanish after they strike."
+            }
+            ],
+        "levels": [5, 6, 7, 8, 9, 10],
+        
+        "lists": ["druid", "ranger", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "mysterious-presence": {
+        "name": "Mysterious Presence",
+        "level": 0,
+        "school": "illusion",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a willing creature, and shroud its presence. For the duration, other creatures must subtract 1d4 from any Perception (WIS) and Insight (WIS) checks they make against the target."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "druid", "sorcerer"],
+        "source": "The Crooked Moon"
+    },
+    "puppet-master": {
+        "name": "Puppet Master",
+        "level": 4,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a marionette string"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "A creature that you can see within range must succeed on a WIS saving throw, or be charmed by you for the duration."
+            },
+            {
+                "desc": "Magical marionette strings attach to the charmed creature's limbs or body. It must use its action on its turn to make a melee attack against a creature other than itself, which you choose mentally, moving to reach the target if necessary. The target may act normally on its turn if you do not choose another creature, or if the creature isn't within the target's reach after it moves."
+            },
+            {
+                "desc": "On subsequent turns, you must use your bonus action to maintain control over the target, or the spell ends early. The target may repeat the saving throw at the end of each of its turn, ending the effect on itself on a success."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "sacrificial-siphon": {
+        "name": "Sacrificial Siphon",
+        "level": 4,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [false, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch another creature, and lay a curse that target's vitality, transferring it to you. The target must succeed on a CHA saving throw, or be cursed for the duration."
+            },
+            {
+                "desc": "A creature cursed in this way must subtract 1d4 from its attack rolls and ability checks, and whenever the target takes damage, you may use your reaction to gain 10 temporary hitpoints."
+            },
+            {
+                "desc": "If the target succeeds on the saving throw, you instead gain 5 temporary hitpoints, and the target must subtract 1d4 from its attack rolls and ability checks until the start of your next turn."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["cleric", "paladin", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "sanctum-of-the-shepherd": {
+        "name": "Sanctum of the Shepherd",
+        "level": 4,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "5ft.",
+        "vsm": [true, true, "adamantine or diamond powder worth at least 200gp, which the spell consumes"],
+        "duration": {
+            "amount": 24,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a 20ft. radius sphere of faint, shimmering light centered on a point within range. You and a number of creatures of your choice up to your spellcasting modifier (minimum of 1) may absorb protective magic from the sphere."
+            },
+            {
+                "desc": "Whenever any of the chosen creatures finish a long rest in the area, the sphere vanishes, and those creatures gain +1 AC for the remainder of the duration. Chosen creatures who do not finish a long rest in the sphere gain no benefit."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["cleric", "paladin", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "sanctum-of-the-flock": {
+        "name": "Sanctum of the Flock",
+        "level": 3,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "5ft.",
+        "vsm": [true, true, "powdered silver worth at least 25gp, which the spell consumes"],
+        "duration": {
+            "amount": 24,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a 20ft. radius sphere of faint, shimmering light centered on a point within range. You and a number of creatures of your choice up to your spellcasting modifier (minimum of 1) may absorb empowering magic from the sphere."
+            },
+            {
+                "desc": "Whenever any of the chosen creatures finish a long rest in the area, the sphere vanishes, and those creatures gain 2d10 temporary hitpoints. For the remainder for the duration, affected creatures gain advantage on CHA checks that use one of their skill proficiencies.. Chosen creatures who do not finish a long rest in the sphere gain no benefit."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "paladin"],
+        "source": "The Crooked Moon"
+    },
+    "sanguine-secrets": {
+        "name": "Sanguine Secrets",
+        "level": 2,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a drop of blood, which the spell consumes"],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        
+        "desc": [
+            {
+                "desc": "You draw knowledge through the power of blood about a creature you can see within range."
+            },
+            {
+                "desc": "You learn the target's species and creature type, its current hitpoints, and any conditions affecting it. You also learn if it has any vulnerability, resistances, or immunity to damage, as well as immunities to conditions, and if so, what they are."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["ranger", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "scarlet-dawn": {
+        "name": "Scarlet Dawn",
+        "level": 3,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "Crimson light shines down in a 20ft. radius, 60ft. high cylinder centered on a point within range. Each creature in that area that isn't a construct or undead must make CON saving throw, taking {1}d10 @necrotic damage on a failed save, or half as much on a successful one. Constructs and undead instead regain 4d10 hitpoints."
+            },
+            {
+                "desc": "If any of this spell's area overlaps with an area of darkness created by a spell of {2} level or lower, the spell that created the darkness is dispelled."
+            }
+            ],
+        "levels": [[4, "3rd"], [5, "4th"], [6, "5th"], [7, "6th"], [8, "7th"], [9, "8th"], [10, "9th"]],
+        
+        "lists": ["cleric", "druid", "paladin", "ranger", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "shadow-drain": {
+        "name": "Shadow Drain",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (15ft.)",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "For the duration, you siphon away the vitality and sense of self through the shadows of creatures within 15ft. of you that aren't behind total cover."
+            },
+            {
+                "desc": "Whenever you cast this spell, you may designate any number of creatures of your choice to be unaffected by it. Whenever any other creature enters the area, or starts its turn there, or when the area enter's a creature's space, the creature must make a CHA saving throw, taking {*}d6 @necrotic damage on a failed save, or half as much on a successful one. Additionally, on a failure, the creature gains disadvantage on attack rolls and ability checks until the end of its next turn. A creature makes this save only once per turn."
+            }
+            ],
+        "levels": [2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "summer-winds": {
+        "name": "Summer Winds",
+        "level": 2,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (15ft. cone)",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You unleash a blast of light and wind in a 15ft. cone. Any number of creatures of your choice in the area regain {*}d6 hitpoints. Any number of undead of your choice within the area must make a CON saving throw, taking {*}d6 @radiant damage on a failed save, or half as much on a successful one."
+            }
+            ],
+        "levels": [2, 4, 6, 8, 10, 12, 14, 16],
+        
+        "lists": ["cleric", "druid", "paladin", "ranger"],
+        "source": "The Crooked Moon"
+    },
+    "unraveling-whisper": {
+        "name": "Unraveling Whisper",
+        "level": 2,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        
+        "desc": [
+            {
+                "desc": "You whisper a frightful phrase to {*} creature(s) you can see within range that only the target(s) can hear. A target must make a WIS saving throw, taking 2d6 @psychic damage on a failed save, or half as much on a successful one. Additionally, on a failure, a target is frightened until the start of your next turn. While frightened in this way, the creature gains vulnerability to one of @bludgeoning, @piercing or @slashing damage, your choice."
+            }
+            ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
+    },
+    "veil-of-the-reaper": {
+        "name": "Veil of the Reaper",
+        "level": 2,
+        "school": "illusion",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a dried corn husk, or wheat straw"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You wrap yourself in shadows that veil you between strikes. After hitting a creature with an attack roll, at the end of your turn, you become invisible until the start of your next turn."
+            }
+            ],
+        "levels": null,
+        
+        "lists": ["ranger", "sorcerer", "warlock", "wizard"],
+        "source": "The Crooked Moon"
     }
 }
