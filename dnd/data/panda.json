@@ -19,163 +19,18 @@
         
         "desc": [
             {
-                "desc": "This spell creates an invisible, mindless, shapeless, Medium-size force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hitpoint, a STR score of 2, and it cannot attack. If it drops to 0 hitpoints, the spell ends."
+                "desc": "This spell does a thing."
             },
             {
-                "desc": "Once on each of your turns as a bonus action, you may mentally command the servant to move up to 15ft. and interact with an object. The servant is able to perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command."
+                "desc": "Alternatively, you may have this spell do a different thing."
             },
             {
-                "desc": "If you command the servant to perform a task that would move it more than 60ft. away from you, the spell ends."
+                "desc": "If you stop doing the thing, the spell ends early."
             }
         ],
         "levels": null,
         
         "lists": ["wizard"],
         "source": "Source"
-    },
-    "bane": {
-        "name": "Bane",
-        "level": 1,
-        "school": "enchantment",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "30ft.",
-        "vsm": [true, true, "a drop of blood"],
-        "duration": {
-            "amount": 1,
-            "time": "minute",
-            "concentration": true
-        },
-        
-        "desc": [
-            {
-                "desc": "Up to {*} creatures of your choice that you can see within range must make CHA saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw."
-            }
-        ],
-        "levels": [3, 4, 5, 6, 7, 8, 9, 10],
-        
-        "lists": ["bard", "cleric"],
-        "source": "Player's Handbook"
-    },
-    "chaos-bolt": {
-        "name": "Chaos Bolt",
-        "level": 1,
-        "school": "evocation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "120ft.",
-        "vsm": [true, true, false],
-        "duration": {
-            "time": "instantaneous"
-        },
-        
-        "desc": [
-            {
-                "desc": "You hurl an undulating, warbling mass of chaotic energy at one creature in range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 + {*}d6 damage. Choose one of the d8s. The number rolled on that die determines the attack's damage type, as shown below.",
-                "content": {
-                    "header": true,
-                    "content": [
-                        ["d8", "Damage Type"],
-                        [1, "@acid"],
-                        [2, "@cold"],
-                        [3, "@fire"],
-                        [4, "@force"],
-                        [5, "@lightning"],
-                        [6, "@poison"],
-                        [7, "@psychic"],
-                        [8, "@thunder"]
-                    ]
-                }
-            },
-            {
-                "desc": "If you roll the same number on both d8s, the chaotic energy leaps from the target to a different creature of your choice within 30 feet of it. Make a new attack roll against the new target, and make a new damage roll, which could cause the chaotic energy to leap again. However, a creature can be targeted only once by each casting of this spell."
-            }
-        ],
-        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        
-        "lists": ["sorcerer"],
-        "source": "Xanathar's Guide to Everything"
-    },
-    "frost-fingers": {
-        "name": "Frost Fingers",
-        "level": 1,
-        "school": "evocation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "self (15ft. cone)",
-        "vsm": [true, true, false],
-        "duration": {
-            "time": "instantaneous"
-        },
-        
-        "desc": [
-            {
-                "desc": "Freezing cold blasts from your fingertips in a 15ft. cone. Each creature in that area must make a CON saving throw, taking {*}d8 @cold damage on a failed save, or half as much damage on a successful one. The cold freezes nonmagical liquids in the area that aren't being worn or carried."
-            }
-        ],
-        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
-        
-        "lists": ["wizard"],
-        "source": "Icewind Dale - Rime of the Frostmaiden"
-    },
-    "hunters-mark": {
-        "name": "Hunter's Mark",
-        "level": 1,
-        "school": "divination",
-
-        "castTime": {
-            "amount": 1,
-            "time": "bonus action"
-        },
-        "range": "90ft.",
-        "vsm": [true, false, false],
-        "duration": {
-            "time": "{*}"
-        },
-        
-        "desc": [
-            {
-                "desc": "You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Perception (Wisdom) or Survival (Wisdom) check you make to find it. If the target drops to 0 hit points before this spell ends, you may use a bonus action on a subsequent turn of yours to mark a new creature."
-            }
-        ],
-        "levels": ["1 hour", "1 hour", "8 hours", "8 hours", "24 hours", "24 hours", "24 hours", "24 hours", "24 hours"],
-        
-        "lists": ["ranger"],
-        "source": "Player's Handbook"
-    },
-    "identify": {
-        "name": "Identify",
-        "level": 1,
-        "school": "divination",
-
-        "castTime": {
-            "amount": 1,
-            "time": "minute",
-            "ritual": true
-        },
-        "range": "touch",
-        "vsm": [true, true, "a pearl worth at least 100 gp and an owl feather"],
-        "duration": {
-            "time": "instantaneous"
-        },
-        
-        "desc": [
-            {
-                "desc": "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it. If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it."
-            }
-        ],
-        "levels": null,
-        
-        "lists": ["artificer", "bard", "wizard"],
-        "source": "Player's Handbook"
     }
 }
