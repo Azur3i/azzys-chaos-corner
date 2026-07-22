@@ -202,5 +202,31 @@
         
         "lists": ["cleric"],
         "source": "Player's Handbook"
+    },
+    "shillelagh": {
+        "name": "Shillelagh",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "mistletoe, a shamrock leaf, and a club or quarterstaff"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "The wood of a club or quarterstaff you are holding is imbued with nature's power. For the duration, you may use your spellcasting ability instead of STR for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it is not already. The spell ends if you cast it again or if you let go of the weapon."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid"],
+        "source": "Source"
     }
 }
