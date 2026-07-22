@@ -227,6 +227,31 @@
         "levels": null,
         
         "lists": ["druid"],
-        "source": "Source"
+        "source": "Player's Handbook"
+    },
+    "primal-savagery": {
+        "name": "Primal Savagery",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [false, true, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee spell attack against one creature within 5ft. of you. On a hit, the target takes {*}d10 @acid damage. After you make the attack, your teeth or fingernails return to normal."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["druid"],
+        "source": "Xanathar's Guide to Everything"
     }
 }
