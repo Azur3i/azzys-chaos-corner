@@ -14,9 +14,6 @@ uasort($spells, function ($a, $b) {
     return strcmp($a["level"], $b["level"]);
 });
 
-$spellName = array_key_first($spells);
-$targetSpell = $spells[$spellName];
-
 $schools = [];
 $sources = [];
 foreach ($spells as $spell) {
@@ -157,7 +154,7 @@ $levels = ["Cantrip", 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
                 <!-- spell display -->
                 <div id="spellbox" class="col-md-12 col-lg-8" style="padding-right: 0;">
-                    <?php include ROOT . "/scripts/constructors/spell.php" ?>
+                    <div class="content-list" style="height: 100%; width: 100%; margin: 0;"></div>
                 </div>
             </div>
         </div>
