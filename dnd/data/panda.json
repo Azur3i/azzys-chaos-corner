@@ -476,5 +476,35 @@
         
         "lists": ["wizard"],
         "source": "Player's Handbook"
+    },
+    "entangle": {
+        "name": "Entangle",
+        "level": 1,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "Grasping weeds and vines sprout from the ground in a 20ft. square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain. Any creature in the area when you cast the spell must succeed on a STR saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants may use its action to make a STR check against your spell save DC. On a success, it frees itself."
+            },
+            {
+                "desc": "When the spell ends, the conjured plants wilt away."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "ranger"],
+        "source": "Player's Handbook"
     }
 }
