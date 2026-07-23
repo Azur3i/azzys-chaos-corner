@@ -386,5 +386,31 @@
         
         "lists": ["sorcerer", "wizard"],
         "source": "Player's Handbook"
+    },
+    "silvery-barbs": {
+        "name": "Silvery Barbs",
+        "level": 1,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "reaction",
+            "condition": "a creature you can see within 60ft. succeeds on an attack roll, an ability check, or a saving throw"
+        },
+        "range": "60ft.",
+        "vsm": [true, false, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "You magically distract the triggering creature and turn its momentary uncertainty into encouragement for another creature. The triggering creature must reroll the d20 and use the lower roll. You may then also choose a different creature you can see within range (you can choose yourself). The chosen creature has advantage on the next attack roll, ability check, or saving throw it makes within 1 minute. A creature can be empowered by only one use of this spell at a time."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "wizard"],
+        "source": "Strixhaven: A Curriculum of Chaos"
     }
 }
