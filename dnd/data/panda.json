@@ -506,5 +506,35 @@
         
         "lists": ["druid", "ranger"],
         "source": "Player's Handbook"
+    },
+    "ensnaring-strike": {
+        "name": "Ensnaring Strike",
+        "level": 1,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
+        "vsm": [true, false, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a STR saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away."
+            },
+            {
+                "desc": "While restrained by this spell, the target takes {*}d6 @piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a STR check against your spell save DC. On a success, the target is freed."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["ranger"],
+        "source": "Player's Handbook"
     }
 }
