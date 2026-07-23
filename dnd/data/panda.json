@@ -412,5 +412,31 @@
         
         "lists": ["bard", "sorcerer", "wizard"],
         "source": "Strixhaven: A Curriculum of Chaos"
+    },
+    "false-life": {
+        "name": "False Life",
+        "level": 1,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a small amount of alcohol or distilled spirits"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + {*} temporary hit points for the duration."
+            }
+        ],
+        "levels": [4, 9, 14, 19, 24, 29, 34, 39, 44],
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
     }
 }
