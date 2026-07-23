@@ -333,5 +333,31 @@
         
         "lists": ["ranger"],
         "source": "Player's Handbook"
+    },
+    "mage-armor": {
+        "name": "Mage Armor",
+        "level": 1,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a piece of cured leather"],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a willing creature who is not wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its DEX modifier. The spell ends if the target dons armor or if you dismiss the spell as an action."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
     }
 }
