@@ -39,7 +39,7 @@ function renderSpells($str) {
 
     foreach ($spells as $id => $spell) {
         $target = strtolower($spell["name"]);
-        $str = str_replace("@$target", "<i><a title='" . $spell["name"] . " (spell)' href='/dnd/spells#$id'>$target</a></i>", $str);
+        $str = str_replace("@$target", "<i><a class='spell-link' data-spell='$id' href='/dnd/spells#$id'>$target</a></i>", $str);
     }
     return $str;
 }

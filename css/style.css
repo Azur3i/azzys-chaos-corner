@@ -581,7 +581,10 @@ table.ability {
 }
 
 #spell-display {
+    background: linear-gradient(to bottom, #706B83 0%, #5A6575 50%, #67758A 100%);
+
     height: 100%;
+
     h1 {
         margin: 0;
     }
@@ -645,6 +648,16 @@ table.ability {
     #spell-desc > p {
         margin-top: 1rem;
     }
+}
+
+#spell-preview {
+    transform: scale(0.75);
+    transform-origin: top left;
+    z-index: 1000;
+}
+
+.spell-link:hover {
+    color: rgb(var(--pink));
 }
 
 #spell-search {
