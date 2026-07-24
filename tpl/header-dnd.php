@@ -18,7 +18,7 @@
     </nav>
 </header>
 
-<div class="main-content">
+<div class="main-content" style="padding: 0; margin: 0;">
     <div id="spell-preview" style="max-width: 60%;">
         <div id="spell-preview-content"></div>
     </div>
