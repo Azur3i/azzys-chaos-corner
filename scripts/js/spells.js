@@ -80,13 +80,13 @@ function filterSpell () {
 
         // filter options that can be filtered AND/OR
         let elAndOr = [
-            ".button-toggle-2.toggle-classlist"
+            "classlist"
         ];
 
         let [operand] = getLogicOp();
 
         elAndOr.forEach(element => {
-            let [wl, bl] = getFilters(element);
+            let [wl, bl] = getFilters(".button-toggle-2.toggle-" + element);
 
             if (operand == "and") {
                 hidden = applyAnd(prop, wl, bl, operand, hidden);
@@ -98,13 +98,13 @@ function filterSpell () {
         // filter options that can only be filtered OR; 
         // filtering AND would be redundant as these can only have 1 value
         let elOr = [
-            ".button-toggle-2.toggle-school",
-            ".button-toggle-2.toggle-level",
-            ".button-toggle-2.toggle-source"
+            "school",
+            "level",
+            "source"
         ]
 
         elOr.forEach(element => {
-            let [wl, bl] = getFilters(element);
+            let [wl, bl] = getFilters(".button-toggle-2.toggle-" + element);
 
             hidden = applyOr(prop, wl, bl, operand, hidden);
         });
