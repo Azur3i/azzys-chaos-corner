@@ -32,5 +32,31 @@
         
         "lists": ["wizard"],
         "source": "Source"
+    },
+    "jump": {
+        "name": "Jump",
+        "level": 1,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a grasshopper's hind leg"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a creature. The creature's jump distance is tripled until the spell ends."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "druid", "ranger", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
     }
 }
