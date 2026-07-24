@@ -1,11 +1,11 @@
-function loadSpell(target) {
+function loadStatblock(target) {
     $.get(
-        "/scripts/constructors/spell.php", {target: target},
+        "/scripts/constructors/creature.php", {target: target},
         function(response) {
-            $("#spellbox").html(response);
+            $("#statblockbox").html(response);
             updateButton(target);
 
-            document.title = $("#spellname").data("name") + " - Spells - Azzy's Chaos Corner"
+            document.title = $("#creaturename").data("name") + " - Bestiary - Azzy's Chaos Corner"
         }
     )
 }
@@ -19,24 +19,24 @@ $(function () {
     let spell = location.hash.substring(1);
 
     if (spell) {
-        loadSpell(spell);
+        loadStatblock(spell);
     } else if (button) {
         updateButton($(`#spell-display`).attr("spell"));
     }
 })
 
 $(window).on("hashchange", function () {
-    let spell = location.hash.substring(1);
-    loadSpell(spell);
+    let statblock = location.hash.substring(1);
+    loadStatblock(statblock);
 });
 
 $(".button-list").click(function (e) {
     e.preventDefault();
 
-    let spell = $(this).attr("id");
-    history.pushState(null, "", "#" + spell);
+    let statblock = $(this).attr("id");
+    history.pushState(null, "", "#" + statblock);
 
-    loadSpell(spell);
+    loadStatblock(statblock);
 });
 
 // ajax function to change level attribute

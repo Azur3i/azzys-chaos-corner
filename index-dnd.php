@@ -17,7 +17,7 @@
                 <a class="col button md" href="/dnd/subclasses">Subclasses</a>
                 <a class="col button md" href="/dnd/races">Races</a>
                 <a class="col button md" href="/dnd/spells">Spells</a>
-                <a class="col button md">Creatures</a>
+                <a class="col button md" href="/dnd/bestiary">Bestiary</a>
             </div>
         </div>
     </div>

@@ -144,7 +144,7 @@
         },
         "path-of-the-experiment": {
             "name": "Path of the Experiment",
-            "desc": ["Barbarians following the Path of the Experiment supplement their rage with alchemical cocktails that surge in their bodies through syringes and tubes of copper, steel, and glass. These formulas enhance their ability to channel primal might, or perhaps—because of their rage—they are the only people who can survive the chemicals flooding their veins. A barbarian may have created the implants and serums through their own experimentation, or they could have been subjected to the insidious work of others. Whatever the origin, it could have been well-intentioned and made to enhance or preserve the barbarian's life, or it might have been an unhinged alchemical exploration."],
+            "desc": ["Barbarians following the Path of the Experiment supplement their rage with alchemical cocktails that surge in their bodies through syringes and tubes of copper, steel, and glass. These formulas enhance their ability to channel primal might, or perhaps - because of their rage - they are the only people who can survive the chemicals flooding their veins. A barbarian may have created the implants and serums through their own experimentation, or they could have been subjected to the insidious work of others. Whatever the origin, it could have been well-intentioned and made to enhance or preserve the barbarian's life, or it might have been an unhinged alchemical exploration."],
             "magic": {
                 "caster": "none"
             },
@@ -549,7 +549,7 @@
             "levels": {
                 "1": [
                     {
-                        "name": "Oath Spells",
+                        "name": "Domain Spells",
                         "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
                         "type": "table",
                         "content": {
@@ -595,6 +595,111 @@
                 ]
             },
             "source": "Xanathar's Guide to Everything"
+        },
+        "harvest-domain": {
+            "name": "Harvest Domain",
+            "desc": ["The Harvest Domain draws from the cycle beginning with creation, reaching abundance, and ending in culling before repeating endlessly. Deities of farming and crops can focus on one of the harvest's aspects, but most draw from each phase of the cycle. Clerics of this domain are drawn to the cyclical nature of existence, and they often take on roles as shepherds of different cycles."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Domain Spells",
+                        "desc": "Whenever you finish a short rest, you may choose an aspect of the harvest cycle: sowing, growing, or reaping. You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Cleric level", "Sowing", "Growing", "Reaping"],
+                                ["3rd", "@druidcraft, @goodberry", "@guidance, @entangle", "@chill touch, @inflict wounds"],
+                                ["5th", "@lesser restoration", "@summer winds", "@hold person"],
+                                ["9th", "@harvest moonglow", "@plant growth", "@culling sickle"],
+                                ["13th", "@death ward", "@sanctum of the shepherd", "@consuming pyre"],
+                                ["17th", "@awaken", "@mass cure wounds", "@field of reaping"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Community Almanac",
+                        "desc": "You gain a herbalism kit, and proficiency with the herbalism kit. You also gain proficiency in either the Nature (WIS) or Survival (WIS) skill, your choice."
+                    },
+                    {
+                        "name": "Cornucopia",
+                        "desc": "Whenever you start a short rest, you may magically create a cornucopia filled with enough food for a number of creatures equal to 2 * proficiency. Whenever creatures that eat the food finish a short rest, you may distribute a number of d4s equal to your cleric level among creatures who ate the food. Each creature may immediately roll the dice they're alloted, and regain hitpoints equal to the total. The cornucopia, and any uneaten food, vanish when the short rest ends. You may use this feature once per long rest."
+                    }
+                ],
+                "2": [
+                    {
+                        "name": "Bountiful Harvest",
+                        "desc": "You magically invoke the spirit of the harvest. As an action, you present your holy symbol, and up to 6 creatures of your choice within 60ft. of you gain inspiration. A creature may benefit from this feature once per long rest. You grant all targets one of the following additional benefits. If your current harvest aspect is a different one, it changes to match your choice:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Sowing",
+                                "desc": "The creature gains a number of temporary hitpoints equal to your proficiency + WIS."
+                            },
+                            {
+                                "name": "Growing",
+                                "desc": "Until the end of your next turn, whenever the creature makes an attack roll or ability check, it may add 1d4 to the total."
+                            },
+                            {
+                                "name": "Reaping",
+                                "desc": "A target deals extra @necrotic damage equal to your proficiency the first time it damages a creature before the end of your next turn."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Blessing of the Seasons",
+                        "desc": "You may draw upon the powers of the harvest cycle to potentially avert disaster. Whenever a creature you can see within 30ft. of you fails a saving throw of a particular type determined by your current aspect, you may use your reaction to allow it to reroll the d20, and use the new roll. Additionally, after the saving throw succeeds or fails, roll a number of d4s equal to your proficiency. The target regains hitpoints equal to the total number rolled. You may use this feature a number of times equal to your WIS (minimum of 1) every long rest. The saving throws you can affect are as follows:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Sowing",
+                                "desc": "DEX / CHA"
+                            },
+                            {
+                                "name": "Growing",
+                                "desc": "CON / INT"
+                            },
+                            {
+                                "name": "Reaping",
+                                "desc": "STR / WIS"
+                            }
+                        ]
+                    }
+                ],
+                "8": [
+                    {
+                        "name": "Potent Spellcasting",
+                        "desc": "You may add your WIS to the damage you deal with any cleric cantrip."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Eternal Wheel",
+                        "desc": "Whenever you use your bountiful harvest channel divinity feature, you may invoke the endless cycle of life, death, and rebirth to grant yourself and the creatures affected by your channel divinity feature an additional benefit based on your current aspect. You may use this feature once per long rest. You may use a spell slot of 7th level or higher to use this feature without expending a use.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Sowing",
+                                "desc": "A creature gains the effect of the @regenerate spell for 1 minute, or until you lose concentration."
+                            },
+                            {
+                                "name": "Growing",
+                                "desc": "A creature gains advantage on saving throws and ability checks for 1 hour, or until you lose concentration."
+                            },
+                            {
+                                "name": "Reaping",
+                                "desc": "A creature gains resistance to @necrotic, @psychic, and @poison damage for 1 hour."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
         }
     },
     "druid": {
@@ -706,9 +811,486 @@
                 ]
             },
             "source": "Player's Handbook"
+        },
+        "circle-of-the-old-ways": {
+            "name": "Circle of the Old Ways",
+            "desc": ["Favoring the heart of the darkest forests, druids of the Circle of the Old Ways commune with ancient, forgotten entities that lurk within, calling forth truly primeval power to serve as defenders of the oldest and wildest of places.", "They harness the power of the Elderwood trees, which are home to the souls of long-dead feyfolk and share their primordial wisdom and might when called upon."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Old Ways Sacred Rites (Optional)",
+                        "desc": "The Old Ways sacred sites table offers examples to choose, or use as inspiration, to create places steeped in the Old Ways, where your circle might congregate, or where you may commune with primeval powers.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d6", "Sacred Site"],
+                                [1, "Ring of standing stones atop a remote hilltop, each one marked with runes and symbols representing animal spirits."],
+                                [2, "Perpetually frozen river at the bottom of a deep ravine, with a plethoraa of oversized and seemingly intelligent fish beneath the ice."],
+                                [3, "Hidden cave, buried beneath a scorched dune, revealed by the shifting sands for a single night four times a year."],
+                                [4, "Turbulent tidepool by the coast, with bottomless waters filled with glowing flora, fauna, and crystalline outcroppings."],
+                                [5, "Circle of ancient trees, with ghost-white bark and blood-red leaves, each one bearing the face of a long-dead druid."],
+                                [6, "Massive barrow in the deep woods, which contains the spirits of countless fey folk, and the old gods of the natural world."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Circle Spells",
+                        "desc": "Your study of the Old Ways grants you access to certain spells. You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Druid level", "Spells"],
+                                ["2nd", "@ancestral communion, @shield of faith, @shillelagh"],
+                                ["3rd", "@barkskin, @spike growth"],
+                                ["5th", "@magic circle, @plant growth"],
+                                ["7th", "@freedom of movement, @private sanctum"],
+                                ["9th", "@awaken, @tree stride"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Bough and Branch",
+                        "desc": "Even the humblest of your weapons channels the might of the old forest. Whenever you cast the @shillelagh spell, you may cause a shield made of gnarled wood to grow into your free hand if you have one, no action required to don it. It vanishes when the spell ends. You cannot be forced to drop the affected weapon or shield unless you are incapacitated. Additionally, for the duration of the spell, you may ignore somatic components of your druid spells, and the weapon enhanced by the spell becomes a druidic focus for you."
+                    },
+                    {
+                        "name": "Wood Wose",
+                        "desc": "As a bonus action, or as part of casting the @shillelagh spell, you may expend a use of your wild shape feature to suffuse yourself with the power of the primordial woods, gaining the following benefits. The effects last for 10 minutes. It ends early if you dismiss it as a free action, are incapacitated, or die.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bark Bulwark",
+                                "desc": "While you are not wearing armor, your base AC is 10 + DEX + WIS."
+                            },
+                            {
+                                "name": "Elderwood Sap",
+                                "desc": "Whenever you hit a creature with an attack roll, the target is coated in Elderwood sap until your next turn. While coated, the target gains disadvantage on attack rolls against targets other than you."
+                            },
+                            {
+                                "name": "Oaken Resolve",
+                                "desc": "You gain advantage on STR and CON saving throws."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Oak and Thorn",
+                        "desc": "The wrath of the Elderwoods drives you, and punishes your foes. Whenever you activate your wood wose feature, you gain the following additional benefits for the duration.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Oakenfist",
+                                "desc": "You may attack twice instead of once whenever you take the @attack action on your turn."
+                            },
+                            {
+                                "name": "Gnarled Thorns",
+                                "desc": "Once on each of your turns when you hit a creature with a melee weapon attack, the target takes an extra 1d6 @piercing damage."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Deepwood Elder",
+                        "desc": "Your connection to the Elderwood grows stronger. Whenever you activate your wood wose feature, you gain the following additional benefits for the duration.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Primeval Wrath",
+                                "desc": "Once per turn when you hit a creature with a melee attack, you may force the target to succeed on a STR saving throw, or be knocked prone."
+                            },
+                            {
+                                "name": "Bramblebark",
+                                "desc": "Whenever a creature within 5ft. of you hits you with a melee attack, the attacker takes 1d8 @piercing damage. A creature may take this damage only once per turn."
+                            },
+                            {
+                                "name": "Rampant Growth",
+                                "desc": "Whenever you activate your wood wose feature, and at the start of each of your subsequent turns, you gain a number of temporary hitpoints equal to WIS + proficiency."
+                            }
+                        ]
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Ancient Protector",
+                        "desc": "When you awaken your connection to the Elderwood, you now become an incarnation of its ancient might. Whenever you activate your wood wose feature, you gain the following additional benefits for the duration.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Old Growth",
+                                "desc": "If you are smaller than Large, you become Large, along with anything you are wearing or carrying. If there is not enough room to accomodate the size change, your size doesn't change. You gain 5ft. of reach."
+                            },
+                            {
+                                "name": "Mighty Trunk",
+                                "desc": "You gain resistance to @bludgeoning and @piercing damage."
+                            },
+                            {
+                                "name": "Rampant Growth",
+                                "desc": "As a reaction whenever a creature that is covered in Elderwood sap within your reach makes an attack roll, you may make a melee attack against that creature."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        },
+        "circle-of-wicker": {
+            "name": "Circle of Wicker",
+            "desc": ["Cunning in their ancient art, druids of the Circle of Wicker fashion twig dolls and effigies, binding their magic into these crude forms. These creations often resemble animals, rune shapes, natural symbols, or people. Protective tokens and promises of retribution against trespassers are these druids' stock in trade. You can weave the magic of the land through your wicker creations as boons to your friends and banes to your foes."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Wicker Effigies (Optional)",
+                        "desc": "The Old Ways sacred sites table offers examples to choose, or use as inspiration, to create places steeped in the Old Ways, where your circle might congregate, or where you may commune with primeval powers.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d10", "Effigy"],
+                                [1, "Antlered bowman, to ensure a successful hunt."],
+                                [2, "Bird-headed scarecrow, to protect crops from pests and blight."],
+                                [3, "Apple-adorned fertility goddess, for a bountiful harvest."],
+                                [4, "Unsettling stick figures, to ward off interlopers from hidden dwellings."],
+                                [5, "Goat with curved horns, to ensure a safe winter."],
+                                [6, "Wolf's head, to protect against dangers of the night."],
+                                [7, "Fearsome tusked mask, to grant ferocity in battle."],
+                                [8, "Spiraled sunburst with a grin, to herald a long, warm summer.1"],
+                                [9, "Three-sided pyramid with laddered edges, to mark the site of a sacrifice."],
+                                [10, "Intricate ring that represents the cycle of the year, to guarantee life, death, and rebirth."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Circle Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Druid level", "Spells"],
+                                ["2nd", "@bane, @bless"],
+                                ["3rd", "@summer winds, @zone of truth"],
+                                ["5th", "@bestow curse, @tiny hut"],
+                                ["7th", "@death ward, @sanctum of the shepherd"],
+                                ["9th", "@hold monster, @lucky charm"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Bewitched Effigy",
+                        "desc": "Your primal magic may manifest as a wicker effigy, and radiate out from it. As a bonus action, you may expend a use of your wild shape feature to create a wicker effigy in an unoccupied space you can see within 30ft. of you. The effigy is a Small object with 15 AC, hitpoints equal to 5 times your druid level, vulnerability to @fire damage, and immunity to @poison and @psychic damage. The effigy vanishes after 1 minute, when reduced to 0 hitpoints, or when you use this feature again. It creates one of the following auras of your choice in a 30ft. radius, filling it with dim light for the duration.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Sacrifice",
+                                "desc": "As a reaction whenever a creature in the aura takes damage, you may use your reaction to deal 1d8 + WIS @fire damage to the creature."
+                            },
+                            {
+                                "name": "Soothe",
+                                "desc": "When you create this effigy, and as a bonus action on subsequent turns while the effigy remains, a creature of your choice you can see within the aura regains 1d6 hitpoints. You may use this effigy to restore hitpoints in this way a number of times equal to 2 * WIS."
+                            },
+                            {
+                                "name": "Ward",
+                                "desc": "You and any number of creatures of your choice within in the aura gain +1 AC."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Wicker Token",
+                        "desc": "You may weave wicker tokens that carry a touch of your magic. The tokens are tiny objects with 5 AC, 1 hitpoint, and immunity to @poison and @psychic damage. You may cast spells with a range of touch on a creature carrying one of your tokens, as long as you are on the same plane of existence. Whenever you finish a long rest, all existing tokens vanish, and you may create a number of tokens equal to your proficiency."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Wicker Rising",
+                        "desc": "The energy you channel through your wicker effigy grows stronger, empowering its benefits.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Sacrifice",
+                                "desc": "The @fire damage increases to 2d8 + WIS."
+                            },
+                            {
+                                "name": "Soothe",
+                                "desc": "The healing of your effigy increases to 1d8, and whenever you target a creature with the effigy, you may expend 5 hitpoints from the effigy to remove one of the following: charmed, frightened, paralyzed, poisoned, or stunned."
+                            },
+                            {
+                                "name": "Ward",
+                                "desc": "You and any number of creatures of your choice within in the aura gain resistance to 1 damage type of your choice that isn't @force."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Soulbound Poppet",
+                        "desc": "As an action, you may expend a use of your wild shape feature, and choose a creature you can see within 60ft. of you, to magically create a wicker doll that vaguely resembles the target. The doll is a Tiny object with 10 AC, 10 hitpoints, vulnerability to @fire damage, and immunity to @poison and @psychic damage. The doll vanishes after 1 minute, or when it is reduced to 0 hitpoints. While it exists, the target gains disadvantage on attack rolls against a creature carrying the doll, and whenever a creature carrying the doll damages the target for the first time ona turn, the target takes an extra 2d10 @necrotic damage."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Wicker Zenith",
+                        "desc": "Your wicker effigies reach the pinnacle of their power. At the start of your turn, you may change your effigy's aura to a different one. Additionally, all the auras grow stronger in the following ways:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Sacrifice",
+                                "desc": "The @fire damage increases to 3d8 + WIS."
+                            },
+                            {
+                                "name": "Soothe",
+                                "desc": "Whenever you or any number of creatures of your choice starts a turn in the aura, it stops being either charmed or frightened, target's choice."
+                            },
+                            {
+                                "name": "Ward",
+                                "desc": "Choose an ability; you and any number of creatures of your choice within the aura gain advantage on saving throws made with the chosen ability."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
         }
     },
     "paladin": {
+        "betrayed": {
+            "name": "Betrayed",
+            "desc": ["You swore to uphold the law, but found a lord bending it to his own will, using you as an agent of his tyrannical rule. Or, perhaps a goddess of mercy sacrificed you for her own goals, breaking her own ideals you fought to upheld for her. No matter the reason, you did not break your oath; you stuck by it until the very end, until it eventually broke you. But you did not surrender. You fight against the pits of despair looming to draw you in, and draw power from other sources to restore your corrupted ideal to its former glory. Thus is the path of those that uphold their oath by breaking it."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "quote": "If blood rains from the sky to nourish the depraved...",
+                        "name": "Rebirth of an Oath",
+                        "desc": "You once had a different oath, some allegiance you wouldn't forsake for the world. But that did not matter. The betrayed paladin, much like the oathbreaker, is not a path you set out for. Instead, when your loftiest ideals, and her proudest protectors failed to uphold the dream you shared, it left you with nothing but your life, and a fading power likely to soon leave you too. But you keep fighting for it, as if for your very own life. Should you meet any person that used to be part of your prior belief, but abandoned it, you will have a bad impression of them, and they will trigger any ability or spell you use that a fiend or evil creature would."
+                    },
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Paladin level", "Spells"],
+                                ["3rd", "@hunter's mark, @false life"],
+                                ["5th", "@detect thoughts, @enhance ability"],
+                                ["9th", "@elemental weapon, @thunder step"],
+                                ["13th", "@sickening radiance, @polymorph"],
+                                ["17th", "@arcane hand, @destructive wave"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tenets of Rebirth",
+                        "desc": "Though the exact words and strictures of the betrayed paladin vary, paladins of this oath share these tenets:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Survival",
+                                "desc": "You live for your cause, so do not let your cause die with you. Do not squander your final breath on deluded glory, but live on, to fight another day."
+                            },
+                            {
+                                "name": "Passion",
+                                "desc": "As you are all that is left of your belief, its future will fade if the fire inside you dies. You cannot afford for your resolve to waiver, you need to believe in your oath."
+                            },
+                            {
+                                "name": "Resourcefulness",
+                                "desc": "If you ever wish to rise from the ruins of your broken order, and see the sun set once more upon a belief not even her proudest paragons could uphold, you will need all the tools you can get. Utilize whatever you can find, repurpose it to fit your aims. Even the bones of sinners could become weapons."
+                            },
+                            {
+                                "name": "Sanctification",
+                                "desc": "You will have to repair old sanctuaries, build new ones, and vanquish heresy. Only you can return the light that was lost from this world. May your holy symbol be a shield for your followers, a blight upon your enemies, and a brick to build upon a foundation of the past's shattered sins."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Channel Divinity",
+                        "desc": "You gain the following 2 Channel Divinity options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Nourishment of the Broken",
+                                "desc": "As a bonus action after you damage a creature you can see within 5ft. of you, it and all creatures of your choice within 5ft. of both you and the target have their life force sucked out. They must succeed on a CON saving throw, or take 1d4 + CHA @necrotic damage. You restore hitpoints equal to half the @necrotic damage done, rounded down."
+                            },
+                            {
+                                "name": "Heaven's Due",
+                                "desc": "As an action, you unleash your suffering on all that claim to be good or evil. Every aberration, celestial, elemental, fiend, fey and and undead within 30ft. of you must succeed on an INT saving throw, or gain disadvantage on attack rolls while they're within 60ft. of you for 1 minute. Any of your attack rolls of 19 or 20 on the d20 against an affected creature is a critical hit. An affected creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "quote": "...running from the edge of the savage, enraged.",
+                        "name": "Aura of Rage",
+                        "desc": "Whenever you or a creature within 5ft. of you take @bludgeoning, @piercing or @slashing damage, you may give it resistance to @bludgeoning, @piercing and @slashing damage until the end of your next turn. Additionally, if you or a creature within 5ft. of you is attacked by a creature within 10ft. of you, the attacker cannot make opportunity attacks against you until the end of your next turn. The range of this aura increases to 10ft. for protection and 30ft. for attackers at 18th level."
+                    }
+                ],
+                "15": [
+                    {
+                        "quote": "Beware the avenger, with weapons reforged...",
+                        "name": "Reforged Fury",
+                        "desc": "Your armor grants you a bonus +1 AC, and even though your physical strength instills a deep-rooted fear in you, you gain +1 to STR checks and saving throws. Additionally, as an action, you may imbue your armor with divine magic, making it grow one size category larger for 1 minute. While in this state, you count as a construct on top of your other creature types for the sake of spells and effects that target creatures of that type, and you gain 5ft. reach on your melee weapons. This state lasts until you fall unconscious, or until you dismiss it as a bonus action."
+                    }
+                ],
+                "20": [
+                    {
+                        "quote": "...their profaned wrath leaves the defiler scorched.",
+                        "name": "Oath Cleanser",
+                        "desc": "You have restored your oath to its pure form, and are once more able to fight for it with all your conviction. Every time you finish a long rest, you may choose between the 20th level feature of either your original paladin oath, or this one. As a bonus action, you become the Paladin Reborn. You may use this feature aonce per long rest. As the Paladin Reborn, you gain the following benefits for 1 minute:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Blinding light emanates from you in a 60ft. radius, granting you a bonus to damage you deal with spells and your divine smite trait equal to your CHA."
+                            },
+                            {
+                                "desc": "Creatures you deal @radiant damage to start leaving a glowing trail."
+                            },
+                            {
+                                "desc": "You may make one of the following sweeping blows. You may make one sweeping blow every turn.",
+                                "type": "list",
+                                "content": [
+                                    {
+                                        "desc": "You swipe your weapon in a large arc. Make a melee weapon attack against the main target; all creatures in a cone equal to 5ft. + your reach in size, centered on the main target, must succeed on a DEX saving throw or take half your weapon's damage, rounded down."
+                                    },
+                                    {
+                                        "desc": "After moving at least 10ft. in a straight line, you may jump to an unoccupied space you can see. Every creature in a circle the radius of which equals 5ft. + your reach must succeed on a DEX saving throw or take half your weapon's damage, rounded down."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Reforged Fury",
+                        "desc": "While transformed, you resemble an angelic machine, and may choose to change your weapon's damage type to @radiant damage."
+                    }
+                ]
+            },
+            "source": "The Archivist's Anthology of Forgotten Lore"
+        },
+        "oath-of-castigation": {
+            "name": "Oath of Castigation",
+            "desc": ["Evil and wickedness are widespread and long-lived, but not infinite. Paladins who swear the Oath of Castigation root evil out to burn it away utterly, giving light to all that is innocent and good. Whether bound by the laws of mortals, their deity, or their own personal code, they relentlessly hunt down evil where it thrives. Paladins of this oath know evil cannot hide in any festering place once it burns."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Wicked Nemeses (Optional)",
+                        "desc": "The wicked nemeses table offers examples of malefactors, villains, and other evil beings that you have rooted out and purged in the past, or perhaps one you're still huntin. Facing these nemeses may have put you on the path of purging wickedness, wherever it lurks.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d10", "Nemesis"],
+                                [1, "A rotrting vampire noble, who spreads a deadly plague through the command of countless vermin."],
+                                [2, "A brutal contract killer, who sells their services to various cults and shadowy organizations."],
+                                [3, "A charismatic cult leader, who lords over a remote island, making seasonal sacrifices of mortals to ensure a bountiful harvest each year."],
+                                [4, "An immensely intelligent flesh golem, that killed its creature to pursue its own sinister work with strange science and gruesome experiments."],
+                                [5, "An envious hag of the woods, who corrupts the youths of small villages into committing horrific atrocities."],
+                                [6, "A proud and vain heretic, who gathers zealous followers after a blood schism, to initiate a bloody crusade in the name of their twisted beliefs."],
+                                [7, "A once-renowned hunter, now cursed with lycanthropy, who has gone on bloody rampages."],
+                                [8, "A relentless necromancer, who scours ancient ruins for forbidden magic to free their otherworldly master from an eldritch prison."],
+                                [9, "A strange, amphibious creature that emerges from the depths to kidnap innocents, and drag them below the water's surface for unknown purposes."],
+                                [10, "A bloodthirsty revenant, who was once a dark knight, and now musters other undead riders to bring about death and decay."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Paladin level", "Spells"],
+                                ["3rd", "@divine favor, @inflict wounds"],
+                                ["5th", "@chain of conviction, @hold person"],
+                                ["9th", "@counterspell, @speak with dead"],
+                                ["13th", "@consuming pyre, @locate creature"],
+                                ["17th", "@flame strike, @hold monster"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tenets of Castigation",
+                        "desc": "The tenets of the Oath of Castigation drive a paladin to act with conviction and without mercy in the destruction of wickedness. Though the exact words and strictures of the Oath of Castigation vary, paladins of this oath share these tenets:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Certainty",
+                                "desc": "Burn away all doubt in pursuit of duty."
+                            },
+                            {
+                                "name": "Burn Wickedness",
+                                "desc": "The wicked and corrupt must burn to spare the innocent."
+                            },
+                            {
+                                "name": "Purge Sin",
+                                "desc": "Sin is forgiven through suffering equal to the pain it inflicted."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Channel Divinity",
+                        "desc": "You gain the following 2 Channel Divinity options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Castigate",
+                                "desc": "As an action, you may clap those you would bring to justice in fiery shackles. Choose a number of creature up to your CHA (minimum of 1) you can see within 30ft. of you. Each creature must succeed on a STR saving throw, or be wrapped in fiery shackles and have its speed reduced to 0 for 1 minute. As a bonus action, you may cause the shackles to flare; each shackled creature takes 2d6 @fire damage. A shackled creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+                            },
+                            {
+                                "name": "Incite",
+                                "desc": "As an action, you may better seek out wickness and corruption. For 10 minutes, you gain advantage on Investigation (INT) and Insight (WIS) checks. As a bonus action during this time, you may choose a creature you can see within 10ft. of you. The target must succeed on a CHA saving throw, or be frightened for 1 minute. While the target is frightened in this way, it cannot speak a deliberate lie. The creature stops being frightened if the target takes damage, or if you use this bonus action again."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Kindling Aura",
+                        "desc": "You and any number of creatures of your choice within your aura of protection feature may ignore creatures' resistance to @fire and @radiant damage. Whenever an affected creature hits with a weapon attack, it may deal @fire damage instead of the damage it would normally do. Additionally, you and affected creatures in the aura may add your CHA (minimum of 1) to Investigation (INT) and Insight (WIS) checks."
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Fervent Inquisitor",
+                        "desc": "As a reaction whenever a creature damages you or a creature not hostile to you within 30ft. of you that you can see, you may gain advantage on your next attack roll against the attacker. Additionally, whenever you deal @fire or @radiant damage to a creature with half its hitpoints or less remaining, you become aware of any lies the creature has willingly and knowingly spoken to you in the past 24 hours."
+                    }
+                ],
+                "20": [
+                    {
+                        "name": "Fire and Brimstone",
+                        "desc": "As a bonus action, you embody cleansing flame, and gain the following benefits for 1 minutes, or until you end them as a free action. You may use this feature once per long rest. You may use a spell slot of 5th level or higher to use this feature without expending a use.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You gain immunity to @fire damage."
+                            },
+                            {
+                                "desc": "Lashes of divine flame increase your reach by 10ft. Your melee attacks ignore half and three-quarters cover."
+                            },
+                            {
+                                "desc": "Whenever you hit a creature with an opportunity attack, or whenever a creature hostile to you ends its turn within your reach, it must succeed on a CHA saving throw, or be knocked prone, and have its speed reduced to 0 until the start of its next turn."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        },
         "oath-of-devotion": {
             "name": "Oath of Devotion",
             "desc": ["The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue and order. Sometimes called cavaliers, white knights or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good, and use their gods' tenents as the measure of their devotion. They hold angels - the perfect servants of good - as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."],
@@ -876,124 +1458,7 @@
                 ]
             },
             "source": "Asmodeus: King of Hell"
-        },
-        "betrayed": {
-            "name": "Betrayed",
-            "desc": ["You swore to uphold the law, but found a lord bending it to his own will, using you as an agent of his tyrannical rule. Or, perhaps a goddess of mercy sacrificed you for her own goals, breaking her own ideals you fought to upheld for her. No matter the reason, you did not break your oath; you stuck by it until the very end, until it eventually broke you. But you did not surrender. You fight against the pits of despair looming to draw you in, and draw power from other sources to restore your corrupted ideal to its former glory. Thus is the path of those that uphold their oath by breaking it."],
-            "magic": {
-                "caster": "none"
-            },
-            "levels": {
-                "3": [
-                    {
-                        "quote": "If blood rains from the sky to nourish the depraved...",
-                        "name": "Rebirth of an Oath",
-                        "desc": "You once had a different oath, some allegiance you wouldn't forsake for the world. But that did not matter. The betrayed paladin, much like the oathbreaker, is not a path you set out for. Instead, when your loftiest ideals, and her proudest protectors failed to uphold the dream you shared, it left you with nothing but your life, and a fading power likely to soon leave you too. But you keep fighting for it, as if for your very own life. Should you meet any person that used to be part of your prior belief, but abandoned it, you will have a bad impression of them, and they will trigger any ability or spell you use that a fiend or evil creature would."
-                    },
-                    {
-                        "name": "Oath Spells",
-                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
-                        "type": "table",
-                        "content": {
-                            "header": true,
-                            "content": [
-                                ["Paladin level", "Spells"],
-                                ["3rd", "@hunter's mark, @false life"],
-                                ["5th", "@detect thoughts, @enhance ability"],
-                                ["9th", "@elemental weapon, @thunder step"],
-                                ["13th", "@sickening radiance, @polymorph"],
-                                ["17th", "@arcane hand, @destructive wave"]
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Tenets of Rebirth",
-                        "desc": "Though the exact words and strictures of the betrayed paladin vary, paladins of this oath share these tenets:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Survival",
-                                "desc": "You live for your cause, so do not let your cause die with you. Do not squander your final breath on deluded glory, but live on, to fight another day."
-                            },
-                            {
-                                "name": "Passion",
-                                "desc": "As you are all that is left of your belief, its future will fade if the fire inside you dies. You cannot afford for your resolve to waiver, you need to believe in your oath."
-                            },
-                            {
-                                "name": "Resourcefulness",
-                                "desc": "If you ever wish to rise from the ruins of your broken order, and see the sun set once more upon a belief not even her proudest paragons could uphold, you will need all the tools you can get. Utilize whatever you can find, repurpose it to fit your aims. Even the bones of sinners could become weapons."
-                            },
-                            {
-                                "name": "Sanctification",
-                                "desc": "You will have to repair old sanctuaries, build new ones, and vanquish heresy. Only you can return the light that was lost from this world. May your holy symbol be a shield for your followers, a blight upon your enemies, and a brick to build upon a foundation of the past's shattered sins."
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Channel Divinity",
-                        "desc": "You gain the following 2 Channel Divinity options:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Nourishment of the Broken",
-                                "desc": "As a bonus action after you damage a creature you can see within 5ft. of you, it and all creatures of your choice within 5ft. of both you and the target have their life force sucked out. They must succeed on a CON saving throw, or take 1d4 + CHA @necrotic damage. You restore hitpoints equal to half the @necrotic damage done, rounded down."
-                            },
-                            {
-                                "name": "Heaven's Due",
-                                "desc": "As an action, you unleash your suffering on all that claim to be good or evil. Every aberration, celestial, elemental, fiend, fey and and undead within 30ft. of you must succeed on an INT saving throw, or gain disadvantage on attack rolls while they're within 60ft. of you for 1 minute. Any of your attack rolls of 19 or 20 on the d20 against an affected creature is a critical hit. An affected creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
-                            }
-                        ]
-                    }
-                ],
-                "7": [
-                    {
-                        "quote": "...running from the edge of the savage, enraged.",
-                        "name": "Aura of Rage",
-                        "desc": "Whenever you or a creature within 5ft. of you take @bludgeoning, @piercing or @slashing damage, you may give it resistance to @bludgeoning, @piercing and @slashing damage until the end of your next turn. Additionally, if you or a creature within 5ft. of you is attacked by a creature within 10ft. of you, the attacker cannot make opportunity attacks against you until the end of your next turn. The range of this aura increases to 10ft. for protection and 30ft. for attackers at 18th level."
-                    }
-                ],
-                "15": [
-                    {
-                        "quote": "Beware the avenger, with weapons reforged...",
-                        "name": "Reforged Fury",
-                        "desc": "Your armor grants you a bonus +1 AC, and even though your physical strength instills a deep-rooted fear in you, you gain +1 to STR checks and saving throws. Additionally, as an action, you may imbue your armor with divine magic, making it grow one size category larger for 1 minute. While in this state, you count as a construct on top of your other creature types for the sake of spells and effects that target creatures of that type, and you gain 5ft. reach on your melee weapons. This state lasts until you fall unconscious, or until you dismiss it as a bonus action."
-                    }
-                ],
-                "20": [
-                    {
-                        "quote": "...their profaned wrath leaves the defiler scorched.",
-                        "name": "Oath Cleanser",
-                        "desc": "You have restored your oath to its pure form, and are once more able to fight for it with all your conviction. Every time you finish a long rest, you may choose between the 20th level feature of either your original paladin oath, or this one. As a bonus action, you become the Paladin Reborn. You may use this feature aonce per long rest. As the Paladin Reborn, you gain the following benefits for 1 minute:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "desc": "Blinding light emanates from you in a 60ft. radius, granting you a bonus to damage you deal with spells and your divine smite trait equal to your CHA."
-                            },
-                            {
-                                "desc": "Creatures you deal @radiant damage to start leaving a glowing trail."
-                            },
-                            {
-                                "desc": "You may make one of the following sweeping blows. You may make one sweeping blow every turn.",
-                                "type": "list",
-                                "content": [
-                                    {
-                                        "desc": "You swipe your weapon in a large arc. Make a melee weapon attack against the main target; all creatures in a cone equal to 5ft. + your reach in size, centered on the main target, must succeed on a DEX saving throw or take half your weapon's damage, rounded down."
-                                    },
-                                    {
-                                        "desc": "After moving at least 10ft. in a straight line, you may jump to an unoccupied space you can see. Every creature in a circle the radius of which equals 5ft. + your reach must succeed on a DEX saving throw or take half your weapon's damage, rounded down."
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Reforged Fury",
-                        "desc": "While transformed, you resemble an angelic machine, and may choose to change your weapon's damage type to @radiant damage."
-                    }
-                ]
-            },
-            "source": "The Archivist's Anthology of Forgotten Lore"
-        }
+        } 
     },
     "fighter": {
         "samurai": {
@@ -1039,6 +1504,130 @@
                 ]
             },
             "source": "Xanathar's Guide to Everything"
+        },
+        "barrow-guard": {
+            "name": "Barrow Guard",
+            "desc": ["Barrow Guards are warriors who harness the power of the dead, taking upon themselves spectral energies normally forbidden to the living. Some Barrow Guards are those returned from the dead through magical miracles or the whims of the gods. Others stand at the doors of sacred crypts, ready to push back any who attempt to desecrate the dead. No matter their origin, these stoic sentinels are unconcerned with matters of the living. They are separate, other, and duty-bound to their role as crypt-keepers, ensuring the dead - heroes and villains alike - remain at rest."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Draugr Dice",
+                        "desc": "You house within you the lingering remnants of souls long-departed, and their knowledge and experience imbue you with necromantic energy. It is represented by Draugr Dice, which fuel powers you gain from this subclass. You regain 1 draugr die when you finish a short rest, and regain all draugr die when you finish a long rest. The barrow guard draugr die table shows the die size and number you gain when you reach certain fighter levels.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Fighter level", "Dice"],
+                                ["3rd", "4d6"],
+                                ["5th", "6d8"],
+                                ["9th", "8d8"],
+                                ["11th", "8d10"],
+                                ["13th", "10d10"],
+                                ["17th", "12d12"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Death Knight",
+                        "desc": "Some of your powers expend a draugr die, as specified in the feature's description, and you cannot use a power if it requires you to use a die when all your draugr dice are already expended. The save DC for any of your powers where applicable is 8 + CON + proficiency. You gain access to the following powers:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Dark Rider",
+                                "desc": "As a bonus action, you manifest a ghostly steed that only you may mount. The steed uses the warhorse statblock, but its creature type is undead, it gains resistance to @bludgeoning, @piercing, and @slashing damage, and it may only take the @dash, @disengage, and @dodge actions. Whenever the steed takes the @dash action, you may expend and roll a draugr die. During the movement from that action, the steed's speed increases by a number of ft. equal to 5 times the number rolled. The steed vanishes after 1 hour, if reduced to 0 hitpoints, if you are incapacitated, or if you die. You may use this power once per short rest. You may expend a draugr die as a free action to use this feature without expending a use."
+                            },
+                            {
+                                "name": "Grave Guard",
+                                "desc": "As a reaction whenever you take damage, you may expend and roll a draugr die, reducing the incoming damage by the number rolled + CON."
+                            },
+                            {
+                                "name": "Soul Reaper",
+                                "desc": "Whenever you take the @attack action, you may forego one of your attacks to magically call forth ghostly hands around a creature within 60ft. of you. Expend and roll a draugr die. The target must make a STR saving throw, taking @necrotic damage equal to the number rolled + CON, or half as much on a successful one. Additionally, on a failure, it is grappled for 1 minute."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Siphoning Souls",
+                        "desc": "You may capture the fleeing essence of departing souls to glean knowledge and prowess. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Mortal Coil",
+                                "desc": "As a reaction whenever a creature hostile to you that isn't a construct or undead dies within 30ft. of you, you may regain 1 expended draugr die."
+                            },
+                            {
+                                "name": "Whisper of the Departed",
+                                "desc": "Whenever you make an ability check, you may expend and roll a draugr die, adding the number rolled to the total."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Tomb Castellan",
+                        "desc": "The powers of your death knight feature improve in the following ways:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Phantom Charger",
+                                "desc": "The ghostly steed of your dark rider power ignores difficult terrain Additionally, whenever your steed takes the @dash, @disengage, or @dodge action, you may expend and roll a draugr die. Your steed magically teleports, alongside you if you're riding it, to an unoccupied space you can see within 60ft. of the steed. Each creature of your choice within 10ft. of the steed when it appears must make a CON saving throw, taking @necrotic damage equal to the number rolled + CON on a failed save, or half as much on a successful one."
+                            },
+                            {
+                                "name": "Death Knell",
+                                "desc": "Whenever you use your grave guard power in response to a creature damaging you, the creature takes @psychic damage equal to half the amount of damage the power reduced."
+                            },
+                            {
+                                "name": "Spectral Shrieking",
+                                "desc": "Whenever a creature grappled by your soul reaper power starts its turn, it takes @psychic damage equal to your proficiency. As a reaction when it takes this damage, you may expend and roll a draugr die, adding the number rolled to the damage."
+                            }
+                        ]
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Grave Lord",
+                        "desc": "You are no longer a mere vessel for spectral energy, but a lord of it. Your powers improve in the following ways:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "On A Pale Horse",
+                                "desc": "Whenever you use your dark rider power, you may allow a creature of your choice to mount the steed in addition to you. Additionally, whenever you expend a draugr die during the steed's @dash action, it may move through solid objects and creatures as if they were difficult terrain, along with any riders. If the steed ends its turn inside a solid object, it and any riders take 1d10 @force damage, and are shunted out to the nearest unoccupied space."
+                            },
+                            {
+                                "name": "Sepulchral Shield",
+                                "desc": "Whenever you use your gravel guard power, choose one of the triggering damage types. You gain resistance to that damage type, including the triggering damage, until the start of your next turn."
+                            },
+                            {
+                                "name": "Death Grip",
+                                "desc": "A creature grappled by your soul reaper power is restrained until the grapple ends."
+                            }
+                        ]
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Might of the Necropolis",
+                        "desc": "Your command of the secrets imparted to you is absolute. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Eternal Vigil",
+                                "desc": "You no longer suffer the effects of aging, you cannot be magically aged, and you cannot die of old age. Additionally, you no longer require air, food, drink, or sleep."
+                            },
+                            {
+                                "name": "Restless Dead",
+                                "desc": "Whenever you roll initative, if you have 2 or less draugr dice, you regain expended dice until you have 3."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
         }
     },
     "monk": {
@@ -1132,8 +1721,7 @@
                 "3": [
                     {
                         "name": "Bonus Proficiencies",
-                        "desc": "You gain proficiency in the Performance (CHA) skill if you don't already have it. You also gain proficiency with brewer's supplies if you don't already have it.",
-                        "type": "list"
+                        "desc": "You gain proficiency in the Performance (CHA) skill if you don't already have it. You also gain proficiency with brewer's supplies if you don't already have it."
                     },
                     {
                         "name": "Drunken Technique",
@@ -1160,19 +1748,114 @@
                 "11": [
                     {
                         "name": "Drunkard's Luck",
-                        "desc": "Whenever you make an ability check, an attack roll, or a saving throw and have disadvantage, you may spend 2 ki points to remove the disadvantage for that roll.",
-                        "type": "list"
+                        "desc": "Whenever you make an ability check, an attack roll, or a saving throw and have disadvantage, you may spend 2 ki points to remove the disadvantage for that roll."
                     }
                 ],
                 "17": [
                     {
                         "name": "Intoxicated Frenzy",
-                        "desc": "When you use your flurry of blows, you may make up to 3 additional attacks with it, for a total of 5, but only if each attack targets different creatures this turn.",
-                        "type": "list"
+                        "desc": "When you use your flurry of blows, you may make up to 3 additional attacks with it, for a total of 5, but only if each attack targets different creatures this turn."
                     }
                 ]
             },
             "source": "Xanathar's Guide to Everything"
+        },
+        "way-of-the-pestilent-haze": {
+            "name": "Way of the Pestilent Haze",
+            "desc": ["Adherents of the Pestilent Haze draw plague into their very beings, folding it into their energy and becoming one with the disease. Monks who follow this tradition wander, often following or even preceding waves of pestilence. Some walk with caution, their touch measured, unleashing sickness only where dense populations must be culled. Others revel in the miasma spreading as far and fast as possible."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Miasmic Plague Manifestations (Optional)",
+                        "desc": "Your miasmic plague is a unique, magical affliction that may take many forms that you weave through your deep connection to the contagion. The plague manifestations table offers suggestions for what magical form your signature disease takes as it spreads, as well as its hallmark symptoms.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d10", "Disease", "Manifestation", "Symptoms"],
+                                [1, "Bloodbreath", "Bruise-colored miasma, the edges of which form into slithering tentacles.", "Painful bruises, and a hoarse, bloody cough."],
+                                [2, "Drone Spew", "Swarm of monstrous, mutated flies that buzz with a horrifying drone.", "Bleeding ears, and intense vomiting."],
+                                [3, "Festergut", "Viscous, gray sewer water that leaves a film on surfaces.", "Intense stomach pain, dehydration, and blood loss."],
+                                [4, "Gutterpox", "Globs of toxic, greenish sludge that oozes erratically to the touch.", "Swollen, green papules, and oppressive mucus buildup."],
+                                [5, "Knell Fever", "Hot wind that prickles the skin, and howls with the sound of a tolling bell.", "Heat blisters, and feverish hallucinations."],
+                                [6, "Rotface", "Numerous spiked, fungal spores that float through the air.", "Rapid rotting of flesh, especially around the eyes and mouth."],
+                                [7, "The Unclean", "Undulating mass of pallid flesh, teeth, and tongues.", "Grotesque, mutated growths, such as new tentacle-like appendages, and gnashing mouths."],
+                                [8, "Toadscale", "Infected rains filled with venomous, spectral toads.", "Hardened, itchy patches of scaly skin that turn vibrantly colorful, and fits of agonized croaking."],
+                                [9, "Verminplague", "Scurrying mass of ravenous, spectral plague rats that gnaw and scratch victims.", "Painful boils and pustules, and an incessant, squeaking cough."],
+                                [10, "Yellow Death", "Billowing, skull-shaped clouds of foul-smelling fumes, with a sickly yellow hue.", "Debilitating fatigue, muscle aches, and sunken, sallow skin."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Contagious Discipline",
+                        "desc": "You have brewed and concentrated disease within yourself, and may now push manifestations of it outward. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Claws of Pestilence",
+                                "desc": "Your nails grow into a set of vermin-like claws. You may deal @slashing damage when you hit with an unarmed strike, instead of the usual @bludgeoning damage. Whenever you hit a creature with an attack from your flurry of blows feature, you may deal extra @necrotic damage equal to a roll of of your martial die."
+                            },
+                            {
+                                "name": "Miasmic Plague",
+                                "desc": "Whenever you hit a creature with an unarmed strike, you may expend 1 ki point to force the creature to succeed on a CON saving throw, or be cursed for 1 minute. While cursed in this way, the creature is poisoned, and takes extra @necrotic damage from your unarmed strikes equal to a roll of your martial die. A creature may take this damage only once per turn. A cursed creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Additionally, you may forego the extra @necrotic damage done by your claws of pestilence feature to use this feature without expending a ki point."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Gift of Pestilence",
+                        "desc": "Through observation and meditation, you are attuned to the nature of pestilence, and the creatures believed to carry it. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Inoculation",
+                                "desc": "You gain advantage on saving throws to avoid or end being poisoned, and against diseases. You gain resistance to @poison and @necrotic damage."
+                            },
+                            {
+                                "name": "Vermin Kinship",
+                                "desc": "Through chittering sounds and hand gestures, you are able to communicate simple concepts to vermin, such as rats, pigeons, and insects, and you gain the ability to decipher their noises and motions. Vermin lack the intelligence to convey or understand sophisticated concepts,but friendly vermin could relay what they have seen or heard in the recent past. Additionally, you may cast the @animal messenger spell, using WIS as your spellcasting ability, targeting a Tiny beast that is considered vermin and thought to spread plague and disease. You may cast it once per long rest."
+                            }
+                        ]
+
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Potent Plague",
+                        "desc": "The strain of your plague becomes more virulent and deadly. Whenever you deal @necrotic or @poison damage, you may ignore the target's resistances to those types."
+                    },
+                    {
+                        "name": "Tolling Censer",
+                        "desc": "You may unleash a cloud of miasma upon your enemies. As an action, you may expend 2 ki points to magically unleash a cloud of miasma in a 20ft. radius sphere centered on you. Each creature of your choice in that area must make a CON saving throw, taking @necrotic damage equal to 2 rolls of your martial die, or half as much on a successful one. Additionally, on a failure, the target is cursed by your miasmic plague."
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Miasmic Contagion",
+                        "desc": "The strength of your miasmic plague has increased, granting you the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Choking Miasma",
+                                "desc": "CON saving throws against your miasmic plague are made with disadvantage."
+                            },
+                            {
+                                "name": "Scurrying Spread",
+                                "desc": "Whenever you use your step of the wind feature, until the end of your turn, whenever you enter a space within 5ft. of any creature of your choice, it must succeed on a CON saving throw, or be cursed by your miasmic plague. A creature makes this save only once per turn."
+                            }
+                        ]
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Epidemic",
+                        "desc": "Your plague has reached the height of its potency, and its symptoms rapidly afflict your foes. Your miasmic plague ignores a target's immunity to being poisoned. Additionally, whenever you deal @necrotic damage to a creature cursed by your miasmic plague, it takes extra @necrotic damage equal to a roll of your martial die."
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
         }
     },
     "oracle": {},
@@ -1455,6 +2138,99 @@
             },
             "source": "Tasha's Cauldron of Everything"
         },
+        "sinner": {
+            "name": "Sinner",
+            "desc": ["Vice clings to Sinners like a second skin - cheating, drunkenness, and games of chance are their bread and blood. A scoundrel by nature, sin calls their name, and when whispers of malefic powers reach their ears, they listen. Those powers offer more than temptation; they grant the tools to deceive, steal, and even kill with a precision these rogues never dreamed of.", "Perhaps it begins with a meeting in a seedy saloon, a ritual under desert skies, or a cursed temple found deep in the jungle. No matter the road, the end is always the same: Jinxcraft. Through hexes, curses, and foul magic, Sinners cast aside judgment and righteousness. The laws of man and gods are nothing to them. Only the cold comfort of the path of sin remains."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Jinx Weapon Forms (Optional)",
+                        "desc": "Sinners wield their jinxcraft through a wide variety of jinxed items that serve as magical weapons. The jinx weapon forms table offers suggestions for how your jinx weapon might appear.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d4", "Weapon Form"],
+                                [1, "A wooden, glyph-covered talisman, carved into the shape of a pistol, that fires magenta blasts."],
+                                [2, "A pair of bone dice that shoot ghastly, green bursts of jinxcraft from their pips."],
+                                [3, "Enchanted playing cards that can be thrown with explosive, magical power."],
+                                [4, "A lucky coin that launches towards foes when flipped, and always returns."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Hex Slinger",
+                        "desc": "Whenever you deal damage to a creature with your sneak attack, you may unleash the power of your jinxcraft. Whenever you roll your sneak attack dice, designate two of the dice before the roll; the total rolled on these dice determines the effect of your jinxcraft as noted on the hex slinger jinxes table. You may use this feature a number of times equal to your CHA (minimum of 1) every short rest.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["2d6", "Jinx", "Effect"],
+                                ["2", "Snake Eyes", "On the target's next turn, it may only do one of the following: move, take an action, or take a bonus action. If it targets you or any number of creatures of your choice with an attack on that turn, it takes 2d6 @psychic damage."],
+                                ["3-4", "The Nightmare", "The target is frightened of you until the end of its next turn, and it must immediately use its reaction to move as far as it can away from you, up to its speed."],
+                                ["5-6", "Whiskey Bottle", "The target drops anything it's holding. Until the end of its next turn, when the target picks up an item, it must succeed on a DC 15 DEX saving throw, or immediately drop the item again."],
+                                ["7", "Cheap Shot", "Until the end of its next turn, the target's speed is halved, and for that duration, attack rolls against it gain advantage."],
+                                ["8-9", "Withered Arm", "Until the end of its next turn, the target gains disadvantage on STR checks, STR saving throws, and attack rolls that use STR."],
+                                ["10-11", "Bad Luck", "Until the end of its next turn, whenever the target makes an attack roll or saving throw, it must subtract 1d6 from the total."],
+                                ["12", "Dead Man", "On your next attack you make before the end of your next turn, you gain the following effects. If you roll a 20 on the d20 of the attack roll, you may roll the attack's damage dice three times instead of twice; on a hit, the attack is automatically a critical hit; on a miss, the attack hits instead."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Get Jinxed",
+                        "desc": "You have learned the secret art of jinxcrafting - drawing magical power from the dark deeds and deals of sin. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Cards and Bones",
+                                "desc": "You gain proficiency with 2 gaming sets of your choice."
+                            },
+                            {
+                                "name": "Jinx Weapon", 
+                                "desc": "As a 1 hour ritual using a gaming set, you may magically creature a jinx weapon that channels your jinxcraft. This weapon takes the form of a pistol, or a gaming set. For you, the jinx weapon is a simple ranged weapon, with a range of 30/90ft., and it deals 1d8 @force damage on a hit. As a gaming set, you throw cards, dice, or other gaming set pieces, or you may use them to unleash bolts of hex magic. Alternatively, you may imbue jinxcraft into a simple or martial weapon you have proficiency with, turning it into your jinx weapon. The infused jinx weapon deals @force damage instead of its normal damage type. If you attempt to create a second jinx weapon, the first either vanishes or loses its jinxcraft magic, depending on how you created it."
+                            },
+                            {
+                                "name": "Parlor Trick",
+                                "desc": "You learn one of the following cantrips of your choice. CHA is your spellcasting ability for it: @dancing lights, @mage hand, @minor illusion, @mysterious presence, or @prestidigitation."
+                            }
+                        ]
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Borrowed Luck",
+                        "desc": "Whenever you use your hex slinger feature, you may siphon away a sliver of the target's luck. You gain inspiration if you don't already have it. If you do have it, you may expend your inspiration to use your hex slinger feature without expending a use."
+                    }
+                ],
+                "13": [
+                    {
+                        "name": "Pick Your Poison",
+                        "desc": "Whenever you use your hex slinger feature, you may roll the designated sneak attack dice twice, and choose which total to use. If the roll you choose is the same number on both dice, the target takes @psychic damage equal to half your rogue level. If the roll you choose is a 2 or a 12, you may use that hex slinger effect without expending a use."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "The Other Side",
+                        "desc": "You may call on your otherwordly friends in low places to change the odds of anything you do in your favor. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Crossroads Devilry",
+                                "desc": "Whenever you miss with an attack roll, or fail a saving throw, you may choose any number of sneak attack dice, roll them, and add the total to the attack or saving throw, potentially turning a miss into a hit, or a failure into success. Your next use of your sneak attack feature will use less dice equal to the amount used by this feature, after which the dice return to normal."
+                            },
+                            {
+                                "name": "Lady Luck's Smiling",
+                                "desc": "Whenever a creature hits you with an attack roll, you may choose any number of sneak attack dice, roll them, and add the total to your AC against that attack, potentially turning the hit into a miss. Your next use of your sneak attack feature will use less dice equal to the amount used by this feature, after which the dice return to normal."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        },
         "swashbuckler": {
             "name": "Swashbuckler",
             "desc": ["You focus your training on the art of the blade, relying on speed, elegance, and charm in equal parts. While some warriors are brutes clad in heavy armor, your method of fighting looks almost like a performance. Duelists and pirates typically belong to this archetype.", "A Swashbuckler excels in single combat, and can fight with two weapons while safely darting away from an opponent."],
@@ -1545,6 +2321,112 @@
         }
     },
     "sorcerer": {
+        "crimson-dynasty": {
+            "name": "Crimson Dynasty",
+            "desc": ["Crimson Dynasty sorcerers harness the ancient magic of blood and life essence. They twist and guide the flow of this quintessential energy as a hunger grows deep within them. They manipulate their power to infuse the vitality of others, or they can rip it away and steal it for themselves.", "Crimson Dynasty sorcery can be acquired in a variety of ways. Some with this power were born with it. Others were infused with it through a dark ritual or grim event. There are those who discover it through lost secrets.", "Consult the Crimson Origins table for a possible origin of your power."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Crimson Origins (Optional)",
+                        "desc": ["There are a variety of ways you might have received the ability to harness your crimson sorcery to manipulate vitality and life essence. The crimson origins table offers suggestion of where your power comes from.", "Variant: Bloodless Crimson Dynasty Sorcerers. If you're playing a character from a species that lacks blood in the traditional sense, you may still take the Crimson Dynasty subclass. The essenence of crimson sorcery is lifeforce, or animating energy that approximates life."],
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d6", "Origin"],
+                                [1, "One of your parents was a vampire. Though you aren't one yourself, you inherited their hunger, and it drives your magic."],
+                                [2, "You studied blood rites at a monastery, that infused your own blood with power."],
+                                [3, "You survived a vampire's bite, though it left you forever changed, and awakened your sorcery."],
+                                [4, "Your family suffers under a generational curse that has reared its head with you, driving you to drain vital energy."],
+                                [5, "You studied the secrets of life and death, perhaps to save yourself, or a loved one. In so doing, you unlocked the crimson power in your blood."],
+                                [6, "You died, and a cunning entity offered you a second chance at life. You accepted, and awoke with crimson sorcery coursing through your veins."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Crimson Spells",
+                        "desc": "You learn additional spells when you reach certain levels in this class. Each of these spells count as a sorcerer spell for you, but it does not count against the number of sorcerer spells you know. Whenever you gain a level in this class, you may replace a spell you gained from this feature with another spell of the same level; the new spell must be from the necromancy or transmutation schools, from the sorcerer, warlock, or wizard spell lists.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Sorcerer level", "Spells"],
+                                ["1st", "@blood bolt, @cure wounds, @inflict wounds"],
+                                ["3rd", "@aid, @blood sacrifice"],
+                                ["5th", "@crimson harvest, @vampiric touch"],
+                                ["7th", "@death ward, @sacrificial siphon"],
+                                ["9th", "@field of reaping, @mass cure wounds"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Blood Well",
+                        "desc": "You hold a reserve of vital energy called your blood well, which you may use to empower your magic, and fuel other powers from this subclass. Whenever you deal damage, or restore hitpoints to a creature, you may expend your blood well to add 1d8 to the total for a target. You regain your expended blood well after a long rest, or when a creature takes 10 or more @necrotic damage from you at one time."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Pool of Blood",
+                        "desc": "As a bonus action, you may expend your blood well to magically dissolve into a pool of blood, along with everything you're wearing or carrying, for 1 hour. The transformation ends early if you drop to 0 hitpoints, or if you choose to end it as a free action. While you are a pool of blood, you use your game statistics, with the following changes:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "Your walking speed becomes 10ft."
+                            },
+                            {
+                                "desc": "You gain a climbing and swimming speed equal to your walking speed, and you may climb difficult surfaces, including along ceilings, without needing to make an ability check."
+                            },
+                            {
+                                "desc": "You gain resistance to @bludgeoning, @piercing, and @slashing damage."
+                            },
+                            {
+                                "desc": "You gain advantage on STR, DEX and CON saving throws."
+                            },
+                            {
+                                "desc": "You may pass through small holes, narrow openings, and even mere cracks as wide as 1in. without squeezing."
+                            },
+                            {
+                                "desc": "You cannot drop, use, or otherwise interact with anything you were carrying or holding."
+                            },
+                            {
+                                "desc": "You cannot talk, manipulate objects, attack, or cast spells."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Scarlet Vigor",
+                        "desc": "You gain resistance to @necrotic damage. Whenever you finish a short rest, you may expend your blood well to reduce your exhaustion by 1."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Vital Siphoning",
+                        "desc": "You may feed on your own life essence to fuel your magic. As a bonus action, you may expend a hit die and choose one of the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Blood Boil",
+                                "desc": "You regain the use of your blood well."
+                            },
+                            {
+                                "name": "Crimson Pulse",
+                                "desc": "You may expend your blood well to use one of your metamagic options without expending sorcery points."
+                            }
+                        ]
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Sanguine Feast",
+                        "desc": "Your hunger for vital essence is unquenchable. As an action, you may unleash tendrils of blood that lash at any number of creatures of your choice within 30ft. of you. A target must succeed on a CON saving throw, taking 5d8 @necrotic damage on a failed save, or half as much on a successful one. You regain hitpoints equal to the total @necrotic damage done in this way. If your blood well is expended when you use this action, targets gain disadvantage on the saving throw. You may use this feature once per long rest. You may use 5 sorcery points to use this feature without expending a use."
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        },
         "shadow-magic": {
             "name": "Shadow Magic",
             "desc": ["You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace your lineage to an entity from that place, or perhaps you were exposed to its fell energy and transformed by it. The power of shadow magic casts a strange pall over your physical presence. The spark of life that sustains you is muffled, as if it struggles to remain viable against the dark energy that imbues your soul."],
@@ -1560,13 +2442,13 @@
                         "content": {
                             "header": true,
                             "content": [
-                                ["1d6", "Spells"],
-                                ["1", "You are always icy cold to the touch."],
-                                ["2", "When you are asleep, you don't appear to breathe (though you mst still breathe to survive)."],
-                                ["3", "You barely bleed, even when badly injured."],
-                                ["4", "Your heart beats once per minute. This event sometimes surprises you."],
-                                ["5", "You have trouble remembering that living creatures and corpses should be treated differently."],
-                                ["6", "You blinked. Once. Last week."]
+                                ["1d6", "Quirk"],
+                                [1, "You are always icy cold to the touch."],
+                                [2, "When you are asleep, you don't appear to breathe (though you mst still breathe to survive)."],
+                                [3, "You barely bleed, even when badly injured."],
+                                [4, "Your heart beats once per minute. This event sometimes surprises you."],
+                                [5, "You have trouble remembering that living creatures and corpses should be treated differently."],
+                                [6, "You blinked. Once. Last week."]
                             ]
                         }
                     },
@@ -1812,7 +2694,7 @@
                     }
                 ]
             },
-            "source": "Xanathar's Guide to Everything"
+            "source": "Player's Handbook"
         }
     },
     "warlock": {

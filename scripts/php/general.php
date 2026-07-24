@@ -19,6 +19,8 @@ function renderDamageColors($str) {
         $str = str_replace("@$type damage", "<span class='$type-dmg'>$type damage</span>", $str);
         $str = str_replace("@$type", "<span class='$type-dmg'>$type</span>", $str);
     }
+
+    if ($str === "") {return;}
     return $str;
 }
 

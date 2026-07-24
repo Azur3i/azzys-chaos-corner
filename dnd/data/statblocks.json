@@ -1,0 +1,432 @@
+{
+    "air-elemental": {
+        "name": "Air Elemental",
+        "size": "large",
+        "creatureType": "elemental",
+        "alignment": "tn",
+
+        "desc": ["An air elemental is a funneling cloud of whirling air with a vague semblance of a face. Although it likes to race across the ground, picking up dust and debris as it goes, it can also fly and attack from above.", "An air elemental can turn itself into a screaming cyclone, creating a whirlwind that batters creatures even as it flings them away."],
+
+        "stats": {
+            "STR": 14,
+            "DEX": 20,
+            "CON": 14,
+            "INT": 6,
+            "WIS": 10,
+            "CHA": 6
+        },
+
+        "hitdice": 12,
+        "ac": {
+            "amount": 15
+        },
+        "speed": {
+            "walk": 0,
+            "fly": 90
+        },
+
+        "saves": [],
+        "senses": {
+            "darkvision": 60,
+            "passivePerception": 10
+        },
+        "skills": [],
+
+        "dmgVulnerable": [],
+        "dmgResistant": ["lightning", "thunder", "bludgeoning", "piercing", "slashing from nonmagical attacks"],
+        "dmgImmune": ["poison"],
+        "conditionImmune": ["exhaustion", "grappled", "paralyzed", "petrified", "poisoned", "prone", "restrained", "unconscious"],
+
+        "cr": 5,
+
+        "abilities": [
+            {
+                "name": "Languages",
+                "desc": "The elemental speaks and understands Auran."
+            },
+            {
+                "name": "Air Form",
+                "desc": "The elemental may enter a creature's space and stop there. It may move through a space as narrow as 1in. wide without squeezing."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Multiattack",
+                "desc": "The elemental makes 2 slam attacks."
+            },
+            {
+                "name": "Slam",
+                "desc": "Melee Weapon Attack: +8 to hit, reach 5ft., one target. Hit: 2d8 + 5 @bludgeoning damage."
+            },
+            {
+                "name": ["Whirlwind", "Recharge 4-6"],
+                "desc": "Each creature in the elemental's space must make a DC 13 STR saving throw, taking 3d8 + 2 @bludgeoning damage on a failed save, or half as much on a successful one. Additionally, on a failure, a target is flung up to 20ft. away from the elemental in a random direction, and knocked prone. If a thrown target strikes an object, such as a wall or the floor, or creature, the target takes 1d6 @bludgeoning damage for every 10ft. it was thrown. If the target hits another creature, that creature must succeed on a DC 13 DEX saving throw, or take the same damage, and be knocked prone."
+            }
+        ],
+
+        "source": "Monster Manual"
+    },
+    "earth-elemental": {
+        "name": "Earth Elemental",
+        "size": "large",
+        "creatureType": "elemental",
+        "alignment": "tn",
+
+        "desc": ["An earth elemental plods forward like a walking hill, club-like arms of jagged stone swinging at its sides. Its head and body consist of dirt and stone, occasionally set with chunks of metal, gems, and bright minerals.", "Earth elementals glide through rock and earth as though they were liquid. Earthbound creatures have much to fear from an earth elemental, since the elemental can pinpoint the precise location of any foe that stands on solid ground in its vicinity."],
+
+        "stats": {
+            "STR": 20,
+            "DEX": 8,
+            "CON": 20,
+            "INT": 5,
+            "WIS": 10,
+            "CHA": 5
+        },
+
+        "hitdice": 12,
+        "ac": {
+            "amount": 17,
+            "source": "natural armor"
+        },
+        "speed": {
+            "walk": 30,
+            "burrow": 30
+        },
+
+        "saves": [],
+        "senses": {
+            "darkvision": 60,
+            "tremorsense": 60,
+            "passivePerception": 10
+        },
+        "skills": [],
+
+        "dmgVulnerable": [],
+        "dmgResistant": ["bludgeoning", "piercing", "slashing from nonmagical attacks"],
+        "dmgImmune": ["fire", "poison"],
+        "conditionImmune": ["exhaustion", "paralyzed", "petrified", "poisoned", "unconscious"],
+
+        "cr": 5,
+
+        "abilities": [
+            {
+                "name": "Languages",
+                "desc": "The elemental speaks and understands Terran."
+            },
+            {
+                "name": "Earth Glide",
+                "desc": "The elemental may burrow through nonmagical, unworked earth and stone. It does so without disturbing the material it moves through."
+            },
+            {
+                "name": "Siege Monster",
+                "desc": "The elemental deals double damage against objects and structures."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Multiattack",
+                "desc": "The elemental makes 2 slam attacks."
+            },
+            {
+                "name": "Slam",
+                "desc": "Melee Weapon Attack: +8 to hit, reach 5ft., one target. Hit: 2d8 + 5 @bludgeoning damage."
+            }
+        ],
+
+        "source": "Monster Manual"
+    },
+    "fire-elemental": {
+        "name": "Fire Elemental",
+        "size": "large",
+        "creatureType": "elemental",
+        "alignment": "tn",
+
+        "desc": ["A faint humanoid shape threads through the core of this wild, moving flame. A fire elemental is a force of capricious devastation. Wherever it moves, it sets its surroundings ablaze, turning the world to ash, smoke, and cinders. Water can halt its destructive progress, causing the fire elemental to shrink back, hissing and smoking in pain and rage."],
+
+        "stats": {
+            "STR": 10,
+            "DEX": 17,
+            "CON": 16,
+            "INT": 6,
+            "WIS": 10,
+            "CHA": 7
+        },
+
+        "hitdice": 12,
+        "ac": {
+            "amount": 13
+        },
+        "speed": {
+            "walk": 50
+        },
+
+        "saves": [],
+        "senses": {
+            "darkvision": 60,
+            "passivePerception": 10
+        },
+        "skills": [],
+
+        "dmgVulnerable": [],
+        "dmgResistant": ["bludgeoning", "piercing", "slashing from nonmagical attacks"],
+        "dmgImmune": ["fire", "poison"],
+        "conditionImmune": ["exhaustion", "grappled", "paralyzed", "petrified", "poisoned", "prone", "restrained", "unconscious"],
+
+        "cr": 5,
+
+        "abilities": [
+            {
+                "name": "Languages",
+                "desc": "The elemental speaks and understands Ignan."
+            },
+            {
+                "name": "Fire Form",
+                "desc": "The elemental may move through a space as narrow as 1in. wide without squeezing. A creature that touches the elemental, or hits it with a melee attack while within 5ft. of it takes 1d10 @fire damage. Additionally, the elemental may enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 1d10 @fire damage, and catches fire. Until someone takes an action to douse the fire, the creature takes 1d10 @fire damage at the start of each of its turns."
+            },
+            {
+                "name": "Illumination",
+                "desc": "The elemental sheds bright light in a 30ft. radius, and dim light in an additional 30ft."
+            },
+            {
+                "name": "Water Susceptibility",
+                "desc": "For every 5ft. the elemental moves in water, or for every gallon of water splashed on it, the elemental takes 1 @cold damage."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Multiattack",
+                "desc": "The elemental makes 2 touch attacks."
+            },
+            {
+                "name": "Touch",
+                "desc": "Melee Weapon Attack: +6 to hit, reach 5ft., one target. Hit: 2d6 + 3 @fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 1d10 @fire damage at the start of each of its turns."
+            }
+        ],
+
+        "source": "Monster Manual"
+    },
+    "fox": {
+        "name": "Fox",
+        "size": "tiny",
+        "creatureType": "beast",
+        "alignment": "unaligned",
+
+        "desc": ["The white arctic foxes of Icewind Dale live in burrows and are acclimated to cold weather. They prowl the outskirts of Ten-Towns and nearby forests for food, hunting hares or stealing fish. These timid creatures avoid contact with humanoids, but they are sometimes used as mounts by chwingas."],
+
+        "stats": {
+            "STR": 2,
+            "DEX": 16,
+            "CON": 11,
+            "INT": 7,
+            "WIS": 12,
+            "CHA": 6
+        },
+
+        "hitdice": 1,
+        "ac": {
+            "amount": 13
+        },
+        "speed": {
+            "walk": 30,
+            "burrow": 5
+        },
+
+        "saves": [],
+        "senses": {
+            "darkvision": 60,
+            "passivePerception": 13
+        },
+        "skills": ["stealth", "perception"],
+
+        "dmgVulnerable": [],
+        "dmgResistant": [],
+        "dmgImmune": [],
+        "conditionImmune": [],
+
+        "cr": 0,
+
+        "abilities": [
+            {
+                "name": "Keen Hearing",
+                "desc": "The fox gains advantage on Perception (WIS) checks that rely on hearing."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Bite",
+                "desc": "Melee Weapon Attack: +5 to hit, reach 5ft., one target. Hit: 1 piercing damage."
+            }
+        ],
+
+        "source": "Icewind Dale - Rime of the Frostmaiden"
+    },
+    "tarrasque": {
+        "name": "Tarrasque",
+        "size": "gargantuan",
+        "creatureType": "monstrosity",
+        "alignment": "tn",
+
+        "desc": ["The legendary tarrasque is possibly the most dreaded monster of the Material Plane. It is widely believed that only one of these creatures exists, though no one can predict where and when it will strike.", "A scaly biped, the tarrasque is fifty feet tall and seventy feet long, weighing hundreds of tons. It carries itself like a bird of prey, leaning forward and using its powerful lashing tail for balance. Its cavernous maw yawns wide enough to swallow all but the largest creatures, and so great is its hunger that it can devour the populations of whole towns."],
+
+        "stats": {
+            "STR": 30,
+            "DEX": 11,
+            "CON": 30,
+            "INT": 3,
+            "WIS": 11,
+            "CHA": 11
+        },
+
+        "hitdice": 33,
+        "ac": {
+            "amount": 25,
+            "source": "natural armor"
+        },
+        "speed": {
+            "walk": 40
+        },
+
+        "saves": ["INT", "WIS", "CHA"],
+        "senses": {
+            "blindsight": 120,
+            "passivePerception": 10
+        },
+        "skills": [],
+
+        "dmgVulnerable": [],
+        "dmgResistant": [],
+        "dmgImmune": ["fire", "poison", "bludgeoning", "piercing", "slashing from nonmagical attacks"],
+        "conditionImmune": ["charmed", "frightened", "paralyzed", "poisoned"],
+
+        "cr": 30,
+
+        "abilities": [
+            {
+                "name": ["Legendary Resistance", "3/day"],
+                "desc": "Whenever the tarrasque fails a saving throw, it may choose to succeed instead."
+            },
+            {
+                "name": "Magic Resistance",
+                "desc": "The tarrasque gains advantage on saving throws against spells, and other magical effects."
+            },
+            {
+                "name": "Reflective Carapace",
+                "desc": "Whenever the tarrasque is targeted by the @magic missile spell, a line spell, or a spell that requires a ranged attack roll, the tarrasque is unaffected by the spell. Roll 1d6. On a 6, the effect is reflected back at the caster as though it originated from the tarrasque, turning the caster into the target."
+            },
+            {
+                "name": "Siege Monster",
+                "desc": "The tarrasque deals double damage against objects and structures."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Multiattack",
+                "desc": "The tarrasque may use its frightful presence. It then makes 5 attacks: one with its bite, two with its claws, one with its horns, and one with its tail. It may use its swallow instead of its bite."
+            },
+            {
+                "name": "Bite",
+                "desc": "Melee Weapon Attack: +19 to hit, reach 10ft., one target. Hit: 4d12 + 10 @piercing damage. If the target is a creature, it is grapped, escape DC 20. While grappled in this way, the target is restrained, and the tarrasque cannot use the bite action against another target."
+            },
+            {
+                "name": "Claw",
+                "desc": "Melee Weapon Attack: +19 to hit, reach 15ft., one target. Hit: 4d8 + 10 @slashing damage."
+            },
+            {
+                "name": "Horns",
+                "desc": "Melee Weapon Attack: +19 to hit, reach 10ft., one target. Hit: 4d10 + 10 @piercing damage."
+            },
+            {
+                "name": "Tail",
+                "desc": "Melee Weapon Attack: +19 to hit, reach 20ft., one target. Hit: 4d6 + 10 @bludgeoning damage. If the target is a creature, it must succeed on a DC 20 STR saving throw, or be knocked prone."
+            },
+            {
+                "name": "Frightful Presence",
+                "desc": "Each creature of the tarrasque's choice within 120ft. of it and aware of it must succeed on a DC 17 WIS saving throw, or become frightened of it for 1 minute. A creature may repeat the saving throw at the end of each of its turns, with disadvantage if the tarrasque is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful, or the effect ends for it, the creature becomes immune to the tarrasque's frightful presence for 24 hours."
+            },
+            {
+                "name": "Swallow",
+                "desc": "The tarrasque makes a bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, gains total cover against attacks and effects outside the tarrasque, and takes 16d6 @acid damage at the start of each of the tarrasque's turns. Whenever the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 CON saving throw at the end of that turn, or regurgitate all swallowed creatures. Regurgitated creatures exit the tarrasque prone, in a space within 10ft. of the tarrasque. If the tarrasque dies, a swallowed creature is no longer restrained, and may escape the tarrasque by using 30ft. of movement, exiting prone."
+            }
+        ],
+
+        "source": "Monster Manual"
+    },
+    "water-elemental": {
+        "name": "Water Elemental",
+        "size": "large",
+        "creatureType": "elemental",
+        "alignment": "tn",
+
+        "desc": ["A water elemental is a cresting wave that rolls across the ground, becoming nearly invisible at it courses through a larger body of water. It engulfs creatures that stand against it, filling their mouths and lungs as easily as it smothers flame."],
+
+        "stats": {
+            "STR": 18,
+            "DEX": 14,
+            "CON": 18,
+            "INT": 5,
+            "WIS": 10,
+            "CHA": 8
+        },
+
+        "hitdice": 12,
+        "ac": {
+            "amount": 14,
+            "source": "natural armor"
+        },
+        "speed": {
+            "walk": 30,
+            "swim": 90
+        },
+
+        "saves": [],
+        "senses": {
+            "darkvision": 60,
+            "passivePerception": 10
+        },
+        "skills": [],
+
+        "dmgVulnerable": [],
+        "dmgResistant": ["acid", "bludgeoning", "piercing", "slashing from nonmagical attacks"],
+        "dmgImmune": ["poison"],
+        "conditionImmune": ["exhaustion", "grappled", "paralyzed", "petrified", "poisoned", "prone", "restrained", "unconscious"],
+
+        "cr": 5,
+
+        "abilities": [
+            {
+                "name": "Languages",
+                "desc": "The elemental speaks and understands Aquan."
+            },
+            {
+                "name": "Freeze",
+                "desc": "Whenever the elemental takes @cold damage, it partially freezes, reducing its speed by 20ft. until the end of its next turn."
+            },
+            {
+                "name": "Water Form",
+                "desc": "The elemental may enter a creature's space and stop there. It may move through a space as narrow as 1in. wide without squeezing."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Multiattack",
+                "desc": "The elemental makes 2 slam attacks."
+            },
+            {
+                "name": "Slam",
+                "desc": "Melee Weapon Attack: +7 to hit, reach 5ft., one target. Hit: 2d8 + 4 @bludgeoning damage."
+            },
+            {
+                "name": ["Whelm", "Recharge 4-6"],
+                "desc": "Each creature in the elemental's space must succeed on a DC 15 STR saving throw, or take 2d8 + 4 @bludgeoning damage, and if it is Large or smaller, be grappled, escape DC 14. Until this grapple ends, the target is restrained, and is unable to breathe, unless the creature is able to breathe water. On a success, the target is pushed out of the elemental's space. The elemental may grapple 1 Large creature, or up to 2 Medium or smaller creatures at any one time. At the start of each of the elemental's turns, each target grappled by it takes 2d8 + 4 @bludgeoning damage. A creature within 5ft. of the elemental may pull a creature or object out of it by, as an action, succeeding on a DC 14 STR check."
+            }
+        ],
+
+        "source": "Monster Manual"
+    }
+}

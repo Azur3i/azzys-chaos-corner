@@ -11,7 +11,7 @@
                     <li class="nav-item"><a class="nav-link button md" href="/dnd/subclasses">Subclasses</a></li>
                     <li class="nav-item"><a class="nav-link button md" href="/dnd/races">Races</a></li>
                     <li class="nav-item"><a class="nav-link button md" href="/dnd/spells">Spells</a></li>
-                    <li class="nav-item"><a class="nav-link button md" href="#">Creatures</a></li>
+                    <li class="nav-item"><a class="nav-link button md" href="/dnd/bestiary">Bestiary</a></li>
                 </ul>
             </div>
         </div>
