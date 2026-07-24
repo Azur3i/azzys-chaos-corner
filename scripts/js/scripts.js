@@ -105,7 +105,7 @@ function showSpellPreview(html, element) {
         .css({
             left: left + "px",
             top: top + "px",
-            visibility: "visible"
+            visibility: "visible",
         })
         .stop(true, true)
         .fadeIn(100);

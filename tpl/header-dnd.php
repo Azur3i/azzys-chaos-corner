@@ -19,7 +19,7 @@
 </header>
 
 <div class="main-content" style="padding: 0; margin: 0;">
-    <div id="spell-preview" style="max-width: 60%;">
-        <div id="spell-preview-content"></div>
+    <div id="spell-preview">
+        <div id="spell-preview-content" style="height: 100%; "></div>
     </div>
 </div>
