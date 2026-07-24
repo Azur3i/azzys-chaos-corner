@@ -80,7 +80,7 @@ function filterSpell () {
 
         // filter options that can be filtered AND/OR
         let elAndOr = [
-            ".button-toggle-2.toggle-school"
+            ".button-toggle-2.toggle-classlist"
         ];
 
         let [operand] = getLogicOp();
@@ -98,7 +98,7 @@ function filterSpell () {
         // filter options that can only be filtered OR; 
         // filtering AND would be redundant as these can only have 1 value
         let elOr = [
-            ".button-toggle-2.toggle-classlist",
+            ".button-toggle-2.toggle-school",
             ".button-toggle-2.toggle-level",
             ".button-toggle-2.toggle-source"
         ]
