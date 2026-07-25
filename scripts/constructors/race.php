@@ -66,7 +66,7 @@ function renderASI ($asi) {
         <? // description and image ?>
         <div class="row" style="margin: 0;">
             <div class="col my-auto">
-                <p class="md title"><?= implode('</p><br ><p class="md title" style="margin-top: 1rem;">', $target["desc"]) ?></p>
+                <p class="md title"><?= implode('</p><p class="md title" style="margin-top: 1rem;">', $target["desc"]) ?></p>
             </div>
             <?php if (file_exists(ROOT . "/assets/img/dnd/races/$raceName.png")): ?>
                 <img id="race-img" class="col-auto my-auto" src="/assets/img/dnd/races/<?= $raceName ?>.png" style="width: 25%; height: auto;">
