@@ -132,7 +132,7 @@
                 "10": [
                     {
                         "name": "Infectious Fury",
-                        "desc": "Whenever you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a WIS saving throw (DC equal to 8 + CON + proficiency). On a failure, you may choose to force the target to use its reaction to make a melee attack against another creature of your choice that you can see, or to have the target take 2d12 @psychic damage. You may use this feature a number of times equal to your proficiency bonus every long rest."
+                        "desc": "Whenever you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a WIS saving throw (DC equal to 8 + CON + proficiency). On a failure, you may choose to force the target to use its reaction to make a melee attack against another creature of your choice that you can see, or to have the target take 2d12 @psychic damage. You may use this feature a number of times equal to your proficiency bonus per long rest."
                     }
                 ],
                 "14": [
@@ -346,7 +346,7 @@
                 "3": [
                     {
                         "name": "Magic Awareness",
-                        "desc": "As an action, you may open your awareness to the presence of concentrated magic. Until the end of your next turn, you know the location of any spell or magic item within 60ft. of you that isn't behind total cover. Whenever you sense a spell, you learn which school of magic it belongs to. You may use this feature a number of times equal to your proficiency bonus every long rest."
+                        "desc": "As an action, you may open your awareness to the presence of concentrated magic. Until the end of your next turn, you know the location of any spell or magic item within 60ft. of you that isn't behind total cover. Whenever you sense a spell, you learn which school of magic it belongs to. You may use this feature a number of times equal to your proficiency bonus per long rest."
                     },
                     {
                         "name": "Wild Surge",
@@ -371,7 +371,7 @@
                 "6": [
                     {
                         "name": "Bolstering Magic",
-                        "desc": "You may harness your wild magic to bolster yourself or a companion. As an action, you may touch one creature and confer one of the following benefits of your choice to that creature. You may use this feature a number of times equal to your proficiency bonus every long rest.",
+                        "desc": "You may harness your wild magic to bolster yourself or a companion. As an action, you may touch one creature and confer one of the following benefits of your choice to that creature. You may use this feature a number of times equal to your proficiency bonus per long rest.",
                         "type": "list",
                         "content": [
                             {
@@ -580,7 +580,7 @@
                 "6": [
                     {
                         "name": "Sentinel at Death's Door",
-                        "desc": "You gain the ability to impede death's progress. As a reaction when a creature you can see within 30ft. of you suffers a critical hit, you may turn that attack into a normal hit. Any effects triggered by a critical hit are canceled. You may use this feature a number of times equal to your WIS (minimum of 1) every long rest."
+                        "desc": "You gain the ability to impede death's progress. As a reaction when a creature you can see within 30ft. of you suffers a critical hit, you may turn that attack into a normal hit. Any effects triggered by a critical hit are canceled. You may use this feature a number of times equal to your WIS (minimum of 1) per long rest."
                     }
                 ],
                 "8": [
@@ -655,7 +655,7 @@
                 "6": [
                     {
                         "name": "Blessing of the Seasons",
-                        "desc": "You may draw upon the powers of the harvest cycle to potentially avert disaster. Whenever a creature you can see within 30ft. of you fails a saving throw of a particular type determined by your current aspect, you may use your reaction to allow it to reroll the d20, and use the new roll. Additionally, after the saving throw succeeds or fails, roll a number of d4s equal to your proficiency. The target regains hitpoints equal to the total number rolled. You may use this feature a number of times equal to your WIS (minimum of 1) every long rest. The saving throws you can affect are as follows:",
+                        "desc": "You may draw upon the powers of the harvest cycle to potentially avert disaster. Whenever a creature you can see within 30ft. of you fails a saving throw of a particular type determined by your current aspect, you may use your reaction to allow it to reroll the d20, and use the new roll. Additionally, after the saving throw succeeds or fails, roll a number of d4s equal to your proficiency. The target regains hitpoints equal to the total number rolled. You may use this feature a number of times equal to your WIS (minimum of 1) per long rest. The saving throws you can affect are as follows:",
                         "type": "list",
                         "content": [
                             {
@@ -750,7 +750,7 @@
                 "6": [
                     {
                         "name": "Fungal Infestation",
-                        "desc": "Your spores gain the ability to infest a corpse and animate it. If a beast or a humanoid that is Small or Medium dies within 10ft. of you, you may use your reaction to animate it, causing it to stand up immediately with 1 hitpoint. The creature uses the zombie statblock (from the Monster Manual). It remains animate for 1 hour, after which time it collapses and dies. In combat, the zombie's turn comes immediately after yours. It obeys your mental commands, and the only action it may take is the @attack action, making one melee attack. You may use this feature a number of times equal to your WIS (minimum of 1) every long rest."
+                        "desc": "Your spores gain the ability to infest a corpse and animate it. If a beast or a humanoid that is Small or Medium dies within 10ft. of you, you may use your reaction to animate it, causing it to stand up immediately with 1 hitpoint. The creature uses the zombie statblock (from the Monster Manual). It remains animate for 1 hour, after which time it collapses and dies. In combat, the zombie's turn comes immediately after yours. It obeys your mental commands, and the only action it may take is the @attack action, making one melee attack. You may use this feature a number of times equal to your WIS (minimum of 1) per long rest."
                     },
                     {
                         "name": "Halo of Spores",
@@ -1888,7 +1888,7 @@
                     },
                     {
                         "name": "Omen of Doom",
-                        "desc": ["As a bonus action, you may target a creature you can see within 90ft. of you, and magically seal its doom for 1 hour. Once per turn, whenever you hit the doomed target with an attack, it takes an extra 1d6 @necrotic damage. Additionally, a ghostly creature called the Grim appears in an unoccupied space within 30ft. of the target. Grims most often appear as black, spectral hounds, but you may choose an appearance appropriate to its stat block. The grim is friendly to you and any number of creatures of your choice, and it obeys your commands. It vanishes if you or the doomed creature dies, when it is reduced to 0 hitpoints, or whenever you use this feature again. You may use this feature a number of times equal to your WIS (minimum of 1) every short rest. You may use a spell slot of any level to use this feature without expending a use.", "In combat, the grim acts during your turn. It may move and use its reaction on its own, but the only action it may take is the @dodge action, unless, as a bonus action, you command it to take an action. You may also command it as part of the bonus action you take to summon it. Alternatively, when you take the @attack action on your turn, you may forego one attack to command the grim to take its ominous rend action. If you are incapacitated, the grim acts on its own, and is not limited to the @dodge action."],
+                        "desc": ["As a bonus action, you may target a creature you can see within 90ft. of you, and magically seal its doom for 1 hour. Once per turn, whenever you hit the doomed target with an attack, it takes an extra 1d6 @necrotic damage. Additionally, a ghostly creature called the Grim appears in an unoccupied space within 30ft. of the target. Grims most often appear as black, spectral hounds, but you may choose an appearance appropriate to its stat block. The grim is friendly to you and any number of creatures of your choice, and it obeys your commands. It vanishes if you or the doomed creature dies, when it is reduced to 0 hitpoints, or whenever you use this feature again. You may use this feature a number of times equal to your WIS (minimum of 1) per short rest. You may use a spell slot of any level to use this feature without expending a use.", "In combat, the grim acts during your turn. It may move and use its reaction on its own, but the only action it may take is the @dodge action, unless, as a bonus action, you command it to take an action. You may also command it as part of the bonus action you take to summon it. Alternatively, when you take the @attack action on your turn, you may forego one attack to command the grim to take its ominous rend action. If you are incapacitated, the grim acts on its own, and is not limited to the @dodge action."],
                         "type": "statblock",
                         "content": "grim"
                     }
@@ -2188,7 +2188,7 @@
                     },
                     {
                         "name": "Wails from the Grave",
-                        "desc": "As you nudge someone closer to the grave, you may channel the power of death to harm someone else as well. Immediately after you deal your sneak attack damage to a creature on your turn, you may target a secord creature that you can see within 30ft. of the first creature. This deals @necrotic damage equal to half the number of sneak attack dice for your level, rounded up. You may use this feature an amount of times equal to your proficiency bonus every long rest."
+                        "desc": "As you nudge someone closer to the grave, you may channel the power of death to harm someone else as well. Immediately after you deal your sneak attack damage to a creature on your turn, you may target a secord creature that you can see within 30ft. of the first creature. This deals @necrotic damage equal to half the number of sneak attack dice for your level, rounded up. You may use this feature an amount of times equal to your proficiency bonus per long rest."
                     }
                 ],
                 "9": [
@@ -2258,7 +2258,7 @@
                     },
                     {
                         "name": "Hex Slinger",
-                        "desc": "Whenever you deal damage to a creature with your sneak attack, you may unleash the power of your jinxcraft. Whenever you roll your sneak attack dice, designate two of the dice before the roll; the total rolled on these dice determines the effect of your jinxcraft as noted on the hex slinger jinxes table. You may use this feature a number of times equal to your CHA (minimum of 1) every short rest.",
+                        "desc": "Whenever you deal damage to a creature with your sneak attack, you may unleash the power of your jinxcraft. Whenever you roll your sneak attack dice, designate two of the dice before the roll; the total rolled on these dice determines the effect of your jinxcraft as noted on the hex slinger jinxes table. You may use this feature a number of times equal to your CHA (minimum of 1) per short rest.",
                         "type": "table",
                         "content": {
                             "header": true,
@@ -2640,7 +2640,7 @@
                 "18": [
                     {
                         "name": "Wind Soul",
-                        "desc": "You gain immunity to @lightning and @thunder damage. You gain a magical flying speed of 60ft. As an action, you may reduce your flying speed to 30ft. for 1 hour and choose a number of creatures within 30ft. of you equal to 3 + your CHA and give the chosen creatures a magical flying speed of 30ft. for 1 hour. You may do so once every short rest."
+                        "desc": "You gain immunity to @lightning and @thunder damage. You gain a magical flying speed of 60ft. As an action, you may reduce your flying speed to 30ft. for 1 hour and choose a number of creatures within 30ft. of you equal to 3 + your CHA and give the chosen creatures a magical flying speed of 30ft. for 1 hour. You may do so once per short rest."
                     }
                 ]
             },
@@ -2859,7 +2859,7 @@
                 "6": [
                     {
                         "name": "Rite of Preservation",
-                        "desc": "As an action, you may allow your patron to partially possess your neural networks. You transform: your nerves branch into steel, your hair (if you have it) drapes into fine copper wires, your bones become adamantine rods, and your skin turns into a bronzed alloy sheet. Your body hardens, and you become an immovable statue. You may use this trait once every long rest. For 1 minute, you gain the following effects:",
+                        "desc": "As an action, you may allow your patron to partially possess your neural networks. You transform: your nerves branch into steel, your hair (if you have it) drapes into fine copper wires, your bones become adamantine rods, and your skin turns into a bronzed alloy sheet. Your body hardens, and you become an immovable statue. You may use this trait once per long rest. For 1 minute, you gain the following effects:",
                         "type": "list",
                         "content": [
                             {
@@ -2897,7 +2897,7 @@
                         "type": "list",
                         "content": [
                             {
-                                "desc": "You may use this trait 2 times every long rest. Every usage past the first results in a weakened rite, preventing the use of bonus actions and reactions."
+                                "desc": "You may use this trait 2 times per long rest. Every usage past the first results in a weakened rite, preventing the use of bonus actions and reactions."
                             },
                             {
                                 "desc": "You gain the ability to telepathically communicate with a number of non-construct creatures up to your CHA modifier. This has a range of 120ft."
@@ -2922,7 +2922,7 @@
                         "type": "list",
                         "content": [
                             {
-                                "desc": "You may use this trait 3 times every long rest. Every usage past the first results in a weakened rite, preventing the use of bonus actions and reactions."
+                                "desc": "You may use this trait 3 times per long rest. Every usage past the first results in a weakened rite, preventing the use of bonus actions and reactions."
                             },
                             {
                                 "desc": "At the start of the rite, choose up to 3 spells of 5th level or lower. While the rite lasts, you and the automatons from your enlister, constructor feature gain immunity to the damage and effects of these spells."
@@ -2979,7 +2979,7 @@
                     },
                     {
                         "name": "Killing Joke",
-                        "desc": "You see the humor in everything - especially in the end of things. As a reaction whenever a creature you can see within 60ft. of you takes damage, or fails a saving throw, you may cast the @vicious mockery cantrip on it. You may use this reaction a number of times equal to your CHA (minimum of 1) every long rest. Your regain 1 use of this feature after a short rest."
+                        "desc": "You see the humor in everything - especially in the end of things. As a reaction whenever a creature you can see within 60ft. of you takes damage, or fails a saving throw, you may cast the @vicious mockery cantrip on it. You may use this reaction a number of times equal to your CHA (minimum of 1) per long rest. You regain 1 use of this feature after a short rest."
                     }
                 ],
                 "6": [
@@ -3135,7 +3135,7 @@
                     },
                     {
                         "name": "Malediction",
-                        "desc": "You may call upon the Horned King's malice to manipulate luck and fate. As an action, you may magically curse a creature you can see within 60ft. of you, until the end of its next turn. Alternatively, as a reaction when a creature within 60ft. of you targets you with an attack or a spell, you may curse the creature. You may curse a creature an amount of times equal to your CHA (minimum of 1) every long rest. Choose one of the following curses every time:",
+                        "desc": "You may call upon the Horned King's malice to manipulate luck and fate. As an action, you may magically curse a creature you can see within 60ft. of you, until the end of its next turn. Alternatively, as a reaction when a creature within 60ft. of you targets you with an attack or a spell, you may curse the creature. You may curse a creature an amount of times equal to your CHA (minimum of 1) per long rest. Choose one of the following curses every time:",
                         "type": "list",
                         "content": [
                             {
@@ -3199,7 +3199,7 @@
                         "content": [
                             {
                                 "name": "Witchcraft",
-                                "desc": "Choose one of the malediction curses. The bonded creatures may each use that reaction option once every long rest."
+                                "desc": "Choose one of the malediction curses. The bonded creatures may each use that reaction option once per long rest."
                             },
                             {
                                 "name": "Fly By Night", 
@@ -3247,7 +3247,7 @@
                 "6": [
                     {
                         "name": "Dark One's Own Luck",
-                        "desc": "Whenever you make an ability check or a saving throw, you may use this trait to add 1d10 to your roll. You may do so after seeing the initial roll, but before any of the roll's effects occur. You may use this trait once every short rest."
+                        "desc": "Whenever you make an ability check or a saving throw, you may use this trait to add 1d10 to your roll. You may do so after seeing the initial roll, but before any of the roll's effects occur. You may use this trait once per short rest."
                     }
                 ],
                 "10": [
@@ -3259,7 +3259,7 @@
                 "14": [
                     {
                         "name": "Hurl Through Hell",
-                        "desc": "Whenever you hit a creature with an attack, you may use this feature to instantly transport the target through the 9 hells. The creature disappears and hurtles through a nightmarish landscape. At the end of your next turn, the target returns to the nearest unoccupied space to where it previously was. If the target is not a fiend, the target takes 10d10 @psychic damage. You may use this trait once every long rest."
+                        "desc": "Whenever you hit a creature with an attack, you may use this feature to instantly transport the target through the 9 hells. The creature disappears and hurtles through a nightmarish landscape. At the end of your next turn, the target returns to the nearest unoccupied space to where it previously was. If the target is not a fiend, the target takes 10d10 @psychic damage. You may use this trait once per long rest."
                     }
                 ]
             },
@@ -3281,7 +3281,7 @@
                     },
                     {
                         "name": "Bladesong",
-                        "desc": "You may invoke an elven magic called the Bladesong, provided you aren't wearing medium or heavy armor, or using a shield. It graces you with supernatural speed, agility and focus. You may use a bonus action to start the song, which lasts for 1 minute. It ends early if you are incapacitated, if you don medium or heavy armor or a shield, or if you use two hands to make an attack with a weapon. You may also dismiss the song at any time as a free action. You may use this feature a number of times equal to your proficiency bonus every long rest. While the song is active, you gain the following benefits.",
+                        "desc": "You may invoke an elven magic called the Bladesong, provided you aren't wearing medium or heavy armor, or using a shield. It graces you with supernatural speed, agility and focus. You may use a bonus action to start the song, which lasts for 1 minute. It ends early if you are incapacitated, if you don medium or heavy armor or a shield, or if you use two hands to make an attack with a weapon. You may also dismiss the song at any time as a free action. You may use this feature a number of times equal to your proficiency bonus per long rest. While the song is active, you gain the following benefits.",
                         "type": "list",
                         "content": [
                             {
@@ -3376,7 +3376,7 @@
                 "10": [
                     {
                         "name": "Violent Attraction",
-                        "desc": "You may use your reaction for the following uses. You may do so an amount of times equal to your INT every long rest.",
+                        "desc": "You may use your reaction for the following uses. You may do so an amount of times equal to your INT per long rest.",
                         "type": "list",
                         "content": [
                             {
@@ -3542,7 +3542,7 @@
                 "6": [
                     {
                         "name": "Manifest Mind",
-                        "desc": "You are able to conjure forth the mind of your awakened spellbook. As a bonus action while the book is on your person, you may cause the mind to manifest as a Tiny spectral object, hovering in an unoccupied space of your choice within 60ft. of you. The spectral mind is intangible, and does not occupy its space, shedding dim light in a 10ft. radius. It looks like a ghostly tome, a cascade of text, or a scholar from the past, your choice. While manifested, the spectral mind is able to hear and see, and it gains darkvision with a range of 60ft. The mind may telepathically share with you what it sees and hears. Whenever you cast a wizard spell on your turn, you may cast it as if you were in the spectral mind's space, instead of your own, using its senses. You may do so a number of times equal to your proficiency bonus every long rest. Additionally, as a bonus action, you may cause the spectral mind to hover up to 30ft. to an unoccupied space that you or it can see. It may pass through creatures, but not objects. The spectral mind stops manifesting if it is ever more than 300ft. away from you, if someone casts the @dispel magic spell on it, if the awakened spellbook is destroyed, if you die, or if you dismiss the spectral mind as a bonus action. Once you conjure the mind, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to conjure it again. You may conjure the mind once per long rest. You may use a spell slot of 1st level or higher to use this feature without expending a use."
+                        "desc": "You are able to conjure forth the mind of your awakened spellbook. As a bonus action while the book is on your person, you may cause the mind to manifest as a Tiny spectral object, hovering in an unoccupied space of your choice within 60ft. of you. The spectral mind is intangible, and does not occupy its space, shedding dim light in a 10ft. radius. It looks like a ghostly tome, a cascade of text, or a scholar from the past, your choice. While manifested, the spectral mind is able to hear and see, and it gains darkvision with a range of 60ft. The mind may telepathically share with you what it sees and hears. Whenever you cast a wizard spell on your turn, you may cast it as if you were in the spectral mind's space, instead of your own, using its senses. You may do so a number of times equal to your proficiency bonus per long rest. Additionally, as a bonus action, you may cause the spectral mind to hover up to 30ft. to an unoccupied space that you or it can see. It may pass through creatures, but not objects. The spectral mind stops manifesting if it is ever more than 300ft. away from you, if someone casts the @dispel magic spell on it, if the awakened spellbook is destroyed, if you die, or if you dismiss the spectral mind as a bonus action. Once you conjure the mind, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to conjure it again. You may conjure the mind once per long rest. You may use a spell slot of 1st level or higher to use this feature without expending a use."
                     }
                 ],
                 "10": [
@@ -3669,7 +3669,7 @@
                     },
                     {
                         "name": "Arcane Ward",
-                        "desc": "You may weave magic around yourself for protection. Whenever you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell's magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hitpoints equal to 2 times your wizard level + INT. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hitpoints, you take any remaining damage. While the ward has 0 hitpoints, it cannot absorb damage, but its magic remains; whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hitpoints equal to 2 times the spell's level. You can create a ward once every long rest."
+                        "desc": "You may weave magic around yourself for protection. Whenever you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell's magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hitpoints equal to 2 times your wizard level + INT. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hitpoints, you take any remaining damage. While the ward has 0 hitpoints, it cannot absorb damage, but its magic remains; whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hitpoints equal to 2 times the spell's level. You can create a ward once per long rest."
                     }
                 ],
                 "6": [
