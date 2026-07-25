@@ -153,6 +153,15 @@ function renderAbility($ability, $z=0, $cls=null) {
 
             </div>
         <?php endif;
+
+        // statblock
+        if (str_contains($ability["type"], "statblock")): ?>
+            <div class="statblock-preview mx-auto" style="padding: 2rem;">
+                <?php $creatureName = $ability["content"];
+                include ROOT . "/scripts/constructors/creature.php"; ?>
+            </div>
+        <?php endif;
+
     endif;
 }
 

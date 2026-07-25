@@ -659,7 +659,8 @@ table.ability {
     max-width: 60%;
 }
 
-#spell-preview-content > div {
+#spell-preview-content > div,
+.statblock-preview > div {
     overflow-y: auto;
     border: 3px solid rgb(var(--pink));
 }

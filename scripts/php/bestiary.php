@@ -3,7 +3,7 @@
 if (!defined("ROOT")) {define("ROOT", "../../");}
 require_once ROOT . "/scripts/php/general.php";
 
-// to-do
+// renders character alignment
 function renderAlignment ($attr) {
     if ($attr === "unaligned") {return $attr;}
 
@@ -28,6 +28,7 @@ function getMod($attr) {
 
 // calculates proficiency bonus based on cr
 function getProf ($cr) {
+    if ($cr === null) {return "Equal to yours.";}
     if ($cr === 0) {return 2;}
 
     else {
@@ -96,7 +97,8 @@ function renderSenses ($senses) {
 
 // renders skills and calculates bonuses based on modifiers and proficiency bonus
 // rendering it as +N to {skill} ({score})
-function renderSkills ($skills, $stats, $prof) {
+// expertise also rendered with 2*prof
+function renderSkills ($skills, $expert, $stats, $prof) {
     if (empty($skills)) {return "None";}
     
     $result = [];
@@ -120,12 +122,33 @@ function renderSkills ($skills, $stats, $prof) {
         "performance" => "CHA",
         "persuasion" => "CHA",
     ];
-
+    
     foreach ($skills as $skill) {
         $score = $scores[$skill];
-        $mod = getMod($stats[$score]) + $prof;
 
-        $result[] = ($mod >= 0 ? "+" : "") . $mod . " to " . ucwords($skill) . " (" . $score . ")";
+        if (is_int($prof)) {
+            $mod = getMod($stats[$score]) + $prof;
+
+            $result[] = ($mod >= 0 ? "+" : "") . $mod . " to " . ucwords($skill) . " (" . $score . ")";
+        } else {
+            $mod = getMod($stats[$score]);
+
+            $result[] = ($mod >= 0 ? "+" : "") . $mod . " + proficiency to " . ucwords($skill) . " (" . $score . ")";
+        }
+    }
+
+    foreach ($expert as $skill) {
+        $score = $scores[$skill];
+
+        if (is_int($prof)) {
+            $mod = getMod($stats[$score]) + $prof * 2;
+
+            $result[] = ($mod >= 0 ? "+" : "") . $mod . " to " . ucwords($skill) . " (" . $score . ")";
+        } else {
+            $mod = getMod($stats[$score]);
+
+            $result[] = ($mod >= 0 ? "+" : "") . $mod . " + 2 * proficiency to " . ucwords($skill) . " (" . $score . ")";
+        }
     }
 
     return implode("<br >", $result);
@@ -138,9 +161,16 @@ function renderSaves ($saves, $stats, $prof) {
 
     $result = [];
     foreach ($saves as $save) {
-        $mod = getMod($stats[$save]) + $prof;
+        if (is_int($prof)) {
+            $mod = getMod($stats[$save]) + $prof;
 
-        $result[] = ($mod >= 0 ? "+" : "") . $mod . " to " . $save . " saves";
+            $result[] = ($mod >= 0 ? "+" : "") . $mod . " to " . $save . " saves";
+        } else {
+            $mod = getMod($stats[$save]);
+
+            $result[] = ($mod >= 0 ? "+" : "") . $mod . " + proficiency to " . $save . " saves";
+        }
+        
     }
 
     return implode("<br >", $result);
@@ -185,6 +215,7 @@ function renderCR ($cr) {
     ];
 
     switch ($cr) {
+        case null: return "N/A (0 XP)";
         case 0.125: return "1/8 (" . $xp[$cr] . " XP)";
         case 0.25: return "1/4 (" . $xp[$cr] . " XP)";
         case 0.5: return "1/2 (" . $xp[$cr] . " XP)";

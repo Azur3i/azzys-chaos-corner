@@ -264,6 +264,71 @@
 
         "source": "Icewind Dale - Rime of the Frostmaiden"
     },
+    "steel-defender": {
+        "name": "Steel Defender",
+        "size": "medium",
+        "creatureType": "construct",
+        "alignment": "unaligned",
+
+        "desc": "",
+
+        "stats": {
+            "STR": 14,
+            "DEX": 12,
+            "CON": 14,
+            "INT": 4,
+            "WIS": 10,
+            "CHA": 6
+        },
+        
+        "hitpoints": "2 + your INT + 5 * your artificer level. The defender has a number of hit dice (1d8) equal to your artificer level.",
+        "ac": {
+            "amount": 15,
+            "source": "natural armor"
+        },
+        "speed": {
+            "walk": 40
+        },
+
+        "saves": ["DEX", "CON"],
+        "senses": {
+            "darkvision": 60,
+            "passivePerception": "10 + 2 * proficiency"
+        },
+        "skills": ["athletics"],
+        "expertise": ["perception"],
+
+        "dmgVulnerable": [],
+        "dmgResistant": [],
+        "dmgImmune": ["poison"],
+        "conditionImmune": ["charmed", "exhaustion", "poisoned"],
+
+        "cr": null,
+
+        "abilities": [
+            {
+                "name": "Languages",
+                "desc": "The defender understands the languages you speak, but cannot speak."
+            },
+            {
+                "name": "Vigilant",
+                "desc": "The defender cannot be surprised."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Force-Empowered Red",
+                "desc": "Melee Weapon Attack: your spell attack modifier to hit, reach 5ft., one target you can see. Hit: 1d8 + proficiency @force damage."
+            },
+            {
+                "name": ["Repair", "3/day"],
+                "desc": "The magical mechanisms inside the defender restore 2d8 + proficiency hitpoints to itself, or to a construct or object within 5ft. of it."
+            }
+        ],
+
+        "source": "Tasha's Cauldron of Everything"
+    },
     "tarrasque": {
         "name": "Tarrasque",
         "size": "gargantuan",

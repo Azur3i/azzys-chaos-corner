@@ -4,13 +4,10 @@ if (!defined("ROOT")) {define("ROOT",  __DIR__ . "/../..");}
 
 require_once ROOT . "/scripts/php/bestiary.php";
 
-if (!empty($_GET)) {
-    
-    $statblocks = json_decode(file_get_contents(ROOT . "/dnd/data/statblocks.json"), true);
+$statblocks = json_decode(file_get_contents(ROOT . "/dnd/data/statblocks.json"), true);
+$creatureName = $_GET["target"] ?? $creatureName;
 
-    $creatureName = $_GET["target"];
-    $statblock = $statblocks[$creatureName];
-}
+$statblock = $statblocks[$creatureName];
 
 ?>
 
@@ -41,7 +38,7 @@ if (!empty($_GET)) {
                 <div class="col title">
                     <p class="lg">Hitpoints</p>
                     <hr style="color: rgb(var(--black));">
-                    <p class="md"><?= renderHP($statblock["hitdice"], $statblock["size"], getMod($statblock["stats"]["CON"])) ?></p>
+                    <p class="md"><?= $statblock["hitpoints"] ?? renderHP($statblock["hitdice"], $statblock["size"], getMod($statblock["stats"]["CON"])) ?></p>
                 </div>
                 <div class="col title">
                     <p class="lg">Armor Class</p>
@@ -106,7 +103,7 @@ if (!empty($_GET)) {
                 <div class="col title">
                     <p class="md">Skill Proficiencies</p>
                     <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= renderSkills($statblock["skills"], $statblock["stats"], $prof) ?></p>
+                    <p class="sm"><?= renderSkills($statblock["skills"], $statblock["expertise"], $statblock["stats"], $prof) ?></p>
                 </div>
                 <div class="col title">
                     <p class="md">Saving Throw Proficiencies</p>
@@ -116,7 +113,7 @@ if (!empty($_GET)) {
                 <div class="col title">
                     <p class="md">Proficiency Bonus</p>
                     <hr style="color: rgb(var(--black));">
-                    <p class="sm">+<?= $prof ?></p>
+                    <p class="sm"><?= (is_int($prof) ? "+" : "") . $prof ?></p>
                 </div>
                 <div class="col title">
                     <p class="md">Challenge Rating</p>
