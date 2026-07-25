@@ -264,13 +264,83 @@
 
         "source": "Icewind Dale - Rime of the Frostmaiden"
     },
+    "grim": {
+        "name": "Grim",
+        "size": "medium",
+        "creatureType": "undead",
+        "alignment": "tn",
+
+        "desc": ["The grim is summoned as part of the Grim Harbinger Ranger Conclave."],
+
+        "stats": {
+            "STR": 16,
+            "DEX": 16,
+            "CON": 14,
+            "INT": 14,
+            "WIS": 10,
+            "CHA": 10
+        },
+        
+        "hitpoints": "5 + 5 * your ranger level. The grim has a number of hit dice (1d8) equal to your ranger level.",
+        "ac": {
+            "amount": "13 + your WIS"
+        },
+        "speed": {
+            "walk": 40
+        },
+
+        "saves": [],
+        "senses": {
+            "darkvision": 60,
+            "passivePerception": "10"
+        },
+        "skills": [],
+        "expertise": [],
+
+        "dmgVulnerable": [],
+        "dmgResistant": [],
+        "dmgImmune": ["necrotic"],
+        "conditionImmune": ["frightened", "grappled", "petrified", "poisoned", "prone", "restrained"],
+
+        "cr": null,
+
+        "abilities": [
+            {
+                "name": "Languages",
+                "desc": "The grim understands the languages you speak, but cannot speak."
+            },
+            {
+                "name": "Incorporeal Movement",
+                "desc": "The grim may move through other creatures and objects as if they were difficult terrain. The grim takes 1d10 @force damage if it ends its turn inside a solid object."
+            },
+            {
+                "name": "Shared Fate",
+                "desc": "The grim may add your proficiency to any ability check or saving throw it makes."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Ominous Rend",
+                "desc": "Melee Weapon Attack: your spell attack modifier to hit, reach 5ft., one target you can see. Hit: 1d6 + your WIS @necrotic damage. If the target is a creature, it is frightened of the grim until the start of your next turn."
+            }
+        ],
+        "reactions": [
+            {
+                "name": "Baleful Howl",
+                "desc": "Whenever a creature moves out of the grim's reach, the target must succeed on a WIS saving throw against your spell save DC, or have its speed reduced to 0 until the end of its turn."
+            }
+        ],
+
+        "source": "The Crooked Moon"
+    },
     "steel-defender": {
         "name": "Steel Defender",
         "size": "medium",
         "creatureType": "construct",
         "alignment": "unaligned",
 
-        "desc": "",
+        "desc": ["The steel defender is summoned as part of the Battle Smith Artificer Specialism."],
 
         "stats": {
             "STR": 14,
@@ -318,7 +388,7 @@
 
         "actions": [
             {
-                "name": "Force-Empowered Red",
+                "name": "Force-Empowered Rend",
                 "desc": "Melee Weapon Attack: your spell attack modifier to hit, reach 5ft., one target you can see. Hit: 1d8 + proficiency @force damage."
             },
             {

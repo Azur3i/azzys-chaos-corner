@@ -1062,6 +1062,404 @@
             "source": "The Crooked Moon"
         }
     },
+    "fighter": {
+        "samurai": {
+            "name": "Samurai",
+            "desc": ["The Samurai is a fighter who draws on an implacable fighting spirit to overcome enemies. A samurai's resolve is nearly unbreakable, and the enemies in a samurai's path have two choices: yield or die fighting."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiency",
+                        "desc": "You gain proficiency in one of the following skills of your choice: History (INT), Insight (WIS), Performance (CHA), or Persuasion (CHA). Alternatively, you learn one language of your choice."
+                    },
+                    {
+                        "name": "Fighting Spirit",
+                        "desc": "Your intensity in battle is able to shield you, and help you strike true. As a bonus action, you may give yourself advantage on all weapon attack rolls until the end of your current turn. Whenever you do so, you gain 5 temporary hitpoints. You may use this feature three times per long rest."
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Elegant Courtier",
+                        "desc": "Your discipline and attention to detail allow you to excel in social situations. Whenever you make a Persuasion (CHA) check, you gain a bonus equal to your WIS. Your self-control also causes you to gain proficiency in WIS saving throws. If you already have this proficiency, you instead gain proficiency in either INT or CHA saving throws, your choice."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Tireless Spirit",
+                        "desc": "Whenever you roll initiative and have no uses of your fighting spirit feature remaining, you regain one use."
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Rapid Strike",
+                        "desc": "You learn to trade accuracy for swift strikes. Whenever you take the @attack action on your turn and have advantage on an attack roll against one of the targets, you may forego the advantage for that roll to make an additional weapon attack against that target, as part of the same action. You may do so once per turn."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Strength Before Death",
+                        "desc": "Your fighting spirit can delay the grasp of death. Whenever you take damage that reduces you to 0 hitpoints, you may use your reaction to delay falling unconscious and immediately take an extra turn. While you have 0 hitpoints during that extra turn, taking damage causes death saving throw failures as normal, and three death saving throws can still kill you. When the extra turn ends, you fall unconscious if you still have 0 hitpoints. You may use this feature once per long rest."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        },
+        "barrow-guard": {
+            "name": "Barrow Guard",
+            "desc": ["Barrow Guards are warriors who harness the power of the dead, taking upon themselves spectral energies normally forbidden to the living. Some Barrow Guards are those returned from the dead through magical miracles or the whims of the gods. Others stand at the doors of sacred crypts, ready to push back any who attempt to desecrate the dead. No matter their origin, these stoic sentinels are unconcerned with matters of the living. They are separate, other, and duty-bound to their role as crypt-keepers, ensuring the dead - heroes and villains alike - remain at rest."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Draugr Dice",
+                        "desc": "You house within you the lingering remnants of souls long-departed, and their knowledge and experience imbue you with necromantic energy. It is represented by Draugr Dice, which fuel powers you gain from this subclass. You regain 1 draugr die when you finish a short rest, and regain all draugr die when you finish a long rest. The barrow guard draugr die table shows the die size and number you gain when you reach certain fighter levels.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Fighter level", "Dice"],
+                                ["3rd", "4d6"],
+                                ["5th", "6d8"],
+                                ["9th", "8d8"],
+                                ["11th", "8d10"],
+                                ["13th", "10d10"],
+                                ["17th", "12d12"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Death Knight",
+                        "desc": "Some of your powers expend a draugr die, as specified in the feature's description, and you cannot use a power if it requires you to use a die when all your draugr dice are already expended. The save DC for any of your powers where applicable is 8 + CON + proficiency. You gain access to the following powers:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Dark Rider",
+                                "desc": "As a bonus action, you manifest a ghostly steed that only you may mount. The steed uses the warhorse statblock, but its creature type is undead, it gains resistance to @bludgeoning, @piercing, and @slashing damage, and it may only take the @dash, @disengage, and @dodge actions. Whenever the steed takes the @dash action, you may expend and roll a draugr die. During the movement from that action, the steed's speed increases by a number of ft. equal to 5 times the number rolled. The steed vanishes after 1 hour, if reduced to 0 hitpoints, if you are incapacitated, or if you die. You may use this power once per short rest. You may expend a draugr die as a free action to use this feature without expending a use."
+                            },
+                            {
+                                "name": "Grave Guard",
+                                "desc": "As a reaction whenever you take damage, you may expend and roll a draugr die, reducing the incoming damage by the number rolled + CON."
+                            },
+                            {
+                                "name": "Soul Reaper",
+                                "desc": "Whenever you take the @attack action, you may forego one of your attacks to magically call forth ghostly hands around a creature within 60ft. of you. Expend and roll a draugr die. The target must make a STR saving throw, taking @necrotic damage equal to the number rolled + CON, or half as much on a successful one. Additionally, on a failure, it is grappled for 1 minute."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Siphoning Souls",
+                        "desc": "You may capture the fleeing essence of departing souls to glean knowledge and prowess. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Mortal Coil",
+                                "desc": "As a reaction whenever a creature hostile to you that isn't a construct or undead dies within 30ft. of you, you may regain 1 expended draugr die."
+                            },
+                            {
+                                "name": "Whisper of the Departed",
+                                "desc": "Whenever you make an ability check, you may expend and roll a draugr die, adding the number rolled to the total."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Tomb Castellan",
+                        "desc": "The powers of your death knight feature improve in the following ways:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Phantom Charger",
+                                "desc": "The ghostly steed of your dark rider power ignores difficult terrain. Additionally, whenever your steed takes the @dash, @disengage, or @dodge action, you may expend and roll a draugr die. Your steed magically teleports, alongside you if you're riding it, to an unoccupied space you can see within 60ft. of the steed. Each creature of your choice within 10ft. of the steed when it appears must make a CON saving throw, taking @necrotic damage equal to the number rolled + CON on a failed save, or half as much on a successful one."
+                            },
+                            {
+                                "name": "Death Knell",
+                                "desc": "Whenever you use your grave guard power in response to a creature damaging you, the creature takes @psychic damage equal to half the amount of damage the power reduced."
+                            },
+                            {
+                                "name": "Spectral Shrieking",
+                                "desc": "Whenever a creature grappled by your soul reaper power starts its turn, it takes @psychic damage equal to your proficiency. As a reaction when it takes this damage, you may expend and roll a draugr die, adding the number rolled to the damage."
+                            }
+                        ]
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Grave Lord",
+                        "desc": "You are no longer a mere vessel for spectral energy, but a lord of it. Your powers improve in the following ways:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "On A Pale Horse",
+                                "desc": "Whenever you use your dark rider power, you may allow a creature of your choice to mount the steed in addition to you. Additionally, whenever you expend a draugr die during the steed's @dash action, it may move through solid objects and creatures as if they were difficult terrain, along with any riders. If the steed ends its turn inside a solid object, it and any riders take 1d10 @force damage, and are shunted out to the nearest unoccupied space."
+                            },
+                            {
+                                "name": "Sepulchral Shield",
+                                "desc": "Whenever you use your gravel guard power, choose one of the triggering damage types. You gain resistance to that damage type, including the triggering damage, until the start of your next turn."
+                            },
+                            {
+                                "name": "Death Grip",
+                                "desc": "A creature grappled by your soul reaper power is restrained until the grapple ends."
+                            }
+                        ]
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Might of the Necropolis",
+                        "desc": "Your command of the secrets imparted to you is absolute. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Eternal Vigil",
+                                "desc": "You no longer suffer the effects of aging, you cannot be magically aged, and you cannot die of old age. Additionally, you no longer require air, food, drink, or sleep."
+                            },
+                            {
+                                "name": "Restless Dead",
+                                "desc": "Whenever you roll initative, if you have 2 or less draugr dice, you regain expended dice until you have 3."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        }
+    },
+    "monk": {
+        "way-of-the-astral-self": {
+            "name": "Way of the Astral Self",
+            "desc": ["A monk who follows the Way of the Astral Self believes their body is an illusion. They see their ki as a representation of their true form, an astral self. This astral self has the capacity to be a force of order or disorder, with some monasteries training students to use their power to protect the weapon, and others instructing aspirants in how to manifest their true selves in service of the mighty."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Arms of the Astral Self",
+                        "desc": "As a bonus action, you may spend 1 ki point to summon the arms of your astral self. When you do so, each creature of your choice that you can see within 10ft. of you must succeed on a DEX saving throw or take force damage equal to two rolls of your martial arts die. For the next 10 minutes, these spectral arms hover near either your shoulders or surrounding your arms. You may determine the appearance of these arms, and they will vanish early if you are incapacitated or if you die. The arms grant you the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You may use your WIS modifier instead of your STR modifier when making STR checks and saving throws."
+                            },
+                            {
+                                "desc": "You may use the spectral arms to make unarmed strikes. You may use your WIS modifier instead of your STR modifier for the attack and damage rolls of these strikes, and their damage type is force damage. Additionally, your reach for these unarmed strikes increases by 5ft."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Visage of the Astral Self",
+                        "desc": "You gain the ability to summon the visage of your astral self. As a bonus action or as part of the bonus action you take to activate the arms of the astral self trait, you may spend 1 ki point to summon this visage for 10 minutes. It will vanish early if you are incapacitated or if you die. The visage covers your face like a helmet or mask. You may determine its appearance. The visage grants you the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Astral Sight",
+                                "desc": "You can see normally in darkness, both magical and nonmagical, to a distance of 120ft."
+                            },
+                            {
+                                "name": "Wisdom of the Spirit",
+                                "desc": "You gain advantage on Insight (WIS) and Intimidation (CHA) checks."
+                            },
+                            {
+                                "name": "Astral Sight",
+                                "desc": "When you speak, you may direct your words to a creature of your choice within 60ft. of you, so that only they may hear you. Alternatively, you may amplify your voice so that all creatures within up to 600ft. can hear you."
+                            }
+                        ]
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Body of the Astral Self",
+                        "desc": "When you have both your astral arms and visage summoned, you may cause the body of your astral self to appear. This requires no action. This spectral body covers your physical form like a suit of armor, connecting to the arms and visage. You may determine its appearance. The body grants you the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Deflect Energy",
+                                "desc": "Whenever you take @acid, @cold, @fire, @force, @lightning or @thunder damage, you may use your reaction to deflect it. When you do so, the damage you take is reduced by 1d10 + WIS. The damage is reduced by a minimum of 1."
+                            },
+                            {
+                                "name": "Empowered Arms",
+                                "desc": "Once on each of your turns, whenever you hit you a target with an unarmed strike from the astral arms, you may deal extra damage equal to your martial arts die."
+                            }
+                        ]
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Awakened Astral Self",
+                        "desc": "Your connection to your astral self is complete. As a bonus action, you may spend 5 ki points to summon your full astral body (arms, visage and body), and awaken it for 10 minutes. The awakening ends if you are incapacitated or if you die. The awakened astral self gives you the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Armor of the Spirit",
+                                "desc": "You gain +2 AC."
+                            },
+                            {
+                                "name": "Astral Barrage",
+                                "desc": "Whenever you use the monk's extra attack feature to attack twice, you may instead attack three times if all the attacks are unarmed strikes with your astral arms."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        },
+        "way-of-the-drunken-master": {
+            "name": "Way of the Drunken Master",
+            "desc": ["The Way of the Drunken Master teaches its students to move with the jerky, unpredictable movements of a drunkard. A drunken master sways, tottering on unsteady feet, to present what seems like an incompetent combatent who proves frustrating to engage. The drunken master's erratic stumbles conceal a carefully executed dance of blocks, parries, advances, attacks and retreats.", "A drunken master often enjoys playing the fool to bring gladness to the despondent or to demonstrate humility to the arrogant, but when battle is joined, the drunken master can be a maddening, masterful foe."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiencies",
+                        "desc": "You gain proficiency in the Performance (CHA) skill if you don't already have it. You also gain proficiency with brewer's supplies if you don't already have it."
+                    },
+                    {
+                        "name": "Drunken Technique",
+                        "desc": "Whenever you use your flurry of blows trait, you gain the benefit of the @disengage action, and your walking speed increases by 10ft. until the end of that turn."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Tipsy Sway",
+                        "desc": "You gain the following traits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Leap to Your Feet",
+                                "desc": "When you're prone, you may stand up by spending 5ft. of movement, rather than the usual amount."
+                            },
+                            {
+                                "name": "Redirect Attack",
+                                "desc": "Whenever a creature misses you with a melee attack roll, you may spend 1 ki point as a reaction to cause that attack to hit one creature of your choice, other than the attacker, that you can see within 5ft. of you."
+                            }
+                        ]
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Drunkard's Luck",
+                        "desc": "Whenever you make an ability check, an attack roll, or a saving throw and have disadvantage, you may spend 2 ki points to remove the disadvantage for that roll."
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Intoxicated Frenzy",
+                        "desc": "When you use your flurry of blows, you may make up to 3 additional attacks with it, for a total of 5, but only if each attack targets different creatures this turn."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        },
+        "way-of-the-pestilent-haze": {
+            "name": "Way of the Pestilent Haze",
+            "desc": ["Adherents of the Pestilent Haze draw plague into their very beings, folding it into their energy and becoming one with the disease. Monks who follow this tradition wander, often following or even preceding waves of pestilence. Some walk with caution, their touch measured, unleashing sickness only where dense populations must be culled. Others revel in the miasma spreading as far and fast as possible."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Miasmic Plague Manifestations (Optional)",
+                        "desc": "Your miasmic plague is a unique, magical affliction that may take many forms that you weave through your deep connection to the contagion. The plague manifestations table offers suggestions for what magical form your signature disease takes as it spreads, as well as its hallmark symptoms.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d10", "Disease", "Manifestation", "Symptoms"],
+                                [1, "Bloodbreath", "Bruise-colored miasma, the edges of which form into slithering tentacles.", "Painful bruises, and a hoarse, bloody cough."],
+                                [2, "Drone Spew", "Swarm of monstrous, mutated flies that buzz with a horrifying drone.", "Bleeding ears, and intense vomiting."],
+                                [3, "Festergut", "Viscous, gray sewer water that leaves a film on surfaces.", "Intense stomach pain, dehydration, and blood loss."],
+                                [4, "Gutterpox", "Globs of toxic, greenish sludge that oozes erratically to the touch.", "Swollen, green papules, and oppressive mucus buildup."],
+                                [5, "Knell Fever", "Hot wind that prickles the skin, and howls with the sound of a tolling bell.", "Heat blisters, and feverish hallucinations."],
+                                [6, "Rotface", "Numerous spiked, fungal spores that float through the air.", "Rapid rotting of flesh, especially around the eyes and mouth."],
+                                [7, "The Unclean", "Undulating mass of pallid flesh, teeth, and tongues.", "Grotesque, mutated growths, such as new tentacle-like appendages, and gnashing mouths."],
+                                [8, "Toadscale", "Infected rains filled with venomous, spectral toads.", "Hardened, itchy patches of scaly skin that turn vibrantly colorful, and fits of agonized croaking."],
+                                [9, "Verminplague", "Scurrying mass of ravenous, spectral plague rats that gnaw and scratch victims.", "Painful boils and pustules, and an incessant, squeaking cough."],
+                                [10, "Yellow Death", "Billowing, skull-shaped clouds of foul-smelling fumes, with a sickly yellow hue.", "Debilitating fatigue, muscle aches, and sunken, sallow skin."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Contagious Discipline",
+                        "desc": "You have brewed and concentrated disease within yourself, and may now push manifestations of it outward. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Claws of Pestilence",
+                                "desc": "Your nails grow into a set of vermin-like claws. You may deal @slashing damage when you hit with an unarmed strike, instead of the usual @bludgeoning damage. Whenever you hit a creature with an attack from your flurry of blows feature, you may deal extra @necrotic damage equal to a roll of of your martial die."
+                            },
+                            {
+                                "name": "Miasmic Plague",
+                                "desc": "Whenever you hit a creature with an unarmed strike, you may expend 1 ki point to force the creature to succeed on a CON saving throw, or be cursed for 1 minute. While cursed in this way, the creature is poisoned, and takes extra @necrotic damage from your unarmed strikes equal to a roll of your martial die. A creature may take this damage only once per turn. A cursed creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Additionally, you may forego the extra @necrotic damage done by your claws of pestilence feature to use this feature without expending a ki point."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Gift of Pestilence",
+                        "desc": "Through observation and meditation, you are attuned to the nature of pestilence, and the creatures believed to carry it. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Inoculation",
+                                "desc": "You gain advantage on saving throws to avoid or end being poisoned, and against diseases. You gain resistance to @poison and @necrotic damage."
+                            },
+                            {
+                                "name": "Vermin Kinship",
+                                "desc": "Through chittering sounds and hand gestures, you are able to communicate simple concepts to vermin, such as rats, pigeons, and insects, and you gain the ability to decipher their noises and motions. Vermin lack the intelligence to convey or understand sophisticated concepts,but friendly vermin could relay what they have seen or heard in the recent past. Additionally, you may cast the @animal messenger spell, using WIS as your spellcasting ability, targeting a Tiny beast that is considered vermin and thought to spread plague and disease. You may cast it once per long rest."
+                            }
+                        ]
+
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Potent Plague",
+                        "desc": "The strain of your plague becomes more virulent and deadly. Whenever you deal @necrotic or @poison damage, you may ignore the target's resistances to those types."
+                    },
+                    {
+                        "name": "Tolling Censer",
+                        "desc": "You may unleash a cloud of miasma upon your enemies. As an action, you may expend 2 ki points to magically unleash a cloud of miasma in a 20ft. radius sphere centered on you. Each creature of your choice in that area must make a CON saving throw, taking @necrotic damage equal to 2 rolls of your martial die, or half as much on a successful one. Additionally, on a failure, the target is cursed by your miasmic plague."
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Miasmic Contagion",
+                        "desc": "The strength of your miasmic plague has increased, granting you the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Choking Miasma",
+                                "desc": "CON saving throws against your miasmic plague are made with disadvantage."
+                            },
+                            {
+                                "name": "Scurrying Spread",
+                                "desc": "Whenever you use your step of the wind feature, until the end of your turn, whenever you enter a space within 5ft. of any creature of your choice, it must succeed on a CON saving throw, or be cursed by your miasmic plague. A creature makes this save only once per turn."
+                            }
+                        ]
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Epidemic",
+                        "desc": "Your plague has reached the height of its potency, and its symptoms rapidly afflict your foes. Your miasmic plague ignores a target's immunity to being poisoned. Additionally, whenever you deal @necrotic damage to a creature cursed by your miasmic plague, it takes extra @necrotic damage equal to a roll of your martial die."
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        }
+    },
     "paladin": {
         "betrayed": {
             "name": "Betrayed",
@@ -1462,406 +1860,101 @@
             "source": "Asmodeus: King of Hell"
         } 
     },
-    "fighter": {
-        "samurai": {
-            "name": "Samurai",
-            "desc": ["The Samurai is a fighter who draws on an implacable fighting spirit to overcome enemies. A samurai's resolve is nearly unbreakable, and the enemies in a samurai's path have two choices: yield or die fighting."],
-            "magic": {
-                "caster": "none"
-            },
-            "levels": {
-                "3": [
-                    {
-                        "name": "Bonus Proficiency",
-                        "desc": "You gain proficiency in one of the following skills of your choice: History (INT), Insight (WIS), Performance (CHA), or Persuasion (CHA). Alternatively, you learn one language of your choice."
-                    },
-                    {
-                        "name": "Fighting Spirit",
-                        "desc": "Your intensity in battle is able to shield you, and help you strike true. As a bonus action, you may give yourself advantage on all weapon attack rolls until the end of your current turn. Whenever you do so, you gain 5 temporary hitpoints. You may use this feature three times per long rest."
-                    }
-                ],
-                "7": [
-                    {
-                        "name": "Elegant Courtier",
-                        "desc": "Your discipline and attention to detail allow you to excel in social situations. Whenever you make a Persuasion (CHA) check, you gain a bonus equal to your WIS. Your self-control also causes you to gain proficiency in WIS saving throws. If you already have this proficiency, you instead gain proficiency in either INT or CHA saving throws, your choice."
-                    }
-                ],
-                "10": [
-                    {
-                        "name": "Tireless Spirit",
-                        "desc": "Whenever you roll initiative and have no uses of your fighting spirit feature remaining, you regain one use."
-                    }
-                ],
-                "15": [
-                    {
-                        "name": "Rapid Strike",
-                        "desc": "You learn to trade accuracy for swift strikes. Whenever you take the @attack action on your turn and have advantage on an attack roll against one of the targets, you may forego the advantage for that roll to make an additional weapon attack against that target, as part of the same action. You may do so once per turn."
-                    }
-                ],
-                "18": [
-                    {
-                        "name": "Strength Before Death",
-                        "desc": "Your fighting spirit can delay the grasp of death. Whenever you take damage that reduces you to 0 hitpoints, you may use your reaction to delay falling unconscious and immediately take an extra turn. While you have 0 hitpoints during that extra turn, taking damage causes death saving throw failures as normal, and three death saving throws can still kill you. When the extra turn ends, you fall unconscious if you still have 0 hitpoints. You may use this feature once per long rest."
-                    }
-                ]
-            },
-            "source": "Xanathar's Guide to Everything"
-        },
-        "barrow-guard": {
-            "name": "Barrow Guard",
-            "desc": ["Barrow Guards are warriors who harness the power of the dead, taking upon themselves spectral energies normally forbidden to the living. Some Barrow Guards are those returned from the dead through magical miracles or the whims of the gods. Others stand at the doors of sacred crypts, ready to push back any who attempt to desecrate the dead. No matter their origin, these stoic sentinels are unconcerned with matters of the living. They are separate, other, and duty-bound to their role as crypt-keepers, ensuring the dead - heroes and villains alike - remain at rest."],
-            "magic": {
-                "caster": "none"
-            },
-            "levels": {
-                "3": [
-                    {
-                        "name": "Draugr Dice",
-                        "desc": "You house within you the lingering remnants of souls long-departed, and their knowledge and experience imbue you with necromantic energy. It is represented by Draugr Dice, which fuel powers you gain from this subclass. You regain 1 draugr die when you finish a short rest, and regain all draugr die when you finish a long rest. The barrow guard draugr die table shows the die size and number you gain when you reach certain fighter levels.",
-                        "type": "table",
-                        "content": {
-                            "header": true,
-                            "content": [
-                                ["Fighter level", "Dice"],
-                                ["3rd", "4d6"],
-                                ["5th", "6d8"],
-                                ["9th", "8d8"],
-                                ["11th", "8d10"],
-                                ["13th", "10d10"],
-                                ["17th", "12d12"]
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Death Knight",
-                        "desc": "Some of your powers expend a draugr die, as specified in the feature's description, and you cannot use a power if it requires you to use a die when all your draugr dice are already expended. The save DC for any of your powers where applicable is 8 + CON + proficiency. You gain access to the following powers:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Dark Rider",
-                                "desc": "As a bonus action, you manifest a ghostly steed that only you may mount. The steed uses the warhorse statblock, but its creature type is undead, it gains resistance to @bludgeoning, @piercing, and @slashing damage, and it may only take the @dash, @disengage, and @dodge actions. Whenever the steed takes the @dash action, you may expend and roll a draugr die. During the movement from that action, the steed's speed increases by a number of ft. equal to 5 times the number rolled. The steed vanishes after 1 hour, if reduced to 0 hitpoints, if you are incapacitated, or if you die. You may use this power once per short rest. You may expend a draugr die as a free action to use this feature without expending a use."
-                            },
-                            {
-                                "name": "Grave Guard",
-                                "desc": "As a reaction whenever you take damage, you may expend and roll a draugr die, reducing the incoming damage by the number rolled + CON."
-                            },
-                            {
-                                "name": "Soul Reaper",
-                                "desc": "Whenever you take the @attack action, you may forego one of your attacks to magically call forth ghostly hands around a creature within 60ft. of you. Expend and roll a draugr die. The target must make a STR saving throw, taking @necrotic damage equal to the number rolled + CON, or half as much on a successful one. Additionally, on a failure, it is grappled for 1 minute."
-                            }
-                        ]
-                    }
-                ],
-                "7": [
-                    {
-                        "name": "Siphoning Souls",
-                        "desc": "You may capture the fleeing essence of departing souls to glean knowledge and prowess. You gain the following benefits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Mortal Coil",
-                                "desc": "As a reaction whenever a creature hostile to you that isn't a construct or undead dies within 30ft. of you, you may regain 1 expended draugr die."
-                            },
-                            {
-                                "name": "Whisper of the Departed",
-                                "desc": "Whenever you make an ability check, you may expend and roll a draugr die, adding the number rolled to the total."
-                            }
-                        ]
-                    }
-                ],
-                "10": [
-                    {
-                        "name": "Tomb Castellan",
-                        "desc": "The powers of your death knight feature improve in the following ways:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Phantom Charger",
-                                "desc": "The ghostly steed of your dark rider power ignores difficult terrain Additionally, whenever your steed takes the @dash, @disengage, or @dodge action, you may expend and roll a draugr die. Your steed magically teleports, alongside you if you're riding it, to an unoccupied space you can see within 60ft. of the steed. Each creature of your choice within 10ft. of the steed when it appears must make a CON saving throw, taking @necrotic damage equal to the number rolled + CON on a failed save, or half as much on a successful one."
-                            },
-                            {
-                                "name": "Death Knell",
-                                "desc": "Whenever you use your grave guard power in response to a creature damaging you, the creature takes @psychic damage equal to half the amount of damage the power reduced."
-                            },
-                            {
-                                "name": "Spectral Shrieking",
-                                "desc": "Whenever a creature grappled by your soul reaper power starts its turn, it takes @psychic damage equal to your proficiency. As a reaction when it takes this damage, you may expend and roll a draugr die, adding the number rolled to the damage."
-                            }
-                        ]
-                    }
-                ],
-                "15": [
-                    {
-                        "name": "Grave Lord",
-                        "desc": "You are no longer a mere vessel for spectral energy, but a lord of it. Your powers improve in the following ways:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "On A Pale Horse",
-                                "desc": "Whenever you use your dark rider power, you may allow a creature of your choice to mount the steed in addition to you. Additionally, whenever you expend a draugr die during the steed's @dash action, it may move through solid objects and creatures as if they were difficult terrain, along with any riders. If the steed ends its turn inside a solid object, it and any riders take 1d10 @force damage, and are shunted out to the nearest unoccupied space."
-                            },
-                            {
-                                "name": "Sepulchral Shield",
-                                "desc": "Whenever you use your gravel guard power, choose one of the triggering damage types. You gain resistance to that damage type, including the triggering damage, until the start of your next turn."
-                            },
-                            {
-                                "name": "Death Grip",
-                                "desc": "A creature grappled by your soul reaper power is restrained until the grapple ends."
-                            }
-                        ]
-                    }
-                ],
-                "18": [
-                    {
-                        "name": "Might of the Necropolis",
-                        "desc": "Your command of the secrets imparted to you is absolute. You gain the following benefits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Eternal Vigil",
-                                "desc": "You no longer suffer the effects of aging, you cannot be magically aged, and you cannot die of old age. Additionally, you no longer require air, food, drink, or sleep."
-                            },
-                            {
-                                "name": "Restless Dead",
-                                "desc": "Whenever you roll initative, if you have 2 or less draugr dice, you regain expended dice until you have 3."
-                            }
-                        ]
-                    }
-                ]
-            },
-            "source": "The Crooked Moon"
-        }
-    },
-    "monk": {
-        "way-of-the-astral-self": {
-            "name": "Way of the Astral Self",
-            "desc": ["A monk who follows the Way of the Astral Self believes their body is an illusion. They see their ki as a representation of their true form, an astral self. This astral self has the capacity to be a force of order or disorder, with some monasteries training students to use their power to protect the weapon, and others instructing aspirants in how to manifest their true selves in service of the mighty."],
-            "magic": {
-                "caster": "none"
-            },
-            "levels": {
-                "3": [
-                    {
-                        "name": "Arms of the Astral Self",
-                        "desc": "As a bonus action, you may spend 1 ki point to summon the arms of your astral self. When you do so, each creature of your choice that you can see within 10ft. of you must succeed on a DEX saving throw or take force damage equal to two rolls of your martial arts die. For the next 10 minutes, these spectral arms hover near either your shoulders or surrounding your arms. You may determine the appearance of these arms, and they will vanish early if you are incapacitated or if you die. The arms grant you the following traits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "desc": "You may use your WIS modifier instead of your STR modifier when making STR checks and saving throws."
-                            },
-                            {
-                                "desc": "You may use the spectral arms to make unarmed strikes. You may use your WIS modifier instead of your STR modifier for the attack and damage rolls of these strikes, and their damage type is force damage. Additionally, your reach for these unarmed strikes increases by 5ft."
-                            }
-                        ]
-                    }
-                ],
-                "6": [
-                    {
-                        "name": "Visage of the Astral Self",
-                        "desc": "You gain the ability to summon the visage of your astral self. As a bonus action or as part of the bonus action you take to activate the arms of the astral self trait, you may spend 1 ki point to summon this visage for 10 minutes. It will vanish early if you are incapacitated or if you die. The visage covers your face like a helmet or mask. You may determine its appearance. The visage grants you the following traits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Astral Sight",
-                                "desc": "You can see normally in darkness, both magical and nonmagical, to a distance of 120ft."
-                            },
-                            {
-                                "name": "Wisdom of the Spirit",
-                                "desc": "You gain advantage on Insight (WIS) and Intimidation (CHA) checks."
-                            },
-                            {
-                                "name": "Astral Sight",
-                                "desc": "When you speak, you may direct your words to a creature of your choice within 60ft. of you, so that only they may hear you. Alternatively, you may amplify your voice so that all creatures within up to 600ft. can hear you."
-                            }
-                        ]
-                    }
-                ],
-                "11": [
-                    {
-                        "name": "Body of the Astral Self",
-                        "desc": "When you have both your astral arms and visage summoned, you may cause the body of your astral self to appear. This requires no action. This spectral body covers your physical form like a suit of armor, connecting to the arms and visage. You may determine its appearance. The body grants you the following traits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Deflect Energy",
-                                "desc": "Whenever you take @acid, @cold, @fire, @force, @lightning or @thunder damage, you may use your reaction to deflect it. When you do so, the damage you take is reduced by 1d10 + WIS. The damage is reduced by a minimum of 1."
-                            },
-                            {
-                                "name": "Empowered Arms",
-                                "desc": "Once on each of your turns, whenever you hit you a target with an unarmed strike from the astral arms, you may deal extra damage equal to your martial arts die."
-                            }
-                        ]
-                    }
-                ],
-                "17": [
-                    {
-                        "name": "Awakened Astral Self",
-                        "desc": "Your connection to your astral self is complete. As a bonus action, you may spend 5 ki points to summon your full astral body (arms, visage and body), and awaken it for 10 minutes. The awakening ends if you are incapacitated or if you die. The awakened astral self gives you the following traits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Armor of the Spirit",
-                                "desc": "You gain +2 AC."
-                            },
-                            {
-                                "name": "Astral Barrage",
-                                "desc": "Whenever you use the monk's extra attack feature to attack twice, you may instead attack three times if all the attacks are unarmed strikes with your astral arms."
-                            }
-                        ]
-                    }
-                ]
-            },
-            "source": "Tasha's Cauldron of Everything"
-        },
-        "way-of-the-drunken-master": {
-            "name": "Way of the Drunken Master",
-            "desc": ["The Way of the Drunken Master teaches its students to move with the jerky, unpredictable movements of a drunkard. A drunken master sways, tottering on unsteady feet, to present what seems like an incompetent combatent who proves frustrating to engage. The drunken master's erratic stumbles conceal a carefully executed dance of blocks, parries, advances, attacks and retreats.", "A drunken master often enjoys playing the fool to bring gladness to the despondent or to demonstrate humility to the arrogant, but when battle is joined, the drunken master can be a maddening, masterful foe."],
-            "magic": {
-                "caster": "none"
-            },
-            "levels": {
-                "3": [
-                    {
-                        "name": "Bonus Proficiencies",
-                        "desc": "You gain proficiency in the Performance (CHA) skill if you don't already have it. You also gain proficiency with brewer's supplies if you don't already have it."
-                    },
-                    {
-                        "name": "Drunken Technique",
-                        "desc": "Whenever you use your flurry of blows trait, you gain the benefit of the @disengage action, and your walking speed increases by 10ft. until the end of that turn."
-                    }
-                ],
-                "6": [
-                    {
-                        "name": "Tipsy Sway",
-                        "desc": "You gain the following traits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Leap to Your Feet",
-                                "desc": "When you're prone, you may stand up by spending 5ft. of movement, rather than the usual amount."
-                            },
-                            {
-                                "name": "Redirect Attack",
-                                "desc": "Whenever a creature misses you with a melee attack roll, you may spend 1 ki point as a reaction to cause that attack to hit one creature of your choice, other than the attacker, that you can see within 5ft. of you."
-                            }
-                        ]
-                    }
-                ],
-                "11": [
-                    {
-                        "name": "Drunkard's Luck",
-                        "desc": "Whenever you make an ability check, an attack roll, or a saving throw and have disadvantage, you may spend 2 ki points to remove the disadvantage for that roll."
-                    }
-                ],
-                "17": [
-                    {
-                        "name": "Intoxicated Frenzy",
-                        "desc": "When you use your flurry of blows, you may make up to 3 additional attacks with it, for a total of 5, but only if each attack targets different creatures this turn."
-                    }
-                ]
-            },
-            "source": "Xanathar's Guide to Everything"
-        },
-        "way-of-the-pestilent-haze": {
-            "name": "Way of the Pestilent Haze",
-            "desc": ["Adherents of the Pestilent Haze draw plague into their very beings, folding it into their energy and becoming one with the disease. Monks who follow this tradition wander, often following or even preceding waves of pestilence. Some walk with caution, their touch measured, unleashing sickness only where dense populations must be culled. Others revel in the miasma spreading as far and fast as possible."],
-            "magic": {
-                "caster": "none"
-            },
-            "levels": {
-                "3": [
-                    {
-                        "name": "Miasmic Plague Manifestations (Optional)",
-                        "desc": "Your miasmic plague is a unique, magical affliction that may take many forms that you weave through your deep connection to the contagion. The plague manifestations table offers suggestions for what magical form your signature disease takes as it spreads, as well as its hallmark symptoms.",
-                        "type": "table",
-                        "content": {
-                            "header": true,
-                            "content": [
-                                ["1d10", "Disease", "Manifestation", "Symptoms"],
-                                [1, "Bloodbreath", "Bruise-colored miasma, the edges of which form into slithering tentacles.", "Painful bruises, and a hoarse, bloody cough."],
-                                [2, "Drone Spew", "Swarm of monstrous, mutated flies that buzz with a horrifying drone.", "Bleeding ears, and intense vomiting."],
-                                [3, "Festergut", "Viscous, gray sewer water that leaves a film on surfaces.", "Intense stomach pain, dehydration, and blood loss."],
-                                [4, "Gutterpox", "Globs of toxic, greenish sludge that oozes erratically to the touch.", "Swollen, green papules, and oppressive mucus buildup."],
-                                [5, "Knell Fever", "Hot wind that prickles the skin, and howls with the sound of a tolling bell.", "Heat blisters, and feverish hallucinations."],
-                                [6, "Rotface", "Numerous spiked, fungal spores that float through the air.", "Rapid rotting of flesh, especially around the eyes and mouth."],
-                                [7, "The Unclean", "Undulating mass of pallid flesh, teeth, and tongues.", "Grotesque, mutated growths, such as new tentacle-like appendages, and gnashing mouths."],
-                                [8, "Toadscale", "Infected rains filled with venomous, spectral toads.", "Hardened, itchy patches of scaly skin that turn vibrantly colorful, and fits of agonized croaking."],
-                                [9, "Verminplague", "Scurrying mass of ravenous, spectral plague rats that gnaw and scratch victims.", "Painful boils and pustules, and an incessant, squeaking cough."],
-                                [10, "Yellow Death", "Billowing, skull-shaped clouds of foul-smelling fumes, with a sickly yellow hue.", "Debilitating fatigue, muscle aches, and sunken, sallow skin."]
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Contagious Discipline",
-                        "desc": "You have brewed and concentrated disease within yourself, and may now push manifestations of it outward. You gain the following benefits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Claws of Pestilence",
-                                "desc": "Your nails grow into a set of vermin-like claws. You may deal @slashing damage when you hit with an unarmed strike, instead of the usual @bludgeoning damage. Whenever you hit a creature with an attack from your flurry of blows feature, you may deal extra @necrotic damage equal to a roll of of your martial die."
-                            },
-                            {
-                                "name": "Miasmic Plague",
-                                "desc": "Whenever you hit a creature with an unarmed strike, you may expend 1 ki point to force the creature to succeed on a CON saving throw, or be cursed for 1 minute. While cursed in this way, the creature is poisoned, and takes extra @necrotic damage from your unarmed strikes equal to a roll of your martial die. A creature may take this damage only once per turn. A cursed creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Additionally, you may forego the extra @necrotic damage done by your claws of pestilence feature to use this feature without expending a ki point."
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Gift of Pestilence",
-                        "desc": "Through observation and meditation, you are attuned to the nature of pestilence, and the creatures believed to carry it. You gain the following benefits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Inoculation",
-                                "desc": "You gain advantage on saving throws to avoid or end being poisoned, and against diseases. You gain resistance to @poison and @necrotic damage."
-                            },
-                            {
-                                "name": "Vermin Kinship",
-                                "desc": "Through chittering sounds and hand gestures, you are able to communicate simple concepts to vermin, such as rats, pigeons, and insects, and you gain the ability to decipher their noises and motions. Vermin lack the intelligence to convey or understand sophisticated concepts,but friendly vermin could relay what they have seen or heard in the recent past. Additionally, you may cast the @animal messenger spell, using WIS as your spellcasting ability, targeting a Tiny beast that is considered vermin and thought to spread plague and disease. You may cast it once per long rest."
-                            }
-                        ]
-
-                    }
-                ],
-                "6": [
-                    {
-                        "name": "Potent Plague",
-                        "desc": "The strain of your plague becomes more virulent and deadly. Whenever you deal @necrotic or @poison damage, you may ignore the target's resistances to those types."
-                    },
-                    {
-                        "name": "Tolling Censer",
-                        "desc": "You may unleash a cloud of miasma upon your enemies. As an action, you may expend 2 ki points to magically unleash a cloud of miasma in a 20ft. radius sphere centered on you. Each creature of your choice in that area must make a CON saving throw, taking @necrotic damage equal to 2 rolls of your martial die, or half as much on a successful one. Additionally, on a failure, the target is cursed by your miasmic plague."
-                    }
-                ],
-                "11": [
-                    {
-                        "name": "Miasmic Contagion",
-                        "desc": "The strength of your miasmic plague has increased, granting you the following benefits:",
-                        "type": "list",
-                        "content": [
-                            {
-                                "name": "Choking Miasma",
-                                "desc": "CON saving throws against your miasmic plague are made with disadvantage."
-                            },
-                            {
-                                "name": "Scurrying Spread",
-                                "desc": "Whenever you use your step of the wind feature, until the end of your turn, whenever you enter a space within 5ft. of any creature of your choice, it must succeed on a CON saving throw, or be cursed by your miasmic plague. A creature makes this save only once per turn."
-                            }
-                        ]
-                    }
-                ],
-                "17": [
-                    {
-                        "name": "Epidemic",
-                        "desc": "Your plague has reached the height of its potency, and its symptoms rapidly afflict your foes. Your miasmic plague ignores a target's immunity to being poisoned. Additionally, whenever you deal @necrotic damage to a creature cursed by your miasmic plague, it takes extra @necrotic damage equal to a roll of your martial die."
-                    }
-                ]
-            },
-            "source": "The Crooked Moon"
-        }
-    },
     "oracle": {},
     "ranger": {
+        "grim-harbinger": {
+            "name": "Grim Harbinger",
+            "desc": ["Grim harbingers wander places touched by death, serving as both a watcher of the dead and the herald of doom for those whose lives are running out. At their side is a guardian spirit and omen of death known as a grim, a constant companion that aids in performing their shared, grave duty."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Grim Harbinger Magic",
+                        "desc": "You learn an additional spell whenever you reach certain levels in this class. Each spell counts as a ranger spell for you, and don't count against the number of ranger spells you know.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Ranger level", "Spell"],
+                                ["3rd", "@bane"],
+                                ["5th", "@hold person"],
+                                ["9th", "@fear"],
+                                ["13th", "@intrusive despair"],
+                                ["17th", "@dream"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Omen of Doom",
+                        "desc": ["As a bonus action, you may target a creature you can see within 90ft. of you, and magically seal its doom for 1 hour. Once per turn, whenever you hit the doomed target with an attack, it takes an extra 1d6 @necrotic damage. Additionally, a ghostly creature called the Grim appears in an unoccupied space within 30ft. of the target. Grims most often appear as black, spectral hounds, but you may choose an appearance appropriate to its stat block. The grim is friendly to you and any number of creatures of your choice, and it obeys your commands. It vanishes if you or the doomed creature dies, when it is reduced to 0 hitpoints, or whenever you use this feature again. You may use this feature a number of times equal to your WIS (minimum of 1) every short rest. You may use a spell slot of any level to use this feature without expending a use.", "In combat, the grim acts during your turn. It may move and use its reaction on its own, but the only action it may take is the @dodge action, unless, as a bonus action, you command it to take an action. You may also command it as part of the bonus action you take to summon it. Alternatively, when you take the @attack action on your turn, you may forego one attack to command the grim to take its ominous rend action. If you are incapacitated, the grim acts on its own, and is not limited to the @dodge action."],
+                        "type": "statblock",
+                        "content": "grim"
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Harbinger of Doom",
+                        "desc": "Your control over doom grows stronger, granting the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Graveyard Hunter",
+                                "desc": "The grim's ominous red action deals an extra 1d6 @necrotic damage on a hit."
+                            },
+                            {
+                                "name": "Mortal Reminder",
+                                "desc": "Whenever you deal damage to a creature doomed by your omen of doom feature, you may change the damage type to @necrotic."
+                            },
+                            {
+                                "name": "Mounting Dread",
+                                "desc": "You and the grim may ignore a target's resistance to @necrotic damage."
+                            }
+                        ]
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Grave Bond",
+                        "desc": "You draw deeper strength from the grave. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Ghastly Hound",
+                                "desc": "The grim gains resistance to @bludgeoning, @piercing, and @slashing damage."
+                            },
+                            {
+                                "name": "Grave Fortitude",
+                                "desc": "You gain resistance to @necrotic damage."
+                            },
+                            {
+                                "name": "Inescapable Fate",
+                                "desc": "Whenever the target of your omen of doom feature succeeds on a saving throw, you may use your reaction to force it to reroll with disadvantage, and use the new roll. You may use this feature once every time you use your omen of death feature."
+                            }
+                        ]
+                    }
+                ],
+                "17": [
+                    {
+                        "name": "Sealed Fate",
+                        "desc": "The strength of you omen of doom reaches its peak, granting the following benefits while it is active:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Jaws of Doom",
+                                "desc": "The grim's ominous rend action deals an extra 1d6 @necrotic damage, for a total of 2d6 extra @necrotic damage."
+                            },
+                            {
+                                "name": "Marked for Death",
+                                "desc": "Whenever you use your omen of doom feature, you may force the target to succeed on a CHA saving throw, or gain vulnerability to damage dealt by the grim, and to the extra damage you deal with your omen of doom feature. You may use this feature once per long rest. You may use a spell slot of 4th level or higher to use this feature without expending a use."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        },
         "hunter-conclave": {
             "name": "Hunter Conclave",
             "desc": ["Some rangers seek to master weapons to better protect civilization from the terrors of the wilderness. Members of the Hunter Conclave learn specialized fighting techniques for use against the most dire threats, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons."],
@@ -2730,10 +2823,10 @@
                         "type": "list",
                         "content": [
                             {
-                                "desc": "Your soul is not fully present, and your body has been put in a form of industrial stasis. You cannot age – naturally, nor magically – and cannot die of old age."
+                                "desc": "Your soul is not fully present, and your body has been put in a form of industrial stasis. You cannot age - naturally, nor magically - and cannot die of old age."
                             },
                             {
-                                "desc": "Your heart has been replaced by a magical energy core. This core may act as the arcane focus for your Warlock spells. Losing access to magic – be it through an antimagic field, the wish spell, divine intervention, or other means – will dispel your heart for the duration, and cause you to fall unconscious. Instantaneous spells and effects will stop your heart momentarily, causing you to fall prone. A spell needs to be of a level equal to half your Warlock level, rounded up, to successfully dispel your heart. If you are unconscious in this way for more than 1d4 + 1 days in succession, you will die."
+                                "desc": "Your heart has been replaced by a magical energy core. This core may act as the arcane focus for your Warlock spells. Losing access to magic - be it through an antimagic field, the wish spell, divine intervention, or other means - will dispel your heart for the duration, and cause you to fall unconscious. Instantaneous spells and effects will stop your heart momentarily, causing you to fall prone. A spell needs to be of a level equal to half your Warlock level, rounded up, to successfully dispel your heart. If you are unconscious in this way for more than 1d4 + 1 days in succession, you will die."
                             },
                             {
                                 "desc": "You gain resistance against @psychic damage."
@@ -2843,6 +2936,92 @@
             },
             "source": "Asmodeus: King of Hell"
         },
+        "the-great-fool": {
+            "name": "The Great Fool",
+            "desc": ["What horrors and sorrows can't be remedied by maniacal laughter? Warlocks that have made a pact with the Great Fool draw their enigmatic power from a powerful, otherworldly being of jolly revelry, whose twisted sense of humor is lost on mortal understanding. They are a mocking mirror to bring low the arrogant and mighty, though the Great Fool's ultimate designs are often nonsensical and incomprehensible."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Foolish Personas",
+                        "desc": "Many warlocks of the Great Fool adopt a signature aesthetic and performance style that best represents their folly. The foolish personas table offers archetypes of fools with suggestions for corresponding outfits and routines.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d6", "Persona", "Outfit", "Routines"],
+                                [1, "The Harlequin", "An elegant outfit of diamond motley, with a painted mask.", "Performs dances, gives eloquant speeches, and plays tricks."],
+                                [2, "The Jester", "A two-toned, checkered motley outfit with cap and bells.", "Favors feats of acrobatics, tumbling, and juggling."],
+                                [3, "The Joker", "A vibrant, colorful suit with wild hair and bowler hat.", "Favors silly jokes, slapstick comedy, and clumsy self-deprecation."],
+                                [4, "The Mime", "A striped, black-and-white shirt with a flat cap, and red suspenders.", "Pantomimes comical scenarios without speaking."],
+                                [5, "The Sad Clown", "A monochromatic, one-piece outfit with pointed hat, and puffball buttons.", "Utilizes melodramatic melancholy and song."],
+                                [6, "The Tramp", "A patch-covered coat, tattered scarf, scuffed shoes, and cigar.", "Leverages sardonic wit, insults, and mocking observations."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Expanded Spell List",
+                        "desc": "You learn the @vicious mockery cantrip. The following spells are added to the warlock spell list for you:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Spell level", "Spells"],
+                                ["1st", "@diguise self, @hideous laughter"],
+                                ["2nd", "@rope trick, @spiritual weapon"],
+                                ["3rd", "@blink, @stinking cloud"],
+                                ["4th", "@phantasmal killer, @puppet master"],
+                                ["5th", "@arcane hand, @mislead"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Killing Joke",
+                        "desc": "You see the humor in everything - especially in the end of things. As a reaction whenever a creature you can see within 60ft. of you takes damage, or fails a saving throw, you may cast the @vicious mockery cantrip on it. You may use this reaction a number of times equal to your CHA (minimum of 1) every long rest. Your regain 1 use of this feature after a short rest."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Jester's Japes",
+                        "desc": ["By calling down an aspect of the Great Fool, you may curse your foes. As an action, you may target a creature you can see within 60ft. of you, and force it to succeed on a CHA saving throw, or suffer one of the following curses of your choice below.", "The curse lasts for 1 minute. The cursed creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. You may use this feature once per short rest."],
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Flower Spurt",
+                                "desc": "You spray a strange liquid at the creature's eyes, causing it to be blinded."
+                            },
+                            {
+                                "name": "Clown Shoes",
+                                "desc": "The creature's feet, or similar appendages, grow to awkwardly exaggerated proportions. The creature has its speed halved, and it gains disadvantage on DEX checks and saving throws."
+                            },
+                            {
+                                "name": "Honk Honk",
+                                "desc": "The creature emits sounds, such as honks, chimes, or squeaks, that are audible out to 100ft. with every movement, no matter how slight. The creature cannot hide, or become invisible."
+                            },
+                            {
+                                "name": "Jolly Arms",
+                                "desc": "Any weapon, or unarmed strik, the creature attacks with takes on a comical appearance as if it were made of wood, stuffed cloth, or balloons. The cursed creature has the damage it deals with weapon attacks and unarmed strikes halved, rounded up."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Mocking Banter",
+                        "desc": "Your witty and insulting japes become biting, to the point of needling your foes' very psyche. As a reaction whenever a creature damages you, you may force the creature to make a WIS saving throw, taking @psychic damage equal to the damage the triggering attack dealt to you on a failed save, or half as much on a successful one. You may use this reaction once per short rest."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Send in the Clowns",
+                        "desc": "You may call upon the laughing, jeering spirits of the followers of the Great Fool to strike down your foes. As an action, you may magically summon three ghostly fools. The fools are translucent and intangible, and they resemble clowns, jesters, or similar entertainers. Make up to 3 melee spell attacks against creatures within 60ft. of you. On a hit, a target takes 2d10 @psychic damage, and is frightened of the fools until the end of its next turn, or the target is knocked prone, your choice. As an action on subsequent turns, you may repeat the attacks. The fools remain for 1 minute, until you are incapacitated, or if you die. You may use this feature once per long rest."
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        },
         "the-hexblade": {
             "name": "The Hexblade",
             "desc": ["You have made your pact with a mysterious entity from the Shadowfell - a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.", "Because the Raven Queen is known to have forged the first of these weapons, many sages speculate that she and the force are one and that the weapons, along with hexblade warlocks, are tools she uses to manipulate events on the Material Plane to her inscrutable ends."],
@@ -2908,6 +3087,133 @@
                 ]
             },
             "source": "Xanathar's Guide to Everything"
+        },
+        "the-horned-king": {
+            "name": "The Horned King",
+            "desc": ["Whether motivated by desperation or cunning, warlocks that have signed their name in the book of the Horned King have chosen to live deliciously in a pact sealed in blood and a corrupted soul. Bestowed the power of witchcraft by the beast that stalks the deepest woods and darkest hearts, they perfect ancient rituals and weave maledictions toward aims only they know. With each victim of their malign spells filled with rot, hate, and agony, they become more like their patron until they effortlessly wield his kingly might."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Witchcraft Implements",
+                        "desc": "Warlocks of the Horned King prefer particular implements in working their magic. The witchcraft implements table offers options for your favored reagents.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d6", "Implements"],
+                                [1, "Candles made from tallow mixed with blood."],
+                                [2, "Dried bundles of herbs or mushrooms."],
+                                [3, "Skulls or long bones carved with glyphs."],
+                                [4, "Crushed berries or roots mixed into a paste."],
+                                [5, "Iron cauldron marked with symbols."],
+                                [6, "Curved blade for offering animal sacrifices."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Expanded Spell List",
+                        "desc": "The following spells are added to the warlock spell list for you:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Spell level", "Spells"],
+                                ["1st", "@animal friendship, @bane"],
+                                ["2nd", "@spike growth, @suggestion"],
+                                ["3rd", "@bestow curse, @fly"],
+                                ["4th", "@phantasmal killer, @polymorph"],
+                                ["5th", "@dominate person, @scrying"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Witch Mark",
+                        "desc": "Whenever you finish a long rest, you may imbue magic into a nonmagical, Tiny object you're holding. Choose a warlock spell you know that has a casting time of 1 action. A creature holding the marked object may take an action to cast the spell, using your CHA modifier, spell attack bonus, or spell save DC. The mark fades when the spell is cast, or when you finish a long rest."
+                    },
+                    {
+                        "name": "Malediction",
+                        "desc": "You may call upon the Horned King's malice to manipulate luck and fate. As an action, you may magically curse a creature you can see within 60ft. of you, until the end of its next turn. Alternatively, as a reaction when a creature within 60ft. of you targets you with an attack or a spell, you may curse the creature. You may curse a creature an amount of times equal to your CHA (minimum of 1) every long rest. Choose one of the following curses every time:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Agony",
+                                "desc": "The cursed creature gains disadvantage on either its next attack roll, or CON saving throw to maintain concentration, your choice."
+                            },
+                            {
+                                "name": "Hate",
+                                "desc": "The target gains disadvantage on its next INT, WIS, or CHA saving throw, your choice."
+                            },
+                            {
+                                "name": "Rot",
+                                "desc": "The next time the target takes damage, it takes an extra 1d10 @necrotic damage, and it cannot regain hitpoints until the end of its next turn."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Spiteful Curse",
+                        "desc": "Whenever you use your malediction feature, you may now cast the @bestow curse spell once without expending a spell slot, instead of the action or reaction for that feature. You may do so once per long rest. If the target succeeds on its saving throw against the spell, your use of this feature isn't expended. Whenever you cast @bestow curse in this way, its range becomes 60ft., and the duration becomes 1 minute, requiring no concentration. If the target succeeds on its saving throw against the spell, you may choose one of the malediction curses, and make the target suffer that curse instead."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Crown of Horns",
+                        "desc": "As a bonus action, you may manifest the majestic might of the Horned King for 1 minute. For the duration, a visible mark appears on you - such as a crown made of horns surmounting your head, or you grow great antlers - and gain the benefits below. You may use this bonus action once per long rest. You may use a spell slot to use this feature without expending a use.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Dark Heart",
+                                "desc": "Once on each of your turns when you damage a creature, the target takes an extra 1d8 @necrotic damage."
+                            },
+                            {
+                                "name": "King of All",
+                                "desc": "You radiate an aura of power out to 20ft. of you. Whenever you activate this feature, and at the start of each of your turns, you may choose a creature you can see in the aura. The target must succeed on a CHA saving throw, or suffer one of the following effects of your choice until the start of your next turn:",
+                                "type": "list",
+                                "content": [
+                                    {
+                                        "name": "Enticement",
+                                        "desc": "The target is charmed by you."
+                                    },
+                                    {
+                                        "name": "Wickedness",
+                                        "desc": "The target gains disadvantage on attack rolls and ability checks."
+                                    },
+                                    {
+                                        "name": "Terror",
+                                        "desc": "The target is frightened of you, and must move away from you by the safest route during its turn, unless there is nowhere to move."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Gather the Coven",
+                        "desc": "You may now share the Horned King's power with those you deem worthy. You may perform a 1 hour ritual, which may be done during a rest, forming a bond with up to 6 willing creature that must remain within 10ft. of you during the ritual. You may end the bond for any number of creatures as a free action, and the bond ends if you die. The bond grants the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Witchcraft",
+                                "desc": "Choose one of the malediction curses. The bonded creatures may each use that reaction option once every long rest."
+                            },
+                            {
+                                "name": "Fly By Night", 
+                                "desc": "As a bonus action, choose one of the bonded creatures. If you and the target are on the same plane of existence, you magically teleport to the nearest unoccupied space next to the creature. You may use this feature once per short rest. If your crown of horns feature is active when you use this bonus action, the use is not expended."
+                            },
+                            {
+                                "name": "Hand of the King",
+                                "desc": "While your crown of horns feature is active, the first time a bonded creature damages another creature during its turn, the target takes an extra 1d10 @necrotic damage."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
         },
         "the-fiend": {
             "name": "The Fiend",
@@ -3708,7 +4014,7 @@
         },
         "war-magic": {
             "name": "War Magic",
-            "desc": ["A variety of arcane colleges specialize in training wizards for war. The tradition of War Magic blends principles of evocation and abjuration, rather than specializing in either of those schools. It teaches techniques that empower a caster’s spells, while also providing methods for wizards to bolster their own defenses.", "Followers of this tradition are known as war mages. They see their magic as both a weapon and armor, a resource superior to any piece of steel. War mages act fast in battle, using their spells to seize tactical control of a situation. Their spells strike hard, while their defensive skills foil their opponents’ attempts to counterattack. War mages are also adept at turning other spellcasters' magical energy against them.", "In great battles, a war mage often works with evokers, abjurers, and other types of wizards. Evokers, in particular, sometimes tease war mages for splitting their attention between offense and defense. A war mage's typical response: \"What good is being able to throw a mighty @fireball if I die before I can cast it?\""],
+            "desc": ["A variety of arcane colleges specialize in training wizards for war. The tradition of War Magic blends principles of evocation and abjuration, rather than specializing in either of those schools. It teaches techniques that empower a caster's spells, while also providing methods for wizards to bolster their own defenses.", "Followers of this tradition are known as war mages. They see their magic as both a weapon and armor, a resource superior to any piece of steel. War mages act fast in battle, using their spells to seize tactical control of a situation. Their spells strike hard, while their defensive skills foil their opponents' attempts to counterattack. War mages are also adept at turning other spellcasters' magical energy against them.", "In great battles, a war mage often works with evokers, abjurers, and other types of wizards. Evokers, in particular, sometimes tease war mages for splitting their attention between offense and defense. A war mage's typical response: \"What good is being able to throw a mighty @fireball if I die before I can cast it?\""],
             "magic": {
                 "caster": "none"
             },
