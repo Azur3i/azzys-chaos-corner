@@ -83,5 +83,33 @@
         
         "lists": ["sorcerer", "wizard"],
         "source": "Player's Handbook"
+    },
+    "star-assault": {
+        "name": "Star Assault",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "an origami bird and a rock resembling a sending stone"],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "Lights as if from falling stars seem to appear from distantly behind you. Designate one space you can see within range. The chasing lights descend on it, to violently suppress the area with a flurry of blinding lights."
+            },
+            {
+                "desc": "Indicate {1} 55ft. lines whose centers cross at the designated tile. Any creature hit by either line must make a DEX saving throw, taking {2}d10 @force damage on a failure, or half as much on a success. Any creature in the designated tile has disadvantage on the save, and takes {3} the damage."
+            }
+        ],
+        "levels": [["two", 3, "double"], ["two", 4, "double"], ["three", 4, "triple"], ["three", 5, "triple"], ["four", 5, "quadruple"], ["four", 6, "quadruple"], ["five", 6, "quintuple"]],
+        
+        "lists": ["artificer", "cleric", "paladin", "ranger", "sorcerer", "wizard"],
+        "source": "The Archivist's Anthology of Forgotten Lore"
     }
 }
