@@ -15,7 +15,7 @@
         "abilities": [
             {
                 "name": "Incorporealis",
-                "desc": "Whenever an attack or spell would hit you, you may use your reaction to have the attack pass through you completely. The damage of the attack or spell becomes 1d10 @necrotic damage, instead of the damage it would normally do. You may use this trait once every long rest."
+                "desc": "Whenever an attack or spell would hit you, you may use your reaction to have the attack pass through you completely. The damage of the attack or spell becomes 1d10 @necrotic damage, instead of the damage it would normally do. You may use this trait once per long rest."
             },
             {
                 "name": "Genus",
@@ -141,7 +141,7 @@
         "abilities": [
             {
                 "name": "Dream Spirit",
-                "desc": "You have a deep connection with the Plane of Dreams and are able to use its soothing power to put creatures to rest. As an action, you may point at a creature no more than 90ft. away from you. That creature falls into a magical slumber, as if affected by the @sleep spell. You may affect any creature with a CR equal to your level or lower. If the creature awakens by any means, the creature suffers 2d4 @psychic damage as a result. This increases to 2d6 at level 5, 2d8 at level 9, 2d10 at level 13 and 2d12 at level 17. You may use this trait a number of times equal to your WIS every long rest. Additionally, at the start of each of your turns, you recover 1 hitpoint for every sleeping creature within 30ft. of you."
+                "desc": "You have a deep connection with the Plane of Dreams and are able to use its soothing power to put creatures to rest. As an action, you may point at a creature no more than 90ft. away from you. That creature falls into a magical slumber, as if affected by the @sleep spell. You may affect any creature with a CR equal to your level or lower. If the creature awakens by any means, the creature suffers 2d4 @psychic damage as a result. This increases to 2d6 at level 5, 2d8 at level 9, 2d10 at level 13 and 2d12 at level 17. You may use this trait a number of times equal to your WIS per long rest. Additionally, at the start of each of your turns, you recover 1 hitpoint for every sleeping creature within 30ft. of you."
             },
             {
                 "name": "Fawnish Build",
@@ -322,7 +322,7 @@
                     },
                     {
                         "name": "Drow Magic",
-                        "desc": "You know the dancing lights cantrip. Starting at 3rd level, you may cast the @faerie fire spell with this trait. Starting at 5th level, you may cast the @darkness spell with this trait. You do not need material components for either spell. You may cast both spells once every long rest. CHA is your spellcasting ability for these spells."
+                        "desc": "You know the dancing lights cantrip. Starting at 3rd level, you may cast the @faerie fire spell with this trait. Starting at 5th level, you may cast the @darkness spell with this trait. You do not need material components for either spell. You may cast both spells once per long rest. CHA is your spellcasting ability for these spells."
                     },
                     {
                         "name": "Drow Weapon Training",
@@ -472,7 +472,7 @@
                     },
                     {
                         "name": "Blessing of the Moonweaver",
-                        "desc": "You know the @light cantrip. Starting at 3rd level, you may cast the @sleep spell with this trait. Starting at 5th level, you may cast the @invisibility spell, targeting yourself, with this trait. You do not need material components for either spell. You may cast both spells once every long rest. WIS is your spellcasting ability for these spells."
+                        "desc": "You know the @light cantrip. Starting at 3rd level, you may cast the @sleep spell with this trait. Starting at 5th level, you may cast the @invisibility spell, targeting yourself, with this trait. You do not need material components for either spell. You may cast both spells once per long rest. WIS is your spellcasting ability for these spells."
                     }
                 ],
                 "source": "Explorer's Guide to Wildemount"
@@ -530,7 +530,7 @@
                     },
                     {
                         "name": "Radiant Soul",
-                        "desc": "After succeeding on a death save, you may regain hitpoints equal to your proficiency bonus + your Astral Aspect modifier. You may use this trait once every long rest."
+                        "desc": "After succeeding on a death save, you may regain hitpoints equal to your proficiency bonus + your Astral Aspect modifier. You may use this trait once per long rest."
                     }, 
                     {
                         "name": "Trance",
@@ -747,7 +747,7 @@
             },
             {
                 "name": "Awakening",
-                "desc": "A dragon is a creature of might and power, resulting in conflicting natures inside your own body. Half-dragons often struggle to contain the raw, primal energy swirling in their veins. If you fall below half your maximum hitpoints or lower, you lose control and temporarily overflow your body with raw draconic energy. Your awakening lasts for 1 hour. After your awakening ends, you gain 1 level of exhaustion. You can only awaken once every long rest. You:",
+                "desc": "A dragon is a creature of might and power, resulting in conflicting natures inside your own body. Half-dragons often struggle to contain the raw, primal energy swirling in their veins. If you fall below half your maximum hitpoints or lower, you lose control and temporarily overflow your body with raw draconic energy. Your awakening lasts for 1 hour. After your awakening ends, you gain 1 level of exhaustion. You can only awaken once per long rest. You:",
                 "type": "list",
                 "content": [
                     {
@@ -780,5 +780,432 @@
         ],
         "options": {},
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
+    "ashborn": {
+        "name": "Ashborn",
+        "desc": ["Ashborn are an imp-like species native to Chernabos, typically coalescing from the sulfuric ash of the province's hellfire and brimstone volcanoes. Infused with the fiendish power of the Hells, this folk has managed to survive and even prosper in the barrens and badlands of the province through guile, boldness, and industriousness. Said to be favored by fortune itself, ashborn count on luck to twist the balance in the most dire of situations", "Their short stature ranges from slight to stout, but this makes them no less dangerous, for each ashborn has a venomous tail resembling a scorpion's, always ready to strike. They sport horns and skin tones in varying shades of red and gray that reflect their devilish origin."],
+        "asi": {"default": 3},
+        "age": "Ashborn typically live 100 years.",
+        "creatureType": "Fiend",
+        "size": "You are about 2-3ft. tall. Your size is Small.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Ashen Legacy",
+                "desc": "You know the @minor illusion cantrip. Starting at 3rd level, you may also cast the @charm person spell with this trait, and starting at 5th level, you may also cast the @invisibility spell with this trait. You do not need material components for either spell. You may cast both of these spells once per long rest. Alternatively, you may cast these spells using the appropriate spell slots, if you have them. INT, WIS, or CHA is your spellcasting ability for these spells, which you choose at character creation."
+            },
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Scorpion Sting",
+                "desc": "You have a tail stinger you may use to make unarmed strikes, using STR or DEX, your choice. On a hit, you deal 1d4 @piercing damage. Additionally, on a hit, you may choose to deal an extra 1d6 @poison damage, increasing to 2d6 @poison damage at 10th level. You may deal this extra damage a number of times equal to your proficiency bonus per short rest."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "azureborn": {
+        "name": "Azureborn",
+        "desc": ["Azureborn (A-zher-born) are a harpy-like species native to Astramar, often materializing from the bright blue night sky filled with twinkling stars and winds of arcane power. Bearing a connection to the aither that courses through the air and land of the province, they are an inherently prescient folk that can divine the future by looking to the cosmos. They have built a society of magical wonder through grand vision, endless curiosity, and dedication to study.", "Sprouting feathers across their entire body and wings attached to each of their arms, this diverse folk can resemble all manner of avian creatures, from raptors with earthy tones to tropical birds of vibrant and colorful plumage."],
+        "asi": {"default": 3},
+        "age": "Azureborn typically live 100 years, although many of the wisest among them have lived up to 400.",
+        "creatureType": "Humanoid",
+        "size": "You are about 4-7t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Azure Legacy",
+                "desc": "You know the @guidance cantrip. Starting at 3rd level, you may also cast the @charm person spell with this trait. You do not need material components for this spell. You may cast it once per long rest. Alternatively, you may cast it using the appropriate spell slot, if you have them. INT, WIS, or CHA is your spellcasting ability for these spells, which you choose at character creation."
+            },
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Flight",
+                "desc": "You have a flying speed equal to your walking speed."
+            },
+            {
+                "name": "Glimpse Fate",
+                "desc": "Whenever you roll initiative, if you are not surprised, you may choose a number of creatures that you can see equal to your proficiency. The targets gain advantage on their initiative rolls. You may use this trait once per short rest."
+            },
+            {
+                "name": "Winds of Magic",
+                "desc": "As a bonus action, you may take the @dash action, and increase your flying speed by 10ft. until the end of the turn. You may use this trait a number of times equal to your proficiency per long rest."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "bogborn": {
+        "name": "Bogborn",
+        "desc": ["Bogborn are a troll-like species native to Zulrogg, usually rising from the still, dark waters of the swampy province. From the moment of rebirth, they have a symbiotic relationship with flora and fauna of the wild— and often treacherous—mire. Their ability to survive is further enhanced by the naturally regenerative biology often found in trolls.", "Towering over most, these hearty folk can face any trial of nature, and they often utilize their athleticism in pursuits of hunting and survival. Bearing prominent noses and tusks, their tough hides are generally shades of green or blue."],
+        "asi": {"default": 3},
+        "age": "Bogborn typically live 100 years before moving on to the spirit world.",
+        "creatureType": "Giant",
+        "size": "You are about 7-8t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Guiding Bond",
+                "desc": "As a bonus action, you may magically place a mark on a creature you can see within 60ft. of you. The mark lasts for 1 minute, and takes the form of epheremal plants, moss, fungus, or swap animals that only you can see. For the duration, you may add 1d4 to ability checks and attack rolls you make against the marked creature. You may use this trait a number of times equal to your proficiency per long rest."
+            },
+            {
+                "name": "Keen Senses",
+                "desc": "You gain proficiency in either the Perception (WIS) or Survival (WIS) skill, your choice."
+            },
+            {
+                "name": "Regeneration",
+                "desc": "As a bonus action, you may expend one of your hit dice, roll it, and regain a number of hitpoints equal to the number rolled + CON. If you take @acid or @fire damage, this trait doesn't function until the end of your next turn."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "curseborn": {
+        "name": "Curseborn",
+        "desc": ["Curseborn are a werewolf-like species native to Edwardia, often emerging from the dense, cursed fog that rolls across the province. Sharing a strong connection to a malediction called the Grey, which demands balance at the threat of certain doom, they have managed to build a civilization of advancement and progress, countered by rampant strife, pollution, and hunger.", "Covered head to toe with thick fur and bearing sharp teeth and claws, this lupine species evokes the hallmarks and appearance of wolves but with clearly humanoid physiology."],
+        "asi": {"default": 3},
+        "age": "If not brought to an early grave by the Grey, they typically live for up to 100 years, although technological advancement has led to certain individuals approaching 200 years old.",
+        "creatureType": "Humanoid",
+        "size": "You are about 5-6t. tall. Your size is Medium.",
+        "speed": 35,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Cursed Claws",
+                "desc": "You have claws you may use to make unarmed strikes, using STR or DEX, your choice. On a hit, you deal 1d6 @slashing damage. Additionally, whenever you hit a creature with your claws, you may curse the target until the start of your next turn. While cursed, the target emits wisps of fog, and gains disadvantage on ability checks, attack rolls, and saving throws. You may curse a creature a number of times equal to your proficiency per long rest."
+            },
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Grey Balance",
+                "desc": "As a reaction whenever you fail a saving throw, you may choose to succeed instead. Whenever you do, you gain disadvantage on ability checks, attack rolls, and saving throws. You may use this trait once per long rest."
+            },
+            {
+                "name": "Lupine Sense",
+                "desc": "You gain proficiency in either the Investigation (INT), Perception (WIS) or Survival (WIS) skill, your choice."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "deepborn": {
+        "name": "Deepborn",
+        "desc": ["Deepborn are a fish-like species native to Olmarsh, typically rising up from the abyssal depths of the province's black sea—home to terrors beyond imagining known as the Hungry Ones. Immersed in a near constant eldritch presence that emerges from the deep and descends from beyond the stars, these folk manage their state of paranoia by embracing and harnessing the uncanny and cosmic.", "While they are primarily piscine in their anatomy, they can possess features found in a wide variety of sea creatures, including cephalopods and crustaceans."],
+        "asi": {"default": 3},
+        "age": "They typically live for around 150 years, but certain members of occult orders have been known to live for 600 years.",
+        "creatureType": "Aberration",
+        "size": "You are about 5-7t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Amphibious",
+                "desc": "You can breathe air and water, and have a swimming speed equal to your walking speed."
+            },
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Eldritch Gibbering",
+                "desc": "Thanks to your eldritch connection to the Hungering Ones, you can speak, read and write Deep Speech. As an action, you may gibber in that language. Each creature of your choice within 30ft. of you must succeed on a WIS saving throw with a DC of 8 + proficiency + one of INT, WIS, or CHA, your choice when you make the character, or roll 1d6 and consult the table below. The effect lasts until the start of your next turn. The use of this trait is only expended if any creature fails its saving throw. You may use this trait once per short rest.",
+                "type": "table",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["1d6", "Effect"],
+                        ["1-2", "The target gains disadvantage on attack rolls."],
+                        ["3-4", "The target's speed is reduced to 0."],
+                        ["5-6", "The target cannot take reactions."]
+                    ]
+                }
+            },
+            {
+                "name": "Endless Hunger",
+                "desc": "As a bonus action, you may embrace your connection to the Hungering Ones. Until the start of your next turn, you know the location of any creatures that aren't constructs or undead within 60ft. of you, and your attacks against those creatures cannot have disadvantage. You may use this trait once per short rest."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "gnarlborn": {
+        "name": "Gnarlborn",
+        "desc": ["Gnarlborn (NAR-ull-born) are a tree-like species native to Ardengloom, usually sprouting up from the soil of the twisted, dark forest. Their home is forever haunted by the souls of long-dead fey, which inhabit the enormous, face-bearing trees known as Elderwoods. These folk commune with these beings to receive primordial wisdom.", "Resembling gnarled trees with glowing faces hollowed into the bark, their individual patterns of branches, moss, and lichen can result in a wide diversity of appearances."],
+        "asi": {"default": 3},
+        "age": "Most gnarlborn live for over 500 years, but those with the strongest connection to the Elderwoods have been said to live to be thousands of years old.",
+        "creatureType": "Plant",
+        "size": "You are about 5-8t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Deep Roots",
+                "desc": "You gain advantage on ability checks and saving throws against being moved against your will, or to avoid being prone."
+            },
+            {
+                "name": "Elderwood Whispers",
+                "desc": "You may draw on the memory of the Elderwood spirits. Whenever you finish a long rest, you may gain a proficiency with a skill, tool, or learn a language of your choice. This lasts until you choose again."
+            },
+            {
+                "name": "Grasping Branches",
+                "desc": "As a bonus action, you may magically unleash the binding power of the dark wood. Choose a Large or smaller creature within 30ft. of you. The creature must make a STR saving throw, DC of 8 + CON + proficiency. On a failure, the target is restrained for 1 minute, as branches appear and ensnare it. On a success, the target's speed is halved until the end of its next turn. A restrained creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. The branches vanish once the effect ends. You may use this trait once per short rest."
+            },
+            {
+                "name": "Root Sense",
+                "desc": "As a bonus action, you gain 60ft. tremorsense for 10 minutes. You may use this trait once per short rest."
+            },
+            {
+                "name": "Towering Size",
+                "desc": "You gain advantage on any ability check you make to escape a grapple. You count as one size larger when determining your capacity for carrying."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "graveborn": {
+        "name": "Graveborn",
+        "desc": ["Graveborn are a ghoul-like species native to Syndramas, typically rising from one of the countless graves that mark the frozen battlefields of the province. They were first created in a kingdom-wide ritual that twisted countless humans into new Undead creatures that barely resembled who they once were. Graveborn now wage war endlessly and perpetuate a culture of martial prowess, relentlessness, and grave honor. These people are infused with the necrotic and draconic essence of the powerful Drakkonite metal found throughout the province, which has given them a strange taste for spoiled flesh of any variety.", "Appearing as the corpses of twisted Humanoids, graveborn have powerful snouts and jaws with elongated teeth and tongues that assist in the devouring of flesh and bone. Their physiology is sturdy, as if magically designed to be perfected for war."],
+        "asi": {"default": 3},
+        "age": "If not killed in war, as befalls many of their kind, they can live up to 300 years before decaying away.",
+        "creatureType": "Undead",
+        "size": "You are about 4-6t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Devour Corpse",
+                "desc": "You may eat spoiled and rotten food as if it were fresh. Additionally, if you spend 1 minute eating flesh from the corpse of a Small or larger creature that isn't a construct, you may roll one of your hit dice, without expending one. You regain a number of hitpoints equal to the number rolled + CON (minimum of 1). You may regain hitpoints in this way once per short rest."
+            },
+            {
+                "name": "Frozen Waste",
+                "desc": "You gain resistance to @cold damage."
+            },
+            {
+                "name": "Infused Drakkonite",
+                "desc": "Whenever you damage a creature, you may ignore any resistances it has, and it takes extra @necrotic damage equal to your proficiency. You may use this trait once per short rest."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "harvestborn": {
+        "name": "Harvestborn",
+        "desc": ["Harvestborn are a scarecrow-like species native to Enoch, most often crafted with great care by Methuselah, the lord of the province. Infused with the vital, green magic that surges through the immensely fertile land, they have a strong connection to the cycle of both the harvest and life, death, and rebirth. They feed much of Druskenvald with the crops they grow in a relatively peaceful society that puts a focus on community, family, and fellowship.", "As a constructed species resembling any manner of scarecrow, their bodies are comprised of a mixture of wood, metal, straw, and other implements. Their glowing-eyed heads might be made from a burlap sack or a crop such as a pumpkin or turnip."],
+        "asi": {"default": 3},
+        "age": "Staying true to the cycle, they generally live 100 years before accepting the next step of death and becoming reborn once more.",
+        "creatureType": "Construct",
+        "size": "You are about 4-7t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Culling",
+                "desc": "Whenever you damage a creature with half its hitpoints or less remaining, you may deal an extra 1d12 @necrotic damage to it. You may use this trait a number of times equal to your proficiency per long rest."
+            },
+            {
+                "name": "Gift of the Green",
+                "desc": "As a bonus action, you may touch the ground, and choose a creature also touching the ground within 30ft. of you. That creature may expend and roll one of its hit dice, and regain a number of hitpoints equal to the number rolled + your proficiency. You may use this trait a number of times equal to your proficiency bonus per long rest. You regain 1 use of this trait after a short rest."
+            },
+            {
+                "name": "Jack-O-Lantern",
+                "desc": "You know the @dancing lights cantrip. INT, WIS or CHA is your spellcasting ability for it, which you choose at character creation."
+            },
+            {
+                "name": "Scarecrow Nature",
+                "desc": "You don't require air, food, or drink."
+            },
+            {
+                "name": "Watchful Rest", 
+                "desc": "You don't need to sleep, and magic cannot put you to sleep. You may finish a long rest in 4 hours, if you spend those hours in an inactive, motionless state, during which you retain consciousness."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "plagueborn": {
+        "name": "Plagueborn",
+        "desc": ["Plagueborn are a rat-like species native to Bubonia, typically coalescing in the pestilent haze that hangs over the province. They are deeply connected to the virulent and deadly plague that afflicts and shapes their society, which persists through cunning, ruthlessness, and the sheer will to live. They are the most adaptable species of Druskenvald, quickly discovering the means to survive even the harshest environments.", "Appearing as large plague rats with humanoid physiology, their short fur ranges from grays and browns to various shades of green. They bear jagged teeth and claws that all carry a strain of plague to which they are immune but can prove deadly to others. Their nimble tails can vary greatly in length and thickness, often reflecting their family, clan, or guild."],
+        "asi": {"default": 3},
+        "age": "Plagueborn usually live no longer than 100 years.",
+        "creatureType": "Humanoid",
+        "size": "You are about 4-6t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Born in Filth",
+                "desc": "You gain advantage on saving throws against diseases, or to avoid, or end, being poisoned."
+            },
+            {
+                "name": "Climbing",
+                "desc": "You have a climbing speed equal to your walking speed."
+            },
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Infected Cunning",
+                "desc": "The plague you carry binds you to rats, and imparts their cunning. You gain proficiency in either the Deception (CHA), or Stealth (DEX) skill, your choice."
+            },
+            {
+                "name": "Plague Bearer",
+                "desc": "Whenever you hit a creature with an attack roll, you may magically spread your plague to the target. The target must succeed on a CON saving throw, DC of 8 + CON + proficiency, or become afflicted with your plague for 1 minute. While afflicted, the target gains disadvantage on attack rolls and ability checks, and takes 1d4 @poison damage at the start of each of its turns. The target may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. You may use this trait once per long rest."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "relicborn": {
+        "name": "Relicborn",
+        "desc": ["Relicborn are a skeleton-like species native to Kalero, generally emerging from the numerous tombs and crypts that line the canyon walls of the province. They thrive in a culture of celebration and remembrance, which infuses the very essence of every member of the species. Dancing between the energy of a vivacious party and the serenity of peaceful reflection, this folk holds a deep appreciation for both the living and the dead.", "They appear as skeletons decorated with a wide array of vibrant colors, patterns, and styles, and their bones are encased in a translucent, glowing substance that provides them with a similar mass and shape to other Humanoid species, allowing them to comfortably wear clothing and armor. Some relicborn can even grow hair from their skulls, which is often shaped into bombastic styles."],
+        "asi": {"default": 3},
+        "age": "Relicborn typically live for 250 years before losing their form and collapsing into a pile of bones",
+        "creatureType": "Undead",
+        "size": "You are about 4-6t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Dance of Death",
+                "desc": "As a bonus action, you may make a DC 15 Performance (CHA) check, or CHA check with a musical instrument. On a success, the next attack roll you make before the end of your turn gains advantage. If you succeed on the check by 5 or more, you may roll one of your hit dice, without expending it, and gain temporary hitpoints equal to the number rolled."
+            },
+            {
+                "name": "Eternal Party",
+                "desc": "You don't need to sleep, and you may finish a long rest in 4 hours if you spend those hours enjoying revelry, such as telling stories, or playing music."
+            },
+            {
+                "name": "Moment of Remembrance",
+                "desc": "As a reaction whenever another creature you can see within 30ft. of you fails an ability check, attack roll, or saving throw, you may let the target add 1d4 to the total, potentially turning a failure into success. This trait is only expended if the target succeeds on their roll. You may use this trait once per short rest."
+            },
+            {
+                "name": "Soul of Revelry",
+                "desc": "You gain proficiency in either the Performance (CHA) skill, or with one kind of musical instrument."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "silkborn": {
+        "name": "Silkborn",
+        "desc": ["Silkborn are a spider-like species native to Nerukhet, typically emerging from silken cocoons amidst thick webbing that fills miles of tunnels throughout the subterranean province. They have a deep kinship and connection with the bejeweled arachnids and insects that have assisted them in building the grandest civilization in Druskenvald. This folk also channels the great gems that fill the caverns of the province with light and power, bringing them ever closer to the gods that spared their kind from an ancient calamity.", "While this species has humanoid proportions, they have arachnid features—hardened carapace skin, numerous eyes, segmented limbs that grow from their backs, and mandibles that sprout from their mouths."],
+        "asi": {"default": 3},
+        "age": "They generally live for 250 years, but those at the higher echelons of their civilizations have been known to live nearly 800 years.",
+        "creatureType": "Humanoid",
+        "size": "You are about 5-6t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Bejeweled Carapace",
+                "desc": "As a reaction whenever you are hit with an attack, you may add your proficiency to your AC against that attack, potentially causing it to miss. You may use this trait once per short rest."
+            },
+            {
+                "name": "Darkvision",
+                "desc": "You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Silken Legacy",
+                "desc": "You know the @thaumaturgy cantrip. Starting at 3rd level, you may also cast the @find familiar spell with this trait, and starting at 5th level, you may also cast the @web spell with this trait. You do not need material components for either spell. You may cast both of these spells once per long rest. Alternatively, you may cast these spells using the appropriate spell slots, if you have them. INT, WIS, or CHA is your spellcasting ability for these spells, which you choose at character creation. Whenever you cast the @find familiar spell using this trait, the familiar takes the form of a jeweled insect or arachnid."
+            },
+            {
+                "name": "Spider Climb",
+                "desc": "You have a climbing speed equal to your walking speed. You may climb difficult surfaces, including along surfaces, without needing an ability check, and while leaving your hands free."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "stoneborn": {
+        "name": "Stoneborn",
+        "desc": ["Stoneborn are a gargoyle-like species native to Pholsense, usually meticulously carved by the lord of the province, Archbishop Danton Alexandre Renault. Blessed by the divine power known as the Silver Path, these people can call upon the godliness that suffuses their construction. In a domain of darkness, they have looked to the light of their god to build a civilization that attempts to uphold what is good and lawful at all costs.", "Their stony skin matches the same hue and pattern as the stone they were carved from. While all of their kind have broad wings that carry their dense, heavy bodies, their biology can evoke a wide variety of creatures—including bats, fiends, dragons, birds, angels, dogs, and lizards— often combining features into a chimeric blend. They usually live for 300 years before crumbling into rubble."],
+        "asi": {"default": 3},
+        "age": "They generally live for 250 years, but those at the higher echelons of their civilizations have been known to live nearly 800 years.",
+        "creatureType": "Construct",
+        "size": "You are about 5-6t. tall. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Argent Gleam",
+                "desc": "As a bonus action, you may channel a mote of the Silver Path's light, with your choice of one of the following options. You may do so once per long rest.",
+                "type": "list",
+                "content": [
+                    {
+                        "name": "Path's Grace",
+                        "desc": "You cast the @bless spell, requiring no material components."
+                    },
+                    {
+                        "name": "Zealous Charge",
+                        "desc": "You take the @dash action. The first time you make an attack before the end of your turn, hit or miss, the target takes an extra 2d6 @radiant damage."
+                    }
+                ]
+            },
+            {
+                "name": "Flight",
+                "desc": "You have a flying speed equal to half your walking speed."
+            },
+            {
+                "name": "Silver Bulwark",
+                "desc": "You may call upon the Silver Path to protect you. As a reaction whenever you take @bludgeoning, @piercing, or @slashing damage, you may gain resistance to those damage types until the start of your next turn. You may use this trait once per short rest."
+            },
+            {
+                "name": "Watchful Senses",
+                "desc": "You gain proficiency in either the Insight (WIS), Perception (WIS), or Survival (WIS) skill."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
+    },
+    "threadborn": {
+        "name": "Threadborn",
+        "desc": ["Threadborn are a doll-like species native to Picco, most often built with love by Blinski II, the master toymaker and lord of the province. In a land that is mostly fabricated and constructed to maximize the fun of all who live there, the essence of joy, thrill, and friendship are woven into a threadborn's very nature. They cherish the bonds made between loved ones and always maintain a childlike wonder and whimsy, no matter one's age.", "As living dolls, these folk are constructed with a variety of materials, including cloth, wood, metal, porcelain, stuffing, yarn, and anything else a toy might be made of. With the most varied body shapes of all Druskenvald's species, each threadborn represents a unique representation of fun."],
+        "asi": {"default": 3},
+        "age": "Threadborn usually live for 100 years before falling apart and needing to be rebuilt.",
+        "creatureType": "Construct",
+        "size": "You are about 2-7t. tall. Your size is Small or Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language that you and your DM agree is appropriate for the character.",
+        "abilities": [
+            {
+                "name": "Ball-Jointed",
+                "desc": "You may move through a space as narrow as 1ft. wide as if it were difficult terrain."
+            },
+            {
+                "name": "Innocent Mind",
+                "desc": "You gain resistance to @psychic damage."
+            },
+            {
+                "name": "Sewn Nature",
+                "desc": "You don't require air, food, or drink."
+            },
+            {
+                "name": "Soothing Heart",
+                "desc": "You know the @guidance cantrip. Starting at 3rd level, you may also cast the @sanctuary spell with this trait, and starting at 5th level, you may also cast the @calm emotions with this trait. You do not need material components for either spell. You may cast both of these spells once per long rest. Alternatively, you may cast these spells using the appropriate spell slots, if you have them. INT, WIS, or CHA is your spellcasting ability for these spells, which you choose at character creation. Whenever you cast the @calm emotions spell using this trait, you may target creatures of any type."
+            },
+            {
+                "name": "You've Got a Friend",
+                "desc": "As a reaction whenever a creature you can see within 30ft. of you fails an ability check using a skill, you may cast the @guidance cantrip on the creature, ignoring the spell's normal range. The creature may add the spell's 1d4 to its ability check, potentially turning a failure into success. You may use this trait a number of times equal to your proficiency per long rest."
+            }
+        ],
+        "options": {},
+        "source": "The Crooked Moon"
     }
 }
