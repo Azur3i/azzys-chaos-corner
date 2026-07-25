@@ -13,6 +13,13 @@ if (!empty($_GET)) {
 }
 
 function renderASI ($asi) {
+    if (!empty($asi["default"])) {
+        switch ($asi["default"]) {
+            case 2: return "Increase one ability score of your choice by 2, or two different ones by 1.";
+            case 3: return "Increase one ability score by 2 and a different one by 1, or increase three different ability scores by 1.";
+        }
+    }
+
     if (count($asi) == 7) {
         $increase = $asi["total"] / 6;
         return "Your ability scores each increase by $increase.";
@@ -56,16 +63,26 @@ function renderASI ($asi) {
 
         <hr >
 
-        <p class="md title"><?= implode('</p><br ><p class="md title">', $target["desc"]) ?></p>
+        <? // description and image ?>
+        <div class="row" style="margin: 0;">
+            <div class="col my-auto">
+                <p class="md title"><?= implode('</p><br ><p class="md title" style="margin-top: 1rem;">', $target["desc"]) ?></p>
+            </div>
+            <?php if (file_exists(ROOT . "/assets/img/dnd/races/$raceName.png")): ?>
+                <img id="race-img" class="col-auto my-auto" src="/assets/img/dnd/races/<?= $raceName ?>.png" style="width: 25%; height: auto;">
+            <?php endif; ?>
+        </div>
         
         <hr >
         
-        <div class="mx-auto md row p-margin" style="width: 85%;">
+        <? // body and mind ?>
+        <div class="mx-auto md row" style="width: 85%; margin: 0;">
+            <? // body ?>
             <div class="col">
-                <p class="lg title">Body</p>
-
-                <hr >
                 <div class="mx-auto md" style="width: 90%;">
+                    <p class="lg title">Body</p>
+                    <hr style="color: rgb(var(--black)); margin-top: 0;">
+
                     <?php if (empty($target["creatureType"]) && empty($target["size"]) && empty($target["speed"])): ?>
                         <p style='text-align: center;'>Defined by options below.</p>
                     <?php endif; ?>
@@ -81,15 +98,14 @@ function renderASI ($asi) {
                     <?php echo (!empty($target["size"])) ? "<p style='margin-bottom: 1rem;'><b>Size. </b>" . $target['size'] . "</p>" : "" ?>
                     <?php echo (!empty($target["speed"])) ? "<p style='margin-bottom: 1rem;'><b>Speed. </b>Your base walking speed is " . $target['speed'] . "ft.</p>" : "" ?>
                 </div>
-
-                
             </div>
             
-            <div class="col">
-                <p class="lg title">Mind</p>
-
-                <hr >
+            <? // mind ?>
+            <div class="col">    
                 <div class="mx-auto md" style="width: 90%;">
+                    <p class="lg title">Mind</p>
+                    <hr style="color: rgb(var(--black)); margin-top: 0;">
+
                     <?php if (empty($target["age"]) && empty($target["alignment"]) && empty($target["languages"])): ?>
                         <p style='text-align: center;'>Defined by options below.</p>
                     <?php endif; ?>
@@ -101,11 +117,14 @@ function renderASI ($asi) {
             </div>
         </div>
 
+        <? // abilities / traits ?>
         <?php if (count($target["abilities"])): ?>
         <hr >
         
-        <p class="lg title">Abilities</p>
-        <div class="mx-auto row p-margin" style="width: 85%;">
+        <div class="row mx-auto" style="width: 85%; margin: 0;">
+            <p class="lg title">Abilities</p>
+            <hr style="color: rgb(var(--black));">
+
             <?php foreach ($target["abilities"] as $ability): ?>
             <div class="indent-li" style="margin-bottom: 1rem;">
                 <?php renderAbility($ability, 1); ?>
@@ -113,15 +132,16 @@ function renderASI ($asi) {
             <?php endforeach; ?>
         </div>
         <?php endif; ?>
-
+        
         <?php if (count($target["options"])): 
         uasort($target["options"], function ($a, $b) {
             return strcmp($a["name"], $b["name"]);
         }); ?>
         <hr >
-
-        <p class="lg title">Options & Subraces</p>
+        
         <div class="mx-auto row p-margin" style="width: 75%;">
+            <p class="lg title">Options & Subraces</p>
+            <hr style="color: rgb(var(--black));">
             <div class="accordion" id="race-options">
                 <?php foreach ($target["options"] as $name => $option): ?>
                     <div class="accordion-item blue low-opac shadow-lg">
