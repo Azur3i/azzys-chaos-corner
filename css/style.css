@@ -747,3 +747,12 @@ table.ability {
 .bludgeoning-dmg,
 .piercing-dmg,
 .slashing-dmg {color: #A0A0A0;}
+
+#race-img:hover {
+    transform: scale(1.75);
+    transform-origin: top right;
+
+    background: rgb(var(--black) / 0.3);
+
+    z-index: 1000;
+}
