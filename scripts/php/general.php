@@ -69,7 +69,7 @@ function renderAbility($ability, $z=0, $cls=null) {
         }
         if (!empty($ability["desc"])) {
             if (is_array($ability["desc"])) {
-                echo implode('</p><p class="md" style="margin-left: 2rem;">', renderText($ability["desc"]));
+                echo implode('</p><p class="md" style="text-indent: 2rem;">', renderText($ability["desc"]));
             } else {
                 echo renderText($ability["desc"]);
             }
