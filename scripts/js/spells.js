@@ -1,13 +1,27 @@
-function loadSpell(target) {
-    $.get(
-        "/scripts/constructors/spell.php", {target: target},
-        function(response) {
-            $("#spellbox").html(response);
-            updateButton(target);
+let ajaxTimer;
 
-            document.title = $("#spellname").data("name") + " - Spells - Azzy's Chaos Corner"
+function loadSpell(target) {
+    updateButton(target);
+
+    clearTimeout(ajaxTimer);
+    ajaxTimer = setTimeout(() => {
+        if (spellCache[target]) {
+            $("#spellbox").html(spellCache[target]);
+            document.title = $("#spellname").data("name") + " - Spells - Azzy's Chaos Corner";
+            history.pushState(null, "", "#" + target);
+        } else {
+            $.get(
+                "/scripts/constructors/spell.php", {target: target},
+                function(response) {
+                    $("#spellbox").html(response);
+                    spellCache[target] = response;
+
+                    document.title = $("#spellname").data("name") + " - Spells - Azzy's Chaos Corner";
+                    history.pushState(null, "", "#" + target);
+                }
+            )
         }
-    )
+    }, 50);
 }
 
 function updateButton(button) {
@@ -25,46 +39,21 @@ $(function () {
     }
 })
 
+// if url#hash is changed manually, load the spell
 $(window).on("hashchange", function () {
     let spell = location.hash.substring(1);
     loadSpell(spell);
 });
 
+// if a spell is selected in the spell list, load the spell
 $(".button-list").click(function (e) {
     e.preventDefault();
 
     let spell = $(this).attr("id");
-    history.pushState(null, "", "#" + spell);
-
     loadSpell(spell);
 });
 
-// ajax function to change level attribute
-$("#spellbox").on("click", ".button-lvl", function () {
-    let level = $(this).attr("value");
-    let spell = $("#spell-display").attr("spell");
-
-    $(".button-lvl").removeClass("active");
-    $(this).addClass("active");
-
-    $.post(
-        "/scripts/getters/spell_level.php", {
-            level: level,
-            spell: spell
-        },
-        function(response) {
-            if (Array.isArray(response)) {
-                response.forEach((param, index) => {
-                    console.log(param);
-                    $(`.level-replace-${index}`).html(param);
-                })
-            } else {
-                $(".level-replace-0").text(response);
-            }
-        }, "json"
-    )
-});
-
+// applies filters to spell list
 function filterSpell () {
     let search = $("#spell-searchbar").val().toLowerCase();
 
@@ -83,10 +72,10 @@ function filterSpell () {
             "classlist"
         ];
 
-        let [operand] = getLogicOp();
+        let [operand] = fetchLogicOp();
 
         elAndOr.forEach(element => {
-            let [wl, bl] = getFilters(".button-toggle-2.toggle-" + element);
+            let [wl, bl] = fetchFilters(".button-toggle-2.toggle-" + element);
 
             if (operand == "and") {
                 hidden = applyAnd(prop, wl, bl, operand, hidden);
@@ -104,7 +93,7 @@ function filterSpell () {
         ]
 
         elOr.forEach(element => {
-            let [wl, bl] = getFilters(".button-toggle-2.toggle-" + element);
+            let [wl, bl] = fetchFilters(".button-toggle-2.toggle-" + element);
 
             hidden = applyOr(prop, wl, bl, operand, hidden);
         });
@@ -118,6 +107,7 @@ function filterSpell () {
     });
 }
 
+// applies the and operand
 function applyAnd (prop, wl, bl, operand, hidden) {
     if (hidden == false) {
 
@@ -136,6 +126,7 @@ function applyAnd (prop, wl, bl, operand, hidden) {
     return hidden;
 }
 
+// applies the or operand
 function applyOr (prop, wl, bl, operand, hidden) {
     if (hidden == false) {
     
@@ -154,32 +145,57 @@ function applyOr (prop, wl, bl, operand, hidden) {
     return hidden;
 }
 
-$("#spell-searchbar").on("input", filterSpell);
-$(function () {$("#spell-searchbar").trigger("input");});
+// fetches buttons with active pos/neg filters
+function fetchFilters(el) {
+    let pos = [];
+    let neg = [];
+    $(el).each(function () {
+        if ($(this).hasClass("pos")) {
+            pos.push($(this).attr("id"));
+        } else if ($(this).hasClass("neg")) {
+            neg.push($(this).attr("id"));
+        }
+    });
 
+    return [pos, neg];
+}
+
+// fetches logic operands of filter options
+function fetchLogicOp() {
+    return [$(".classlist-andor.active").data("id")];
+}
+
+// switch buttons
+$(document).on("click", ".button-switch:not(.active)", function () {
+    $(".button-switch").removeClass("active");
+    $(this).addClass("active");
+});
+
+// reapply filters on searchbar input
+$("#spell-searchbar").on("input", filterSpell);
+// reapplies existing searchbar filter on page refresh
+$(function () {$("#spell-searchbar").trigger("input");});
+// repplies existing filters when and/or is switched for class lists
+$(".classlist-andor").click(filterSpell());
+
+
+// 2-stop toggle button -> off/pos
+// 3-stop toggle button -> off/pos/neg
+
+// highlight on-hover
+$(".button-toggle, .button-toggle-2").hover(
+    function () {
+        $(this).addClass("hover");
+    },
+    function () {
+        $(this).removeClass("hover");
+    }
+);
+
+// cycle through options on click
 $(".button-toggle").click(function () {
     $(this).toggleClass("active");
 });
-
-$(".button-toggle").hover(
-    function () {
-        $(this).addClass("hover");
-    },
-    function () {
-        $(this).removeClass("hover");
-    });
-
-$("#filter-button").click(function () {
-    $("#filter-menu").toggleClass("d-none");
-});
-
-$(".button-toggle-2").hover(
-    function () {
-        $(this).addClass("hover");
-    },
-    function () {
-        $(this).removeClass("hover");
-    });
 
 $(".button-toggle-2").on({
     "click": function () {
@@ -207,50 +223,47 @@ $(".button-toggle-2").on({
     }
 });
 
-function getFilters(el) {
-    let pos = [];
-    let neg = [];
-    $(el).each(function () {
-        if ($(this).hasClass("pos")) {
-            pos.push($(this).attr("id"));
-        } else if ($(this).hasClass("neg")) {
-            neg.push($(this).attr("id"));
-        }
-    });
+// show/hide filter menu on clicking the filter button
+$("#filter-button").click(function () {
+    $("#filter-menu").toggleClass("d-none");
+});
 
-    return [pos, neg];
-}
-
+// keyboard scrolling
 $(document).on("keydown", function(e) {
-    if (e.key === "ArrowDown") {
-        e.preventDefault();
-        $(function () {
-            let next = $(".button-list.active").nextAll(":not(.d-none)").first()
-            next.trigger("click");
-            next[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
-        });
-    }
-    if (e.key === "ArrowUp") {
-        e.preventDefault();
-        $(function () {
-            let prev = $(".button-list.active").prevAll(":not(.d-none)").first()
-            prev.trigger("click");
-            prev[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
-        });
+    switch (e.key) {
+        // up and down keys scroll the spells
+        case "ArrowDown":
+            e.preventDefault();
+            $(function () {
+                let next = $(".button-list.active").nextAll(":not(.d-none)").first();
+                next.trigger("click");
+                next[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
+            }); break;
+        case "ArrowUp":
+            e.preventDefault();
+            $(function () {
+                let prev = $(".button-list.active").prevAll(":not(.d-none)").first();
+                prev.trigger("click");
+                prev[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
+            }); break;
+        
+        // left and right keys scroll the levels
+        case "ArrowRight":
+            e.preventDefault();
+            $(function () {
+                let next = $(".button-lvl.active").next();
+                next.trigger("click");
+            }); break;
+        case "ArrowLeft":
+            e.preventDefault();
+            $(function () {
+                let prev = $(".button-lvl.active").prev();
+                prev.trigger("click");
+            }); break;
     }
 });
 
-$(".classlist-andor").click(function () {
-    $(".classlist-andor").removeClass("active");
-    $(this).addClass("active");
-
-    filterSpell();
-});
-
-function getLogicOp() {
-    return [$(".classlist-andor.active").data("id")];
-}
-
+// searchbar clear button
 $("#clear-button").click(function () {
     $("#spell-searchbar").val("");
     $("#spell-searchbar").trigger("input");

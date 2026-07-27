@@ -1,3 +1,6 @@
+let spellCache = {};
+let levelCache = {};
+
 $(".dnd-nav").click(function () {
     $("#dnd-mc").load("/pages/dnd/" + $(this).text().toLowerCase() + ".php");
 });
@@ -15,9 +18,9 @@ $(function () {
     document.title = $("#title").data("id") + "Azzy's Chaos Corner";
 });
 
-let spellCache = {};
 let hideTimer;
 
+// hover on spell link: load and show respective preview
 $(document).on("mouseenter", ".spell-link", function () {
     clearTimeout(hideTimer);
     
@@ -40,22 +43,21 @@ $(document).on("mouseenter", ".spell-link", function () {
     });
 });
 
-$(document).on("mouseleave", ".spell-link", function () {
-    hideTimer = setTimeout(function () {
-        $("#spell-preview").stop(true, true).fadeOut(100);
-    }, 200);
-});
+// hover off spell link: wait 200ms, then hide preview
+$(document).on("mouseleave", ".spell-link", () => hideSpellPreview(200));
+// hover on preview: cancel hide timer and keep showing
+$(document).on("mouseenter", "#spell-preview", () => clearTimeout(hideTimer));
+// hover off preview: wait 200ms, then hide preview
+$(document).on("mouseleave", "#spell-preview", () => hideSpellPreview(200));
 
-$(document).on("mouseenter", "#spell-preview", function () {
-    clearTimeout(hideTimer);
-});
-
-$(document).on("mouseleave", "#spell-preview", function () {
-    $("#spell-preview").stop(true, true).fadeOut(100);
-});
-
-$(document).on("scroll", function() {
-    $("#spell-preview").fadeOut(100);
+// hide preview instantly when:
+// document scrolls
+$(document).on("scroll", () => hideSpellPreview(0))
+// user clicks outside the preview
+$(document).on("click", function (e) {
+    if (!$(e.target).closest("#spell-preview").length) {
+        hideSpellPreview(0);
+    }
 })
 
 function showSpellPreview(html, element) {
@@ -111,28 +113,45 @@ function showSpellPreview(html, element) {
         .fadeIn(100);
 }
 
+function hideSpellPreview(timer) {
+    hideTimer = setTimeout(function () {
+        $("#spell-preview").stop(true, true).fadeOut(100);
+    }, timer);
+}
+
 // allows spell preview to switch between spell levels
-$("#spell-preview-content").on("click", ".button-lvl", function () {
+$("#spell-preview, #spellbox").on("click", "div.spell-level-selector > a.button-lvl", function () {
     let level = $(this).attr("value");
     let spell = $("#spell-display").attr("spell");
 
     $(".button-lvl").removeClass("active");
     $(this).addClass("active");
 
-    $.post(
-        "/scripts/getters/spell_level.php", {
-            level: level,
-            spell: spell
-        },
-        function(response) {
-            if (Array.isArray(response)) {
-                response.forEach((param, index) => {
-                    console.log(param);
-                    $(`.level-replace-${index}`).html(param);
-                })
-            } else {
-                $(".level-replace-0").text(response);
-            }
-        }, "json"
-    )
+    levelCache[spell] ??= {};
+    if (levelCache[spell][level]) {
+        if (Array.isArray(levelCache[spell][level])) {
+            levelCache[spell][level].forEach((param, index) => {
+                $(`.level-replace-${index}`).html(param);
+            })
+        } else {
+            $(".level-replace-0").text(levelCache[spell][level]);
+        }
+    } else {
+        $.post(
+            "/scripts/getters/spell_level.php", {
+                level: level,
+                spell: spell
+            },
+            function(response) {
+                levelCache[spell][level] = response;
+                if (Array.isArray(response)) {
+                    response.forEach((param, index) => {
+                        $(`.level-replace-${index}`).html(param);
+                    })
+                } else {
+                    $(".level-replace-0").text(response);
+                }
+            }, "json"
+        )
+    }
 });
