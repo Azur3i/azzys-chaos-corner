@@ -33,57 +33,6 @@
         "lists": ["wizard"],
         "source": "Source"
     },
-    "jump": {
-        "name": "Jump",
-        "level": 1,
-        "school": "transmutation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "touch",
-        "vsm": [true, true, "a grasshopper's hind leg"],
-        "duration": {
-            "amount": 1,
-            "time": "minute"
-        },
-        
-        "desc": [
-            {
-                "desc": "You touch a creature. The creature's jump distance is tripled until the spell ends."
-            }
-        ],
-        "levels": null,
-        
-        "lists": ["artificer", "druid", "ranger", "sorcerer", "wizard"],
-        "source": "Player's Handbook"
-    },
-    "burning-hands": {
-        "name": "Burning Hands",
-        "level": 1,
-        "school": "evocation",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "self (15ft. cone)",
-        "vsm": [true, true, false],
-        "duration": {
-            "time": "instantaneous"
-        },
-        
-        "desc": [
-            {
-                "desc": "As you hold out your hands, with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15ft. cone must make a DEX saving throw. A creature takes {*}d6 @fire damage on a failed save, or half as much damage on a successful one. The fire ignites any flammable objects in the area that are not being worn or carried."
-            }
-        ],
-        "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
-        
-        "lists": ["sorcerer", "wizard"],
-        "source": "Player's Handbook"
-    },
     "star-assault": {
         "name": "Star Assault",
         "level": 3,
@@ -94,20 +43,20 @@
             "time": "action"
         },
         "range": "120ft.",
-        "vsm": [true, true, "an origami bird and a rock resembling a sending stone"],
+        "vsm": [true, true, "an origami bird, and a rock resembling a sending stone"],
         "duration": {
             "time": "instantaneous"
         },
         
         "desc": [
             {
-                "desc": "Lights as if from falling stars seem to appear from distantly behind you. Designate one space you can see within range. The chasing lights descend on it, to violently suppress the area with a flurry of blinding lights."
+                "desc": "Lights, as if from falling stars, seem to appear from distantly behind you. Designate a space you can see within range. The chasing lights descend on it, to violently suppress the area with a flurry of blinding lights."
             },
             {
-                "desc": "Indicate {1} 55ft. lines whose centers cross at the designated tile. Any creature hit by either line must make a DEX saving throw, taking {2}d10 @force damage on a failure, or half as much on a success. Any creature in the designated tile has disadvantage on the save, and takes {3} the damage."
+                "desc": "Indicate {1} 55ft. lines that intersect at the central space. A creature hit by any number of lines must make a DEX saving throw, taking {2}d10 @force damage on a failed save, or half as much on a successful one. A creature in the central space is hit by all the intersecting lines, and must make a saving throw for each line seperately."
             }
         ],
-        "levels": [["two", 3, "double"], ["two", 4, "double"], ["three", 4, "triple"], ["three", 5, "triple"], ["four", 5, "quadruple"], ["four", 6, "quadruple"], ["five", 6, "quintuple"]],
+        "levels": [[2, 3], [2, 3], [3, 3], [3, 4], [4, 4], [4, 4], [5, 5]],
         
         "lists": ["artificer", "cleric", "paladin", "ranger", "sorcerer", "wizard"],
         "source": "The Archivist's Anthology of Forgotten Lore"
