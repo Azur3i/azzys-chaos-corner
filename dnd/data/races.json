@@ -1265,5 +1265,35 @@
             }
         },
         "source": "Player's Handbook"
+    },
+    "tabaxi": {
+        "name": "Tabaxi",
+        "desc": ["Hailing from a strange and distant land, wandering tabaxi are catlike humanoids driven by curiosity to collect interesting artifacts, gather tales and stories, and lay eyes on all the world's wonders. Ultimate travelers, the inquisitive tabaxi rarely stay in one place for long. Their innate nature pushes them to leave no secrets uncovered, no treasures or legends lost."],
+        "asi": {"DEX": 2, "CHA": 1},
+        "age": "Tabaxi have lifespans equivalent to humans.",
+        "creatureType": "Humanoid",
+        "size": "Tabaxi are taller on average than humans and relatively slender. Your size is Medium.",
+        "speed": 30,
+        "languages": "You can speak, read and write Common, and 1 other language of your choice.",
+        "abilities": [
+            {
+                "name": "Darkvision",
+                "desc": "You have a cat's keen senses, especially in the dark. You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Feline Agility",
+                "desc": "Your reflexes and agility allow you to move with a burst of speed. Whenever you move on your turn in combat, you may double your speed until the end of the turn. You regain the use of this trait once you move 0ft. on one of your turns."
+            },
+            {
+                "name": "Cat's Claws",
+                "desc": "Because of your claws, you have a climbing speed of 20ft. Additionally, your claws are natural weapons, which you may use to make unarmed strikes. On a hit, you deal 1d4 + STR @slashing damage, instead of the bludgeoning damage normal for an unarmed strike."
+            },
+            {
+                "name": "Cat's Talents",
+                "desc": "You gain proficiency in the Perception (WIS) and Stealth (DEX) skills."
+            }
+        ],
+        "options": {},
+        "source": "Volo's Guide to Monsters"
     }
 }
