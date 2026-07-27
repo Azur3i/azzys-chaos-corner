@@ -69,6 +69,11 @@
     #spell-search {
         height: 8%;
     }
+
+    #race-img {
+        height: 26vh;
+        width: auto;
+    }
 }
 
 /* QHD */
@@ -89,6 +94,10 @@
 
     #spell-search {
         height: 7%;
+    }
+
+    #race-img {
+        height: 30vh;
     }
 }
 
@@ -408,8 +417,6 @@ div.accordion {
     border-bottom-left-radius: 0.8rem !important;
 }
 
-
-
 .content-list {
     background: rgb(var(--blue) / 0.2);
     border: 1px solid rgb(var(--blue));
@@ -651,7 +658,7 @@ table.ability {
 }
 
 #spell-preview {
-    transform: scale(0.75);
+    transform: scale(0.8);
     transform-origin: top left;
     z-index: 1000;
 
@@ -747,6 +754,10 @@ table.ability {
 .bludgeoning-dmg,
 .piercing-dmg,
 .slashing-dmg {color: #A0A0A0;}
+
+#race-img {
+    width: auto;
+}
 
 #race-img:hover {
     transform: scale(1.75);

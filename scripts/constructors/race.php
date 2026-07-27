@@ -64,12 +64,12 @@ function renderASI ($asi) {
         <hr >
 
         <? // description and image ?>
-        <div class="row" style="margin: 0;">
+        <div class="row" style="margin: 0; height: auto;">
             <div class="col my-auto">
                 <p class="md title"><?= implode('</p><p class="md title" style="margin-top: 1rem;">', $target["desc"]) ?></p>
             </div>
             <?php if (file_exists(ROOT . "/assets/img/dnd/races/$raceName.png")): ?>
-                <img id="race-img" class="col-auto my-auto" src="/assets/img/dnd/races/<?= $raceName ?>.png" style="width: 25%; height: auto;">
+                <img id="race-img" class="col-auto my-auto" src="/assets/img/dnd/races/<?= $raceName ?>.png">
             <?php endif; ?>
         </div>
         
@@ -111,7 +111,7 @@ function renderASI ($asi) {
                     <?php endif; ?>
                 
                     <?php foreach (["age", "alignment", "languages"] as $attr): ?>
-                        <?php echo (!empty($target[$attr])) ? "<p style='margin-bottom: 1rem;'><b>Age. </b>" . $target[$attr] . "</p>" : "" ?>
+                        <?php echo (!empty($target[$attr])) ? "<p style='margin-bottom: 1rem;'><b>" . ucfirst($attr) . ". </b>" . $target[$attr] . "</p>" : "" ?>
                     <?php endforeach; ?>
                 </div>
             </div>
