@@ -26,7 +26,7 @@ function renderDamageColors($str) {
 
 function renderActions($str) {
     $actions = [
-        "dash", "disengage", "hide", "use an object", "cast a spell", "attack"
+        "dash", "disengage", "hide", "use an object", "cast a spell", "attack", "dodge"
     ];
     foreach ($actions as $action) {
         $str = str_replace("@$action", "<i>$action</i>", $str);

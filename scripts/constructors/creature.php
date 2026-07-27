@@ -103,7 +103,7 @@ $statblock = $statblocks[$creatureName];
                 <div class="col title">
                     <p class="md">Skill Proficiencies</p>
                     <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= renderSkills($statblock["skills"], $statblock["expertise"], $statblock["stats"], $prof) ?></p>
+                    <p class="sm"><?= renderSkills($statblock["skills"], ($statblock["expertise"] ?? null), $statblock["stats"], $prof) ?></p>
                 </div>
                 <div class="col title">
                     <p class="md">Saving Throw Proficiencies</p>

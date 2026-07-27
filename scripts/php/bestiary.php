@@ -32,7 +32,7 @@ function getProf ($cr) {
     if ($cr === 0) {return 2;}
 
     else {
-        return ceil($cr / 4) + 1;
+        return (int) ceil($cr / 4) + 1;
     }
 }
 
@@ -137,17 +137,19 @@ function renderSkills ($skills, $expert, $stats, $prof) {
         }
     }
 
-    foreach ($expert as $skill) {
-        $score = $scores[$skill];
+    if ($expert) {
+        foreach ($expert as $skill) {
+            $score = $scores[$skill];
 
-        if (is_int($prof)) {
-            $mod = getMod($stats[$score]) + $prof * 2;
+            if (is_int($prof)) {
+                $mod = getMod($stats[$score]) + $prof * 2;
 
-            $result[] = ($mod >= 0 ? "+" : "") . $mod . " to " . ucwords($skill) . " (" . $score . ")";
-        } else {
-            $mod = getMod($stats[$score]);
+                $result[] = ($mod >= 0 ? "+" : "") . $mod . " to " . ucwords($skill) . " (" . $score . ")";
+            } else {
+                $mod = getMod($stats[$score]);
 
-            $result[] = ($mod >= 0 ? "+" : "") . $mod . " + 2 * proficiency to " . ucwords($skill) . " (" . $score . ")";
+                $result[] = ($mod >= 0 ? "+" : "") . $mod . " + 2 * proficiency to " . ucwords($skill) . " (" . $score . ")";
+            }
         }
     }
 

@@ -2945,7 +2945,7 @@
             "levels": {
                 "1": [
                     {
-                        "name": "Foolish Personas",
+                        "name": "Foolish Personas (Optional)",
                         "desc": "Many warlocks of the Great Fool adopt a signature aesthetic and performance style that best represents their folly. The foolish personas table offers archetypes of fools with suggestions for corresponding outfits and routines.",
                         "type": "table",
                         "content": {

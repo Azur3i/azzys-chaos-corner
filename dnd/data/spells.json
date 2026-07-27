@@ -20,7 +20,7 @@
         },
         "desc": [
             {
-                "desc": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's HP maximum and current HP increase by {*} for the duration."
+                "desc": "Your spell bolsters your allies with toughness and resolve. Choose up to 3 creatures within range. Each target's HP maximum and current HP increase by {*} for the duration."
             }
         ],
         "levels": [
@@ -5468,6 +5468,57 @@
         "levels": null,
         
         "lists": ["artificer", "bard", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "longstrider": {
+        "name": "Longstrider",
+        "level": 1,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a pinch of dirt"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch {*} creature(s). For the duration, a target's speed increases by 10ft."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["artificer", "bard", "druid", "ranger", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "meteor-swarm": {
+        "name": "Meteor Swarm",
+        "level": 9,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "1mi.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "Blazing orbs of fire plummet to the ground at 4 different points you can see within range. Each creature in a 40ft. radius sphere centered on each point must make a DEX saving throw, taking 20d6 @fire damage + 20d6 @bludgeoning damage on a failed save, of half as much on a successful one. The sphere spreads around corners. A creature in the area of more than one meteor is affected only once."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["sorcerer", "wizard"],
         "source": "Player's Handbook"
     }
 }
