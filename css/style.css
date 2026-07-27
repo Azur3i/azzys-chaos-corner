@@ -737,6 +737,10 @@ table.ability {
     height: 100%;
 }
 
+.subrace > p:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
 /* ----- */
 
 /* damage colors */

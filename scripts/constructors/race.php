@@ -20,12 +20,12 @@ function renderASI ($asi) {
         }
     }
 
-    if (count($asi) == 7) {
+    if (count($asi) == 7 && !empty($asi["total"])) {
         $increase = $asi["total"] / 6;
         return "Your ability scores each increase by $increase.";
     }
 
-    if (count($asi) == 1) {
+    if (count($asi) == 1 && !empty($asi["total"])) {
         $increase = $asi["total"];
         return "$increase different ability scores of your choice increase by 1.";
     }
@@ -158,7 +158,7 @@ function renderASI ($asi) {
 
                         <div id="<?= $name ?>"
                                 class="accordion-collapse collapse">
-                            <div class="accordion-body md">
+                            <div class="accordion-body md subrace">
                                 <?php include ROOT . "/scripts/constructors/subrace.php"; ?>
                             </div>
                         </div>
