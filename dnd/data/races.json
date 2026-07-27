@@ -2,10 +2,7 @@
     "anima": {
         "name": "Anima",
         "desc": ["Magically awakened or fragments of lingering emotion, “anima” is considered an umbrella term for those wayward spirits that weren't able to make their final departure from the Material Plain peacefully; that final fragment of their being determines what they become in their life's encore. There's nothing they want more than to move on from this life, even if it means tearing this world apart."],
-        "asi": {
-            "CON": 2,
-            "total": 2
-        },
+        "asi": {"CON": 2},
         "age": "Anima are ambiguously alive. They show no signs of aging, and they are immune to any effects that would age them. You physically resemble your form when you died. You can be freshly reanimated or thousands of years old.",
         "alignment": "Anima tend toward neutrality, but always contain a sliver of memories of their previous life.",
         "creatureType": "Undead",
@@ -26,10 +23,7 @@
             "umbra": {
                 "name": "Umbra",
                 "desc": "A light blue, translucent spirit most often found in abandoned houses. It is a spirit of regret most often sprouting from peaceful passings. Hundreds or thousands of years of natural energy accumulating around a faded mind creates what is known to man as an “umbra”, retaining but a sliver of their memories in life, cursed to forever wander the world, remembering naught but their remorse.",
-                "asi": {
-                    "WIS": 1,
-                    "total": 1
-                },
+                "asi": {"WIS": 1},
                 "abilities": [
                     {
                         "name": "Ingredior",
@@ -49,10 +43,7 @@
             "larua": {
                 "name": "Larua",
                 "desc": "Black, putrid ghosts that border on monstrosity, the larua are spirits of vengeance, seeking revenge against a cause unbeknownst to even themselves. Some call them corrupted umbras, the regret of ones passing burning and flaring into deep-rooted hatred. They are harbingers of death and heralders of the end, unwilling and unable to rest until they have avenged that they held dear once, in life.",
-                "asi": {
-                    "DEX": 1,
-                    "total": 1
-                },
+                "asi": {"DEX": 1},
                 "abilities": [
                     {
                         "name": "Dominus Noctus",
@@ -72,10 +63,7 @@
             "phantasma": {
                 "name": "Phantasma",
                 "desc": "An age-old spirit that has lost its original form after many years of wandering. Sometimes called carrion ghosts, or parasite spirits, they seek refuge in corpses of the freshly deceased, breathing new “life” into them. They bond with this new body and use it as their own, but the decay doesn't stop; a phantasma's greatest struggle is to maintain its body. Because as the decay spreads and the body falls apart, the phantasma is ripped apart as well.",
-                "asi": {
-                    "INT": 1,
-                    "total": 1
-                },
+                "asi": {"INT": 1},
                 "abilities": [
                     {
                         "name": "Vita Contractus",
@@ -102,8 +90,7 @@
             "STR": 1,
             "CON": 2,
             "INT": -2,
-            "WIS": 2,
-            "total": 2
+            "WIS": 2
         },
         "age": "A catfolk claims adulthood at the age of 12. They rarely live beyond 75 years.",
         "alignment": "Wherever the catfolk live, they live in complete harmony with their environment, be it heavily forested areas, mountains or beachsides. Most catfolk are neutral.",
@@ -127,11 +114,7 @@
     "cervitaur": {
         "name": "Cervitaur",
         "desc": ["A mystical sister family of the more well-known centaurs, cervitaurs are far descendants of dream spirits from the feywild. The four legs of a fawn adorned by a humanoid torso make for an agile and fast-witted creature that finds its home in the many types of heavy foliage. They trek around the feywild in their mostly solitary life. Although shy and easily scared, they are true friends of nature, nourishing their home with their dreamy magic."],
-        "asi": {
-            "DEX": 1,
-            "WIS": 2,
-            "total": 3
-        },
+        "asi": {"DEX": 1, "WIS": 2},
         "age": "Cervitaurs mature and age at about the same rate as humans, reaching adulthood at around 18 years old, and living to around 80 years on average.",
         "alignment": "Cervitaurs see themselves as a part of the environment. As nature adapts, so will they, and thus range from lawful to chaotic and from good to evil, based on the environment they grew up in.",
         "creatureType": "Fey",
@@ -235,7 +218,7 @@
             },
             {
                 "name": "Stonecunning",
-                "desc": "Whenever you make a History (INT) check related to the origin of stonework, you are considered to have expertise in the History (INT) skill, adding double your proficiency bonus instead of the normal scenario. "
+                "desc": "Whenever you make a History (INT) check related to the origin of stonework, you are considered to have expertise in the History (INT) skill, adding double your proficiency bonus instead of the normal scenario."
             }
         ],
         "options": {
@@ -1207,5 +1190,80 @@
         ],
         "options": {},
         "source": "The Crooked Moon"
+    },
+    "gnome": {
+        "name": "Gnome",
+        "desc": ["A constant hum of busy activity pervades the warrens and neighborhoods where gnomes form their close-knit communities. Louder sounds punctuate the hum: a crunch of grinding gears here, a minor explosion there, a yelp of surprise or triumph, and especially bursts of laughter. Gnomes take delight in life, enjoying every moment of invention, exploration, investigation, creation, and play."],
+        "asi": {"INT": 2},
+        "alignment": "Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.",
+        "age": "Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350, to almost 500 years.",
+        "creatureType": "Humanoid",
+        "size": "Gnomes are between 3 and 4ft. tall, and average around 40lbs. Your size is Small.",
+        "speed": 25,
+        "languages": "You can speak, read and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises, and its catalogs of knowledge about the natural world.",
+        "abilities": [
+            {
+                "name": "Darkvision",
+                "desc": "Accustomed to life underground, you have superior vision in dark and dim conditions. You are able to see in dim light within 60ft. of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness; only shades of grey."
+            },
+            {
+                "name": "Gnome Cunning",
+                "desc": "You gain advantage on INT, WIS, and CHA saving throws against magic."
+            },
+            {
+                "name": "Subrace",
+                "desc": "Two subraces of gnomes are found among the worlds of D&D: forest gnomes, and rock gnomes. Choose one of the following subraces."
+            }
+        ],
+        "options": {
+            "forest": {
+                "name": "Forest Gnome",
+                "desc": "As a forest gnome, you have a natural knack for illusion and inherent quickness and stealth. In the worlds of D&D, forest gnomes are rare and secretive. They gather in hidden communities in sylvan forests, using illusions and trickery to conceal themselves from threats or to mask their escape should they be detected. Forest gnomes tend to be friendly with other good-spirited woodland folk, and they regard elves and good fey as their most important allies. These gnomes also befriend small forest animals and rely on them for information about threats that might prowl their lands.",
+                "asi": {"DEX": 1},
+                "abilities": [
+                    {
+                        "name": "Natural Illusionist",
+                        "desc": "You know the @minor illusion cantrip. INT is your spellcasting ability for it."
+                    },
+                    {
+                        "name": "Speak with Small Beasts",
+                        "desc": "Through sounds and gestures, you are able to communicate simple ideas with Small or smaller beasts. Forest gnomes love animals, and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
+                    }
+                ],
+                "source": "Player's Handbook"
+            },
+            "rock": {
+                "name": "Rock Gnome",
+                "desc": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes. Most gnomes in the worlds of D&D are rock gnomes, including the tinker gnomes of the Dragonlance setting.",
+                "asi": {"CON": 1},
+                "abilities": [
+                    {
+                        "name": "Artificer's Lore",
+                        "desc": "Whenever you make a History (INT) check related to magic items, alchemical objects, or technological devices, you are considered to have expertise in the History (INT) skill, adding double your proficiency bonus instead of the normal scenario."
+                    },
+                    {
+                        "name": "Tinker",
+                        "desc": "You gain proficiency with tinker's tools. Using these tools, you may spend 1 hour and 10gp worth of materials to construct a Tiny clockwork device, with 5 AC and 1 hitpoint. The device ceases to function after 24 hours, unless you spend 1 hour reparing it to keep the device functioning, or when you use your action to dismantle it. If you do, you may reclaim the materials used to create it. You may have up to 3 clockwork devices active at a time. Whenever you create a device, choose one of the following:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Clockwork Toy",
+                                "desc": "This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5ft. across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents."
+                            },
+                            {
+                                "name": "Fire Starter",
+                                "desc": "The device produces a miniature flame, which you may use to light a candle, torch, or campfire. Using the device requires your action."
+                            },
+                            {
+                                "name": "Music Box",
+                                "desc": "Whenever opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end, or when it's closed."
+                            }
+                        ]
+                    }
+                ],
+                "source": "Player's Handbook"
+            }
+        },
+        "source": "Player's Handbook"
     }
 }
