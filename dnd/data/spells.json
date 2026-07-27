@@ -5559,7 +5559,7 @@
         "range": "self (15ft. cone)",
         "vsm": [true, true, false],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         
         "desc": [
@@ -5570,6 +5570,237 @@
         "levels": [3, 4, 5, 6, 7, 8, 9, 10, 11],
         
         "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "demacian-justice": {
+        "name": "Demacian Justice",
+        "level": 9,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "a silvered greatsword"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "quote": "\"Justice; by law, or by sword\" - Garen"
+            },
+            {
+                "desc": "You call on the might of Demacia, and it will respond to your call in all its glory and power. Choose a creature within range. The creature will be smitten by a sword of holy light descending from the skies, dealing 15d10 @radiant damage."
+            },
+            {
+                "desc": "This damage is completely unavoidable; it is unaffected by resistances and immunities, cannot be dispelled by a 9th-level @counterspell spell, and ignores any traits and abilities that would otherwise lower or prevent this damage."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "wizard"],
+        "source": "Azzurey's League of Legends Spells"
+    },
+    "astral-projection": {
+        "name": "Astral Projection",
+        "level": 9,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "hour"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "a jacinth worth at least 1000gp, and an ornately carved bar of silver worth at least 100gp, both once for each creature you affect with this spell, all of which the spell consumes"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You and up to 8 willing creatures within range project your astral bodies into the Astral Plane. The spell fails if you are aleady on that plane. The material body you leave behind is unconscious, and in a state of suspended animation; it doesn't need food or air, and doesn't age."
+            },
+            {
+                "desc": "Your astral body resembles your mortal form in almost every way, replicating your game statistics and possessions. The principal difference is the addition of a silvery cord that extends from between your shoulder blades and trails behind you, fading to invisibility after 1ft. This cord is your tether to your material body. As long as the tether remains intact, you can find your way home. If the cord is cut - something that may happen only when an effect specifically states that it does - your soul and body are separated, killing you instantly."
+            },
+            {
+                "desc": "Your astral form may freely travel through the Astral Plane, and may pass through portals there leading to any other plane. If you enter a new plane or return to the plane you were on when casting this spell, your body and possessions are transported along the silver cord, allowing you to re-enter your body as you enter the new plane. Your astral form is a separate incarnation. The spell ends for you and your companions when you use your action to dismiss it. When the spell ends, the affected creature returns to its physical body, and it awakens."
+            },
+            {
+                "desc": "The spell might also end early for you or one of your companions; a successful @dispel magic spell used against an astral or physical body ends the spell for that creature. If a creature's original body or its astral form drops to 0 hitpoints, the spell ends for that creature. If the spell ends and the silver cord is intact, the cord pulls the creature's astral form back into its body, ending its state of suspended animation. If you are returned to your body prematurely, your companions remain in their astral forms and must find their own way back to their bodies, usually by dropping to 0 hitpoints."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "blade-of-disaster": {
+        "name": "Blade of Disaster",
+        "level": 9,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a blade-shaped, planar rift about 3ft. long in an unoccupied space you can see within range. Whenever you cast this spell, and as a bonus action on each of your subsequent turns, you may make up to 2 melee spell attacks with the blade, each one against a creature, loose object, or structure within 5ft. of the blade. On a hit, the target takes 4d12 @force damage. This attack scores a critical hit if the number on the d20 is 18 or higher. On a critical hit, the blade deals an extra 8d12, for a total of 12d12 @force damage."
+            },
+            {
+                "desc": "The blade is able to harmlessly pass through any barrier, including a @wall of force spell."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "Tasha's Cauldron of Everything"
+    },
+    "foresight": {
+        "name": "Foresight",
+        "level": 9,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a hummingbird feather"],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a willing creature, and bestow a limited ability to see into the immediate future. For the duration, the target cannot be surprised, and gains advantage on attack rolls, ability checks, and saving throws. Other creatures gain disadvantage on attack rolls against the target. The spell ends early if you cast it again before the duration ends."
+            },
+            {
+                "desc": "The blade is able to harmlessly pass through any barrier, including a @wall of force spell."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "druid", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "gate": {
+        "name": "Gate",
+        "level": 9,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a diamond worth at least 500gp"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You conjure a portal, linking an unoccupied space you can see within range to a precise location on a different plane of existence. The portal is a circular opening, which you may make 5 to 20ft. in diameter. You may orient the portal in any direction you choose."
+            },
+            {
+                "desc": "The portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal."
+            },
+            {
+                "desc": "Deities, and other planar rulers, may prevent portals created by this spell from opening in their presence, or anywhere within their domains."
+            },
+            {
+                "desc": "Whenever you cast this spell, you may speak the name of a specific creature (a pseudonym, title, or nickname does not work). If that creature is on a plane other than the one you are on, the portal opens in the named creature's immediate vicinity, and draws the creature through it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the DM deems appropriate. It might leave, attack you, or help you."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "imprisonment": {
+        "name": "Imprisonment",
+        "level": 9,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a vellum depiction, or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500gp per hit die of the target"],
+        "duration": {
+            "time": "until dispelled"
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a magical restraint to hold a creature that you can see within range. The target must succeed on a WIS saving throw, or be bound by the spell. On a success, it is immune to the spell if you cast it again. While affected by this spell, the creature does not need to eat, drink, or breathe, and it doesn't age."
+            },
+            {
+                "desc": "During the casting of the spell, in any of its versions, you may specify a condition that will cause the spell to end and release the target. The condition may be as specific, or as elaborate as you choose, but the DM must agree that the condition is reasonable, and has a likelihood of coming to pass. The conditions may be based on a creature's name, identity, or deity, but otherwise must be based on observable actions or qualities, and not based on intangibles such as level, class, or hitpoints."
+            },
+            {
+                "desc": "A 9th level @dispel magic spell may end the spell early if targeting either the prison, or the special component used to create it."
+            },
+            {
+                "desc": "Whenever you cast the spell, choose one of the following forms of imprisonment:",
+                "type": "table",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["Name", "Imprisonment", "Special Component"],
+                        ["Burial", "The target is entombed far beneath the earth, in a sphere of magical force that is just large enough to contain the target. Nothing may pass through the sphere, nor may any creature teleport or use planar travel to get into, or out of it.", "A small mithral orb."],
+                        ["Chaining", "Heavy chains, firmly rooted in the ground, hold the target in place. The target is restrained until the spell ends, and it cannot move, or be moved by any means, until then.", "A fine chain of precious metal."],
+                        ["Hedged Prison", "The spell transports the target into a tiny demiplane that is warded against teleportation and planar travel. The demiplane may be a labyrinth, cage, tower, or any similar confined structure or area of your choice.", "A miniature representation of the prison, made from jade."],
+                        ["Minimus Containment", "The target shrinks to a height of 1in., and is imprisoned inside a gemstone or similar object. Light may pass through the gemstone normally, allowing the target to see out, and other creatures to see in, but nothing else may pass through, even by means of teleportation or planar travel. The gemstone cannot be cut or broken while the spell remains in effect.", "A large, transparent gemstone, such as a conrundum, diamond, or ruby."],
+                        ["Slumber", "The target falls asleep, and cannot be awoken.", "Rare soporific herbs."]
+                    ]
+                }
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "dispel-magic": {
+        "name": "Dispel Magic",
+        "level": 3,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "Chose a creature, object, or magical effect within range. Any spell of {*} level or lower on the target ends. For a spell of higher level than this, you must succeed on an ability check using your spellcasting ability, with DC of 10 + the spell's level."
+            }
+        ],
+        "levels": ["3rd", "4th", "5th", "6th", "7th", "8th", "9th"],
+        
+        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "sorcerer", "warlock", "wizard"],
         "source": "Player's Handbook"
     }
 }
