@@ -199,6 +199,10 @@ a {
     display: none;
 }
 
+.top {
+    z-index: 1000;
+}
+
 /* navbars for top and bottom of screen */
 
 #navbar-top { 
@@ -686,7 +690,7 @@ table.ability {
 #spell-preview {
     transform: scale(0.8);
     transform-origin: top left;
-    z-index: 1000;
+    position: fixed;
 
     max-height: 60%;
     max-width: 60%;

@@ -116,6 +116,7 @@ function showSpellPreview(html, element) {
 function hideSpellPreview(timer) {
     hideTimer = setTimeout(function () {
         $("#spell-preview").stop(true, true).fadeOut(100);
+        $("#spell-preview-content").html("");
     }, timer);
 }
 
