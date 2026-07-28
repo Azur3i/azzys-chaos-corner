@@ -604,24 +604,8 @@ table.ability {
 
     .list-group-item {
         margin: 0 0 0 0;
-    }
-
-    .list-group-item:first-child {
-        border-top-left-radius: 0.8rem;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    .list-group-item:not(:first-child):not(:last-child) {
-        border-radius: 0;
-    }
-
-    .list-group-item:last-child {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 0.8rem;
-        border-bottom-right-radius: 0;
+        border-radius: 0 !important;
+        --bs-border-radius: 0 !important;
     }
 }
 
@@ -747,6 +731,15 @@ table.ability {
     border: 1px solid rgb(var(--blue));
     border-radius: 0.8rem;
     margin: 0 0 1.25rem 0;
+}
+
+#pinned {
+    flex: 0 0 auto;
+}
+
+#unpinned {
+    flex: 1 1 auto;
+    height: 100%;
 }
 
 #filter-menu {
