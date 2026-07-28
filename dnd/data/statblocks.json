@@ -563,5 +563,73 @@
         ],
 
         "source": "Monster Manual"
+    },
+    "catalytic-automaton": {
+        "name": "Catalytic Automaton",
+        "size": "medium",
+        "creatureType": "construct",
+        "alignment": "unaligned",
+
+        "desc": ["The catalytic automaton is summoned as part of the Catalyst Warlock Patron."],
+
+        "stats": {
+            "STR": 14,
+            "DEX": 12,
+            "CON": 14,
+            "INT": 4,
+            "WIS": 10,
+            "CHA": 6
+        },
+        
+        "hitpoints": "2 + your CHA + 5 * your warlock level. The autotomaton has a number of hit dice (1d8) equal to your warlock level.",
+        "ac": {
+            "amount": 15,
+            "source": "natural armor"
+        },
+        "speed": {
+            "walk": 30
+        },
+
+        "saves": ["STR", "CON"],
+        "senses": {
+            "darkvision": 60,
+            "passivePerception": "10"
+        },
+        "skills": ["athletics"],
+
+        "dmgVulnerable": [],
+        "dmgResistant": ["psychic"],
+        "dmgImmune": ["poison"],
+        "conditionImmune": ["charmed", "exhaustion", "poisoned"],
+
+        "cr": null,
+
+        "abilities": [
+            {
+                "name": "Languages",
+                "desc": "The defender understands the languages you speak, but cannot speak."
+            },
+            {
+                "name": "Servant of the Preserver",
+                "desc": "The automaton's weapon attacks count as magical."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Multiattack",
+                "desc": "The automaton makes an amount of bash attacks equal to its proficiency."
+            },
+            {
+                "name": "Multiattack",
+                "desc": "Melee Weapon Attack: your spell attack modifier to hit, reach 5ft., one target you can see. Hit: 1d6 + proficiency @bludgeoning damage."
+            },
+            {
+                "name": ["Piercing Scream", "1/day"],
+                "desc": "The automaton lets out a piercing shockwave, affecting every creature in a cone with a length of 10ft. + 5ft. * proficiency. Creatures in the area must succeed on a CHA saving throw, or take 1d4 + proficiency @psychic damage, and gain vulnerability to @force damage until the start of the automaton's next turn."
+            }
+        ],
+
+        "source": "Asmodeus: King of Hell"
     }
 }
