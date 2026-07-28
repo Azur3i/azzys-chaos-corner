@@ -353,6 +353,48 @@ a {
     transition: 0.2s ease-in-out;
 }
 
+.button-pin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    margin-top: 0.5rem;
+
+    background-color: rgb(var(--color) / var(--bg-opac));
+    border: 1px solid rgb(var(--color));
+    border-radius: 0.8rem;
+    transition: 0.1s ease-in-out;
+
+    color: rgb(var(--color));
+    text-decoration: none;
+}
+
+.button-pin:hover {
+    background-color: rgb(var(--color) / 0.7);
+    color: rgb(var(--black));
+}
+
+.button-pin.active {
+    background-color: rgb(var(--color)) !important;
+    color: rgb(var(--black));
+}
+
+.button-pin #pin {
+    height: 2rem;
+    width: 2rem;
+    filter: invert(1);
+    transition: 0.1s ease-in-out;
+}
+
+.button-pin:hover #pin,
+.button-pin.active #pin {
+    filter: invert(0);
+    transition: 0.1s ease-in-out;
+}
+
 .link {
     color: rgb(var(--color) / 0.7);
     font-size: 0.5vw;

@@ -155,3 +155,47 @@ $("#spell-preview, #spellbox").on("click", "div.spell-level-selector > a.button-
         )
     }
 });
+
+// 2-stop toggle button -> off/pos
+// 3-stop toggle button -> off/pos/neg
+
+// highlight on-hover
+$(document).on("hover", ".button-toggle, .button-toggle-2",
+    function () {
+        $(this).addClass("hover");
+    },
+    function () {
+        $(this).removeClass("hover");
+    }
+);
+
+// cycle through options on click
+$(".button-toggle").click(function () {
+    $(this).toggleClass("active");
+});
+
+$(".button-toggle-2").on({
+    "click": function () {
+        if ($(this).hasClass("pos")) {
+            $(this).removeClass("pos");
+            $(this).addClass("neg");
+        } else if ($(this).hasClass("neg")) {
+            $(this).removeClass("neg");
+        } else {
+            $(this).addClass("pos");
+        };
+        filterSpell();
+    },
+    "contextmenu": function(e) {
+        e.preventDefault();
+        if ($(this).hasClass("neg")) {
+            $(this).removeClass("neg");
+            $(this).addClass("pos");
+        } else if ($(this).hasClass("pos")) {
+            $(this).removeClass("pos");
+        } else {
+            $(this).addClass("neg");
+        };
+        filterSpell();
+    }
+});

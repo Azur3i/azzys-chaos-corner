@@ -127,11 +127,13 @@ $levels = ["Cantrip", 1, 2, 3, 4, 5, 6, 7, 8, 9];
                     
                     <!-- spell list -->
                     <div class="scroll row" id="spell-scrolllist">
-                        <ul class="list-group" style="padding: 0;">
+                        <ul class="list-group pink" style="padding: 0;" id="pinned">
+                        </ul>
+                        <ul class="list-group blue" style="padding: 0;" id="unpinned">
                             <?php $i = 0;
                             foreach ($spells as $x => $y): ?>
                                 <a 
-                                    class="list-group-item blue low-opac button-list d-grid w-100 align-items-center"
+                                    class="list-group-item low-opac button-list d-grid w-100 align-items-center"
                                     style="outline: none; box-shadow: none; grid-template-columns: 1fr auto;"
                                     id="<?= $x ?>"
                                     href="#<?= $x ?>"
