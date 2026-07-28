@@ -2425,7 +2425,7 @@
                 "desc": "You tap into the nightmares of a creature you can see within range and create an illusory manifestation of its deepest fears, visible only to that creature"
             },
             {
-                "desc": "The target must make a WIS saving throw. On a failed save, the target becomes frightened for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a WIS saving throw or take {*}d10 @psychic damage. On a successful save, the spell ends."
+                "desc": "The target must make a WIS saving throw. On a failed save, the target becomes frightened of you for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a WIS saving throw or take {*}d10 @psychic damage. On a successful save, the spell ends."
             }
         ],
         "levels": [
@@ -5795,12 +5795,567 @@
         
         "desc": [
             {
-                "desc": "Chose a creature, object, or magical effect within range. Any spell of {*} level or lower on the target ends. For a spell of higher level than this, you must succeed on an ability check using your spellcasting ability, with DC of 10 + the spell's level."
+                "desc": "Choose a creature, object, or magical effect within range. Any spell of {*} level or lower on the target ends. For a spell of higher level than this, you must first succeed on an ability check using your spellcasting ability, with DC of 10 + the spell's level."
             }
         ],
         "levels": ["3rd", "4th", "5th", "6th", "7th", "8th", "9th"],
         
         "lists": ["artificer", "bard", "cleric", "druid", "paladin", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "counterspell": {
+        "name": "Counterspell",
+        "level": 3,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "reaction",
+            "condition": "you see a creature within 60ft. of you cast a spell"
+        },
+        "range": "60ft.",
+        "vsm": [false, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of {*} level or lower, its spell fails. For a spell of higher level than this, you must first succeed on an ability check using your spellcasting ability, with DC of 10 + the spell's level."
+            }
+        ],
+        "levels": ["3rd", "4th", "5th", "6th", "7th", "8th", "9th"],
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "invulnerability": {
+        "name": "Invulnerability",
+        "level": 9,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a small piece of adamantine worth at least 500gp, which the spell consumes"],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "For the duration, you are immune to all damage."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "mass-heal": {
+        "name": "Mass Heal",
+        "level": 9,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A flood of healing energy flows from you, into injured creatures around you. You restore up to 700 hitpoints, divided as you choose among any number of creature of your choice that you can see within range that aren't constructs or undead. Creatures healed by this spell are also cured of all diseases, and any effect causing them to be blinded or deafened."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric"],
+        "source": "Player's Handbook"
+    },
+    "power-word-heal": {
+        "name": "Power Word: Heal",
+        "level": 9,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A wave of healing energy washes over a creature you touch. The target regains all its hitpoints. If the creature is charmed, frightened, paralyzed, or stunned, the condition ends. If the creature is prone, it may use its reaction to stand up. This spell has no effect on undead or constructs."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric"],
+        "source": "Player's Handbook"
+    },
+    "power-word-kill": {
+        "name": "Power Word: Kill",
+        "level": 9,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, false, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You utter a word of power that is able to compel one creature you can see within range to die instantly. If the creature you chose has 100 hitpoints or fewer, it dies."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "psychic-scream": {
+        "name": "Psychic Scream",
+        "level": 9,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [false, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You unleash the power of your mind, to blast the intellect of up to 10 creatures of your choice that you can see within range. Creatures that have an INT score of 2 or lower are unaffected. A target must make an INT saving throw, taking 14d6 @psychic damage on a failed save, or half as much on a successful one. Additionally, on a failed save, the target is stunned. A stunned target may repeat the saving throw at the end of each of its turn, ending the effect on itself on a success."
+            },
+            {
+                "desc": "Whenever a creature is killed by this spell, its head explodes, assuming it has one."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "time-ravage": {
+        "name": "Time Ravage",
+        "level": 9,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, "an hourglass filled with diamond dust worth at least 5.000gp, which the spell consumes"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You target a creature you can see within range, putting its physical form through the devastation of rapid aging. The target must make a CON saving throw, taking 10d12 @necrotic damage on a failed save, or half as much on a successful one. Additionally, on a failure, the target also ages to the point where it has only 30 days left before it dies of old age. In this aged satet, the target gains disadvantage on attack rolls, ability checks, and saving throws, and its walking speed is halved."
+            },
+            {
+                "desc": "Only the @wish spell, or a 9th level @greater restoration spell may end these effects, and restore the target to its previous age."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["wizard"],
+        "source": "Explorer's Guide to Wildemount"
+    },
+    "time-stop": {
+        "name": "Time Stop",
+        "level": 9,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, false, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take 1d4 + 1 turns in a row, during which you may use actions, and move as normal."
+            },
+            {
+                "desc": "The spell ends early if one of the actions you use, or any effects that you create during this period affects a creature other than you, or an object being worn or carried by someone other than you. Additionally, the spell ends early if you move to a place more than 1.000ft. from the location where you cast it."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "wish": {
+        "name": "Wish",
+        "level": 9,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, false, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "Wish is the mightiest spell a mortal creature is able to cast. By simply speaking aloud, you may alter the very foundations of reality in accord with your desires."
+            },
+            {
+                "desc": "The basic use of this spell is to duplicate any other spell of 8th level or lower. You don't need to meet any requirements for that spell, including costly components. The spell simply takes effect."
+            },
+            {
+                "desc": "Alternatively, you may create one of the following effects of your choice:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "You create an object of up to 25.000gp in value that is not a magic item. The object may be no more than 300ft. in any dimension, and it appears in a unoccupied space you can see on the ground."
+                    },
+                    {
+                        "desc": "You allow up to 20 creatures that you can see to regain all hitpoints, and you end all effects on them described in the @greater restoration spell."
+                    },
+                    {
+                        "desc": "You grant up to 10 creatures that you can see resistance to a damage type of your choice."
+                    },
+                    {
+                        "desc": "You grant up to 10 creatures you can see immunity to a single spell, or other magical effect, for 8 hours. For instance, you could make yourself and all your companions immune to a lich's life drain attack."
+                    },
+                    {
+                        "desc": "You undo a single recent event by forcing a reroll of any roll made within the last round, including your last turn. Reality reshapes itself to accommodate the new result. For example, a wish spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You may force the reroll to be made with advantage or disadvantage, and you may choose to use the reroll, or the original roll."
+                    }
+                ]
+            },
+            {
+                "desc": "You might be able to achieve something beyond the scope of the above examples. State your wish to the DM as precisely as possible. The DM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. The spell might simply fail, the effect you desire might only be partially achieved, or you might suffer some unforseen consequence as a result of how you worded the wish. For example, wishing that a villain were dead might propel you forward in time, to a period when that villain is no longer alive, effectively removing you from the game. Similarly, wishing for a legendary magic item or artifact might instantly teleport you to the presence of the item's current owner."
+            },
+            {
+                "desc": "The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a long rest, you take 1d10 @necrotic damage per level of that spell. This damage cannot be reduced or prevented in any way. Additionally, your STR score drops to 3 for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, roll 1d6. On a 1 or a 2, you are unable to cast this spell every again after suffering this stress."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "invisibility": {
+        "name": "Invisibility",
+        "level": 2,
+        "school": "illusion",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "an eyelash, encased in gum arabic"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "{*} creature(s) you touch becomes invisible for the duration. Anything a target is wearing or carrying is invisible, as long as it is on their person. The spell ends early for a target that attacks or casts a spell."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["artificer", "bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "creation": {
+        "name": "Creation",
+        "level": 5,
+        "school": "illusion",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a tiny piece of matter of the same type of the item you plan to create"],
+        "duration": {
+            "time": "special"
+        },
+        
+        "desc": [
+            {
+                "desc": "You pull wisps of shadow material from the Shadowfell to create a nonliving object of a specific material. The object created may be no larger than a {*}ft. cube, and the object must be of a form and material you have seen before."
+            },
+            {
+                "desc": "The duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration.",
+                "type": "table",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["Material", "Duration"],
+                        ["Vegetable matter", "1 day"],
+                        ["Stone, crystal", "12 hours"],
+                        ["Precious metals", "1 hour"],
+                        ["Gems", "10 minutes"],
+                        ["Adamantine or mithral", "1 minute"]
+                    ]
+                }
+            }
+        ],
+        "levels": [5, 10, 15, 20, 25],
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "cause-fear": {
+        "name": "Cause Fear",
+        "level": 1,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, false, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You awaken the sense of mortality in {*} creature(s) you can see within range that isn't a construct or undead. Should there be multiple targets, they need to be within 30ft. of each other. A target must succeed on a WIS saving throw, or become frightened of you. The frightened target may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["warlock", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "polymorph": {
+        "name": "Polymorph",
+        "level": 4,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a caterpillar cocoon"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You transform a creature of your choice that you can see within range into a new form. An unwilling target must succeed on a WIS saving throw, or be forced to transform. An unwilling shapechanger automatically succeeds on its saving throw."
+            },
+            {
+                "desc": "The transformation lasts for the duration, until the target drops to 0 hitpoints, or dies. The new form may be any beast whose challenge rating is equal to or less than the target's, or half the target's level, if the target does not have a challenge rating. The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. The target retains its hitpoints, alignment, and personality."
+            },
+            {
+                "desc": "The target assumes the hitpoints of its new form. Whenever it reverts to its normal form, the creature returns to the hitpoints it had before it transformed. If it revers as a result of dropping to 0 hitpoints, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hitpoints, it isn't knocked unconscious."
+            },
+            {
+                "desc": "The target is limited in the actions it is able to perform by the nature of its new form, and it cannot speak, cast spells, or take any other action that requires hand or speech."
+            },
+            {
+                "desc": "The target's gear melds into the new form. The creature cannot activate, use, wield, or otherwise benefit from any of its equipment. This spell cannot affect a target that has 0 hitpoints."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "mass-polymorph": {
+        "name": "Mass Polymorph",
+        "level": 9,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "a caterpillar cocoon"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You transform up to 10 creatures of your choice that you can see within range into a new form. An unwilling target must succeed on a WIS saving throw, or be forced to transform. An unwilling shapechanger automatically succeeds on its saving throw."
+            },
+            {
+                "desc": "The transformation lasts for the duration, until the target drops to 0 hitpoints, or dies. The new form may be any beast whose challenge rating is equal to or less than the target's, or half the target's level, if the target does not have a challenge rating. You may choose the same form, or different ones, for each target. The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. The target retains its hitpoints, alignment, and personality."
+            },
+            {
+                "desc": "The target assumes the hitpoints of its new form. Whenever it reverts to its normal form, the creature returns to the hitpoints it had before it transformed. If it revers as a result of dropping to 0 hitpoints, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hitpoints, it isn't knocked unconscious."
+            },
+            {
+                "desc": "The target is limited in the actions it is able to perform by the nature of its new form, and it cannot speak, cast spells, or take any other action that requires hand or speech."
+            },
+            {
+                "desc": "The target's gear melds into the new form. The creature cannot activate, use, wield, or otherwise benefit from any of its equipment. This spell cannot affect a target that has 0 hitpoints."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "prismatic-wall": {
+        "name": "Prismatic Wall",
+        "level": 9,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 10,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "A shimmering, multicolored plane of light forms a vertical, opaque wall - up to 90ft. long, 30ft., high, and 1in. thick - centered on a point you can see within range. Alternatively, you may shape the wall into a 15ft. radius sphere centered on a point you choose within range. If you position the wall so that it passes through a space occupied by a creature, the spell fails."
+            },
+            {
+                "desc": "The wall sheds bright light out to a range of 100ft., and dim light for an additional 100ft. You and any number of creatures of your choice when you cast the spell may pass through, and remain near the wall without harm. Any other creature that can see the wall and moves to within 20ft. of it, or starts its turn there, must succeed on a CON saving throw, or become blinded for 1 minute."
+            },
+            {
+                "desc": "The wall consists of 7 layers, each with a different color. When a creature attempts to reach into, or pass through the wall, it does so 1 layer at a time, through all the wall's layers. As it passes or reaches through each layer, the creature must make DEX saving throw, and be affected by that layer's properties as described in the table below."
+            },
+            {
+                "desc": "The wall may be destroyed, also 1 layer at a time, in order from red to violet, by means specific to each layer. Once a layer is destroyed, it remains so for the duration of the spell. An @antimagic field spell has no effect on it.",
+                "type": "table",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["Color", "Save Effect", "Destroy Requirements", "Special"],
+                        ["Red", "The creature takes 10d6 @fire damage on a failed save, or half as much on a successful one.", "This layer is destroyed by dealing at least 25 @cold damage to it.", "While this layer is in place, nonmagical ranged attacks cannot pass through the wall."],
+                        ["Orange", "The creature takes 10d6 @acid damage on a failed save, or half as much on a successful one.", "This layer is destroyed by a strong wind.", "While this layer is in place, magical ranged attacks cannot pass through the wall."],
+                        ["Yellow", "The creature takes 10d6 @lightning damage on a failed save, or half as much on a successful one.", "This layer is destroyed by dealing at least 60 @force damage to it.", ""],
+                        ["Green", "The creature takes 10d6 @poison damage on a failed save, or half as much on a successful one.", "This layer is destroyed by a @passwall spell, or another spell of equal or greater level that is able to open a portal on a solid surface.", ""],
+                        ["Blue", "The creature takes 10d6 @cold damage on a failed save, or half as much on a successful one.", "This layer is destroyed by dealing at least 25 @fire damage to it.", ""],
+                        ["Indigo", "On a failure, the creature is restrained. It must then make a CON saving throw at the end of each of its turn. On 3 failures, it permanently turns to stone, and is petrified. On 3 successes, the spell ends. The successes and failures do not need to be consecutive; keep track of both, until the creature collects 3 of a kind.", "This layer is destroyed by bright light shed by a @daylight spell, or similar spell of equal or higher level.", "While this layer is in place, spells cannot be cast through the wall."],
+                        ["Violet", "On a failure, the creature is blinded until the start of your next turn. It must then succeed on a WIS saving throw at the start of your next turn, or be transported to another plane of the DM's choosing. Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are typically cast into the Astral or Ethereal planes.", "This layer is destroyed by a @dispel magic spell, or similar spell of equal or higher level that is able to end spells and magical effects.", ""]
+                    ]
+                }
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "ravenous-void": {
+        "name": "Ravenous Void",
+        "level": 9,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "1.000ft.",
+        "vsm": [true, true, "a small, nine-pointed star, made of iron"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a 20ft. radius sphere of destructive gravitation force centered on a point you can see within range. For the duration, the sphere, and any space within 100ft. of it, are difficult terrain, and nonmagical objects fully inside the sphere are destroyed if they aren't being worn or carried."
+            },
+            {
+                "desc": "Whenever the sphere appears, and at the start of each of your turns until the spell ends, unsecured objects within 100ft. of the sphere are pulled toward the sphere's center, ending in an unoccupied space as close to the center as possible."
+            },
+            {
+                "desc": "A creature that starts its turn within 100ft. of the sphere must succeed on a STR saving throw, or be pulled straight toward the sphere's center, ending in an unoccupied space as close to the center as possible. A creature that enters the sphere for the first time on a turn, or starts its turn there, takes 5d10 @force damage, and is restrained until it is no longer in the sphere. If the sphere is in the air, the restrained creature hovers inside the sphere. A creature may use its action to make a STR check. On a success, it is no longer restrained, or may instead free a creature it is able to reach, causing that creature to no longer be restrained."
+            },
+            {
+                "desc": "A creature reduced to 0 hitpoints by this spell is annihilated, along with any nonmagical items it was wearing or carrying."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["wizard"],
+        "source": "Explorer's Guide to Wildemount"
+    },
+    "disintegrate": {
+        "name": "Disintegrate",
+        "level": 6,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a lodestone, and a pinch of dust"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A thin, green ray springs from your pointing finger to a target that you can see within range. The target may be a creature, object, or creation of magical force, such as the wall created by a @wall of force spell."
+            },
+            {
+                "desc": "A creature targeted by this spell succeed on a DEX saving throw, or take {*}d6 + 40 @force damage. The target is disintegrated if this damage leaves it with 0 hitpoints. A disintegrated creature, and everything it was wearing and carrying, except magic items, are reduced to a pile of fine gray dust. Ths creature may be restored to life only by means of a @true resurrection, or a @wish spell."
+            },
+            {
+                "desc": "This spell automatically disintegrates a Large or smaller nonmagical object, or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10ft. cube portion of it. A magic item is unaffected by this spell."
+            }
+        ],
+        "levels": [10, 13, 16, 19],
+        
+        "lists": ["sorcerer", "wizard"],
         "source": "Player's Handbook"
     }
 }
