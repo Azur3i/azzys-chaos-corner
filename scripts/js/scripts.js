@@ -111,6 +111,8 @@ function showSpellPreview(html, element) {
         })
         .stop(true, true)
         .fadeIn(100);
+    
+    $("#spell-preview .button-pin").hide();
 }
 
 function hideSpellPreview(timer) {
