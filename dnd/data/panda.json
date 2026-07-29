@@ -61,7 +61,7 @@
         ],
         "levels": [[2, 5], [2, 5], [2, 6], [3, 6], [3, 7], [3, 7], [4, 8]],
         
-        "lists": ["artificer", "cleric", "paladin", "ranger", "sorcerer", "wizard"],
+        "lists": ["artificer", "wizard", "ranger", "oracle"],
         "source": "The Archivist's Anthology of Forgotten Lore"
     }
 }
