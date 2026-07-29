@@ -2634,8 +2634,8 @@
         ],
         "source": "Player's Handbook"
     },
-    "sacred-fire": {
-        "name": "Sacred Fire",
+    "sacred-flame": {
+        "name": "Sacred Flame",
         "level": 0,
         "school": "evocation",
         "castTime": {
@@ -6356,6 +6356,536 @@
         "levels": [10, 13, 16, 19],
         
         "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "fear": {
+        "name": "Fear",
+        "level": 3,
+        "school": "illusion",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (30ft. cone)",
+        "vsm": [true, true, "a white feather, or the heart, of a hen"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You project a phantasma image of a creature's worst fears. Each creature in a 30ft. cone must succeed on a WIS saving throw, or drop whatever it is holding and become frightened of you for the duration."
+            },
+            {
+                "desc": "While frightened in this way, a creature must take the @dash action, and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight of you, the creature may repeat the saving throw, ending the effect on itself on a success."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "detect-magic": {
+        "name": "Detect Magic",
+        "level": 1,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action",
+            "ritual": true
+        },
+        "range": "self (30ft.)",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "For the duration, you sense the presence of magic within 30ft. of you. Whenever you sense magic in this way, you may use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic."
+            },
+            {
+                "desc": "The spell is able to penetrate most barriers, but is blocked by 1ft. of stone, 1in. of common metal, a thin sheet of lead, or 3ft. of wood or dirt."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "acid-arrow": {
+        "name": "Acid Arrow",
+        "level": 2,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, "powdered rhubarb leaf, and an adder's stomach"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A shimmering, green arrow streaks toward a target within range, and bursts into a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes {1}d4 @acid damage on a failed save, or half as much on a miss. Additionally, on a hit, the target takes {2}d4 @acid damage at the end of its next turn."
+            }
+        ],
+        "levels": [[4, 2], [5, 3], [6, 4], [7, 5], [8, 6], [9, 7], [10, 8], [11, 9]],
+        
+        "lists": ["wizard"],
+        "source": "Player's Handbook"
+    },
+    "speak-with-dead": {
+        "name": "Speak With Dead",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "10ft.",
+        "vsm": [true, true, "burning incense"],
+        "duration": {
+            "amount": 10,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You grant the semblence of life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose. The corpse must still have a mouth, and cannot be undead. The spell fails if the corpse has already been the target of this spell within the last 10 days."
+            },
+            {
+                "desc": "You may ask the corpse up to 5 questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are hostile to it, or recognizes you as an enemy."
+            },
+            {
+                "desc": "This spell does not return the creature's soul to its body; only its animating spirit. Thus, the corpse cannot learn new information, does not comprehend anything that has happened since it died, and cannot speculate about future events."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "vitriolic-sphere": {
+        "name": "Vitriolic Sphere",
+        "level": 4,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "150ft.",
+        "vsm": [true, true, "a drop of giant slug bile"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You point at a space within range, and a glowing, 1ft. ball of emerald acid streaks there, and explodes in a 20ft. radius. Each creature in that area must make a DEX saving throw, taking {*}d4 @acid damage on a failed save, or half as much on a successful one. Additionally, on a failure, the target takes 5d4 @acid damage at the end of its next turn."
+            }
+        ],
+        "levels": [10, 12, 14, 16, 18, 20],
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "gaseous-form": {
+        "name": "Gaseous Form",
+        "level": 3,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a bit of gauze, and a wisp of smoke"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hitpoints. An incorporeal creature is not affected."
+            },
+            {
+                "desc": "While transformed, the target's only method of movement is a flying speed of 10ft. The target may enter and occupy the space of another creature. The target gains resistance to nonmagical damage, and gains advantage on STR, DEX, and CON saving throws. The target may pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target cannot fall, and remains hovering in the air, even when stunned, or otherwise incapacitated."
+            },
+            {
+                "desc": "Additionally, the target cannot talk or manipulate objects, and any objects it was carrying or holding cannot be dropped, used, or otherwise interacted with. The target cannot attack, nor cast spells."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "aqua-regia": {
+        "name": "Aqua Regia",
+        "level": 5,
+        "school": "transmutation",
+
+        "castTime": {
+            "time": "special"
+        },
+        "range": "touch",
+        "vsm": [true, true, "the scale of a black dragon"],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "Calling upon alchemical prowess, you create the alchemical acid known as aqua regia; royal water. Royal water is an acid strong enough to dissolve most metals and materials normally used to resist dissolution. This spell can be cast in one of two ways: as an action, or over a longer duration."
+            },
+            {
+                "desc": "If cast as an action, this spell empowers you and any acids originating from your person. For the duration, any spell or effect that deals @acid damage, such as the @acid spray spell, or a thrown acid vial, becomes aqua regia, and deals an additional 4d10 @acid damage. "
+            },
+            {
+                "desc": "If cast over 1 minute, you may empower up to 1/2 pint (8 fl oz) of acid into aqua regia permanently. Thrown aqua regia vials deal 4d10 @acid damage."
+            },
+            {
+                "desc": "All @acid damage originating from aqua regia ignores @acid damage resistance, and treats @acid damage immunity as @acid damage resistance. Materials that are normally immune to acid, such as gold and silver, can dissolve in aqua regia."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "druid"],
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
+    "acid-splash": {
+        "name": "Acid Splash",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You hurl a bubble of acid. Choose at most 2 creatures you can see within range, provided they are within 5ft. of each other. A target must succeed on a DEX saving throw, or take {*}d6 @acid damage."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "sapping-sting": {
+        "name": "Sapping Sting",
+        "level": 0,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You sap the vitality of a creature you can see within range. The target must succeed on a CON saving throw, or take {*}d4 @necrotic damage, and fall prone."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["wizard"],
+        "source": "Explorer's Guide to Wildemount"
+    },
+    "shocking-grasp": {
+        "name": "Shocking Grasp",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "Lightning springs from your hand, to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. If the target is wearing armor made of metal, you gain advantage. On a hit, the target takes {*}d8 @lightning damage, and cannot take reactions until the start of its next turn."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "spare-the-dying": {
+        "name": "Spare the Dying",
+        "level": 0,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a living creature at 0 hitpoints that is not a construct or undead. The creature becomes stable."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "cleric"],
+        "source": "Player's Handbook"
+    },
+    "thorn-whip": {
+        "name": "Thorn Whip",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "the stem of a plant with thorns"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a long, vine-like whip covered in thorns, that lashes out at your command toward a creature in range. Make a melee spell attack against the target. On a hit, the creature takes {*}d6 @piercing damage, and if the creature is Large or smaller, you may pull the creature up to 10ft. closer to you."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["artificer", "druid"],
+        "source": "Player's Handbook"
+    },
+    "word-of-radiance": {
+        "name": "Word of Radiance",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "5ft.",
+        "vsm": [true, true, "a holy symbol"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You utter a divine word, and burning radiance erupts from you. Any number of creatures of your choice within range must succeed on a CON saving throw, or take {*}d6 @radiant damage."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["cleric"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "light": {
+        "name": "Light",
+        "level": 0,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, false, "a firefly, or phosphorescent moss"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch an object that is no larger than 10ft. in any dimension. For the duration, the object sheds bright light in a 20ft. radius, and dim light for another 20ft. The light may be colored as you like. TCompletely covering the object with something opaque blocks the light. The spell ends early if you cast it again, or dismiss it as an action."
+            },
+            {
+                "desc": "If you target an object held or worn by a hostile creature, that creature must succeed on a DEX saving throw to avoid the spell."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "cleric", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "message": {
+        "name": "Message",
+        "level": 0,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, false, "a short piece of copper wire"],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        
+        "desc": [
+            {
+                "desc": "You point your finger toward a creature within range, and whisper a message. The target, and only the target, hears the message, and may reply in a whisper that only you hear."
+            },
+            {
+                "desc": "You may cast this spell through solid objects if you are familiar with the target, and know it is beyond the barrier. The spell is able to penetrate most barriers, but is blocked by magical silence, 1ft. of stone, 1in. of common metal, a thin sheet of lead, or 3ft. of wood or dirt."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "produce-flame": {
+        "name": "Produce Flame",
+        "level": 0,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, false, false],
+        "duration": {
+            "amount": 10,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "A flickering flame appears in your hand. The flame remains there for the duration, and harms neither you nor your equipment. The flame sheds bright light in a 10ft. radius, and dim light for another 10ft. The spell ends if you cast it again, or dismiss it as an action."
+            },
+            {
+                "desc": "You can also attack with the flame, though doing so ends the spell. Whenever you cast this spell, or as an action on a later turn, you may hurl the flame at a creature within 30ft. of you. Make a ranged spell attack. On a hit, the target takes {*}d8 @fire damage."
+            }
+        ],
+        "levels": [1, 2, 3, 4],
+        
+        "lists": ["druid"],
+        "source": "Player's Handbook"
+    },
+    "binding-ice": {
+        "name": "Binding Ice",
+        "level": 2,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (30ft. cone)",
+        "vsm": [false, true, "a vial of smeltwater"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A burst of cold energy emanates from you in a 30ft. cone. Each creature in that area must make a CON saving throw, taking {*}d8 @cold damage on a failed save, or half as much on a successful one. Additionally, on a failure, the creature is hindered by ice formations for 1 minute, or until another creature within range uses an action to break away the ice. A hindered creature has its speed reduced to 0."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Fizban's Treasury of Dragons"
+    },
+    "sleet-storm": {
+        "name": "Sleet Storm",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "150ft.",
+        "vsm": [true, true, "a pinch of dust, and a few drops of water"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "For the duration, freezing rain and sleet fall in a 40ft. radius, 20ft. tall cylinder centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused. The ground in the area is covered with slick ice, making it difficult terrain. Whenever a creature enters the spell's area for the first time on a turn, or starts its turn there, it must succeed on a DEX saving throw, or fall prone."
+            },
+            {
+                "desc": "If a creature starts its turn in the spell's area, and is concentrating on a spell, the creature must succeed on a CON saving throw, or lose concentration."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "ice-storm": {
+        "name": "Ice Storm",
+        "level": 4,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "300ft.",
+        "vsm": [true, true, "a pinch of dust, and a few drops of water"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A hail of rock-hard ice pounds to the ground in a 20ft. radius, 40ft. high cylinder centered on a point within range. Each creature in the cylinder must make a DEX saving throw, taking {*}d8 @bludgeoning damage + 4d6 @cold damage on a failed save, or half as much on a successful one."
+            },
+            {
+                "desc": "Hailstones turn the storm's area into difficult terrain until the end of your next turn."
+            }
+        ],
+        "levels": [2, 3, 4, 5, 6, 7],
+        
+        "lists": ["druid", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     }
 }
