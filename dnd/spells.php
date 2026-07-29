@@ -69,7 +69,7 @@ $levels = ["Cantrip", 1, 2, 3, 4, 5, 6, 7, 8, 9];
                     <!-- filter menu -->
                     <div class="d-none content-list" style="position: absolute;" id="filter-menu">
                         <div class="row" style="margin: 0;">
-                            <p class="md title">Filters:</p>
+                            <p id="spell-counter" class="md title">Filters:</p>
                         </div>
 
                         <hr >
