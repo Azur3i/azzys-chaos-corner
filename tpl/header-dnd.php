@@ -18,8 +18,6 @@
     </nav>
 </header>
 
-<div class="main-content top" style="padding: 0; margin: 0; position: fixed; z-index: 1021;">
-    <div id="spell-preview">
-        <div id="spell-preview-content" style="height: 100%; "></div>
-    </div>
+<div class="main-content top" id="spell-preview">
+    <div id="spell-preview-content" style="height: 100%; "></div>
 </div>
