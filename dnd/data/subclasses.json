@@ -2853,7 +2853,9 @@
                     },
                     {
                         "name": "Enlister, Constructor",
-                        "desc": "When you kill a creature, you may use your reaction to constrict their soul into steel, enlisting them into your master's legions as your servant. The creature is resurrected into an automaton. Automatons have their own initiative. An automaton takes 10gp per week to maintain, or it'll break down. A destroyed automaton will turn to dust. You may have one automaton at a time. If you attempt to make more automatons than you are able to, the oldest automaton will turn to dust. Statblock will be added later."
+                        "desc": "When you kill a creature, you may use your reaction to constrict their soul into steel, enlisting them into your master's legions as your servant. The creature is resurrected into an automaton. Automatons have their own initiative. An automaton takes 10gp per week to maintain, or it'll break down. A destroyed automaton will turn to dust. You may have one automaton at a time. If you attempt to make more automatons than you are able to, the oldest automaton will turn to dust.",
+                        "type": "statblock",
+                        "content": "catalytic-automaton"
                     }
                 ],
                 "6": [

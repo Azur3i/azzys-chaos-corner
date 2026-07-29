@@ -7,17 +7,14 @@ function loadSpell(target) {
     ajaxTimer = setTimeout(() => {
         if (spellCache[target]) {
             $("#spellbox").html(spellCache[target]);
-            document.title = $("#spellname").data("name") + " - Spells - Azzy's Chaos Corner";
-            history.pushState(null, "", "#" + target);
+            updateState(target);
         } else {
             $.get(
                 "/scripts/constructors/spell.php", {target: target},
                 function(response) {
                     $("#spellbox").html(response);
                     spellCache[target] = response;
-
-                    document.title = $("#spellname").data("name") + " - Spells - Azzy's Chaos Corner";
-                    history.pushState(null, "", "#" + target);
+                    updateState(target);
                 }
             )
         }
@@ -29,15 +26,27 @@ function updateButton(button) {
     $(`#${button}`).addClass("active");
 }
 
+function updateState(target) {
+    document.title = $("#spellname").data("name") + " - Spells - Azzy's Chaos Corner";
+    history.pushState(null, "", "#" + target);
+
+    if ($(`#${target}`).closest("#pinned").length) {
+        $(".button-pin").addClass("active");
+    }
+    $(`#${target}`)[0]?.scrollIntoView({block: "nearest"});
+}
+
+// load currently selected spell on refresh
 $(function () {
     let spell = location.hash.substring(1);
 
     if (spell) {
-        loadSpell(spell);
+        loadSpell(spell);        
     } else if (button) {
         updateButton($(`#spell-display`).attr("spell"));
     }
-})
+
+});
 
 // if url#hash is changed manually, load the spell
 $(window).on("hashchange", function () {
@@ -178,51 +187,6 @@ $(function () {$("#spell-searchbar").trigger("input");});
 // repplies existing filters when and/or is switched for class lists
 $(".classlist-andor").click(filterSpell());
 
-
-// 2-stop toggle button -> off/pos
-// 3-stop toggle button -> off/pos/neg
-
-// highlight on-hover
-$(".button-toggle, .button-toggle-2").hover(
-    function () {
-        $(this).addClass("hover");
-    },
-    function () {
-        $(this).removeClass("hover");
-    }
-);
-
-// cycle through options on click
-$(".button-toggle").click(function () {
-    $(this).toggleClass("active");
-});
-
-$(".button-toggle-2").on({
-    "click": function () {
-        if ($(this).hasClass("pos")) {
-            $(this).removeClass("pos");
-            $(this).addClass("neg");
-        } else if ($(this).hasClass("neg")) {
-            $(this).removeClass("neg");
-        } else {
-            $(this).addClass("pos");
-        };
-        filterSpell();
-    },
-    "contextmenu": function(e) {
-        e.preventDefault();
-        if ($(this).hasClass("neg")) {
-            $(this).removeClass("neg");
-            $(this).addClass("pos");
-        } else if ($(this).hasClass("pos")) {
-            $(this).removeClass("pos");
-        } else {
-            $(this).addClass("neg");
-        };
-        filterSpell();
-    }
-});
-
 // show/hide filter menu on clicking the filter button
 $("#filter-button").click(function () {
     $("#filter-menu").toggleClass("d-none");
@@ -236,6 +200,10 @@ $(document).on("keydown", function(e) {
             e.preventDefault();
             $(function () {
                 let next = $(".button-list.active").nextAll(":not(.d-none)").first();
+                // if no elements found, return to top
+                if (!next.length) {
+                    next = $(".button-list:not(.d-none)").first();
+                }
                 next.trigger("click");
                 next[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
             }); break;
@@ -243,6 +211,10 @@ $(document).on("keydown", function(e) {
             e.preventDefault();
             $(function () {
                 let prev = $(".button-list.active").prevAll(":not(.d-none)").first();
+                // if no elements found, return to bottom
+                if (!prev.length) {
+                    prev = $(".button-list:not(.d-none)").last();
+                }
                 prev.trigger("click");
                 prev[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
             }); break;
@@ -268,3 +240,48 @@ $("#clear-button").click(function () {
     $("#spell-searchbar").val("");
     $("#spell-searchbar").trigger("input");
 });
+
+let pinnedSpells = JSON.parse(localStorage.getItem("pinnedSpells") ?? "[]");
+
+// pin spells pinned previously
+$(function () {
+    pinnedSpells.forEach(spell => {
+        $(`#${spell}`).appendTo("#pinned");
+    })
+
+    sortSpelllist($("#pinned"));
+});
+
+// pin spells when clicking pin button
+$(document).on("click", ".button-pin", function () {
+    $(this).toggleClass("active");
+    let spell = location.hash.substring(1);
+    let ls;
+
+    if ($(this).hasClass("active")) {
+        $(`#${spell}`).appendTo("#pinned");
+        pinnedSpells.push(spell);
+        ls = $("#pinned");
+    } else {
+        $(`#${spell}`).appendTo("#unpinned");
+        pinnedSpells = pinnedSpells.filter(id => id !== spell);
+        ls = $("#unpinned");
+    }
+
+    sortSpelllist(ls);
+
+    localStorage.setItem("pinnedSpells", JSON.stringify(pinnedSpells));
+});
+
+function sortSpelllist(ls) {
+    let lsItems;
+
+    lsItems = ls.children().get();
+    lsItems.sort((a, b) => {
+        let x = a.dataset.level.localeCompare(b.dataset.level);
+        if (x) {return x;}
+
+        return a.id.localeCompare(b.id);
+    });
+    ls.append(lsItems);
+}

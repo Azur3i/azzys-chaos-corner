@@ -20,10 +20,14 @@ $cantripLevels = [1, 5, 11, 17];
 <div class="content-list" style="padding: 1.25rem; margin: 0;" id="spell-display" spell="<?= $spellName ?>">
     <div class="scroll">
         <div class="row spell-list align-items-center" style="padding: 0; padding-left: 1.5rem;">
-            <h1 class="xlg col" id="spellname" data-name="<?= $targetSpell["name"] ?>"><?= $targetSpell["name"] ?></h1>
-            <h3 class="md col" style="text-align: right;">Source: <?= $targetSpell["source"] ?></h3>
-
-            <p class="md" style="opacity: 0.7;"><?= get_level($targetSpell["level"], $targetSpell["school"]); ?></p>
+            <div class="row" style="margin: 0; padding: 0;">
+                <h1 class="xlg col" id="spellname" data-name="<?= $targetSpell["name"] ?>"><?= $targetSpell["name"] ?></h1>
+                <h3 class="md col" style="text-align: right; padding-top: 1rem; margin-right: 0.5rem;">Source: <?= $targetSpell["source"] ?></h3>
+                <a class="md col-auto white ms-auto button-pin"><img src="/assets/img/pin.png" id="pin"></a>
+            </div>
+            <div class="row" style="margin: 0; padding: 0;">
+                <p class="md col" style="opacity: 0.7;"><?= get_level($targetSpell["level"], $targetSpell["school"]); ?></p>
+            </div>
         </div>
         
         <hr >
