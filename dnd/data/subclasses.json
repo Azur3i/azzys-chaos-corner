@@ -705,6 +705,40 @@
         }
     },
     "druid": {
+        "circle-of-dreams": {
+            "name": "Circle of Dreams",
+            "desc": ["Druids who are members of the Circle of Dreams hail from regions that have strong ties to the Feywild and its dreamlike realms. The druids' guardianship of the natural world makes for a natural alliance between them and good-aligned fey. These druids seek to fill the world with dreamy wonder. Their magic mends wounds and brings joy to downcast hearts, and the realms they protect are gleaming, fruitful places, where dream and reality blur together and where the weary can find rest."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Balm of the Summer Court",
+                        "desc": "You become imbued with the blessings of the Summer Court. You are a font of energy that offers respite from injuries. You have a pool of fey energy represented by a number d6s equal to your druid level. As a bonus action, you may choose a willing creature you can see within 120ft. of you, and expend a number of dice of your choice, up to half your druid level. Roll the dice and add them together; the creature regains a number of hitpoints equal to the total, as well as 1 temporary hitpoint for every die expended. You regain all expended dice after finishing a long rest."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Hearth of Moonlight and Shadow",
+                        "desc": "Home may be wherever you are. During a rest, you may invoke the shadowy power of the Gloaming Coart to help guard your respite. At the start of the rest, you touch a point in space, and an invisible, 30ft. radius sphere of magic appears, centered on that point. Total cover blocks the sphere. While within the sphere, you and any number of creatures of your choice gain +5 to Stealth (DEX) and Perception (WIS) checks, and any light from open flames in the sphere, such as a campfire, is not visible outside it. The sphere vanishes at the end of the rest, or if you leave the sphere."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Hidden Paths",
+                        "desc": "You may use the hidden, magical pathways that some fey use to traverse space in the blink of an eye. As a bonus action, you may teleport up to 60ft. to an unoccupied space you can see. Alternatively, you may use your action to teleport a willing creature you touch up to 30ft. to an unoccupied space you can see. You may use this feature a number of times equal to your WIS (minimum of 1) per long rest."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Walker in Dreams",
+                        "desc": ["The magic of the Feywild grants you the ability to travel mentally, or physically, through dreamlands. Whenever you finish a short rest, you may cast one of @dream (with you as the messenger), @scrying, or @teleportation circle, without expending a spell slot or requiring material components. You may do so once per long rest.", "This use of the @teleportation circle spell is special. Rather than opening a portal to a permanent teleportation circle, it opens a portal to the last location where you finished a long rest on your current plane of existence. If you haven't taken a long rest on your current plane, the spell fails, but is not wasted."]
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
+        },
         "circle-of-spores": {
             "name": "Circle of Spores",
             "desc": ["Druids of the Circle of Spores find beauty in decay. They see within mold and other fungi the ability to transform lifeless material into abundant, albeit somewhat strange, life. These druids believe that life and death are parts of a grand cycle, with one leading to the other and then back again. Death isn't the end of life, but instead a change of state that sees life shift into a new form.", "Druids of this circle have a complex relationship with the undead. They see nothing inherently wrong with undeath, which they consider to be a companion to life and death. But these druids believe that the natural cycle is healthiest when each segment of it is vibrant and changing. Undead that seek to replace all life with undeath, or that try to avoid passing to a final rest, violate the cycle and must be thwarted."],
@@ -771,6 +805,95 @@
                 ]
             },
             "source": "Tasha's Cauldron of Everything"
+        },
+        "circle-of-the-land": {
+            "name": "Circle of the Land",
+            "desc": ["The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Circle Spells",
+                        "desc": "Your mystical connection to the land infuses you with the ability to cast certain spells. You gain access to circle spells connected to the land where you became a druid. Choose that land from the following tables. You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Druid level", "Spells"],
+                                ["Arctic"],
+                                ["3rd", "@hold person, @spike growth"],
+                                ["5th", "@sleet storm, @slow"],
+                                ["7th", "@freedom of movement, @ice storm"],
+                                ["9th", "@commune with nature, @cone of cold"],
+                                ["Coast"],
+                                ["3rd", "@mirror image, @misty step"],
+                                ["5th", "@water breathing, @water walk"],
+                                ["7th", "@control water, @freedom of movement"],
+                                ["9th", "@conjure elemental, @scrying"],
+                                ["Desert"],
+                                ["3rd", "@blur, @silence"],
+                                ["5th", "@create food and water, @protection from energy"],
+                                ["7th", "@blight, @hallucinatory terrain"],
+                                ["9th", "@insect plague, @wall of stone"],
+                                ["Forest"],
+                                ["3rd", "@barkskin, @spider climb"],
+                                ["5th", "@call lightning, @plant growth"],
+                                ["7th", "@divination, @freedom of movement"],
+                                ["9th", "@commune with nature, @tree stride"],
+                                ["Grassland"],
+                                ["3rd", "@invisibility, @pass without trace"],
+                                ["5th", "@daylight, @haste"],
+                                ["7th", "@divination, @freedom of movement"],
+                                ["9th", "@dream, @insect plague"],
+                                ["Mountain"],
+                                ["3rd", "@spider climb, @spike growth"],
+                                ["5th", "@lightning bolt, @meld into stone"],
+                                ["7th", "@stone shape, @stoneskin"],
+                                ["9th", "@passwall, @wall of stone"],
+                                ["Swamp"],
+                                ["3rd", "@darkness, @acid arrow"],
+                                ["5th", "@water walk, @stinking cloud"],
+                                ["7th", "@freedom of movement, @locate creature"],
+                                ["9th", "@insect plague, @scrying"],
+                                ["Underdark"],
+                                ["3rd", "@spider climb, @web"],
+                                ["5th", "@gaseous form, @stinking cloud"],
+                                ["7th", "@greater invisibility, @stone shape"],
+                                ["9th", "@cloudkill, @insect plague"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Bonus Cantrip",
+                        "desc": "You learn 1 additional druid cantrip of your choice. This cantrip does not count against the cantrips you know."
+                    },
+                    {
+                        "name": "Natural Recovery",
+                        "desc": "You may regain some of your magical energy by sitting in meditation, and communing with nature. During a short rest, you may choose a number of expended spell slots to recover, the level of which may be equal to or less than half your druid level, rounded up. None of the slots may be of 6th level or higher. You may use this feature once per long rest."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Land's Stride",
+                        "desc": "Moving through nonmagical difficult terrain costs you no extra movement. You may pass through nonmagical plants without being slowed by them, and without taking damage from them if they have thorns, spines, or similar."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Nature's Ward",
+                        "desc": "You cannot be frightened by elements and fey. You gain immunity to @poison damage, being poisoned, and disease."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Nature's Sanctuary",
+                        "desc": "Creatures of the natural world sense your connection, and become hesitant to attack you. Whenever a beast or plant creature attacks you, that creature must make a WIS saving throw. On a failure, the creature must choose a different target, or the attack automatically misses. On a success, the creature is immune to this effect for 24 hours. The creature is aware of the effect before it makes its attack against you."
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
         },
         "circle-of-the-moon": {
             "name": "Circle of the Moon",
@@ -940,6 +1063,59 @@
                 ]
             },
             "source": "The Crooked Moon"
+        },
+        "circle-of-the-shepherd": {
+            "name": "Circle of the Shepherd",
+            "desc": ["Druids of the Circle of the Shepherd commune with the spirits of nature, especially the spirits of beasts and the fey, and call to those spirits for aid. These druids recognize that all living things play a role in the natural world, yet they focus on protecting animals and fey creatures that have difficulty defending themselves. Shepherds, as they are known, see such creatures as their charges. They ward off monsters that threaten them, rebuke hunters who kill more prey than necessary, and prevent civilization from encroaching on rare animal habitats and on sites sacred to the fey.", "Many of these druids are happiest far from cities and towns, content to spend their days in the company of animals and the fey creatures of the wilds. Members of this circle become adventurers to oppose forces that threaten their charges or to seek knowledge and power that will help them safeguard their charges better. Wherever these druids go, the spirits of the wilderness are with them."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Speech of the Woods",
+                        "desc": "You gain the ability to converse with beasts and may fey. You learn to speak, read, and write Sylvan. Additionally, beasts are able to understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn't grant you any special friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character."
+                    },
+                    {
+                        "name": "Spirit Totem",
+                        "desc": "You gain the ability to call forth nature spirits, and use them to influence the world around you. As a bonus action, you may magically summon an incorporeal spirit in a space you can see within 60ft. of you. The spirit creatures an aura in a 30ft. radius around that point. It counts as neither a creature, nor an object, though it has the spectral appearance of the creature it represents. As a bonus action, you may move the spirit up to 60ft. to a point you can see. The spirit lasts for 1 minute. You may use this feature once per short rest. Choose one of the following options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Bear Spirit",
+                                "desc": "The bear spirit grants you and your allies its might and endurance. Any number of creatures of your choice in the aura when the spirit appears gain temporary hitpoints equal to 5 + your druid level, and gain advantage on STR checks and saving throws while in the aura."
+                            },
+                            {
+                                "name": "Hawk Spirit",
+                                "desc": "The hawk spirit is a consummate hunter, aiding you and your allies with its keen sight. Any number of creatures of your choice in the aura gain advantage on Perception (WIS) checks while in the aura. As a reaction whenever a creature makes an attack roll against a target in the spirit's aura, you may grant advantage to the attack roll."
+                            },
+                            {
+                                "name": "Unicorn Spirit",
+                                "desc": "The unicorn spirit lends its protection to those nearby. Any number of creatures of your choice gain advantage on all ability checks made to detect creatures in the spirit's aura. Additionally, if you cast a non-cantrip spell that restores hitpoints to a creature, any number of creatures in the aura regains hitpoints equal to your druid level."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Mighty Summoner",
+                        "desc": "Beasts and fey that you conjure are more resilient than normal. Any beast or fey summoned or created by a spell appear with 2 extra hitpoints per hit die it has, and the damage from its natural weapons is considered magical."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Guardian Spirit",
+                        "desc": "Your spirit totem safeguards the beasts and fey that you call forth with your magic. Whenever a beast or fey that you summoned or created with a spell ends its turn in your spirit totem aura, the creature regains a number of hitpoints equal to half your druid level."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Faithful Summons",
+                        "desc": "The nature spirits you commune with protect you when you are the most defenseless. Whenever you are reduced to 0 hitpoints, or are incapacitated against your will, you may immediately gain the benefits of a 9th level @conjure animals spell. The conjured beasts appear within 20ft. of you. If they receive no commands from you, they protect you from harm, and attack your foes. The spell lasts for 1 hour, or until you dismiss it, and requires no concentration. You may use this feature once per long rest."
+                    }
+                ]
+            },
+            "source": "Xanathar's Guide to Everything"
         },
         "circle-of-wicker": {
             "name": "Circle of Wicker",

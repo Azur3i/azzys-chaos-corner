@@ -6445,7 +6445,7 @@
         "source": "Player's Handbook"
     },
     "speak-with-dead": {
-        "name": "Speak With Dead",
+        "name": "Speak with Dead",
         "level": 3,
         "school": "necromancy",
 
@@ -6913,6 +6913,1194 @@
         "levels": null,
         
         "lists": ["artificer", "cleric", "druid"],
+        "source": "Player's Handbook"
+    },
+    "conjure-animals": {
+        "name": "Conjure Animals",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You summon fey spirits that take the form of beasts, and appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "{1} beast(s) of CR 2 or lower."
+                    },
+                    {
+                        "desc": "{2} beasts of CR 1 or lower."
+                    },
+                    {
+                        "desc": "{3} beasts of CR 1/2 or lower."
+                    },
+                    {
+                        "desc": "{4} beasts of CR 1/4 or lower."
+                    }
+                ]
+            },
+            {
+                "desc": "Each beast is also considered fey, and it disappears when it drops to 0 hitpoints, or when the spell ends. The summoned creatures are friendly to you and any number of creatures of your choice. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them as a free action. If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions. The DM has the creature's statistics."
+            }
+        ],
+        "levels": [[1, 2, 4, 8], [1, 2, 4, 8], [2, 4, 8, 16], [2, 4, 8, 16], [3, 6, 12, 24], [3, 6, 12, 24], [4, 8, 16, 32]],
+        
+        "lists": ["druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "blindness-deafness": {
+        "name": "Blindness/Deafness",
+        "level": 2,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, false, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute"
+        },
+        
+        "desc": [
+            {
+                "desc": "You may blind or deafen foes. Choose {*} creature(s) that you can see within range. A target must succeed on a CON saving throw, or be blinded or deafened, your choice. The target may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+        
+        "lists": ["bard", "cleric", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "gentle-repose": {
+        "name": "Gentle Repose",
+        "level": 2,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action",
+            "ritual": true
+        },
+        "range": "touch",
+        "vsm": [true, true, "a pinch of salt, and 1cp placed on each of the corpse's eyes, which must remain there for the duration"],
+        "duration": {
+            "amount": 10,
+            "time": "day"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a corpse, or other remains. For the duration, the target is protected from decay, and cannot become undead."
+            },
+            {
+                "desc": "This spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell do not count against the time limit of spells such as the @raise dead spell."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "paladin", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "animate-dead": {
+        "name": "Animate Dead",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "10ft.",
+        "vsm": [true, true, "a drop of blood, a piece of flesh, and a pinch of bone dust"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "This spell creates an undead servant. Choose {1} pile(s) of bones, or {1} corpse(s) of a Medium or Small humanoid within range. Your spell imbues a target with a foul mimicry of life, raising it as an undead creature. The target becomes a skeleton if you chose bones, or a zombie if you chose a corpse. The DM has the creature's game statistics."
+            },
+            {
+                "desc": "As a bonus action on your turn, you may mentally command any creature you made with this spell if the creature is within 60ft. of you. If you control multiple creatures, you may command any, or all of them, at the same time, issuing the same command to each one. You decide what action the creature will take, and where it will move during its next turn, or you may issue a general command, such as to guard a particular chamber or corridor. If you don't issue any commands to it, it defends itself from hostile creatures, but otherwise takes no actions. Once given an order, the creature continues to follow it until its task is completed."
+            },
+            {
+                "desc": "The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain the control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24 hour period ends. This use of the spell reasserts your control over up to {2} creatures you have animated with this spell, rather than animating a new one."
+            }
+        ],
+        "levels": [[1, 4], [3, 6], [5, 8], [7, 10], [9, 12], [11, 14], [13, 16]],
+        
+        "lists": ["cleric", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "blight": {
+        "name": "Blight",
+        "level": 4,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "Necromantic energy washes over a creature of your choice that you can see within range that isn't a construct or undead, draining moisture and vitality from it. The target must make a CON saving throw, taking {*}d8 @necrotic damage on a failed save, or half as much on a successful one."
+            },
+            {
+                "desc": "If you target a plant creature or magical plant, it gains disadvantage on the saving throw, and the spell deals maximum damage to it. If you target a nonmagical non-creature plant, such as a tree or shrub, the target simply withers and dies, without saving throw."
+            }
+        ],
+        "levels": [8, 9, 10, 11, 12, 13],
+        
+        "lists": ["druid", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "confusion": {
+        "name": "Confusion",
+        "level": 4,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, "3 nut shells"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "This spell assaults and twists creatures' minds, spawning delusions, and provoking uncontrolled actions. Each creature in a {*}ft. radius sphere centered on a point you choose within range must succeed on a WIS saving throw, or be affected by it. An affected target cannot take reactions, and must roll 1d10 at the start of each of its turns to determine its behavior for that turn.",
+                "type": "table",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["1d10", "Behavior"],
+                        ["1", "The creature uses all its movement to move in a random direction, determined by rolling 1d8 and assigning a direction to each die face. The creature does not take an action this turn."],
+                        ["2-6", "The creature does not move or take an action this turn."],
+                        ["7-8", "The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does not take an action this turn."],
+                        ["9-10", "The creature may act and move normally."]
+                    ]
+                }
+            },
+            {
+                "desc": "A confused creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            }
+        ],
+        "levels": [10, 15, 20, 25, 30, 35],
+        
+        "lists": ["bard", "druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "cloudkill": {
+        "name": "Cloudkill",
+        "level": 5,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a 20ft. radius sphere of poisonous, yellow fog centered on a point you choose within range. The fog spreads around corners. The fog is dispersed by strong winds, which ends the spell early. The area is heavily obscured."
+            },
+            {
+                "desc": "Whenever a creature enters the spell's area for the first time on a turn, or starts its turn there, that creature must make a CON saving throw, taking {*}d8 @poison damage on a failed save, or half as much on a successful one. Creatures are affected even if they hold their breath, or don't need to breathe."
+            },
+            {
+                "desc": "The fog moves 10ft. away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings."
+            }
+        ],
+        "levels": [5, 6, 7, 8, 9],
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "contagion": {
+        "name": "Contagion",
+        "level": 5,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 7,
+            "time": "day"
+        },
+        
+        "desc": [
+            {
+                "desc": "Your touch inflicts disease. Make a melee spell attack against a creature within your reach. On a hit, the target is poisoned."
+            },
+            {
+                "desc": "At the end of each of the poisoned creature's turns, it must make a CON saving throw. On 3 failures, it is no longer poisoned, but is instead afflicted with a disease of your choice, or roll on the table. On 3 successes, it is no longer poisoned, and the spell ends. The successes and failures do not need to be consecutive; keep track of both, until the creature collects 3 of a kind."
+            },
+            {
+                "desc": "Since this spell is a natural disease in its target, any effect that removes a disease, or otherwise ameliorates a disease's effects apply to it.",
+                "type": "table",
+                "content": {
+                    "header": true,
+                    "content": [
+                        ["1d6", "Disease", "Effect"],
+                        [1, "Blinding Sickness", "Pain grips the creature's mind, and its eyes turn milky white. The creature gains disadvantage on WIS checks and saving throws, and is blinded."],
+                        [2, "Filth Fever", "A raging fever sweeps through the creature's body. The creature gains disadvantage on STR checks, attack rolls, and saving throws."],
+                        [3, "Flesh Rot", "The creature's flesh decays. The creature gains disadvantage on CHA checks, and vulnerability to all damage."],
+                        [4, "Mindfire", "The creature's mind becomes feverish. The creature gains disadvantage on INT checks and saving throws, and the creature behaves as if under the effects of the @confusion spell during combat."],
+                        [5, "Seizure", "The creature is overcome with shaking. The creature gains disadvantage on DEX checks, attack rolls, and saving throws."],
+                        [6, "Slimy Doom", "The creature begins to bleed uncontrollably. The creature gains disadvantage on CON checks and saving throws. Whenever the creature takes damage, it is stunned until the end of its next turn."]
+                    ]
+                }
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid"],
+        "source": "Player's Handbook"
+    },
+    "spike-growth": {
+        "name": "Spike Growth",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "150ft.",
+        "vsm": [true, true, "7 sharp thorns, or 7 small twigs, each sharpened to a point"],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "The ground in a 20ft. radius circle centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain. Whenever a creature moves into or within the area, it takes 2d4 @piercing damage for every 5ft. it travels."
+            },
+            {
+                "desc": "The transformation of the ground is camouflaged to look natural. Any creature that cannot see the area at the time the spell is cast must succeed on a Perception (WIS) check to recognize the terrain as hazardous before entering it."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "plant-growth": {
+        "name": "Plant Growth",
+        "level": 3,
+        "school": "transmutation",
+
+        "castTime": {
+            "time": "special"
+        },
+        "range": "150ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "This spell channels vitality into plants within a specific area. There are 2 possible uses for the spell, granting either immediate, or long-term benefits."
+            },
+            {
+                "desc": "If you cast this spell as an action, choose a point within range. All normal plants in a 100ft. radius centered on that point become thick and overgrown. A creature moving through the area must spend 4ft. of movement for every 1ft. it moves. You may exclude any number of areas of any size within the spell's area from being affected."
+            },
+            {
+                "desc": "If you cast this spell over 8 hours, you enrich the land. All plants in a half-mile radius centered on a point within range become enriched for 1 year, yielding twice the normal amount of food when harvested."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "magic-circle": {
+        "name": "Magic Circle",
+        "level": 3,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "10ft.",
+        "vsm": [true, true, "holy water, or powdered silver and iron worth at least 100gp, which the spell consumes"],
+        "duration": {
+            "time": "{*}"
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a 10ft. radius, 20ft. tall cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the cylinder intersects with the floor, or other surface."
+            },
+            {
+                "desc": "Choose any amount of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways.",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "The chosen creature type cannot willingly enter the cylinder by nonmagical means. If it tries to use teleportation or interplanar travel to do so, it must first succeed on a CHA saving throw."
+                    },
+                    {
+                        "desc": "The chosen creature type gains disadvantage on attack rolls against creatures within the cylinder."
+                    },
+                    {
+                        "desc": "Creatures within the cylinder cannot by charmed, frightened, or possessed by the chosen creature type."
+                    }
+                ]
+            },
+            {
+                "desc": "Whenever you cast this spell, you may choose to cause its magic to operate in the reverse direction, preventing the chosen creature type from leaving the cylinder, and protecting creatures outside it."
+            }
+        ],
+        "levels": ["1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours", "7 hours"],
+        
+        "lists": ["cleric", "paladin", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "freedom-of-movement": {
+        "name": "Freedom of Movement",
+        "level": 4,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a leather strap, bound around the arm, or a similar appendage"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a willing creature. For the duration, the target's movement speed is unaffected by difficult terrain, and spells and other effects cannot reduce the target's speed, nor cause the target to be paralyzed or restrained. The target may spend 5ft. of movement to automatically escape from nonmagical restraints, such as manacles, or a grapple. Finally, being underwater imposes no penalty on the target's movements or attacks."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "bard", "cleric", "druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "private-sanctum": {
+        "name": "Private Sanctum",
+        "level": 4,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 10,
+            "time": "minute"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "a thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite"],
+        "duration": {
+            "amount": 24,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You make an area within range magically secure. The area is a cube that may be as small as 5, to a large as {*}ft. on each side. You may dismiss the spell as an action."
+            },
+            {
+                "desc": "Whenever you cast the spell, choose any amount of the following properties:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "Sound cannot pass through the barrier at the edge of the warded area."
+                    },
+                    {
+                        "desc": "the barrier of the warded area appears dark and foggy, preventing vision, including darkvision, through it."
+                    },
+                    {
+                        "desc": "Sensors created by divination spells cannot appear inside the protected area, or pass through the barrier at its perimeter."
+                    },
+                    {
+                        "desc": "Creatures in the area cannot be targeted by divination spells."
+                    },
+                    {
+                        "desc": "Nothing may teleport into or out of the warded area."
+                    },
+                    {
+                        "desc": "Planar travel is blocked within the warded area."
+                    }
+                ]
+            },
+            {
+                "desc": "Casting this spell on the same spot every day for a year makes this spell permanent."
+            }
+        ],
+        "levels": [100, 200, 300, 400, 500, 600],
+        
+        "lists": ["artificer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "awaken": {
+        "name": "Awaken",
+        "level": 5,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 8,
+            "time": "hour"
+        },
+        "range": "touch",
+        "vsm": [true, true, "an agate worth at least 1.000gp, which the spell consumes"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no INT score, or one of 3 or less."
+            },
+            {
+                "desc": "The target gains an INT score of 10, and the ability to speak 1 language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human's. Your DM chooses statistics appopriate for the awakened plant, such as the statistics for the awakened shrub, or awakened tree."
+            },
+            {
+                "desc": "The awakened creature is charmed by you for 30 days, or until you or a creature friendly to you does anything harmful to it. Whenever it stops being charmed, the awakened creature may choose whether to remain friendl to you, based on how you treated it."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "druid"],
+        "source": "Player's Handbook"
+    },
+    "tree-stride": {
+        "name": "Tree Stride",
+        "level": 5,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You gain the ability to enter a tree, and move from inside it to another tree of the same kind within 500ft."
+            },
+            {
+                "desc": "Both trees must be alive, and at least the same size as you. You must use 5ft. of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500ft. of you, and, as part of the move used to enter the tree, may either pass into one of those trees, or step out of the tree you're in. You appear in a spot of your choice within 5ft. of the destination tree, using another 5ft. of movement. If you have no movement left, you appear within 5ft. of the tree you entered."
+            },
+            {
+                "desc": "You may use this transportation ability once per round. You must end each turn outside a tree."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "bestow-curse": {
+        "name": "Bestow Curse",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "{*}"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a creature. The creature must succeed on a WIS saving throw, or become cursed. Whenever you cast this spell, choose one of the following:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "Choose an ability score. While cursed, the target gains disability on ability checks and saving throws made with that ability score."
+                    },
+                    {
+                        "desc": "While cursed, the target gains disadvantage on attack rolls against you."
+                    },
+                    {
+                        "desc": "While cursed, at the start of each of its turns, the target must succeed on a WIS saving throw or waste its action doing nothing that turn."
+                    },
+                    {
+                        "desc": "While cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target."
+                    }
+                ]
+            },
+            {
+                "desc": "A @remove curse spell ends this effect. At the DM's discretion, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect."
+            }
+        ],
+        "levels": ["Concentration, up to 1 minute", "Concentration, up to 10 minutes", "8 hours", "8 hours", "24 hours", "24 hours", "Until dispelled"],
+        
+        "lists": ["bard", "cleric", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "tiny-hut": {
+        "name": "Tiny Hut",
+        "level": 3,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute",
+            "ritual": true
+        },
+        "range": "self (10ft. radius hemisphere)",
+        "vsm": [true, true, "a small, crystal bead"],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "A 10ft. radius, immobile dome of force springs into existence around and above you, and remains stationary for the duration. The spell ends early if you leave its area."
+            },
+            {
+                "desc": "The dome fits up to 9 creatures of Medium size or smaller. If the area includes a larger creature, or more than 9 creatures, the spell fails. Creatures and objects within the dome when you cast the spell may move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects cannot extend through the dome, or be cast through it. The atmosphere inside the dome is comfortable and dry, regardless of the weather outside."
+            },
+            {
+                "desc": "You may command the interior to become dimly lit, or dark. The dome is opaque from the outside, any color you choose, and is transparent from the inside."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "death-ward": {
+        "name": "Death Ward",
+        "level": 4,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a creature, and grant it a measure of protection from death. The first time the target would drop to 0 hitpoints as a result of taking damage, the target instead drops to 1 hitpoints, and the spell ends."
+            },
+            {
+                "desc": "Alternatively, if the target is subjected to an effect that would kill it instantly without dealing damage, the effect is negated against the target, and the spell ends."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "paladin"],
+        "source": "Player's Handbook"
+    },
+    "hold-monster": {
+        "name": "Hold Monster",
+        "level": 5,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, "a small, straight piece of iron"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "Choose a creature that is not undead you can see within range. The creature must succeed on a WIS saving throw, or be paralyzed. The creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "dream": {
+        "name": "Dream",
+        "level": 5,
+        "school": "illusion",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "special",
+        "vsm": [true, true, "a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird"],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "This spell shapes a creature's dreams. Choose a creature known to you as the target of this spell. The target must be on the same plane of existence as you. Creature that do not sleep, such as elves, cannot be contacted by this spell. You, or a willing creature you touch, enters a trance state, acting as a messenger. While in the trance, the messenger is aware of their surroundings, but cannot take actions, or move."
+            },
+            {
+                "desc": "If the target is asleep, the messenger appears in the target's dreams, and may converse with the target as long as it remains asleep. The messenger may also shape the environment of the dream, creating landscapes, objects, and other images. The messenger may emerge from the trance at any time, ending the effect of the spell early. The target recalls the dream perfectly upon waking. If the target is awake when you cast the spell, the messenger knows it, and may either end the trance and the spell, or wait for the target to fall asleep, at which point the messenger appears in the target's dreams."
+            },
+            {
+                "desc": "You may make the messenger appear monstrous and terrifying to the target. If you do, the messenger may deliver a message of no more than 10 words, and then the target must make a WIS saving throw. On a failure, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target's sleep, and prevents the target from gaining any benefit from that rest. Additionally, the target takes 3d6 @psychic damage once awoken."
+            }, 
+            {
+                "desc": "If you have a body part, lock of hair, clipping from a nail, or similar portion of the target's body, the target gains disadvantage on the saving throw."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "scrying": {
+        "name": "Scrying",
+        "level": 5,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 10,
+            "time": "minute"
+        },
+        "range": "self",
+        "vsm": [true, true, "a focus worth at least 1.000gp, such as a crystal ball, silver mirror, or a font willed with holy water"],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You may see and hear a particular creature you choose that is on the same plane of existence as you. The target must make a WIS saving throw. On a failure, the spell creates an invisible sensor within 10ft. of the target. You are able to see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10ft. of it for the duration. On a success, the target is unaffected, and cannot you cannot target it with another casting of this spell for 24 hours. A creature that is able to see invisible objects sees the sensor as a luminous orb, about the size of your fist."
+            },
+            {
+                "desc": "The saving throw DC is modified based on your connection and knowledge to the target, as follows:",
+                "type": "table",
+                "content": {
+                    "header": false,
+                    "content": [
+                        ["Type", "Save DC modifier"],
+                        ["Knowledge"],
+                        ["You have heard of the target.", "-5"],
+                        ["You have met the target.", "+0"],
+                        ["You know the target well.", "+5"],
+                        ["Connection"],
+                        ["Likeness, or picture.", "+2"],
+                        ["Possession, or garment.", "+4"],
+                        ["Body part, lock of hair, bit of nail, or the like", "+10"]
+                    ]
+                }
+            },
+            {
+                "desc": "Instead of targeting a creature, you may choose a location you have seen before as the target of this spell. If you do, the sensor appears at that location, and does not move."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "teleportation-circle": {
+        "name": "Teleportation Circle",
+        "level": 5,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "10ft.",
+        "vsm": [true, false, "rare chalks and inks infused with precious gems worth 50gp, which the spell consumes"],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+        
+        "desc": [
+            {
+                "desc": "You draw a 10ft. diameter dircle on the ground, inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know, and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew, and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5ft. of the destination circle, or in the nearest unoccupied space if that space is occupied."
+            },
+            {
+                "desc": "Many major temples, guilds, and other important places have permanent teleportation circles inscribed somewhere within their confines. Each such circle includes a unique sigil sequence - a string of magical runes arranged in a particular pattern. When you first gain the ability to cast this spell, you learn the sigil sequences of 2 destinations on the Material Plane, determined by the DM. You may learn additional sigil sequences during your adventures, which requires studying a new one for 1 minute."
+            },
+            {
+                "desc": "You may create a permanent teleportation circle by casting this spell in the same location every day for 1 year. You need not use the circle to teleport when you cast the spell in this way."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "slow": {
+        "name": "Slow",
+        "level": 3,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "a drop of molasses"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You alter time around up to 6 creatures of your choice within range, provided they fit into a 40ft. cube. Each target must succeed on a WIS saving throw, or be affected by this spell. An affected target's speed is halved, suffers -2 AC, -2 to DEX saving throws, and cannot use reactions. On its turn, it may use either an action, or a bonus action, but not both. Regardless of the creature's abilities or magic items, it cannot make more than 1 melee or ranged attack during its turn."
+            },
+            {
+                "desc": "If the creature attempts to cast a spell with a casting time of 1 action, roll 1d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell fails."
+            },
+            {
+                "desc": "An affected creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "commune-with-nature": {
+        "name": "Commune with Nature",
+        "level": 5,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute",
+            "ritual": true
+        },
+        "range": "self",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You briefly become one with nature, and gain knowledge of the surrounding territory. In the outdoors, the spell gives you knowledge of the land within 3mi. of you. In caves and other natural underground settings, the radius is limited to 300ft. The spell does not function where nature has been replaced by construction, such as in dungeons and towns."
+            },
+            {
+                "desc": "You instantly gain knowledge of up to 3 facts of your choice about any of the following subjects as they relate to the area:",
+                "type": "list",
+                "content": [
+                    {
+                        "desc": "Terrain, and bodies of water."
+                    },
+                    {
+                        "desc": "Prevalent plants, minerals, animals, or peoples."
+                    },
+                    {
+                        "desc": "Powerful celestials, fey, fiends, elementals, or undead."
+                    },
+                    {
+                        "desc": "Influence from other planes of existence."
+                    },
+                    {
+                        "desc": "Buildings."
+                    }
+                ]
+            },
+            {
+                "desc": "For example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "cone-of-cold": {
+        "name": "Cone of Cold",
+        "level": 5,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (60ft. cone)",
+        "vsm": [true, true, "a small crystal or glass cone"],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "A blast of cold air erupts from your hands. Each creature in a 60ft. cone must make a CON saving throw, taking {*}d8 @cold damage on a failed save, or half as much on a successful one. A creature killed by this spell becomes a frozen statue until thawed."
+            }
+        ],
+        "levels": [8, 9, 10, 11, 12],
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "misty-step": {
+        "name": "Misty Step",
+        "level": 2,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "bonus action"
+        },
+        "range": "self",
+        "vsm": [true, false, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "Briefly surrounded by silvery mist, you teleport up to 30ft. to an unoccupied space you can see."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "water-breathing": {
+        "name": "Water Breathing",
+        "level": 3,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action",
+            "ritual": true
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a short reed, or piece of straw"],
+        "duration": {
+            "amount": 24,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "This spell grants up to 10 willing creature you can see within range the ability to breathe underwater until the spell ends. Affected creatures retain their normal mode of respiration."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "druid", "ranger", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "water-walk": {
+        "name": "Water Walk",
+        "level": 3,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action",
+            "ritual": true
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a piece of cork"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "This spell grants up to 10 willing creature you can see within range the ability to move across any liquid surface, such as water, acid, mud, snow, quicksand, or lava, as if it were harmless solid ground. Creatures crossing molten lava may still take damage from the heat. If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60ft. per round."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "cleric", "druid", "ranger", "sorcerer"],
+        "source": "Player's Handbook"
+    },
+    "control-water": {
+        "name": "Control Water",
+        "level": 4,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "300ft.",
+        "vsm": [true, true, "a drop of water, and a pinch of dust"],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You control any freestanding water inside an area you choose that fits in a cube no more than 100ft. on one side. You may choose from any of the following effects when you cast this spell. As an action, you may repeat the same effect, or choose a different one.",
+                "type": "list",
+                "content": [
+                    {
+                        "name": "Flood", 
+                        "desc": "You cause the water level of all standing water in the area to rise by as much as 20ft. If the area includes a shore, the flooding water spills over onto dry land. If you choose an area in a large body of water, you instead create a 20ft. tall wave that travels from one side of the area to the other, and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave must roll 1d4. On a 1, it capsizes. The water level remains elevated until the spell ends, or you choose a different effect. If the effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts."
+                    },
+                    {
+                        "name": "Part Water",
+                        "desc": "You cause water in the area to move apart, and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends, or you choose a different effect. The water then slowly fills in the trench over the course of the next round, until the normal water level is restored."
+                    },
+                    {
+                        "name": "Redirect Flow",
+                        "desc": "You cause flowing water in the are to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain. The water continues to move in the direction you chose until the spell ends, or you choose a different effect."
+                    },
+                    {
+                        "name": "Whirlpool",
+                        "desc": "This effect requires a body of water at least 50ft. across, and 25ft. deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5ft. wide at the base, up to 50ft. wide at the top, and 25ft. tall. Any creature or object in the water, and within 25ft. of the vortex is pulled 10ft. toward it. A creature may swim away from the vortex by making an Athletics (STR) check. Whenever a creature enters the vortext for the first time on a turn, or starts its turn there, it must make a STR saving throw, taking 2d8 @bludgeoning damage on a failed save, or half as much on a successful one. Additionally, on a failure, the creature is caught in the vortext. A caught creature may use its action to try and swim away from the vortex as described above, but gains disadvantage on the Athletics (STR) check to do so. Objects take 2d8 @bludgeoning damage the first time it enters the vortex, and every round it remains there thereafter."
+                    }
+                ]
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "conjure-elemental": {
+        "name": "Conjure Elemental",
+        "level": 5,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10ft. cube within range. An elemental of CR {*} or lower, appropriate to the area you chose, appears in an unoccupied space within 10ft. of it. For example, a fire elemental may emerge from a bonfire, or an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hitpoints, or when the spell ends."
+            },
+            {
+                "desc": "The elemental is friendly to you and any number of creatures of your choice for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it as a free action. If you don't issue any commands to the elemental, it defends itself from hostile creatures, but otherwise takes no actions."
+            },
+            {
+                "desc": "If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it may become hostile to you, and it might attack. An uncontrolled elemental cannot be dismissed, and it disappears 1 hour after you summon it. The DM has the elemental's statistics."
+            }
+        ],
+        "levels": [5, 6, 7, 8, 9],
+        
+        "lists": ["druid", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "create-food-and-water": {
+        "name": "Create Food and Water",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+        
+        "desc": [
+            {
+                "desc": "You create 45lbs. of food, and 30gal. of water on the ground, or in containers within range, enough to sustain up to 15 humanoids, or 5 steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten for 24 hours. The water is clean, and doesn't spoil."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "cleric", "paladin"],
+        "source": "Player's Handbook"
+    },
+    "protection-from-energy": {
+        "name": "Protection from Energy",
+        "level": 3,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a willing creature, and grant it one damage type of your choice: @acid, @cold, @fire, @lightning, or @thunder."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "cleric", "druid", "ranger", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "hallucinatory-terrain": {
+        "name": "Hallucinatory Terrain",
+        "level": 4,
+        "school": "illusion",
+
+        "castTime": {
+            "amount": 10,
+            "time": "minute"
+        },
+        "range": "300ft.",
+        "vsm": [true, true, "a stone, a twig, and a bit of green plant"],
+        "duration": {
+            "amount": 24,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "You make natural terrain that fits in a 150ft. cube look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road may be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond may be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance."
+            },
+            {
+                "desc": "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion may attempt an Investigation (INT) to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "druid", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "insect-plague": {
+        "name": "Insect Plague",
+        "level": 5,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "300ft.",
+        "vsm": [true, true, "a few grains of sugar, some kernals of grain, and a smear of fat"],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "Swarming, biting locusts fill a 20ft. radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere is lightly obscured, and difficult terrain."
+            },
+            {
+                "desc": "When the area appears, and when a creature enters the spell's area for the first time on its turn, or ends its turn there, it must make a CON saving throw, taking {*}d10 @piercing damage on a failed save, or half as much on a successful one."
+            }
+        ],
+        "levels": [4, 5, 6, 7, 8],
+        
+        "lists": ["cleric", "druid", "sorcerer"],
+        "source": "Player's Handbook"
+    },
+    "wall-of-stone": {
+        "name": "Wall of Stone",
+        "level": 5,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "a small block of granite"],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "A nonmagical wall of solid stone springs into existence at a point you choose within range. The wall is 6in. thick, and is composed of 10 10ft. by 10ft. panels. Each panel must be contiguous with at least one other panel. Alternatively, you may create 10ft. by 20ft. panels that are only 3in. thick."
+            },
+            {
+                "desc": "If the wall cuts through a creature's space when it appears, the creature is pused to one side of the wall of your choice. If a creature would be surrounded on all sides by the wall, or the wall and another surface, that creature may make a DEX saving throw. On a success, as a reaction, it may move up to its speed so that it is no longer enclosed by the wall."
+            },
+            {
+                "desc": "The wall may have any shape you desire, though it cannot occupy the same space as a creature or object. The wall doesn't need to be vertical, or resting on any firm foundation. It must, however, merge with, and be solidly supported by existing stone. Thus, you may use this spell to bridge a chasm, or create a ram. If you create a span greater than 20ft. in length, you must halve the size of each panel to create supports. You may crudely shape the wall to create crenellations, battlements, and so on."
+            },
+            {
+                "desc": "The wall is an object made of stone that can be damaged, and thus breached. Each panel has 15 AC, and 30 hitpoints per in. of thickness. Reducing a panel to 0 hitpoints destroys it, and may cause connected panels to collapse at the DM's discretion."
+            },
+            {
+                "desc": "If you maintain your concentration on this spell for its whole duration, the wall becomes permanent, and cannot be dispelled."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "druid", "sorcerer", "wizard"],
         "source": "Player's Handbook"
     }
 }

@@ -24,9 +24,15 @@ let hideTimer;
 $(document).on("mouseenter", ".spell-link", function () {
     clearTimeout(hideTimer);
     
+    // if spell link is already on the preview, don't show preview
+    if ($(this).closest("#spell-preview").length) {
+        return;
+    }
+
     let spell = $(this).data("spell");
     let el = this;
 
+    // if cached, show that instead
     if (spellCache[spell]) {
         showSpellPreview(spellCache[spell], this)
         return;
@@ -44,7 +50,11 @@ $(document).on("mouseenter", ".spell-link", function () {
 });
 
 // hover off spell link: wait 200ms, then hide preview
-$(document).on("mouseleave", ".spell-link", () => hideSpellPreview(200));
+$(document).on("mouseleave", ".spell-link", function () {
+    if (!$(this).closest("#spell-preview").length) {
+        hideSpellPreview(200)
+    }
+});
 // hover on preview: cancel hide timer and keep showing
 $(document).on("mouseenter", "#spell-preview", () => clearTimeout(hideTimer));
 // hover off preview: wait 200ms, then hide preview

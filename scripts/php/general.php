@@ -39,7 +39,7 @@ function renderSpells($str) {
 
     foreach ($spells as $id => $spell) {
         $target = strtolower($spell["name"]);
-        $str = str_replace("@$target", "<i><a class='spell-link' data-spell='$id' href='/dnd/spells#$id'>$target</a></i>", $str);
+        $str = preg_replace("/@" . preg_quote($target, "/") . "\b/", "<i><a class='spell-link' data-spell='$id' href='/dnd/spells#$id'>$target</a></i>", $str);
     }
     return $str;
 }
@@ -99,6 +99,12 @@ function renderAbility($ability, $z=0, $cls=null) {
                             <tr><th class="md"><?= implode('</th><th class="md">', array_map("renderText", $row)) ?></th></tr>
                         </thead>
                         <tbody>
+                    <?php elseif (count($row) === 1): ?>
+                            <tr>
+                                <th class="md" colspan="<?= count($ability["content"]["content"][0]) ?>">
+                                    <?= implode('</th><th class="md">', array_map("renderText", $row)) ?>
+                                </th>
+                            </tr>
                     <?php else: ?>
                             <tr><td class="md"><?= implode('</td><td class="md">', array_map("renderText", $row)) ?></td></tr>
                     <?php endif;

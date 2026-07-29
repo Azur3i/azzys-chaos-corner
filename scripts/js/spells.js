@@ -40,12 +40,7 @@ function updateState(target) {
 $(function () {
     let spell = location.hash.substring(1);
 
-    if (spell) {
-        loadSpell(spell);        
-    } else if (button) {
-        updateButton($(`#spell-display`).attr("spell"));
-    }
-
+    spell && loadSpell(spell);
 });
 
 // if url#hash is changed manually, load the spell
@@ -114,6 +109,9 @@ function filterSpell () {
 
         $(this).toggleClass("d-none", hidden);
     });
+    
+    let num = countSpells()
+    $("#spell-counter").text("Filters: " + num + " spell" + (num == 1 ? "" : "s"));
 }
 
 // applies the and operand
@@ -284,4 +282,8 @@ function sortSpelllist(ls) {
         return a.id.localeCompare(b.id);
     });
     ls.append(lsItems);
+}
+
+function countSpells() {
+    return ($("#pinned").children(":not(.d-none)").length + $("#unpinned").children(":not(.d-none)").length);
 }
