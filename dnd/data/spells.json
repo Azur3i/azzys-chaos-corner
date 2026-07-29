@@ -5612,10 +5612,10 @@
             "amount": 1,
             "time": "hour"
         },
-        "range": "120ft.",
+        "range": "10ft.",
         "vsm": [true, true, "a jacinth worth at least 1000gp, and an ornately carved bar of silver worth at least 100gp, both once for each creature you affect with this spell, all of which the spell consumes"],
         "duration": {
-            "time": "instant"
+            "time": "special"
         },
         
         "desc": [
@@ -6886,6 +6886,33 @@
         "levels": [2, 3, 4, 5, 6, 7],
         
         "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "resistance": {
+        "name": "Resistance",
+        "level": 0,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a miniature cloak"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You touch a willing creature. The target may roll 1d4 and add the number rolled to one saving throw of its choice. It may roll the die before, or after the saving throw, its choice. The spell then ends."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "cleric", "druid"],
         "source": "Player's Handbook"
     }
 }
