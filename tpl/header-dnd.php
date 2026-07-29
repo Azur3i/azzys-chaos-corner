@@ -19,5 +19,5 @@
 </header>
 
 <div class="main-content top" id="spell-preview">
-    <div id="spell-preview-content" style="height: 100%; "></div>
+    <div id="spell-preview-content"></div>
 </div>

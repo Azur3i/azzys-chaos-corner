@@ -61,7 +61,7 @@
         height: 92%;
     }
 
-    #spell-display,
+    #spellbox > #spell-display,
     #race-display {
         max-height: 66vh;
     }
@@ -86,7 +86,7 @@
         height: 93%;
     }
 
-    #spell-display,
+    #spellbox > #spell-display,
     #race-display {
         max-height: 75vh;
     }
@@ -693,10 +693,10 @@ table.ability {
 
     max-height: 60%;
     max-width: 60%;
+    height: auto;
 
     padding: 0;
     margin: 0;
-    position: fixed;
     z-index: 1100;
 
     color: rgb(var(--white));
@@ -709,8 +709,10 @@ table.ability {
     border-radius: 0.8rem;
 }
 
+#spell-preview-content,
 #spell-preview-content > div {
     border: none;
+    height: 100%;
 }
 
 .spell-link:hover {
