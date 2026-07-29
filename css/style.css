@@ -72,7 +72,6 @@
 
     #race-img {
         height: 26vh;
-        width: auto;
     }
 }
 
@@ -800,6 +799,8 @@ table.ability {
 
 #race-img {
     width: auto;
+    height: auto;
+    max-width: 50%;
 }
 
 #race-img:hover {

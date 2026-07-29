@@ -25,9 +25,15 @@ $statblock = $statblocks[$creatureName];
         <?php if (!empty($statblock["desc"])): ?>
         <hr >
 
-        <div class="row spell-list align-items-center w-75 mx-auto" style="padding-bottom: 0.5rem; margin: 0;">
-            <p class="md title"><?= implode("<br ><br >", $statblock["desc"]) ?></p>
+        <div class="row spell-list align-items-center mx-auto" style="padding-bottom: 0.5rem; margin: 0;">
+            <div class="col my-auto">
+                <p class="md title col"><?= implode("<br ><br >", $statblock["desc"]) ?></p>
+            </div>
+            <?php if (file_exists(ROOT . "/assets/img/dnd/creatures/$creatureName.png")): ?>
+                <img id="race-img" class="col-auto my-auto" src="/assets/img/dnd/creatures/<?= $creatureName ?>.png">
+            <?php endif; ?>
         </div>
+            
         <?php endif; ?>
 
         
@@ -124,14 +130,18 @@ $statblock = $statblocks[$creatureName];
 
         </div>
 
-        <? // actions, bonus actions and reactions ?>
-        <?php foreach (["abilities", "actions", "bonusActions", "reactions"] as $type): ?>
+        <?php // actions, bonus actions and reactions
+        $actions = [
+            "abilities" => "Traits",
+            "actions" => "Actions",
+            "bonusActions" => "Bonus Actions",
+            "reactions" => "Reactions"
+        ];
+        foreach ($actions as $type => $name): ?>
         <div class="row mx-auto w-75" style="margin: 0;"> 
-
-
             <?php if (!empty($statblock[$type])): ?>
             <div class="row spell-list align-items-center" style="padding: 0.5rem 0; margin: 0;">
-                <p class="lg title"><?= $type == "bonusActions" ? "Bonus Actions" : ucfirst($type) ?></p>
+                <p class="lg title"><?= $name ?></p>
                 <hr style="color: rgb(var(--black));">
                 <?php foreach ($statblock[$type] as $action): ?>
                     <div class="row align-items-center" style="margin: 0; padding: 0.5rem 0;">
@@ -156,6 +166,37 @@ $statblock = $statblocks[$creatureName];
         
         <?php endforeach; ?>
         
-
+        <?php // legendary actions, mythic actions, lair actions 
+        $specialActions = [
+            "legendaryActions" => "Legendary Actions",
+            "lairActions" => "Lair Actions"
+        ];
+        foreach ($specialActions as $type => $name): ?>
+        <div class="row mx-auto w-75" style="margin: 0;">
+            <?php if (!empty($statblock[$type])): ?>
+            <div class="row spell-list align-items-center" style="padding: 0.5rem 0; margin: 0;">
+                <p class="lg title"><?= $name ?></p>
+                <p class="md title"><?= $statblock[$type]["desc"] ?></p>
+                <hr style="color: rgb(var(--black));">
+                <?php foreach ($statblock[$type]["content"] as $action): ?>
+                    <div class="row align-items-center" style="margin: 0; padding: 0.5rem 0;">
+                        <div class="col-3">
+                            <p class="md" style="text-align: right;">
+                                <b><?= is_array($action["name"]) ? implode("<br >", $action["name"]) : $action["name"] ?></b>
+                            </p>
+                        </div>
+                        <div class="col-9">
+                            <?= renderAbility($action) ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+        </div>
+        <?php if (!empty($statblock[$type])) {
+            echo "<hr >";
+        } ?>
+        
+        <?php endforeach; ?>
     </div>
 </div>
