@@ -162,7 +162,7 @@ $("#spell-preview, #spellbox").on("click", "div.spell-level-selector > a.button-
                         $(`.level-replace-${index}`).html(param);
                     })
                 } else {
-                    $(".level-replace-0").text(response);
+                    $(".level-replace-0").html(response);
                 }
             }, "json"
         )
