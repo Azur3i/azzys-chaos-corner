@@ -200,7 +200,11 @@ $(document).on("keydown", function(e) {
                 let next = $(".button-list.active").nextAll(":not(.d-none)").first();
                 // if no elements found, return to top
                 if (!next.length) {
-                    next = $(".button-list:not(.d-none)").first();
+                    if ($(".button-list.active").closest("#unpinned").length) {
+                        next = $(".button-list:not(.d-none)").first();
+                    } else {
+                        next = $("#unpinned > .button-list:not(.d-none)").first();
+                    }
                 }
                 next.trigger("click");
                 next[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
@@ -211,7 +215,11 @@ $(document).on("keydown", function(e) {
                 let prev = $(".button-list.active").prevAll(":not(.d-none)").first();
                 // if no elements found, return to bottom
                 if (!prev.length) {
-                    prev = $(".button-list:not(.d-none)").last();
+                    if ($(".button-list.active").closest("#unpinned").length && $("#pinned").children().length) {
+                        prev = $("#pinned > .button-list:not(.d-none)").last();
+                    } else {
+                        prev = $(".button-list:not(.d-none)").last();
+                    }
                 }
                 prev.trigger("click");
                 prev[0]?.scrollIntoView({behavior: "smooth", block: "nearest"});
