@@ -62,8 +62,9 @@
     }
 
     #spellbox > #spell-display,
-    #race-display {
-        max-height: 66vh;
+    #racebox > #race-display,
+    #statblockbox > #creature-display {
+        height: auto;
     }
 
     #spell-search {
@@ -71,7 +72,7 @@
     }
 
     #race-img {
-        height: 26vh;
+        max-height: 26vh;
     }
 }
 
@@ -87,8 +88,9 @@
     }
 
     #spellbox > #spell-display,
-    #race-display {
-        max-height: 75vh;
+    #racebox > #race-display,
+    #statblockbox > #creature-display {
+        height: auto;
     }
 
     #spell-search {
@@ -96,7 +98,7 @@
     }
 
     #race-img {
-        height: 30vh;
+        max-height: 30vh;
     }
 }
 
@@ -612,14 +614,15 @@ table.ability {
     }
 }
 
-#spellbox {
+#spellbox,
+#racebox,
+#statblockbox {
     height: 100%;
+    overflow-y: auto;
 }
 
 #spell-display {
     background: linear-gradient(to bottom, #706B83 0%, #5A6575 50%, #67758A 100%);
-
-    height: 100%;
 
     h1 {
         margin: 0;
@@ -684,6 +687,11 @@ table.ability {
     #spell-desc > p {
         margin-top: 1rem;
     }
+}
+
+#race-display,
+#creature-display {
+    height: 100%;
 }
 
 #spell-preview {
@@ -785,10 +793,6 @@ table.ability {
     }
 }
 
-#race-display {
-    height: 100%;
-}
-
 .subrace > p:not(:first-of-type) {
     margin-top: 1rem;
 }
@@ -812,8 +816,9 @@ table.ability {
 .slashing-dmg {color: #A0A0A0;}
 
 #race-img {
-    width: auto;
     height: auto;
+    width: auto;
+
     max-width: 50%;
 }
 
