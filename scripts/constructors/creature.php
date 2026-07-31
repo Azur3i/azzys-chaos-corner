@@ -11,9 +11,9 @@ $statblock = $statblocks[$creatureName];
 
 ?>
 
-<div class="content-list" style="padding: 1.25rem; margin: 0;" id="spell-display" spell="<?= $creatureName ?>">
+<div class="content-list" style="padding: 1.25rem; margin: 0;" id="creature-display" spell="<?= $creatureName ?>">
     <div class="scroll">
-        <div class="row spell-list align-items-center" style="padding: 0; padding-left: 1.5rem;">
+        <div class="row spell-list align-items-center" style="padding: 0; padding-left: 1.5rem; width: 100%;">
             <h1 class="xlg col" id="creaturename" data-name="<?= $statblock["name"] ?>"><?= $statblock["name"] ?></h1>
             <h3 class="md col" style="text-align: right;">Source: <?= $statblock["source"] ?></h3>
 
@@ -25,7 +25,7 @@ $statblock = $statblocks[$creatureName];
         <?php if (!empty($statblock["desc"])): ?>
         <hr >
 
-        <div class="row spell-list align-items-center mx-auto" style="padding-bottom: 0.5rem; margin: 0;">
+        <div class="row spell-list align-items-center mx-auto" style="padding-bottom: 0.5rem; margin: 0; width: 100%;">
             <div class="col my-auto">
                 <p class="md title col"><?= implode("<br ><br >", $statblock["desc"]) ?></p>
             </div>
