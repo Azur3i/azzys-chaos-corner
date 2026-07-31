@@ -34,7 +34,7 @@
                     },
                     {
                         "name": "Steel Defender",
-                        "desc": "Your tinkering has borne you a faithful companion, a steel defender. It's friendly to you and your companions, and it obeys your commands. See its game statistics in the Steel Defender stat block, which uses your proficiency bonus in severel place. You determine the creature's appearance and whether it has 2 legs or 4; your choice has no effect on its game statistics. In combat, the defender shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the defender can take any action of its choice, not just dodge. If the mending spell is cast on it, it regains 2d6 hitpoints. If it has died within the last hour, you may use your smith's tools and a 1st level spell slot as an action to revive it, provided you are within 5ft. of it. The steel defender returns to life after 1 minute, with all its hitpoints restored. At the end of a long rest, you may create a new steel defender if you have smith's tools with you. If you already have a defender from this feature, the first one immediately perishes. The defender also perishes if you die.",
+                        "desc": "Your tinkering has borne you a faithful companion, a steel defender. It's friendly to you and your companions, and it obeys your commands. See its game statistics in the Steel Defender stat block, which uses your proficiency bonus in severel places. You determine the creature's appearance and whether it has 2 legs or 4; your choice has no effect on its game statistics. In combat, the defender shares your initiative count, but it takes its turn immediately after yours. It may move on its own, but the only action it takes on its turn is the @dodge action, unless you take a bonus action on your turn to command it to take another action. That action may be one in its stat block or some other action. If you are incapacitated, the defender may take any action of its choice, not just dodge. If the mending spell is cast on it, it regains 2d6 hitpoints. If it has died within the last hour, you may use your smith's tools and a 1st level spell slot as an action to revive it, provided you are within 5ft. of it. The steel defender returns to life after 1 minute, with all its hitpoints restored. At the end of a long rest, you may create a new steel defender if you have smith's tools with you. If you already have a defender from this feature, the first one immediately perishes. The defender also perishes if you die.",
                         "type": "statblock",
                         "content": "steel-defender"
                     }
@@ -400,6 +400,42 @@
         }
     },
     "bard": {
+        "college-of-eloquence": {
+            "name": "College of Eloquence",
+            "desc": ["Adherents of the College of Eloquence master the art of oratory. Persuasion is regarded as a high art, and a well-reasoned, well-spoken argument often proves more powerful than objective truth. These bards wield a blend of logic and theatrical wordplay, winning over skeptics and detractors with logical arguments, and plucking at heartstrings to appeal to the emotions of entire audiences."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Silver Tongue",
+                        "desc": "You are a master at saying the right thing at the right time. Whenever you make a Persuasion (CHA) or Deception (CHA) check, you may treat a roll of 9 or lower on the d20 as a 10."
+                    },
+                    {
+                        "name": "Unsettling Words",
+                        "desc": "You may spin words laced with magic that unsettle a creature, and cause it to doubt itself. As a bonus action, you may expend a use of your bardic inspiration, choose a creature you can see within 60ft. of you, roll the die, and subtract the number from the next saving throw the creature makes before the start of your next turn."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Unfailing Inspiration",
+                        "desc": "Your inspiring words are so persuasive that others feel driven to succeed. Whenever a creature adds one of your barding inspiration dice to its ability check, attack roll, or saving throw, and the roll fails, the creature may keep the bardic inspiration."
+                    },
+                    {
+                        "name": "Universal Speech",
+                        "desc": "You have gained the ability to make your speech intelligible to any creature. As an action, choose a number of creatures up to your CHA (minimum of 1) within 60ft. of you. The chosen creatures are able to magically understand you, regardless of the language you speak, for 1 hour. You may use this feature once per long rest. You may use a spell slot of 1st level or higher to use this feature without expending a use."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Infectious Inspiration",
+                        "desc": "Whenever you successfully inspire someone, the power of your eloquence may now spread to someone else. As a reaction whenever a creature within 60ft. of you adds one of your bardic inspiration dice to its ability check, attack roll, or saving throw, and the roll succeeds, you may encourage a different creature, other than yourself, that is able to hear you within 60ft. of you, giving it a bardic inspiration die without expending any of your uses of bardic inspiration. You may use this feature a number of times equal to your CHA (minimum of 1) per long rest."
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        },
         "college-of-glamour": {
             "name": "College of Glamour",
             "desc": ["The College of Glamour is the home of bards who mastered their craft in the vibrant realm of the Feywild or under the tutelage of someone who dwelled there. Tutored by satyrs, eladrin, and other fey, these bards learn to use their magic to delight and captivate others.", "The bards of this college are regarded with a mixture of awe and fear. Their performances are the stuff of legend. These bards are so eloquent that a speech or song that one of them performs can cause captors to release the bard unharmed and can lull a furious dragon into complacency. The same magic that allows them to quell beasts can also bend minds. Villainous bards of this college can leech off a community for weeks, abusing their magic to turn their hosts into thralls. Heroic bards of this college instead use this power to gladden the downtrodden and undermine oppressors."],
@@ -427,6 +463,38 @@
                 ]
             },
             "source": "Xanathar's Guide to Everything"
+        },
+        "college-of-lore": {
+            "name": "College of Lore",
+            "desc": ["Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tales. Whether singing folk ballads in taverns or elaborate compositions in royal courts, these bards use their gifts to hold audiences spellbound. When the applause dies down, the audience members might find themselves questioning everything they held to be true, from their faith in the priesthood of the local temple to their loyalty to the king.", "The loyalty of these bards lies in the pursuit of beauty and truth, not in fealty to a monarch or following the tenets of a deity. A noble who keeps such a bard as a herald or advisor knows that the bard would rather be honest than politic.", "The college's members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Bonus Proficiencies",
+                        "desc": "You gain proficiency in 3 skills of your choice." 
+                    },
+                    {
+                        "name": "Cutting Words",
+                        "desc": "You learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. As a reaction whenever a creature that you can see within 60ft. of you makes an attack roll, ability check, or damage roll, you may expend a use of your bardic inspiration, roll the die, and subtract the number rolled from the creature's roll. You may choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability checks succeeds or fails, or before the creature deals its damage. The creature is immune to this effect if it cannot hear you, or if it's immune to being charmed."
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Additional Magical Secrets",
+                        "desc": "Choose 2 spells from any class, including this one. A spell you choose must be of a level you can cast, or a cantrip. The chosen spells count as bard spells for you, and don't count against the number of bard spells or cantrips you know."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Peerless Skill",
+                        "desc": "Whenever you make an ability check, you may expend a use of your bardic inspiration, roll the die, and add the number rolled to the ability check. You may choose to do so after the die for the ability check, but before the DM tells you whether you succeed or fail."
+                    }
+                ]
+            },
+            "source": "Player's Handbook"
         },
         "college-of-valor": {
             "name": "College of Valor",
@@ -527,20 +595,237 @@
                     },
                     {
                         "name": "Ride the Rails",
-                        "desc": "As an action, you may whistle to summon a spectral locomotive into existence. It hurtles forward in a 120ft. long, 10ft. wide line from you, and it passes through objects and creatures. You and up to 6 willing creatures of your choice may hitch a ride on the train. You teleport to an unoccupied space of your choice in the line, and any creatures who accompanied you appear in the closest unoccupied spaces next to you. Each other creature in the line must succeed on a WIS saving throw, or be deafened until the start of your next turn, be pushed up to 10ft. in a straight line away from the line's point of origin, and take an amount of @psychic damage equal to 3 rolls of your bardic inspiration die. You may use this feature once per long rest. You may use a spell slot of 3rd level or higher to use this feature without expending a use."
+                        "desc": "As an action, you may whistle to summon a spectral locomotive into existence. It hurtles forward in a 120ft. long, 10ft. wide line from you, and it passes through objects and creatures. You and up to 6 willing creatures of your choice may hitch a ride on the train. You teleport to an unoccupied space of your choice in the line, and any creatures who accompanied you appear in the closest unoccupied spaces next to you. Each other creature in the line must succeed on a WIS saving throw, or be deafened until the start of your next turn, be pushed up to 10ft. in a straight line away from the line's point of origin, and take an amount of @psychic damage equal to 3 rolls of your bardic inspiration die. You may use this feature once per long rest. You may expend a spell slot of 3rd level or higher to use this feature without expending a use."
                     }
                 ],
                 "14": [
                     {
                         "name": "Last Stop",
-                        "desc": "The ghostly shrill of your whistle now draws the living closer to the world of the dead. As an action, you blow a whistle that is audible up to 300ft. away from you. Up to 6 creatures of your choice that you can see within that range must succeed on a CHA saving throw, or be cursed for 1 minute. Whenever a cursed target takes @psychic damage, it is frightened of the source of that damage until the end of its next turn. The first time a cursed target takes @psychic damage, it gains vulnerability to that @psychic damage. The target may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. You may use this feature once per long rest. You may use a spell slot of 7th level or higher to use this feature without expending a use."
+                        "desc": "The ghostly shrill of your whistle now draws the living closer to the world of the dead. As an action, you blow a whistle that is audible up to 300ft. away from you. Up to 6 creatures of your choice that you can see within that range must succeed on a CHA saving throw, or be cursed for 1 minute. Whenever a cursed target takes @psychic damage, it is frightened of the source of that damage until the end of its next turn. The first time a cursed target takes @psychic damage, it gains vulnerability to that @psychic damage. The target may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. You may use this feature once per long rest. You may expend a spell slot of 7th level or higher to use this feature without expending a use."
                     }
                 ]
             },
             "source": "The Crooked Moon"
         }
     },
-    "blood-hunter": {},
+    "blood-hunter": {
+        "order-of-the-lycan": {
+            "name": "Order of the Lycan",
+            "desc": ["The ancient curse of lycanthropy is feared by nearly all peoples and cultures, passed through blood and seeding a host with the savage strength and hunger for violence of a wicked beast. The Order of the Lycan is a proud group of blood hunters who undergo “the Taming” — the ceremonial infliction of lycanthropy by a senior member of the order, for those who do not already carry the curse before seeking this path. These hunters then use the magic of their blood to harness the power of the monster they harbor, without losing themselves to it. Using intense will and secret blood magic rituals, members of the Order of the Lycan learn to control and unleash their hybrid forms for short periods of time. Enhanced physical prowess, unnatural resilience, and razor-sharp claws make these warriors a terrible foe to any evil that crosses their path. Yet no training is perfect, and without care and complete focus, even the greatest of blood hunters can temporarily lose themselves to their own hunger."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Heightened Senses",
+                        "desc": "You gain the improved senses of a natural predator. You gain advantage on Perception (WIS) checks that rely on hearing or smell."
+                    },
+                    {
+                        "name": "Hybrid Transformation",
+                        "desc": "You learn to control the lycanthropic curse that courses through your veins. As a bonus action, you may transform into a special hybrid form. You may speak, use equipment, and wear armor while in this form. The form lasts for 1 hour, or until you use your bonus action to revert, fall unconscious, or die. This feature replaces the rules for lycanthropy in the Monster Manual. You may use this feature once per short rest. You gain the following benefits:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Feral Might",
+                                "desc": "You gain advantage on STR checks and saving throws, and you gain +1 to melee damage rolls."
+                            },
+                            {
+                                "name": "Resilient Hide",
+                                "desc": "You gain resistance to @bludgeoning and @piercing damage from nonmagical attacks not made with a silvered weapon. While you are not wearing heavy armor, you gain +1 AC."
+                            },
+                            {
+                                "name": "Predatory Strikes",
+                                "desc": "You may apply your crimson rite feature to your unarmed strikes, which you treat as 1 weapon. You may use DEX instead of STR for the attack and damage rolls of your unarmed strikes, which deal 1d6 @bludgeoning or @slashing damage, your choice. When you use the @attack action to make an unarmed strike, as a bonus action, you may make 1 additional unarmed strike."
+                            },
+                            {
+                                "name": "Bloodlust",
+                                "desc": "If you start your turn with less hitpoints than half your hitpoint maximum, you must succeed on a DC 8 WIS saving throw, or move directly toward the nearest creature, and use the @attack action against that creature. If you're concentrating on a spell, or are under an effect that prevents you from concentrating, such as the barbarian's rage feature, you automatically fail this saving throw. If you have the extra attack feature, you may choose whether to use it for this frenzied attack or not. If more than 1 creature is nearest to you, the target is determined randomly. Once you made the attack, you regain control."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Stalker's Prowess",
+                        "desc": "Your walking speed increases by 10ft., and you may add 10ft. to your long jump distance, and 3ft. to your high jump distance. Your hybrid transformation feature gains the following additional effect:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Predatory Strikes",
+                                "desc": "You gain +1 to attack rolls made with your unarmed strikes."
+                            }
+                        ]
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Advanced Transformation",
+                        "desc": "You learn to unleaseh and control more of the beast within. You may use your hybrid transformation feature twice per short rest. Your hybrid transformation feature gains the following additional effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Lycan Regeneration",
+                                "desc": "At the start of each of your turns when you have at least 1 hitpoint, but fewer hitpoints than half your hitpoint maximum, you restore hitpoints equal to 1 + CON (minimum of 1). If you are in your hybrid form, you gain these hitpoints before you must make the saving throw for your bloodlust."
+                            },
+                            {
+                                "name": "Feral Might", 
+                                "desc": "You gain an extra +1 to melee damage rolls, for a total of +2."
+                            },
+                            {
+                                "name": "Predatory Strikes",
+                                "desc": "Your unarmed strikes deal 1d8 @bludgeoning or @slashing damage, your choice. You gain an extra +1 to attack rolls made with your unarmed strikes, for a total of +2."
+                            }
+                        ]
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Brand of the Voracious",
+                        "desc": "You gain advantage on the saving throw for your bloodlust while in your hybrid form. Additionally, your brand of castigation feature may now bind a foe to your hunter's ferocity. While in your hybrid form, you gain advantage on attack rolls against a creature branded by you."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Hybrid Transformation Mastery",
+                        "desc": "You have mastered your inner predator. You may use your hybrid transformation feature an unlimited amount of times, and your hybrid form lasts until you revert to your normal form, fall unconscious, or die. You gain the blood curse of the howl for your blood maledict feature. This does not count against the number of blood curses known. Additionally, your hybrid transformation feature gains the following additional effects:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Feral Might", 
+                                "desc": "You gain an extra +1 to melee damage rolls, for a total of +3."
+                            },
+                            {
+                                "name": "Predatory Strikes",
+                                "desc": "You gain an extra +1 to attack rolls made with your unarmed strikes, for a total of +3."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "D&D Beyond"
+        },
+        "order-of-the-mutant": {
+            "name": "Order of the Mutant",
+            "desc": ["The process of undertaking the Hunter's Bane ritual is a painful, scarring, and sometimes fatal experience. Those who survive are irrevocably changed — and not always for the better. Over generations of experimentation, a splinter order of blood hunters honed the way in which hemocraft alters the body, using corrupted alchemy and toxic elixirs to alter their blood even further. Over time, they have modified their capabilities in battle, becoming something beyond what they once were. Calling themselves the Order of the Mutant, these blood hunters now specialize in assessing the strengths and weaknesses of their foes, altering their biology to be best prepared for any conflict."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Mutagencraft",
+                        "desc": ["You learn to master forbidden alchemical formulas, known as mutagens, to are able to temporarily alter your mental and physical abilities. As a bonus action, you may consume a mutagen, whose effects and side effects last until you finish a rest, unless otherwise specified. While any amount of mutagens are affecting you, you may use an action to focus and flush all mutagens from your system, ending their effects and side effects.", "Mutagens are designed for the specific biology of the person who concocted them, meaning your mutagens have no effect on other creatures. They are unstable by nature, losing their potency over time, becoming inert if not used before you finish your next rest."]
+                    },
+                    {
+                        "name": "Formulas",
+                        "desc": "You may choose 4 different mutagen formulas to learn, and may concoct 1 mutagen when you finish a rest. Whenever you learn a new mutagen formula, you may replace a formula you know with a new one. You may choose from the following formulas:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Mutagen", "Effect", "Side-effect"],
+                                ["New"],
+                                ["Alluring", "You gain advantage on CHA checks.", "You gain disadvantage on initiative rolls."],
+                                ["Celerity", "Your DEX score increases by 3, as does your maximum for that score.", "You gain disadvantage on WIS saving throws."],
+                                ["Conversant", "You gain advantage on INT checks.", "You gain disadvantage on WIS checks."],
+                                ["Deftness", "You gain advantage on DEX checks.", "You gain disadvantage on WIS checks."],
+                                ["Embers", "You gain resistance to @fire damage.", "You gain vulnerability to @cold damage."],
+                                ["Gelid", "You gain resistance to @cold damage.", "You gain vulnerability to @fire damage."],
+                                ["Impermeable", "You gain resistance to @piercing damage.", "You gain vulnerability to @slashing damage."],
+                                ["Mobility", "You gain immunity to being grappled and restrained.", "You gain disadvantage on STR checks."],
+                                ["Nighteye", "You gain 60ft. darkvision. If you already have darkvision, its range increases by 60ft. instead.", "You gain disadvantage on attack rolls and Perception (WIS) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."],
+                                ["Percipitent", "You gain advantage on WIS checks.", "You gain disadvantage on CHA check."],
+                                ["Potency", "Your STR score increases by 3, as does your maximum for that score.", "You gain disadvantage on DEX saving throws."],
+                                ["Rapidity", "Your movement speed increases by 10ft.", "You gain disadvantage on INT checks."],
+                                ["Sagacity", "Your INT score increases by 3, as does your maximum for that score.", "You gain disadvantage on CHA saving throws."],
+                                ["Shielded", "You gain resistance to @slashing damage.", "You gain vulnerability to @bludgeoning damage."],
+                                ["Unbreakable", "You gain resistance to @bludgeoning damage.", "You gain vulnerability to @piercing damage."],
+                                ["Vermillion", "You gain an additional use of your blood maledict feature.", "You gain disadvantage on death saving throws."]
+                            ]
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Strange Metabolism",
+                        "desc": "Your body begins to adapt to toxins and venoms, ignoring their corrupting effects. You gain immunity to @poison damage, and being poisoned. Additionally, you may trigger a burst of adrenaline, that lets you temporarily resist the negative effects of a mutagen. As a bonus action, you may ignore the negative side effect of a mutagen affecting you for 1 minute. You may use this feature once per long rest."
+                    },
+                    {
+                        "name": "Formulas",
+                        "desc": "You learn an additional formula, for a total of 5. You may concoct 2 mutagens when you finish a rest. You may now choose from additional formulas:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Mutagen", "Effect", "Side-effect"],
+                                ["New"],
+                                ["Reconstruction", "At the start of each of your turns when you have at least 1 hitpoint, but fewer hitpoints than half your hitpoint maximum, you restore hitpoints equal to your proficiency. This mutagen lasts for 1 hour.", "You movement speed reduces by 10ft."]
+                            ]
+                        }
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Brand of Axiom",
+                        "desc": "Your mutagenic hemocraft lets your brand of castigation reveal a foe's true nature. Any illusion or invisibility in effect on a creature when you brand it ends, and the creature cannot benefit from invisibility or illusion effects while branded by you. If a creature branded by you is in an alternative form, such as by the way of the @polymorph spell, the change shape action, shapechanger trait, or similar effects, or whenever a branded creature attempts to alter its form, it must succeed on a WIS saving throw, or revert to its true form, and be stunned until the end of your next turn."
+                    },
+                    {
+                        "name": "Formulas",
+                        "desc": "You learn an additional formula, for a total of 6. You may concoct 2 mutagens when you finish a rest. Some mutagens increase in strength, and you may now choose from additional formulas:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Mutagen", "Effect", "Side-effect"],
+                                ["New"],
+                                ["Aether", "You gain a flying speed of 20ft. This mutagen lasts for 1 hour.", "You gain disadvantage to STR and DEX checks."],
+                                ["Cruelty", "Whenever you use the @attack action, as a bonus action, you may make 1 additional weapon attack.", "You gain disadvantage on INT, WIS, and CHA saving throws."],
+                                ["Precision", "Your weapon attacks score a critical hit on a 19 or 20 on the d20.", "You gain disadvantage on STR saving throws."],
+                                ["Empowered"],
+                                ["Celerity", "Your DEX score increases by 4, as does your maximum for that score.", "You gain disadvantage on WIS saving throws."],
+                                ["Mobility", "You gain immunity to being grappled, restrained, and paralyzed.", "You gain disadvantage on STR checks."],
+                                ["Potency", "Your STR score increases by 4, as does your maximum for that score.", "You gain disadvantage on DEX saving throws."],
+                                ["Sagacity", "Your INT score increases by 4, as does your maximum for that score.", "You gain disadvantage on CHA saving throws."]
+                            ]
+                        }
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Blood Curse of Corrosion",
+                        "desc": "Your blood curse may infuse a creature's body with terrible toxins. You gain the blood curse of corrosion for your blood maledict feature. This doesn't count against your number of blood curses known."
+                    },
+                    {
+                        "name": "Formulas",
+                        "desc": "You learn an additional formula, for a total of 7. You may concoct 3 mutagens when you finish a rest."
+                    }
+                ],
+                "18": [
+                    {
+                        "name": "Exalted Mutation",
+                        "desc": "Your body has adapted to produce mutagens naturally in a moment of need. As a bonus action, choose a mutagen currently affecting you. Its effects and side effects end, and you may immediately have a mutagen you know the formula for take effect in its place. You may use this feature a number of times equal to your hemocraft modifier (minimum of 1) per long rest."
+                    },
+                    {
+                        "name": "Formulas",
+                        "desc": "You learn an additional formula, for a total of 8. You may concoct 3 mutagens when you finish a rest. Some mutagens increase in strength:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Mutagen", "Effect", "Side-effect"],
+                                ["Empowered"],
+                                ["Celerity", "Your DEX score increases by 5, as does your maximum for that score.", "You gain disadvantage on WIS saving throws."],
+                                ["Potency", "Your STR score increases by 5, as does your maximum for that score.", "You gain disadvantage on DEX saving throws."],
+                                ["Sagacity", "Your INT score increases by 5, as does your maximum for that score.", "You gain disadvantage on CHA saving throws."]
+                            ]
+                        }
+                    }
+                ]
+            },
+            "source": "D&D Beyond"
+        }
+    },
     "cleric": {
         "grave-domain": {
             "name": "Grave Domain",
@@ -682,7 +967,7 @@
                 "17": [
                     {
                         "name": "Eternal Wheel",
-                        "desc": "Whenever you use your bountiful harvest channel divinity feature, you may invoke the endless cycle of life, death, and rebirth to grant yourself and the creatures affected by your channel divinity feature an additional benefit based on your current aspect. You may use this feature once per long rest. You may use a spell slot of 7th level or higher to use this feature without expending a use.",
+                        "desc": "Whenever you use your bountiful harvest channel divinity feature, you may invoke the endless cycle of life, death, and rebirth to grant yourself and the creatures affected by your channel divinity feature an additional benefit based on your current aspect. You may use this feature once per long rest. You may expend a spell slot of 7th level or higher to use this feature without expending a use.",
                         "type": "list",
                         "content": [
                             {
@@ -801,6 +1086,83 @@
                     {
                         "name": "Fungal Body",
                         "desc": "The fungal spores in your body alter you. You cannot be blinded, deafened, frightened, or poisoned, and any critical hit against you counts as a normal hit instead, unless you're incapacitated."
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
+        },
+        "circle-of-stars": {
+            "name": "Circle of Stars",
+            "desc": ["The Circle of Stars allows druids to draw on the power of starlight. These druids have tracked heavenly patterns since time immemorial, discovering secrets hidden amid the constellations. By revealing and understanding these secrets, the Circle of the Stars seeks to harness the powers of the cosmos.", "Many druids of this circle keep records of the constellations and the stars' effects on the world. Some groups document these observations at megalithic sites, which serve as enigmatic libraries of lore. These repositories might take the form of stone circles, pyramids, petroglyphs, and underground temples; any construction durable enough to protect the circle's sacred knowledge even against a great cataclysm."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Star Map",
+                        "desc": "You've created a star chart as part of your heavenly studies. It is a Tiny object, and may serve as a spellcasting focus for your druid spells. You determine its form by rolling on the Star Map table, or by choosing one. While holding the map, you know the @guidance cantrip, and have the @guiding bolt spell prepared. These spells do not count against the number of cantrips, or spells you may have prepared. You may use this feature to cast the @guiding bolt spell without a spellslot. You may do so a number of times equal to your proficiency per long rest.",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d6", "Map Form"],
+                                [1, "A scroll, covered with depictions of constellations."],
+                                [2, "A stone table, with fine holes drilled through it."],
+                                [3, "A speckled owlbear hide, tooled with raised marks."],
+                                [4, "A collection of maps, bound in an ebony cover."],
+                                [5, "A crystal, that projects starry patterns when placed before a light."],
+                                [6, "Glass discs, that depict constellations."]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Starry Form",
+                        "desc": "You gain the ability to harness constellations' power to alter your form. As a bonus action, you may expend a use of your wild shape feature to instead take on a starry form. While in your starry form, you retain your game statistics, but your body becomes luminous; your joints glimmer like stars, and glowing lines connect them as on a star chart. This form sheds bright light in a 10ft. radius, and dim light for another 10ft. The form lasts for 10 minutes, or if you dismiss it as a free action, are incapacitated, die, or use this feature again. Whenever you assume your starry form, choose one of the following constellations your body takes on. You gain benefits based on your choice:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Archer",
+                                "desc": "A constellation of an archer appears on you. Whenever you activate this form, and as a bonus action on your subsequent turns, you may make a ranged spell attack, hurling a luminous arrow that targets a creature within 60ft. of you. On a hit, it deals 1d8 + WIS @radiant damage."
+                            },
+                            {
+                                "name": "Chalice",
+                                "desc": "A constellation of a life-giving goblet appears on you. Whenever you cast a non-cantrip spell that restores hitpoints to a creature, you or another creature within 30ft. of you regain hitpoints equal to 1d8 + WIS."
+                            },
+                            {
+                                "name": "Dragon",
+                                "desc": "A constellation of a wise dragon appears on you. Whenever you make an INT or WIS check, or a CON saving throw to maintain concentration, you may treat a roll of 9 or lower on the d20 as a 10."
+                            }
+                        ]
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Cosmic Omen",
+                        "desc": "You learn to use your star map to divine the will of the cosmos. Whenever you finish a long rest, you may consult your star map for omens. When you do so, roll 1d6. Until you finish your next long rest, you gain access to a special reaction based on whether you rolled an even or odd number on the die. You may use this reaction a number of times equal to your proficiency per long rest.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Weal (even)",
+                                "desc": "As a reaction whenever a creature you can see within 30ft. of you is about to make an attack roll, saving throw, or ability check, you may roll 1d6, and add the number rolled from the total."
+                            },
+                            {
+                                "name": "Woe (odd)",
+                                "desc": "As a reaction whenever a creature you can see within 30ft. of you is about to make an attack roll, saving throw, or ability check, you may roll 1d6, and subtract the number rolled from the total."
+                            }
+                        ]
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Twinkling Constellations",
+                        "desc": "The constellations of your starry form improve. The 1d8 of the Archer and Chalice becomes 2d8, and while the Dragon is active, you gain a flying speed of 20ft., and may hover. At the start of each of your turns while in your starry form, you may change which constellation is active."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Full of Stars",
+                        "desc": "While in your starry form, you become partially incorporeal, granting you resistance to @bludgeoning, @piercing, and @slashing damage."
                     }
                 ]
             },
@@ -1236,6 +1598,58 @@
                 ]
             },
             "source": "The Crooked Moon"
+        },
+        "circle-of-wildfire": {
+            "name": "Circle of Wildfire",
+            "desc": ["Druids within the Circle of Wildfire understand that destruction is sometimes the precursor of creation, such as when a forest fire promotes later growth. These druids bond with a primal spirit that harbors both destructive and creative power, allowing the druids to create controlled flames that burn away one thing but give life to another."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "2": [
+                    {
+                        "name": "Circle Spells",
+                        "desc": "You have formed a bond with the wildfire spirit, a primal being of creation and destruction. Your link with this spirit grants you access to some spells. You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Druid level", "Spells"],
+                                ["2nd", "@burning hands, @cure wounds"],
+                                ["3rd", "@flaming sphere, @scorching ray"],
+                                ["5th", "@plant growth, @revivify"],
+                                ["7th", "@aura of life, @fire shield"],
+                                ["9th", "@flame strike, @mass cure wounds"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Summon Wildfire Spirit",
+                        "desc": ["You may summon the primal spirit bound to your soul. As an action, you may expend a use of your wild shape feature to instead summon your wildfire spirit. The spirit appears in an unoccupied space of your choice you can see within 30ft. of you. Each creature within 10ft. of the spirit, other than you, when it appears, must succeed on a DEX saving throw, or take 2d6 @fire damage.", "The spirit is friendly to you and any number of creatures of your choice, and obeys your commands. See its game statistics in the Wildfire Spirit stat block, which uses your proficiency bonus in several places. In combat, the spirit shares your initiative count, but it takes its turn immediately after yours. The only action it takes on its turn is the @dodge action, unless you take a bonus action on your turn to command it to take another action. That action may be one in its stat block or some other action. If you are incapacitated, the defender may take any action of its choice, not just @dodge. The spirit lasts for 1 hour, or until it is reduced to 0 hitpoints, you use this feature to summon the spirit again, or you die."],
+                        "type": "statblock",
+                        "content": "wildfire-spirit"
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "Enhanced Bond",
+                        "desc": "The bond with your wildfire spirit enhances your destructive and restorative spells. Whenever you cast a spell that deals @fire damage, or restores hitpoints, while your wildfire is summoned, roll 1d8, and you gain a bonus equal to the number rolled to 1 damage or healing roll of the spell. Additionally, whenever you cast a spell with a range other than self, the spell may originate from you, or your wildfire spirit."
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "Cauterizing Flames",
+                        "desc": "You gain the ability to turn death into magical flames, that may heal or incinerate. Whenever a Small or larger creature dies within 30ft. of you or your wildfire spirit, a harmless spectral flame springs forth in the dead creature's space, and flickers there for 1 minute. As a reaction whenever a creature you can see enters that space, you may extinguish the spectral there, and either restore hitpoints, or deal @fire damage to the creature equal to 2d10 + WIS. You may use this reaction a number of times equal to your proficiency bonus per long rest."
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "Blazing Revival",
+                        "desc": "The bond with your wildfire spirit may save you from death. If the spirit is within 120ft. of you when you are reduced to 0 hitpoints, and thereby fall unconscious, you may cause the spirit to drop to 0 hitpoints instead. If so, you regain half your maximum hitpoints, and immediately rise to your feet again. You may use this feature once per long rest."
+                    }
+                ]
+            },
+            "source": "Tasha's Cauldron of Everything"
         }
     },
     "fighter": {
@@ -1849,7 +2263,7 @@
                 "20": [
                     {
                         "name": "Fire and Brimstone",
-                        "desc": "As a bonus action, you embody cleansing flame, and gain the following benefits for 1 minutes, or until you end them as a free action. You may use this feature once per long rest. You may use a spell slot of 5th level or higher to use this feature without expending a use.",
+                        "desc": "As a bonus action, you embody cleansing flame, and gain the following benefits for 1 minutes, or until you end them as a free action. You may use this feature once per long rest. You may expend a spell slot of 5th level or higher to use this feature without expending a use.",
                         "type": "list",
                         "content": [
                             {
@@ -2123,7 +2537,7 @@
                             },
                             {
                                 "name": "Marked for Death",
-                                "desc": "Whenever you use your omen of doom feature, you may force the target to succeed on a CHA saving throw, or gain vulnerability to damage dealt by the grim, and to the extra damage you deal with your omen of doom feature. You may use this feature once per long rest. You may use a spell slot of 4th level or higher to use this feature without expending a use."
+                                "desc": "Whenever you use your omen of doom feature, you may force the target to succeed on a CHA saving throw, or gain vulnerability to damage dealt by the grim, and to the extra damage you deal with your omen of doom feature. You may use this feature once per long rest. You may expend a spell slot of 4th level or higher to use this feature without expending a use."
                             }
                         ]
                     }
@@ -3569,7 +3983,7 @@
                 "14": [
                     {
                         "name": "Event Horizon",
-                        "desc": "As an action, you may magically emit a powerful field of gravitational energy that tugs at other creatures for up to 1 minute, or until your concentration ends (as if you were concentrating on a spell). For the duration, whenever a creature hostile to you starts its turn within 30ft. of you, it must make a STR saving throw, taking 2d10 force and have its speed reduced to 0 until the start of its next turn on a failed save, or take half as much damage and have its movement speed halved, rounded down, until the start of its next turn. You may use this feature once per long rest. You may use a spell slot of 3rd level or higher to use this feature without expending a use."
+                        "desc": "As an action, you may magically emit a powerful field of gravitational energy that tugs at other creatures for up to 1 minute, or until your concentration ends (as if you were concentrating on a spell). For the duration, whenever a creature hostile to you starts its turn within 30ft. of you, it must make a STR saving throw, taking 2d10 force and have its speed reduced to 0 until the start of its next turn on a failed save, or take half as much damage and have its movement speed halved, rounded down, until the start of its next turn. You may use this feature once per long rest. You may expend a spell slot of 3rd level or higher to use this feature without expending a use."
                     }
                 ]
             },
@@ -3720,7 +4134,7 @@
                 "6": [
                     {
                         "name": "Manifest Mind",
-                        "desc": "You are able to conjure forth the mind of your awakened spellbook. As a bonus action while the book is on your person, you may cause the mind to manifest as a Tiny spectral object, hovering in an unoccupied space of your choice within 60ft. of you. The spectral mind is intangible, and does not occupy its space, shedding dim light in a 10ft. radius. It looks like a ghostly tome, a cascade of text, or a scholar from the past, your choice. While manifested, the spectral mind is able to hear and see, and it gains darkvision with a range of 60ft. The mind may telepathically share with you what it sees and hears. Whenever you cast a wizard spell on your turn, you may cast it as if you were in the spectral mind's space, instead of your own, using its senses. You may do so a number of times equal to your proficiency bonus per long rest. Additionally, as a bonus action, you may cause the spectral mind to hover up to 30ft. to an unoccupied space that you or it can see. It may pass through creatures, but not objects. The spectral mind stops manifesting if it is ever more than 300ft. away from you, if someone casts the @dispel magic spell on it, if the awakened spellbook is destroyed, if you die, or if you dismiss the spectral mind as a bonus action. Once you conjure the mind, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to conjure it again. You may conjure the mind once per long rest. You may use a spell slot of 1st level or higher to use this feature without expending a use."
+                        "desc": "You are able to conjure forth the mind of your awakened spellbook. As a bonus action while the book is on your person, you may cause the mind to manifest as a Tiny spectral object, hovering in an unoccupied space of your choice within 60ft. of you. The spectral mind is intangible, and does not occupy its space, shedding dim light in a 10ft. radius. It looks like a ghostly tome, a cascade of text, or a scholar from the past, your choice. While manifested, the spectral mind is able to hear and see, and it gains darkvision with a range of 60ft. The mind may telepathically share with you what it sees and hears. Whenever you cast a wizard spell on your turn, you may cast it as if you were in the spectral mind's space, instead of your own, using its senses. You may do so a number of times equal to your proficiency bonus per long rest. Additionally, as a bonus action, you may cause the spectral mind to hover up to 30ft. to an unoccupied space that you or it can see. It may pass through creatures, but not objects. The spectral mind stops manifesting if it is ever more than 300ft. away from you, if someone casts the @dispel magic spell on it, if the awakened spellbook is destroyed, if you die, or if you dismiss the spectral mind as a bonus action. You may conjure the mind once per long rest. You may expend a spell slot of 1st level or higher to use this feature without expending a use."
                     }
                 ],
                 "10": [
