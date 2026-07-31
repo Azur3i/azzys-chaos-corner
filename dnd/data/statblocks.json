@@ -892,5 +892,67 @@
         },
 
         "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
+    "wildfire-spirit": {
+        "name": "Wildfire Spirit",
+        "size": "small",
+        "creatureType": "elemental",
+        "alignment": "unaligned",
+
+        "desc": ["The wildfire spirit is summoned as part of the Circle of Wildfire Druid Circle."],
+
+        "stats": {
+            "STR": 10,
+            "DEX": 14,
+            "CON": 14,
+            "INT": 13,
+            "WIS": 15,
+            "CHA": 11
+        },
+        
+        "hitpoints": "2 + 5 * your druid level",
+        "ac": {
+            "amount": 13,
+            "source": "natural armor"
+        },
+        "speed": {
+            "walk": 30,
+            "fly (hover)": 30
+        },
+
+        "saves": [],
+        "senses": {
+            "darkvision": 60,
+            "passivePerception": 12
+        },
+        "skills": [],
+        "expertise": [],
+
+        "dmgVulnerable": [],
+        "dmgResistant": [],
+        "dmgImmune": ["fire"],
+        "conditionImmune": ["charmed", "frightened", "grappled", "prone", "restrained"],
+
+        "cr": null,
+
+        "abilities": [
+            {
+                "name": "Languages",
+                "desc": "The spirit understands the languages you speak, but cannot speak."
+            }
+        ],
+
+        "actions": [
+            {
+                "name": "Flame Rend",
+                "desc": "Ranged Weapon Attack: your spell attack modifier to hit, range 60ft., one target you can see. Hit: 1d6 + proficiency @fire damage."
+            },
+            {
+                "name": "Fiery Teleportation",
+                "desc": "The spirit, and each willing creature of your choice within 5ft. of it, teleport up to 15ft. to unoccupied spaces you can see. Then, each creature within 5ft. of the space that the spirit left must succeed on a DEX saving throw, or take 1d6 + proficiency @fire damage."
+            }
+        ],
+
+        "source": "Tasha's Cauldron of Everything"
     }
 }
