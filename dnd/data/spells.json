@@ -2479,8 +2479,8 @@
         ],
         "source": "Player's Handbook"
     },
-    "power-fist": {
-        "name": "Power Fist",
+    "kinetic-jab": {
+        "name": "Kinetic Jab",
         "level": 1,
         "school": "transmutation",
         "castTime": {
@@ -2498,9 +2498,6 @@
         },
         "desc": [
             {
-                "quote": "\"Please cease existing.\" - Crank"
-            },
-            {
                 "desc": "You concentrate artificial power into your melee weapon. Make a melee weapon attack. On a hit, your attack will critically strike and knock the target prone."
             }
         ],
@@ -2512,7 +2509,7 @@
             "warlock",
             "wizard"
         ],
-        "source": "Azzurey's League of Legends Spells"
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "protection-from-evil-and-good": {
         "name": "Protection from Evil and Good",
@@ -3318,12 +3315,9 @@
             10
         ],
         "lists": [
-            "artificer",
-            "bard",
-            "cleric",
             "druid",
-            "paladin",
-            "ranger"
+            "sorcerer",
+            "wizard"
         ],
         "source": "Player's Handbook"
     },
@@ -5572,8 +5566,8 @@
         "lists": ["sorcerer", "wizard"],
         "source": "Player's Handbook"
     },
-    "demacian-justice": {
-        "name": "Demacian Justice",
+    "judgement": {
+        "name": "Judgement",
         "level": 9,
         "school": "conjuration",
 
@@ -5589,10 +5583,7 @@
         
         "desc": [
             {
-                "quote": "\"Justice; by law, or by sword\" - Garen"
-            },
-            {
-                "desc": "You call on the might of Demacia, and it will respond to your call in all its glory and power. Choose a creature within range. The creature will be smitten by a sword of holy light descending from the skies, dealing 15d10 @radiant damage."
+                "desc": "By order of law, scale, and thorn, you invoke absolute justice, and it will respond to your call in all its glory and power. Choose a creature within range. The creature will be smitten by a sword of holy light descending from the skies, dealing 15d10 @radiant damage, and stunning it for 1 minute. A creature may make a WIS saving throw at the end of each of its turns, ending the effect on itself on a success."
             },
             {
                 "desc": "This damage is completely unavoidable; it is unaffected by resistances and immunities, cannot be dispelled by a 9th-level @counterspell spell, and ignores any traits and abilities that would otherwise lower or prevent this damage."
@@ -5600,8 +5591,8 @@
         ],
         "levels": null,
         
-        "lists": ["cleric", "wizard"],
-        "source": "Azzurey's League of Legends Spells"
+        "lists": ["cleric"],
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
     },
     "astral-projection": {
         "name": "Astral Projection",
@@ -7399,7 +7390,7 @@
                 "desc": "The target gains an INT score of 10, and the ability to speak 1 language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human's. Your DM chooses statistics appopriate for the awakened plant, such as the statistics for the awakened shrub, or awakened tree."
             },
             {
-                "desc": "The awakened creature is charmed by you for 30 days, or until you or a creature friendly to you does anything harmful to it. Whenever it stops being charmed, the awakened creature may choose whether to remain friendl to you, based on how you treated it."
+                "desc": "The awakened creature is charmed by you for 30 days, or until you or a creature friendly to you does anything harmful to it. Whenever it stops being charmed, the awakened creature may choose whether to remain friendly to you, based on how you treated it."
             }
         ],
         "levels": null,
@@ -8101,6 +8092,635 @@
         "levels": null,
         
         "lists": ["artificer", "druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "star-assault": {
+        "name": "Star Assault",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, "an origami bird, and a rock resembling a sending stone"],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "Lights, as if from falling stars, seem to appear from distantly behind you. Designate a space you can see within range. The chasing lights descend on it, to violently suppress the area with a flurry of blinding lights."
+            },
+            {
+                "desc": "Indicate {1} 55ft. lines that intersect at the central space. A creature hit by any number of lines must make a DEX saving throw, taking {2}d6 @force damage on a failed save, or half as much on a successful one. A creature in the central space is hit by all the intersecting lines, and must make a saving throw for each line seperately."
+            },
+            {
+                "desc": "The stars cannot travel through solid obstacles. Should there be no path following any of the lines that would give its respective star line of sight over the entirety of the straight line, it prioritises paths that allow it to hit any creatures in the central tile, and after that, hitting the most targets."
+            }
+        ],
+        "levels": [[2, 5], [2, 5], [2, 6], [3, 6], [3, 7], [3, 7], [4, 8]],
+        
+        "lists": ["artificer", "oracle", "ranger", "wizard"],
+        "source": "The Archivist's Anthology of Forgotten Lore"
+    },
+    "cosmic-comet": {
+        "name": "Cosmic Comet",
+        "level": 3,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a small piece of chocolate, and a strawberry"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You summon a miniature comet in an unoccupied space you can see within range. As a bonus action, you may hurl the comet at a creature. The comet gains power and speed as it travels, its tail glowing brighter with distance. It deals {*}d8 @radiant damage for every 10ft. it travels in a straight line. If the comet hits a creature, it must make a DEX saving throw, taking the accumulated @radiant damage on a failed save, or half as much on a successful one. After hitting, the spell ends."
+            },
+            {
+                "desc": "The comet does not have to be within 30ft. of you to hurl it; it may be anywhere, as long as you can see it. The comet cannot pass through solid objects or other creatures, requiring a 5ft. wide line of open space to be able to hit."
+            }
+        ],
+        "levels": [1, 1, 1, 2, 2, 2, 3],
+        
+        "lists": ["oracle", "sorcerer", "wizard"],
+        "source": "Azzurey's Destructive Dictionary of Draconic Discord"
+    },
+    "lightning-bolt": {
+        "name": "Lightning Bolt",
+        "level": 3,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (100ft. line)",
+        "vsm": [true, true, "a bit of fur, and a rod of amber, crystal, or glass"],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "A stroke of lightning forming a line of 100ft. long, and 5ft. wide, blasts out from you in a direction you choose. Each creature in the line must make a DEX saving throw, taking {*}d6 @lightning damage on a failed save, or half as much on a successful one. The lightning ignites flammable objects in the area that aren't being worn or carried."
+            }
+        ],
+        "levels": [8, 9, 10, 11, 12, 13, 14],
+        
+        "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "spider-climb": {
+        "name": "Spider Climb",
+        "level": 2,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "a drop of bitumen, and a spider"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "For the duration, a willing creature you touch gains the ability to move up, down, and across vertical surfaces, and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "sorcerer", "warlock", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "divination": {
+        "name": "Divination",
+        "level": 4,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "incense, and a sacrificial offering appropriate to your religion, together worth at least 25gp, which the spell consumes"],
+        "duration": {
+            "time": "instantaneous"
+        },
+        
+        "desc": [
+            {
+                "desc": "Your magic, and an offering, put you in conctact wiht a god, or a god's servants. You may ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen. The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells, or the loss or gain of a companion."
+            },
+            {
+                "desc": "If you cast this spell again before finishing your next long rest, the DM roll 1d4 in secret. On a 1, the spell gives a random reading instead. This DC increases by 1 every additional time you cast this spell before your next long rest."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "pass-without-trace": {
+        "name": "Pass Without Trace",
+        "level": 2,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "ashes from a burned leaf, or mistletoe, and a sprig of spruce"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "A veil of shadows and silence radiates from you, masking you and any number of creatures of your choice from detection. For the duration, affected creatures gain +10 to Stealth (DEX) checks, and cannot be tracked, except by magical means. A creature that receives this bonus leaves behind no tracks, or other traces of its passage."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "daylight": {
+        "name": "Daylight",
+        "level": 3,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+        
+        "desc": [
+            {
+                "desc": "A 60ft. radius sphere of light spreads out from a point you choose within range. The sphere is bright light, and sheds dim light for an additional 60ft."
+            },
+            {
+                "desc": "If you chose a point on an object you are holding, or one that isn't being worn or carried, the light shines from the object, and moves with it. Completely covering the affected object with an opaque object, such as a bowl or helm, blocks the light. If any of this spell's area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid", "paladin", "ranger", "sorcerer"],
+        "source": "Player's Handbook"
+    },
+    "haste": {
+        "name": "Haste",
+        "level": 3,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a shaving of licorice root"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "Choose a willing creature that you can see within range. For the duration, the target's speed is doubled, it gains +2 AC, advantage on DEX saving throws, and an additional action on each of its turns. This action may only be used to make the @attack action, though only making 1 weapon attack, or the @dash, @disengage, @hide, or @use an object actions."
+            },
+            {
+                "desc": "When the spell ends, the target cannot move or take actions until the end of its next turn, as a wave of lethargy sweeps over it."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "stoneskin": {
+        "name": "Stoneskin",
+        "level": 4,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "diamond dust worth 100gp, which the spell consumes"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "This spell turns the flesh of a willing creature you touch as hard as stone. For the duration, the target gains resistance to @bludgeoning, @piercing, and @slashing damage from nonmagical attacks."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "druid", "ranger", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "stone-shape": {
+        "name": "Stone Shape",
+        "level": 4,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "soft clay, which must be worked into roughly the desired shape of the stone object"],
+        "duration": {
+            "time": "instantaneous"
+        },
+
+        
+        "desc": [
+            {
+                "desc": "You touch a stone object of Medium size or smaller, or a section of stone no more than 5ft. in any dimension, and form it into any shape that suits your purpose. So, for example, you could shape a large rock into a weapon, idol, or coffer, or make a small passage through a wall, as long as the wall is less than 5ft. thick. You could also shape a stone door, or its frame, to seal the door shut. The object you create may up to 2 hinges and a latch, but finer mechanical detail isn't possible."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "cleric", "druid", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "meld-into-stone": {
+        "name": "Meld into Stone",
+        "level": 3,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action",
+            "ritual": true
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
+
+        
+        "desc": [
+            {
+                "desc": "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible, or otherwise detectable, by nonmagical senses."
+            },
+            {
+                "desc": "While merged with the stone, you cannot see what occurs outside it, and any Perception (WIS) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time, and may cast spells on yourself while merged in the stone. You may use your movement to leave the stone where you entered it, which ends the spell. You otherwise cannot move."
+            },
+            {
+                "desc": "Minor physical damage to the stone doesn't harm you, but its partial destruction, or change to its shape, to the extent that you no longer fill within it, expels you, and deals 6d6 @bludgeoning damage to you. The stone's complete destruction, or transmutation into a different substance, expels you, and deals 50 @bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "passwall": {
+        "name": "Passwall",
+        "level": 5,
+        "school": "transmutation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a pinch of sesame seeds"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+
+        
+        "desc": [
+            {
+                "desc": "A passage appears at a point of your choice that you can see on a wooden, plaster, or stone surface - such as a wall, ceiling, or floor - within range. You choose the opening's dimensions, up to 5ft. wide, 8ft. tall, and 20ft. deep. The passage creates no instability in a structure surrounding it."
+            },
+            {
+                "desc": "When the opening disappears, any creatures or objectse still in the passage are safely ejected to an unoccupied space nearest to the surface on which you cast the spell."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["wizard"],
+        "source": "Player's Handbook"
+    },
+    "stinking-cloud": {
+        "name": "Stinking Cloud",
+        "level": 3,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "90ft.",
+        "vsm": [true, true, "a rotten egg, or several skunk cabbage leaves"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You create a 20ft. radius sphere of yellow, nauseating gas centered on a point within range. The cloud spreads around corners, and its area is heavily obscured. The cloud lingers in the air for the duration."
+            },
+            {
+                "desc": "Each creature that is completely within the cloud at the start of its turn must succeed on a CON saving throw, or spend its action that turn retching and reeling. Creatures that don't need to breathe, or are immune to @poison damage or being poisoned are immune to this effect."
+            },
+            {
+                "desc": "Moderate winds disperses the cloud after 4 rounds. Strong winds disperse it after 1 round."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "locate-creature": {
+        "name": "Locate Creature",
+        "level": 4,
+        "school": "divination",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a bit of fur from a bloodhound"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "Describe, or name, a creature that is familiar to you. You sense the direction to the creature's location, as long as that creature is within 1.000ft. of you. If the creature is moving, you know the direction of its movement. This spell cannot locate a creature if running water, at least 10ft. wide, blocks a direct path between you and the creature."
+            },
+            {
+                "desc": "The spell may locate a specific creature known to you, or the nearest creature of a specific kind, such as a human or a unicorn, as long as you have seen such a creature up close - within 30ft. - at least once. If the creature you described is in a different form, such as being under the effects of a @polymorph spell, this spell doesn't locate it."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "druid", "paladin", "ranger", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "greater-invisibility": {
+        "name": "Greater Invisibility",
+        "level": 4,
+        "school": "illusion",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "A creature you touch becomes invisible for the duration. Anything the target is wearing or carrying is invisible, as long as it is on their person."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "web": {
+        "name": "Web",
+        "level": 2,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a bit of spiderweb"],
+        "duration": {
+            "amount": 1,
+            "time": "hour",
+            "concentration": true
+        },
+        
+        "desc": [
+            {
+                "desc": "You conjure a mass of thick, sticky webbing at a point of your choice within range. The webs fill a 20ft. cube from that point. The webs are difficult terrain, and lightly obscure the area. If the webs aren't anchored between 2 solid masses, such as walls or trees, or layered across a floor, wall, or ceiling, the web collapses in on itself, and the spell ends early at the start of your next turn. Webs layered over a flat surface have a depth of 5ft."
+            },
+            {
+                "desc": "Each creature that enters the webs for the first time on a turn, or starts its turn there, must succeed on a DEX saving throw, or be restrained as long as it remains in the webs, or until it breaks free. A restrained creature may use its action to make a STR check, freeing itself on a success."
+            },
+            {
+                "desc": "The webs are flammable. Any 5ft. cube of webs exposed to fire burns away in 1 round, dealing 2d4 @fire damage to any creature that starts its turn in the fire."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "revivify": {
+        "name": "Revivify",
+        "level": 3,
+        "school": "necromancy",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "touch",
+        "vsm": [true, true, "diamonds worth 300gp, which the spell consumes"],
+        "duration": {
+            "time": "instantaneous"
+        },
+
+        "desc": [
+            {
+                "desc": "You touch a creature that has died within the last minute of any cause other than old age. The creature returns to life with 1 hitpoints. This spell does not restore any missing body parts."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "cleric", "druid", "paladin", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "aura-of-life": {
+        "name": "Aura of Life",
+        "level": 4,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (30ft.)",
+        "vsm": [true, false, false],
+        "duration": {
+            "amount": 10,
+            "time": "minute",
+            "concentration": true
+        },
+
+        "desc": [
+            {
+                "desc": "Life-preserving energy radiates from you in an aura with a 30ft. radius. Until the spell ends, the aura moves with you, centered on you. Any number of creatures of your choice in the aura gains resistance to @necrotic damage, and their hitpoint maximum cannot be reduced. Additionally, any living creature of your choice that has 0 hitpoints when it starts its turn in the aura regains 1 hitpoint."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["cleric", "paladin"],
+        "source": "Player's Handbook"
+    },
+    "flame-strike": {
+        "name": "Flame Strike",
+        "level": 5,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a pinch of sulfur"],
+        "duration": {
+            "time": "instantaneous"
+        },
+
+        "desc": [
+            {
+                "desc": "A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10ft. radius, 40ft. high cylinder centered on a point within range must make a DEX saving throw, taking 4d6 @fire damage + 4d6 @radiant{*} on a failed save, or half as much on a successful one."
+            }
+        ],
+        "levels": [
+            "",
+            " + an extra 1d6 @fire damage or @radiant damage, your choice, ",
+            " + an extra 2d6 @fire damage or @radiant damage, your choice, ",
+            " + an extra 3d6 @fire damage or @radiant damage, your choice, ",
+            " + an extra 4d6 @fire damage or @radiant damage, your choice, "],
+        
+        "lists": ["cleric"],
+        "source": "Player's Handbook"
+    },
+    "mass-cure-wounds": {
+        "name": "Mass Cure Wounds",
+        "level": 5,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+
+        "desc": [
+            {
+                "desc": "A wave of healing energy washes out from a point of your choice within range. Choose up to 6 creatures in a 30ft. radius sphere centered on that point that aren't constructs or undead. Each target regains hitpoints equal to 3d8 + your spellcasting ability modifier. "
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["bard", "cleric", "druid"],
+        "source": "Player's Handbook"
+    },
+    "flaming-sphere": {
+        "name": "Flaming Sphere",
+        "level": 2,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "60ft.",
+        "vsm": [true, true, "a bit of tallow, a pinch of brimstone, and a dusting of powdered iron"],
+        "duration": {
+            "amount": 1,
+            "time": "minute",
+            "concentration": true
+        },
+
+        "desc": [
+            {
+                "desc": "You summon a sphere of flame that fills a 5ft. space in an unoccupied space of your choice within range. Any creature that ends its turn within 5ft. of the sphere must make a DEX saving throw, taking 2d6 @fire damage on a failed save, or half as much on a successful one."
+            },
+            {
+                "desc": "As a bonus action, you may move the sphere up to 30ft. Whenever you do so, you may direct it over barriers up to 5ft. tall, and jump it across pits up to 10ft. wide. The sphere ignites flammable objects not being worn or carried, and it sheds bright light in a 20ft. radius, and dim light for an another 20ft. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["druid", "sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "scorching-ray": {
+        "name": "Scorching Ray",
+        "level": 2,
+        "school": "evocation",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "120ft.",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instantaneous"
+        },
+
+        "desc": [
+            {
+                "desc": "You create {*} rays of fire, and hurl them at targets within range. You may hurl them at 1 target, or several. Make a ranged spell attack for each ray. On a hit, the target takes 2d6 @fire damage."
+            }
+        ],
+        "levels": [3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["sorcerer", "wizard"],
         "source": "Player's Handbook"
     }
 }

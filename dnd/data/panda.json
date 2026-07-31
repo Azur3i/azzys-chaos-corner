@@ -32,36 +32,5 @@
         
         "lists": ["wizard"],
         "source": "Source"
-    },
-    "star-assault": {
-        "name": "Star Assault",
-        "level": 3,
-        "school": "conjuration",
-
-        "castTime": {
-            "amount": 1,
-            "time": "action"
-        },
-        "range": "120ft.",
-        "vsm": [true, true, "an origami bird, and a rock resembling a sending stone"],
-        "duration": {
-            "time": "instantaneous"
-        },
-        
-        "desc": [
-            {
-                "desc": "Lights, as if from falling stars, seem to appear from distantly behind you. Designate a space you can see within range. The chasing lights descend on it, to violently suppress the area with a flurry of blinding lights."
-            },
-            {
-                "desc": "Indicate {1} 55ft. lines that intersect at the central space. A creature hit by any number of lines must make a DEX saving throw, taking {2}d6 @force damage on a failed save, or half as much on a successful one. A creature in the central space is hit by all the intersecting lines, and must make a saving throw for each line seperately."
-            },
-            {
-                "desc": "The stars cannot travel through solid obstacles. Should there be no path following any of the lines that would give its respective star line of sight over the entirety of the straight line, it prioritises paths that allow it to hit any creatures in the central tile, and after that, hitting the most targets."
-            }
-        ],
-        "levels": [[2, 5], [2, 5], [2, 6], [3, 6], [3, 7], [3, 7], [4, 8]],
-        
-        "lists": ["artificer", "wizard", "ranger", "oracle"],
-        "source": "The Archivist's Anthology of Forgotten Lore"
     }
 }
