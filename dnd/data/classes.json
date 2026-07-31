@@ -861,7 +861,7 @@
                 },
                 {
                     "name": "Crimson Rite",
-                    "desc": "You learn to invoke a rite of hemocraft that infuses your weapon strikes with elemental energy. As a bonus action, you can activate any rite you know on one weapon you're holding. The effect of the rite lasts until you finish a short rest. A weapon can only hold one active rite at a time, and other creatures cannot gain the benefit of your rite. When you activate a rite, you take @necrotic damage equal to one roll of your hemocraft die. This damage cannot be reduced in any way. Choose one of the following rites:",
+                    "desc": ["You learn to invoke a rite of hemocraft that infuses your weapon strikes with elemental energy. As a bonus action, you can activate any rite you know on one weapon you're holding. The effect of the rite lasts until you finish a short rest. A weapon can only hold one active rite at a time, and other creatures cannot gain the benefit of your rite. When you activate a rite, you take @necrotic damage equal to one roll of your hemocraft die. This damage cannot be reduced in any way.", "While the rite is in effect, the weapon attacks are considered magical, and deal extra damage equal to your hemocraft die of the type determined by the chosen rite. A weapon may hold only one active rite at a time. Other creatures cannot gain the benefit of your rite.", "Choose one of the following rites:"],
                     "type": "list",
                     "content": [
                         {
