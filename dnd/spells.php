@@ -30,10 +30,8 @@ foreach ($items as $spell) {
     }
 }
 
-foreach ([$schools, $sources, $classes] as $type) {
-    uasort($type, function ($a, $b) {
-        return strcmp($a, $b);
-    });
+foreach (["schools", "sources", "classes"] as $type) {
+    uasort($$type, fn($a, $b) => strcmp($a, $b));
 }
 
 // --
@@ -78,5 +76,7 @@ $title = "spell";
 <?php include ROOT . "/tpl/header-dnd.php"; ?>
 
 <?php include ROOT . "/tpl/list-view.php"; ?>
+
+<script>document.title = "Spells - Azzy's Chaos Corner";</script>
 
 <?php include ROOT . "/tpl/footer.php"; ?>
