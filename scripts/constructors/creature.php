@@ -11,11 +11,11 @@ $statblock = $statblocks[$creatureName];
 
 ?>
 
-<div class="content-list" style="padding: 1.25rem; margin: 0;" id="creature-display" spell="<?= $creatureName ?>">
-    <div class="scroll">
+<div id="select-display" class="blue box scroll no-margin" item="<?= $raceName ?>">
         <div class="row spell-list align-items-center" style="padding: 0; padding-left: 1.5rem; width: 100%;">
             <h1 class="xlg col" id="creaturename" data-name="<?= $statblock["name"] ?>"><?= $statblock["name"] ?></h1>
             <h3 class="md col" style="text-align: right;">Source: <?= $statblock["source"] ?></h3>
+            <a class="md col-auto white ms-auto button-pin"><img src="/assets/img/pin.png" id="pin"></a>
 
             <h2 class="lg"><?= $statblock["subname"] ?? "" ?></h2>
 

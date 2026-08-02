@@ -63,13 +63,13 @@ function renderAbility($ability, $z=0, $cls=null) {
 
     // name and description
     if (!empty($ability["name"]) || !empty($ability["desc"])) {
-        echo '<p class="md">';
+        echo '<p class="md txt">';
         if (!empty($ability["name"]) && $z !== 0) {
             echo '<b>' . $ability["name"] . '. </b>';
         }
         if (!empty($ability["desc"])) {
             if (is_array($ability["desc"])) {
-                echo implode('</p><p class="md" style="text-indent: 2rem;">', renderText($ability["desc"]));
+                echo implode('</p><p class="md txt">', renderText($ability["desc"]));
             } else {
                 echo renderText($ability["desc"]);
             }
@@ -138,7 +138,7 @@ function renderAbility($ability, $z=0, $cls=null) {
                             data-bs-parent="#subclass-list">
                             <div class="accordion-body">
                                 <div class="row">
-                                    <p class="md"><?= implode('</p><br ><p class="md">', renderText($sbcls["desc"])); ?></p>
+                                    <p class="md title"><?= implode('</p><p class="md title" style="margin-top: 1rem;">', renderText($sbcls["desc"])); ?></p>
                                 </div>
                                 <hr >
                                 <div class="row">
@@ -178,6 +178,14 @@ function startsWith($str, $array) {
         }
     }
     return false;
+}
+
+function isPlural($val) {
+    if ($val === 1) {
+        return "";
+    } else {
+        return "s";
+    }
 }
 
 ?>

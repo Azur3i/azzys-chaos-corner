@@ -18,6 +18,6 @@
     </nav>
 </header>
 
-<div class="main-content top" id="spell-preview">
-    <div id="spell-preview-content"></div>
+<div class="pink box top" id="spell-preview">
+    <div class="pink box" id="spell-preview-content"></div>
 </div>

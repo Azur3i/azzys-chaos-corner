@@ -1,10 +1,6 @@
 let spellCache = {};
 let levelCache = {};
 
-$(".dnd-nav").click(function () {
-    $("#dnd-mc").load("/pages/dnd/" + $(this).text().toLowerCase() + ".php");
-});
-
 $("tbody td:not([rowspan])").hover(
     function() {
         $(this).parent().addClass("hover");
@@ -15,7 +11,7 @@ $("tbody td:not([rowspan])").hover(
 );
 
 $(function () {
-    document.title = $("#title").data("id") + "Azzy's Chaos Corner";
+    document.title = toUpper($("#title").data("id")) + "s - Azzy's Chaos Corner";
 });
 
 let hideTimer;
@@ -133,9 +129,9 @@ function hideSpellPreview(timer) {
 }
 
 // allows spell preview to switch between spell levels
-$("#spell-preview, #spellbox").on("click", "div.spell-level-selector > a.button-lvl", function () {
+$(document).on("click", ".button-lvl", function () {
     let level = $(this).attr("value");
-    let spell = $("#spell-display").attr("spell");
+    let spell = $("#select-display").attr("item");
 
     $(".button-lvl").removeClass("active");
     $(this).addClass("active");
@@ -183,32 +179,45 @@ $(document).on("hover", ".button-toggle, .button-toggle-2",
 );
 
 // cycle through options on click
-$(".button-toggle").click(function () {
+$(document). on("click", ".button-toggle", function () {
     $(this).toggleClass("active");
 });
 
-$(".button-toggle-2").on({
-    "click": function () {
-        if ($(this).hasClass("pos")) {
-            $(this).removeClass("pos");
-            $(this).addClass("neg");
-        } else if ($(this).hasClass("neg")) {
-            $(this).removeClass("neg");
-        } else {
-            $(this).addClass("pos");
-        };
-        filterSpell();
-    },
-    "contextmenu": function(e) {
-        e.preventDefault();
-        if ($(this).hasClass("neg")) {
-            $(this).removeClass("neg");
-            $(this).addClass("pos");
-        } else if ($(this).hasClass("pos")) {
-            $(this).removeClass("pos");
-        } else {
-            $(this).addClass("neg");
-        };
-        filterSpell();
-    }
+$(document).on("click", ".button-toggle-2", function () {
+    if ($(this).hasClass("pos")) {
+        $(this).removeClass("pos");
+        $(this).addClass("neg");
+    } else if ($(this).hasClass("neg")) {
+        $(this).removeClass("neg");
+    } else {
+        $(this).addClass("pos");
+    };
+    applyFilter();
 });
+$(document).on("contextmenu", ".button-toggle-2", function(e) {
+    e.preventDefault();
+    if ($(this).hasClass("neg")) {
+        $(this).removeClass("neg");
+        $(this).addClass("pos");
+    } else if ($(this).hasClass("pos")) {
+        $(this).removeClass("pos");
+    } else {
+        $(this).addClass("neg");
+    };
+    applyFilter();
+});
+
+// switch buttons
+$(document).on("click", ".button-switch:not(.active)", function () {
+    $(".button-switch").removeClass("active");
+    $(this).addClass("active");
+});
+
+function isPlural(x) {
+    if (x === 1 || !Number.isInteger(x)) {return "";}
+    else {return "s";}
+}
+
+function toUpper(x) {
+    return x.toLowerCase().replace(/\b\w/g, ch => ch.toUpperCase());
+}

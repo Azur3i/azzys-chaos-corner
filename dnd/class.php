@@ -4,11 +4,9 @@
 <?php include ROOT . "/tpl/header-dnd.php"; ?>
 <?php $target = $_GET["class"]; ?>
 
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="main-content col-md-12 col-lg-9 mx-auto">
-            <?php include ROOT . "/scripts/constructors/class.php"; ?>
-        </div>
+<div class="main-content bottom-margin container-fluid row">
+    <div class="blue box col-md-12 col-lg-9 mx-auto">
+        <?php include ROOT . "/scripts/constructors/class.php"; ?>
     </div>
 </div>
 

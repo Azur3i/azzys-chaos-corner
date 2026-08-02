@@ -3,6 +3,5 @@
                 <a style="height: 1.8rem; padding: 0 2rem 0 2rem;" class="button pink sm button-top mx-auto low-opac" href="#">Back to top ↑</a>
             </nav>
         </footer>
-        <script src="/scripts/js/scripts.js"></script>
     </body>
 </html>

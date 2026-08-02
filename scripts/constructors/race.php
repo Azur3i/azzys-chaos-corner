@@ -56,20 +56,20 @@ function renderASI ($asi) {
 
 ?>
 
-<div class="content-list" style="margin: 0;" id="race-display" race="<?= $raceName ?>">
-    <div class="scroll">
-        <h1 class="title" id="racename" data-name="<?= $target["name"] ?>"><?= $target["name"] ?></h1>
+<div id="select-display" class="blue box scroll no-margin" item="<?= $raceName ?>">
+        <h1 class="title" id="select-item" data-name="<?= $target["name"] ?>"><?= $target["name"] ?></h1>
+        <a class="md col-auto white ms-auto button-pin"><img src="/assets/img/pin.png" id="pin"></a>
         <p class="sm title" style="opacity: 0.5;">Source: <?= $target["source"] ?></p>
 
         <hr >
 
         <? // description and image ?>
-        <div class="row" style="margin: 0; height: auto;">
-            <div class="col my-auto">
+        <div class="row">
+            <div class="col">
                 <p class="md title"><?= implode('</p><p class="md title" style="margin-top: 1rem;">', $target["desc"]) ?></p>
             </div>
             <?php if (file_exists(ROOT . "/assets/img/dnd/races/$raceName.png")): ?>
-                <img id="race-img" class="col-auto my-auto" src="/assets/img/dnd/races/<?= $raceName ?>.png">
+                <img id="item-img" class="col-auto my-auto" src="/assets/img/dnd/races/<?= $raceName ?>.png">
             <?php endif; ?>
         </div>
         
@@ -78,42 +78,38 @@ function renderASI ($asi) {
         <? // body and mind ?>
         <div class="mx-auto md row" style="width: 85%; margin: 0;">
             <? // body ?>
-            <div class="col">
-                <div class="mx-auto md" style="width: 90%;">
-                    <p class="lg title">Body</p>
-                    <hr style="color: rgb(var(--black)); margin-top: 0;">
+            <div class="col mx-auto md" style="width: 90%;">
+                <p class="lg title">Body</p>
+                <hr style="color: rgb(var(--black)); margin-top: 0;">
 
-                    <?php if (empty($target["creatureType"]) && empty($target["size"]) && empty($target["speed"])): ?>
-                        <p style='text-align: center;'>Defined by options below.</p>
-                    <?php endif; ?>
+                <?php if (empty($target["creatureType"]) && empty($target["size"]) && empty($target["speed"])): ?>
+                    <p style='text-align: center;'>Defined by options below.</p>
+                <?php endif; ?>
 
-                    <?php echo (!empty($target["asi"])) ? "<p style='margin-bottom: 1rem;'><b>Alignment Score Increase. </b>" . renderASI($target['asi']) . "</p>" : ""; ?>
-                    <?php echo (!empty($target["creatureType"])) ?
-                        "<p style='margin-bottom: 1rem;'><b>Creature Type. </b>You are a" .
-                        (startsWith($target["creatureType"], ["a", "e", "i", "o", "u"]) ? "n" : "") .
-                        " " .
-                        $target["creatureType"] .
-                        ".</p>" : "";
-                    ?>
-                    <?php echo (!empty($target["size"])) ? "<p style='margin-bottom: 1rem;'><b>Size. </b>" . $target['size'] . "</p>" : "" ?>
-                    <?php echo (!empty($target["speed"])) ? "<p style='margin-bottom: 1rem;'><b>Speed. </b>Your base walking speed is " . $target['speed'] . "ft.</p>" : "" ?>
-                </div>
+                <?php echo (!empty($target["asi"])) ? "<p style='margin-bottom: 1rem;'><b>Alignment Score Increase. </b>" . renderASI($target['asi']) . "</p>" : ""; ?>
+                <?php echo (!empty($target["creatureType"])) ?
+                    "<p style='margin-bottom: 1rem;'><b>Creature Type. </b>You are a" .
+                    (startsWith($target["creatureType"], ["a", "e", "i", "o", "u"]) ? "n" : "") .
+                    " " .
+                    $target["creatureType"] .
+                    ".</p>" : "";
+                ?>
+                <?php echo (!empty($target["size"])) ? "<p style='margin-bottom: 1rem;'><b>Size. </b>" . $target['size'] . "</p>" : "" ?>
+                <?php echo (!empty($target["speed"])) ? "<p style='margin-bottom: 1rem;'><b>Speed. </b>Your base walking speed is " . $target['speed'] . "ft.</p>" : "" ?>
             </div>
             
             <? // mind ?>
-            <div class="col">    
-                <div class="mx-auto md" style="width: 90%;">
-                    <p class="lg title">Mind</p>
-                    <hr style="color: rgb(var(--black)); margin-top: 0;">
+            <div class="col mx-auto md" style="width: 90%;">    
+                <p class="lg title">Mind</p>
+                <hr style="color: rgb(var(--black)); margin-top: 0;">
 
-                    <?php if (empty($target["age"]) && empty($target["alignment"]) && empty($target["languages"])): ?>
-                        <p style='text-align: center;'>Defined by options below.</p>
-                    <?php endif; ?>
-                
-                    <?php foreach (["age", "alignment", "languages"] as $attr): ?>
-                        <?php echo (!empty($target[$attr])) ? "<p style='margin-bottom: 1rem;'><b>" . ucfirst($attr) . ". </b>" . $target[$attr] . "</p>" : "" ?>
-                    <?php endforeach; ?>
-                </div>
+                <?php if (empty($target["age"]) && empty($target["alignment"]) && empty($target["languages"])): ?>
+                    <p style='text-align: center;'>Defined by options below.</p>
+                <?php endif; ?>
+            
+                <?php foreach (["age", "alignment", "languages"] as $attr): ?>
+                    <?php echo (!empty($target[$attr])) ? "<p style='margin-bottom: 1rem;'><b>" . ucfirst($attr) . ". </b>" . $target[$attr] . "</p>" : "" ?>
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -121,7 +117,7 @@ function renderASI ($asi) {
         <?php if (count($target["abilities"])): ?>
         <hr >
         
-        <div class="row mx-auto" style="width: 85%; margin: 0;">
+        <div class="row mx-auto no-margin" style="width: 85%;">
             <p class="lg title">Abilities</p>
             <hr style="color: rgb(var(--black));">
 
@@ -167,6 +163,4 @@ function renderASI ($asi) {
             </div>
         </div>
         <?php endif; ?>
-
-    </div>
 </div>
