@@ -45,4 +45,7 @@ $title = "race";
 
 <?php include ROOT . "/tpl/list-view.php"; ?>
 
+<script>document.title = "Races - Azzy's Chaos Corner";</script>
+
 <?php include ROOT . "/tpl/footer.php"; ?>
+

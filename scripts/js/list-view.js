@@ -1,6 +1,5 @@
 let cache = [];
 let item = $("#title").data("id"); 
-let title = toUpper(item) + "s";
 
 let ajaxTimer;
 
@@ -31,7 +30,6 @@ function updateButton(button) {
 }
 
 function updateState(target) {
-    document.title = $("#select-item").data("name") + " - " + title + " - Azzy's Chaos Corner";
     history.pushState(null, "", "#" + target);
 
     if ($(`#${target}`).closest("#pinned").length) {

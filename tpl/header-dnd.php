@@ -7,11 +7,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar-dnd">
                 <ul class="navbar-nav ms-auto lavender low-opac">
-                    <li class="nav-item"><a class="nav-link button md" href="/dnd/classes">Classes</a></li>
-                    <li class="nav-item"><a class="nav-link button md" href="/dnd/subclasses">Subclasses</a></li>
-                    <li class="nav-item"><a class="nav-link button md" href="/dnd/races">Races</a></li>
-                    <li class="nav-item"><a class="nav-link button md" href="/dnd/spells">Spells</a></li>
-                    <li class="nav-item"><a class="nav-link button md" href="/dnd/bestiary">Bestiary</a></li>
+                    <li class="nav-item"><a class="nav-link button md" id="nav-class" href="/dnd/classes">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link button md" id="nav-subclass" href="/dnd/subclasses">Subclasses</a></li>
+                    <li class="nav-item"><a class="nav-link button md" id="nav-race" href="/dnd/races">Races</a></li>
+                    <li class="nav-item"><a class="nav-link button md" id="nav-spell" href="/dnd/spells">Spells</a></li>
+                    <li class="nav-item"><a class="nav-link button md" id="nav-creature" href="/dnd/bestiary">Bestiary</a></li>
                 </ul>
             </div>
         </div>

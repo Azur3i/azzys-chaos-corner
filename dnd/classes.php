@@ -36,6 +36,7 @@ $types = [
     </div>
 </div>
 
-<div id="title" data-id="Classes - "></div>
+<div id="title" data-id="class"></div>
+<script>document.title = "Classes - Azzy's Chaos Corner";</script>
 
 <?php include ROOT . "/tpl/footer.php"; ?>

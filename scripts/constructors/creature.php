@@ -200,3 +200,5 @@ $statblock = $statblocks[$creatureName];
         <?php endforeach; ?>
     </div>
 </div>
+
+<script>document.title = "<?= $statblock["name"] ?> - Bestiary - Azzy's Chaos Corner";</script>

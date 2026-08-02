@@ -82,4 +82,6 @@ $title = "creature"
 
 <?php include ROOT . "/tpl/list-view.php"; ?>
 
+<script>document.title = "Bestiary - Azzy's Chaos Corner";</script>
+
 <?php include ROOT . "/tpl/footer.php"; ?>

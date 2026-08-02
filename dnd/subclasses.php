@@ -64,6 +64,7 @@ require_once ROOT . "/scripts/php/general.php";
     </div>
 </div>
 
-<div id="title" data-id="Subclasses - "></div>
+<data id="title" data-id="subclass"></data>
+<script>document.title = "Subclasses - Azzy's Chaos Corner";</script>
 
 <?php include ROOT . "/tpl/footer.php"; ?>

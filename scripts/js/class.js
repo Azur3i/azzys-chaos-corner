@@ -1,6 +1,6 @@
 function checkSubclass (cls, sbcls) {
-    $(".subclass-check").removeClass("checked");
-    $(this).addClass("checked");
+    $(".subclass-check").removeClass("active");
+    $(this).addClass("active");
     $.post(
         "/scripts/getters/subclass.php", {
             cls: cls,
@@ -16,17 +16,14 @@ function checkSubclass (cls, sbcls) {
     )
 };
 
+function checkSubclassByHash () {
+    checkSubclass($("h1").data("name"), location.hash.substring(1));
+}
+
 $(".subclass-check").click(function (e) {
-    let data = $(this).attr("data").split("~");
-
-    history.pushState(null, "", "#" + data[1]);
-    checkSubclass($("h1").data("name"), location.hash.substring(1));
+    history.pushState(null, "", "#" + $(this).attr("data").split("~")[1]);
+    checkSubclassByHash();
 });
 
-$(function () {
-    checkSubclass($("h1").data("name"), location.hash.substring(1));
-});
-
-$(window).on("hashchange", function () {
-    checkSubclass($("h1").data("name"), location.hash.substring(1));
-});
+$(checkSubclassByHash);
+$(window).on("hashchange", checkSubclassByHash);

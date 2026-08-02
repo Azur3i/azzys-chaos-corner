@@ -15,6 +15,7 @@ include ROOT . "/tpl/header-dnd.php";
 </div>
 
 <?php $className = ucwords(str_replace("-", " ", $mainClass)); ?>
-<div id="title" data-id="<?= ucwords($className) . ": " . $target["name"] ?> - "></div>
+
+<script>document.title = "<?= ucwords($className) . ": " . $target["name"] ?> - Azzy's Chaos Corner";</script>
 
 <?php include ROOT . "/tpl/footer.php"; ?>

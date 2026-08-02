@@ -10,10 +10,6 @@ $("tbody td:not([rowspan])").hover(
     }
 );
 
-$(function () {
-    document.title = toUpper($("#title").data("id")) + "s - Azzy's Chaos Corner";
-});
-
 let hideTimer;
 
 // hover on spell link: load and show respective preview
@@ -221,3 +217,5 @@ function isPlural(x) {
 function toUpper(x) {
     return x.toLowerCase().replace(/\b\w/g, ch => ch.toUpperCase());
 }
+
+$(() => $(`#nav-${$("#title").data("id")}`).addClass("active"));

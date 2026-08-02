@@ -10,8 +10,7 @@
     </div>
 </div>
 
-<div id="title" data-id="<?= $target["name"] ?> - "></div>
-
+<script>document.title = "<?= $target["name"] ?> - Azzy's Chaos Corner";</script>
 <script src="/scripts/js/class.js"></script>
 
 <?php include ROOT . "/tpl/footer.php"; ?>

@@ -110,3 +110,5 @@ $cantripLevels = [1, 5, 11, 17];
         </div>
     </div>
 </div>
+
+<script>document.title = "<?= $targetSpell["name"] ?> - Spells - Azzy's Chaos Corner";</script>

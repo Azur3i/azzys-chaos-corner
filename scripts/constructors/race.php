@@ -164,3 +164,5 @@ function renderASI ($asi) {
         </div>
         <?php endif; ?>
 </div>
+
+<script>document.title = "<?= $target["name"] ?> - Races - Azzy's Chaos Corner";</script>
