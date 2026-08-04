@@ -2281,6 +2281,98 @@
             },
             "source": "The Crooked Moon"
         },
+        "oath-of-conquest": {
+            "name": "Oath of Conquest",
+            "desc": ["The Oath of Conquest calls to paladins who seek glory in battle and the subjugation of their enemies. It isn't enough for these paladins to establish order. They must crush the forces of chaos. Sometimes called knight tyrants or iron mongers, those who swear this oath gather into grim orders that serve gods or philosophies of war and well-ordered might.", "Some of these paladins go so far as to consort with the powers of the Nine Hells, valuing the rule of law over the balm of mercy. The archdevil Bel, warlord of Avernus, counts many of these paladins - called hell knights - as his most ardent supporters. Hell knights cover their armor with trophies taken from fallen enemies, a grim warning to any who dare oppose them and the decrees of their lords. These knights are often most fiercely resisted by other paladins of this oath, who believe that the hell knights have wandered too far into darkness."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "3": [
+                    {
+                        "name": "Oath Spells",
+                        "desc": "You gain access to the following spells at the specified levels. You always have them prepared, and they do not count against the number of spells you can prepare:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Paladin level", "Spells"],
+                                ["3rd", "@armor of agathys, @command"],
+                                ["5th", "@hold person, @spiritual weapon"],
+                                ["9th", "@bestow curse, @fear"],
+                                ["13th", "@dominate beast, @stoneskin"],
+                                ["17th", "@cloudkill, @dominate person"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Tenets of Conquest",
+                        "desc": "The tenets of the Oath of Castigation drive a paladin to act with conviction and without mercy in the destruction of wickedness. Though the exact words and strictures of the Oath of Castigation vary, paladins of this oath share these tenets:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Douse the Flame of Hope",
+                                "desc": "It is not enough to merely defeat an enemy in battle. Your victory must be so overwhelming that your enemies' will to fight is shattered forever. A blade can end a life. Fear can end an empire."
+                            },
+                            {
+                                "name": "Rule with an Iron First",
+                                "desc": "Once you have conquered, tolerate no dissent. Your word is law. Those who obey it shall be favored. Those who defy it shall be punished as an example to all who might follow."
+                            },
+                            {
+                                "name": "Strength Above All",
+                                "desc": "You shall rule until a stronger one arises. Then you must grow mightier and meet the challenge, or fall to your own ruin."
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Channel Divinity",
+                        "desc": "You gain the following 2 Channel Divinity options:",
+                        "type": "list",
+                        "content": [
+                            {
+                                "name": "Castigate",
+                                "desc": "As an action, you may clap those you would bring to justice in fiery shackles. Choose a number of creature up to your CHA (minimum of 1) you can see within 30ft. of you. Each creature must succeed on a STR saving throw, or be wrapped in fiery shackles and have its speed reduced to 0 for 1 minute. As a bonus action, you may cause the shackles to flare; each shackled creature takes 2d6 @fire damage. A shackled creature may repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+                            },
+                            {
+                                "name": "Incite",
+                                "desc": "As an action, you may better seek out wickness and corruption. For 10 minutes, you gain advantage on Investigation (INT) and Insight (WIS) checks. As a bonus action during this time, you may choose a creature you can see within 10ft. of you. The target must succeed on a CHA saving throw, or be frightened for 1 minute. While the target is frightened in this way, it cannot speak a deliberate lie. The creature stops being frightened if the target takes damage, or if you use this bonus action again."
+                            }
+                        ]
+                    }
+                ],
+                "7": [
+                    {
+                        "name": "Kindling Aura",
+                        "desc": "You and any number of creatures of your choice within your aura of protection feature may ignore creatures' resistance to @fire and @radiant damage. Whenever an affected creature hits with a weapon attack, it may deal @fire damage instead of the damage it would normally do. Additionally, you and affected creatures in the aura may add your CHA (minimum of 1) to Investigation (INT) and Insight (WIS) checks."
+                    }
+                ],
+                "15": [
+                    {
+                        "name": "Fervent Inquisitor",
+                        "desc": "As a reaction whenever a creature damages you or a creature not hostile to you within 30ft. of you that you can see, you may gain advantage on your next attack roll against the attacker. Additionally, whenever you deal @fire or @radiant damage to a creature with half its hitpoints or less remaining, you become aware of any lies the creature has willingly and knowingly spoken to you in the past 24 hours."
+                    }
+                ],
+                "20": [
+                    {
+                        "name": "Fire and Brimstone",
+                        "desc": "As a bonus action, you embody cleansing flame, and gain the following benefits for 1 minutes, or until you end them as a free action. You may use this feature once per long rest. You may expend a spell slot of 5th level or higher to use this feature without expending a use.",
+                        "type": "list",
+                        "content": [
+                            {
+                                "desc": "You gain immunity to @fire damage."
+                            },
+                            {
+                                "desc": "Lashes of divine flame increase your reach by 10ft. Your melee attacks ignore half and three-quarters cover."
+                            },
+                            {
+                                "desc": "Whenever you hit a creature with an opportunity attack, or whenever a creature hostile to you ends its turn within your reach, it must succeed on a CHA saving throw, or be knocked prone, and have its speed reduced to 0 until the start of its next turn."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "source": "The Crooked Moon"
+        },
         "oath-of-devotion": {
             "name": "Oath of Devotion",
             "desc": ["The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue and order. Sometimes called cavaliers, white knights or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good, and use their gods' tenents as the measure of their devotion. They hold angels - the perfect servants of good - as their ideals, and incorporate images of angelic wings into their helmets or coats of arms."],
@@ -3383,6 +3475,75 @@
         }
     },
     "warlock": {
+        "the-casino": {
+            "name": "The Casino",
+            "desc": ["The enigmatic sorcerer Sep7em 7. Sep7onius, a man renowned for his superhuman luck, set up a casino in the ultimate plane of uncertainty and chance: Limbus, the Plane of Chaos."],
+            "magic": {
+                "caster": "none"
+            },
+            "levels": {
+                "1": [
+                    {
+                        "name": "Expanded Spell List",
+                        "desc": "The following spells are added to the warlock spell list for you:",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["Spell level", "Spells"],
+                                ["1st", "@, @"],
+                                ["2nd", "@, @"],
+                                ["3rd", "@, @"],
+                                ["4th", "@, @"],
+                                ["5th", "@, @"]
+                            ]
+                        }
+                    },
+                    {
+                        "name": "A",
+                        "desc": "You gain proficiency in the Sleight of Hand (DEX) skill, and one gaming set of your choice."
+                    },
+                    {
+                        "name": "B",
+                        "desc": "",
+                        "type": "table",
+                        "content": {
+                            "header": true,
+                            "content": [
+                                ["1d8", "1 * n Effect", "2 * n Effect", "3 * n Effect"],
+                                [1, "You gain 1cp.", "", ""],
+                                [2, "You gain 1cp.", "", ""],
+                                [3, "You gain 1cp.", "", ""],
+                                [4, "You gain 1cp.", "", ""],
+                                [5, "You gain 1cp.", "", ""],
+                                [6, "You gain 1cp.", "", ""],
+                                [7, "You gain 1cp.", "", "Jackpot!"],
+                                [8, "You gain 1cp.", "", ""]
+                            ]
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "name": "",
+                        "desc": ""
+                    }
+                ],
+                "10": [
+                    {
+                        "name": "",
+                        "desc": ""
+                    }
+                ],
+                "14": [
+                    {
+                        "name": "",
+                        "desc": ""
+                    }
+                ]
+            },
+            "source": "?"
+        },
         "the-catalyst": {
             "name": "The Catalyst",
             "desc": ["Stumbling upon ancient ruins, or research of ancient texts and scripts, you stumbled upon a seemingly well-maintained crypt, housing an uncannily unblemished statue of gold grandeur. Equally uncanny, it granted you an enticing offer: an eternal life of power. Either by accident, or by choice, you granted access to your body and soul to C'ta-rizh the Accumulator, a devilish entity older than script and man, more knowledgeable than many a deity. It bides its time - waiting, collecting, preserving - to achieve its goals, now with you in its ranks, whether you want to or not."],

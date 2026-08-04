@@ -1,7 +1,7 @@
 <?php
 $classes = json_decode(file_get_contents(ROOT . "/dnd/data/classes.json"), true);
 $class = $target;
-$target = $classes[$target];
+$target = $classes[$target] ?? null;
 $levels = [
     [1, 2], [3, 4],
     [5, 6], [7, 8],
@@ -12,7 +12,9 @@ $levels = [
 
 ?>
 
-<div class="content-list">
+<?php if ($target): ?>
+
+<div class="blue box col-md-12 col-lg-9 mx-auto">
     <a  class="button white md position-absolute m-2"
         href="javascript:history.back()"
         title="Back to the previous page."
@@ -76,3 +78,11 @@ $levels = [
     <?php endforeach; ?>
     
 </div>
+
+<?php else: ?>
+    
+<div class="blue box col-lg-9 col-md-12 mx-auto">
+<?php include ROOT . "/tpl/404.php"; ?>
+</div>
+
+<?php endif; ?>

@@ -1,5 +1,8 @@
 <?php
 
+if (!defined("ROOT")) {define("ROOT", "../../");}
+require_once ROOT . "/scripts/php/general.php";
+
 function get_level($level, $school) {
     switch ($level) {
         case 0:
@@ -36,7 +39,7 @@ function get_time($time) {
         $result = $result . " (ritual)";
     }
 
-    return $result;
+    return renderText($result);
 }
 
 function get_first_level($str, $levels) {

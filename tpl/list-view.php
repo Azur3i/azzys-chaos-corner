@@ -10,7 +10,7 @@
                     <input id="searchbar" class="sm py-1 px-3" style="width: 100%;"></input>
                     <a id="clear-button" class="sm button col-aut white" style="">X</a>
                 </div>
-                <a class="sm button-toggle pink col-auto align-items-center" style="height: 2rem; margin-left: 1rem; padding: 0 1rem;" id="filter-button">Filters</a>
+                <a class="sm button-toggle pink col-auto high-opac" style="height: 2rem; margin-left: 1rem; padding: 0 1rem;" id="filter-button">Filters</a>
             </div>
 
             <?// filter menu ?>
@@ -45,7 +45,7 @@
                                 $n = 11; break;
                         }
                         foreach ($type["var"] as $i => $t): ?>
-                        <a data-id="<?= strtolower($t) ?>" class="sm button-toggle-2 filter-toggle toggle-<?= $typeName ?> col-<?= $n ?>"><?= $t ?></a>
+                        <a data-id="<?= strtolower($t) ?>" class="sm button-toggle-2 high-opac filter-toggle toggle-<?= $typeName ?> col-<?= $n ?>"><?= $i ?></a>
                         <?php endforeach; ?>
                     </div>
                     
@@ -74,7 +74,7 @@
                     // x -> id of spell; y -> spell properties
                     foreach ($items as $x => $y): ?>
                         <a 
-                            class="button-list"
+                            class="button-list high-opac"
                             style="grid-template-columns: 1fr auto;"
                             id="<?= $x ?>"
                             href="#<?= $x ?>"

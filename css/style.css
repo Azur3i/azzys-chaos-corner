@@ -93,7 +93,7 @@
 
     --fontsize: 1vw;
 
-    --bg-opac: 0.4;
+    --bg-opac: 0.2;
 }
 
 .pink {--color: var(--pink)}
@@ -102,9 +102,9 @@
 .white {--color: var(--white)}
 .black {--color: var(--black)}
 
-.low-opac {--bg-opac: 0.25}
-.mid-opac {--bg-opac: 0.4}
-.high-opac {--bg-opac: 0.5}
+.low-opac {--bg-opac: 0.1}
+.mid-opac {--bg-opac: 0.2}
+.high-opac {--bg-opac: 0.4}
 
 /* site defaults */
 
@@ -174,17 +174,13 @@ a {
     padding-top: 2.5vh;
 }
 
-.main-content.bottom-margin {
-    padding-bottom: 10vh;
-}
-
 .main-content > .box {
     padding: 1.5rem;
 }
 
 .box {
     color: rgb(var(--white));
-    background: rgb(var(--color) / 0.2);
+    background: rgb(var(--color) / var(--bg-opac));
     border: 1px solid rgb(var(--color));
     border-radius: 0.8rem;
 }
@@ -254,6 +250,10 @@ a {
     background-color: #FFAADD30;
     padding: 1vh 1rem;
     border-top: 1px solid #FFAADDFF;
+}
+
+hr.black {
+    color: rgb(var(--black));
 }
 
 /* general button */
@@ -806,7 +806,9 @@ table.ability {
 
 #select-display > div {
     align-items: center;
-    margin: 0;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #select-desc {
@@ -829,6 +831,15 @@ table.ability {
 
 .subrace > p:not(:first-of-type) {
     margin-top: 1rem;
+}
+
+#stats {    
+    padding: 0.5rem;
+}
+
+#stats > div {
+    padding: 0.2rem 0 0.5rem 0;
+    align-items: center;
 }
 
 /* ----- */

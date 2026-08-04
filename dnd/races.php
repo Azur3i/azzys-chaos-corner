@@ -9,22 +9,34 @@ uasort($items, function ($a, $b) {
     return strcmp($a["name"], $b["name"]);
 });
 
-$sources = [];
-foreach ($items as $race) {
-    if (!in_array($race["source"], $sources)) {
-        $sources[] = $race["source"];
+
+foreach (["source", "creatureType"] as $type) {
+$$type = [];
+    foreach ($items as $race) {
+        
+        if (!in_array($race[$type], $$type)) {
+            $$type[$race[$type]] = $race[$type];
+        }
+
+        uasort($$type, function ($a, $b) {
+            return strcmp($a, $b);
+        });
     }
 }
 
 // filters
-uasort($sources, function ($a, $b) {
-    return strcmp($a, $b);
-});
+
 
 $filterOptions = [
+    "creature-types" => [
+        "key" => "creatureType",
+        "var" => $creatureType,
+        "andor" => false,
+        "type" => "height"
+    ],
     "sources" => [
         "key" => "source",
-        "var" => $sources,
+        "var" => $source,
         "andor" => false,
         "type" => "height"
     ]

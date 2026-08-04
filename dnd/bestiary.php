@@ -16,13 +16,13 @@ $sizes = [];
 $sources = [];
 foreach ($items as $creature) {
     if (!in_array(ucwords($creature["creatureType"]), $creatureTypes)) {
-        $creatureTypes[] = ucwords($creature["creatureType"]);
+        $creatureTypes[ucwords($creature["creatureType"])] = $creature["creatureType"];
     }
     if (!in_array(ucwords($creature["size"]), $sizes)) {
-        $sizes[] = ucwords($creature["size"]);
+        $sizes[ucwords($creature["size"])] = $creature["size"];
     }
     if (!in_array($creature["source"], $sources)) {
-        $sources[] = $creature["source"];
+        $sources[$creature["source"]] = $creature["source"];
     }
 }
 
@@ -32,7 +32,10 @@ foreach ([$creatureTypes, $sizes] as $type) {
     });
 }
 
-$cr = [0, 0.125, 0.25, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+$cr = [0=>0, "1/8"=>0.125, "1/4"=>0.25, "1/2"=>0.5];
+foreach (range(1, 30) as $i) {
+    $cr[$i] = $i;
+}
 
 $filterOptions = [
     "cr" => [

@@ -7,198 +7,167 @@ require_once ROOT . "/scripts/php/bestiary.php";
 $statblocks = json_decode(file_get_contents(ROOT . "/dnd/data/statblocks.json"), true);
 $creatureName = $_GET["target"] ?? $creatureName;
 
-$statblock = $statblocks[$creatureName];
+$statblock = $statblocks[$creatureName] ?? null;
+
+if ($statblock):
+$prof = getProf($statblock["cr"]);
+
+$statistics = [
+    [
+        "Hitpoints" => $statblock["hitpoints"] ?? renderHP($statblock["hitdice"], $statblock["size"], getMod($statblock["stats"]["CON"])),
+        "Armor Class" => renderAC($statblock["ac"]),
+        "Speed" => renderSpeed($statblock["speed"]),
+        "Senses" => renderSenses($statblock["senses"])
+    ],
+    [
+        "STR" => $statblock["stats"]["STR"] . " (" . ($statblock["stats"]["STR"] < 9 ? "" : "+") . getMod($statblock["stats"]["STR"]) . ")",
+        "DEX" => $statblock["stats"]["DEX"] . " (" . ($statblock["stats"]["DEX"] < 9 ? "" : "+") . getMod($statblock["stats"]["DEX"]) . ")",
+        "CON" => $statblock["stats"]["CON"] . " (" . ($statblock["stats"]["CON"] < 9 ? "" : "+") . getMod($statblock["stats"]["CON"]) . ")",
+        "INT" => $statblock["stats"]["INT"] . " (" . ($statblock["stats"]["INT"] < 9 ? "" : "+") . getMod($statblock["stats"]["INT"]) . ")",
+        "WIS" => $statblock["stats"]["WIS"] . " (" . ($statblock["stats"]["WIS"] < 9 ? "" : "+") . getMod($statblock["stats"]["WIS"]) . ")",
+        "CHA" => $statblock["stats"]["CHA"] . " (" . ($statblock["stats"]["CHA"] < 9 ? "" : "+") . getMod($statblock["stats"]["CHA"]) . ")",
+    ],
+    [
+        "Damage Vulnerabilities" => renderDamageColors(implode(", ", array_map(fn($x) => "@$x", $statblock["dmgVulnerable"]))) ?? "None",
+        "Damage Resistances" => renderDamageColors(implode(", ", array_map(fn($x) => "@$x", $statblock["dmgResistant"]))) ?? "None",
+        "Damage Immunities" => renderDamageColors(implode(", ", array_map(fn($x) => "@$x", $statblock["dmgImmune"]))) ?? "None",
+        "Condition Immunities" => empty($statblock["conditionImmune"]) ? "None" : implode(", ", $statblock["conditionImmune"])
+    ],
+    [
+        "Skill Proficiencies" => renderSkills($statblock["skills"], ($statblock["expertise"] ?? null), $statblock["stats"], $prof),
+        "Saving Throw Proficiencies" => renderSaves($statblock["saves"], $statblock["stats"], $prof),
+        "Proficiency Bonus" => (is_int($prof) ? "+" : "") . $prof,
+        "Challenge Rating" => renderCR($statblock["cr"])
+    ]
+];
 
 ?>
 
-<div id="select-display" class="blue box scroll no-margin" item="<?= $raceName ?>">
-        <div class="row spell-list align-items-center" style="padding: 0; padding-left: 1.5rem; width: 100%;">
-            <h1 class="xlg col" id="creaturename" data-name="<?= $statblock["name"] ?>"><?= $statblock["name"] ?></h1>
-            <h3 class="md col" style="text-align: right;">Source: <?= $statblock["source"] ?></h3>
-            <a class="md col-auto white ms-auto button-pin"><img src="/assets/img/pin.png" id="pin"></a>
 
-            <h2 class="lg"><?= $statblock["subname"] ?? "" ?></h2>
+<div id="select-display" class="blue box scroll no-margin">
+    <?// title ?>
+    <div class="row">
+        <h1 class="xlg col"><?= $statblock["name"] ?></h1>
+        <h3 class="md col" style="text-align: right;">Source: <?= $statblock["source"] ?></h3>
+        <a class="md col-auto white ms-auto button-pin"><img src="/assets/img/pin.png" id="pin"></a>
 
-            <p class="md" style="opacity: 0.7; margin-bottom: 0.5rem;"><?= ucfirst($statblock["size"]) ?> <?= $statblock["creatureType"] ?>, <?= renderAlignment($statblock["alignment"]) ?></p>
+        <h2 class="lg"><?= $statblock["subname"] ?? "" ?></h2>
+
+        <p class="md txt-2">
+            <?php printf("%s %s, %s", ucfirst($statblock['size']), $statblock['creatureType'], renderAlignment($statblock['alignment'])) ?>
+        </p>
+    </div>
+
+    <?php if (!empty($statblock["desc"])): ?>
+    <hr >
+
+    <?// description ?>
+    <div id="select-desc" class="row">
+        <div class="col">
+            <p class="md title txt"><?= implode('</p><p class="md title txt">', $statblock["desc"]) ?></p>
         </div>
+        <?php if (file_exists(ROOT . "/assets/img/dnd/creatures/$creatureName.png")): ?>
+            <img id="item-img" class="col-auto" src="/assets/img/dnd/creatures/<?= $creatureName ?>.png">
+        <?php endif; ?>
+    </div>
+        
+    <?php endif; ?>
 
-        <?php if (!empty($statblock["desc"])): ?>
-        <hr >
-
-        <div class="row spell-list align-items-center mx-auto" style="padding-bottom: 0.5rem; margin: 0; width: 100%;">
-            <div class="col my-auto">
-                <p class="md title col"><?= implode("<br ><br >", $statblock["desc"]) ?></p>
+    <div class="row blue box low-opac title" id="stats">
+        <?php foreach ($statistics as $i => $a): ?>
+        <div class="row no-margin">
+            <?php foreach($a as $n => $b): ?>
+            <div class="col">
+                <p class="<?= $i < 2 ? "lg" : "md" ?>"><?= $n ?></p>
+                <hr class="black">
+                <p class="<?= $i < 2 ? "md" : "sm" ?>"><?= $b ?></p>
             </div>
-            <?php if (file_exists(ROOT . "/assets/img/dnd/creatures/$creatureName.png")): ?>
-                <img id="race-img" class="col-auto my-auto" src="/assets/img/dnd/creatures/<?= $creatureName ?>.png">
-            <?php endif; ?>
+            <?php endforeach; ?>
         </div>
-            
+
+        <?php if ($i !== array_key_last($statistics)): ?>
+        <hr >
         <?php endif; ?>
 
-        
-
-        <div style="background: rgb(var(--blue) / 0.05); border-radius: 0.8rem; border: 1px solid rgb(var(--blue) / 0.3); padding: 0.5rem 0; margin-bottom: 0.5rem;">
-            <? // row for HP, AC, speed and senses ?>
-            <div class="row spell-list align-items-center" style="padding-bottom: 0.5rem; margin: 0;">
-                <div class="col title">
-                    <p class="lg">Hitpoints</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="md"><?= $statblock["hitpoints"] ?? renderHP($statblock["hitdice"], $statblock["size"], getMod($statblock["stats"]["CON"])) ?></p>
-                </div>
-                <div class="col title">
-                    <p class="lg">Armor Class</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="md"><?= renderAC($statblock["ac"]) ?></p>
-                </div>
-                <div class="col title">
-                    <p class="lg">Speed</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="md"><?= renderSpeed($statblock["speed"]) ?></p>
-                </div>
-                <div class="col title">
-                    <p class="lg">Senses</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="md"><?= renderSenses($statblock["senses"]) ?></p>
-                </div>
-            </div>
-
-            <hr >
-
-            <? // row for game statistics ?>
-            <div class="row spell-list align-items-center" style="padding-bottom: 0.5rem; margin: 0;">
-                <?php foreach ($statblock["stats"] as $stat => $num): ?>
-                <div class="col title">
-                    <p class="lg"><?= $stat ?></p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="md"><?= $num ?> (<?= $num < 9 ? "" : "+" ?><?= getMod($num) ?>)</p>
-                </div>
-                <?php endforeach; ?>
-            </div>
-
-            <hr >
-            <? // row for weaknesses, resistances and immunities ?>
-            <div class="row spell-list align-items-center" style="padding-bottom: 0.5rem; margin: 0;">
-                <div class="col title">
-                    <p class="md">Damage Vulnerabilities</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= renderDamageColors(implode(", ", array_map(fn($x) => "@$x", $statblock["dmgVulnerable"]))) ?? "None" ?></p>
-                </div>
-                <div class="col title">
-                    <p class="md">Damage Resistances</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= renderDamageColors(implode(", ", array_map(fn($x) => "@$x", $statblock["dmgResistant"]))) ?? "None" ?></p>
-                </div>
-                <div class="col title">
-                    <p class="md">Damage Immunities</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= renderDamageColors(implode(", ", array_map(fn($x) => "@$x", $statblock["dmgImmune"]))) ?? "None" ?></p>
-                </div>
-                <div class="col title">
-                    <p class="md">Condition Immunities</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= empty($statblock["conditionImmune"]) ? "None" : implode(", ", $statblock["conditionImmune"]) ?></p>
-                </div>
-            </div>
-            
-            <hr >
-
-            <? // row for senses, skill proficiencies, saving throws and proficiency bonus ?>
-            <div class="row spell-list align-items-center" style="padding-bottom: 0.5rem; margin: 0;">
-                <?php $prof = getProf($statblock["cr"]) ?>
-                <div class="col title">
-                    <p class="md">Skill Proficiencies</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= renderSkills($statblock["skills"], ($statblock["expertise"] ?? null), $statblock["stats"], $prof) ?></p>
-                </div>
-                <div class="col title">
-                    <p class="md">Saving Throw Proficiencies</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= renderSaves($statblock["saves"], $statblock["stats"], $prof) ?></p>
-                </div>
-                <div class="col title">
-                    <p class="md">Proficiency Bonus</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= (is_int($prof) ? "+" : "") . $prof ?></p>
-                </div>
-                <div class="col title">
-                    <p class="md">Challenge Rating</p>
-                    <hr style="color: rgb(var(--black));">
-                    <p class="sm"><?= renderCR($statblock["cr"]) ?></p>
-                </div>
-            </div>
-
-        </div>
-
-        <?php // actions, bonus actions and reactions
-        $actions = [
-            "abilities" => "Traits",
-            "actions" => "Actions",
-            "bonusActions" => "Bonus Actions",
-            "reactions" => "Reactions"
-        ];
-        foreach ($actions as $type => $name): ?>
-        <div class="row mx-auto w-75" style="margin: 0;"> 
-            <?php if (!empty($statblock[$type])): ?>
-            <div class="row spell-list align-items-center" style="padding: 0.5rem 0; margin: 0;">
-                <p class="lg title"><?= $name ?></p>
-                <hr style="color: rgb(var(--black));">
-                <?php foreach ($statblock[$type] as $action): ?>
-                    <div class="row align-items-center" style="margin: 0; padding: 0.5rem 0;">
-                        <div class="col-3">
-                            <p class="md" style="text-align: right;">
-                                <b><?= is_array($action["name"]) ? implode("<br >", $action["name"]) : $action["name"] ?></b>
-                            </p>
-                        </div>
-                        <div class="col-9">
-                            <?= renderAbility($action) ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            
-            <?php endif; ?>
-        </div>
-        
-        <?php if (!empty($statblock[$type])) {
-            echo "<hr >";
-        } ?>
-        
-        <?php endforeach; ?>
-        
-        <?php // legendary actions, mythic actions, lair actions 
-        $specialActions = [
-            "legendaryActions" => "Legendary Actions",
-            "lairActions" => "Lair Actions"
-        ];
-        foreach ($specialActions as $type => $name): ?>
-        <div class="row mx-auto w-75" style="margin: 0;">
-            <?php if (!empty($statblock[$type])): ?>
-            <div class="row spell-list align-items-center" style="padding: 0.5rem 0; margin: 0;">
-                <p class="lg title"><?= $name ?></p>
-                <p class="md title"><?= $statblock[$type]["desc"] ?></p>
-                <hr style="color: rgb(var(--black));">
-                <?php foreach ($statblock[$type]["content"] as $action): ?>
-                    <div class="row align-items-center" style="margin: 0; padding: 0.5rem 0;">
-                        <div class="col-3">
-                            <p class="md" style="text-align: right;">
-                                <b><?= is_array($action["name"]) ? implode("<br >", $action["name"]) : $action["name"] ?></b>
-                            </p>
-                        </div>
-                        <div class="col-9">
-                            <?= renderAbility($action) ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            <?php endif; ?>
-        </div>
-        <?php if (!empty($statblock[$type])) {
-            echo "<hr >";
-        } ?>
-        
         <?php endforeach; ?>
     </div>
+
+    <?php // actions, bonus actions and reactions
+    $actions = [
+        "abilities" => "Traits",
+        "actions" => "Actions",
+        "bonusActions" => "Bonus Actions",
+        "reactions" => "Reactions"
+    ];
+    foreach ($actions as $type => $name): ?>
+    <div class="row w-75"> 
+        <?php if (!empty($statblock[$type])): ?>
+        <div class="row spell-list align-items-center" style="padding: 0.5rem 0; margin: 0;">
+            <p class="lg title"><?= $name ?></p>
+            <hr class="black">
+            <?php foreach ($statblock[$type] as $action): ?>
+                <div class="row align-items-center" style="margin: 0; padding: 0.5rem 0;">
+                    <div class="col-3">
+                        <p class="md" style="text-align: right;">
+                            <b><?= is_array($action["name"]) ? implode("<br >", $action["name"]) : $action["name"] ?></b>
+                        </p>
+                    </div>
+                    <div class="col-9">
+                        <?= renderAbility($action) ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        
+        <?php endif; ?>
+    </div>
+    
+    <?php if (!empty($statblock[$type])) {
+        echo "<hr >";
+    } ?>
+    
+    <?php endforeach; ?>
+    
+    <?php // legendary actions, mythic actions, lair actions 
+    $specialActions = [
+        "legendaryActions" => "Legendary Actions",
+        "lairActions" => "Lair Actions"
+    ];
+    foreach ($specialActions as $type => $name): ?>
+    <div class="row w-75">
+        <?php if (!empty($statblock[$type])): ?>
+        <div class="row no-margin" style="padding: 0.5rem 0;">
+            <p class="lg title"><?= $name ?></p>
+            <p class="md title"><?= $statblock[$type]["desc"] ?></p>
+            <hr class="black">
+            <?php foreach ($statblock[$type]["content"] as $action): ?>
+                <div class="row align-items-center" style="margin: 0; padding: 0.5rem 0;">
+                    <div class="col-3">
+                        <p class="md" style="text-align: right;">
+                            <b><?= is_array($action["name"]) ? implode("<br >", $action["name"]) : $action["name"] ?></b>
+                        </p>
+                    </div>
+                    <div class="col-9">
+                        <?= renderAbility($action) ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+    </div>
+    <?php if (!empty($statblock[$type])) {
+        echo "<hr >";
+    } ?>
+    
+    <?php endforeach; ?>
 </div>
 
 <script>document.title = "<?= $statblock["name"] ?> - Bestiary - Azzy's Chaos Corner";</script>
+
+<?php else: ?>
+    
+<div class="blue box">
+<?php include ROOT . "/tpl/404.php"; ?>
+</div>
+
+<?php endif; ?>

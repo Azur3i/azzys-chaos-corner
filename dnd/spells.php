@@ -12,21 +12,21 @@ uasort($items, function ($a, $b) {
     return strcmp($a["level"], $b["level"]);
 });
 
-$schools = [];
-$sources = [];
 $classes = [];
-$levels = ["Cantrip", 1, 2, 3, 4, 5, 6, 7, 8, 9];
+$schools = [];
+$levels = ["Cantrip" => 0, 1=>1, 2=>2, 3=>3, 4=>4, 5=>5, 6=>6, 7=>7, 8=>8, 9=>9];
+$sources = [];
 foreach ($items as $spell) {
-    if (!in_array(ucwords($spell["school"]), $schools)) {
-        $schools[] = ucwords($spell["school"]);
-    }
-    if (!in_array($spell["source"], $sources)) {
-        $sources[] = $spell["source"];
-    }
     foreach ($spell["lists"] as $class) {
         if (!in_array(ucwords($class), $classes)) {
-            $classes[] = ucwords($class);
+            $classes[ucwords($class)] = ucwords($class);
         }
+    }
+    if (!in_array(ucwords($spell["school"]), $schools)) {
+        $schools[ucwords($spell["school"])] = $spell["school"];
+    }
+    if (!in_array($spell["source"], $sources)) {
+        $sources[$spell["source"]] = $spell["source"];
     }
 }
 

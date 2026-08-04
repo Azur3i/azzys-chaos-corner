@@ -1,7 +1,7 @@
 <?php
 $subclasses = json_decode(file_get_contents(ROOT . "/dnd/data/subclasses.json"), true);
 $subclass = $target;
-$target = $subclasses[$mainClass][$target];
+$target = $subclasses[$mainClass][$target] ?? null;
 
 require_once ROOT . "/scripts/php/general.php";
 
@@ -25,37 +25,48 @@ $subclassTypes = [
 
 ?>
 
+<?php if ($target): ?>
 <data data-mainclass="<?= $mainClass ?>" data-subclass="<?= $subclass ?>"></data>
 
-<div class="content-list">
-    <a  class="button white md position-absolute m-3"
-        href="javascript:history.back()"
-        title="Back to the previous page."
-        >
-        <img src="/assets/img/back.png" style="width: 2rem;">
-    </a>
+<div class="blue box col-md-12 col-lg-9 mx-auto">
+    <div class="content-list">
+        <a  class="button white md position-absolute m-3"
+            href="javascript:history.back()"
+            title="Back to the previous page."
+            >
+            <img src="/assets/img/back.png" style="width: 2rem;">
+        </a>
 
-    <h1 class="xlg title"><a class="to-subclass" href="/dnd/<?= $mainClass ?>#<?= $subclass ?>"><u><?= ucwords($mainClass) . "</u></a>: " . $target["name"] ?></h1>
-    <p class="sm title" style="opacity: 0.5;"><?= $subclassTypes[$mainClass] ?></p>
+        <h1 class="xlg title"><a class="to-subclass" href="/dnd/<?= $mainClass ?>#<?= $subclass ?>"><u><?= ucwords($mainClass) . "</u></a>: " . $target["name"] ?></h1>
+        <p class="sm title" style="opacity: 0.5;"><?= $subclassTypes[$mainClass] ?></p>
 
-    <hr >
-
-    <p class="md title"><?= implode('</p><br ><p class="md title">', renderText($target["desc"])) ?></p>
-    
-    <?php include ROOT . "/scripts/constructors/spellslot-table.php"; ?>
-
-    <?php foreach ($target["levels"] as $level => $ability): ?>
         <hr >
-        <div class="row mx-auto justify-content-center">
-            <div class="col-10">
-                <?php include ROOT . "/scripts/constructors/level.php"; ?>
+
+        <p class="md title"><?= implode('</p><br ><p class="md title">', renderText($target["desc"])) ?></p>
+        
+        <?php include ROOT . "/scripts/constructors/spellslot-table.php"; ?>
+
+        <?php foreach ($target["levels"] as $level => $ability): ?>
+            <hr >
+            <div class="row mx-auto justify-content-center">
+                <div class="col-10">
+                    <?php include ROOT . "/scripts/constructors/level.php"; ?>
+                </div>
             </div>
-        </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
 
-    <hr >
-    
+        <hr >
+        
 
-    <p class="sm title" style="opacity: 0.7;">Source: <?= $target["source"]; ?></p>
-    
+        <p class="sm title" style="opacity: 0.7;">Source: <?= $target["source"]; ?></p>
+        
+    </div>
 </div>
+
+<?php else: ?>
+    
+<div class="blue box col-lg-9 col-md-12 mx-auto">
+<?php include ROOT . "/tpl/404.php"; ?>
+</div>
+
+<?php endif; ?>

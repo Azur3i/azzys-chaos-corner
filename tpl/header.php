@@ -19,7 +19,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbar-main">
-                        <ul class="navbar-nav ms-auto pink low-opac">
+                        <ul class="navbar-nav ms-auto pink high-opac">
                             <li class="nav-item"><a class="col nav-link button md" href="/dnd">D&D</a></li>
                             <li class="nav-item"><a class="col nav-link button md" href="#">#</a></li>
                             <li class="nav-item"><a class="col nav-link button md" href="#">#</a></li>

@@ -770,10 +770,10 @@
                 "type": "list",
                 "content": [
                     {
-                        "desc": "You instantaneously expand the flame 5ft. in one direction, provided that wood or other fuel is present in the new location."
+                        "desc": "You instantly expand the flame 5ft. in one direction, provided that wood or other fuel is present in the new location."
                     },
                     {
-                        "desc": "You instantaneously extinguish the flames within the cube."
+                        "desc": "You instantly extinguish the flames within the cube."
                     },
                     {
                         "desc": "You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour."
@@ -784,7 +784,7 @@
                 ]
             },
             {
-                "desc": "If you cast this spell multiple times, you may have up to three of its non-instantaneous effects active at a time, and you may dismiss such an effect as an action."
+                "desc": "If you cast this spell multiple times, you may have up to three of its non-instant effects active at a time, and you may dismiss such an effect as an action."
             }
         ],
         "levels": null,
@@ -1133,7 +1133,7 @@
                         "desc": "You instantly make a flower blossom, a seed pod open, or a leaf bud bloom."
                     },
                     {
-                        "desc": "You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk, that must fit within a 5ft. cube."
+                        "desc": "You create an instant, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk, that must fit within a 5ft. cube."
                     },
                     {
                         "desc": "You instantly light or snuff out a candle, a torch, or a small campfire."
@@ -2379,7 +2379,7 @@
                 "type": "list",
                 "content": [
                     {
-                        "desc": "If you target an area of loose earth, you may instantaneously excavate it, move it along the ground, and deposit it up to 5ft. away. This movement doesn't have enough force to cause damage."
+                        "desc": "If you target an area of loose earth, you may instantly excavate it, move it along the ground, and deposit it up to 5ft. away. This movement doesn't have enough force to cause damage."
                     },
                     {
                         "desc": "You cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour."
@@ -2390,7 +2390,7 @@
                 ]
             },
             {
-                "desc": "If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you may dismiss such an effect as an action."
+                "desc": "If you cast this spell multiple times, you can have no more than two of its non-instant effects active at a time, and you may dismiss such an effect as an action."
             }
         ],
         "levels": null,
@@ -2457,7 +2457,7 @@
             false
         ],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         "desc": [
             {
@@ -2754,7 +2754,7 @@
                 "type": "list",
                 "content": [
                     {
-                        "desc": "You instantaneously move or otherwise change the flow of the water as you direct, up to 5ft. in any direction. This movement doesn't have enough force to cause damage."
+                        "desc": "You instantly move or otherwise change the flow of the water as you direct, up to 5ft. in any direction. This movement doesn't have enough force to cause damage."
                     },
                     {
                         "desc": "You cause the water to form into simple shapes and animate at your instruction. This change lasts for 1 hour."
@@ -3034,10 +3034,10 @@
                         "desc": "You cause harmless tremors in the ground."
                     },
                     {
-                        "desc": "You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers."
+                        "desc": "You create an instant sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers."
                     },
                     {
-                        "desc": "You instantaneously cause an unlocked door or window to fly open or shut."
+                        "desc": "You instantly cause an unlocked door or window to fly open or shut."
                     },
                     {
                         "desc": "You alter the apearance of your eyes."
@@ -3045,7 +3045,7 @@
                 ]
             },
             {
-                "desc": "If you cast this spell multiple times, you may have up to 3 of its non-instantaneous effects active at a time, and you may dismiss such an effect as an action."
+                "desc": "If you cast this spell multiple times, you may have up to 3 of its non-instant effects active at a time, and you may dismiss such an effect as an action."
             }
         ],
         "levels": null,
@@ -3601,13 +3601,13 @@
                 "type": "list",
                 "content": [
                     {
-                        "desc": "You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor."
+                        "desc": "You create an instant, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor."
                     },
                     {
-                        "desc": "You instantaneously light or snuff out a candle, a torch, or a small campfire."
+                        "desc": "You instantly light or snuff out a candle, a torch, or a small campfire."
                     },
                     {
-                        "desc": "You instantaneously clear or soil an object no larger than 1cu.ft."
+                        "desc": "You instantly clear or soil an object no larger than 1cu.ft."
                     },
                     {
                         "desc": "You chill, warm or flavor up to 1cu.ft. of nonliving material for 1 hour."
@@ -4160,7 +4160,7 @@
         "range": "120ft.",
         "vsm": [true, true, false],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         
         "desc": [
@@ -4203,7 +4203,7 @@
         "range": "touch",
         "vsm": [true, true, "a pearl worth at least 100gp, and an owl feather"],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         
         "desc": [
@@ -4253,7 +4253,7 @@
         "range": "self (15ft. cone)",
         "vsm": [true, true, false],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         
         "desc": [
@@ -5300,7 +5300,7 @@
         "range": "60ft.",
         "vsm": [true, false, false],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         
         "desc": [
@@ -8106,7 +8106,7 @@
         "range": "120ft.",
         "vsm": [true, true, "an origami bird, and a rock resembling a sending stone"],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         
         "desc": [
@@ -8167,7 +8167,7 @@
         "range": "self (100ft. line)",
         "vsm": [true, true, "a bit of fur, and a rod of amber, crystal, or glass"],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         
         "desc": [
@@ -8219,7 +8219,7 @@
         "range": "self",
         "vsm": [true, true, "incense, and a sacrificial offering appropriate to your religion, together worth at least 25gp, which the spell consumes"],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
         
         "desc": [
@@ -8360,7 +8360,7 @@
         "range": "touch",
         "vsm": [true, true, "soft clay, which must be worked into roughly the desired shape of the stone object"],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
 
         
@@ -8573,7 +8573,7 @@
         "range": "touch",
         "vsm": [true, true, "diamonds worth 300gp, which the spell consumes"],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
 
         "desc": [
@@ -8625,7 +8625,7 @@
         "range": "60ft.",
         "vsm": [true, true, "a pinch of sulfur"],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
 
         "desc": [
@@ -8655,7 +8655,7 @@
         "range": "60ft.",
         "vsm": [true, true, false],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
 
         "desc": [
@@ -8710,7 +8710,7 @@
         "range": "120ft.",
         "vsm": [true, true, false],
         "duration": {
-            "time": "instantaneous"
+            "time": "instant"
         },
 
         "desc": [
@@ -8721,6 +8721,140 @@
         "levels": [3, 4, 5, 6, 7, 8, 9, 10],
         
         "lists": ["sorcerer", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "absorb-elements": {
+        "name": "Absorb Elements",
+        "level": 1,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "reaction",
+            "condition": "you take @acid, @fire, @lightning, or @thunder damage"
+        },
+        "range": "self",
+        "vsm": [false, true, false],
+        "duration": {
+            "amount": 1,
+            "time": "round"
+        },
+
+        "desc": [
+            {
+                "desc": "The spell captures some of the incoming energy, lessening its effect on you, and storing it for your next melee attack. You gain resistance to the triggering damage type until the start of your next turn. The first time you hit with a melee attack on your next turn, the target takes an extra {*}d6 damage of the triggering type, and the spell ends."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["artificer", "druid", "ranger", "sorcerer", "wizard"],
+        "source": "Xanathar's Guide to Everything"
+    },
+    "alarm": {
+        "name": "Alarm",
+        "level": 1,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "minute",
+            "ritual": true
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a tiny bell, and a piece of fine, silver wire"],
+        "duration": {
+            "amount": 8,
+            "time": "hour"
+        },
+
+        "desc": [
+            {
+                "desc": "You set an alarm against unwanted intrusion. Choose a door, window, or area within range that is no larger than a 20ft. cube. An alarm alerts you whenever a creature touches or enters the warded area. You may designate any number of creatures of your choice that won't set off the alarm."
+            },
+            {
+                "desc": "When you cast this spell, you may choose whether the alarm is mental or audible. A mental alarm alerts you with a ping in your mind if you are within 1mi. of the warded area. This ping awakens you if you are sleeping. An audible alarm instead produces the sound of a hand bell for 10 seconds within 60ft."
+            }
+        ],
+        "levels": null,
+        
+        "lists": ["artificer", "ranger", "wizard"],
+        "source": "Player's Handbook"
+    },
+    "animal-friendship": {
+        "name": "Animal Friendship",
+        "level": 1,
+        "school": "enchantment",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "30ft.",
+        "vsm": [true, true, "a morsel of food"],
+        "duration": {
+            "amount": 24,
+            "time": "hour"
+        },
+
+        "desc": [
+            {
+                "desc": "This spell lets you convince beasts you mean no harm. Choose {*} beast(s) that you can see within range. It must be able to see and hear you. If the beasts INT score is 4 or higher, the spell fails. Otherwise, the beast must succeed on a WIS saving throw, or be charmed by you. If you or a creature it recognizes as friendly to you harms the beast, the spell ends early."
+            }
+        ],
+        "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        
+        "lists": ["bard", "druid", "ranger"],
+        "source": "Player's Handbook"
+    },
+    "armor-of-agathys": {
+        "name": "Armor of Agathys",
+        "level": 1,
+        "school": "abjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self",
+        "vsm": [true, true, "a cup of water"],
+        "duration": {
+            "amount": 1,
+            "time": "hour"
+        },
+
+        "desc": [
+            {
+                "desc": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain {*} temporary hitpoints. If a creature hits you with a melee attack while you have these hitpoints, the attacker takes {*} @cold damage."
+            }
+        ],
+        "levels": [5, 10, 15, 20, 25, 30, 35, 40, 45],
+        
+        "lists": ["warlock"],
+        "source": "Player's Handbook"
+    },
+    "arms-of-hadar": {
+        "name": "Arms of Hadar",
+        "level": 1,
+        "school": "conjuration",
+
+        "castTime": {
+            "amount": 1,
+            "time": "action"
+        },
+        "range": "self (10ft.)",
+        "vsm": [true, true, false],
+        "duration": {
+            "time": "instant"
+        },
+
+        "desc": [
+            {
+                "desc": "You invoke the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you, and batter all creatures within 10ft. of you. Each creature in that area must make a STR saving throw, taking {*}d6 necrotic damage on a failed save, or half as much on a successful one. Additionally, on a failed save, the target cannot take reactions until its next turn."
+            }
+        ],
+        "levels": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+        
+        "lists": ["warlock"],
         "source": "Player's Handbook"
     }
 }

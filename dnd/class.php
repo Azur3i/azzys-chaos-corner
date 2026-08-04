@@ -4,10 +4,8 @@
 <?php include ROOT . "/tpl/header-dnd.php"; ?>
 <?php $target = $_GET["class"]; ?>
 
-<div class="main-content bottom-margin container-fluid row">
-    <div class="blue box col-md-12 col-lg-9 mx-auto">
-        <?php include ROOT . "/scripts/constructors/class.php"; ?>
-    </div>
+<div class="main-content container-fluid row">
+    <?php include ROOT . "/scripts/constructors/class.php"; ?>
 </div>
 
 <script>document.title = "<?= $target["name"] ?> - Azzy's Chaos Corner";</script>

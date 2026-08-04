@@ -6,7 +6,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar-dnd">
-                <ul class="navbar-nav ms-auto lavender low-opac">
+                <ul class="navbar-nav ms-auto lavender high-opac">
                     <li class="nav-item"><a class="nav-link button md" id="nav-class" href="/dnd/classes">Classes</a></li>
                     <li class="nav-item"><a class="nav-link button md" id="nav-subclass" href="/dnd/subclasses">Subclasses</a></li>
                     <li class="nav-item"><a class="nav-link button md" id="nav-race" href="/dnd/races">Races</a></li>

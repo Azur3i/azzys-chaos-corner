@@ -237,10 +237,10 @@ $(document).on("keydown", function(e) {
                 let next = $(".button-list.active").nextAll(":not(.d-none)").first();
                 // if no elements found, return to top
                 if (!next.length) {
-                    if ($(".button-list.active").closest("#unpinned").length) {
-                        next = $(".button-list:not(.d-none)").first();
-                    } else {
+                    if ($(".button-list.active").closest("#pinned").length && $("#unpinned").children(":not(.d-none)").length) {
                         next = $("#unpinned > .button-list:not(.d-none)").first();
+                    } else {
+                        next = $(".button-list:not(.d-none)").first();
                     }
                 }
                 next.trigger("click");
@@ -252,7 +252,7 @@ $(document).on("keydown", function(e) {
                 let prev = $(".button-list.active").prevAll(":not(.d-none)").first();
                 // if no elements found, return to bottom
                 if (!prev.length) {
-                    if ($(".button-list.active").closest("#unpinned").length && $("#pinned").children().length) {
+                    if ($(".button-list.active").closest("#unpinned").length && $("#pinned").children(":not(.d-none)").length) {
                         prev = $("#pinned > .button-list:not(.d-none)").last();
                     } else {
                         prev = $(".button-list:not(.d-none)").last();

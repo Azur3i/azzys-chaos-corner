@@ -10,12 +10,14 @@ if (!empty($_GET)) {
     $spells = json_decode(file_get_contents(ROOT . "/dnd/data/spells.json"), true);
 
     $spellName = $_GET["target"];
-    $targetSpell = $spells[$spellName];
+    $targetSpell = $spells[$spellName] ?? null;
 }
 
 $cantripLevels = [1, 5, 11, 17];
 
 ?>
+
+<?php if ($targetSpell): ?>
 
 <div id="select-display" class="blue box scroll no-margin" item="<?= $spellName ?>">
     <?// name, school/level, source, pin button ?>
@@ -111,4 +113,16 @@ $cantripLevels = [1, 5, 11, 17];
     </div>
 </div>
 
-<script>document.title = "<?= $targetSpell["name"] ?> - Spells - Azzy's Chaos Corner";</script>
+<script>
+    if (location.href.includes("spell")) {
+        document.title = "<?= $targetSpell["name"] ?> - Spells - Azzy's Chaos Corner";
+    }
+</script>
+
+<?php else: ?>
+    
+<div class="blue box">
+<?php include ROOT . "/tpl/404.php"; ?>
+</div>
+
+<?php endif; ?>
